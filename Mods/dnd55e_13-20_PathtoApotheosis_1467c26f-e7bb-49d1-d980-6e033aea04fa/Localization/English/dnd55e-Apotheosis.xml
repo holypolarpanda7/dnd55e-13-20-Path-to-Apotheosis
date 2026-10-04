@@ -3407,4 +3407,8 @@
   <content contentuid="hbed5821c7fd550cd9f59eb5d92c4dee4" version="1">When you are reduced to 0 Hit Points, you can use your Reaction to take a Hair Trigger action immediately before you fall: a free weapon attack with Advantage against the nearest hostile creature in reach. (The other Hair Trigger options - moving, Dodge, using an object - aren't offered.)</content>
   <content contentuid="he9d0e9801be65b7c92aa8bfba0de5091" version="1">Desperado</content>
   <content contentuid="h571db3c6fbbf525f916a02992b1324c3" version="1">You used your Reaction on Desperado.</content>
+  <content contentuid="hap0000000000000000000000000089" version="1">Song of Victory</content>
+  <content contentuid="hap0000000000000000000000000090" version="1">Immediately after you use an action to cast a spell, you can make one weapon attack as a Bonus Action.</content>
+  <content contentuid="hap0000000000000000000000000091" version="1">Corona of Light</content>
+  <content contentuid="hap0000000000000000000000000092" version="1">Caught in a cleric's Corona of Light: Disadvantage on saving throws.</content>
 </contentList>

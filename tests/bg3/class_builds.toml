@@ -325,6 +325,8 @@ title = "Artificer - Alchemist, levels 2-20"
 subclass = "Alchemist"
 from = "artificer-base"
 levels = [2, 20]
+# dnd55e's Alchemist level 3 list names Shout_ExperimentalElixir_Resource, which doesn't exist: bg3dnd #1564
+known_fails = ["Shout_ExperimentalElixir_Resource"]
 
 [[build]]
 id = "artificer-armorer"
