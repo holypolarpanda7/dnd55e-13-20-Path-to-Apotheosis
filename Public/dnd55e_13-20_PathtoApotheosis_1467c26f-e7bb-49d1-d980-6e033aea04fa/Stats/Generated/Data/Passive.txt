@@ -998,7 +998,7 @@ data "Icon" "PassiveFeature_Generic_Magical"
 data "Properties" "Highlighted"
 data "Boosts" "Resistance(Cold, Resistant)"
 data "StatsFunctorContext" "OnDamage"
-data "Conditions" "IsDamageTypeCold(context.Target) and Enemy(context.Target)"
+data "Conditions" "IsDamageTypeCold() and Enemy()"
 data "StatsFunctors" "ApplyStatus(TARGET,CHILLED,100,2)"
 
 // ==============================================================================
