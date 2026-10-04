@@ -688,7 +688,7 @@
   <content contentuid="hsp0000000000000000000000007001" version="1">Delayed Blast Fireball</content>
   <content contentuid="hsp0000000000000000000000007002" version="1">A bead of fire streaks out and detonates with catastrophic force, dealing 12d6 Fire damage to everything caught in the blast.</content>
   <content contentuid="hsp0000000000000000000000007003" version="1">Divine Word</content>
-  <content contentuid="hsp0000000000000000000000007004" version="1">You speak a word of the First Language. Wounded enemies around you that fail a Charisma save are struck down, stunned, or blinded according to how badly hurt they already are.</content>
+  <content contentuid="hsp0000000000000000000000007004" version="1">As a Bonus Action you utter a word of power. Each enemy within 9m makes a Charisma save. On a failure: 20 HP or fewer, it dies; 21-30 HP, Blinded and Stunned for 1 hour; 31-40 HP, Blinded for 10 minutes. A Celestial, Elemental, Fey or Fiend that fails is cast back to its home plane.</content>
   <content contentuid="hsp0000000000000000000000007005" version="1">Finger of Death</content>
   <content contentuid="hsp0000000000000000000000007006" version="1">Negative energy ravages a creature for 7d8+30 Necrotic damage (Constitution save for half). A humanoid slain by this spell rises at the start of the next turn as a zombie under your command.</content>
   <content contentuid="hsp0000000000000000000000007007" version="1">Fire Storm</content>

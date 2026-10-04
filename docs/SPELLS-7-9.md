@@ -18,7 +18,7 @@ zombie from humanoids it kills; Clone fully revives its bearer once.
 | Spell | Classes | Design call |
 | --- | --- | --- |
 | **Delayed Blast Fireball** (`Projectile_Apo_DelayedBlastFireball`) | sor, wiz | Straight damage upgrade of Fireball; the 5e delay mechanic has no BG3 turn hook, traded for raw payload. |
-| **Divine Word** (`Shout_Apo_DivineWord`) | clr | PHB HP-threshold table kept: <=50 HP dies, <=100 stunned, <=150 blinded (absolute HP fits L13-20 enemy pools). Deafened tier dropped (no such BG3 status). |
+| **Divine Word** (`Shout_Apo_DivineWord`) | clr | PHB 2024 (user decision 2026-10-04, replacing scaled 50/100/150 thresholds): Bonus Action; HP tiers 20/30/40; the 41-50 Deafened-only tier and the Deafened parts have no BG3 status; 1 hour = 600 turns, 10 minutes = 100; the planar banishment (can't return for 24 hours) is Kill() like the base game's Dispel Evil and Good dismissal, with its Raphael guard. |
 | **Finger of Death** (`Target_Apo_FingerOfDeath`) | sor, wlk, wiz | Zombie-on-kill implemented as a Script Extender rider on the APO_FINGER_OF_DEATH marker. |
 | **Fire Storm** (`Target_Apo_FireStorm`) | clr, dru, sor | FlameStrike chassis widened to 8m, single fire payload. |
 | **Prismatic Spray** (`Zone_Apo_PrismaticSpray`) | sor, wiz | Random-ray table flattened into a fixed five-type barrage - same expected damage, resist-proof spread. |

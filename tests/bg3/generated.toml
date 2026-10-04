@@ -30,7 +30,7 @@ spell = "Shout_Apo_DivineWord"
 title = "Divine Word applies STUNNED or BLINDED to a hostile wolf"
 target = "host"
 retries = 2
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 100, distance = 3 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 30, distance = 3 }]
 notes = "the wolf can pass a save: the case retries up to twice"
 expect = [
   { target = "A", status_applied_any = ["STUNNED", "BLINDED"] },

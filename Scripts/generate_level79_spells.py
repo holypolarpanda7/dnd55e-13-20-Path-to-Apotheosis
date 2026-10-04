@@ -63,15 +63,22 @@ SPELLS = [
     dict(entry="Shout_Apo_DivineWord", using="Shout_DestructiveWave",
          level=7, school="Evocation", hid=7003, classes=["clr"],
          name="Divine Word",
-         desc="You speak a word of the First Language. Wounded enemies around you that fail a Charisma save are struck down, stunned, or blinded according to how badly hurt they already are.",
-         design="PHB HP-threshold table kept: <=50 HP dies, <=100 stunned, <=150 blinded (absolute HP fits L13-20 enemy pools). Deafened tier dropped (no such BG3 status).",
+         desc="As a Bonus Action you utter a word of power. Each enemy within 9m makes a Charisma save. On a failure: 20 HP or fewer, it dies; 21-30 HP, Blinded and Stunned for 1 hour; 31-40 HP, Blinded for 10 minutes. A Celestial, Elemental, Fey or Fiend that fails is cast back to its home plane.",
+         design="PHB 2024 (user decision 2026-10-04, replacing scaled 50/100/150 thresholds): Bonus Action; HP tiers 20/30/40; the 41-50 "
+                "Deafened-only tier and the Deafened parts have no BG3 status; 1 hour = 600 turns, 10 minutes = 100; the planar banishment "
+                "(can't return for 24 hours) is Kill() like the base game's Dispel Evil and Good dismissal, with its Raphael guard.",
          fields={
              "SpellRoll": "not SavingThrow(Ability.Charisma, SourceSpellDC())",
-             "SpellSuccess": "IF(HasHPLessThan(51)):Kill();IF(HasHPLessThan(101) and not HasHPLessThan(51)):ApplyStatus(STUNNED,100,1);IF(HasHPLessThan(151) and not HasHPLessThan(101)):ApplyStatus(BLINDED,100,2)",
+             "SpellSuccess": "IF((Tagged('CELESTIAL') or Tagged('ELEMENTAL') or Tagged('FEY') or Tagged('FIEND')) and not Tagged('LOW_HOUSEOFHOPE_IDENTIFY_RAPHAEL') and not Tagged('LOW_HOUSEOFHOPE_RAPHAELIAN_CAMBION')):Kill();"
+                             "IF(HasHPLessThan(21)):Kill();"
+                             "IF(HasHPLessThan(31) and not HasHPLessThan(21)):ApplyStatus(STUNNED,100,600);"
+                             "IF(HasHPLessThan(31) and not HasHPLessThan(21)):ApplyStatus(BLINDED,100,600);"
+                             "IF(HasHPLessThan(41) and not HasHPLessThan(31)):ApplyStatus(BLINDED,100,100)",
              "SpellFail": "",
              "TooltipDamageList": "",
              "AreaRadius": "9",
              "TargetConditions": "Enemy() and not Dead()",
+             "UseCosts": "BonusActionPoint:1;SpellSlotsGroup:1:1:7",
          }),
     dict(entry="Target_Apo_FingerOfDeath", using="Target_Blight",
          level=7, school="Necromancy", hid=7005, classes=["sor", "wlk", "wiz"],
@@ -594,7 +601,8 @@ def emit_spells() -> str:
         out.append(f'data "SpellSchool" "{s["school"]}"')
         out.append(f'data "DisplayName" "{handle("hsp", s["hid"])};1"')
         out.append(f'data "Description" "{handle("hsp", s["hid"] + 1)};1"')
-        out.append(f'data "UseCosts" "{slot_cost(s["level"])}"')
+        if "UseCosts" not in s["fields"]:   # a spell can set its own (Divine Word is a Bonus Action)
+            out.append(f'data "UseCosts" "{slot_cost(s["level"])}"')
         for k, v in s["fields"].items():
             out.append(f'data "{k}" "{v}"')
         out.append("")
