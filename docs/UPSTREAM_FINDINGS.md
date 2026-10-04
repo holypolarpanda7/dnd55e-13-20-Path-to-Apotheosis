@@ -21,6 +21,9 @@ needs a character of that subclass levelled through the listed level before repo
   fails, its control `Target_SummonUndead_6` passes).
 - [#1540](https://github.com/Yoonmoonsik/bg3dnd/issues/1540) `Target_Awaken_6` has no UseCosts and spends a 5th level slot.
 
+- [#1556](https://github.com/Yoonmoonsik/bg3dnd/issues/1556) War Domain Cleric never gets Guided Strike: it's on the War
+  Domain's level 2 node (2014 layout) while the Cleric now picks its subclass at 3, so the node is never applied (seen in game
+  2026-10-04, found by the class test builds + the progression lint's "subclass nodes below the subclass level" rule).
 Not filed: the stacked Nature / Tempest / Enchantment / Battle Master choice nodes. Verified at data level only (the base
 game's Nature Domain level 3 node and dnd55e's both load); whether the level-up UI offers the choices twice needs a
 level-up in game, and the project only takes confirmed bugs from a fresh campaign. The issues above state plainly that the

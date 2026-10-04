@@ -81,7 +81,11 @@ def spell_cases(store, active):
             continue
         if extra:
             lines.append(f"prep = {q('also check by eye: ' + extra)}" if "manual" not in verify else f"notes = {q(extra)}")
-        expect += ["{ cast = true }", f'{{ resource = "{cost}", level = {slot_lvl}, change = -1 }}']
+        if cls == "Warlock" and int(slot_lvl or 0) > 5:
+            # 6th-9th level Warlock spells come through Mystic Arcanum: once per rest, no slot (Warlock slots stop at 5th)
+            expect += ["{ cast = true }"]
+        else:
+            expect += ["{ cast = true }", f'{{ resource = "{cost}", level = {slot_lvl}, change = -1 }}']
         lines.append("expect = [\n  " + ",\n  ".join(dict.fromkeys(expect)) + ",\n]")
         out.append("\n".join(lines))
     return out
