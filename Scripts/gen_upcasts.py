@@ -217,6 +217,11 @@ def write(g):
         print(f"{OUT[typ]}: {len(entries)} entries")
 
 
+# Families whose 6th level variant can't be cast at all upstream: extending them ships spells that never resolve.
+# Danse Macabre inherits an emptied dnd55e entry (no SpellAnimation) - bg3dnd #1539; drop this once that's fixed.
+BROKEN_UPSTREAM = {"Target_DanseMacabre": "bg3dnd #1539"}
+
+
 if __name__ == "__main__":
     g = Gen()
     fams = g.S.families()
@@ -226,6 +231,9 @@ if __name__ == "__main__":
             continue
         if not cur.endswith("_6"):
             g.warn.append(f"{root}: 6th level variant {cur} isn't named _6; skipped")
+            continue
+        if root in BROKEN_UPSTREAM:
+            g.warn.append(f"{root}: can't be cast upstream ({BROKEN_UPSTREAM[root]}); not extended")
             continue
         for n in (7, 8, 9):
             name = cur[:-1] + str(n)

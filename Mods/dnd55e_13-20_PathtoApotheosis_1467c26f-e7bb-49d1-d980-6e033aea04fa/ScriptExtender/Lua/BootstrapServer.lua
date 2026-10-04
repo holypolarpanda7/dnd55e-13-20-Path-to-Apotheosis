@@ -12,7 +12,7 @@
 local TAG = "[Apotheosis]"
 Apotheosis = Apotheosis or {}
 _G.Apotheosis = Apotheosis  -- expose to SE console REPL (mod env is isolated from REPL _G)
-Apotheosis.DEBUG = true
+Apotheosis.DEBUG = false  -- verbose traces off for players; testers: `Apotheosis.DEBUG = true` in the SE console
 
 local Log = {}
 function Log.Info(...)  Ext.Utils.Print(TAG, ...) end

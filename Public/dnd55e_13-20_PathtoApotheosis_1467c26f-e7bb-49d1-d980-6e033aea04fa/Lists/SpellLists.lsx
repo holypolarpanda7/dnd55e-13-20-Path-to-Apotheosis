@@ -173,7 +173,7 @@
                 <node id="SpellList">
                     <attribute id="Comment" type="LSString" value="Arcana Domain Arcane Mastery - Wizard Level 6 spells only"/>
                     <attribute id="Name" type="FixedString" value="ArcanaMastery_WizardL6"/>
-                    <attribute id="Spells" type="LSString" value="Teleportation_ArcaneGate;Projectile_ChainLightning;Target_CircleOfDeath;Target_CreateUndead;Projectile_Disintegrate;Target_Eyebite;Target_FleshToStone;Target_GlobeOfInvulnerability;Target_FreezingSphere;Target_IrresistibleDance;Zone_Sunbeam;Wall_WallOfIce;Target_PlatinumShield;Shout_TensersTransformation"/>
+                    <attribute id="Spells" type="LSString" value="Teleportation_ArcaneGate;Projectile_ChainLightning;Target_CircleOfDeath;Target_CreateUndead;Projectile_Disintegrate;Target_Eyebite;Target_FleshToStone;Target_GlobeOfInvulnerability;Target_FreezingSphere;Target_IrresistibleDance;Zone_Sunbeam;Wall_WallOfIce"/>
                     <attribute id="UUID" type="guid" value="00160001-aaaa-0001-0001-000000000001"/>
                 </node>
                 <node id="SpellList">
