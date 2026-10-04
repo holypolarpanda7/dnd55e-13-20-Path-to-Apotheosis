@@ -1,0 +1,305 @@
+# Test builds for every class but Wizard (wizard.toml has those). Generated 2026-10-04.
+# Each class has a base build (its level 1 start save, made with bg3_new_character from "Tavizard L2 Base")
+# and one build per subclass that has 13+ cases (or the class's core 2024 subclass when none has), levels 2-20,
+# run hands-free with bg3_test_build.
+
+[[build]]
+id = "barbarian-base"
+class = "Barbarian"
+title = "Barbarian base, level 1 (start save for every Barbarian build)"
+levels = [1, 1]
+save_as = "Barbarian L1 Base"
+
+[[build]]
+id = "barbarian-berserkerpath"
+class = "Barbarian"
+title = "Barbarian - BerserkerPath, levels 2-20"
+subclass = "BerserkerPath"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
+id = "bard-base"
+class = "Bard"
+title = "Bard base, level 1 (start save for every Bard build)"
+levels = [1, 1]
+save_as = "Bard L1 Base"
+
+[[build]]
+id = "bard-glamourcollege"
+class = "Bard"
+title = "Bard - GlamourCollege, levels 2-20"
+subclass = "GlamourCollege"
+from = "bard-base"
+levels = [2, 20]
+
+[[build]]
+id = "bard-lorecollege"
+class = "Bard"
+title = "Bard - LoreCollege, levels 2-20"
+subclass = "LoreCollege"
+from = "bard-base"
+levels = [2, 20]
+
+[[build]]
+id = "bard-valorcollege"
+class = "Bard"
+title = "Bard - ValorCollege, levels 2-20"
+subclass = "ValorCollege"
+from = "bard-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-base"
+class = "Cleric"
+title = "Cleric base, level 1 (start save for every Cleric build)"
+levels = [1, 1]
+save_as = "Cleric L1 Base"
+
+[[build]]
+id = "cleric-knowledgedomain"
+class = "Cleric"
+title = "Cleric - KnowledgeDomain, levels 2-20"
+subclass = "KnowledgeDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-lifedomain"
+class = "Cleric"
+title = "Cleric - LifeDomain, levels 2-20"
+subclass = "LifeDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-lightdomain"
+class = "Cleric"
+title = "Cleric - LightDomain, levels 2-20"
+subclass = "LightDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-wardomain"
+class = "Cleric"
+title = "Cleric - WarDomain, levels 2-20"
+subclass = "WarDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "druid-base"
+class = "Druid"
+title = "Druid base, level 1 (start save for every Druid build)"
+levels = [1, 1]
+save_as = "Druid L1 Base"
+
+[[build]]
+id = "druid-circleofstars"
+class = "Druid"
+title = "Druid - CircleOfStars, levels 2-20"
+subclass = "CircleOfStars"
+from = "druid-base"
+levels = [2, 20]
+
+[[build]]
+id = "druid-circleoftheland"
+class = "Druid"
+title = "Druid - CircleOfTheLand, levels 2-20"
+subclass = "CircleOfTheLand"
+from = "druid-base"
+levels = [2, 20]
+
+[[build]]
+id = "druid-circleofthemoon"
+class = "Druid"
+title = "Druid - CircleOfTheMoon, levels 2-20"
+subclass = "CircleOfTheMoon"
+from = "druid-base"
+levels = [2, 20]
+
+[[build]]
+id = "druid-circleofthesea"
+class = "Druid"
+title = "Druid - CircleOfTheSea, levels 2-20"
+subclass = "CircleOfTheSea"
+from = "druid-base"
+levels = [2, 20]
+
+[[build]]
+id = "fighter-base"
+class = "Fighter"
+title = "Fighter base, level 1 (start save for every Fighter build)"
+levels = [1, 1]
+save_as = "Fighter L1 Base"
+
+[[build]]
+id = "fighter-champion"
+class = "Fighter"
+title = "Fighter - Champion, levels 2-20"
+subclass = "Champion"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "monk-base"
+class = "Monk"
+title = "Monk base, level 1 (start save for every Monk build)"
+levels = [1, 1]
+save_as = "Monk L1 Base"
+
+[[build]]
+id = "monk-openhand"
+class = "Monk"
+title = "Monk - OpenHand, levels 2-20"
+subclass = "OpenHand"
+from = "monk-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-base"
+class = "Paladin"
+title = "Paladin base, level 1 (start save for every Paladin build)"
+levels = [1, 1]
+save_as = "Paladin L1 Base"
+
+[[build]]
+id = "paladin-devotion"
+class = "Paladin"
+title = "Paladin - Devotion, levels 2-20"
+subclass = "Devotion"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-noblegenies"
+class = "Paladin"
+title = "Paladin - NobleGenies, levels 2-20"
+subclass = "NobleGenies"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "ranger-base"
+class = "Ranger"
+title = "Ranger base, level 1 (start save for every Ranger build)"
+levels = [1, 1]
+save_as = "Ranger L1 Base"
+
+[[build]]
+id = "ranger-hunter"
+class = "Ranger"
+title = "Ranger - Hunter, levels 2-20"
+subclass = "Hunter"
+from = "ranger-base"
+levels = [2, 20]
+
+[[build]]
+id = "ranger-winterwalker"
+class = "Ranger"
+title = "Ranger - WinterWalker, levels 2-20"
+subclass = "WinterWalker"
+from = "ranger-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-base"
+class = "Rogue"
+title = "Rogue base, level 1 (start save for every Rogue build)"
+levels = [1, 1]
+save_as = "Rogue L1 Base"
+
+[[build]]
+id = "rogue-thief"
+class = "Rogue"
+title = "Rogue - Thief, levels 2-20"
+subclass = "Thief"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-scionthree"
+class = "Rogue"
+title = "Rogue - ScionThree, levels 2-20"
+subclass = "ScionThree"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-base"
+class = "Sorcerer"
+title = "Sorcerer base, level 1 (start save for every Sorcerer build)"
+levels = [1, 1]
+save_as = "Sorcerer L1 Base"
+
+[[build]]
+id = "sorcerer-aberrantsorcery"
+class = "Sorcerer"
+title = "Sorcerer - AberrantSorcery, levels 2-20"
+subclass = "AberrantSorcery"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-draconicbloodline"
+class = "Sorcerer"
+title = "Sorcerer - DraconicBloodline, levels 2-20"
+subclass = "DraconicBloodline"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-spellfiresorcery"
+class = "Sorcerer"
+title = "Sorcerer - SpellfireSorcery, levels 2-20"
+subclass = "SpellfireSorcery"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-wildmagicpath"
+class = "Sorcerer"
+title = "Sorcerer - WildMagicPath, levels 2-20"
+subclass = "WildMagicPath"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "warlock-base"
+class = "Warlock"
+title = "Warlock base, level 1 (start save for every Warlock build)"
+levels = [1, 1]
+save_as = "Warlock L1 Base"
+
+[[build]]
+id = "warlock-archfey"
+class = "Warlock"
+title = "Warlock - Archfey, levels 2-20"
+subclass = "Archfey"
+from = "warlock-base"
+levels = [2, 20]
+
+[[build]]
+id = "warlock-celestial"
+class = "Warlock"
+title = "Warlock - Celestial, levels 2-20"
+subclass = "Celestial"
+from = "warlock-base"
+levels = [2, 20]
+
+[[build]]
+id = "warlock-fiend"
+class = "Warlock"
+title = "Warlock - Fiend, levels 2-20"
+subclass = "Fiend"
+from = "warlock-base"
+levels = [2, 20]
+
+[[build]]
+id = "warlock-greatoldone"
+class = "Warlock"
+title = "Warlock - GreatOldOne, levels 2-20"
+subclass = "GreatOldOne"
+from = "warlock-base"
+levels = [2, 20]
