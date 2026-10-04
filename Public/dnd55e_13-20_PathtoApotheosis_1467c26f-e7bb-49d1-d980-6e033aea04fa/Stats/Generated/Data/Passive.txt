@@ -999,7 +999,7 @@ data "Properties" "Highlighted"
 data "Boosts" "Resistance(Cold, Resistant)"
 data "StatsFunctorContext" "OnDamage"
 data "Conditions" "IsDamageTypeCold() and Enemy()"
-data "StatsFunctors" "ApplyStatus(TARGET,CHILLED,100,2)"
+data "StatsFunctors" "ApplyStatus(CHILLED,100,2)"
 
 // ==============================================================================
 // ARTIFICER SUBCLASS PASSIVES (Homebrew)

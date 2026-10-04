@@ -187,7 +187,7 @@ end
 ---   mode   = "auto" | "manual",
 ---   target = "none"                      -- self-contained
 ---          | "ally"                      -- party ally (spawned friendly wolf as fallback)
----          | { role = "enemy",  template = "wolf", count = 1 }
+---          | { role = "enemy",  template = "wolf", count = 1 [, hp = N] }  (hp: extra max HP so the target survives)
 ---          | { role = "enemy",  template = "wolf", count = 2 },
 ---   note   = string,                     -- scenario description / manual steps
 ---   run    = function(ctx, finish) end,  -- ctx = { host, target, targets }
@@ -273,6 +273,16 @@ local function resolveTargets(spec, ctx, explicitTarget, cb)
                 end
                 ctx.spawned[#ctx.spawned + 1] = guid
                 ctx.targets[#ctx.targets + 1] = guid
+                if t.hp then
+                    -- tougher target (a level 15+ cantrip kills a 15 HP wolf outright, and a dead target never gets the
+                    -- status under test): raise max HP, then fill it a moment later once the boost has applied
+                    Osi.AddBoosts(guid, "IncreaseMaxHP(" .. tostring(t.hp) .. ")", "FeatureTest", guid)
+                    Ext.Timer.WaitFor(300, function()
+                        Osi.SetHitpointsPercentage(guid, 100)
+                        spawnNext(i + 1)
+                    end)
+                    return
+                end
                 spawnNext(i + 1)
             end)
         end
@@ -375,7 +385,7 @@ end
 -- Living beast chosen so the status side is unambiguous.
 FT.Register("WinterWalker_15_FrozenHaunt", {
     mode = "auto",
-    target = { role = "enemy", template = "wolf", count = 1 },
+    target = { role = "enemy", template = "wolf", count = 1, hp = 300 },   -- survives a level 15-20 Ray of Frost
     note = "Ray of Frost at a HOSTILE living target must apply CHILLED (Enemy() gate in the functor)",
     run = function(ctx, finish)
         FT.UseSpellOn(ctx.host, "Projectile_RayOfFrost", ctx.target, function()
