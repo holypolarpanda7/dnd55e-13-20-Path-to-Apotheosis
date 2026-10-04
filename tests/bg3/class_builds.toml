@@ -87,6 +87,9 @@ title = "Cleric - WarDomain, levels 2-20"
 subclass = "WarDomain"
 from = "cleric-base"
 levels = [2, 20]
+# dnd55e grants Guided Strike on a level 2 War Domain node, but the subclass is chosen at 3: reported upstream as
+# https://github.com/Yoonmoonsik/bg3dnd/issues/1556 - shown as KNOWN, doesn't stop the build
+known_fails = ["Shout_GuidedStrike"]
 
 [[build]]
 id = "druid-base"
