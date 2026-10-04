@@ -819,7 +819,7 @@
                     <attribute id="Name" type="LSString" value="Warlock"/>
                     <attribute id="PassivesAdded" type="LSString" value="Warlock_MysticArcanum_7"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(00170001-0001-0001-0001-000000000007,1,0,MysticArcanum7)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00170001-0001-0001-0001-000000000007,1,0,MysticArcanum7,,None,AlwaysPrepared,UntilRest)"/>
                     <attribute id="TableUUID" type="guid" value="a7a958f1-d858-4021-9fa7-cf87e7d71377"/>
                     <attribute id="UUID" type="guid" value="bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbb901"/>
                 </node>
@@ -835,7 +835,7 @@
                     <attribute id="Name" type="LSString" value="Warlock"/>
                     <attribute id="PassivesAdded" type="LSString" value="Warlock_MysticArcanum_8"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(00180001-0001-0001-0001-000000000007,1,0,MysticArcanum8);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00180001-0001-0001-0001-000000000007,1,0,MysticArcanum8,,None,AlwaysPrepared,UntilRest);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)"/>
                     <attribute id="TableUUID" type="guid" value="a7a958f1-d858-4021-9fa7-cf87e7d71377"/>
                     <attribute id="UUID" type="guid" value="bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbb903"/>
                 </node>
@@ -849,7 +849,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="PassivesAdded" type="LSString" value="Warlock_MysticArcanum_9"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,1,5)"/>
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="Warlock"/>

@@ -625,7 +625,7 @@ for table, name, tag, existing in (
 
 # ---------------------------------------------------------------- Warlock 17: the fourth Pact Magic slot (2024 table: 3 slots at 11, 4 at 17)
 EXISTING["bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbb905"] = {
-    "PassivesAdded": "Warlock_MysticArcanum_9", "Selectors": "SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9)",
+    "PassivesAdded": "Warlock_MysticArcanum_9", "Selectors": "SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)",
     "Boosts": "ActionResource(WarlockSpellSlot,1,5)"}
 
 def write():
