@@ -258,10 +258,10 @@ from = "sorcerer-base"
 levels = [2, 20]
 
 [[build]]
-id = "sorcerer-wildmagicpath"
+id = "sorcerer-wildmagic"
 class = "Sorcerer"
-title = "Sorcerer - WildMagicPath, levels 2-20"
-subclass = "WildMagicPath"
+title = "Sorcerer - WildMagic, levels 2-20"
+subclass = "WildMagic"
 from = "sorcerer-base"
 levels = [2, 20]
 

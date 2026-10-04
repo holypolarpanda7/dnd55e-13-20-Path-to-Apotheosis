@@ -58,8 +58,15 @@ def spell_cases(store, active):
                       f'spawn = [{{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = {3 if area else 6} }}]']
             expect.append('{ target = "A", hp_change = [-999, -1] }')
         elif "enemy" in verify:
+            # HP-threshold spells (Divine Word: IF(HasHPLessThan(X) and not HasHPLessThan(Y)):ApplyStatus(S,...)) only work below a
+            # threshold: spawn the wolf just under the highest threshold of an expected status (a 300 HP wolf can never be hit)
+            hp = 300
+            succ = r["fields"].get("SpellSuccess", ("",))[0] or ""
+            for x, st in re.findall(r"IF\(HasHPLessThan\((\d+)\)[^)]*\)?\)?:ApplyStatus\((\w+)", succ):
+                if st in statuses:
+                    hp = min(hp, int(x) - 1) if hp != 300 else int(x) - 1
             lines += [f"title = {q(name + ' applies ' + ' or '.join(statuses) + ' to a hostile wolf')}", 'target = "host"' if area else 'target = "A"',
-                      "retries = 2", f'spawn = [{{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = {3 if area else 6} }}]',
+                      "retries = 2", f'spawn = [{{ as = "A", template = "wolf", faction = "hostile", hp = {hp}, distance = {3 if area else 6} }}]',
                       f"notes = {q('the wolf can pass a save: the case retries up to twice')}"]
             expect.append(f'{{ target = "A", status_applied_any = {toml_list(statuses)} }}')
         elif "ally" in verify:
@@ -101,7 +108,8 @@ def feature_cases(store, active):
         lines = ["[[case]]", f"id = {q('feature-' + passive)}", (f"subclass = {q(name)}" if is_sub else f"class = {q(name)}"),
                  f"level = {level}", f"title = {q(passive + ': ' + (note.group(1) if note else 'feature test'))}",
                  f'console = "!apofeature {passive}"', f'expect_log = "FeatureTest {passive}: PASS"',
-                 f'fail_log = "FeatureTest {passive}: FAILED"', "wait = 12"]
+                 f'fail_log = "FeatureTest {passive}: FAILED"', "wait = 12",
+                 "retries = 2"]                # a scripted attack can miss (Frozen Haunt's Ray of Frost)
         out.append("\n".join(lines))
     return out
 

@@ -30,7 +30,7 @@ spell = "Shout_Apo_DivineWord"
 title = "Divine Word applies STUNNED or BLINDED to a hostile wolf"
 target = "host"
 retries = 2
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 3 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 100, distance = 3 }]
 notes = "the wolf can pass a save: the case retries up to twice"
 expect = [
   { target = "A", status_applied_any = ["STUNNED", "BLINDED"] },
@@ -73,9 +73,9 @@ expect = [
 ]
 
 [[case]]
-id = "spell-WildMagicPath-Zone_Apo_PrismaticSpray"
+id = "spell-WildMagic-Zone_Apo_PrismaticSpray"
 class = "Sorcerer"
-subclass = "WildMagicPath"
+subclass = "WildMagic"
 level = 13
 spell = "Zone_Apo_PrismaticSpray"
 title = "Prismatic Spray damages a hostile wolf"
@@ -639,6 +639,7 @@ console = "!apofeature WinterWalker_15_FrozenHaunt"
 expect_log = "FeatureTest WinterWalker_15_FrozenHaunt: PASS"
 fail_log = "FeatureTest WinterWalker_15_FrozenHaunt: FAILED"
 wait = 12
+retries = 2
 
 [[case]]
 id = "feature-NobleGenies_15_ElementalRebuke"
@@ -649,6 +650,7 @@ console = "!apofeature NobleGenies_15_ElementalRebuke"
 expect_log = "FeatureTest NobleGenies_15_ElementalRebuke: PASS"
 fail_log = "FeatureTest NobleGenies_15_ElementalRebuke: FAILED"
 wait = 12
+retries = 2
 
 [[case]]
 id = "feature-Enchanter_14_AlterMemories"
@@ -659,6 +661,7 @@ console = "!apofeature Enchanter_14_AlterMemories"
 expect_log = "FeatureTest Enchanter_14_AlterMemories: PASS"
 fail_log = "FeatureTest Enchanter_14_AlterMemories: FAILED"
 wait = 12
+retries = 2
 
 [[case]]
 id = "feature-Diviner_14_GreaterPortent"
@@ -669,6 +672,7 @@ console = "!apofeature Diviner_14_GreaterPortent"
 expect_log = "FeatureTest Diviner_14_GreaterPortent: PASS"
 fail_log = "FeatureTest Diviner_14_GreaterPortent: FAILED"
 wait = 12
+retries = 2
 
 [[case]]
 id = "feature-Archfey_14_BewitchingMagic"
@@ -679,6 +683,7 @@ console = "!apofeature Archfey_14_BewitchingMagic"
 expect_log = "FeatureTest Archfey_14_BewitchingMagic: PASS"
 fail_log = "FeatureTest Archfey_14_BewitchingMagic: FAILED"
 wait = 12
+retries = 2
 
 [[case]]
 id = "feature-DeadThree_UnholyInfiltration"
@@ -689,6 +694,7 @@ console = "!apofeature DeadThree_UnholyInfiltration"
 expect_log = "FeatureTest DeadThree_UnholyInfiltration: PASS"
 fail_log = "FeatureTest DeadThree_UnholyInfiltration: FAILED"
 wait = 12
+retries = 2
 
 [[case]]
 id = "feature-Barbarian_PersistentRage"
@@ -699,3 +705,4 @@ console = "!apofeature Barbarian_PersistentRage"
 expect_log = "FeatureTest Barbarian_PersistentRage: PASS"
 fail_log = "FeatureTest Barbarian_PersistentRage: FAILED"
 wait = 12
+retries = 2

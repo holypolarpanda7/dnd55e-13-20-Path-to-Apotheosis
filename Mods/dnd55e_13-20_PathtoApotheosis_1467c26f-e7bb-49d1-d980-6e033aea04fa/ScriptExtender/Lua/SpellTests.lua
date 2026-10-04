@@ -70,7 +70,7 @@ local ASSIGN = {
     { sub = "LightDomain",         cls = "Cleric",   spell = "Shout_Apo_DivineWord",                name = "Divine Word",            lvl = 13, verify = { enemy = { "STUNNED", "BLINDED" } } },
     { sub = "NecromancySchool",    cls = "Wizard",   spell = "Target_Apo_FingerOfDeath",            name = "Finger of Death",        lvl = 13, verify = { enemy = { "APO_FINGER_OF_DEATH" } }, extra = "On kill, the humanoid rises as a zombie on your side (Script Extender rider) - confirm visually with a humanoid target." },
     { sub = "DraconicBloodline",   cls = "Sorcerer", spell = "Target_Apo_FireStorm",                name = "Fire Storm",             lvl = 13, verify = { damage = true } },
-    { sub = "WildMagicPath",       cls = "Sorcerer", spell = "Zone_Apo_PrismaticSpray",             name = "Prismatic Spray",        lvl = 13, verify = { damage = true } },
+    { sub = "WildMagic",           cls = "Sorcerer", spell = "Zone_Apo_PrismaticSpray",             name = "Prismatic Spray",        lvl = 13, verify = { damage = true } },
     { sub = "Fiend",               cls = "Warlock",  spell = "Target_Apo_Forcecage",                name = "Forcecage",              lvl = 13, verify = { enemy = { "RESILIENT_SPHERE" } } },
     { sub = "SwordsCollege",       cls = "Bard",     spell = "Target_Apo_MordenkainensSword",       name = "Mordenkainen's Sword",   lvl = 13, verify = { manual = "cast at a hostile wolf; a spiritual greatsword should be summoned and attack. Verify the summon appears on the turn order." } },
     { sub = "LifeDomain",          cls = "Cleric",   spell = "Shout_Apo_ConjureCelestial",          name = "Conjure Celestial",      lvl = 13, verify = { self = { "APO_CELESTIAL_AURA" } } },
