@@ -28,3 +28,10 @@ Not filed: the stacked Nature / Tempest / Enchantment / Battle Master choice nod
 game's Nature Domain level 3 node and dnd55e's both load); whether the level-up UI offers the choices twice needs a
 level-up in game, and the project only takes confirmed bugs from a fresh campaign. The issues above state plainly that the
 template's fresh-campaign / no-other-mods checks were not done (the findings are in the release data files).
+
+
+Answered upstream as intended (checked before filing, 2026-10-04 - not bugs):
+- [#307](https://github.com/Yoonmoonsik/bg3dnd/issues/307) Oathbreaker's Spiteful Suffering (a base-game level 1 node): the owner
+  removed every Paladin subclass level-1 feature. The progression lint lists it as answered (testing.UPSTREAM_ANSWERED).
+- [#219](https://github.com/Yoonmoonsik/bg3dnd/issues/219) Bard spells from level 7: implemented through the College tables for
+  Magical Secrets. Verified in game: a Bard still gains 1/1/2 spells at 7/8/9, as in the 2024 table.
