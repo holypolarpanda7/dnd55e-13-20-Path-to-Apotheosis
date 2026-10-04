@@ -306,3 +306,157 @@ title = "Warlock - GreatOldOne, levels 2-20"
 subclass = "GreatOldOne"
 from = "warlock-base"
 levels = [2, 20]
+
+# ---- dnd55e's extra classes (Artificer, Gunslinger, Illrigger, Monster Hunter), added 2026-10-04 for the first release.
+# Their base saves come from bg3_new_character too (the respec grid's fourth row). The Gunslinger and Illrigger 13-20
+# suites are script cases that grant the feature to any host: final_cases runs them on a level 20 character of the class.
+
+[[build]]
+id = "artificer-base"
+class = "Artificer"
+title = "Artificer base, level 1 (start save for every Artificer build)"
+levels = [1, 1]
+save_as = "Artificer L1 Base"
+
+[[build]]
+id = "artificer-alchemist"
+class = "Artificer"
+title = "Artificer - Alchemist, levels 2-20"
+subclass = "Alchemist"
+from = "artificer-base"
+levels = [2, 20]
+
+[[build]]
+id = "artificer-armorer"
+class = "Artificer"
+title = "Artificer - Armorer, levels 2-20"
+subclass = "Armorer"
+from = "artificer-base"
+levels = [2, 20]
+
+[[build]]
+id = "artificer-artillerist"
+class = "Artificer"
+title = "Artificer - Artillerist, levels 2-20"
+subclass = "Artillerist"
+from = "artificer-base"
+levels = [2, 20]
+
+[[build]]
+id = "artificer-battlesmith"
+class = "Artificer"
+title = "Artificer - BattleSmith, levels 2-20"
+subclass = "BattleSmith"
+from = "artificer-base"
+levels = [2, 20]
+
+[[build]]
+id = "gunslinger-base"
+class = "Gunslinger"
+title = "Gunslinger base, level 1 (start save for every Gunslinger build)"
+levels = [1, 1]
+save_as = "Gunslinger L1 Base"
+
+[[build]]
+id = "gunslinger-highroller"
+class = "Gunslinger"
+title = "Gunslinger - HighRoller, levels 2-20"
+subclass = "HighRoller"
+from = "gunslinger-base"
+levels = [2, 20]
+
+[[build]]
+id = "gunslinger-spellslinger"
+class = "Gunslinger"
+title = "Gunslinger - Spellslinger, levels 2-20"
+subclass = "Spellslinger"
+from = "gunslinger-base"
+levels = [2, 20]
+final_cases = ["gs-*"]
+
+[[build]]
+id = "gunslinger-whitehat"
+class = "Gunslinger"
+title = "Gunslinger - WhiteHat, levels 2-20"
+subclass = "WhiteHat"
+from = "gunslinger-base"
+levels = [2, 20]
+
+[[build]]
+id = "illrigger-base"
+class = "Illrigger"
+title = "Illrigger base, level 1 (start save for every Illrigger build)"
+levels = [1, 1]
+save_as = "Illrigger L1 Base"
+
+[[build]]
+id = "illrigger-architectofruin"
+class = "Illrigger"
+title = "Illrigger - ArchitectOfRuin, levels 2-20"
+subclass = "ArchitectOfRuin"
+from = "illrigger-base"
+levels = [2, 20]
+final_cases = ["ill-*"]
+
+[[build]]
+id = "illrigger-hellspeaker"
+class = "Illrigger"
+title = "Illrigger - Hellspeaker, levels 2-20"
+subclass = "Hellspeaker"
+from = "illrigger-base"
+levels = [2, 20]
+
+[[build]]
+id = "illrigger-painkiller"
+class = "Illrigger"
+title = "Illrigger - Painkiller, levels 2-20"
+subclass = "Painkiller"
+from = "illrigger-base"
+levels = [2, 20]
+
+[[build]]
+id = "illrigger-sanguineknight"
+class = "Illrigger"
+title = "Illrigger - SanguineKnight, levels 2-20"
+subclass = "SanguineKnight"
+from = "illrigger-base"
+levels = [2, 20]
+
+[[build]]
+id = "illrigger-shadowmaster"
+class = "Illrigger"
+title = "Illrigger - Shadowmaster, levels 2-20"
+subclass = "Shadowmaster"
+from = "illrigger-base"
+levels = [2, 20]
+
+[[build]]
+id = "monsterhunter-base"
+class = "MonsterHunter"
+title = "MonsterHunter base, level 1 (start save for every MonsterHunter build)"
+levels = [1, 1]
+save_as = "MonsterHunter L1 Base"
+
+[[build]]
+id = "monsterhunter-carverguild"
+class = "MonsterHunter"
+title = "MonsterHunter - CarverGuild, levels 2-20"
+subclass = "CarverGuild"
+from = "monsterhunter-base"
+levels = [2, 20]
+
+[[build]]
+id = "monsterhunter-devourerguild"
+class = "MonsterHunter"
+title = "MonsterHunter - DevourerGuild, levels 2-20"
+subclass = "DevourerGuild"
+from = "monsterhunter-base"
+levels = [2, 20]
+
+[[build]]
+id = "monsterhunter-occultistguild"
+class = "MonsterHunter"
+title = "MonsterHunter - OccultistGuild, levels 2-20"
+subclass = "OccultistGuild"
+from = "monsterhunter-base"
+levels = [2, 20]
