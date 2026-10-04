@@ -40,9 +40,11 @@ title = "Master of Hell: Darkness - 10d10 Cold and Blinded"
 spell = "Projectile_Illrigger_MasterOfHell_Darkness"
 target = "A"
 real_rolls = true
+retries = 2
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 10 }]
 setup = [{ target = "host", passive = "Illrigger_20_MasterOfHell" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
-expect = [{ target = "A", hp_change = [-100, -10] }, { target = "A", status_applied = ["ILLRIGGER_HELLSTORM_GLOOM"] }]
+expect = [{ target = "A", hp_change = [-200, -10] }, { target = "A", status_applied = ["ILLRIGGER_HELLSTORM_GLOOM"] }]
+notes = "10d10 Cold. The test wolf can spawn standing in water (WET), which doubles Cold damage: runs rolled 102 and 120 (even, above the dice maximum of 100). The range allows 2 x 10d10."
 
 # ---------------------------------------------------------------- 13th-level interdict boons
 [[case]]
@@ -87,6 +89,7 @@ title = "Impaling Shot: a ranged hit on an interdicted creature lowers its AC"
 spell = "Projectile_MainHandAttack"
 target = "A"
 real_rolls = true
+retries = 2
 reactions = ["ImpalingShot"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(Seal,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "InterdictBoons_13_ImpalingShot" }, { target = "A", status = "INTERDICTED", turns = -1, by = "host" }]
@@ -159,6 +162,7 @@ title = "Deathstrike: a melee hit on an interdicted creature becomes a crit and 
 spell = "Target_MainHandAttack"
 target = "A"
 real_rolls = true
+retries = 2
 reactions = ["Deathstrike"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
 setup = [{ target = "host", boost = "ActionResource(IllriggerDeathstrike,5,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "Painkiller_15_Deathstrike" }, { target = "A", status = "INTERDICTED", turns = -1, by = "host" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
