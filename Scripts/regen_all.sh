@@ -13,3 +13,4 @@ for g in gen_spells_2024 generate_level79_spells gen_true_polymorph gen_indomita
 done
 uv run --project "$MCP" bg3-data refresh apotheosis > /dev/null  # gen_upcasts reads the index (incl. the files above)
 echo "== gen_upcasts"; python3 Scripts/gen_upcasts.py | grep -v '^WARN' | tail -3
+echo "== gen_spell_mastery_containers"; python3 Scripts/gen_spell_mastery_containers.py

@@ -68,6 +68,7 @@ SPELLS = [
                 "Deafened-only tier and the Deafened parts have no BG3 status; 1 hour = 600 turns, 10 minutes = 100; the planar banishment "
                 "(can't return for 24 hours) is Kill() like the base game's Dispel Evil and Good dismissal, with its Raphael guard.",
          fields={
+             "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellRoll": "not SavingThrow(Ability.Charisma, SourceSpellDC())",
              "SpellSuccess": "IF((Tagged('CELESTIAL') or Tagged('ELEMENTAL') or Tagged('FEY') or Tagged('FIEND')) and not Tagged('LOW_HOUSEOFHOPE_IDENTIFY_RAPHAEL') and not Tagged('LOW_HOUSEOFHOPE_RAPHAELIAN_CAMBION')):Kill();"
                              "IF(HasHPLessThan(21)):Kill();"
@@ -127,13 +128,14 @@ SPELLS = [
          name="Mordenkainen's Sword",
          desc="You conjure a blade of pure force that fights at your command, striking with the strength of a 7th-level summoning.",
          design="Spiritual Weapon greatsword chassis at spell level 7 (summon scaling handles the rest).",
-         fields={}),
+         fields={"ContainerSpells": "", "SpellContainerID": ""}),  # not a picker (the parent is one; found 2026-10-04)
     dict(entry="Shout_Apo_ConjureCelestial", using="Shout_SpiritGuardians",
          level=7, school="Conjuration", hid=7015, classes=["clr"],
          name="Conjure Celestial",
          desc="A celestial spirit surrounds you: enemies within 9m suffer 3d8 Radiant damage each turn (Wisdom save), while nearby allies are continually Blessed.",
          design="2024's radiant-spirit version as a dual aura on the Spirit Guardians engine: wrath for enemies, Bless for allies.",
          fields={
+             "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_CELESTIAL_AURA,100,10)",
              "TooltipStatusApply": "ApplyStatus(APO_CELESTIAL_AURA,100,10)",
          }),
@@ -257,6 +259,7 @@ SPELLS = [
          desc="A 3m sphere of dead magic follows you for 10 turns: enemies inside are continually Silenced, strangling their casting.",
          design="Full spell-negation is not expressible; the field Silences every enemy inside it each turn - casters must leave or go dark.",
          fields={
+             "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_ANTIMAGIC_AURA,100,10)",
              "TooltipStatusApply": "ApplyStatus(APO_ANTIMAGIC_AURA,100,10)",
          }),
@@ -291,6 +294,7 @@ SPELLS = [
          desc="You bend the sky itself: for 5 turns a storm rages 18m around you, shocking enemies for 2d10 Lightning damage each turn (Constitution save).",
          design="Weather control focused into its combat expression: a huge personal storm-cell.",
          fields={
+             "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_STORM_AURA,100,5)",
              "TooltipStatusApply": "ApplyStatus(APO_STORM_AURA,100,5)",
          }),
@@ -329,6 +333,7 @@ SPELLS = [
          desc="Divine radiance mantles you for 5 turns: allies within 9m are continually Blessed.",
          design="The 5e save/attack-shield rendered as a perpetual Bless aura on the party.",
          fields={
+             "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_HOLY_AURA,100,5)",
              "TooltipStatusApply": "ApplyStatus(APO_HOLY_AURA,100,5)",
          }),
@@ -433,6 +438,7 @@ SPELLS = [
          desc="A churning stormcloud blankets the battlefield for 5 turns: every enemy within 18m is lashed for 4d6 Lightning damage each turn (Constitution save).",
          design="The five-round escalating storm flattened to its strongest sustained round, kept at full 18m scale.",
          fields={
+             "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_VENGEANCE_AURA,100,5)",
              "TooltipStatusApply": "ApplyStatus(APO_VENGEANCE_AURA,100,5)",
              "Icon": "Apo_Spell_StormOfVengeance",  # Icons/src (ComfyUI + BG3 icon LoRA, 2026-10-04)

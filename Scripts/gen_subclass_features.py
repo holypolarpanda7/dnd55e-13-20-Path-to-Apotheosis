@@ -717,10 +717,10 @@ G.spell("Shout_ApoFinalJudgementOff", "Final Judgement: Douse the Blade", "Speak
 GUARD_TEXT = ("Cast Spirit Guardians (Radiant) with no components. Once per Long Rest, or again for three Divine points. "
               "(Creatures in the area count as within 5 feet of an enemy for your Sneak Attack isn't implemented.)")
 G.spell("Shout_ApoFinalJudgementGuardians", "Final Judgement: Spirit Guardians", GUARD_TEXT, {
-    "UseCosts": "ActionPoint:1;ApoFinalJudgementGuardians:1", "SpellContainerID": None, "SpellFlags": "IsConcentration;IsSpell;IsHarmful"},
+    "UseCosts": "ActionPoint:1;ApoFinalJudgementGuardians:1", "SpellContainerID": "", "SpellFlags": "IsConcentration;IsSpell;IsHarmful"},
     using="Shout_SpiritGuardians_Radiant", icon="Spell_Conjuration_SpiritGuardians")
 G.spell("Shout_ApoFinalJudgementGuardians_DivinePoints", "Final Judgement: Spirit Guardians (3 Divine points)", GUARD_TEXT, {
-    "UseCosts": "ActionPoint:1;DivinePoint:3", "SpellContainerID": None, "SpellFlags": "IsConcentration;IsSpell;IsHarmful",
+    "UseCosts": "ActionPoint:1;DivinePoint:3", "SpellContainerID": "", "SpellFlags": "IsConcentration;IsSpell;IsHarmful",
     "RequirementConditions": "not HasActionResource('ApoFinalJudgementGuardians',1,0,false,false,context.Source)"},
     using="Shout_SpiritGuardians_Radiant", icon="Spell_Conjuration_SpiritGuardians")
 G.passive(FINAL, "Final Judgement",
