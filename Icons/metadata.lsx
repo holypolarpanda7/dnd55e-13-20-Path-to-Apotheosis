@@ -7,6 +7,516 @@
 				<node id="entries">
 					<children>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoBendReality.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoBetterHalf.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoDreadLord.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoExaltedChampion.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoFinalJudgementGuardians.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoIntoxicatedFrenzy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoInvincibleConqueror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoMaraudersReprisal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoMasterDuelist.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoMortalBulwark.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoNatureMagician.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoSwarmingDispersal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoUmbralForm.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoUnearthlyRecovery.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoUnerringAccuracy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoUnstoppableAssault.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoVigilantDefender.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoWalkerInDreams.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/ApoWindSoul.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/BattleMasterRelentless.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/DraconicSpiritCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonEnergyChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonExpertiseChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonFate.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonFluidForms.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonFortune.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonMSMSchool.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonOverload.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonPeerlessAim.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonRecoveryDie.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonRevelry.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonRoteChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonSignature.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonSignatureChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonSoulDrinker.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/EpicBoonTerror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/GunslingerHeadshot.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/HurlThroughHellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/IllriggerDeathstrike.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/IllriggerInfernalMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/IllriggerMasterOfHell.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/IllriggerQuidProQuo.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/IllriggerSuperiorInterdict.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/IllriggerVileSeals.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/IllriggerVileSlots.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/LearnSpellMasteryL1.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/LearnSpellMasteryL2.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/NaturesVeil.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/SignatureSpellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/UnbreakableMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ActionResources_c/Icons/UnbreakableMajestyHit.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="80" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="80" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Feat_11HonedSpellfire.png" />
 							<children>
 								<node id="entries">
@@ -1693,6 +2203,2046 @@
 									<attribute id="h" type="int16" value="144" />
 									<attribute id="mipcount" type="int8" value="1" />
 									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoBendReality.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoBetterHalf.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoDreadLord.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoExaltedChampion.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoFinalJudgementGuardians.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoIntoxicatedFrenzy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoInvincibleConqueror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoMaraudersReprisal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoMasterDuelist.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoMortalBulwark.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoNatureMagician.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoSwarmingDispersal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoUmbralForm.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoUnearthlyRecovery.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoUnerringAccuracy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoUnstoppableAssault.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoVigilantDefender.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoWalkerInDreams.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/ApoWindSoul.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/BattleMasterRelentless.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/DraconicSpiritCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonEnergyChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonExpertiseChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonFate.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonFluidForms.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonFortune.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonMSMSchool.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonOverload.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonPeerlessAim.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonRecoveryDie.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonRevelry.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonRoteChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonSignature.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonSignatureChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonSoulDrinker.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/EpicBoonTerror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/GunslingerHeadshot.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoBendReality.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoBetterHalf.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoDreadLord.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoExaltedChampion.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoFinalJudgementGuardians.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoIntoxicatedFrenzy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoInvincibleConqueror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoMaraudersReprisal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoMasterDuelist.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoMortalBulwark.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoNatureMagician.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoSwarmingDispersal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoUmbralForm.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoUnearthlyRecovery.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoUnerringAccuracy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoUnstoppableAssault.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoVigilantDefender.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoWalkerInDreams.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/ApoWindSoul.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/BattleMasterRelentless.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/DraconicSpiritCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonEnergyChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonExpertiseChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonFate.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonFluidForms.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonFortune.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonMSMSchool.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonOverload.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonPeerlessAim.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonRecoveryDie.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonRevelry.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonRoteChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonSignature.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonSignatureChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonSoulDrinker.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/EpicBoonTerror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/GunslingerHeadshot.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/HurlThroughHellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/IllriggerDeathstrike.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/IllriggerInfernalMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/IllriggerMasterOfHell.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/IllriggerQuidProQuo.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/IllriggerSuperiorInterdict.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/IllriggerVileSeals.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/IllriggerVileSlots.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/LearnSpellMasteryL1.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/LearnSpellMasteryL2.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/NaturesVeil.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/SignatureSpellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/UnbreakableMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Highlight/UnbreakableMajestyHit.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/HurlThroughHellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/IllriggerDeathstrike.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/IllriggerInfernalMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/IllriggerMasterOfHell.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/IllriggerQuidProQuo.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/IllriggerSuperiorInterdict.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/IllriggerVileSeals.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/IllriggerVileSlots.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/LearnSpellMasteryL1.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/LearnSpellMasteryL2.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoBendReality.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoBetterHalf.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoDreadLord.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoExaltedChampion.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoFinalJudgementGuardians.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoIntoxicatedFrenzy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoInvincibleConqueror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoMaraudersReprisal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoMasterDuelist.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoMortalBulwark.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoNatureMagician.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoSwarmingDispersal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoUmbralForm.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoUnearthlyRecovery.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoUnerringAccuracy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoUnstoppableAssault.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoVigilantDefender.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoWalkerInDreams.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/ApoWindSoul.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/BattleMasterRelentless.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/DraconicSpiritCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonEnergyChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonExpertiseChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonFate.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonFluidForms.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonFortune.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonMSMSchool.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonOverload.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonPeerlessAim.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonRecoveryDie.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonRevelry.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonRoteChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonSignature.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonSignatureChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonSoulDrinker.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/EpicBoonTerror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/GunslingerHeadshot.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/HurlThroughHellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/IllriggerDeathstrike.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/IllriggerInfernalMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/IllriggerMasterOfHell.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/IllriggerQuidProQuo.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/IllriggerSuperiorInterdict.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/IllriggerVileSeals.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/IllriggerVileSlots.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/LearnSpellMasteryL1.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/LearnSpellMasteryL2.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/NaturesVeil.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/SignatureSpellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/UnbreakableMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Missing/UnbreakableMajestyHit.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/NaturesVeil.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/SignatureSpellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/UnbreakableMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/UnbreakableMajestyHit.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoBendReality.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoBetterHalf.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoDreadLord.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoExaltedChampion.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoFinalJudgementGuardians.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoIntoxicatedFrenzy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoInvincibleConqueror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoMaraudersReprisal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoMasterDuelist.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoMortalBulwark.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoNatureMagician.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoSwarmingDispersal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoUmbralForm.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoUnearthlyRecovery.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoUnerringAccuracy.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoUnstoppableAssault.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoVigilantDefender.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoWalkerInDreams.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/ApoWindSoul.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/BattleMasterRelentless.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/DraconicSpiritCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonEnergyChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonExpertiseChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonFate.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonFluidForms.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonFortune.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonMSMSchool.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonOverload.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonPeerlessAim.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonRecoveryDie.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonRevelry.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonRoteChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonSignature.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonSignatureChoice.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonSoulDrinker.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/EpicBoonTerror.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/GunslingerHeadshot.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/HurlThroughHellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/IllriggerDeathstrike.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/IllriggerInfernalMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/IllriggerMasterOfHell.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/IllriggerQuidProQuo.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/IllriggerSuperiorInterdict.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/IllriggerVileSeals.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/IllriggerVileSlots.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/LearnSpellMasteryL1.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/LearnSpellMasteryL2.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/NaturesVeil.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/SignatureSpellCharge.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/UnbreakableMajesty.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Shared/Resources/Used/UnbreakableMajestyHit.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="48" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="48" />
 								</node>
 							</children>
 						</node>
