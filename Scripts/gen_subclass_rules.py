@@ -31,6 +31,7 @@ ALIASES = {
     "ChoreographyCollege": ("Bard", "College of Choreography"), "Fractured": ("Barbarian", "Path of the Fractured"),
     "CircleOfTheUnbroken": ("Druid", "Circle of the Unbroken"), "CircleOfDragons": ("Druid", "Circle of Dragons"),
     "AstralDomain": ("Cleric", "Astral Domain"), "BladeOfRadiance": ("Rogue", "Blade of Radiance"),
+    "MysticArts": ("Monk", "Warrior of the Mystic Arts"),
     "HighRoller": ("Gunslinger", "High Roller"), "WhiteHat": ("Gunslinger", "White Hat"),
     "ArchitectOfRuin": ("Illrigger", "Architect of Ruin"), "SanguineKnight": ("Illrigger", "Sanguine Knight"),
     "ValorCollege": ("Bard", "College of Valor"),
@@ -109,7 +110,7 @@ NAME_FIX = {"Jllus Ory Reality": "Illusory Reality", "Keeper Ofsouls": "Keeper o
 NONE = {("Cleric", "Apocalypse Domain"): "source Cthulhu by Torchlight (bg3dnd #1567) - no text yet",
         ("Cleric", "Dragon Domain"): "source Valda's Spire of Secrets: Player Pack 2 (bg3dnd #1568) - no text yet",
         ("Sorcerer", "Frost Sorcery"): "no source found", ("Sorcerer", "Heroic Sorcery"): "source text not reachable",
-        ("Monk", "Warrior of the Mystic Arts"): "no source recorded"}
+}
 
 
 def norm(s):
@@ -143,12 +144,12 @@ def ref_sections():
             classes = ("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock",
                        "Wizard")
             h = re.match(r"\s*([A-Z]+):\s*([A-Z][A-Z' ]+?)\s*$", line)          # "WARLOCK: HEXBLADE PATRON"
-            h2 = re.match(r"\s*([A-Z][A-Z' ]+?)\s*\(([A-Z]+)\)\s*$", line)      # "CONJURER (WIZARD)" (UA)
+            h2 = re.match(r"\s*([A-Z][A-Za-z'’ ]+?)\s*\(([A-Za-z]+)\)\s*$", line)  # "CONJURER (WIZARD)", "Conjurer (Wizard)"
             if h and h.group(1).title() in classes:
                 cur = (h.group(1).title(), h.group(2).title().replace("'S", "'s"))
                 continue
             if h2 and h2.group(2).title() in classes:
-                cur = (h2.group(2).title(), h2.group(1).title().replace("'S", "'s"))
+                cur = (h2.group(2).title(), h2.group(1).strip().title().replace("'S", "'s").replace("’S", "’s").replace(" Of ", " of ").replace(" The ", " the "))
                 continue
             m = re.match(r"\s*LEVEL\s*(\d+)\s*:\s*(.+?)\s*$", line, re.I)
             if cur and m:
