@@ -55,7 +55,7 @@ SPELLS = [
          name="Delayed Blast Fireball",
          desc="A bead of fire streaks out and detonates with catastrophic force, dealing 12d6 Fire damage to everything caught in the blast.",
          design="Straight damage upgrade of Fireball; the 5e delay mechanic has no BG3 turn hook, traded for raw payload.",
-         fields={
+         fields={"Icon": "Apo_Spell_DelayedBlastFireball", 
              "SpellSuccess": "DealDamage(12d6,Fire,Magical)",
              "SpellFail": "DealDamage((12d6)/2,Fire,Magical)",
              "TooltipDamageList": "DealDamage(12d6,Fire)",
@@ -96,7 +96,7 @@ SPELLS = [
          name="Fire Storm",
          desc="A storm of roaring flame fills a wide area, dealing 7d10 Fire damage (Dexterity save for half).",
          design="FlameStrike chassis widened to 8m, single fire payload.",
-         fields={
+         fields={"Icon": "Apo_Spell_FireStorm", 
              "SpellSuccess": "DealDamage(7d10,Fire,Magical)",
              "SpellFail": "DealDamage((7d10)/2,Fire,Magical)",
              "TooltipDamageList": "DealDamage(7d10,Fire)",
@@ -128,13 +128,13 @@ SPELLS = [
          name="Mordenkainen's Sword",
          desc="You conjure a blade of pure force that fights at your command, striking with the strength of a 7th-level summoning.",
          design="Spiritual Weapon greatsword chassis at spell level 7 (summon scaling handles the rest).",
-         fields={"ContainerSpells": "", "SpellContainerID": ""}),  # not a picker (the parent is one; found 2026-10-04)
+         fields={"Icon": "Apo_Spell_MordenkainensSword", "ContainerSpells": "", "SpellContainerID": ""}),  # not a picker (the parent is one; found 2026-10-04)
     dict(entry="Shout_Apo_ConjureCelestial", using="Shout_SpiritGuardians",
          level=7, school="Conjuration", hid=7015, classes=["clr"],
          name="Conjure Celestial",
          desc="A celestial spirit surrounds you: enemies within 9m suffer 3d8 Radiant damage each turn (Wisdom save), while nearby allies are continually Blessed.",
          design="2024's radiant-spirit version as a dual aura on the Spirit Guardians engine: wrath for enemies, Bless for allies.",
-         fields={
+         fields={"Icon": "Apo_Spell_ConjureCelestial", 
              "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_CELESTIAL_AURA,100,10)",
              "TooltipStatusApply": "ApplyStatus(APO_CELESTIAL_AURA,100,10)",
@@ -144,7 +144,7 @@ SPELLS = [
          name="Etherealness",
          desc="You step partly into the Ethereal Plane for 10 turns: unseen by material eyes and drifting free, with greatly extended movement.",
          design="Border-Ethereal travel translated to Greater Invisibility + bonus movement - the scouting/escape role the plane serves.",
-         fields={
+         fields={"Icon": "Apo_Spell_Etherealness", 
              "SpellProperties": "ApplyStatus(GREATER_INVISIBILITY,100,10);ApplyStatus(APO_ETHEREAL,100,10)",
              "TooltipStatusApply": "ApplyStatus(GREATER_INVISIBILITY,100,10);ApplyStatus(APO_ETHEREAL,100,10)",
          }),
@@ -153,7 +153,7 @@ SPELLS = [
          name="Mirage Arcane",
          desc="You rewrite the terrain in enemy minds across a huge area. Those who fail an Intelligence save wander lost: Slowed for 3 turns and Blinded for 2.",
          design="Terrain illusion re-cast as a large-area mass disorientation debuff (illusory ground is not expressible in BG3).",
-         fields={
+         fields={"Icon": "Apo_Spell_MirageArcane", 
              "SpellRoll": "not SavingThrow(Ability.Intelligence, SourceSpellDC())",
              "SpellSuccess": "ApplyStatus(SLOW,100,3);ApplyStatus(BLINDED,100,2)",
              "SpellFail": "",
@@ -167,7 +167,7 @@ SPELLS = [
          name="Mordenkainen's Magnificent Mansion",
          desc="The mansion's door opens a crack: allies around you snatch a moment of its comfort, healing 4d8 and gaining Sanctuary for 2 turns.",
          design="Downtime demiplane turned into a mid-combat respite: group heal + short Sanctuary.",
-         fields={
+         fields={"Icon": "Apo_Spell_MagnificentMansion", 
              "SpellProperties": "RegainHitPoints(4d8);ApplyStatus(SANCTUARY,100,2)",
              "TooltipDamageList": "RegainHitPoints(4d8)",
              "TooltipStatusApply": "ApplyStatus(SANCTUARY,100,2)",
@@ -187,7 +187,7 @@ SPELLS = [
          name="Power Word Fortify",
          desc="A word of pure vitality wraps a creature in 60 temporary hit points.",
          design="2024 spell: 120 THP split among six becomes 60 THP on one target - equal power at BG3's party scale.",
-         fields={
+         fields={"Icon": "Apo_Spell_PowerWordFortify", 
              "SpellProperties": "ApplyStatus(APO_FORTIFIED,100,-1)",
              "TooltipStatusApply": "ApplyStatus(APO_FORTIFIED,100,-1)",
          }),
@@ -207,7 +207,7 @@ SPELLS = [
          name="Sequester",
          desc="You hide an ally outside the world's reach: for 3 turns nothing can touch them, and they cannot act.",
          design="Protective stasis - the sphere pointed at an ally: emergency invulnerability.",
-         fields={
+         fields={"Icon": "Apo_Spell_Sequester", 
              "TargetConditions": "Ally() and not Dead()",
              "SpellProperties": "ApplyStatus(RESILIENT_SPHERE,100,3)",
              "TooltipStatusApply": "ApplyStatus(RESILIENT_SPHERE,100,3)",
@@ -218,7 +218,7 @@ SPELLS = [
          name="Simulacrum",
          desc="A snow-built double acts through you for 5 turns, granting an additional action and bonus action each round.",
          design="The duplicate acts through its creator: Haste-class action economy without lethargy or concentration, time-boxed to 5 turns.",
-         fields={
+         fields={"Icon": "Apo_Spell_Simulacrum", 
              "SpellProperties": "ApplyStatus(APO_SIMULACRUM,100,5)",
              "TooltipStatusApply": "ApplyStatus(APO_SIMULACRUM,100,5)",
          }),
@@ -227,7 +227,7 @@ SPELLS = [
          name="Symbol",
          desc="A glyph of stunning power erupts: creatures in the area that fail an Intelligence save take 7d10 Psychic damage and are Stunned for a turn.",
          design="The 'stunning' symbol variant, cast as an instant AoE (BG3 has no readied-trigger glyphs above Glyph of Warding).",
-         fields={
+         fields={"Icon": "Apo_Spell_Symbol", 
              "SpellRoll": "not SavingThrow(Ability.Intelligence, SourceSpellDC())",
              "SpellSuccess": "DealDamage(7d10,Psychic,Magical);ApplyStatus(STUNNED,100,1)",
              "SpellFail": "DealDamage((7d10)/2,Psychic,Magical)",
@@ -238,7 +238,7 @@ SPELLS = [
          name="Teleport",
          desc="You vanish and reappear anywhere you can see, up to 30m away.",
          design="Long-range battlefield blink; overworld teleportation already exists as fast travel.",
-         fields={
+         fields={"Icon": "Apo_Spell_Teleport", 
              "TargetRadius": "30",
          }),
 
@@ -248,7 +248,7 @@ SPELLS = [
          name="Animal Shapes",
          desc="Allies around you take on bestial vigour for 10 turns: 30 temporary hit points and surging speed.",
          design="Mass ally polymorph flattened to a strong pack-buff (true form-swapping is engine-owned).",
-         fields={
+         fields={"Icon": "Apo_Spell_AnimalShapes", 
              "SpellProperties": "ApplyStatus(APO_BESTIAL,100,10)",
              "TooltipStatusApply": "ApplyStatus(APO_BESTIAL,100,10)",
              "TooltipDamageList": "",
@@ -258,7 +258,7 @@ SPELLS = [
          name="Antimagic Field",
          desc="A 3m sphere of dead magic follows you for 10 turns: enemies inside are continually Silenced, strangling their casting.",
          design="Full spell-negation is not expressible; the field Silences every enemy inside it each turn - casters must leave or go dark.",
-         fields={
+         fields={"Icon": "Apo_Spell_AntimagicField", 
              "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_ANTIMAGIC_AURA,100,10)",
              "TooltipStatusApply": "ApplyStatus(APO_ANTIMAGIC_AURA,100,10)",
@@ -268,7 +268,7 @@ SPELLS = [
          name="Antipathy/Sympathy",
          desc="You become anathema to one creature: on a failed Wisdom save it is Frightened of you for 5 turns.",
          design="The antipathy half, single-target: a long unconditional fear with no concentration.",
-         fields={
+         fields={"Icon": "Apo_Spell_Antipathy", 
              "SpellRoll": "not SavingThrow(Ability.Wisdom, SourceSpellDC())",
              "SpellSuccess": "ApplyStatus(FRIGHTENED,100,5)",
              "TooltipStatusApply": "ApplyStatus(FRIGHTENED,100,5)",
@@ -278,13 +278,13 @@ SPELLS = [
          name="Befuddlement",
          desc="You blast the mind of a creature, shattering its intellect and personality (PHB 2024 successor to Feeblemind).",
          design="2024 rename of the existing Feeblemind implementation; mechanics inherited unchanged.",
-         fields={}),
+         fields={"Icon": "Apo_Spell_Befuddlement", }),
     dict(entry="Target_Apo_Clone", using="Target_DeathWard",
          level=8, school="Necromancy", hid=8009, classes=["wiz"],
          name="Clone",
          desc="A hidden clone stands ready. The next time the target falls, the clone takes their place: they rise again at full strength.",
          design="Death-contingency via Script Extender rider on APO_CLONE - full revive on going down, once.",
-         fields={
+         fields={"Icon": "Apo_Spell_Clone", 
              "SpellProperties": "ApplyStatus(APO_CLONE,100,-1)",
              "TooltipStatusApply": "ApplyStatus(APO_CLONE,100,-1)",
          }),
@@ -293,7 +293,7 @@ SPELLS = [
          name="Control Weather",
          desc="You bend the sky itself: for 5 turns a storm rages 18m around you, shocking enemies for 2d10 Lightning damage each turn (Constitution save).",
          design="Weather control focused into its combat expression: a huge personal storm-cell.",
-         fields={
+         fields={"Icon": "Apo_Spell_ControlWeather", 
              "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_STORM_AURA,100,5)",
              "TooltipStatusApply": "ApplyStatus(APO_STORM_AURA,100,5)",
@@ -303,7 +303,7 @@ SPELLS = [
          name="Demiplane",
          desc="You shove an ally through a shadowy door into your demiplane: for 2 turns nothing can reach them, and they cannot act.",
          design="Pocket-dimension refuge: brief total protection at the cost of the ally's turns.",
-         fields={
+         fields={"Icon": "Apo_Spell_Demiplane", 
              "SpellProperties": "ApplyStatus(RESILIENT_SPHERE,100,2)",
              "TooltipStatusApply": "ApplyStatus(RESILIENT_SPHERE,100,2)",
          }),
@@ -320,7 +320,7 @@ SPELLS = [
          name="Earthquake",
          desc="The ground heaves across a huge area: creatures that fail a Dexterity save take 5d12 Bludgeoning damage and are knocked Prone amid the churned earth.",
          design="Fissures and collapse become slam damage + Prone + a lingering mud field.",
-         fields={
+         fields={"Icon": "Apo_Spell_Earthquake", 
              "SpellSuccess": "DealDamage(5d12,Bludgeoning,Magical);ApplyStatus(PRONE,100,1)",
              "SpellFail": "DealDamage((5d12)/2,Bludgeoning,Magical)",
              "TooltipDamageList": "DealDamage(5d12,Bludgeoning)",
@@ -332,7 +332,7 @@ SPELLS = [
          name="Holy Aura",
          desc="Divine radiance mantles you for 5 turns: allies within 9m are continually Blessed.",
          design="The 5e save/attack-shield rendered as a perpetual Bless aura on the party.",
-         fields={
+         fields={"Icon": "Apo_Spell_HolyAura", 
              "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellProperties": "ApplyStatus(SELF,APO_HOLY_AURA,100,5)",
              "TooltipStatusApply": "ApplyStatus(APO_HOLY_AURA,100,5)",
@@ -342,7 +342,7 @@ SPELLS = [
          name="Incendiary Cloud",
          desc="A roiling cloud of embers ignites: creatures inside take 10d8 Fire damage (Dexterity save for half) and the ground burns on.",
          design="Cloudkill chassis converted to fire: heavy initial burn plus a lingering fire field.",
-         fields={
+         fields={"Icon": "Apo_Spell_IncendiaryCloud", 
              "SpellRoll": "not SavingThrow(Ability.Dexterity, SourceSpellDC())",
              "SpellSuccess": "DealDamage(10d8,Fire,Magical)",
              "SpellFail": "DealDamage((10d8)/2,Fire,Magical)",
@@ -354,7 +354,7 @@ SPELLS = [
          name="Maze",
          desc="You cast an enemy into an extradimensional labyrinth. On a failed Intelligence save it is gone for 2 turns, wandering the maze.",
          design="Banishment chassis keyed to Intelligence - brutal against low-INT bruisers, trivial for keen minds, exactly as written.",
-         fields={
+         fields={"Icon": "Apo_Spell_Maze", 
              "SpellRoll": "not SavingThrow(Ability.Intelligence, SourceSpellDC())",
              "SpellSuccess": "ApplyStatus(BANISHED,100,2)",
          }),
@@ -372,7 +372,7 @@ SPELLS = [
          name="Sunburst",
          desc="Brilliant sunlight flashes in a 9m sphere: 12d6 Radiant damage, and creatures that fail a Constitution save are Blinded for 2 turns.",
          design="Direct translation on the FlameStrike chassis.",
-         fields={
+         fields={"Icon": "Apo_Spell_Sunburst", 
              "SpellRoll": "not SavingThrow(Ability.Constitution, SourceSpellDC())",
              "SpellSuccess": "DealDamage(12d6,Radiant,Magical);ApplyStatus(BLINDED,100,2)",
              "SpellFail": "DealDamage((12d6)/2,Radiant,Magical)",
@@ -384,7 +384,7 @@ SPELLS = [
          name="Telepathy",
          desc="You forge a telepathic bond with an ally until your next long rest, steeling their mind: advantage on Wisdom, Intelligence and Charisma saving throws.",
          design="The link's tactical value expressed as mental-save advantage on the bonded ally.",
-         fields={
+         fields={"Icon": "Apo_Spell_Telepathy", 
              "SpellProperties": "ApplyStatus(APO_TELEPATHIC_BOND,100,-1)",
              "TooltipStatusApply": "ApplyStatus(APO_TELEPATHIC_BOND,100,-1)",
          }),
@@ -393,7 +393,7 @@ SPELLS = [
          name="Tsunami",
          desc="A wall of water crashes through everything before you: 6d10 Bludgeoning damage (Dexterity save for half), leaving the ground awash.",
          design="The travelling wave compressed into one crushing cone + water surface for elemental follow-ups.",
-         fields={
+         fields={"Icon": "Apo_Spell_Tsunami", 
              "SpellSuccess": "DealDamage(6d10,Bludgeoning,Magical)",
              "SpellFail": "DealDamage((6d10)/2,Bludgeoning,Magical)",
              "TooltipDamageList": "DealDamage(6d10,Bludgeoning)",
@@ -406,7 +406,7 @@ SPELLS = [
          name="Astral Projection",
          desc="Your silver-corded astral self takes the field for 10 turns: flying free, with your material body's wounds dulled to resistance against physical harm.",
          design="Projection rendered as an astral-form self buff: Fly + physical resistance while concentration holds.",
-         fields={
+         fields={"Icon": "Apo_Spell_AstralProjection", 
              "SpellProperties": "ApplyStatus(FLY,100,10);ApplyStatus(APO_ASTRAL_FORM,100,10)",
              "TooltipStatusApply": "ApplyStatus(FLY,100,10);ApplyStatus(APO_ASTRAL_FORM,100,10)",
              "SpellFlags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
@@ -416,7 +416,7 @@ SPELLS = [
          name="Imprisonment",
          desc="You bind a creature outside time and space. On a failed Wisdom save it is Petrified - permanently, until someone breaks the binding.",
          design="Save-or-lose in the Power Word Kill design space: permanent petrification stands in for the eternal prison.",
-         fields={
+         fields={"Icon": "Apo_Spell_Imprisonment", 
              "SpellRoll": "not SavingThrow(Ability.Wisdom, SourceSpellDC())",
              "SpellSuccess": "ApplyStatus(PETRIFIED,100,-1)",
              "SpellFail": "",
@@ -427,7 +427,7 @@ SPELLS = [
          name="Shapechange",
          desc="You assume a colossal primal form for 10 turns: 60 temporary hit points, hardened hide, and tremendous stride.",
          design="Creature-form catalogue flattened to one 'apex form' package (engine owns true model swaps).",
-         fields={
+         fields={"Icon": "Apo_Spell_Shapechange", 
              "SpellProperties": "ApplyStatus(APO_COLOSSUS,100,10)",
              "TooltipStatusApply": "ApplyStatus(APO_COLOSSUS,100,10)",
              "SpellFlags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
@@ -448,7 +448,7 @@ SPELLS = [
          name="True Resurrection",
          desc="You restore a dead companion to life whole and unmarred: full hit points and a lingering blessing.",
          design="Resurrection at 100% HP plus 3-turn Bless - death undone without a scar.",
-         fields={
+         fields={"Icon": "Apo_Spell_TrueResurrection", 
              "SpellProperties": "Resurrect(100);ApplyStatus(BLESS,100,3)",
          }),
     dict(entry="Target_Apo_Weird", using="Target_FlameStrike",
@@ -456,7 +456,7 @@ SPELLS = [
          name="Weird",
          desc="You drag every enemy in the area into their own worst nightmare: 12d10 Psychic damage (Wisdom save for half), and those who fail are Frightened for 2 turns.",
          design="Mass phantasmal killer as a one-shot AoE terror burst.",
-         fields={
+         fields={"Icon": "Apo_Spell_Weird", 
              "SpellRoll": "not SavingThrow(Ability.Wisdom, SourceSpellDC())",
              "SpellSuccess": "DealDamage(12d10,Psychic,Magical);ApplyStatus(FRIGHTENED,100,2)",
              "SpellFail": "DealDamage((12d10)/2,Psychic,Magical)",

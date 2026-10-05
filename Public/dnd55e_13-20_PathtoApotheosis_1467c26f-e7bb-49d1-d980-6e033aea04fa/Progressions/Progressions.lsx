@@ -624,10 +624,10 @@
                 <node id="Progression">
                     <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel9"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0)"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(00190001-0001-0001-0001-000000000004)"/>
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="Druid"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="AddSpells(00190001-0001-0001-0001-000000000004)"/>
                     <attribute id="TableUUID" type="guid" value="6e7b7bad-e122-4679-8b3c-8f8987a9d466"/>
                     <attribute id="UUID" type="guid" value="88888888-8888-8888-8888-888888888805"/>
                 </node>

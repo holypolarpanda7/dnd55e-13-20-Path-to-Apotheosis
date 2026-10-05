@@ -132,7 +132,8 @@ NODES = {
     "11111111-1111-1111-1111-111111111101": {"PassivesAdded": "Barbarian_BrutalStrike_Improved"},
     "11111111-1111-1111-1111-111111111105": {"PassivesAdded": "Barbarian_BrutalStrike_17", "Boosts": "ActionResource(Rage,1,0)"},
     "11111111-1111-1111-1111-111111111106": {"PassivesAdded": "Barbarian_IndomitableMight"},
-    "88888888-8888-8888-8888-888888888805": {"PassivesAdded": "UnlockedSpellSlotLevel9", "Boosts": "ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0)"},
+    "88888888-8888-8888-8888-888888888805": {"PassivesAdded": "UnlockedSpellSlotLevel9", "Boosts": "ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0)",
+                                             "Selectors": "AddSpells(00190001-0001-0001-0001-000000000004)"},  # Druid 9th-level list (9127692, 2026-10-04)
     "88888888-8888-8888-8888-888888888808": {"PassivesAdded": "Druid_Archdruid", "Boosts": "ActionResource(SpellSlot,1,7)"},
     "55555555-5555-5555-5555-555555555502": {"PassivesAdded": "Ranger_14_NaturesVeil"},
     "55555555-5555-5555-5555-555555555505": {"PassivesAdded": "Ranger_17_PreciseHunter", "Boosts": "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5)",
