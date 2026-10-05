@@ -22,7 +22,8 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ORACLE = os.environ.get("ORACLE_ROOT", "/mnt/d/Projects/The Oracle")
 BOOKS = os.path.join(ORACLE, "owned_books")
 DB = os.path.join(ORACLE, "oracle-dm-backend", "oracle.db")
-REFS = glob.glob(os.path.join(REPO, "..", "References", "Subclasses", "*.txt"))
+REFS = glob.glob(os.path.join(REPO, "..", "References", "Subclasses", "*.txt")) + \
+    [os.path.join(REPO, "..", "References", "Classes", "UA-Arcane Subclasses.txt")]
 OUT = os.path.join(REPO, "tests", "bg3", "rules")
 
 # mod subclass (ClassDescription Name) -> (class, rules subclass name). Only where the names differ.
@@ -38,8 +39,8 @@ ALIASES = {
     "Shadow": ("Monk", "Warrior of Shadow"),
     "OpenHand": ("Monk", "Warrior of the Open Hand"),
     "Mercy": ("Monk", "Warrior of Mercy"),
-    "ShadowMagic": ("Sorcerer", "Shadow Magic"),
-    "Hexblade": ("Warlock", "The Hexblade"),
+    "ShadowMagic": ("Sorcerer", ["Shadow Magic", "Shadow Sorcery"]),
+    "Hexblade": ("Warlock", ["The Hexblade", "Hexblade Patron"]),
     "TotemWarriorPath": ("Barbarian", "Path of the Wild Heart"),
     "DeadThree": ("Rogue", "Scion of the Three"),
     "CircleOfStars": ("Druid", "Circle of the Stars"),
@@ -97,6 +98,10 @@ MEMORY.update({
     ("Fighter", "Arcane Archer"): ("Xanathar's Guide to Everything (Arcane Shot, 18th level)", {18: ["Improved Shots"]}),
 })
 
+# a book's names in The Oracle's source tags: a missing-page feature joins that book's version of the subclass
+BOOK_TAGS = {"Player's Handbook 2024": ["PHB 2024", "SRD/PHB"], "Xanathar's Guide to Everything": ["Xanathar"],
+             "Van Richten's Guide to Ravenloft": ["Van Richten", "Ravenloft"]}
+
 # scan errors in The Oracle's ingested names
 NAME_FIX = {"Jllus Ory Reality": "Illusory Reality", "Keeper Ofsouls": "Keeper of Souls"}
 
@@ -122,6 +127,10 @@ def level_lines(path):
     return out
 
 
+# the UA Arcane Subclasses text is two-column: a feature can sit after the NEXT subclass's header in reading order
+REF_MOVE = {("Wizard", "Enchanter", "Splintered Summons"): ("Wizard", "Conjurer")}
+
+
 def ref_sections():
     """References/Subclasses texts: 'CLASS: SUBCLASS' headers, then LEVEL lines -> {(class, subclass): {level: [names]}}."""
     out = {}
@@ -131,14 +140,21 @@ def ref_sections():
             if line.startswith("#"):
                 cur = None
                 continue
-            h = re.match(r"\s*([A-Z]+):\s*([A-Z][A-Z' ]+?)\s*$", line)
-            if h and h.group(1).title() in ("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue",
-                                            "Sorcerer", "Warlock", "Wizard"):
+            classes = ("Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock",
+                       "Wizard")
+            h = re.match(r"\s*([A-Z]+):\s*([A-Z][A-Z' ]+?)\s*$", line)          # "WARLOCK: HEXBLADE PATRON"
+            h2 = re.match(r"\s*([A-Z][A-Z' ]+?)\s*\(([A-Z]+)\)\s*$", line)      # "CONJURER (WIZARD)" (UA)
+            if h and h.group(1).title() in classes:
                 cur = (h.group(1).title(), h.group(2).title().replace("'S", "'s"))
+                continue
+            if h2 and h2.group(2).title() in classes:
+                cur = (h2.group(2).title(), h2.group(1).title().replace("'S", "'s"))
                 continue
             m = re.match(r"\s*LEVEL\s*(\d+)\s*:\s*(.+?)\s*$", line, re.I)
             if cur and m:
-                out.setdefault(cur, {}).setdefault(int(m.group(1)), []).append(re.sub(r"\s+", " ", m.group(2)).title())
+                name = re.sub(r"\s+", " ", m.group(2)).title().replace("’S", "’s").replace("'S", "'s")
+                key = REF_MOVE.get((cur[0], cur[1], name), cur)
+                out.setdefault(key, {}).setdefault(int(m.group(1)), []).append((name, os.path.basename(f)))
     return out
 
 
@@ -183,7 +199,7 @@ def main():
     refs = ref_sections()
     for k, v in class_ref_subclasses().items():
         for lv, names in v.items():
-            refs.setdefault(k, {}).setdefault(lv, []).extend(names)
+            refs.setdefault(k, {}).setdefault(lv, []).extend((n, f"References/Classes/{k[0]}.txt") for n in names)
     con = sqlite3.connect(DB)
     oracle = {}
     for name, cls, feats, src in con.execute("SELECT name, class_name, features, source FROM rules_subclass"):
@@ -223,37 +239,45 @@ def main():
             report["none"] += 1
             continue
         feats = {}
+        # every version of the subclass is kept, tagged with its group (one book / text): the check picks the version the
+        # mod follows (Conjurer: PHB 2014 Durable Summons vs UA Arcane Subclasses Splintered Summons)
         if key in oracle:
+            src = oracle[key][0].split(" — ")[0].split(" (local")[0]
             for f in oracle[key][1]:
                 nm = NAME_FIX.get(f.get("name", ""), f.get("name", ""))
-                feats.setdefault(int(f.get("level", 0)), []).append((nm, "oracle", oracle[key][0]))
+                feats.setdefault(int(f.get("level", 0)), []).append((nm, "oracle", oracle[key][0], f"oracle: {src}"))
         for lv, names in refs.get(key, {}).items():
-            for n in names:
-                feats.setdefault(lv, []).append((n, "verified", "References/Subclasses"))
+            for n, fname in names:
+                feats.setdefault(lv, []).append((n, "verified", fname, f"text: {fname}"))
         if key in REFERENCE:
             book, m = REFERENCE[key]
             for lv, names in m.items():
                 for n in names:
-                    feats.setdefault(lv, []).append((n, "reference", book))
+                    feats.setdefault(lv, []).append((n, "reference", book, f"reference: {book.split(' (')[0]}"))
         if key in MEMORY:
             book, m = MEMORY[key]
+            groups = {x[3] for v in feats.values() for x in v}
             for lv, names in m.items():
                 have = {norm(x[0]) for x in feats.get(lv, [])}
                 for n in names:
                     if norm(n) not in have:
-                        feats.setdefault(lv, []).append((n, "memory", book))
+                        # a missing page of a book another group already covers joins that group; else its own version
+                        tags = BOOK_TAGS.get(book.split(" (")[0], [book.split(" (")[0]])
+                        grp = next((g for g in groups if any(tg.lower() in g.lower() for tg in tags)), f"memory: {book.split(' (')[0]}")
+                        feats.setdefault(lv, []).append((n, "memory", book, grp))
         for lv in sorted(feats):
             if lv < 13:
                 continue
             seen = set()
-            for name, conf, src in feats[lv]:
+            for name, conf, src, grp in feats[lv]:
                 fn, real = verify(lv, name)
                 if fn:
                     name, conf, src = (real if conf != "verified" else name), "verified", fn
-                if norm(name) in seen:
+                if (grp, norm(name)) in seen:
                     continue
-                seen.add(norm(name))
-                rows.append({"class": cls, "subclass": sub, "level": lv, "name": name, "confidence": conf, "source": src})
+                seen.add((grp, norm(name)))
+                rows.append({"class": cls, "subclass": sub, "level": lv, "name": name, "confidence": conf, "source": src,
+                             "group": grp})
                 report[conf] += 1
     # a level line in an owned text the sources above lack is reported, not added (its subclass isn't known from the text)
     out = ["# GENERATED by Scripts/gen_subclass_rules.py - subclass features at levels 13-20 from the rules texts.",
@@ -263,7 +287,7 @@ def main():
     os.makedirs(os.path.join(OUT, "local"), exist_ok=True)
     open(os.path.join(OUT, "local", "subclasses.toml"), "w", encoding="utf-8", newline="\n").write("\n".join(out))
     al = ["# Mod subclass (ClassDescription Name) -> the rules subclass name, where they differ. Scripts/gen_subclass_rules.py", "",
-          "[subclass]"] + [f'{k} = "{v[1]}"' for k, v in sorted(ALIASES.items())]
+          "[subclass]"] + [f"{k} = {json.dumps(v[1])}" for k, v in sorted(ALIASES.items())]
     open(os.path.join(OUT, "aliases.toml"), "w", encoding="utf-8", newline="\n").write("\n".join(al) + "\n")
     print(f"{len(rows)} subclass features 13-20: {report}")
 
