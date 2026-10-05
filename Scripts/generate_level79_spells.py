@@ -67,7 +67,7 @@ SPELLS = [
          design="PHB 2024 (user decision 2026-10-04, replacing scaled 50/100/150 thresholds): Bonus Action; HP tiers 20/30/40; the 41-50 "
                 "Deafened-only tier and the Deafened parts have no BG3 status; 1 hour = 600 turns, 10 minutes = 100; the planar banishment "
                 "(can't return for 24 hours) is Kill() like the base game's Dispel Evil and Good dismissal, with its Raphael guard.",
-         fields={
+         fields={"Icon": "Apo_Spell_DivineWord", 
              "ContainerSpells": "", "SpellContainerID": "",  # not a picker (the parent is one; found 2026-10-04)
              "SpellRoll": "not SavingThrow(Ability.Charisma, SourceSpellDC())",
              "SpellSuccess": "IF((Tagged('CELESTIAL') or Tagged('ELEMENTAL') or Tagged('FEY') or Tagged('FIEND')) and not Tagged('LOW_HOUSEOFHOPE_IDENTIFY_RAPHAEL') and not Tagged('LOW_HOUSEOFHOPE_RAPHAELIAN_CAMBION')):Kill();"
@@ -86,7 +86,7 @@ SPELLS = [
          name="Finger of Death",
          desc="Negative energy ravages a creature for 7d8+30 Necrotic damage (Constitution save for half). A humanoid slain by this spell rises at the start of the next turn as a zombie under your command.",
          design="Zombie-on-kill implemented as a Script Extender rider on the APO_FINGER_OF_DEATH marker.",
-         fields={
+         fields={"Icon": "Apo_Spell_FingerOfDeath", 
              "SpellSuccess": "DealDamage(7d8+30,Necrotic,Magical);ApplyStatus(APO_FINGER_OF_DEATH,100,1)",
              "SpellFail": "DealDamage((7d8+30)/2,Necrotic,Magical)",
              "TooltipDamageList": "DealDamage(7d8+30,Necrotic)",
@@ -117,7 +117,7 @@ SPELLS = [
          name="Forcecage",
          desc="A cage of invisible force imprisons an enemy for 3 turns: it cannot act, and nothing can harm it. No saving throw, no concentration.",
          design="Otiluke's sphere turned offensive: guaranteed 3-turn removal of one enemy (nothing in, nothing out) mirrors the 5e no-save cage.",
-         fields={
+         fields={"Icon": "Apo_Spell_Forcecage", 
              "TargetConditions": "Enemy() and not Dead()",
              "SpellProperties": "ApplyStatus(RESILIENT_SPHERE,100,3)",
              "TooltipStatusApply": "ApplyStatus(RESILIENT_SPHERE,100,3)",
@@ -177,7 +177,7 @@ SPELLS = [
          name="Plane Shift",
          desc="You hurl an enemy through the planes. On a failed Charisma save it is banished for 3 turns - no concentration required.",
          design="Offensive use only (party travel has no BG3 hook): Banishment chassis, CHA save, concentration-free.",
-         fields={
+         fields={"Icon": "Apo_Spell_PlaneShift", 
              "SpellRoll": "not SavingThrow(Ability.Charisma, SourceSpellDC())",
              "SpellSuccess": "ApplyStatus(BANISHED,100,3)",
              "SpellFlags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful",
@@ -312,7 +312,7 @@ SPELLS = [
          name="Dominate Monster",
          desc="You seize the will of any creature - beast, fiend, dragon or worse. On a failed Wisdom save it fights for you.",
          design="Dominate Person with the humanoid restriction lifted.",
-         fields={
+         fields={"Icon": "Apo_Spell_DominateMonster", 
              "TargetConditions": "Character() and not Dead() and not Self()",
          }),
     dict(entry="Target_Apo_Earthquake", using="Target_FlameStrike",
@@ -363,7 +363,7 @@ SPELLS = [
          name="Mind Blank",
          desc="Until your next long rest, one creature's mind is a locked vault: immune to Psychic damage and to being Charmed.",
          design="Direct translation - psychic immunity + charm immunity until long rest.",
-         fields={
+         fields={"Icon": "Apo_Spell_MindBlank", 
              "SpellProperties": "ApplyStatus(APO_MIND_BLANK,100,-1)",
              "TooltipStatusApply": "ApplyStatus(APO_MIND_BLANK,100,-1)",
          }),

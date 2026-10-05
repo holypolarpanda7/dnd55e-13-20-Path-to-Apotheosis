@@ -298,7 +298,7 @@ data "SpellRoll" "not SavingThrow(Ability.Wisdom, SourceSpellDC(), AdvantageOnCh
 data "SpellSuccess" "ApplyStatus(DOMINATE_MONSTER,100,10);"
 data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL_DOMINATED, 100, 0)"
 data "TargetConditions" "not Ally() and not Dead() and not (Party(context.Target) and Party(context.Source))"
-data "Icon" "Spell_Enchantment_DominatePerson"
+data "Icon" "Apo_Spell_DominateMonster"
 data "DisplayName" "hdominmonster000000000000000000001;1"
 data "Description" "hdominmonster000000000000000000002;1"
 data "TooltipAttackSave" "Wisdom"
