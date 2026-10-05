@@ -107,7 +107,7 @@ SPELLS = [
          name="Prismatic Spray",
          desc="Eight rays of clashing colour flash from your hand in a cone, battering everything caught in them with 2d6 each of Fire, Cold, Lightning, Acid and Poison damage (Dexterity save for half).",
          design="Random-ray table flattened into a fixed five-type barrage - same expected damage, resist-proof spread.",
-         fields={
+         fields={"Icon": "Apo_Spell_PrismaticSpray", 
              "SpellSuccess": "DealDamage(2d6,Fire,Magical);DealDamage(2d6,Cold,Magical);DealDamage(2d6,Lightning,Magical);DealDamage(2d6,Acid,Magical);DealDamage(2d6,Poison,Magical)",
              "SpellFail": "DealDamage((2d6)/2,Fire,Magical);DealDamage((2d6)/2,Cold,Magical);DealDamage((2d6)/2,Lightning,Magical);DealDamage((2d6)/2,Acid,Magical);DealDamage((2d6)/2,Poison,Magical)",
              "TooltipDamageList": "DealDamage(2d6,Fire);DealDamage(2d6,Cold);DealDamage(2d6,Lightning);DealDamage(2d6,Acid);DealDamage(2d6,Poison)",
@@ -196,7 +196,7 @@ SPELLS = [
          name="Reverse Gravity",
          desc="Gravity inverts across the area: creatures that fail a Dexterity save are slammed skyward and back down for 6d6 Bludgeoning damage and knocked Prone.",
          design="Vertical physics approximated by slam damage + Prone across a 9m disc.",
-         fields={
+         fields={"Icon": "Apo_Spell_ReverseGravity", 
              "SpellSuccess": "DealDamage(6d6,Bludgeoning,Magical);ApplyStatus(PRONE,100,1)",
              "SpellFail": "DealDamage((6d6)/2,Bludgeoning,Magical)",
              "TooltipDamageList": "DealDamage(6d6,Bludgeoning)",
