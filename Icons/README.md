@@ -17,3 +17,11 @@ multiple objects, cropped, ugly, deformed.
 | Apo_Spell_StormOfVengeance | Shout_Apo_StormOfVengeance | bg3 action icon, green background, storm of vengeance, a churning black storm cloud with forked lightning bolts and hail, ominous, magical, centered, painterly | 101, #4 |
 | Apo_Passive_HeroicLegacy | HeroicSorcery_18_HeroicLegacy | bg3 action icon, green background, heroic legacy, a ghostly armored hero spirit raising a sword, golden glow, determination, centered, painterly | 202, #1 |
 | Apo_Status_FinalJudgement | APO_FINAL_JUDGEMENT | bg3 action icon, green background, final judgement, a holy sword blazing with radiant white and gold light, divine rays, centered, painterly | 303, #1 |
+
+## Restyle (2026-10-05)
+The first picks were filled paintings in ring frames; base-game icons are thin sketchy glowing strokes on transparency
+(~5% opaque, ~60% soft haze). All icons were regenerated with LoRA 1.0 and
+positive suffix: "thin sketchy glowing brush strokes, single color line art, minimal, wispy, soft glow, lots of empty space";
+negative adds "filled shapes, solid colors, detailed painting, circle frame, ring border, badge, emblem". Imported with
+bg3_icon_import key="unmix" (the glow over the green survives as haze). Jobs: D:\BG3Modding\Tools\comfy\jobs_style_all.json;
+sheets: review\style_all. Picks: the assistant's proposal, accepted by the user.
