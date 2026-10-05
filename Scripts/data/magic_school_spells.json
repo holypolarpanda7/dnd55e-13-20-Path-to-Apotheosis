@@ -1,1811 +1,1803 @@
 {
- "generated": "2026-10-02 from dnd55e 5.5 class lists L1-6 + Apotheosis class lists L7 (bg3-data-mcp)",
- "schools": {
-  "Abjuration": {
-   "1": [
-    "Projectile_Wardaway",
-    "Shout_AbsorbElements",
-    "Shout_Shield_Sorcerer",
-    "Target_CureWounds",
-    "Target_HealingWord",
-    "Target_MageArmor",
-    "Target_ProtectionFromEvilAndGood",
-    "Target_Sanctuary",
-    "Target_ShieldOfFaith",
-    "Target_ThornArmor"
-   ],
-   "2": [
-    "Shout_PassWithoutTrace",
-    "Shout_PrayerOfHealing",
-    "Target_Aid",
-    "Target_LesserRestoration",
-    "Target_ProtectionFromPoison",
-    "Target_WardingBond"
-   ],
-   "3": [
-    "Shout_AuraOfVitality",
-    "Shout_BeaconOfHope",
-    "Shout_HealingWord_Mass",
-    "Target_Counterspell",
-    "Target_RemoveCurse"
-   ],
-   "4": [
-    "Target_Banishment",
-    "Target_DeathWard",
-    "Target_FreedomOfMovement"
-   ],
-   "5": [
-    "Shout_CircleOfPower",
-    "Shout_DispelEvilAndGood",
-    "Target_CureWounds_Mass",
-    "Target_GreaterRestoration",
-    "Target_PlanarBinding"
-   ],
-   "6": [
-    "Target_GlobeOfInvulnerability"
-   ],
-   "7": [
-    "Target_Apo_Symbol"
-   ]
+  "generated": "2026-10-02 from dnd55e 5.5 class lists L1-6 + Apotheosis class lists L7 (bg3-data-mcp)",
+  "schools": {
+    "Abjuration": {
+      "1": [
+        "Projectile_Wardaway",
+        "Shout_AbsorbElements",
+        "Shout_Shield_Sorcerer",
+        "Target_CureWounds",
+        "Target_HealingWord",
+        "Target_MageArmor",
+        "Target_ProtectionFromEvilAndGood",
+        "Target_Sanctuary",
+        "Target_ShieldOfFaith",
+        "Target_ThornArmor"
+      ],
+      "2": [
+        "Shout_PassWithoutTrace",
+        "Shout_PrayerOfHealing",
+        "Target_Aid",
+        "Target_LesserRestoration",
+        "Target_ProtectionFromPoison",
+        "Target_WardingBond"
+      ],
+      "3": [
+        "Shout_AuraOfVitality",
+        "Shout_BeaconOfHope",
+        "Shout_HealingWord_Mass",
+        "Target_Counterspell",
+        "Target_RemoveCurse"
+      ],
+      "4": [
+        "Target_Banishment",
+        "Target_DeathWard",
+        "Target_FreedomOfMovement"
+      ],
+      "5": [
+        "Shout_CircleOfPower",
+        "Shout_DispelEvilAndGood",
+        "Target_CureWounds_Mass",
+        "Target_GreaterRestoration",
+        "Target_PlanarBinding"
+      ],
+      "6": [
+        "Target_GlobeOfInvulnerability"
+      ],
+      "7": [
+        "Target_Apo_Symbol"
+      ]
+    },
+    "Conjuration": {
+      "1": [
+        "Projectile_HailOfThorns",
+        "Projectile_IceKnife",
+        "Shout_TideOfDarkness",
+        "Target_Entangle",
+        "Target_FogCloud",
+        "Target_SpectralSlash"
+      ],
+      "2": [
+        "Target_CloudOfDaggers",
+        "Target_FlamingSphere",
+        "Target_MistyStep",
+        "Target_Web"
+      ],
+      "3": [
+        "Target_CallLightning",
+        "Target_SleetStorm",
+        "Target_StinkingCloud",
+        "Target_SummonFey",
+        "Zone_ConjureBarrage",
+        "Zone_TidalWave"
+      ],
+      "4": [
+        "Target_ConjureElementals_Minor_Container",
+        "Target_ConjureWoodlandBeings",
+        "Target_GraspingVine",
+        "Target_GuardianOfFaith",
+        "Teleportation_DimensionDoor",
+        "Zone_MurderOfCrows"
+      ],
+      "5": [
+        "Target_Cloudkill",
+        "Target_InsectPlague",
+        "Target_SummonCelestial"
+      ],
+      "6": [
+        "Shout_HeroesFeast",
+        "Teleportation_ArcaneGate",
+        "Wall_WallOfThorns"
+      ],
+      "7": [
+        "Shout_Apo_MagnificentMansion",
+        "Target_Apo_PlaneShift",
+        "Target_Apo_Teleport"
+      ]
+    },
+    "Divination": {
+      "1": [
+        "Shout_SpeakWithAnimals",
+        "Target_HuntersMark"
+      ],
+      "2": [
+        "Shout_DetectThoughts",
+        "Shout_SeeInvisibility",
+        "Target_MindSpike"
+      ]
+    },
+    "Enchantment": {
+      "1": [
+        "Target_AnimalFriendship",
+        "Target_Bane",
+        "Target_Bless",
+        "Target_CharmPerson",
+        "Target_CompelledDuel",
+        "Target_DissonantWhispers",
+        "Target_Heroism",
+        "Target_HideousLaughter",
+        "Target_Sleep"
+      ],
+      "2": [
+        "Target_CalmEmotions",
+        "Target_CrownOfMadness",
+        "Target_Enthrall",
+        "Target_HoldPerson",
+        "Target_MindWhip"
+      ],
+      "4": [
+        "Target_CharmMonster",
+        "Target_Confusion",
+        "Target_DominateBeast"
+      ],
+      "5": [
+        "Target_DominatePerson",
+        "Target_HoldMonster",
+        "Target_SynapticStatic"
+      ],
+      "6": [
+        "Target_IrresistibleDance"
+      ],
+      "7": [
+        "Target_Apo_PowerWordFortify"
+      ]
+    },
+    "Evocation": {
+      "1": [
+        "Projectile_GuidingBolt",
+        "Projectile_MagicMissile",
+        "Projectile_SpellfireFlare",
+        "Projectile_WitchBolt",
+        "Target_FaerieFire",
+        "Target_HellsLash",
+        "Target_Smite_Searing",
+        "Target_Smite_Thunderous",
+        "Target_UmbralTendril",
+        "Zone_BurningHands",
+        "Zone_Thunderwave"
+      ],
+      "2": [
+        "Projectile_Darkbolt",
+        "Projectile_DazingBlast",
+        "Projectile_ScorchingRay",
+        "Projectile_SearingOrb",
+        "Projectile_SnowballSwarm",
+        "Shout_FlameBlade",
+        "Target_Darkness",
+        "Target_Moonbeam",
+        "Target_Shatter",
+        "Zone_AganazzarsScorcher",
+        "Zone_GustOfWind",
+        "Zone_RimesBindingIce"
+      ],
+      "3": [
+        "Projectile_Fireball",
+        "Shout_CacophonicShield",
+        "Shout_CrusadersMantle",
+        "Target_Smite_Blinding",
+        "Zone_LaeralsSilverLance",
+        "Zone_LightningBolt"
+      ],
+      "4": [
+        "Projectile_VitriolicSphere",
+        "Shout_FountOfMoonlight",
+        "Target_IceStorm",
+        "Target_SpellfireStorm",
+        "Wall_WallOfFire"
+      ],
+      "5": [
+        "Target_Dawn",
+        "Target_FlameStrike",
+        "Target_HolyWeapon",
+        "Wall_WallOfStone",
+        "Zone_ConeOfCold"
+      ],
+      "6": [
+        "Projectile_ChainLightning",
+        "Target_Heal",
+        "Wall_BladeBarrier",
+        "Zone_Sunbeam"
+      ],
+      "7": [
+        "Projectile_Apo_DelayedBlastFireball",
+        "Target_Apo_FireStorm",
+        "Target_Apo_Forcecage"
+      ]
+    },
+    "Illusion": {
+      "1": [
+        "Zone_ColorSpray"
+      ],
+      "2": [
+        "Shout_Blur",
+        "Shout_MirrorImage",
+        "Shout_ShadowBlade_Class",
+        "Target_Invisibility",
+        "Target_PhantasmalForce",
+        "Target_Silence"
+      ],
+      "3": [
+        "Target_HypnoticPattern",
+        "Zone_Fear"
+      ],
+      "4": [
+        "Shout_FireDance",
+        "Target_Invisibility_Greater",
+        "Target_PhantasmalKiller"
+      ],
+      "5": [
+        "Target_Dream",
+        "Target_Seeming"
+      ],
+      "7": [
+        "Target_Apo_MirageArcane",
+        "Target_Apo_Simulacrum",
+        "Target_ProjectImage"
+      ]
+    },
+    "Necromancy": {
+      "1": [
+        "Projectile_RayOfSickness",
+        "Shout_FalseLife",
+        "Shout_HungeringBlade",
+        "Target_InflictWounds",
+        "Target_Smite_Wrathful"
+      ],
+      "2": [
+        "Target_DeathArmor"
+      ],
+      "3": [
+        "Target_FeignDeath",
+        "Target_MurmursOfDoom",
+        "Target_SpeakWithDead",
+        "Target_VampiricTouch",
+        "Teleportation_Revivify"
+      ],
+      "4": [
+        "Target_Blight"
+      ],
+      "5": [
+        "Target_Enervation"
+      ],
+      "6": [
+        "Target_CircleOfDeath",
+        "Target_CreateUndead",
+        "Target_Harm"
+      ],
+      "7": [
+        "Target_Apo_FingerOfDeath",
+        "Target_Resurrection"
+      ]
+    },
+    "Transmutation": {
+      "1": [
+        "Projectile_Catapult",
+        "Shout_DivineFavor",
+        "Shout_ExpeditiousRetreat",
+        "Shout_FeatherFall",
+        "Target_BodyWarpingOfGorgoroth",
+        "Target_Goodberry",
+        "Target_Jump",
+        "Target_Longstrider"
+      ],
+      "2": [
+        "Shout_AlterSelf",
+        "Target_Barkskin",
+        "Target_Blindness",
+        "Target_Darkvision",
+        "Target_HeatMetal",
+        "Target_Knock",
+        "Target_MagicWeapon",
+        "Target_SpikeGrowth"
+      ],
+      "3": [
+        "Projectile_LightningArrow",
+        "Shout_AshardalonsStride",
+        "Shout_Blink",
+        "Target_Fly",
+        "Target_GaseousForm",
+        "Target_Haste",
+        "Target_PlantGrowth",
+        "Target_Slow",
+        "Target_TrollbloodInfusion"
+      ],
+      "4": [
+        "Target_Polymorph",
+        "Target_Stoneskin"
+      ],
+      "5": [
+        "Target_Awaken",
+        "Throw_Telekinesis"
+      ],
+      "6": [
+        "Projectile_Disintegrate",
+        "Shout_WindWalk",
+        "Target_FleshToStone"
+      ],
+      "7": [
+        "Target_Apo_Etherealness",
+        "Target_Apo_ReverseGravity",
+        "Target_Apo_Sequester",
+        "Target_Regenerate"
+      ]
+    }
   },
-  "Conjuration": {
-   "1": [
-    "Projectile_HailOfThorns",
-    "Projectile_IceKnife",
-    "Shout_TideOfDarkness",
-    "Target_Entangle",
-    "Target_FogCloud",
-    "Target_SpectralSlash"
-   ],
-   "2": [
-    "Target_CloudOfDaggers",
-    "Target_FlamingSphere",
-    "Target_MistyStep",
-    "Target_Web"
-   ],
-   "3": [
-    "Target_CallLightning",
-    "Target_SleetStorm",
-    "Target_StinkingCloud",
-    "Target_SummonFey",
-    "Zone_ConjureBarrage",
-    "Zone_TidalWave"
-   ],
-   "4": [
-    "Target_ConjureElementals_Minor_Container",
-    "Target_ConjureWoodlandBeings",
-    "Target_GraspingVine",
-    "Target_GuardianOfFaith",
-    "Teleportation_DimensionDoor",
-    "Zone_MurderOfCrows"
-   ],
-   "5": [
-    "Target_Cloudkill",
-    "Target_InsectPlague",
-    "Target_SummonCelestial"
-   ],
-   "6": [
-    "Shout_HeroesFeast",
-    "Teleportation_ArcaneGate",
-    "Wall_WallOfThorns"
-   ],
-   "7": [
-    "Shout_Apo_MagnificentMansion",
-    "Target_Apo_PlaneShift",
-    "Target_Apo_Teleport"
-   ]
-  },
-  "Divination": {
-   "1": [
-    "Shout_SpeakWithAnimals",
-    "Target_HuntersMark"
-   ],
-   "2": [
-    "Shout_DetectThoughts",
-    "Shout_SeeInvisibility",
-    "Target_MindSpike"
-   ]
-  },
-  "Enchantment": {
-   "1": [
-    "Target_AnimalFriendship",
-    "Target_Bane",
-    "Target_Bless",
-    "Target_CharmPerson",
-    "Target_CompelledDuel",
-    "Target_DissonantWhispers",
-    "Target_Heroism",
-    "Target_HideousLaughter",
-    "Target_Sleep"
-   ],
-   "2": [
-    "Target_CalmEmotions",
-    "Target_CrownOfMadness",
-    "Target_Enthrall",
-    "Target_HoldPerson",
-    "Target_MindWhip"
-   ],
-   "4": [
-    "Target_CharmMonster",
-    "Target_Confusion",
-    "Target_DominateBeast"
-   ],
-   "5": [
-    "Target_DominatePerson",
-    "Target_HoldMonster",
-    "Target_SynapticStatic"
-   ],
-   "6": [
-    "Target_IrresistibleDance"
-   ],
-   "7": [
-    "Target_Apo_PowerWordFortify"
-   ]
-  },
-  "Evocation": {
-   "1": [
-    "Projectile_GuidingBolt",
-    "Projectile_MagicMissile",
-    "Projectile_SpellfireFlare",
-    "Projectile_WitchBolt",
-    "Target_FaerieFire",
-    "Target_HellsLash",
-    "Target_Smite_Searing",
-    "Target_Smite_Thunderous",
-    "Target_UmbralTendril",
-    "Zone_BurningHands",
-    "Zone_Thunderwave"
-   ],
-   "2": [
-    "Projectile_Darkbolt",
-    "Projectile_DazingBlast",
-    "Projectile_ScorchingRay",
-    "Projectile_SearingOrb",
-    "Projectile_SnowballSwarm",
-    "Shout_FlameBlade",
-    "Target_Darkness",
-    "Target_Moonbeam",
-    "Target_Shatter",
-    "Zone_AganazzarsScorcher",
-    "Zone_GustOfWind",
-    "Zone_RimesBindingIce"
-   ],
-   "3": [
-    "Projectile_Fireball",
-    "Shout_CacophonicShield",
-    "Shout_CrusadersMantle",
-    "Target_Smite_Blinding",
-    "Zone_LaeralsSilverLance",
-    "Zone_LightningBolt"
-   ],
-   "4": [
-    "Projectile_VitriolicSphere",
-    "Shout_FountOfMoonlight",
-    "Target_IceStorm",
-    "Target_SpellfireStorm",
-    "Wall_WallOfFire"
-   ],
-   "5": [
-    "Target_Dawn",
-    "Target_FlameStrike",
-    "Target_HolyWeapon",
-    "Wall_WallOfStone",
-    "Zone_ConeOfCold"
-   ],
-   "6": [
-    "Projectile_ChainLightning",
-    "Target_Heal",
-    "Wall_BladeBarrier",
-    "Zone_Sunbeam"
-   ],
-   "7": [
-    "Projectile_Apo_DelayedBlastFireball",
-    "Target_Apo_FireStorm",
-    "Target_Apo_Forcecage",
-    "Zone_Apo_PrismaticSpray"
-   ]
-  },
-  "Illusion": {
-   "1": [
-    "Zone_ColorSpray"
-   ],
-   "2": [
-    "Shout_Blur",
-    "Shout_MirrorImage",
-    "Shout_ShadowBlade_Class",
-    "Target_Invisibility",
-    "Target_PhantasmalForce",
-    "Target_Silence"
-   ],
-   "3": [
-    "Target_HypnoticPattern",
-    "Zone_Fear"
-   ],
-   "4": [
-    "Shout_FireDance",
-    "Target_Invisibility_Greater",
-    "Target_PhantasmalKiller"
-   ],
-   "5": [
-    "Target_Dream",
-    "Target_Seeming"
-   ],
-   "7": [
-    "Target_Apo_MirageArcane",
-    "Target_Apo_Simulacrum",
-    "Target_ProjectImage"
-   ]
-  },
-  "Necromancy": {
-   "1": [
-    "Projectile_RayOfSickness",
-    "Shout_FalseLife",
-    "Shout_HungeringBlade",
-    "Target_InflictWounds",
-    "Target_Smite_Wrathful"
-   ],
-   "2": [
-    "Target_DeathArmor"
-   ],
-   "3": [
-    "Target_FeignDeath",
-    "Target_MurmursOfDoom",
-    "Target_SpeakWithDead",
-    "Target_VampiricTouch",
-    "Teleportation_Revivify"
-   ],
-   "4": [
-    "Target_Blight"
-   ],
-   "5": [
-    "Target_Enervation"
-   ],
-   "6": [
-    "Target_CircleOfDeath",
-    "Target_CreateUndead",
-    "Target_Harm"
-   ],
-   "7": [
-    "Target_Apo_FingerOfDeath",
-    "Target_Resurrection"
-   ]
-  },
-  "Transmutation": {
-   "1": [
-    "Projectile_Catapult",
-    "Shout_DivineFavor",
-    "Shout_ExpeditiousRetreat",
-    "Shout_FeatherFall",
-    "Target_BodyWarpingOfGorgoroth",
-    "Target_Goodberry",
-    "Target_Jump",
-    "Target_Longstrider"
-   ],
-   "2": [
-    "Shout_AlterSelf",
-    "Target_Barkskin",
-    "Target_Blindness",
-    "Target_Darkvision",
-    "Target_HeatMetal",
-    "Target_Knock",
-    "Target_MagicWeapon",
-    "Target_SpikeGrowth"
-   ],
-   "3": [
-    "Projectile_LightningArrow",
-    "Shout_AshardalonsStride",
-    "Shout_Blink",
-    "Target_Fly",
-    "Target_GaseousForm",
-    "Target_Haste",
-    "Target_PlantGrowth",
-    "Target_Slow",
-    "Target_TrollbloodInfusion"
-   ],
-   "4": [
-    "Target_Polymorph",
-    "Target_Stoneskin"
-   ],
-   "5": [
-    "Target_Awaken",
-    "Throw_Telekinesis"
-   ],
-   "6": [
-    "Projectile_Disintegrate",
-    "Shout_WindWalk",
-    "Target_FleshToStone"
-   ],
-   "7": [
-    "Target_Apo_Etherealness",
-    "Target_Apo_ReverseGravity",
-    "Target_Apo_Sequester",
-    "Target_Regenerate"
-   ]
+  "skipped_containers": [
+    "Projectile_BallisticSmite",
+    "Projectile_ChromaticOrb",
+    "Projectile_EnsnaringStrike_Container",
+    "Shout_Apo_ConjureCelestial",
+    "Shout_Apo_DivineWord",
+    "Shout_ArcaneVigor",
+    "Shout_DisguiseSelf",
+    "Shout_FireShield",
+    "Shout_SpiritGuardians",
+    "Target_AnimateDead",
+    "Target_Apo_MordenkainensSword",
+    "Target_BestowCurse",
+    "Target_Command_Container",
+    "Target_ConjureElemental_Container",
+    "Target_Contagion",
+    "Target_CreateDestroyWater",
+    "Target_Daylight_Container",
+    "Target_DragonsBreath",
+    "Target_ElementalWeapon",
+    "Target_EnhanceAbility",
+    "Target_EnlargeReduce",
+    "Target_Eyebite",
+    "Target_FreezingSphere",
+    "Target_GlyphOfWarding",
+    "Target_PlanarAlly_Container",
+    "Target_ProtectionFromEnergy",
+    "Target_Smite_Branding_Container",
+    "Target_SpiritualWeapon",
+    "Target_SummonBeast",
+    "Zone_AstralFlood",
+    "Zone_ElementalExhalation",
+    "Zone_PrismaticSpray"
+  ],
+  "spells": {
+    "Projectile_Apo_DelayedBlastFireball": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade",
+      "level": 7,
+      "name": "Delayed Blast Fireball",
+      "school": "Evocation"
+    },
+    "Projectile_Catapult": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
+      "flags": "HasSomaticComponent;IsHarmful;IsSpell;HasHighGroundRangeExtension",
+      "level": 1,
+      "name": "Catapult",
+      "school": "Transmutation"
+    },
+    "Projectile_ChainLightning": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsSpell",
+      "level": 6,
+      "name": "Chain Lightning",
+      "school": "Evocation"
+    },
+    "Projectile_Darkbolt": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 2,
+      "name": "Darkbolt",
+      "school": "Evocation"
+    },
+    "Projectile_DazingBlast": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+      "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 2,
+      "name": "Dazing Blast",
+      "school": "Evocation"
+    },
+    "Projectile_Disintegrate": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
+      "level": 6,
+      "name": "Disintegrate",
+      "school": "Transmutation"
+    },
+    "Projectile_Fireball": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade",
+      "level": 3,
+      "name": "Fireball",
+      "school": "Evocation"
+    },
+    "Projectile_GuidingBolt": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 1,
+      "name": "Guiding Bolt",
+      "school": "Evocation"
+    },
+    "Projectile_HailOfThorns": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;BonusActionPoint:1",
+      "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 1,
+      "name": "Hail of Thorns",
+      "school": "Conjuration"
+    },
+    "Projectile_IceKnife": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 1,
+      "name": "Ice Knife",
+      "school": "Conjuration"
+    },
+    "Projectile_LightningArrow": {
+      "costs": "ActionPoint:1;BonusActionPoint:1;SpellSlotsGroup:1:1:3;",
+      "flags": "IsSpell;IsHarmful;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CanAreaDamageEvade",
+      "level": 3,
+      "name": "Lightning Arrow",
+      "school": "Transmutation"
+    },
+    "Projectile_MagicMissile": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 1,
+      "name": "Magic Missile",
+      "school": "Evocation"
+    },
+    "Projectile_RayOfSickness": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 1,
+      "name": "Ray of Sickness",
+      "school": "Necromancy"
+    },
+    "Projectile_ScorchingRay": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasHighGroundRangeExtension;HasSomaticComponent;HasVerbalComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 2,
+      "name": "Scorching Ray",
+      "school": "Evocation"
+    },
+    "Projectile_SearingOrb": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+      "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 2,
+      "name": "Searing Orb",
+      "school": "Evocation"
+    },
+    "Projectile_SnowballSwarm": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+      "flags": "IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 2,
+      "name": "Snilloc's Snowball Swarm",
+      "school": "Evocation"
+    },
+    "Projectile_SpellfireFlare": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 1,
+      "name": "Spellfire Flare",
+      "school": "Evocation"
+    },
+    "Projectile_VitriolicSphere": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4;",
+      "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 4,
+      "name": "Vitriolic Sphere",
+      "school": "Evocation"
+    },
+    "Projectile_Wardaway": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 1,
+      "name": "Wardaway",
+      "school": "Abjuration"
+    },
+    "Projectile_WitchBolt": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold;IsHarmful",
+      "level": 1,
+      "name": "Witch Bolt",
+      "school": "Evocation"
+    },
+    "Shout_AbsorbElements": {
+      "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:1;",
+      "flags": "HasSomaticComponent;IsSpell",
+      "level": 1,
+      "name": "Absorb Elements",
+      "school": "Abjuration"
+    },
+    "Shout_AlterSelf": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+      "level": 2,
+      "name": "Alter Self",
+      "school": "Transmutation"
+    },
+    "Shout_Apo_MagnificentMansion": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;IsSpell",
+      "level": 7,
+      "name": "Mordenkainen's Magnificent Mansion",
+      "school": "Conjuration"
+    },
+    "Shout_AshardalonsStride": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:3;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 3,
+      "name": "Ashardalon's Stride",
+      "school": "Transmutation"
+    },
+    "Shout_AuraOfVitality": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "IsSpell;HasVerbalComponent;IsConcentration",
+      "level": 3,
+      "name": "Aura of Vitality",
+      "school": "Abjuration"
+    },
+    "Shout_BeaconOfHope": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+      "level": 3,
+      "name": "Beacon of Hope",
+      "school": "Abjuration"
+    },
+    "Shout_Blink": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 3,
+      "name": "Blink",
+      "school": "Transmutation"
+    },
+    "Shout_Blur": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;IsConcentration",
+      "level": 2,
+      "name": "Blur",
+      "school": "Illusion"
+    },
+    "Shout_CacophonicShield": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 3,
+      "name": "Cacophonic Shield",
+      "school": "Evocation"
+    },
+    "Shout_CircleOfPower": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5;",
+      "flags": "IsSpell;HasVerbalComponent;IsConcentration",
+      "level": 5,
+      "name": "Circle of Power",
+      "school": "Abjuration"
+    },
+    "Shout_CrusadersMantle": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;IsSpell;IsConcentration",
+      "level": 3,
+      "name": "Crusader's Mantle",
+      "school": "Evocation"
+    },
+    "Shout_DetectThoughts": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 2,
+      "name": "Detect Thoughts",
+      "school": "Divination"
+    },
+    "Shout_DispelEvilAndGood": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 5,
+      "name": "Dispel Evil And Good",
+      "school": "Abjuration"
+    },
+    "Shout_DivineFavor": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 1,
+      "name": "Divine Favour",
+      "school": "Transmutation"
+    },
+    "Shout_ExpeditiousRetreat": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 1,
+      "name": "Expeditious Retreat",
+      "school": "Transmutation"
+    },
+    "Shout_FalseLife": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 1,
+      "name": "False Life",
+      "school": "Necromancy"
+    },
+    "Shout_FeatherFall": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;RangeIgnoreVerticalThreshold",
+      "level": 1,
+      "name": "Feather Fall",
+      "school": "Transmutation"
+    },
+    "Shout_FireDance": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 4,
+      "name": "Fire Dance",
+      "school": "Illusion"
+    },
+    "Shout_FlameBlade": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+      "level": 2,
+      "name": "Flame Blade",
+      "school": "Evocation"
+    },
+    "Shout_FountOfMoonlight": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 4,
+      "name": "Fount of Moonlight",
+      "school": "Evocation"
+    },
+    "Shout_HealingWord_Mass": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;IsSpell",
+      "level": 3,
+      "name": "Mass Healing Word",
+      "school": "Abjuration"
+    },
+    "Shout_HeroesFeast": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;UnavailableInDialogs",
+      "level": 6,
+      "name": "Heroes' Feast",
+      "school": "Conjuration"
+    },
+    "Shout_HungeringBlade": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 1,
+      "name": "Hungering Blade",
+      "school": "Necromancy"
+    },
+    "Shout_MirrorImage": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 2,
+      "name": "Mirror Image",
+      "school": "Illusion"
+    },
+    "Shout_PassWithoutTrace": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration;Invisible",
+      "level": 2,
+      "name": "Pass Without Trace",
+      "school": "Abjuration"
+    },
+    "Shout_PrayerOfHealing": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;IsSpell",
+      "level": 2,
+      "name": "Prayer of Healing",
+      "school": "Abjuration"
+    },
+    "Shout_SeeInvisibility": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 2,
+      "name": "See Invisibility",
+      "school": "Divination"
+    },
+    "Shout_ShadowBlade_Class": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+      "level": 2,
+      "name": "Shadow Blade",
+      "school": "Illusion"
+    },
+    "Shout_Shield_Sorcerer": {
+      "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer",
+      "level": 1,
+      "name": "Shield",
+      "school": "Abjuration"
+    },
+    "Shout_SpeakWithAnimals": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 1,
+      "name": "Speak with Animals",
+      "school": "Divination"
+    },
+    "Shout_TideOfDarkness": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
+      "flags": "IsSpell;HasVerbalComponent;IsHarmful;HasSomaticComponent",
+      "level": 1,
+      "name": "Tide of Darkness",
+      "school": "Conjuration"
+    },
+    "Shout_WindWalk": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 6,
+      "name": "Wind Walk",
+      "school": "Transmutation"
+    },
+    "Target_Aid": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IgnorePreviouslyPickedEntities",
+      "level": 2,
+      "name": "Aid",
+      "school": "Abjuration"
+    },
+    "Target_AnimalFriendship": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities",
+      "level": 1,
+      "name": "Animal Friendship",
+      "school": "Enchantment"
+    },
+    "Target_Apo_Etherealness": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;IsSpell",
+      "level": 7,
+      "name": "Etherealness",
+      "school": "Transmutation"
+    },
+    "Target_Apo_FingerOfDeath": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 7,
+      "name": "Finger of Death",
+      "school": "Necromancy"
+    },
+    "Target_Apo_FireStorm": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 7,
+      "name": "Fire Storm",
+      "school": "Evocation"
+    },
+    "Target_Apo_Forcecage": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful",
+      "level": 7,
+      "name": "Forcecage",
+      "school": "Evocation"
+    },
+    "Target_Apo_MirageArcane": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 7,
+      "name": "Mirage Arcane",
+      "school": "Illusion"
+    },
+    "Target_Apo_PlaneShift": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful",
+      "level": 7,
+      "name": "Plane Shift",
+      "school": "Conjuration"
+    },
+    "Target_Apo_PowerWordFortify": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 7,
+      "name": "Power Word Fortify",
+      "school": "Enchantment"
+    },
+    "Target_Apo_ReverseGravity": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 7,
+      "name": "Reverse Gravity",
+      "school": "Transmutation"
+    },
+    "Target_Apo_Sequester": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 7,
+      "name": "Sequester",
+      "school": "Transmutation"
+    },
+    "Target_Apo_Simulacrum": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 7,
+      "name": "Simulacrum",
+      "school": "Illusion"
+    },
+    "Target_Apo_Symbol": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 7,
+      "name": "Symbol",
+      "school": "Abjuration"
+    },
+    "Target_Apo_Teleport": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold",
+      "level": 7,
+      "name": "Teleport",
+      "school": "Conjuration"
+    },
+    "Target_Awaken": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful",
+      "level": 5,
+      "name": "Awaken",
+      "school": "Transmutation"
+    },
+    "Target_Bane": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful;IgnorePreviouslyPickedEntities",
+      "level": 1,
+      "name": "Bane",
+      "school": "Enchantment"
+    },
+    "Target_Banishment": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;RangeIgnoreVerticalThreshold",
+      "level": 4,
+      "name": "Banishment",
+      "school": "Abjuration"
+    },
+    "Target_Barkskin": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell",
+      "level": 2,
+      "name": "Barkskin",
+      "school": "Transmutation"
+    },
+    "Target_Bless": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IgnorePreviouslyPickedEntities",
+      "level": 1,
+      "name": "Bless",
+      "school": "Enchantment"
+    },
+    "Target_Blight": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 4,
+      "name": "Blight",
+      "school": "Necromancy"
+    },
+    "Target_Blindness": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasHighGroundRangeExtension;IsHarmful",
+      "level": 2,
+      "name": "Blindness",
+      "school": "Transmutation"
+    },
+    "Target_BodyWarpingOfGorgoroth": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsConcentration;HasSomaticComponent;IsSpell",
+      "level": 1,
+      "name": "Body Warping of Gorgoroth",
+      "school": "Transmutation"
+    },
+    "Target_CallLightning": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;CanAreaDamageEvade",
+      "level": 3,
+      "name": "Call Lightning",
+      "school": "Conjuration"
+    },
+    "Target_CalmEmotions": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 2,
+      "name": "Calm Emotions",
+      "school": "Enchantment"
+    },
+    "Target_CharmMonster": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities",
+      "level": 4,
+      "name": "Charm Monster",
+      "school": "Enchantment"
+    },
+    "Target_CharmPerson": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities",
+      "level": 1,
+      "name": "Charm Person",
+      "school": "Enchantment"
+    },
+    "Target_CircleOfDeath": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
+      "level": 6,
+      "name": "Circle of Death",
+      "school": "Necromancy"
+    },
+    "Target_CloudOfDaggers": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsHarmful;CannotTargetItems",
+      "level": 2,
+      "name": "Cloud of Daggers",
+      "school": "Conjuration"
+    },
+    "Target_Cloudkill": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "IsSpell;IsHarmful;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsConcentration",
+      "level": 5,
+      "name": "Cloudkill",
+      "school": "Conjuration"
+    },
+    "Target_CompelledDuel": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 1,
+      "name": "Compelled Duel",
+      "school": "Enchantment"
+    },
+    "Target_Confusion": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 4,
+      "name": "Confusion",
+      "school": "Enchantment"
+    },
+    "Target_ConjureElementals_Minor_Container": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+      "level": 4,
+      "name": "Conjure Minor Elemental",
+      "school": "Conjuration"
+    },
+    "Target_ConjureWoodlandBeings": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+      "level": 4,
+      "name": "Conjure Woodland Being",
+      "school": "Conjuration"
+    },
+    "Target_Counterspell": {
+      "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "IsSpell",
+      "level": 3,
+      "name": "Counterspell",
+      "school": "Abjuration"
+    },
+    "Target_CreateUndead": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 6,
+      "name": "Create Undead",
+      "school": "Necromancy"
+    },
+    "Target_CrownOfMadness": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell",
+      "level": 2,
+      "name": "Crown of Madness",
+      "school": "Enchantment"
+    },
+    "Target_CureWounds": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsMelee",
+      "level": 1,
+      "name": "Cure Wounds",
+      "school": "Abjuration"
+    },
+    "Target_CureWounds_Mass": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IgnorePreviouslyPickedEntities",
+      "level": 5,
+      "name": "Mass Cure Wounds",
+      "school": "Abjuration"
+    },
+    "Target_Darkness": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;IsSpell;IsConcentration;Stealth;Invisible",
+      "level": 2,
+      "name": "Darkness",
+      "school": "Evocation"
+    },
+    "Target_Darkvision": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 2,
+      "name": "Darkvision",
+      "school": "Transmutation"
+    },
+    "Target_Dawn": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;IsConcentration",
+      "level": 5,
+      "name": "Dawn",
+      "school": "Evocation"
+    },
+    "Target_DeathArmor": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+      "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent",
+      "level": 2,
+      "name": "Death Armor",
+      "school": "Necromancy"
+    },
+    "Target_DeathWard": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 4,
+      "name": "Death Ward",
+      "school": "Abjuration"
+    },
+    "Target_DissonantWhispers": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;IsSpell;IsHarmful",
+      "level": 1,
+      "name": "Dissonant Whispers",
+      "school": "Enchantment"
+    },
+    "Target_DominateBeast": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;HasHighGroundRangeExtension;IsHarmful",
+      "level": 4,
+      "name": "Dominate Beast",
+      "school": "Enchantment"
+    },
+    "Target_DominatePerson": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;HasHighGroundRangeExtension;IsHarmful",
+      "level": 5,
+      "name": "Dominate Person",
+      "school": "Enchantment"
+    },
+    "Target_Dream": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;RangeIgnoreVerticalThreshold",
+      "level": 5,
+      "name": "Dream",
+      "school": "Illusion"
+    },
+    "Target_Enervation": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
+      "level": 5,
+      "name": "Enervation",
+      "school": "Necromancy"
+    },
+    "Target_Entangle": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
+      "level": 1,
+      "name": "Entangle",
+      "school": "Conjuration"
+    },
+    "Target_Enthrall": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 2,
+      "name": "Enthrall",
+      "school": "Enchantment"
+    },
+    "Target_FaerieFire": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;IsConcentration;IsHarmful;RangeIgnoreVerticalThreshold",
+      "level": 1,
+      "name": "Faerie Fire",
+      "school": "Evocation"
+    },
+    "Target_FeignDeath": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 3,
+      "name": "Feign Death",
+      "school": "Necromancy"
+    },
+    "Target_FlameStrike": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 5,
+      "name": "Flame Strike",
+      "school": "Evocation"
+    },
+    "Target_FlamingSphere": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;CannotTargetCharacter;CannotTargetItems;IsConcentration",
+      "level": 2,
+      "name": "Flaming Sphere",
+      "school": "Conjuration"
+    },
+    "Target_FleshToStone": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 6,
+      "name": "Flesh to Stone",
+      "school": "Transmutation"
+    },
+    "Target_Fly": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell;IsConcentration",
+      "level": 3,
+      "name": "Fly",
+      "school": "Transmutation"
+    },
+    "Target_FogCloud": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold",
+      "level": 1,
+      "name": "Fog Cloud",
+      "school": "Conjuration"
+    },
+    "Target_FreedomOfMovement": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 4,
+      "name": "Freedom of Movement",
+      "school": "Abjuration"
+    },
+    "Target_GaseousForm": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;UnavailableInDialogs",
+      "level": 3,
+      "name": "Gaseous Form",
+      "school": "Transmutation"
+    },
+    "Target_GlobeOfInvulnerability": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 6,
+      "name": "Globe of Invulnerability",
+      "school": "Abjuration"
+    },
+    "Target_Goodberry": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
+      "level": 1,
+      "name": "Goodberry",
+      "school": "Transmutation"
+    },
+    "Target_GraspingVine": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter",
+      "level": 4,
+      "name": "Grasping Vine",
+      "school": "Conjuration"
+    },
+    "Target_GreaterRestoration": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 5,
+      "name": "Greater Restoration",
+      "school": "Abjuration"
+    },
+    "Target_GuardianOfFaith": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;IsSpell;CannotTargetItems;CannotTargetCharacter",
+      "level": 4,
+      "name": "Guardian of Faith",
+      "school": "Conjuration"
+    },
+    "Target_Harm": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;IsSpell",
+      "level": 6,
+      "name": "Harm",
+      "school": "Necromancy"
+    },
+    "Target_Haste": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 3,
+      "name": "Haste",
+      "school": "Transmutation"
+    },
+    "Target_Heal": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 6,
+      "name": "Heal",
+      "school": "Evocation"
+    },
+    "Target_HealingWord": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;IsSpell;RangeIgnoreVerticalThreshold",
+      "level": 1,
+      "name": "Healing Word",
+      "school": "Abjuration"
+    },
+    "Target_HeatMetal": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 2,
+      "name": "Heat Metal",
+      "school": "Transmutation"
+    },
+    "Target_HellsLash": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+      "level": 1,
+      "name": "Hell\u2019s Lash",
+      "school": "Evocation"
+    },
+    "Target_Heroism": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee;IgnorePreviouslyPickedEntities",
+      "level": 1,
+      "name": "Heroism",
+      "school": "Enchantment"
+    },
+    "Target_HideousLaughter": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsHarmful",
+      "level": 1,
+      "name": "Tasha's Hideous Laughter",
+      "school": "Enchantment"
+    },
+    "Target_HoldMonster": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;IsHarmful",
+      "level": 5,
+      "name": "Hold Monster",
+      "school": "Enchantment"
+    },
+    "Target_HoldPerson": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;IsHarmful;IgnorePreviouslyPickedEntities",
+      "level": 2,
+      "name": "Hold Person",
+      "school": "Enchantment"
+    },
+    "Target_HolyWeapon": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration",
+      "level": 5,
+      "name": "Holy Weapon",
+      "school": "Evocation"
+    },
+    "Target_HuntersMark": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasHighGroundRangeExtension;IsConcentration;IsHarmful",
+      "level": 1,
+      "name": "Hunter's Mark",
+      "school": "Divination"
+    },
+    "Target_HypnoticPattern": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 3,
+      "name": "Hypnotic Pattern",
+      "school": "Illusion"
+    },
+    "Target_IceStorm": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CanAreaDamageEvade",
+      "level": 4,
+      "name": "Ice Storm",
+      "school": "Evocation"
+    },
+    "Target_InflictWounds": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell;IsHarmful",
+      "level": 1,
+      "name": "Inflict Wounds",
+      "school": "Necromancy"
+    },
+    "Target_InsectPlague": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsConcentration;CannotTargetItems",
+      "level": 5,
+      "name": "Insect Plague",
+      "school": "Conjuration"
+    },
+    "Target_Invisibility": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;UnavailableInDialogs;IgnorePreviouslyPickedEntities",
+      "level": 2,
+      "name": "Invisibility",
+      "school": "Illusion"
+    },
+    "Target_Invisibility_Greater": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;IsSpell",
+      "level": 4,
+      "name": "Greater Invisibility",
+      "school": "Illusion"
+    },
+    "Target_IrresistibleDance": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;CannotTargetItems;CannotTargetTerrain;IsHarmful",
+      "level": 6,
+      "name": "Otto's Irresistible Dance",
+      "school": "Enchantment"
+    },
+    "Target_Jump": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsMelee;IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 1,
+      "name": "Enhance Leap",
+      "school": "Transmutation"
+    },
+    "Target_Knock": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasHighGroundRangeExtension",
+      "level": 2,
+      "name": "Knock",
+      "school": "Transmutation"
+    },
+    "Target_LesserRestoration": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 2,
+      "name": "Lesser Restoration",
+      "school": "Abjuration"
+    },
+    "Target_Longstrider": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IgnorePreviouslyPickedEntities",
+      "level": 1,
+      "name": "Longstrider",
+      "school": "Transmutation"
+    },
+    "Target_MageArmor": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
+      "level": 1,
+      "name": "Mage Armour",
+      "school": "Abjuration"
+    },
+    "Target_MagicWeapon": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
+      "level": 2,
+      "name": "Magic Weapon",
+      "school": "Transmutation"
+    },
+    "Target_MindSpike": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsHarmful;HasSomaticComponent;IsSpell",
+      "level": 2,
+      "name": "Mind Spike",
+      "school": "Divination"
+    },
+    "Target_MindWhip": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent",
+      "level": 2,
+      "name": "Tasha's Mind Whip",
+      "school": "Enchantment"
+    },
+    "Target_MistyStep": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold",
+      "level": 2,
+      "name": "Misty Step",
+      "school": "Conjuration"
+    },
+    "Target_Moonbeam": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;IsConcentration",
+      "level": 2,
+      "name": "Moonbeam",
+      "school": "Evocation"
+    },
+    "Target_MurmursOfDoom": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;IsSpell;IsHarmful;IsConcentration",
+      "level": 3,
+      "name": "Murmurs of Doom",
+      "school": "Necromancy"
+    },
+    "Target_PhantasmalForce": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 2,
+      "name": "Phantasmal Force",
+      "school": "Illusion"
+    },
+    "Target_PhantasmalKiller": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 4,
+      "name": "Phantasmal Killer",
+      "school": "Illusion"
+    },
+    "Target_PlanarBinding": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;IsHarmful",
+      "level": 5,
+      "name": "Planar Binding",
+      "school": "Abjuration"
+    },
+    "Target_PlantGrowth": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 3,
+      "name": "Plant Growth",
+      "school": "Transmutation"
+    },
+    "Target_Polymorph": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 4,
+      "name": "Polymorph",
+      "school": "Transmutation"
+    },
+    "Target_ProjectImage": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 7,
+      "name": "Project Image",
+      "school": "Illusion"
+    },
+    "Target_ProtectionFromEvilAndGood": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee",
+      "level": 1,
+      "name": "Protection from Evil and Good",
+      "school": "Abjuration"
+    },
+    "Target_ProtectionFromPoison": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
+      "level": 2,
+      "name": "Protection from Poison",
+      "school": "Abjuration"
+    },
+    "Target_Regenerate": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 7,
+      "name": "Regenerate",
+      "school": "Transmutation"
+    },
+    "Target_RemoveCurse": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 3,
+      "name": "Remove Curse",
+      "school": "Abjuration"
+    },
+    "Target_Resurrection": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+      "level": 7,
+      "name": "Resurrection",
+      "school": "Necromancy"
+    },
+    "Target_Sanctuary": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 1,
+      "name": "Sanctuary",
+      "school": "Abjuration"
+    },
+    "Target_Seeming": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems",
+      "level": 5,
+      "name": "Seeming",
+      "school": "Illusion"
+    },
+    "Target_Shatter": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;IsHarmful",
+      "level": 2,
+      "name": "Shatter",
+      "school": "Evocation"
+    },
+    "Target_ShieldOfFaith": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 1,
+      "name": "Shield of Faith",
+      "school": "Abjuration"
+    },
+    "Target_Silence": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;CannotTargetItems",
+      "level": 2,
+      "name": "Silence",
+      "school": "Illusion"
+    },
+    "Target_Sleep": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;RangeIgnoreVerticalThreshold;IsConcentration",
+      "level": 1,
+      "name": "Sleep",
+      "school": "Enchantment"
+    },
+    "Target_SleetStorm": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 3,
+      "name": "Sleet Storm",
+      "school": "Conjuration"
+    },
+    "Target_Slow": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IgnorePreviouslyPickedEntities",
+      "level": 3,
+      "name": "Slow",
+      "school": "Transmutation"
+    },
+    "Target_Smite_Blinding": {
+      "costs": "ActionPoint:1",
+      "flags": "IsMelee;IsHarmful;IsSpell;HasVerbalComponent",
+      "level": 3,
+      "name": "Blinding Smite",
+      "school": "Evocation"
+    },
+    "Target_Smite_Searing": {
+      "costs": "ActionPoint:1",
+      "flags": "IsHarmful;HasVerbalComponent;IsSpell;IsMelee",
+      "level": 1,
+      "name": "Searing Smite",
+      "school": "Evocation"
+    },
+    "Target_Smite_Thunderous": {
+      "costs": "ActionPoint:1",
+      "flags": "IsSpell;IsMelee;HasVerbalComponent;IsHarmful;AddFallDamageOnLand",
+      "level": 1,
+      "name": "Thunderous Smite",
+      "school": "Evocation"
+    },
+    "Target_Smite_Wrathful": {
+      "costs": "ActionPoint:1",
+      "flags": "IsSpell;HasVerbalComponent;IsMelee;IsHarmful",
+      "level": 1,
+      "name": "Wrathful Smite",
+      "school": "Necromancy"
+    },
+    "Target_SpeakWithDead": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 3,
+      "name": "Speak with Dead",
+      "school": "Necromancy"
+    },
+    "Target_SpectralSlash": {
+      "costs": "ActionPoint:1;BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;IsSpell;IsHarmful;CannotTargetTerrain",
+      "level": 1,
+      "name": "Spectral Slash",
+      "school": "Conjuration"
+    },
+    "Target_SpellfireStorm": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+      "level": 4,
+      "name": "Spellfire Storm",
+      "school": "Evocation"
+    },
+    "Target_SpikeGrowth": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 2,
+      "name": "Spike Growth",
+      "school": "Transmutation"
+    },
+    "Target_StinkingCloud": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 3,
+      "name": "Stinking Cloud",
+      "school": "Conjuration"
+    },
+    "Target_Stoneskin": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee",
+      "level": 4,
+      "name": "Stoneskin",
+      "school": "Transmutation"
+    },
+    "Target_SummonCelestial": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter;IsConcentration",
+      "level": 5,
+      "name": "Conjure Celestial",
+      "school": "Conjuration"
+    },
+    "Target_SummonFey": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;HasHighGroundRangeExtension;CannotTargetCharacter;CannotTargetItems;IsConcentration",
+      "level": 3,
+      "name": "Summon Fey: Red Cap",
+      "school": "Conjuration"
+    },
+    "Target_SynapticStatic": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
+      "level": 5,
+      "name": "Synaptic Static",
+      "school": "Enchantment"
+    },
+    "Target_ThornArmor": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+      "level": 1,
+      "name": "Thorn Armor",
+      "school": "Abjuration"
+    },
+    "Target_TrollbloodInfusion": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell",
+      "level": 3,
+      "name": "Trollblood Infusion",
+      "school": "Transmutation"
+    },
+    "Target_UmbralTendril": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+      "level": 1,
+      "name": "Umbral Tendril",
+      "school": "Evocation"
+    },
+    "Target_VampiricTouch": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee;IsConcentration;IsHarmful",
+      "level": 3,
+      "name": "Vampiric Touch",
+      "school": "Necromancy"
+    },
+    "Target_WardingBond": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
+      "level": 2,
+      "name": "Warding Bond",
+      "school": "Abjuration"
+    },
+    "Target_Web": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold",
+      "level": 2,
+      "name": "Web",
+      "school": "Conjuration"
+    },
+    "Teleportation_ArcaneGate": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;CannotTargetItems;CannotTargetCharacter;RangeIgnoreVerticalThreshold",
+      "level": 6,
+      "name": "Arcane Gate",
+      "school": "Conjuration"
+    },
+    "Teleportation_DimensionDoor": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CannotTargetItems",
+      "level": 4,
+      "name": "Dimension Door",
+      "school": "Conjuration"
+    },
+    "Teleportation_Revivify": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "IsSpell;RangeIgnoreVerticalThreshold;HasVerbalComponent;HasSomaticComponent;IgnorePreviouslyPickedEntities;CannotTargetItems",
+      "level": 3,
+      "name": "Revivify",
+      "school": "Necromancy"
+    },
+    "Throw_Telekinesis": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "InventorySelection;RangeIgnoreVerticalThreshold;IsHarmful;HasHighGroundRangeExtension;IgnoreVisionBlock;AddFallDamageOnLand;HasVerbalComponent;HasSomaticComponent;AbortOnSpellRollFail;AbortOnSecondarySpellRollFail;IsConcentration;CombatLogSetSingleLineRoll;IsSpell",
+      "level": 5,
+      "name": "Telekinesis",
+      "school": "Transmutation"
+    },
+    "Wall_BladeBarrier": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 6,
+      "name": "Blade Barrier",
+      "school": "Evocation"
+    },
+    "Wall_WallOfFire": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 4,
+      "name": "Wall of Fire",
+      "school": "Evocation"
+    },
+    "Wall_WallOfStone": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 5,
+      "name": "Wall of Stone",
+      "school": "Evocation"
+    },
+    "Wall_WallOfThorns": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 6,
+      "name": "Wall of Thorns",
+      "school": "Conjuration"
+    },
+    "Zone_AganazzarsScorcher": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+      "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 2,
+      "name": "Aganazzar's Scorcher",
+      "school": "Evocation"
+    },
+    "Zone_BurningHands": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 1,
+      "name": "Burning Hands",
+      "school": "Evocation"
+    },
+    "Zone_ColorSpray": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
+      "level": 1,
+      "name": "Colour Spray",
+      "school": "Illusion"
+    },
+    "Zone_ConeOfCold": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
+      "level": 5,
+      "name": "Cone of Cold",
+      "school": "Evocation"
+    },
+    "Zone_ConjureBarrage": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 3,
+      "name": "Conjure Barrage",
+      "school": "Conjuration"
+    },
+    "Zone_Fear": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+      "level": 3,
+      "name": "Fear",
+      "school": "Illusion"
+    },
+    "Zone_GustOfWind": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsConcentration",
+      "level": 2,
+      "name": "Gust of Wind",
+      "school": "Evocation"
+    },
+    "Zone_LaeralsSilverLance": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
+      "level": 3,
+      "name": "Laeral's Silver Lance",
+      "school": "Evocation"
+    },
+    "Zone_LightningBolt": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 3,
+      "name": "Lightning Bolt",
+      "school": "Evocation"
+    },
+    "Zone_MurderOfCrows": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+      "level": 4,
+      "name": "Murder of Crows ",
+      "school": "Conjuration"
+    },
+    "Zone_RimesBindingIce": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
+      "level": 2,
+      "name": "Rime's Binding Ice",
+      "school": "Evocation"
+    },
+    "Zone_Sunbeam": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
+      "level": 6,
+      "name": "Sunbeam",
+      "school": "Evocation"
+    },
+    "Zone_Thunderwave": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsHarmful",
+      "level": 1,
+      "name": "Thunderwave",
+      "school": "Evocation"
+    },
+    "Zone_TidalWave": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;DisableBlood",
+      "level": 3,
+      "name": "Tidal Wave",
+      "school": "Conjuration"
+    }
   }
- },
- "skipped_containers": [
-  "Projectile_BallisticSmite",
-  "Projectile_ChromaticOrb",
-  "Projectile_EnsnaringStrike_Container",
-  "Shout_Apo_ConjureCelestial",
-  "Shout_Apo_DivineWord",
-  "Shout_ArcaneVigor",
-  "Shout_DisguiseSelf",
-  "Shout_FireShield",
-  "Shout_SpiritGuardians",
-  "Target_AnimateDead",
-  "Target_Apo_MordenkainensSword",
-  "Target_BestowCurse",
-  "Target_Command_Container",
-  "Target_ConjureElemental_Container",
-  "Target_Contagion",
-  "Target_CreateDestroyWater",
-  "Target_Daylight_Container",
-  "Target_DragonsBreath",
-  "Target_ElementalWeapon",
-  "Target_EnhanceAbility",
-  "Target_EnlargeReduce",
-  "Target_Eyebite",
-  "Target_FreezingSphere",
-  "Target_GlyphOfWarding",
-  "Target_PlanarAlly_Container",
-  "Target_ProtectionFromEnergy",
-  "Target_Smite_Branding_Container",
-  "Target_SpiritualWeapon",
-  "Target_SummonBeast",
-  "Zone_AstralFlood",
-  "Zone_ElementalExhalation",
-  "Zone_PrismaticSpray"
- ],
- "spells": {
-  "Projectile_Apo_DelayedBlastFireball": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade",
-   "level": 7,
-   "name": "Delayed Blast Fireball",
-   "school": "Evocation"
-  },
-  "Projectile_Catapult": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
-   "flags": "HasSomaticComponent;IsHarmful;IsSpell;HasHighGroundRangeExtension",
-   "level": 1,
-   "name": "Catapult",
-   "school": "Transmutation"
-  },
-  "Projectile_ChainLightning": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsSpell",
-   "level": 6,
-   "name": "Chain Lightning",
-   "school": "Evocation"
-  },
-  "Projectile_Darkbolt": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 2,
-   "name": "Darkbolt",
-   "school": "Evocation"
-  },
-  "Projectile_DazingBlast": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
-   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 2,
-   "name": "Dazing Blast",
-   "school": "Evocation"
-  },
-  "Projectile_Disintegrate": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
-   "level": 6,
-   "name": "Disintegrate",
-   "school": "Transmutation"
-  },
-  "Projectile_Fireball": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade",
-   "level": 3,
-   "name": "Fireball",
-   "school": "Evocation"
-  },
-  "Projectile_GuidingBolt": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 1,
-   "name": "Guiding Bolt",
-   "school": "Evocation"
-  },
-  "Projectile_HailOfThorns": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;BonusActionPoint:1",
-   "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 1,
-   "name": "Hail of Thorns",
-   "school": "Conjuration"
-  },
-  "Projectile_IceKnife": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 1,
-   "name": "Ice Knife",
-   "school": "Conjuration"
-  },
-  "Projectile_LightningArrow": {
-   "costs": "ActionPoint:1;BonusActionPoint:1;SpellSlotsGroup:1:1:3;",
-   "flags": "IsSpell;IsHarmful;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CanAreaDamageEvade",
-   "level": 3,
-   "name": "Lightning Arrow",
-   "school": "Transmutation"
-  },
-  "Projectile_MagicMissile": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 1,
-   "name": "Magic Missile",
-   "school": "Evocation"
-  },
-  "Projectile_RayOfSickness": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 1,
-   "name": "Ray of Sickness",
-   "school": "Necromancy"
-  },
-  "Projectile_ScorchingRay": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasHighGroundRangeExtension;HasSomaticComponent;HasVerbalComponent;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 2,
-   "name": "Scorching Ray",
-   "school": "Evocation"
-  },
-  "Projectile_SearingOrb": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
-   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 2,
-   "name": "Searing Orb",
-   "school": "Evocation"
-  },
-  "Projectile_SnowballSwarm": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
-   "flags": "IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 2,
-   "name": "Snilloc's Snowball Swarm",
-   "school": "Evocation"
-  },
-  "Projectile_SpellfireFlare": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 1,
-   "name": "Spellfire Flare",
-   "school": "Evocation"
-  },
-  "Projectile_VitriolicSphere": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4;",
-   "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 4,
-   "name": "Vitriolic Sphere",
-   "school": "Evocation"
-  },
-  "Projectile_Wardaway": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 1,
-   "name": "Wardaway",
-   "school": "Abjuration"
-  },
-  "Projectile_WitchBolt": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold;IsHarmful",
-   "level": 1,
-   "name": "Witch Bolt",
-   "school": "Evocation"
-  },
-  "Shout_AbsorbElements": {
-   "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:1;",
-   "flags": "HasSomaticComponent;IsSpell",
-   "level": 1,
-   "name": "Absorb Elements",
-   "school": "Abjuration"
-  },
-  "Shout_AlterSelf": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
-   "level": 2,
-   "name": "Alter Self",
-   "school": "Transmutation"
-  },
-  "Shout_Apo_MagnificentMansion": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;IsSpell",
-   "level": 7,
-   "name": "Mordenkainen's Magnificent Mansion",
-   "school": "Conjuration"
-  },
-  "Shout_AshardalonsStride": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:3;",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 3,
-   "name": "Ashardalon's Stride",
-   "school": "Transmutation"
-  },
-  "Shout_AuraOfVitality": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "IsSpell;HasVerbalComponent;IsConcentration",
-   "level": 3,
-   "name": "Aura of Vitality",
-   "school": "Abjuration"
-  },
-  "Shout_BeaconOfHope": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
-   "level": 3,
-   "name": "Beacon of Hope",
-   "school": "Abjuration"
-  },
-  "Shout_Blink": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 3,
-   "name": "Blink",
-   "school": "Transmutation"
-  },
-  "Shout_Blur": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;IsConcentration",
-   "level": 2,
-   "name": "Blur",
-   "school": "Illusion"
-  },
-  "Shout_CacophonicShield": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
-   "level": 3,
-   "name": "Cacophonic Shield",
-   "school": "Evocation"
-  },
-  "Shout_CircleOfPower": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5;",
-   "flags": "IsSpell;HasVerbalComponent;IsConcentration",
-   "level": 5,
-   "name": "Circle of Power",
-   "school": "Abjuration"
-  },
-  "Shout_CrusadersMantle": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;IsSpell;IsConcentration",
-   "level": 3,
-   "name": "Crusader's Mantle",
-   "school": "Evocation"
-  },
-  "Shout_DetectThoughts": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 2,
-   "name": "Detect Thoughts",
-   "school": "Divination"
-  },
-  "Shout_DispelEvilAndGood": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 5,
-   "name": "Dispel Evil And Good",
-   "school": "Abjuration"
-  },
-  "Shout_DivineFavor": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 1,
-   "name": "Divine Favour",
-   "school": "Transmutation"
-  },
-  "Shout_ExpeditiousRetreat": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 1,
-   "name": "Expeditious Retreat",
-   "school": "Transmutation"
-  },
-  "Shout_FalseLife": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 1,
-   "name": "False Life",
-   "school": "Necromancy"
-  },
-  "Shout_FeatherFall": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;RangeIgnoreVerticalThreshold",
-   "level": 1,
-   "name": "Feather Fall",
-   "school": "Transmutation"
-  },
-  "Shout_FireDance": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
-   "level": 4,
-   "name": "Fire Dance",
-   "school": "Illusion"
-  },
-  "Shout_FlameBlade": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
-   "level": 2,
-   "name": "Flame Blade",
-   "school": "Evocation"
-  },
-  "Shout_FountOfMoonlight": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4;",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 4,
-   "name": "Fount of Moonlight",
-   "school": "Evocation"
-  },
-  "Shout_HealingWord_Mass": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;IsSpell",
-   "level": 3,
-   "name": "Mass Healing Word",
-   "school": "Abjuration"
-  },
-  "Shout_HeroesFeast": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;UnavailableInDialogs",
-   "level": 6,
-   "name": "Heroes' Feast",
-   "school": "Conjuration"
-  },
-  "Shout_HungeringBlade": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 1,
-   "name": "Hungering Blade",
-   "school": "Necromancy"
-  },
-  "Shout_MirrorImage": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 2,
-   "name": "Mirror Image",
-   "school": "Illusion"
-  },
-  "Shout_PassWithoutTrace": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration;Invisible",
-   "level": 2,
-   "name": "Pass Without Trace",
-   "school": "Abjuration"
-  },
-  "Shout_PrayerOfHealing": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;IsSpell",
-   "level": 2,
-   "name": "Prayer of Healing",
-   "school": "Abjuration"
-  },
-  "Shout_SeeInvisibility": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 2,
-   "name": "See Invisibility",
-   "school": "Divination"
-  },
-  "Shout_ShadowBlade_Class": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
-   "level": 2,
-   "name": "Shadow Blade",
-   "school": "Illusion"
-  },
-  "Shout_Shield_Sorcerer": {
-   "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer",
-   "level": 1,
-   "name": "Shield",
-   "school": "Abjuration"
-  },
-  "Shout_SpeakWithAnimals": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 1,
-   "name": "Speak with Animals",
-   "school": "Divination"
-  },
-  "Shout_TideOfDarkness": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
-   "flags": "IsSpell;HasVerbalComponent;IsHarmful;HasSomaticComponent",
-   "level": 1,
-   "name": "Tide of Darkness",
-   "school": "Conjuration"
-  },
-  "Shout_WindWalk": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 6,
-   "name": "Wind Walk",
-   "school": "Transmutation"
-  },
-  "Target_Aid": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IgnorePreviouslyPickedEntities",
-   "level": 2,
-   "name": "Aid",
-   "school": "Abjuration"
-  },
-  "Target_AnimalFriendship": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities",
-   "level": 1,
-   "name": "Animal Friendship",
-   "school": "Enchantment"
-  },
-  "Target_Apo_Etherealness": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;IsSpell",
-   "level": 7,
-   "name": "Etherealness",
-   "school": "Transmutation"
-  },
-  "Target_Apo_FingerOfDeath": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 7,
-   "name": "Finger of Death",
-   "school": "Necromancy"
-  },
-  "Target_Apo_FireStorm": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 7,
-   "name": "Fire Storm",
-   "school": "Evocation"
-  },
-  "Target_Apo_Forcecage": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful",
-   "level": 7,
-   "name": "Forcecage",
-   "school": "Evocation"
-  },
-  "Target_Apo_MirageArcane": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 7,
-   "name": "Mirage Arcane",
-   "school": "Illusion"
-  },
-  "Target_Apo_PlaneShift": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful",
-   "level": 7,
-   "name": "Plane Shift",
-   "school": "Conjuration"
-  },
-  "Target_Apo_PowerWordFortify": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 7,
-   "name": "Power Word Fortify",
-   "school": "Enchantment"
-  },
-  "Target_Apo_ReverseGravity": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 7,
-   "name": "Reverse Gravity",
-   "school": "Transmutation"
-  },
-  "Target_Apo_Sequester": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 7,
-   "name": "Sequester",
-   "school": "Transmutation"
-  },
-  "Target_Apo_Simulacrum": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 7,
-   "name": "Simulacrum",
-   "school": "Illusion"
-  },
-  "Target_Apo_Symbol": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 7,
-   "name": "Symbol",
-   "school": "Abjuration"
-  },
-  "Target_Apo_Teleport": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold",
-   "level": 7,
-   "name": "Teleport",
-   "school": "Conjuration"
-  },
-  "Target_Awaken": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful",
-   "level": 5,
-   "name": "Awaken",
-   "school": "Transmutation"
-  },
-  "Target_Bane": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful;IgnorePreviouslyPickedEntities",
-   "level": 1,
-   "name": "Bane",
-   "school": "Enchantment"
-  },
-  "Target_Banishment": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;RangeIgnoreVerticalThreshold",
-   "level": 4,
-   "name": "Banishment",
-   "school": "Abjuration"
-  },
-  "Target_Barkskin": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell",
-   "level": 2,
-   "name": "Barkskin",
-   "school": "Transmutation"
-  },
-  "Target_Bless": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IgnorePreviouslyPickedEntities",
-   "level": 1,
-   "name": "Bless",
-   "school": "Enchantment"
-  },
-  "Target_Blight": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 4,
-   "name": "Blight",
-   "school": "Necromancy"
-  },
-  "Target_Blindness": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasHighGroundRangeExtension;IsHarmful",
-   "level": 2,
-   "name": "Blindness",
-   "school": "Transmutation"
-  },
-  "Target_BodyWarpingOfGorgoroth": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsConcentration;HasSomaticComponent;IsSpell",
-   "level": 1,
-   "name": "Body Warping of Gorgoroth",
-   "school": "Transmutation"
-  },
-  "Target_CallLightning": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;CanAreaDamageEvade",
-   "level": 3,
-   "name": "Call Lightning",
-   "school": "Conjuration"
-  },
-  "Target_CalmEmotions": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 2,
-   "name": "Calm Emotions",
-   "school": "Enchantment"
-  },
-  "Target_CharmMonster": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities",
-   "level": 4,
-   "name": "Charm Monster",
-   "school": "Enchantment"
-  },
-  "Target_CharmPerson": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities",
-   "level": 1,
-   "name": "Charm Person",
-   "school": "Enchantment"
-  },
-  "Target_CircleOfDeath": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
-   "level": 6,
-   "name": "Circle of Death",
-   "school": "Necromancy"
-  },
-  "Target_CloudOfDaggers": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsHarmful;CannotTargetItems",
-   "level": 2,
-   "name": "Cloud of Daggers",
-   "school": "Conjuration"
-  },
-  "Target_Cloudkill": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "IsSpell;IsHarmful;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsConcentration",
-   "level": 5,
-   "name": "Cloudkill",
-   "school": "Conjuration"
-  },
-  "Target_CompelledDuel": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;IsConcentration;IsSpell;IsHarmful",
-   "level": 1,
-   "name": "Compelled Duel",
-   "school": "Enchantment"
-  },
-  "Target_Confusion": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 4,
-   "name": "Confusion",
-   "school": "Enchantment"
-  },
-  "Target_ConjureElementals_Minor_Container": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
-   "level": 4,
-   "name": "Conjure Minor Elemental",
-   "school": "Conjuration"
-  },
-  "Target_ConjureWoodlandBeings": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
-   "level": 4,
-   "name": "Conjure Woodland Being",
-   "school": "Conjuration"
-  },
-  "Target_Counterspell": {
-   "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "IsSpell",
-   "level": 3,
-   "name": "Counterspell",
-   "school": "Abjuration"
-  },
-  "Target_CreateUndead": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 6,
-   "name": "Create Undead",
-   "school": "Necromancy"
-  },
-  "Target_CrownOfMadness": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell",
-   "level": 2,
-   "name": "Crown of Madness",
-   "school": "Enchantment"
-  },
-  "Target_CureWounds": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsMelee",
-   "level": 1,
-   "name": "Cure Wounds",
-   "school": "Abjuration"
-  },
-  "Target_CureWounds_Mass": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IgnorePreviouslyPickedEntities",
-   "level": 5,
-   "name": "Mass Cure Wounds",
-   "school": "Abjuration"
-  },
-  "Target_Darkness": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;IsSpell;IsConcentration;Stealth;Invisible",
-   "level": 2,
-   "name": "Darkness",
-   "school": "Evocation"
-  },
-  "Target_Darkvision": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 2,
-   "name": "Darkvision",
-   "school": "Transmutation"
-  },
-  "Target_Dawn": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;IsConcentration",
-   "level": 5,
-   "name": "Dawn",
-   "school": "Evocation"
-  },
-  "Target_DeathArmor": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
-   "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent",
-   "level": 2,
-   "name": "Death Armor",
-   "school": "Necromancy"
-  },
-  "Target_DeathWard": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 4,
-   "name": "Death Ward",
-   "school": "Abjuration"
-  },
-  "Target_DissonantWhispers": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;IsSpell;IsHarmful",
-   "level": 1,
-   "name": "Dissonant Whispers",
-   "school": "Enchantment"
-  },
-  "Target_DominateBeast": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;HasHighGroundRangeExtension;IsHarmful",
-   "level": 4,
-   "name": "Dominate Beast",
-   "school": "Enchantment"
-  },
-  "Target_DominatePerson": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;HasHighGroundRangeExtension;IsHarmful",
-   "level": 5,
-   "name": "Dominate Person",
-   "school": "Enchantment"
-  },
-  "Target_Dream": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;RangeIgnoreVerticalThreshold",
-   "level": 5,
-   "name": "Dream",
-   "school": "Illusion"
-  },
-  "Target_Enervation": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
-   "level": 5,
-   "name": "Enervation",
-   "school": "Necromancy"
-  },
-  "Target_Entangle": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
-   "level": 1,
-   "name": "Entangle",
-   "school": "Conjuration"
-  },
-  "Target_Enthrall": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 2,
-   "name": "Enthrall",
-   "school": "Enchantment"
-  },
-  "Target_FaerieFire": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;IsConcentration;IsHarmful;RangeIgnoreVerticalThreshold",
-   "level": 1,
-   "name": "Faerie Fire",
-   "school": "Evocation"
-  },
-  "Target_FeignDeath": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 3,
-   "name": "Feign Death",
-   "school": "Necromancy"
-  },
-  "Target_FlameStrike": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 5,
-   "name": "Flame Strike",
-   "school": "Evocation"
-  },
-  "Target_FlamingSphere": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;CannotTargetCharacter;CannotTargetItems;IsConcentration",
-   "level": 2,
-   "name": "Flaming Sphere",
-   "school": "Conjuration"
-  },
-  "Target_FleshToStone": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
-   "level": 6,
-   "name": "Flesh to Stone",
-   "school": "Transmutation"
-  },
-  "Target_Fly": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell;IsConcentration",
-   "level": 3,
-   "name": "Fly",
-   "school": "Transmutation"
-  },
-  "Target_FogCloud": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold",
-   "level": 1,
-   "name": "Fog Cloud",
-   "school": "Conjuration"
-  },
-  "Target_FreedomOfMovement": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 4,
-   "name": "Freedom of Movement",
-   "school": "Abjuration"
-  },
-  "Target_GaseousForm": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;UnavailableInDialogs",
-   "level": 3,
-   "name": "Gaseous Form",
-   "school": "Transmutation"
-  },
-  "Target_GlobeOfInvulnerability": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 6,
-   "name": "Globe of Invulnerability",
-   "school": "Abjuration"
-  },
-  "Target_Goodberry": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
-   "level": 1,
-   "name": "Goodberry",
-   "school": "Transmutation"
-  },
-  "Target_GraspingVine": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter",
-   "level": 4,
-   "name": "Grasping Vine",
-   "school": "Conjuration"
-  },
-  "Target_GreaterRestoration": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 5,
-   "name": "Greater Restoration",
-   "school": "Abjuration"
-  },
-  "Target_GuardianOfFaith": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;IsSpell;CannotTargetItems;CannotTargetCharacter",
-   "level": 4,
-   "name": "Guardian of Faith",
-   "school": "Conjuration"
-  },
-  "Target_Harm": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;IsSpell",
-   "level": 6,
-   "name": "Harm",
-   "school": "Necromancy"
-  },
-  "Target_Haste": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 3,
-   "name": "Haste",
-   "school": "Transmutation"
-  },
-  "Target_Heal": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 6,
-   "name": "Heal",
-   "school": "Evocation"
-  },
-  "Target_HealingWord": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;IsSpell;RangeIgnoreVerticalThreshold",
-   "level": 1,
-   "name": "Healing Word",
-   "school": "Abjuration"
-  },
-  "Target_HeatMetal": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
-   "level": 2,
-   "name": "Heat Metal",
-   "school": "Transmutation"
-  },
-  "Target_HellsLash": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
-   "level": 1,
-   "name": "Hell\u2019s Lash",
-   "school": "Evocation"
-  },
-  "Target_Heroism": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee;IgnorePreviouslyPickedEntities",
-   "level": 1,
-   "name": "Heroism",
-   "school": "Enchantment"
-  },
-  "Target_HideousLaughter": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsHarmful",
-   "level": 1,
-   "name": "Tasha's Hideous Laughter",
-   "school": "Enchantment"
-  },
-  "Target_HoldMonster": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;IsHarmful",
-   "level": 5,
-   "name": "Hold Monster",
-   "school": "Enchantment"
-  },
-  "Target_HoldPerson": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;IsHarmful;IgnorePreviouslyPickedEntities",
-   "level": 2,
-   "name": "Hold Person",
-   "school": "Enchantment"
-  },
-  "Target_HolyWeapon": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration",
-   "level": 5,
-   "name": "Holy Weapon",
-   "school": "Evocation"
-  },
-  "Target_HuntersMark": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasHighGroundRangeExtension;IsConcentration;IsHarmful",
-   "level": 1,
-   "name": "Hunter's Mark",
-   "school": "Divination"
-  },
-  "Target_HypnoticPattern": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 3,
-   "name": "Hypnotic Pattern",
-   "school": "Illusion"
-  },
-  "Target_IceStorm": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CanAreaDamageEvade",
-   "level": 4,
-   "name": "Ice Storm",
-   "school": "Evocation"
-  },
-  "Target_InflictWounds": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell;IsHarmful",
-   "level": 1,
-   "name": "Inflict Wounds",
-   "school": "Necromancy"
-  },
-  "Target_InsectPlague": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsConcentration;CannotTargetItems",
-   "level": 5,
-   "name": "Insect Plague",
-   "school": "Conjuration"
-  },
-  "Target_Invisibility": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;UnavailableInDialogs;IgnorePreviouslyPickedEntities",
-   "level": 2,
-   "name": "Invisibility",
-   "school": "Illusion"
-  },
-  "Target_Invisibility_Greater": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;IsSpell",
-   "level": 4,
-   "name": "Greater Invisibility",
-   "school": "Illusion"
-  },
-  "Target_IrresistibleDance": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;CannotTargetItems;CannotTargetTerrain;IsHarmful",
-   "level": 6,
-   "name": "Otto's Irresistible Dance",
-   "school": "Enchantment"
-  },
-  "Target_Jump": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsMelee;IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 1,
-   "name": "Enhance Leap",
-   "school": "Transmutation"
-  },
-  "Target_Knock": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasHighGroundRangeExtension",
-   "level": 2,
-   "name": "Knock",
-   "school": "Transmutation"
-  },
-  "Target_LesserRestoration": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 2,
-   "name": "Lesser Restoration",
-   "school": "Abjuration"
-  },
-  "Target_Longstrider": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IgnorePreviouslyPickedEntities",
-   "level": 1,
-   "name": "Longstrider",
-   "school": "Transmutation"
-  },
-  "Target_MageArmor": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
-   "level": 1,
-   "name": "Mage Armour",
-   "school": "Abjuration"
-  },
-  "Target_MagicWeapon": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
-   "level": 2,
-   "name": "Magic Weapon",
-   "school": "Transmutation"
-  },
-  "Target_MindSpike": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsHarmful;HasSomaticComponent;IsSpell",
-   "level": 2,
-   "name": "Mind Spike",
-   "school": "Divination"
-  },
-  "Target_MindWhip": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent",
-   "level": 2,
-   "name": "Tasha's Mind Whip",
-   "school": "Enchantment"
-  },
-  "Target_MistyStep": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold",
-   "level": 2,
-   "name": "Misty Step",
-   "school": "Conjuration"
-  },
-  "Target_Moonbeam": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;IsConcentration",
-   "level": 2,
-   "name": "Moonbeam",
-   "school": "Evocation"
-  },
-  "Target_MurmursOfDoom": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;IsSpell;IsHarmful;IsConcentration",
-   "level": 3,
-   "name": "Murmurs of Doom",
-   "school": "Necromancy"
-  },
-  "Target_PhantasmalForce": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
-   "level": 2,
-   "name": "Phantasmal Force",
-   "school": "Illusion"
-  },
-  "Target_PhantasmalKiller": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
-   "level": 4,
-   "name": "Phantasmal Killer",
-   "school": "Illusion"
-  },
-  "Target_PlanarBinding": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;IsHarmful",
-   "level": 5,
-   "name": "Planar Binding",
-   "school": "Abjuration"
-  },
-  "Target_PlantGrowth": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 3,
-   "name": "Plant Growth",
-   "school": "Transmutation"
-  },
-  "Target_Polymorph": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 4,
-   "name": "Polymorph",
-   "school": "Transmutation"
-  },
-  "Target_ProjectImage": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 7,
-   "name": "Project Image",
-   "school": "Illusion"
-  },
-  "Target_ProtectionFromEvilAndGood": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee",
-   "level": 1,
-   "name": "Protection from Evil and Good",
-   "school": "Abjuration"
-  },
-  "Target_ProtectionFromPoison": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
-   "level": 2,
-   "name": "Protection from Poison",
-   "school": "Abjuration"
-  },
-  "Target_Regenerate": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 7,
-   "name": "Regenerate",
-   "school": "Transmutation"
-  },
-  "Target_RemoveCurse": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 3,
-   "name": "Remove Curse",
-   "school": "Abjuration"
-  },
-  "Target_Resurrection": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
-   "level": 7,
-   "name": "Resurrection",
-   "school": "Necromancy"
-  },
-  "Target_Sanctuary": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 1,
-   "name": "Sanctuary",
-   "school": "Abjuration"
-  },
-  "Target_Seeming": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems",
-   "level": 5,
-   "name": "Seeming",
-   "school": "Illusion"
-  },
-  "Target_Shatter": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;IsHarmful",
-   "level": 2,
-   "name": "Shatter",
-   "school": "Evocation"
-  },
-  "Target_ShieldOfFaith": {
-   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 1,
-   "name": "Shield of Faith",
-   "school": "Abjuration"
-  },
-  "Target_Silence": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;CannotTargetItems",
-   "level": 2,
-   "name": "Silence",
-   "school": "Illusion"
-  },
-  "Target_Sleep": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;RangeIgnoreVerticalThreshold;IsConcentration",
-   "level": 1,
-   "name": "Sleep",
-   "school": "Enchantment"
-  },
-  "Target_SleetStorm": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 3,
-   "name": "Sleet Storm",
-   "school": "Conjuration"
-  },
-  "Target_Slow": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IgnorePreviouslyPickedEntities",
-   "level": 3,
-   "name": "Slow",
-   "school": "Transmutation"
-  },
-  "Target_Smite_Blinding": {
-   "costs": "ActionPoint:1",
-   "flags": "IsMelee;IsHarmful;IsSpell;HasVerbalComponent",
-   "level": 3,
-   "name": "Blinding Smite",
-   "school": "Evocation"
-  },
-  "Target_Smite_Searing": {
-   "costs": "ActionPoint:1",
-   "flags": "IsHarmful;HasVerbalComponent;IsSpell;IsMelee",
-   "level": 1,
-   "name": "Searing Smite",
-   "school": "Evocation"
-  },
-  "Target_Smite_Thunderous": {
-   "costs": "ActionPoint:1",
-   "flags": "IsSpell;IsMelee;HasVerbalComponent;IsHarmful;AddFallDamageOnLand",
-   "level": 1,
-   "name": "Thunderous Smite",
-   "school": "Evocation"
-  },
-  "Target_Smite_Wrathful": {
-   "costs": "ActionPoint:1",
-   "flags": "IsSpell;HasVerbalComponent;IsMelee;IsHarmful",
-   "level": 1,
-   "name": "Wrathful Smite",
-   "school": "Necromancy"
-  },
-  "Target_SpeakWithDead": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 3,
-   "name": "Speak with Dead",
-   "school": "Necromancy"
-  },
-  "Target_SpectralSlash": {
-   "costs": "ActionPoint:1;BonusActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;IsSpell;IsHarmful;CannotTargetTerrain",
-   "level": 1,
-   "name": "Spectral Slash",
-   "school": "Conjuration"
-  },
-  "Target_SpellfireStorm": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
-   "level": 4,
-   "name": "Spellfire Storm",
-   "school": "Evocation"
-  },
-  "Target_SpikeGrowth": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
-   "level": 2,
-   "name": "Spike Growth",
-   "school": "Transmutation"
-  },
-  "Target_StinkingCloud": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 3,
-   "name": "Stinking Cloud",
-   "school": "Conjuration"
-  },
-  "Target_Stoneskin": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee",
-   "level": 4,
-   "name": "Stoneskin",
-   "school": "Transmutation"
-  },
-  "Target_SummonCelestial": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter;IsConcentration",
-   "level": 5,
-   "name": "Conjure Celestial",
-   "school": "Conjuration"
-  },
-  "Target_SummonFey": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;HasHighGroundRangeExtension;CannotTargetCharacter;CannotTargetItems;IsConcentration",
-   "level": 3,
-   "name": "Summon Fey: Red Cap",
-   "school": "Conjuration"
-  },
-  "Target_SynapticStatic": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
-   "level": 5,
-   "name": "Synaptic Static",
-   "school": "Enchantment"
-  },
-  "Target_ThornArmor": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
-   "level": 1,
-   "name": "Thorn Armor",
-   "school": "Abjuration"
-  },
-  "Target_TrollbloodInfusion": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell",
-   "level": 3,
-   "name": "Trollblood Infusion",
-   "school": "Transmutation"
-  },
-  "Target_UmbralTendril": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
-   "level": 1,
-   "name": "Umbral Tendril",
-   "school": "Evocation"
-  },
-  "Target_VampiricTouch": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee;IsConcentration;IsHarmful",
-   "level": 3,
-   "name": "Vampiric Touch",
-   "school": "Necromancy"
-  },
-  "Target_WardingBond": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
-   "level": 2,
-   "name": "Warding Bond",
-   "school": "Abjuration"
-  },
-  "Target_Web": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold",
-   "level": 2,
-   "name": "Web",
-   "school": "Conjuration"
-  },
-  "Teleportation_ArcaneGate": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;CannotTargetItems;CannotTargetCharacter;RangeIgnoreVerticalThreshold",
-   "level": 6,
-   "name": "Arcane Gate",
-   "school": "Conjuration"
-  },
-  "Teleportation_DimensionDoor": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CannotTargetItems",
-   "level": 4,
-   "name": "Dimension Door",
-   "school": "Conjuration"
-  },
-  "Teleportation_Revivify": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "IsSpell;RangeIgnoreVerticalThreshold;HasVerbalComponent;HasSomaticComponent;IgnorePreviouslyPickedEntities;CannotTargetItems",
-   "level": 3,
-   "name": "Revivify",
-   "school": "Necromancy"
-  },
-  "Throw_Telekinesis": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "InventorySelection;RangeIgnoreVerticalThreshold;IsHarmful;HasHighGroundRangeExtension;IgnoreVisionBlock;AddFallDamageOnLand;HasVerbalComponent;HasSomaticComponent;AbortOnSpellRollFail;AbortOnSecondarySpellRollFail;IsConcentration;CombatLogSetSingleLineRoll;IsSpell",
-   "level": 5,
-   "name": "Telekinesis",
-   "school": "Transmutation"
-  },
-  "Wall_BladeBarrier": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 6,
-   "name": "Blade Barrier",
-   "school": "Evocation"
-  },
-  "Wall_WallOfFire": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 4,
-   "name": "Wall of Fire",
-   "school": "Evocation"
-  },
-  "Wall_WallOfStone": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 5,
-   "name": "Wall of Stone",
-   "school": "Evocation"
-  },
-  "Wall_WallOfThorns": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 6,
-   "name": "Wall of Thorns",
-   "school": "Conjuration"
-  },
-  "Zone_AganazzarsScorcher": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
-   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 2,
-   "name": "Aganazzar's Scorcher",
-   "school": "Evocation"
-  },
-  "Zone_Apo_PrismaticSpray": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
-   "level": 7,
-   "name": "Prismatic Spray",
-   "school": "Evocation"
-  },
-  "Zone_BurningHands": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 1,
-   "name": "Burning Hands",
-   "school": "Evocation"
-  },
-  "Zone_ColorSpray": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
-   "level": 1,
-   "name": "Colour Spray",
-   "school": "Illusion"
-  },
-  "Zone_ConeOfCold": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
-   "level": 5,
-   "name": "Cone of Cold",
-   "school": "Evocation"
-  },
-  "Zone_ConjureBarrage": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 3,
-   "name": "Conjure Barrage",
-   "school": "Conjuration"
-  },
-  "Zone_Fear": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-   "level": 3,
-   "name": "Fear",
-   "school": "Illusion"
-  },
-  "Zone_GustOfWind": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsConcentration",
-   "level": 2,
-   "name": "Gust of Wind",
-   "school": "Evocation"
-  },
-  "Zone_LaeralsSilverLance": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
-   "level": 3,
-   "name": "Laeral's Silver Lance",
-   "school": "Evocation"
-  },
-  "Zone_LightningBolt": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 3,
-   "name": "Lightning Bolt",
-   "school": "Evocation"
-  },
-  "Zone_MurderOfCrows": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4;",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
-   "level": 4,
-   "name": "Murder of Crows ",
-   "school": "Conjuration"
-  },
-  "Zone_RimesBindingIce": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
-   "level": 2,
-   "name": "Rime's Binding Ice",
-   "school": "Evocation"
-  },
-  "Zone_Sunbeam": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
-   "level": 6,
-   "name": "Sunbeam",
-   "school": "Evocation"
-  },
-  "Zone_Thunderwave": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsHarmful",
-   "level": 1,
-   "name": "Thunderwave",
-   "school": "Evocation"
-  },
-  "Zone_TidalWave": {
-   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
-   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;DisableBlood",
-   "level": 3,
-   "name": "Tidal Wave",
-   "school": "Conjuration"
-  }
- }
 }

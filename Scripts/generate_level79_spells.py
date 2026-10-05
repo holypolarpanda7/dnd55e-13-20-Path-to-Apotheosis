@@ -102,16 +102,6 @@ SPELLS = [
              "TooltipDamageList": "DealDamage(7d10,Fire)",
              "AreaRadius": "8",
          }),
-    dict(entry="Zone_Apo_PrismaticSpray", using="Zone_ConeOfCold",
-         level=7, school="Evocation", hid=7009, classes=["sor", "wiz"],
-         name="Prismatic Spray",
-         desc="Eight rays of clashing colour flash from your hand in a cone, battering everything caught in them with 2d6 each of Fire, Cold, Lightning, Acid and Poison damage (Dexterity save for half).",
-         design="Random-ray table flattened into a fixed five-type barrage - same expected damage, resist-proof spread.",
-         fields={"Icon": "Apo_Spell_PrismaticSpray", 
-             "SpellSuccess": "DealDamage(2d6,Fire,Magical);DealDamage(2d6,Cold,Magical);DealDamage(2d6,Lightning,Magical);DealDamage(2d6,Acid,Magical);DealDamage(2d6,Poison,Magical)",
-             "SpellFail": "DealDamage((2d6)/2,Fire,Magical);DealDamage((2d6)/2,Cold,Magical);DealDamage((2d6)/2,Lightning,Magical);DealDamage((2d6)/2,Acid,Magical);DealDamage((2d6)/2,Poison,Magical)",
-             "TooltipDamageList": "DealDamage(2d6,Fire);DealDamage(2d6,Cold);DealDamage(2d6,Lightning);DealDamage(2d6,Acid);DealDamage(2d6,Poison)",
-         }),
     dict(entry="Target_Apo_Forcecage", using="Target_ResilientSphere",
          level=7, school="Evocation", hid=7011, classes=["brd", "wlk", "wiz"],
          name="Forcecage",
@@ -306,14 +296,6 @@ SPELLS = [
          fields={"Icon": "Apo_Spell_Demiplane", 
              "SpellProperties": "ApplyStatus(RESILIENT_SPHERE,100,2)",
              "TooltipStatusApply": "ApplyStatus(RESILIENT_SPHERE,100,2)",
-         }),
-    dict(entry="Target_Apo_DominateMonster", using="Target_DominatePerson",
-         level=8, school="Enchantment", hid=8015, classes=["brd", "sor", "wlk", "wiz"],
-         name="Dominate Monster",
-         desc="You seize the will of any creature - beast, fiend, dragon or worse. On a failed Wisdom save it fights for you.",
-         design="Dominate Person with the humanoid restriction lifted.",
-         fields={"Icon": "Apo_Spell_DominateMonster", 
-             "TargetConditions": "Character() and not Dead() and not Self()",
          }),
     dict(entry="Target_Apo_Earthquake", using="Target_FlameStrike",
          level=8, school="Evocation", hid=8017, classes=["clr", "dru", "sor"],
@@ -658,8 +640,15 @@ def update_loca() -> int:
     return len(rows)
 
 
+# Spells taken off every list (2026-10-05): duplicates of a better hand-written version (Spell_Zone.txt Prismatic Spray,
+# Spell_Target.txt Dominate Monster), and Feeblemind, which PHB 2024 replaced with Befuddlement (kept only as its chassis).
+REMOVE_FROM_LISTS = {"Zone_Apo_PrismaticSpray", "Target_Apo_DominateMonster", "Target_Feeblemind"}
+
+
 def update_spell_lists() -> int:
     text = SPELL_LISTS.read_text(encoding="utf-8")
+    text = re.sub(r'(id="Spells"[^/]*?value=")([^"]*)(")',
+                  lambda m: m.group(1) + ";".join(x for x in m.group(2).split(";") if x and x not in REMOVE_FROM_LISTS) + m.group(3), text)
     additions: dict[str, list[str]] = {}
     for s in SPELLS:
         targets = set()

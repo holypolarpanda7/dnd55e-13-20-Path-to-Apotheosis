@@ -693,8 +693,6 @@
   <content contentuid="hsp0000000000000000000000007006" version="1">Negative energy ravages a creature for 7d8+30 Necrotic damage (Constitution save for half). A humanoid slain by this spell rises at the start of the next turn as a zombie under your command.</content>
   <content contentuid="hsp0000000000000000000000007007" version="1">Fire Storm</content>
   <content contentuid="hsp0000000000000000000000007008" version="1">A storm of roaring flame fills a wide area, dealing 7d10 Fire damage (Dexterity save for half).</content>
-  <content contentuid="hsp0000000000000000000000007009" version="1">Prismatic Spray</content>
-  <content contentuid="hsp0000000000000000000000007010" version="1">Eight rays of clashing colour flash from your hand in a cone, battering everything caught in them with 2d6 each of Fire, Cold, Lightning, Acid and Poison damage (Dexterity save for half).</content>
   <content contentuid="hsp0000000000000000000000007011" version="1">Forcecage</content>
   <content contentuid="hsp0000000000000000000000007012" version="1">A cage of invisible force imprisons an enemy for 3 turns: it cannot act, and nothing can harm it. No saving throw, no concentration.</content>
   <content contentuid="hsp0000000000000000000000007013" version="1">Mordenkainen's Sword</content>
@@ -735,8 +733,6 @@
   <content contentuid="hsp0000000000000000000000008012" version="1">You bend the sky itself: for 5 turns a storm rages 18m around you, shocking enemies for 2d10 Lightning damage each turn (Constitution save).</content>
   <content contentuid="hsp0000000000000000000000008013" version="1">Demiplane</content>
   <content contentuid="hsp0000000000000000000000008014" version="1">You shove an ally through a shadowy door into your demiplane: for 2 turns nothing can reach them, and they cannot act.</content>
-  <content contentuid="hsp0000000000000000000000008015" version="1">Dominate Monster</content>
-  <content contentuid="hsp0000000000000000000000008016" version="1">You seize the will of any creature - beast, fiend, dragon or worse. On a failed Wisdom save it fights for you.</content>
   <content contentuid="hsp0000000000000000000000008017" version="1">Earthquake</content>
   <content contentuid="hsp0000000000000000000000008018" version="1">The ground heaves across a huge area: creatures that fail a Dexterity save take 5d12 Bludgeoning damage and are knocked Prone amid the churned earth.</content>
   <content contentuid="hsp0000000000000000000000008019" version="1">Holy Aura</content>

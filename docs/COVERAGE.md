@@ -247,3 +247,16 @@ showed: the bar ended at VIII. Apotheosis overrides the base `SpellSlot` definit
 ActionResourceDefinitions.lsx; checked in game: the engine list then holds levels 1-9 and the bar shows IX. No UI file is
 replaced, so it can't conflict with UI mods.
 
+
+## Duplicate spell definitions removed (2026-10-05)
+Two implementations of Prismatic Spray and of Dominate Monster were both on the class lists (players saw each twice),
+Foresight was defined twice in Spell_HighLevel.txt (the later, less accurate copy won), and Feeblemind sat on the Bard
+lists next to its PHB 2024 replacement Befuddlement. Kept the more accurate version (VISION: accuracy over homebrew):
+- Prismatic Spray: Spell_Zone.txt `Zone_PrismaticSpray` (12d6 per ray, as the rule) - the generated one dealt 2d6 of five
+  types. Concentration flag removed (the spell has none). Known gap: the caster picks the ray (the rule rolls a d8 per
+  creature) and the indigo/violet rays aren't implemented.
+- Dominate Monster: Spell_Target.txt `Target_DominateMonster` (Wisdom save, advantage when fighting, its own status, 9th
+  level upcast) - the generated one was a Dominate Person reskin.
+- Foresight: the 8-hour, touch version, limited to willing creatures.
+- Feeblemind: off every list; kept only as Befuddlement's chassis.
+generate_level79_spells.py REMOVE_FROM_LISTS strips the dropped ones on every regen.

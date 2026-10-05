@@ -23,7 +23,7 @@ data "DescriptionParams" "Distance(18);DealDamage(12d6,Fire)"
 data "TooltipDamageList" "DealDamage(12d6,Fire)"
 data "TooltipAttackSave" "Dexterity"
 data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:7"
-data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration"
+data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell"
 data "MemoryCost" "1"
 
 // Fire Ray (Red)

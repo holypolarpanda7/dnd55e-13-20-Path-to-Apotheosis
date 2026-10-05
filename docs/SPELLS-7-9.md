@@ -21,7 +21,6 @@ zombie from humanoids it kills; Clone fully revives its bearer once.
 | **Divine Word** (`Shout_Apo_DivineWord`) | clr | PHB 2024 (user decision 2026-10-04, replacing scaled 50/100/150 thresholds): Bonus Action; HP tiers 20/30/40; the 41-50 Deafened-only tier and the Deafened parts have no BG3 status; 1 hour = 600 turns, 10 minutes = 100; the planar banishment (can't return for 24 hours) is Kill() like the base game's Dispel Evil and Good dismissal, with its Raphael guard. |
 | **Finger of Death** (`Target_Apo_FingerOfDeath`) | sor, wlk, wiz | Zombie-on-kill implemented as a Script Extender rider on the APO_FINGER_OF_DEATH marker. |
 | **Fire Storm** (`Target_Apo_FireStorm`) | clr, dru, sor | FlameStrike chassis widened to 8m, single fire payload. |
-| **Prismatic Spray** (`Zone_Apo_PrismaticSpray`) | sor, wiz | Random-ray table flattened into a fixed five-type barrage - same expected damage, resist-proof spread. |
 | **Forcecage** (`Target_Apo_Forcecage`) | brd, wlk, wiz | Otiluke's sphere turned offensive: guaranteed 3-turn removal of one enemy (nothing in, nothing out) mirrors the 5e no-save cage. |
 | **Mordenkainen's Sword** (`Target_Apo_MordenkainensSword`) | brd, wiz | Spiritual Weapon greatsword chassis at spell level 7 (summon scaling handles the rest). |
 | **Conjure Celestial** (`Shout_Apo_ConjureCelestial`) | clr | 2024's radiant-spirit version as a dual aura on the Spirit Guardians engine: wrath for enemies, Bless for allies. |
@@ -47,7 +46,6 @@ zombie from humanoids it kills; Clone fully revives its bearer once.
 | **Clone** (`Target_Apo_Clone`) | wiz | Death-contingency via Script Extender rider on APO_CLONE - full revive on going down, once. |
 | **Control Weather** (`Shout_Apo_ControlWeather`) | clr, dru, wiz | Weather control focused into its combat expression: a huge personal storm-cell. |
 | **Demiplane** (`Target_Apo_Demiplane`) | sor, wlk, wiz | Pocket-dimension refuge: brief total protection at the cost of the ally's turns. |
-| **Dominate Monster** (`Target_Apo_DominateMonster`) | brd, sor, wlk, wiz | Dominate Person with the humanoid restriction lifted. |
 | **Earthquake** (`Target_Apo_Earthquake`) | clr, dru, sor | Fissures and collapse become slam damage + Prone + a lingering mud field. |
 | **Holy Aura** (`Shout_Apo_HolyAura`) | clr | The 5e save/attack-shield rendered as a perpetual Bless aura on the party. |
 | **Incendiary Cloud** (`Target_Apo_IncendiaryCloud`) | sor, wiz | Cloudkill chassis converted to fire: heavy initial burn plus a lingering fire field. |

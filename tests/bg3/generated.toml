@@ -73,11 +73,11 @@ expect = [
 ]
 
 [[case]]
-id = "spell-WildMagic-Zone_Apo_PrismaticSpray"
+id = "spell-WildMagic-Zone_PrismaticSpray_Fire"
 class = "Sorcerer"
 subclass = "WildMagic"
 level = 13
-spell = "Zone_Apo_PrismaticSpray"
+spell = "Zone_PrismaticSpray_Fire"
 title = "Prismatic Spray damages a hostile wolf"
 target = "A"
 retries = 1
@@ -393,11 +393,11 @@ expect = [
 ]
 
 [[case]]
-id = "spell-GreatOldOne-Target_Apo_DominateMonster"
+id = "spell-GreatOldOne-Target_DominateMonster"
 class = "Warlock"
 subclass = "GreatOldOne"
 level = 15
-spell = "Target_Apo_DominateMonster"
+spell = "Target_DominateMonster"
 title = "Dominate Monster applies DOMINATE_PERSON to a hostile wolf"
 target = "A"
 retries = 2
