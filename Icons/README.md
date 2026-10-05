@@ -25,3 +25,11 @@ positive suffix: "thin sketchy glowing brush strokes, single color line art, min
 negative adds "filled shapes, solid colors, detailed painting, circle frame, ring border, badge, emblem". Imported with
 bg3_icon_import key="unmix" (the glow over the green survives as haze). Jobs: D:\BG3Modding\Tools\comfy\jobs_style_all.json;
 sheets: review\style_all. Picks: the assistant's proposal, accepted by the user.
+
+## Final style (2026-10-05, user-approved in game)
+SDXL (juggernautXL_v9) + IP-Adapter "style transfer" with 8 base-game spell icons as references
+(D:\BG3Modding\Tools\comfy\gen_ipa.py, refs in D:\ComfyUI\input\bg3ref), prompt "a fantasy spell icon of <subject>,
+bold thick glowing painted brush strokes, thick soft glow, ... on a pure black background", negative adds thin/hairline lines.
+Import: bg3_icon_import(key="black", tints=[damage type], crop=True) - recoloured to the base-game gradient of the damage
+type (iconkit.PALETTE). Build thickens strokes and paints hotbar tiles on Icons/hotbar_plate.png (bg3_icon_plate) with a
+warm halo; tooltips stay a bare glow. Picks: picks_ipa_all.json (+ the 12 test spells); jobs/tints in Tools/comfy.
