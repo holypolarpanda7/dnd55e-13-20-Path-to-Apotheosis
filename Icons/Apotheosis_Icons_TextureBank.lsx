@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="8" revision="0" build="500" />
+	<region id="TextureBank">
+		<node id="TextureBank">
+			<children>
+				<node id="Resource">
+					<attribute id="ID" type="FixedString" value="c27e12eb-bd70-5dbd-985a-217cf91eb4c0" />
+					<attribute id="Name" type="LSString" value="Apotheosis_Icons" />
+					<attribute id="SourceFile" type="LSString" value="Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Textures/Icons/Apotheosis_Icons.dds" />
+					<attribute id="Template" type="FixedString" value="Apotheosis_Icons" />
+					<attribute id="Streaming" type="bool" value="True" />
+					<attribute id="Type" type="int32" value="1" />
+					<attribute id="SRGB" type="bool" value="False" />
+					<attribute id="Width" type="int32" value="512" />
+					<attribute id="Height" type="int32" value="512" />
+					<attribute id="Depth" type="int32" value="1" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

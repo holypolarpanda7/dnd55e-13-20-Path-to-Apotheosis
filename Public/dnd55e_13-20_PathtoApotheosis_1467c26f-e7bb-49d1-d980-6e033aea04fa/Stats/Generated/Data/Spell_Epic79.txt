@@ -491,6 +491,7 @@ data "Description" "hsp0000000000000000000000009008;1"
 data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:9"
 data "SpellProperties" "ApplyStatus(SELF,APO_VENGEANCE_AURA,100,5)"
 data "TooltipStatusApply" "ApplyStatus(APO_VENGEANCE_AURA,100,5)"
+data "Icon" "Apo_Spell_StormOfVengeance"
 
 new entry "Target_Apo_TrueResurrection"
 type "SpellData"

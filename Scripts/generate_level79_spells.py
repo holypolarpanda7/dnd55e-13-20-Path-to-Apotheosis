@@ -435,6 +435,7 @@ SPELLS = [
          fields={
              "SpellProperties": "ApplyStatus(SELF,APO_VENGEANCE_AURA,100,5)",
              "TooltipStatusApply": "ApplyStatus(APO_VENGEANCE_AURA,100,5)",
+             "Icon": "Apo_Spell_StormOfVengeance",  # Icons/src (ComfyUI + BG3 icon LoRA, 2026-10-04)
          }),
     dict(entry="Target_Apo_TrueResurrection", using="Target_Resurrection",
          level=9, school="Necromancy", hid=9009, classes=["clr", "dru"],

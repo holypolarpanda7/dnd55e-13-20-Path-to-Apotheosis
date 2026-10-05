@@ -705,7 +705,7 @@ node(BLADE, "BladeOfRadiance", 13, "BladeOfRadiance_13_SaintlyRevelations",
 G.status("APO_FINAL_JUDGEMENT", "Final Judgement",
          "Your sanctified blade sheds bright light in a 30-foot radius and dim light 30 feet further, and your melee weapon attacks deal an extra 2d4 Radiant damage.", {
              "Boosts": "GameplayLight(18,false,0.1);IF(IsMeleeWeaponAttack()):DamageBonus(2d4,Radiant)", "StackId": "APO_FINAL_JUDGEMENT",
-             "StatusGroups": "SG_Light"}, icon="Action_Paladin_SacredWeapon")
+             "StatusGroups": "SG_Light"}, icon="Apo_Status_FinalJudgement")
 G.spell("Shout_ApoFinalJudgementOn", "Final Judgement: Light the Blade",
         "Speak the command word (no action): your sanctified blade blazes and your melee attacks deal an extra 2d4 Radiant damage.", {
             "SpellType": "Shout", "TargetConditions": "Self()", "SpellProperties": "ApplyStatus(APO_FINAL_JUDGEMENT,100,-1)",
@@ -807,7 +807,7 @@ G.interrupt("Interrupt_ApoHeroicLegacy", "Heroic Legacy",
                 "Cost": "ReactionActionPoint:1", "InterruptDefaultValue": "Ask;Enabled"}, icon="PassiveFeature_ExtraAttack")
 G.passive("HeroicSorcery_18_HeroicLegacy", "Heroic Legacy",
           "When you would take more than 20 damage, you can use your Reaction to reduce it to 20. You then have Advantage on attack rolls, ability checks and saving throws until the end of your next turn.",
-          {"Boosts": "UnlockInterrupt(Interrupt_ApoHeroicLegacy)"}, icon="PassiveFeature_ExtraAttack", comment="SubclassFeatures.lua (HeroicLegacy).")
+          {"Boosts": "UnlockInterrupt(Interrupt_ApoHeroicLegacy)"}, icon="Apo_Passive_HeroicLegacy", comment="SubclassFeatures.lua (HeroicLegacy).")
 node(HEROIC, "HeroicSorcery", 18, "HeroicSorcery_18_HeroicLegacy")
 
 # Sorcerer: Frost Sorcery 14 Flash Freeze / 18 Frozen Soul ("Frost Magic", The Griffon's Saddlebag: Book One, p.167; page photographed by the
