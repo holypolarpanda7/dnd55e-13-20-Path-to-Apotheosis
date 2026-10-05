@@ -3411,4 +3411,109 @@
   <content contentuid="hap0000000000000000000000000090" version="1">Immediately after you use an action to cast a spell, you can make one weapon attack as a Bonus Action.</content>
   <content contentuid="hap0000000000000000000000000091" version="1">Corona of Light</content>
   <content contentuid="hap0000000000000000000000000092" version="1">Caught in a cleric's Corona of Light: Disadvantage on saving throws.</content>
+  <content contentuid="h902ece8d7830523ca01558a9e666987c" version="1">Nature Armor</content>
+  <content contentuid="h64292dcfa0c05c04a1c01913ac71a327" version="1">At the start of each of your turns, you gain Hit Points equal to half your Druid level + your Wisdom modifier. (The Shillelagh d12 this level also grants is already in dnd55e's Shillelagh.)</content>
+  <content contentuid="hdb44dadc368f55dbaa11b37203f7f6f8" version="1">Better Half</content>
+  <content contentuid="hdd81186f304e53c787c2ccbec29dbe09" version="1">Better Half</content>
+  <content contentuid="h192458ea0b8e504b9005cc4156d67591" version="1">Drop to 1 Hit Point instead of 0.</content>
+  <content contentuid="hce30ccb9ee5054ea9a04298617d622b9" version="1">Better Half</content>
+  <content contentuid="hc0f3d17987285ae4a000ee0cb6edb647" version="1">Once per Long Rest, when you drop to 0 Hit Points you instead drop to 1 Hit Point and gain Temporary Hit Points equal to half your Hit Point maximum. You also swap whether you are raging.</content>
+  <content contentuid="hb0239bf86f7f5b01a8831d6b2921728b" version="1">Supreme Switching</content>
+  <content contentuid="hff2f8fcb713f58ec9659da47bef4908c" version="1">Target a hostile creature with Spatial Exchange: it makes a Charisma saving throw against your spell save DC. On a failure it switches places with you; on a success neither of you moves. (Casting a touch spell as part of the swap isn't implemented.)</content>
+  <content contentuid="hbc780f5f1fe35ab89ffcc8d328e13399" version="1">Supreme Switching</content>
+  <content contentuid="he636f44b9c405a0284de4f347c29ea56" version="1">Your Spatial Exchange can target a hostile creature: it makes a Charisma saving throw against your spell save DC and, on a failure, switches places with you.</content>
+  <content contentuid="h4d675589a8005c1c9b112b8dd84c997e" version="1">Marauder's Reprisal</content>
+  <content contentuid="h973ff5626ba85a2eb255b92ffc399a54" version="1">You used Marauder's Reprisal for becoming Bloodied.</content>
+  <content contentuid="ha91b218e91435e08b9e205d287215c2f" version="1">Marauder's Reprisal</content>
+  <content contentuid="hf3fdf7f15531557388f591502c31f8a9" version="1">Temporary Hit Points equal to half your Fighter level.</content>
+  <content contentuid="hbe5a62ae0a96596d9b8b7d34053aaf95" version="1">Marauder's Reprisal</content>
+  <content contentuid="hdca8d5589fca5f2bbb48ea4027396d1b" version="1">Make an Opportunity Attack against the creature that hurt you. On a hit, it deals double weapon dice damage and you gain Temporary Hit Points equal to half your Fighter level.</content>
+  <content contentuid="h9e6693d297f95107b6a14861df835012" version="1">Marauder's Reprisal</content>
+  <content contentuid="h32df1250c2485584b191e2e76d75b54a" version="1">When you first become Bloodied or a creature scores a Critical Hit against you, make an Opportunity Attack against it with double weapon dice and gain Temporary Hit Points. (Strikes the creature that hit you, not the nearest enemy.)</content>
+  <content contentuid="h1ed4e613e3ce55d4b7d7594a1ec63520" version="1">Marauder's Reprisal</content>
+  <content contentuid="h43defba3a3d95e8797220d9647566198" version="1">Reprisal Opportunity Attacks.</content>
+  <content contentuid="h4e656d2b88bb52e882e56e003a11a469" version="1">Marauder's Reprisal</content>
+  <content contentuid="h8b74364176cc58768a5535c617d2980f" version="1">When you first become Bloodied or a creature scores a Critical Hit against you, you can use your Reaction to make an Opportunity Attack against it. On a hit it deals double weapon dice damage and you gain Temporary Hit Points equal to half your Fighter level. Uses equal to your Proficiency Bonus per Long Rest.</content>
+  <content contentuid="h73972a929d9e56a9a3ae9468c8a574d0" version="1">Unstoppable Assault</content>
+  <content contentuid="heacfe95c7e935bdf989a9eea6893e72a" version="1">This turn you make additional attacks equal to half your Proficiency Bonus; your weapon attacks deal double weapon dice and a creature you hit makes a Strength saving throw (DC 8 + Proficiency Bonus + Strength modifier) or is shoved 10 feet.</content>
+  <content contentuid="h89287915e10557fc9550da6e2cedcdd0" version="1">Unstoppable Assault</content>
+  <content contentuid="h06459a9fa75957648b3ed44bed747b93" version="1">Spin your weapon in a furious arc.</content>
+  <content contentuid="h556800fb74995e1a82229453d9a793a5" version="1">Unstoppable Assault</content>
+  <content contentuid="he4d1a75ad92e519ba35347d76d2d9b56" version="1">Spin your weapon in a furious arc.</content>
+  <content contentuid="hd220b44b6e7e5c14b1a1d268eade00ce" version="1">Unstoppable Assault</content>
+  <content contentuid="h38610ed7797e5b76a3d80805e3b49ed1" version="1">As an action, once per Long Rest, spin your weapon in a furious arc: until the end of your turn you make additional attacks equal to half your Proficiency Bonus, your weapon attacks deal double weapon dice, and creatures you hit make a Strength saving throw (DC 8 + Proficiency Bonus + Strength modifier) or are shoved 10 feet.</content>
+  <content contentuid="h461877b20c89566782d48b557fba2383" version="1">Unstoppable Assault</content>
+  <content contentuid="h7041a5e288fc57cab7b509ea93b788c7" version="1">Pushed 10 feet.</content>
+  <content contentuid="h41b3d011b5a25248aff45c336fe491ca" version="1">Protection from Evil and Good</content>
+  <content contentuid="hba9fc25391a45c1ba5fb52b70d26e1ad" version="1">Cast Protection from Evil and Good on yourself at will, with no components; Wisdom is your spellcasting modifier.</content>
+  <content contentuid="h5a80a19cf64453319a112c63fd362f21" version="1">Protection from Evil and Good (no concentration)</content>
+  <content contentuid="he065fcaa4ae159f18b9ee7e1c0f3ad5c" version="1">Cast Protection from Evil and Good on yourself at will, with no components; Wisdom is your spellcasting modifier. You needn't concentrate on it, but only one Saintly Revelation can be active.</content>
+  <content contentuid="hca6da9f2279a5507b833758ae4fdf7b7" version="1">Heroism</content>
+  <content contentuid="h5eb6f7aed3dd5782a23cf01c0a5c5abb" version="1">Cast Heroism on yourself at will, with no components; Wisdom is your spellcasting modifier.</content>
+  <content contentuid="h0504541a4c5552c49e6d892fce7c7d16" version="1">Heroism (no concentration)</content>
+  <content contentuid="h395c1d30014f564fb0cbab6763ad90ff" version="1">Cast Heroism on yourself at will, with no components; Wisdom is your spellcasting modifier. You needn't concentrate on it, but only one Saintly Revelation can be active.</content>
+  <content contentuid="h8da66cdeba4553228d2fdf16fc1af786" version="1">Shield of Faith</content>
+  <content contentuid="h2fd0fde3b9845fb29c911b4e0c890199" version="1">Cast Shield of Faith on yourself at will, with no components; Wisdom is your spellcasting modifier.</content>
+  <content contentuid="h5d6c0786f23c5aa2bcaddfaf7528a661" version="1">Shield of Faith (no concentration)</content>
+  <content contentuid="h19c28a16bcee5fe4ad7f2ba36aef34e9" version="1">Cast Shield of Faith on yourself at will, with no components; Wisdom is your spellcasting modifier. You needn't concentrate on it, but only one Saintly Revelation can be active.</content>
+  <content contentuid="hdddc74ff92005af7a9c83085a8994249" version="1">Saintly Revelations</content>
+  <content contentuid="h6b1a72e83bf1500baa80ccb00364b0bb" version="1">You learn two cleric cantrips of your choice. You can cast Protection from Evil and Good, Heroism and Shield of Faith at will, with no components, only on yourself; Wisdom is your spellcasting modifier. (At 17th level you needn't concentrate on them.)</content>
+  <content contentuid="ha9bd2239482354048505859c221b2bc2" version="1">Final Judgement</content>
+  <content contentuid="habaf08eeea5e52309a02a60c6aeff442" version="1">Your sanctified blade sheds bright light in a 30-foot radius and dim light 30 feet further, and your melee weapon attacks deal an extra 2d4 Radiant damage.</content>
+  <content contentuid="h9369a5a4d17e54ff9a8549314bece2f7" version="1">Final Judgement: Light the Blade</content>
+  <content contentuid="h1a1d3908e5df5ca6915fafe0670d7267" version="1">Speak the command word (no action): your sanctified blade blazes and your melee attacks deal an extra 2d4 Radiant damage.</content>
+  <content contentuid="h47523fb23fcc5ba0933806a79a85acd4" version="1">Final Judgement: Douse the Blade</content>
+  <content contentuid="he192a0fb37bf523c9430b2bf8dfb5330" version="1">Speak the command word again: the light and the extra damage end.</content>
+  <content contentuid="h43fd3d55626a59b790f9ccf2ad1acb59" version="1">Final Judgement: Spirit Guardians</content>
+  <content contentuid="h6fd1ee3162b75201845b24e7d5a1ee22" version="1">Cast Spirit Guardians (Radiant) with no components. Once per Long Rest, or again for three Divine points. (Creatures in the area count as within 5 feet of an enemy for your Sneak Attack isn't implemented.)</content>
+  <content contentuid="hb6d771520a0250c48cb960fa69032a55" version="1">Final Judgement: Spirit Guardians (3 Divine points)</content>
+  <content contentuid="h47bff6126a6c5ea0b7ffde764c8e87ee" version="1">Cast Spirit Guardians (Radiant) with no components. Once per Long Rest, or again for three Divine points. (Creatures in the area count as within 5 feet of an enemy for your Sneak Attack isn't implemented.)</content>
+  <content contentuid="hb7668b87615d5eafb7ef8f02edffd8fc" version="1">Final Judgement</content>
+  <content contentuid="hc10b9b2761e2568f82d4c119b045104b" version="1">Cast Spirit Guardians free.</content>
+  <content contentuid="hcd5d64d5d46a5cd79e625658f9511a1a" version="1">Final Judgement</content>
+  <content contentuid="h695bd93c548a54ccad9f88bfae2bfcf4" version="1">Your sanctified blade can blaze with holy light (30-foot bright, 30 feet dim) and deal an extra 2d4 Radiant damage with melee attacks. Once per Long Rest (or for three Divine points) you can cast Spirit Guardians with no components. You no longer concentrate on Saintly Revelations, though only one can be active.</content>
+  <content contentuid="he8b14e43369353f1939c4398c3ac2542" version="1">Fast Movement</content>
+  <content contentuid="hb9bbbc738820549bbd18d8cad7591338" version="1">At 14th level your walking speed increases by another 5 feet.</content>
+  <content contentuid="h7beed1fd2a5d558eb34329aa09998a44" version="1">Entrancing Movement: Irresistible Dance</content>
+  <content contentuid="ha25cf68973b35945bcedff6c9e9dcea3" version="1">Cast Otto's Irresistible Dance without expending a spell slot, requiring only somatic components. You can't do so again until you finish a Long Rest.</content>
+  <content contentuid="h12996bd5ba4459ba86b08ba48b3f4958" version="1">Entrancing Movement: Irresistible Dance</content>
+  <content contentuid="hec2f3cf4ca455c99b9d36b39bfe0b24b" version="1">You can cast Otto's Irresistible Dance once per Long Rest without a spell slot, requiring only somatic components.</content>
+  <content contentuid="h232d040fd8665e4595a3e8ca403eec0b" version="1">Endless Dance</content>
+  <content contentuid="h1d940925ccd6575abca3b5ce31c40754" version="1">You can use your Reaction to make one weapon attack.</content>
+  <content contentuid="h1f6f5c37c1e75a6baedde3d364409481" version="1">Endless Dance: Strike</content>
+  <content contentuid="h15966588075f59009c70dcbcd5e88a88" version="1">Use your Reaction to make one weapon attack.</content>
+  <content contentuid="hf1f5fb0f940c58898865a8a59df8e596" version="1">Inspirational Dance (Endless Dance)</content>
+  <content contentuid="h80fd16a8c27e5563ac861872bac64bef" version="1">Expend a use of Bardic Inspiration as a Bonus Action: another creature gains Temporary Hit Points equal to the Bardic Inspiration die + your Charisma modifier and can use its Reaction to move, Disengage, Dodge or make one weapon attack. You also take the Dodge action as part of this bonus action.</content>
+  <content contentuid="hb38f7fde27c057729b0aa0dcbe484d83" version="1">Endless Dance: Dodge</content>
+  <content contentuid="h2e8e7b30cb9750b38a46237494f66510" version="1">Take the Dodge action as a Bonus Action.</content>
+  <content contentuid="hfa7ac05e2b74549aaf3150a7ad7b6d3b" version="1">Endless Dance</content>
+  <content contentuid="haa60170c7a425e8c9b746c6480737109" version="1">Your Inspirational Dance can also let the creature use its Reaction to make one weapon attack, and you can take the Dodge action as a Bonus Action, or as part of the Bonus Action you spend on a Bardic Inspiration die. (Inspirational Dance (Endless Dance) is the upgraded version of Inspirational Dance.)</content>
+  <content contentuid="he90f6debeaa453058b1dec0b0169827e" version="1">Heart of a Dragon: Breath Weapon</content>
+  <content contentuid="h214531fb524c5e73b4cea1f2511e5ab6" version="1">Exhale your dragon breath without taking dragon shape. Once per Long Rest.</content>
+  <content contentuid="h1e129ddf8b3b5fab9cc14b67eb11a906" version="1">Heart of a Dragon</content>
+  <content contentuid="h449860d2111f5cad915ad60f76fedc39" version="1">In dragon shape: AC 16 + Dexterity (maximum 2), 10 more feet of movement and three attacks.</content>
+  <content contentuid="h15fa1e51b63f51ea8ed1ec2fae982bce" version="1">Heart of a Dragon</content>
+  <content contentuid="hcaa5527f683f52408b81d4123fa2cf66" version="1">You can use your breath weapon without dragon shape (once per Long Rest). In dragon shape your AC is 16 + Dexterity (maximum 2), you move 10 feet further and you make three attacks when you take the Attack action.</content>
+  <content contentuid="h438741c455395038baa2741bf1e98f88" version="1">Sorcerous Kindling</content>
+  <content contentuid="h5bb7cd54831459618713c2b1ee0cbfed" version="1">You regained Sorcery Points from Sorcerous Kindling this turn.</content>
+  <content contentuid="h72e313e15d725f56971f7b42a232b971" version="1">Sorcerous Kindling</content>
+  <content contentuid="he83211ddac72543a8b1a53e04fc0b68f" version="1">Once per turn, when you score a Critical Hit with a weapon attack against a hostile creature or reduce a hostile creature to 0 Hit Points with a weapon attack, you regain 2 Sorcery Points.</content>
+  <content contentuid="h2a0add1c37cc5cd9a02873bad428ca74" version="1">Heroic Legacy</content>
+  <content contentuid="hab5f8331cdea57ff99fa5f947bc7ee2f" version="1">SubclassFeatures.lua gives back the damage above 20.</content>
+  <content contentuid="hb87ddb4b8a085c9d902b21544ea48ab3" version="1">Heroic Legacy</content>
+  <content contentuid="hea872f6675ad5e9a8f7c7839683171e7" version="1">Advantage on attack rolls, ability checks and saving throws until the end of your next turn.</content>
+  <content contentuid="h67b9a8d2216e5186bc5e0d917fa5718c" version="1">Heroic Legacy</content>
+  <content contentuid="h706340a2540053e2b1c0644b4c357c4d" version="1">When you would take more than 20 damage, use your Reaction to reduce the damage to 20. You then have Advantage on attack rolls, ability checks and saving throws until the end of your next turn. (The excess damage is given back right after the hit, so a blow that would drop you to 0 isn't prevented.)</content>
+  <content contentuid="h218294afa2a452b3b1365913b2173a07" version="1">Heroic Legacy</content>
+  <content contentuid="h6654900468a45377b3c6af4430d826d8" version="1">When you would take more than 20 damage, you can use your Reaction to reduce it to 20. You then have Advantage on attack rolls, ability checks and saving throws until the end of your next turn.</content>
+  <content contentuid="h59219c039fb45c06b980baeab5304d8b" version="1">Flash Freeze</content>
+  <content contentuid="hefd43474af6b5a0bbdb46314c504ed4e" version="1">Release a blast of freezing cold at the creature that hit you, dealing Cold damage equal to half your Sorcerer level + your Charisma modifier, and turn the ground there to ice.</content>
+  <content contentuid="h33d49ce0325359e4995541d1272e32c8" version="1">Flash Freeze</content>
+  <content contentuid="h1276652cdc815013b7cbbbfbc16f3466" version="1">When a creature within 5 feet of you hits you with an attack, use your Reaction to release a blast of freezing cold: Cold damage equal to half your Sorcerer level + your Charisma modifier, and the ground there turns to ice.</content>
+  <content contentuid="hf037d86e3743569eb35e1b64334887bc" version="1">Flash Freeze</content>
+  <content contentuid="h297ce534d43d51c0a9090f89dd462c27" version="1">When a creature within 5 feet of you hits you with an attack, you can use your Reaction to release a blast of freezing cold, dealing Cold damage equal to half your Sorcerer level + your Charisma modifier to it, and turning the ground there to ice.</content>
+  <content contentuid="ha505b50952d350a3ac3b06374a21f4ef" version="1">Frozen Soul: Wall of Ice</content>
+  <content contentuid="hd2305214ba2c5a16a00cc5eca794d04f" version="1">Cast Wall of Ice without expending a spell slot. You can't do so again until you finish a Long Rest.</content>
+  <content contentuid="h5ba4bbaa77b859ac8e64874d5e6e2f03" version="1">Frozen Soul</content>
+  <content contentuid="h797333581ded58fc934d45e751a2e7d3" version="1">You are immune to Cold damage and resistant to Fire damage. You can cast Wall of Ice once per Long Rest without expending a spell slot (it doesn't count against your spells known).</content>
 </contentList>

@@ -539,6 +539,50 @@
                     <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
                     <attribute id="UUID" type="guid" value="cbf568d8-d6ea-514c-8ff8-df96cdde0b68"/>
                 </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="hdd81186f304e53c787c2ccbec29dbe09" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="h192458ea0b8e504b9005cc4156d67591" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="MaxValue" type="uint32" value="1"/>
+                    <attribute id="Name" type="FixedString" value="ApoBetterHalf"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="0168b5dc-ba26-57bd-a4da-192491b49e55"/>
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h1ed4e613e3ce55d4b7d7594a1ec63520" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="h43defba3a3d95e8797220d9647566198" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="MaxValue" type="uint32" value="5"/>
+                    <attribute id="Name" type="FixedString" value="ApoMaraudersReprisal"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="627d19bf-5da4-51f6-8b2a-049201576da9"/>
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h556800fb74995e1a82229453d9a793a5" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="he4d1a75ad92e519ba35347d76d2d9b56" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="MaxValue" type="uint32" value="1"/>
+                    <attribute id="Name" type="FixedString" value="ApoUnstoppableAssault"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="f102d680-0894-52fd-89d5-1a7d64c47c38"/>
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="hb7668b87615d5eafb7ef8f02edffd8fc" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hc10b9b2761e2568f82d4c119b045104b" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="MaxValue" type="uint32" value="1"/>
+                    <attribute id="Name" type="FixedString" value="ApoFinalJudgementGuardians"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="a47add42-2a30-5902-9d62-f6ecbe6f34c2"/>
+                </node>
                 <!-- SUBCLASS FEATURES 13-20 END -->
             </children>
         </node>

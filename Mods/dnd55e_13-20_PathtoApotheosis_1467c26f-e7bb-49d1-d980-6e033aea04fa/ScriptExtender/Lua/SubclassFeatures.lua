@@ -5,6 +5,8 @@
 --    and Resilient Hex (APO_RESILIENT_HEX only while you concentrate on Hex).
 --  * College of Spirits 14 Mystical Connection: a second Spirits from Beyond roll, offered as a free switch.
 --  * Highway Rider 17 Desperado: at 0 HP, a free Hair Trigger attack with Advantage, then you fall.
+--  * Heroic Sorcery 18 Heroic Legacy: the damage above 20 is given back right after the hit.
+--  * Fractured 14 Better Half: at 0 HP once per rest, 1 HP + half-max temp HP, and the Rage state swaps.
 --  * Cavalier 18 Vigilant Defender (special Reaction per turn), Drunken Master 17 Intoxicated Frenzy (strikes after
 --    Flurry of Blows), Watchers 15 Vigilant Rebuke (successful Int/Wis/Cha saves).
 local Log = Apotheosis and Apotheosis.Log or { Info = print, Warn = print, Error = print, Debug = print }
@@ -41,8 +43,34 @@ end
 -- ---------------------------------------------------------------- 0 HP: Umbral Form, Persistent Hunt
 local lastDamage = {}
 
+local legacyPending = {}
+
+function SF.HeroicLegacy(c, amount)  -- Heroic Legacy: the hit already landed, give back what was over 20
+    legacyPending[c] = nil
+    local e = Ext.Entity.Get(c)
+    local health = e and e.Health
+    if not health or (amount or 0) <= 20 then return end
+    local back = amount - 20
+    health.Hp = math.min(health.MaxHp, health.Hp + back)
+    e:Replicate("Health")
+    Log.Info("Heroic Legacy: gave back " .. back .. " HP (hit for " .. amount .. ")")
+end
+
+local lastDamageAt = {}
+
 function SF.OnAttacked(defender, amount)
-    lastDamage[short(defender)] = amount
+    defender = short(defender)
+    lastDamage[defender] = amount
+    lastDamageAt[defender] = Ext.Utils.MonotonicTime()
+    if legacyPending[defender] then SF.HeroicLegacy(defender, amount) end
+end
+
+function SF.HeroicLegacyTriggered(c)  -- the OnCastHit interrupt ran after the damage: use the hit AttackedBy just recorded
+    if lastDamage[c] and lastDamageAt[c] and Ext.Utils.MonotonicTime() - lastDamageAt[c] < 1500 then
+        SF.HeroicLegacy(c, lastDamage[c])
+    else
+        legacyPending[c] = true
+    end
 end
 
 local function dropToZero(c)  -- the replacement downed status left c at 1 HP: go down for real
@@ -304,6 +332,27 @@ function SF.OnSave(c)
     end
 end
 
+-- ---------------------------------------------------------------- Fractured 14 Better Half
+function SF.BetterHalf(c)  -- APO_BETTER_HALF_DOWNED: up at 1 HP; half-max temp HP, swap raging, use up the once-per-rest
+    setResource(c, "ApoBetterHalf", 0)
+    local e = Ext.Entity.Get(c)
+    local health = e and e.Health
+    if health then
+        health.TemporaryHp = math.floor(health.MaxHp / 2)
+        e:Replicate("Health")
+    else
+        Log.Warn("Better Half: no Health component, temp HP skipped")
+    end
+    local raging = false
+    local ids = {}
+    for _, id in pairs(e.StatusContainer and e.StatusContainer.Statuses or {}) do ids[#ids + 1] = tostring(id) end
+    for _, id in ipairs(ids) do
+        if id:match("^RAGE") then raging = true; Osi.RemoveStatus(c, id) end
+    end
+    if not raging then Osi.UseSpell(c, "Shout_Rage", c) end
+    Log.Info("Better Half: 1 HP, temp HP " .. tostring(health and health.TemporaryHp) .. ", raging was " .. tostring(raging))
+end
+
 -- ---------------------------------------------------------------- listeners
 local function guard(name, fn)
     return function(...)
@@ -324,6 +373,10 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", 
         SF.PersistentHunt(target)
     elseif status == "APO_DESPERADO_DOWNED" then
         SF.Desperado(target)
+    elseif status == "APO_HEROIC_LEGACY_TRIGGER" then
+        SF.HeroicLegacyTriggered(target)
+    elseif status == "APO_BETTER_HALF_DOWNED" then
+        SF.BetterHalf(target)
     elseif status == "APO_INFECTIOUS_HEX" and causee then
         SF.InfectiousHex(target, short(causee))
     elseif status:match("^SPIRITS_FROM_BEYOND_%d$") then

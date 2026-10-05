@@ -38,3 +38,27 @@ Answered upstream as intended (checked before filing, 2026-10-04 - not bugs):
   removed every Paladin subclass level-1 feature. The progression lint lists it as answered (testing.UPSTREAM_ANSWERED).
 - [#219](https://github.com/Yoonmoonsik/bg3dnd/issues/219) Bard spells from level 7: implemented through the College tables for
   Magical Secrets. Verified in game: a Bard still gains 1/1/2 spells at 7/8/9, as in the 2024 table.
+
+## 2026-10-04 evening: the dnd55e layer lint (83 findings) triaged, checked against upstream main 804a8e31
+
+Filed: [#1569](https://github.com/Yoonmoonsik/bg3dnd/issues/1569) Holy Weapon Burst applies `BLIND` (no such status; `BLINDED`),
+[#1570](https://github.com/Yoonmoonsik/bg3dnd/issues/1570) the five Cloud of Daggers spells' `ConcentrationSpellID` omit the `Target_` prefix
+(`CloudOfDaggers_Move*` vs `Target_CloudOfDaggers_Move*`). Both static findings, not reproduced in game. Discussions asking the
+source of the Apocalypse and Dragon Domains: [#1567](https://github.com/Yoonmoonsik/bg3dnd/discussions/1567),
+[#1568](https://github.com/Yoonmoonsik/bg3dnd/discussions/1568).
+
+Not filed, and why (the lint is noisy on the dnd55e layer):
+- 25 `WeaponDamageTypeOverride(` CALL findings: a real engine boost that no base-game entry happens to use.
+- 9 ICON findings (`Spell_PrimalSavagery`, `Spell_EarthTremor`, `Spell_AlterSelf`): dnd55e's own `GUI/newAtlas.lsx` defines them.
+- `DYING` (Unholy Resuscitation): the base game's own DOWNED status uses it; it is an engine-internal status.
+- `OnRound` (Gestalt Anchor): one value of a list of contexts, not the whole value.
+- `IsReactionAttack(...)` given an argument (7 entries), unknown tooltip fields on interrupts, `EnableContext OnDamage`,
+  `InterruptContextScope Far`, `StatusPropertyFlags None`, `SelectedCharacterEffect`, `TargetEffect`: harmless or unprovable without
+  the engine; `Land_10_NaturesWard` `ELEMENTAL` is a tag argument of `StatusImmunity`.
+- `MOO_KETHERIC_APOSTLEFORM` / `WYR_DRAGONANIMATED` dangling statuses (probably defined by another pak), `Shout_SavantDummy_*` and
+  `Projectile_UnholyResuscitation` having no SpellAnimation (placeholder / explosion-only entries).
+- Danse Macabre: #1539, fixed upstream, ships next release.
+- Stacked choice nodes (Nature / Tempest / Enchantment / Battle Master, 11 levels): still present on main; waits for an in-game
+  level-up check of whether the choices are offered twice.
+MCP follow-ups: the icon check must read the layer's own atlas; known engine statuses (DYING) and boost names need a vocabulary list.
+

@@ -17,6 +17,7 @@ G = Gen("levelmaps", "LEVELMAPS 13-20")
 DB = os.path.expanduser("~/.cache/bg3-data-mcp/cache/index.sqlite")
 
 ADD = {  # series name -> {level: value} (2024 rules)
+    "DragonShapeBreath": {14: "5d6"},                          # Circle of Dragons breath at 14 (Griffon's Saddlebag)
     "SneakAttack": {15: "8d6", 17: "9d6", 19: "10d6"},        # Rogue: (level + 1) / 2 d6
     "MartialArts": {17: "1d12"},                               # Monk die d12 at 17
     "RageDamage": {16: "4"},                                   # Rage damage +4 at 16

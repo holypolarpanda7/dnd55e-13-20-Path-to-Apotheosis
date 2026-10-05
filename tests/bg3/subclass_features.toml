@@ -328,3 +328,200 @@ spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance 
 setup = [{ target = "B", passive = "HighwayRider_17_Desperado" }, { target = "B", hp = 1 }, { target = "A", boost = "RollBonus(Attack,30)" }]
 expect = [{ target = "B", status_applied = ["APO_DESPERADO_DOWNED"] }, { cast_count = { spell = "Target_HairTrigger", by = "B", count = [1, 9] } }, { target = "B", dead = true }]
 notes = "Run on a spawned friendly creature, not the host: the solo host dropping ends in the engine's Game Over box (Main Menu / Load Game, no cancel). A creature (unlike a player character) dies at 0 HP instead of getting DOWNED. Only the free weapon attack option of Hair Trigger is offered."
+
+# ---------------------------------------------------------------- 2026-10-04: features from References/Subclasses (missing_subclass_ref.txt etc.)
+[[case]]
+id = "unbroken-nature-armor"
+title = "Circle of the Unbroken 14 Nature Armor: hit points at the start of each of your turns"
+target = "host"
+combat = "after_setup"
+end_turns = 1
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 20 }]
+setup = [{ target = "host", passive = "Unbroken_14_NatureArmor" }, { target = "host", max_hp = 40 }, { target = "host", hp = 20 },
+         { target = "host", boost = "Ability(Wisdom,10)" }, { target = "A", boost = "ActionResourceBlock(ActionPoint);ActionResourceBlock(Movement)" }]
+expect = [{ target = "host", hp_change = [1, 40] }]
+notes = "ClassLevel(Druid) is 0 on this host, so only the Wisdom modifier shows; the formula is half Druid level + Wisdom modifier."
+
+[[case]]
+id = "fractured-better-half"
+title = "Fractured 14 Better Half: dropping to 0 HP leaves 1 HP, temp HP and a Rage swap (Lua)"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "B"
+real_rolls = true
+safety = false
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }, { as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "B", passive = "Fractured_14_BetterHalf" }, { target = "B", hp = 1 }, { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ target = "B", status_applied = ["APO_BETTER_HALF_DOWNED"] }, { log = "/Better Half: 1 HP, temp HP \\d+/" }, { target = "B", dead = false }]
+notes = "Run on a spawned friendly creature, not the host (a solo host dropping ends in the Game Over box). The creature isn't raging, so Better Half should start a Rage (log: 'raging was false')."
+
+[[case]]
+id = "astral-supreme-switching"
+title = "Astral Domain 17 Supreme Switching: a hostile creature that fails its Charisma save swaps places with you"
+spell = "Target_ApoSupremeSwitching"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", passive = "Astral_17_SupremeSwitching" }, { target = "host", boost = "ActionResource(ChannelDivinity,2,0)" },
+         { target = "A", boost = "AbilityFailedSavingThrow(Charisma)" }]
+expect = [{ target = "A", moved = [3, 8] }, { target = "A", saves = { ability = "Charisma", spell_only = true, n = [1, 9] } }]
+notes = "No CastedSpell event is raised for a swap spell, so the swap itself (A moves ~7 m) and the Charisma save are the checks."
+
+[[case]]
+id = "viking-marauders-reprisal"
+title = "Viking 15 Marauder's Reprisal: becoming Bloodied -> Opportunity Attack with double dice and temp HP"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+real_rolls = true
+safety = false
+reactions = ["Interrupt_ApoMaraudersReprisal"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", passive = "Viking_15_MaraudersReprisal" }, { target = "host", max_hp = 20 }, { target = "host", hp = 12 },
+         { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ cast_count = { spell = "Target_ApoMaraudersReprisal", by = "host", count = [1, 1] } }, { target = "host", status_applied = ["APO_MARAUDER_BLOODIED"] }]
+notes = "The wolf's bite takes the host below half; the reprisal strikes it back (double weapon dice, temp HP half Fighter level = 0 on this host)."
+
+[[case]]
+id = "viking-unstoppable-assault"
+title = "Viking 18 Unstoppable Assault: action, once per Long Rest, status for the turn"
+spell = "Shout_ApoUnstoppableAssault"
+target = "host"
+setup = [{ target = "host", passive = "Viking_18_UnstoppableAssault" }]
+expect = [{ cast = true }, { target = "host", status_applied = ["APO_UNSTOPPABLE_ASSAULT"] }, { resource = "ApoUnstoppableAssault", level = 0, change = -1 }]
+
+[[case]]
+id = "blade-revelation-protection"
+title = "Blade of Radiance 13 Saintly Revelations: Protection from Evil and Good on yourself, no slot"
+spell = "Target_ProtectionFromEvilAndGood_ApoRevelation"
+target = "host"
+setup = [{ target = "host", passive = "BladeOfRadiance_13_SaintlyRevelations" }]
+expect = [{ cast = true }, { target = "host", status_applied = ["PROTECTION_FROM_EVIL_AND_GOOD"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "blade-revelation-heroism"
+title = "Blade of Radiance 13 Saintly Revelations: Heroism on yourself, no slot"
+spell = "Target_Heroism_ApoRevelation"
+target = "host"
+setup = [{ target = "host", passive = "BladeOfRadiance_13_SaintlyRevelations" }]
+expect = [{ cast = true }, { target = "host", status_applied = ["HEROISM"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "blade-revelation-shield-of-faith"
+title = "Blade of Radiance 13 Saintly Revelations: Shield of Faith on yourself, no slot"
+spell = "Target_ShieldOfFaith_ApoRevelation"
+target = "host"
+setup = [{ target = "host", passive = "BladeOfRadiance_13_SaintlyRevelations" }]
+expect = [{ cast = true }, { target = "host", status_applied = ["SHIELD_OF_FAITH"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "blade-final-judgement-light"
+title = "Blade of Radiance 17 Final Judgement: light the blade (no action), then douse it"
+spell = "Shout_ApoFinalJudgementOn"
+target = "host"
+casts = []
+setup = [{ target = "host", passive = "BladeOfRadiance_17_FinalJudgement" }]
+expect = [{ cast = true }, { target = "host", status_applied = ["APO_FINAL_JUDGEMENT"] }, { target = "host", status_present = ["APO_FINAL_JUDGEMENT"] }]
+
+[[case]]
+id = "blade-final-judgement-guardians"
+title = "Blade of Radiance 17 Final Judgement: Spirit Guardians once per Long Rest, no components, no slot"
+spell = "Shout_ApoFinalJudgementGuardians"
+target = "host"
+setup = [{ target = "host", passive = "BladeOfRadiance_17_FinalJudgement" }]
+expect = [{ cast = true }, { target = "host", status_applied = ["SPIRIT_GUARDIANS_RADIANT_AURA"] }, { resource = "ApoFinalJudgementGuardians", level = 0, change = -1 },
+          { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "blade-no-concentration-revelation"
+title = "Blade of Radiance 17: the no-concentration Heroism"
+spell = "Target_Heroism_ApoRevelation_NoConc"
+target = "host"
+setup = [{ target = "host", passive = "BladeOfRadiance_17_FinalJudgement" }]
+expect = [{ cast = true }, { target = "host", status_applied = ["HEROISM"] }]
+
+[[case]]
+id = "heroic-sorcery-kindling"
+title = "Heroic Sorcery 14 Sorcerous Kindling: reducing a hostile to 0 HP with a weapon attack gives 2 Sorcery Points"
+spell = "Projectile_MainHandAttack"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 1, distance = 5 }]
+setup = [{ target = "host", passive = "HeroicSorcery_14_SorcerousKindling" }, { target = "host", boost = "ActionResource(SorceryPoint,5,0)" },
+         { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }, { target = "host", boost = "RollBonus(Attack,30)" }]
+expect = [{ target = "A", dead = true }, { resource = "SorceryPoint", level = 0, amount_change = 2 }]
+
+[[case]]
+id = "heroic-sorcery-legacy"
+title = "Heroic Sorcery 18 Heroic Legacy: a hit over 20 -> reaction, damage held to 20, Advantage (Lua gives back the excess)"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+real_rolls = true
+safety = false
+reactions = ["Interrupt_ApoHeroicLegacy"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", passive = "HeroicSorcery_18_HeroicLegacy" }, { target = "host", max_hp = 100 }, { target = "host", hp = 100 },
+         { target = "A", boost = "RollBonus(Attack,30);DamageBonus(35)" }]
+expect = [{ target = "host", status_applied = ["APO_HEROIC_LEGACY_ADVANTAGE"] }, { log = "/Heroic Legacy: gave back/" }, { target = "host", hp_change = [-21, -19] }]
+
+[[case]]
+id = "frost-flash-freeze"
+title = "Frost Sorcery 14 Flash Freeze: hit in melee -> reaction, Cold damage to the attacker, ice underfoot"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+real_rolls = true
+safety = false
+reactions = ["Interrupt_ApoFlashFreeze"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", passive = "FrostSorcery_14_FlashFreeze" }, { target = "host", max_hp = 100 }, { target = "host", hp = 100 }, { target = "host", boost = "AbilityScore(Charisma,30)" }, { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ cast_count = { spell = "Target_ApoFlashFreeze", by = "host", count = [1, 1] } }, { target = "A", hp_change = [-30, -1], damage_type = "Cold" }]
+notes = "ClassLevel(Sorcerer) is 0 on this host; the Charisma boost supplies the damage."
+
+[[case]]
+id = "frost-frozen-soul-wall"
+title = "Frost Sorcery 18 Frozen Soul: Wall of Ice once per Long Rest without a slot"
+mode = "player"
+spell = "Wall_WallOfIce_ApoFrozenSoul"
+target = "ground"
+distance = 5
+setup = [{ target = "host", passive = "FrostSorcery_18_FrozenSoul" }]
+expect = [{ cast = true }, { resource = "SpellSlot", level = 6, change = 0 }]
+notes = "A Wall spell needs two points, which a scripted cast cannot give. Verified 2026-10-04: the passive unlocks the spell (spellbook after ~1.5 s), cooldown OncePerRest, cost ActionPoint:1 only. Cast it by hand to see the wall."
+
+[[case]]
+id = "choreography-fast-movement-14"
+title = "College of Choreography 14 Fast Movement: +5 feet of movement"
+grant_passive = "Choreography_14_FastMovement"
+expect = [{ resource = "Movement", level = 0, max_change = 1.5 }]
+
+[[case]]
+id = "choreography-irresistible-dance"
+title = "College of Choreography 14 Entrancing Movement: Irresistible Dance without a slot"
+spell = "Target_IrresistibleDance_Choreography"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 5 }]
+setup = [{ target = "host", passive = "Choreography_14_EntrancingMovement" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ cast = true }, { target = "A", status_applied = ["IRRESISTIBLE_DANCE"] }, { resource = "SpellSlot", level = 6, change = 0 }]
+
+[[case]]
+id = "choreography-endless-dance"
+title = "College of Choreography 14 Endless Dance: Inspirational Dance also grants a Reaction attack and Dodge"
+spell = "Target_ApoInspirationalDance_Endless"
+target = "B"
+spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", passive = "Choreography_14_EndlessDance" }, { target = "host", boost = "ActionResource(BardicInspiration,3,0)" }]
+expect = [{ cast = true }, { target = "B", status_applied = ["INSPIRATIONAL_DANCE", "APO_ENDLESS_DANCE_ACTION"] }, { target = "host", status_applied = ["DODGE"] }]
+
+[[case]]
+id = "dragons-heart-breath"
+title = "Circle of Dragons 14 Heart of a Dragon: breath weapon without dragon shape"
+spell = "Zone_BreathWeapon_DragonShape_Heart"
+target = "ground"
+distance = 4
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+setup = [{ target = "host", passive = "Dragons_14_HeartOfADragon" }]
+expect = [{ cast = true }, { target = "A", damage_type = "Fire" }]
+notes = "LevelMapValue(DragonShapeBreath) reads the minimum on a non-Druid host; the 5d6 at 14 is checked on the Circle of Dragons build."

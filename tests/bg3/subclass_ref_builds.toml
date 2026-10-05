@@ -1,0 +1,90 @@
+# 2026-10-04: the 13+ subclass features built from References/Subclasses, checked on real characters of their class
+# (class-scaled values: Druid/Fighter/Sorcerer levels). The mechanism cases on the test host are in subclass_features.toml.
+[suite]
+name = "Subclass reference features on real characters"
+mode = "script"
+
+[[case]]
+id = "real-dragons-heart-shape"
+class = "Druid"
+subclass = "CircleOfDragons"
+level = 14
+title = "Circle of Dragons 14 Heart of a Dragon: dragon shape gains the Heart status (AC 16, +10 ft, three attacks)"
+spell = "Shout_DragonShape"
+target = "host"
+expect = [{ target = "host", status_applied = ["DRAGONSHAPE_10", "APO_DRAGONSHAPE_HEART"] }]
+notes = "Check AC 16 + Dex (max 2) and three attacks by hand afterwards (bg3_se_eval): the AC override competes with the form's own 15."
+
+[[case]]
+id = "real-dragons-heart-breath"
+class = "Druid"
+subclass = "CircleOfDragons"
+level = 14
+title = "Circle of Dragons 14 Heart of a Dragon: breath weapon without dragon shape, 5d6 Fire at level 14"
+spell = "Zone_BreathWeapon_DragonShape_Heart"
+target = "ground"
+distance = 4
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+expect = [{ cast = true }, { target = "A", hp_change = [-30, -2], damage_type = "Fire" }]
+
+[[case]]
+id = "real-unbroken-nature-armor"
+class = "Druid"
+subclass = "CircleOfTheUnbroken"
+level = 14
+title = "Circle of the Unbroken 14 Nature Armor: half Druid level + Wisdom modifier at the start of each turn"
+target = "host"
+combat = "after_setup"
+end_turns = 1
+safety = false
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 20 }]
+setup = [{ target = "host", hp = 30 }, { target = "A", boost = "ActionResourceBlock(ActionPoint);ActionResourceBlock(Movement)" }]
+expect = [{ target = "host", hp_change = [7, 60] }]
+notes = "At least 7 (half of 14) plus the Wisdom modifier."
+
+[[case]]
+id = "real-viking-marauders-reprisal"
+class = "Fighter"
+subclass = "Viking"
+level = 15
+title = "Viking 15 Marauder's Reprisal on a real Fighter: the Opportunity Attack hits and temp HP appear"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+real_rolls = true
+safety = false
+reactions = ["Interrupt_ApoMaraudersReprisal"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", hp = 60 }, { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ cast_count = { spell = "Target_ApoMaraudersReprisal", by = "host", count = [1, 1] } }, { target = "A", hp_change = [-300, -1] }]
+
+[[case]]
+id = "real-viking-unstoppable-assault"
+class = "Fighter"
+subclass = "Viking"
+level = 18
+title = "Viking 18 Unstoppable Assault on a real Fighter: the status, then a weapon attack that hits hard"
+casts = [{ spell = "Shout_ApoUnstoppableAssault" }]
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "host", status_applied = ["APO_UNSTOPPABLE_ASSAULT"] }, { target = "A", hp_change = [-300, -2] }]
+notes = "Doubled weapon dice rests on DamageBonus(MainMeleeWeapon): compare the damage with a plain attack by hand."
+
+[[case]]
+id = "real-frost-flash-freeze"
+class = "Sorcerer"
+subclass = "FrostSorcery"
+level = 14
+title = "Frost Sorcery 14 Flash Freeze on a real Sorcerer: half Sorcerer level + Charisma Cold damage"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+real_rolls = true
+safety = false
+reactions = ["Interrupt_ApoFlashFreeze"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", hp = 80 }, { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ cast_count = { spell = "Target_ApoFlashFreeze", by = "host", count = [1, 1] } }, { target = "A", hp_change = [-40, -7], damage_type = "Cold" }]

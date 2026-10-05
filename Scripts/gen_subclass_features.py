@@ -600,6 +600,248 @@ G.passive("ArachnoidStalker_13_WebWalker", "Web Walker",
           icon=icon_of("Spell_Conjuration_Web"))
 node(ARACHNOID, "ArachnoidStalker", 13, "ArachnoidStalker_13_WebWalker")
 
+# ================================================================ References/Subclasses/missing_subclass_ref.txt (2026-10-04)
+# Druid: Circle of the Unbroken 14 Nature Armor (Griffon's Saddlebag, Book One). Its Shillelagh d12 at 14 is already
+# dnd55e's Shillelagh scaling (d12 from character level 10), so only Nature Armor is new.
+UNBROKEN = "c52f35d8-1fb6-483a-957a-372db8ce01db"
+G.passive("Unbroken_14_NatureArmor", "Nature Armor",
+          "At the start of each of your turns, you gain Hit Points equal to half your Druid level + your Wisdom modifier. (The Shillelagh d12 this level also grants is already in dnd55e's Shillelagh.)",
+          {"StatsFunctorContext": "OnTurn", "StatsFunctors": "RegainHitPoints(ClassLevel(Druid)/2+WisdomModifier)"},
+          icon=icon_of("Spell_Transmutation_Barkskin", "PassiveFeature_Generic_Magical"))
+node(UNBROKEN, "CircleOfTheUnbroken", 14, "Unbroken_14_NatureArmor")
+
+# Barbarian: Path of the Fractured 14 Better Half (Grim Hollow). SubclassFeatures.lua: half-max temp HP and the Rage swap.
+FRACTURED = "c6417c1d-3d25-48f4-86ab-0a1d4d69be6f"
+G.status("APO_BETTER_HALF_DOWNED", "Better Half", None, {"OnApplyFunctors": "RegainHitPoints(1,Guaranteed)"},
+         using="RELENTLESS_ENDURANCE_DOWNED")
+G.passive("Fractured_14_BetterHalf", "Better Half",
+          "Once per Long Rest, when you drop to 0 Hit Points you instead drop to 1 Hit Point and gain Temporary Hit Points equal to half your Hit Point maximum. You also swap whether you are raging.", {
+              "Boosts": "IF(HasActionResource('ApoBetterHalf',1,0,false,false,context.Source)):DownedStatus(APO_BETTER_HALF_DOWNED,7);"
+                        + limited("ApoBetterHalf", "Better Half", "Drop to 1 Hit Point instead of 0.", "Rest")},
+          icon=icon_of("Action_Barbarian_Rage", "PassiveFeature_Generic_Magical"), comment="SubclassFeatures.lua (BetterHalf).")
+node(FRACTURED, "Fractured", 14, "Fractured_14_BetterHalf")
+
+# Cleric: Astral Domain 17 Supreme Switching (Griffon's Saddlebag, Book One): Spatial Exchange against a hostile creature.
+ASTRAL = "09684867-c032-4676-a80b-99a317d39fad"
+G.spell("Target_ApoSupremeSwitching", "Supreme Switching",
+        "Target a hostile creature with Spatial Exchange: it makes a Charisma saving throw against your spell save DC. On a failure it switches places with you; on a success neither of you moves. (Casting a touch spell as part of the swap isn't implemented.)", {
+            "SpellRoll": "not SavingThrow(Ability.Charisma,SourceSpellDC())", "SpellSuccess": "SwapPlaces()", "SpellProperties": "",
+            "TargetConditions": "Enemy() and Character() and not Dead()", "TooltipAttackSave": "Charisma",
+            "UseCosts": "BonusActionPoint:1;ChannelDivinity:1"}, using="Target_SpatialExchange", icon="Action_BenignTransposition_Swap")
+G.passive("Astral_17_SupremeSwitching", "Supreme Switching",
+          "Your Spatial Exchange can target a hostile creature: it makes a Charisma saving throw against your spell save DC and, on a failure, switches places with you.",
+          {"Boosts": "UnlockSpell(Target_ApoSupremeSwitching)"}, icon="Action_BenignTransposition_Swap")
+node(ASTRAL, "AstralDomain", 17, "Astral_17_SupremeSwitching")
+
+# Fighter: Viking 15 Marauder's Reprisal / 18 Unstoppable Assault (Northlands Worldbook)
+VIKING = "241461f3-7cb5-4fc3-abdf-d56b869e3757"
+MARAUDER = "ApoMaraudersReprisal"
+G.status("APO_MARAUDER_BLOODIED", "Marauder's Reprisal", "You used Marauder's Reprisal for becoming Bloodied.", {
+    "RemoveEvents": "OnHeal", "RemoveConditions": "not HasHPPercentageLessThan(50,context.Source)", "StackId": "APO_MARAUDER_BLOODIED",
+    "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"})
+G.status("APO_MARAUDER_THP", "Marauder's Reprisal", "Temporary Hit Points equal to half your Fighter level.", {
+    "Boosts": "TemporaryHP(ClassLevel(Fighter)/2)", "RemoveConditions": "not HasTemporaryHP()", "RemoveEvents": "OnDamage",
+    "StackId": "APO_MARAUDER_THP", "StatusPropertyFlags": "DisableOverhead;DisableCombatlog"})
+G.spell("Target_ApoMaraudersReprisal", "Marauder's Reprisal",
+        "Make an Opportunity Attack against the creature that hurt you. On a hit, it deals double weapon dice damage and you gain Temporary Hit Points equal to half your Fighter level.", {
+            "SpellType": "Target", "TargetRadius": "MeleeMainWeaponRange", "TargetConditions": "Character() and not Self() and not Dead()",
+            "SpellRoll": "Attack(AttackType.MeleeWeaponAttack)",
+            "SpellSuccess": "DealDamage(MainMeleeWeapon,MainMeleeWeaponDamageType);DealDamage(MainMeleeWeapon,MainMeleeWeaponDamageType);ApplyStatus(SELF,APO_MARAUDER_THP,100,-1);ExecuteWeaponFunctors(MainHand)",
+            "TooltipDamageList": "DealDamage(MainMeleeWeapon,MainMeleeWeaponDamageType)", "UseCosts": f"{MARAUDER}:1",
+            "SpellFlags": "IsHarmful;IsMelee", "VerbalIntent": "Damage"}, using="Target_MainHandAttack", icon="Action_Barbarian_RecklessAttack")
+G.interrupt("Interrupt_ApoMaraudersReprisal", "Marauder's Reprisal",
+            "When you first become Bloodied or a creature scores a Critical Hit against you, make an Opportunity Attack against it with double weapon dice and gain Temporary Hit Points. (Strikes the creature that hit you, not the nearest enemy.)", {
+                "InterruptContext": "OnCastHit", "InterruptContextScope": "Self", "Container": "YesNoDecision",
+                "Conditions": f"IsAbleToReact(context.Observer) and Self(context.Target,context.Observer) and Enemy(context.Source,context.Observer) and IsHit() and not AnyEntityIsItem() and HasActionResource('{MARAUDER}',1,0,false,false,context.Observer) and (IsCritical() or (HasHPPercentageLessThan(50,context.Observer) and not HasStatus('APO_MARAUDER_BLOODIED',context.Observer)))",
+                "Properties": "UseSpell(SWAP,Target_ApoMaraudersReprisal,true,true,true);IF(not IsCritical()):ApplyStatus(OBSERVER_OBSERVER,APO_MARAUDER_BLOODIED,100,-1)",
+                "Cost": "ReactionActionPoint:1", "Stack": "ApoMaraudersReprisal", "InterruptDefaultValue": "Ask;Enabled"},
+            icon="Action_Barbarian_RecklessAttack")
+G.passive("Viking_15_MaraudersReprisal", "Marauder's Reprisal",
+          "When you first become Bloodied or a creature scores a Critical Hit against you, you can use your Reaction to make an Opportunity Attack against it. On a hit it deals double weapon dice damage and you gain Temporary Hit Points equal to half your Fighter level. Uses equal to your Proficiency Bonus per Long Rest.", {
+              "Boosts": "UnlockInterrupt(Interrupt_ApoMaraudersReprisal);" + limited(MARAUDER, "Marauder's Reprisal", "Reprisal Opportunity Attacks.", "Rest", 5)
+                        + f";IF(CharacterLevelGreaterThan(16)):ActionResource({MARAUDER},1,0)"},
+          icon="Action_Barbarian_RecklessAttack")
+node(VIKING, "Viking", 15, "Viking_15_MaraudersReprisal")
+
+UNSTOPPABLE_HIT = "IF(IsMeleeWeaponAttack()):DamageBonus(MainMeleeWeapon)"
+G.status("APO_UNSTOPPABLE_ASSAULT", "Unstoppable Assault",
+         "This turn you make additional attacks equal to half your Proficiency Bonus; your weapon attacks deal double weapon dice and a creature you hit makes a Strength saving throw (DC 8 + Proficiency Bonus + Strength modifier) or is shoved 10 feet.", {
+             "Boosts": UNSTOPPABLE_HIT, "Passives": "ExtraAttack_2", "StackId": "APO_UNSTOPPABLE_ASSAULT", "RemoveEvents": "OnTurn"},
+         icon="Action_Barbarian_RecklessAttack")
+G.passive("Viking_18_UnstoppableAssault", "Unstoppable Assault",
+          "As an action, once per Long Rest, spin your weapon in a furious arc: until the end of your turn you make additional attacks equal to half your Proficiency Bonus, your weapon attacks deal double weapon dice, and creatures you hit make a Strength saving throw (DC 8 + Proficiency Bonus + Strength modifier) or are shoved 10 feet.", {
+              "Boosts": once("Shout_ApoUnstoppableAssault", "APO_UNSTOPPABLE_ASSAULT", "Unstoppable Assault", "Spin your weapon in a furious arc.", 1,
+                             "ActionPoint", "ApoUnstoppableAssault", icon="Action_Barbarian_RecklessAttack"),
+              "StatsFunctorContext": "OnDamage",
+              "Conditions": "HasStatus('APO_UNSTOPPABLE_ASSAULT',context.Source) and IsMeleeWeaponAttack() and IsHit()",
+              "StatsFunctors": "ApplyStatus(APO_UNSTOPPABLE_SHOVE,100,0)"},
+          icon="Action_Barbarian_RecklessAttack")
+G.status("APO_UNSTOPPABLE_SHOVE", "Unstoppable Assault", "Pushed 10 feet.", {
+    "OnApplyRoll": "not SavingThrow(Ability.Strength,SourceSpellDC(8,context.Source,Ability.Strength))",
+    "OnApplySuccess": "Force(-3,OriginToEntity,Neutral,false,true)", "StackId": "APO_UNSTOPPABLE_SHOVE",
+    "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"})
+node(VIKING, "Viking", 18, "Viking_18_UnstoppableAssault")
+
+# Rogue: Blade of Radiance 13 Saintly Revelations / 17 Final Judgement (Steinhardt's Guide to the Eldritch Hunt)
+BLADE = "e77b882d-60d9-4f2e-81bb-03f795327312"
+CLERIC_CANTRIPS = "2f43a103-5bf1-4534-b14f-663decc0c525"
+FINAL = "BladeOfRadiance_17_FinalJudgement"
+REVELATIONS = (("Target_ProtectionFromEvilAndGood", "Protection from Evil and Good", "Spell_Abjuration_ProtectionFromEvilAndGood"),
+               ("Target_Heroism", "Heroism", "Spell_Enchantment_Heroism"), ("Target_ShieldOfFaith", "Shield of Faith", "Spell_Abjuration_ShieldOfFaith"))
+for base, title, icon in REVELATIONS:
+    for suffix, flags in (("", "IsConcentration;IsSpell"), ("_NoConc", "IsSpell")):
+        G.spell(f"{base}_ApoRevelation{suffix}", title + (" (no concentration)" if suffix else ""),
+                f"Cast {title} on yourself at will, with no components; Wisdom is your spellcasting modifier."
+                + (" You needn't concentrate on it, but only one Saintly Revelation can be active." if suffix else ""),
+                {"UseCosts": "BonusActionPoint:1" if base == "Target_ShieldOfFaith" else "ActionPoint:1", "TargetRadius": "1.5" if base != "Target_ShieldOfFaith" else "18",
+                 "TargetConditions": "Self()", "SpellFlags": flags, "MemoryCost": "0", "Level": "0"}, using=base, icon=icon)
+G.passive("BladeOfRadiance_13_SaintlyRevelations", "Saintly Revelations",
+          "You learn two cleric cantrips of your choice. You can cast Protection from Evil and Good, Heroism and Shield of Faith at will, with no components, only on yourself; Wisdom is your spellcasting modifier. (At 17th level you needn't concentrate on them.)", {
+              "Boosts": "".join(f"IF(not HasPassive('{FINAL}',context.Source)):UnlockSpell({b}_ApoRevelation);" for b, _, _ in REVELATIONS)},
+          icon="Spell_Abjuration_ShieldOfFaith")
+node(BLADE, "BladeOfRadiance", 13, "BladeOfRadiance_13_SaintlyRevelations",
+     selectors=f"SelectSpells({CLERIC_CANTRIPS},2,0,SaintlyRevelationsCantrips)")
+
+G.status("APO_FINAL_JUDGEMENT", "Final Judgement",
+         "Your sanctified blade sheds bright light in a 30-foot radius and dim light 30 feet further, and your melee weapon attacks deal an extra 2d4 Radiant damage.", {
+             "Boosts": "GameplayLight(18,false,0.1);IF(IsMeleeWeaponAttack()):DamageBonus(2d4,Radiant)", "StackId": "APO_FINAL_JUDGEMENT",
+             "StatusGroups": "SG_Light"}, icon="Action_Paladin_SacredWeapon")
+G.spell("Shout_ApoFinalJudgementOn", "Final Judgement: Light the Blade",
+        "Speak the command word (no action): your sanctified blade blazes and your melee attacks deal an extra 2d4 Radiant damage.", {
+            "SpellType": "Shout", "TargetConditions": "Self()", "SpellProperties": "ApplyStatus(APO_FINAL_JUDGEMENT,100,-1)",
+            "TooltipStatusApply": "ApplyStatus(APO_FINAL_JUDGEMENT,100,-1)", "UseCosts": "",
+            "RequirementConditions": "not HasStatus('APO_FINAL_JUDGEMENT',context.Source)", "VerbalIntent": "Buff"}, icon="Action_Paladin_SacredWeapon")
+G.spell("Shout_ApoFinalJudgementOff", "Final Judgement: Douse the Blade", "Speak the command word again: the light and the extra damage end.", {
+    "SpellType": "Shout", "TargetConditions": "Self()", "SpellProperties": "RemoveStatus(APO_FINAL_JUDGEMENT)", "UseCosts": "",
+    "RequirementConditions": "HasStatus('APO_FINAL_JUDGEMENT',context.Source)", "VerbalIntent": "Buff"}, icon="Action_Paladin_SacredWeapon")
+GUARD_TEXT = ("Cast Spirit Guardians (Radiant) with no components. Once per Long Rest, or again for three Divine points. "
+              "(Creatures in the area count as within 5 feet of an enemy for your Sneak Attack isn't implemented.)")
+G.spell("Shout_ApoFinalJudgementGuardians", "Final Judgement: Spirit Guardians", GUARD_TEXT, {
+    "UseCosts": "ActionPoint:1;ApoFinalJudgementGuardians:1", "SpellContainerID": None, "SpellFlags": "IsConcentration;IsSpell;IsHarmful"},
+    using="Shout_SpiritGuardians_Radiant", icon="Spell_Conjuration_SpiritGuardians")
+G.spell("Shout_ApoFinalJudgementGuardians_DivinePoints", "Final Judgement: Spirit Guardians (3 Divine points)", GUARD_TEXT, {
+    "UseCosts": "ActionPoint:1;DivinePoint:3", "SpellContainerID": None, "SpellFlags": "IsConcentration;IsSpell;IsHarmful",
+    "RequirementConditions": "not HasActionResource('ApoFinalJudgementGuardians',1,0,false,false,context.Source)"},
+    using="Shout_SpiritGuardians_Radiant", icon="Spell_Conjuration_SpiritGuardians")
+G.passive(FINAL, "Final Judgement",
+          "Your sanctified blade can blaze with holy light (30-foot bright, 30 feet dim) and deal an extra 2d4 Radiant damage with melee attacks. Once per Long Rest (or for three Divine points) you can cast Spirit Guardians with no components. You no longer concentrate on Saintly Revelations, though only one can be active.", {
+              "Boosts": "UnlockSpell(Shout_ApoFinalJudgementOn);UnlockSpell(Shout_ApoFinalJudgementOff);UnlockSpell(Shout_ApoFinalJudgementGuardians);UnlockSpell(Shout_ApoFinalJudgementGuardians_DivinePoints);"
+                        + "".join(f"UnlockSpell({b}_ApoRevelation_NoConc);" for b, _, _ in REVELATIONS)
+                        + limited("ApoFinalJudgementGuardians", "Final Judgement", "Cast Spirit Guardians free.", "Rest")},
+          icon="Action_Paladin_SacredWeapon")
+node(BLADE, "BladeOfRadiance", 17, FINAL)
+
+# Bard: College of Choreography 14 (The Griffon's Saddlebag: Book One, "College of Dance": Fast Movement +5 ft, Entrancing
+# Movement adds Irresistible Dance, Endless Dance). References/Subclasses text: the page the user photographed 2026-10-04.
+CHOREO = "6ecf4e50-6458-4f11-b525-644171eeb5b7"
+G.passive("Choreography_14_FastMovement", "Fast Movement",
+          "At 14th level your walking speed increases by another 5 feet.", {"Boosts": "ActionResource(Movement,1.5,0)"},
+          icon="Spell_Transmutation_Longstrider")
+G.spell("Target_IrresistibleDance_Choreography", "Entrancing Movement: Irresistible Dance",
+        "Cast Otto's Irresistible Dance without expending a spell slot, requiring only somatic components. You can't do so again until you finish a Long Rest.", {
+            "Cooldown": "OncePerRest", "UseCosts": "ActionPoint:1", "SpellFlags": "HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;CannotTargetItems;CannotTargetTerrain;IsHarmful",
+            "MemoryCost": "0"}, using="Target_IrresistibleDance", icon="Spell_OttosIrresistibleDance")
+G.passive("Choreography_14_EntrancingMovement", "Entrancing Movement: Irresistible Dance",
+          "You can cast Otto's Irresistible Dance once per Long Rest without a spell slot, requiring only somatic components.",
+          {"Boosts": "UnlockSpell(Target_IrresistibleDance_Choreography)"}, icon="Spell_OttosIrresistibleDance")
+G.status("APO_ENDLESS_DANCE_ACTION", "Endless Dance", "You can use your Reaction to make one weapon attack.", {
+    "TickType": "EndTurn", "Boosts": "UnlockSpell(Target_ApoEndlessDanceStrike)",
+    "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"})
+G.spell("Target_ApoEndlessDanceStrike", "Endless Dance: Strike", "Use your Reaction to make one weapon attack.",
+        {"UseCosts": "ReactionActionPoint:1", "SpellFlags": "IsHarmful;IsMelee;Temporary"}, using="Target_MainHandAttack")
+G.spell("Target_ApoInspirationalDance_Endless", "Inspirational Dance (Endless Dance)",
+        "Expend a use of Bardic Inspiration as a Bonus Action: another creature gains Temporary Hit Points equal to the Bardic Inspiration die + your Charisma modifier and can use its Reaction to move, Disengage, Dodge or make one weapon attack. You also take the Dodge action as part of this bonus action.", {
+            "SpellProperties": "ApplyStatus(INSPIRATIONAL_DANCE,100,-1);ApplyStatus(APO_ENDLESS_DANCE_ACTION,100,1);ApplyStatus(SELF,DODGE,100,1)",
+            "TooltipStatusApply": "ApplyStatus(INSPIRATIONAL_DANCE,100,-1);ApplyStatus(DODGE,100,1)"},
+        using="Target_InspirationalDance", icon="Choreography_3_InspirationalDance")
+G.spell("Shout_ApoEndlessDodge", "Endless Dance: Dodge", "Take the Dodge action as a Bonus Action.",
+        {"UseCosts": "BonusActionPoint:1"}, using="Shout_Dodge", icon="Action_Dodge")
+G.passive("Choreography_14_EndlessDance", "Endless Dance",
+          "Your Inspirational Dance can also let the creature use its Reaction to make one weapon attack, and you can take the Dodge action as a Bonus Action, or as part of the Bonus Action you spend on a Bardic Inspiration die. (Inspirational Dance (Endless Dance) is the upgraded version of Inspirational Dance.)",
+          {"Boosts": "UnlockSpell(Target_ApoInspirationalDance_Endless);UnlockSpell(Shout_ApoEndlessDodge)"}, icon="Choreography_3_InspirationalDance")
+node(CHOREO, "ChoreographyCollege", 14, "Choreography_14_FastMovement", "Choreography_14_EntrancingMovement", "Choreography_14_EndlessDance")
+
+# Druid: Circle of Dragons 14 Heart of a Dragon (The Griffon's Saddlebag: Book Two; References/Subclasses/griffons_saddlebag_circle_of_dragons.txt).
+# dnd55e's Dragon Shape is a polymorph (DRAGONSHAPE_10 at 10+); the 5d6 breath is the DragonShapeBreath level map (gen_levelmaps.py).
+# Not built: the 30-foot breath cone, the Fly speed of exactly 40 (+10 feet of Movement stands in) and the Large form.
+DRAGONS = "7a3b896a-3acd-45a3-8c79-24f5aaa4034f"
+G.spell("Zone_BreathWeapon_DragonShape_Heart", "Heart of a Dragon: Breath Weapon",
+        "Exhale your dragon breath without taking dragon shape. Once per Long Rest.", {
+            "Cooldown": "OncePerRest"}, using="Zone_BreathWeapon_DragonShape", icon="Action_Dragonborn_BreathWeapon_FireCone")
+G.status("APO_DRAGONSHAPE_HEART", "Heart of a Dragon",
+         "In dragon shape: AC 16 + Dexterity (maximum 2), 10 more feet of movement and three attacks.", {
+             "Boosts": "ACOverrideFormula(16,true,Wisdom);ActionResource(Movement,3,0)", "Passives": "ExtraAttack_2",
+             "StackId": "APO_DRAGONSHAPE_HEART", "RemoveConditions": "not HasStatus('DRAGONSHAPE_10',context.Source)",
+             "RemoveEvents": "OnStatusRemoved;OnTurn", "StatusPropertyFlags": "DisableOverhead;DisableCombatlog"},
+         icon="Action_EndGameAlly_ZhentarimUnits")
+G.passive("Dragons_14_HeartOfADragon", "Heart of a Dragon",
+          "You can use your breath weapon without dragon shape (once per Long Rest). In dragon shape your AC is 16 + Dexterity (maximum 2), you move 10 feet further and you make three attacks when you take the Attack action.", {
+              "Boosts": "UnlockSpell(Zone_BreathWeapon_DragonShape_Heart)", "StatsFunctorContext": "OnStatusApplied",
+              "Conditions": "StatusId('DRAGONSHAPE_10')", "StatsFunctors": "ApplyStatus(SELF,APO_DRAGONSHAPE_HEART,100,-1)"},
+          icon="Action_EndGameAlly_ZhentarimUnits")
+node(DRAGONS, "CircleOfDragons", 14, "Dragons_14_HeartOfADragon")
+
+# Sorcerer: Heroic Sorcery 14 Sorcerous Kindling / 18 Heroic Legacy (Mage Hand Press, "Reincarnated Hero"; page photographed by the
+# user 2026-10-04). dnd55e kept the spell list but reworked level 6 (Mystical Maneuvers -> Extra Attack / War Magic).
+HEROIC = "1d22072e-d314-4520-9446-d656210ecbdf"
+G.status("APO_KINDLING_USED", "Sorcerous Kindling", "You regained Sorcery Points from Sorcerous Kindling this turn.", {
+    "StackId": "APO_KINDLING_USED", "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"})
+G.passive("HeroicSorcery_14_SorcerousKindling", "Sorcerous Kindling",
+          "Once per turn, when you score a Critical Hit with a weapon attack against a hostile creature or reduce a hostile creature to 0 Hit Points with a weapon attack, you regain 2 Sorcery Points.", {
+              "StatsFunctorContext": "OnDamage",
+              "Conditions": "IsWeaponAttack() and Enemy() and Character() and (HasDamageEffectFlag(DamageFlags.Critical) or HasHPLessThan(1)) and not HasStatus('APO_KINDLING_USED',context.Source)",
+              "StatsFunctors": "RestoreResource(SELF,SorceryPoint,2,0);ApplyStatus(SELF,APO_KINDLING_USED,100,1)"},
+          icon="PassiveFeature_ExtraAttack")
+node(HEROIC, "HeroicSorcery", 14, "HeroicSorcery_14_SorcerousKindling")
+
+G.status("APO_HEROIC_LEGACY_TRIGGER", "Heroic Legacy", "SubclassFeatures.lua gives back the damage above 20.", {
+    "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"})
+G.status("APO_HEROIC_LEGACY_ADVANTAGE", "Heroic Legacy", "Advantage on attack rolls, ability checks and saving throws until the end of your next turn.", {
+    "Boosts": "Advantage(AttackRoll);Advantage(AllAbilities);Advantage(AllSavingThrows)", "StackId": "APO_HEROIC_LEGACY_ADVANTAGE"},
+    icon="PassiveFeature_ExtraAttack")
+G.interrupt("Interrupt_ApoHeroicLegacy", "Heroic Legacy",
+            "When you would take more than 20 damage, use your Reaction to reduce the damage to 20. You then have Advantage on attack rolls, ability checks and saving throws until the end of your next turn. (The excess damage is given back right after the hit, so a blow that would drop you to 0 isn't prevented.)", {
+                "InterruptContext": "OnCastHit", "InterruptContextScope": "Self", "Container": "YesNoDecision",
+                "Conditions": "IsAbleToReact(context.Observer) and Self(context.Target,context.Observer) and Enemy(context.Source,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and not AnyEntityIsItem() and TotalDamageDoneGreaterThan(20)",
+                "Properties": "ApplyStatus(OBSERVER_OBSERVER,APO_HEROIC_LEGACY_TRIGGER,100,0);ApplyStatus(OBSERVER_OBSERVER,APO_HEROIC_LEGACY_ADVANTAGE,100,2)",
+                "Cost": "ReactionActionPoint:1", "InterruptDefaultValue": "Ask;Enabled"}, icon="PassiveFeature_ExtraAttack")
+G.passive("HeroicSorcery_18_HeroicLegacy", "Heroic Legacy",
+          "When you would take more than 20 damage, you can use your Reaction to reduce it to 20. You then have Advantage on attack rolls, ability checks and saving throws until the end of your next turn.",
+          {"Boosts": "UnlockInterrupt(Interrupt_ApoHeroicLegacy)"}, icon="PassiveFeature_ExtraAttack", comment="SubclassFeatures.lua (HeroicLegacy).")
+node(HEROIC, "HeroicSorcery", 18, "HeroicSorcery_18_HeroicLegacy")
+
+# Sorcerer: Frost Sorcery 14 Flash Freeze / 18 Frozen Soul ("Frost Magic", The Griffon's Saddlebag: Book One, p.167; page photographed by the
+# user 2026-10-04). Not built: Flash Freeze's no-Opportunity-Attacks-on-ice movement, the five contiguous ice spaces (one ice patch
+# under the attacker instead) and Wall of Ice panels that needn't touch.
+FROST = "1ee59b30-e015-45f2-8a93-9ca4c4ff2bc4"
+G.spell("Target_ApoFlashFreeze", "Flash Freeze",
+        "Release a blast of freezing cold at the creature that hit you, dealing Cold damage equal to half your Sorcerer level + your Charisma modifier, and turn the ground there to ice.", {
+            "SpellType": "Target", "TargetRadius": "3", "TargetConditions": "Character() and not Self() and not Dead()",
+            "SpellProperties": "DealDamage(ClassLevel(Sorcerer)/2+CharismaModifier,Cold,Magical);GROUND:CreateSurface(2,,WaterFrozen)",
+            "TooltipDamageList": "DealDamage(ClassLevel(Sorcerer)/2+CharismaModifier,Cold)", "UseCosts": "", "SpellFlags": "IsHarmful",
+            "VerbalIntent": "Damage"}, icon="Surface_Ice")
+G.interrupt("Interrupt_ApoFlashFreeze", "Flash Freeze",
+            "When a creature within 5 feet of you hits you with an attack, use your Reaction to release a blast of freezing cold: Cold damage equal to half your Sorcerer level + your Charisma modifier, and the ground there turns to ice.", {
+                "InterruptContext": "OnCastHit", "InterruptContextScope": "Self", "Container": "YesNoDecision",
+                "Conditions": "IsAbleToReact(context.Observer) and Self(context.Target,context.Observer) and Enemy(context.Source,context.Observer) and IsHit() and IsMeleeAttack() and not AnyEntityIsItem()",
+                "Properties": "UseSpell(SWAP,Target_ApoFlashFreeze,true,true,true)", "Cost": "ReactionActionPoint:1",
+                "InterruptDefaultValue": "Ask;Enabled"}, icon="Surface_Ice")
+G.passive("FrostSorcery_14_FlashFreeze", "Flash Freeze",
+          "When a creature within 5 feet of you hits you with an attack, you can use your Reaction to release a blast of freezing cold, dealing Cold damage equal to half your Sorcerer level + your Charisma modifier to it, and turning the ground there to ice.",
+          {"Boosts": "UnlockInterrupt(Interrupt_ApoFlashFreeze)"}, icon="Surface_Ice")
+node(FROST, "FrostSorcery", 14, "FrostSorcery_14_FlashFreeze")
+
+G.spell("Wall_WallOfIce_ApoFrozenSoul", "Frozen Soul: Wall of Ice",
+        "Cast Wall of Ice without expending a spell slot. You can't do so again until you finish a Long Rest.", {
+            "Cooldown": "OncePerRest", "UseCosts": "ActionPoint:1", "MemoryCost": "0"}, using="Wall_WallOfIce", icon="Spell_Evocation_WallOfIce")
+G.passive("FrostSorcery_18_FrozenSoul", "Frozen Soul",
+          "You are immune to Cold damage and resistant to Fire damage. You can cast Wall of Ice once per Long Rest without expending a spell slot (it doesn't count against your spells known).",
+          {"Boosts": "Resistance(Cold,Immune);Resistance(Fire,Resistant);UnlockSpell(Wall_WallOfIce_ApoFrozenSoul)"}, icon="GenericIcon_DamageType_Cold")
+node(FROST, "FrostSorcery", 18, "FrostSorcery_18_FrozenSoul")
+
+# Rogue: Arachnoid Stalker 17 Paralytic Venom isn't added: dnd55e's level 9 Paralytic Venom already paralyses on a
+# Constitution save (Hold Monster), so a second copy at 17 would duplicate it.
+
 # ---------------------------------------------------------------- Fighter: Eldritch Knight, Rogue: Arcane Trickster (third casters)
 # Their slots and prepared spells stopped at 12: level 13 +2 level 3 slots, 16 +1 level 3, 19 +1 level 4; a prepared
 # spell more at 13, 14, 16, 19, 20 (2024 table; dnd55e's selector pattern, Wizard level 3 / 4 lists).

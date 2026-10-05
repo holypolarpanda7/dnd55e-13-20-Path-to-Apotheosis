@@ -462,3 +462,77 @@ title = "MonsterHunter - OccultistGuild, levels 2-20"
 subclass = "OccultistGuild"
 from = "monsterhunter-base"
 levels = [2, 20]
+
+# 2026-10-04: builds for the subclasses whose 13+ features came from References/Subclasses (levels 2-20; check the level 13-20 nodes arrive)
+
+[[build]]
+id = "barbarian-fractured"
+class = "Barbarian"
+title = "Barbarian - Fractured, levels 2-20"
+subclass = "Fractured"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
+id = "bard-choreographycollege"
+class = "Bard"
+title = "Bard - ChoreographyCollege, levels 2-20"
+subclass = "ChoreographyCollege"
+from = "bard-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-astraldomain"
+class = "Cleric"
+title = "Cleric - AstralDomain, levels 2-20"
+subclass = "AstralDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "druid-circleoftheunbroken"
+class = "Druid"
+title = "Druid - CircleOfTheUnbroken, levels 2-20"
+subclass = "CircleOfTheUnbroken"
+from = "druid-base"
+levels = [2, 20]
+
+[[build]]
+id = "druid-circleofdragons"
+class = "Druid"
+title = "Druid - CircleOfDragons, levels 2-20"
+subclass = "CircleOfDragons"
+from = "druid-base"
+levels = [2, 20]
+
+[[build]]
+id = "fighter-viking"
+class = "Fighter"
+title = "Fighter - Viking, levels 2-20"
+subclass = "Viking"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-bladeofradiance"
+class = "Rogue"
+title = "Rogue - BladeOfRadiance, levels 2-20"
+subclass = "BladeOfRadiance"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-heroicsorcery"
+class = "Sorcerer"
+title = "Sorcerer - HeroicSorcery, levels 2-20"
+subclass = "HeroicSorcery"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-frostsorcery"
+class = "Sorcerer"
+title = "Sorcerer - FrostSorcery, levels 2-20"
+subclass = "FrostSorcery"
+from = "sorcerer-base"
+levels = [2, 20]

@@ -16,16 +16,16 @@ source identified but its rules text isn't reachable (paid book, site blocks aut
 | Cleric | Mind Domain | Exploring Eberron, Keith Baker (dnd5e.wikidot "Mind Domain (HB)") - certain | 17 Bend Reality | BUILT (interrupt is a manual check) |
 | Rogue | Highway Rider | Grim Hollow Player's Guide (Nieb's Critical Collection mirror) - certain | 13 True Grit, 17 Desperado | 13 BUILT (Constitution proficiency only); 17 BUILT (free weapon attack option only) |
 | Rogue | Arachnoid Stalker | Valda's Spire of Secrets, Mage Hand Press, 2024 version (magehandpress.com/2024/10/arachnoid-stalker) - certain | 13 Web Walker, 17 Paralytic Venom | 13 BUILT; 17 TEXT (dnd55e already has a Cunning Strike Paralytic Venom at 9) |
-| Druid | Circle of Dragons | The Griffon's Saddlebag: Book Two - certain | 14 Heart of a Dragon (breath weapon outside dragon form, better AC and Fly speed, three attacks) | NO TEXT (summary only, no numbers) |
+| Druid | Circle of Dragons | The Griffon's Saddlebag: Book Two - certain | 14 Heart of a Dragon (breath weapon outside dragon form, AC 16 + Dex max 2, Fly 40, three attacks, Large form) | BUILT, untested (References/Subclasses/griffons_saddlebag_circle_of_dragons.txt); no 30-foot cone, Large form or exact 40-foot Fly |
 | Druid | Circle of the Unbroken | The Griffon's Saddlebag: Book One (Bell of Lost Souls) - certain | 14: Shillelagh Mastery d12 | NO TEXT |
-| Bard | College of Choreography | The Griffon's Saddlebag: Book One - certain | 14: ? | NO TEXT |
+| Bard | College of Choreography | The Griffon's Saddlebag: Book One (Hit Point Press; D&D Beyond source gsb1) - certain; the PHB 2024 College of Dance pasted 2026-10-04 is a different subclass | 14 Fast Movement +5 ft, Entrancing Movement (Irresistible Dance), Endless Dance (page photographed by the user 2026-10-04, shown in the Griffon's Saddlebag as "College of Dance") | BUILT, untested |
 | Cleric | Astral Domain | The Griffon's Saddlebag: Book One - certain | 17 Supreme Switching (upgrades Spatial Exchange / Misty Step) | NO TEXT |
-| Cleric | Dragon Domain | Valda's Spire of Secrets (D&D Beyond lists "Cleric - Dragon Domain") - likely | 17: ? | NO TEXT |
+| Cleric | Dragon Domain | Valda's Spire of Secrets (Dragon Domain confirmed in it); the text pasted 2026-10-04 (Draconic Blessing, Dragon's Wrath) has other feature names than dnd55e's Chromatic Affinity / Draconic Majesty / Wyrm's Blessing | 17: ? | UNKNOWN, second pass 2026-10-04: dnd55e's Chromatic Affinity / Draconic Majesty / Wyrm's Blessing (3 and 6 only, 2024 structure, wiki AI-generated, no credit) match no published or homebrew Dragon Domain found (DM Dave, DMsGuild, GM Binder, D&D Wiki versions all differ); likely dnd55e's own design: no 17 feature built |
 | Sorcerer | Heroic Sorcery | Valda's Spire of Secrets "Heroic Bloodline" (capstone: Haste without Concentration) - likely; dnd55e's version (Heroic Spells, Martial Sorcery, Extra Attack, War Magic) is a rework | 14 / 18: ? | NO TEXT (Mage Hand Press's 2017 "Reincarnated Hero" is a different, older subclass) |
 | Fighter | Viking | Kobold Press, Northlands Worldbook (Seaborne, Savage Charge, Call of the Northlands) - certain | 15 Marauder's Reprisal, 18 Unstoppable Assault (levels per the dnd55e gap) | NO TEXT |
 | Rogue | Blade of Radiance | Steinhardt's Guide to the Eldritch Hunt (World Anvil homebrew, masongarth2000) - certain | 13 / 17: ? (Chains of Judgement, Divine Retaliation are 9) | NO TEXT (World Anvil returns 403) |
 | Barbarian | Fractured | Grim Hollow, "Barbarian: Path of the Fractured" (grimhollow.fandom.com, Scribd copy) - certain | 14: ? (3 Face of Rage / Mask of Civility, 6 Brains and Brawn, 10 Cunning and Brutal) | NO TEXT (fandom returns 402) |
-| Cleric | Apocalypse Domain | not Midgard Heroes Handbook (features differ: Ranting Ruin, Damnation, Weight of Guilt, Herald of the Apocalypse) | ? | UNKNOWN (dnd55e's Visions of Annihilation / Doom Song / All Will Be Dust aren't in any version found) |
+| Cleric | Apocalypse Domain | not Midgard Heroes Handbook (features differ: Ranting Ruin, Damnation, Weight of Guilt, Herald of the Apocalypse) | ? | UNKNOWN, second pass 2026-10-04: dnd55e's wiki page is AI-generated and names no source, its features (Visions of Annihilation, Doom Song, All Will Be Dust; all 'mark a creature') appear in no published or homebrew version found; kpogl/5esrd (Kobold Press) is a different subclass. Likely dnd55e's own design: no 17 feature built |
 | Sorcerer | Frost Sorcery | dandwiki "Frost Sorcery" is a different design | ? | UNKNOWN |
 
 Built with a known gap:
@@ -38,3 +38,5 @@ To finish a NO TEXT row, add the book's text under `References/Subclasses/` (or 
 `Scripts/gen_subclass_features.py`. `Scripts/regen_all.sh` then regenerates everything.
 
 Also open (not sourcing gaps): the half-caster 13/17 spells BG3 doesn't have (`Scripts/gen_subclass_spells.py` MISSING).
+
+Built from `References/Subclasses/missing_subclass_ref.txt` on 2026-10-04 (untested in game): Unbroken 14 Nature Armor, Fractured 14 Better Half, Astral 17 Supreme Switching, Viking 15 Marauder's Reprisal / 18 Unstoppable Assault, Blade of Radiance 13 Saintly Revelations / 17 Final Judgement. Arachnoid 17 Paralytic Venom is skipped: dnd55e's level 9 Paralytic Venom already paralyses on a Constitution save.
