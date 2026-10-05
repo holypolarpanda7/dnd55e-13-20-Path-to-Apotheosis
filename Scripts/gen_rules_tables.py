@@ -2,7 +2,8 @@
 from the rules texts - not from this mod's own progressions, so a test can tell when the mod is wrong.
 
   tests/bg3/rules/classes.toml           12 core classes, levels 1-20: features, cantrips, prepared spells, slots and the
-                                         other table columns. SRD 5.2.1 (CC-BY-4.0) - committed.
+                                         other table columns. SRD 5.2.1 (CC-BY-4.0) - committed. Plus Artificer, Gunslinger
+                                         and Illrigger from References/Classes (tagged source = "References/Classes").
   (subclass features: Scripts/gen_subclass_rules.py -> tests/bg3/rules/local/subclasses.toml)
 
 Sources: /mnt/d/Projects/The Oracle/owned_books/srd-cc-v5-2-1.txt and oracle-dm-backend/oracle.db (rules_subclass).
@@ -63,6 +64,37 @@ def class_rows(text, cls):
     return rows
 
 
+# classes outside the SRD: the tab-separated "Level / Proficiency Bonus / ..." tables in References/Classes (the texts the mod
+# builds them from)
+REF_CLASSES = os.path.join(REPO, "..", "References", "Classes")
+EXTRA = ["Artificer", "Gunslinger", "Illrigger"]
+
+
+def col_key(h):
+    h = h.strip().lower()
+    if re.fullmatch(r"\d", h):
+        return f"slots_{h}"
+    return {"prepared spells": "prepared", "cantrips": "cantrips"}.get(h, re.sub(r"[^a-z0-9]+", "_", h).strip("_"))
+
+
+def ref_rows(cls):
+    lines = open(os.path.join(REF_CLASSES, f"{cls}.txt"), encoding="utf-8").read().splitlines()
+    i = next(k for k, l in enumerate(lines) if l.startswith("Level\t"))
+    head = lines[i].split("\t")
+    rows = {}
+    for l in lines[i + 1:i + 21]:
+        c = l.split("\t")
+        L = int(re.match(r"\d+", c[0]).group(0))
+        row = {"level": L, "proficiency": int(c[1].strip("+"))}
+        feats = c[2].strip()
+        row["features"] = [] if feats in ("", "—") else [f.strip() for f in re.split(r",(?![^()]*\))", feats) if f.strip()]
+        for h, v in zip(head[3:], c[3:]):
+            row[col_key(h)] = value(v.strip())
+        rows[L] = row
+    assert len(rows) == 20, cls
+    return rows
+
+
 def toml_value(v):
     if isinstance(v, list):
         return "[" + ", ".join(toml_value(x) for x in v) + "]"
@@ -82,10 +114,17 @@ def main():
             out.append(f'class = "{cls}"')
             out += [f"{k} = {toml_value(v)}" for k, v in row.items()]
             out.append("")
+    for cls in EXTRA:
+        for L, row in ref_rows(cls).items():
+            out.append("[[class_level]]")
+            out.append(f'class = "{cls}"')
+            out.append('source = "References/Classes"')
+            out += [f"{k} = {toml_value(v)}" for k, v in row.items()]
+            out.append("")
     open(os.path.join(OUT, "classes.toml"), "w", encoding="utf-8", newline="\n").write("\n".join(out))
 
     # subclass features: Scripts/gen_subclass_rules.py (verified against the owned texts)
-    print(f"classes.toml: {len(COLUMNS)} classes x 20 levels")
+    print(f"classes.toml: {len(COLUMNS) + len(EXTRA)} classes x 20 levels")
 
 
 if __name__ == "__main__":

@@ -3180,3 +3180,723 @@ slots_6 = 2
 slots_7 = 2
 slots_8 = 1
 slots_9 = 1
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 1
+proficiency = 2
+features = ["Spellcasting", "Tinker’s Magic"]
+plans_known = 0
+magic_items = 0
+cantrips = 2
+prepared = 2
+slots_1 = 2
+slots_2 = 0
+slots_3 = 0
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 2
+proficiency = 2
+features = ["Replicate Magic Item"]
+plans_known = 4
+magic_items = 2
+cantrips = 2
+prepared = 3
+slots_1 = 2
+slots_2 = 0
+slots_3 = 0
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 3
+proficiency = 2
+features = ["Artificer Subclass"]
+plans_known = 4
+magic_items = 2
+cantrips = 2
+prepared = 4
+slots_1 = 3
+slots_2 = 0
+slots_3 = 0
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 4
+proficiency = 2
+features = ["Ability Score Improvement"]
+plans_known = 4
+magic_items = 2
+cantrips = 2
+prepared = 5
+slots_1 = 3
+slots_2 = 0
+slots_3 = 0
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 5
+proficiency = 3
+features = ["Subclass feature"]
+plans_known = 4
+magic_items = 2
+cantrips = 2
+prepared = 6
+slots_1 = 4
+slots_2 = 2
+slots_3 = 0
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 6
+proficiency = 3
+features = ["Magic Item Tinker"]
+plans_known = 5
+magic_items = 3
+cantrips = 2
+prepared = 6
+slots_1 = 4
+slots_2 = 2
+slots_3 = 0
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 7
+proficiency = 3
+features = ["Flash of Genius"]
+plans_known = 5
+magic_items = 3
+cantrips = 2
+prepared = 7
+slots_1 = 4
+slots_2 = 3
+slots_3 = 0
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 8
+proficiency = 3
+features = ["Ability Score Improvement"]
+plans_known = 5
+magic_items = 3
+cantrips = 2
+prepared = 7
+slots_1 = 4
+slots_2 = 3
+slots_3 = 0
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 9
+proficiency = 4
+features = ["Subclass feature"]
+plans_known = 5
+magic_items = 3
+cantrips = 2
+prepared = 9
+slots_1 = 4
+slots_2 = 3
+slots_3 = 2
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 10
+proficiency = 4
+features = ["Magic Item Adept"]
+plans_known = 6
+magic_items = 4
+cantrips = 3
+prepared = 9
+slots_1 = 4
+slots_2 = 3
+slots_3 = 2
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 11
+proficiency = 4
+features = ["Spell-Storing Item"]
+plans_known = 6
+magic_items = 4
+cantrips = 3
+prepared = 10
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 12
+proficiency = 4
+features = ["Ability Score Improvement"]
+plans_known = 6
+magic_items = 4
+cantrips = 3
+prepared = 10
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 0
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 13
+proficiency = 5
+features = []
+plans_known = 6
+magic_items = 4
+cantrips = 3
+prepared = 11
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 1
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 14
+proficiency = 5
+features = ["Advanced Artifice"]
+plans_known = 7
+magic_items = 5
+cantrips = 4
+prepared = 11
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 1
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 15
+proficiency = 5
+features = ["Subclass feature"]
+plans_known = 7
+magic_items = 5
+cantrips = 4
+prepared = 12
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 2
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 16
+proficiency = 5
+features = ["Ability Score Improvement"]
+plans_known = 7
+magic_items = 5
+cantrips = 4
+prepared = 12
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 2
+slots_5 = 0
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 17
+proficiency = 6
+features = []
+plans_known = 7
+magic_items = 5
+cantrips = 4
+prepared = 14
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 3
+slots_5 = 1
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 18
+proficiency = 6
+features = ["Magic Item Master"]
+plans_known = 8
+magic_items = 6
+cantrips = 4
+prepared = 14
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 3
+slots_5 = 1
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 19
+proficiency = 6
+features = ["Epic Boon"]
+plans_known = 8
+magic_items = 6
+cantrips = 4
+prepared = 15
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 3
+slots_5 = 2
+
+[[class_level]]
+class = "Artificer"
+source = "References/Classes"
+level = 20
+proficiency = 6
+features = ["Soul of Artifice"]
+plans_known = 8
+magic_items = 6
+cantrips = 4
+prepared = 15
+slots_1 = 4
+slots_2 = 3
+slots_3 = 3
+slots_4 = 3
+slots_5 = 2
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 1
+proficiency = 2
+features = ["Fighting Style", "Quick Draw", "Weapon Mastery"]
+risk_dice = 0
+weapon_mastery = 2
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 2
+proficiency = 2
+features = ["Critical Shot", "Risk"]
+risk_dice = "4d8"
+weapon_mastery = 2
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 3
+proficiency = 2
+features = ["Gunslinger Subclass"]
+risk_dice = "4d8"
+weapon_mastery = 2
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 4
+proficiency = 2
+features = ["Ability Score Improvement"]
+risk_dice = "4d8"
+weapon_mastery = 3
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 5
+proficiency = 3
+features = ["Extra Attack", "Gut Shot"]
+risk_dice = "4d8"
+weapon_mastery = 3
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 6
+proficiency = 3
+features = ["Subclass feature"]
+risk_dice = "5d8"
+weapon_mastery = 3
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 7
+proficiency = 3
+features = ["Evasion"]
+risk_dice = "5d8"
+weapon_mastery = 3
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 8
+proficiency = 3
+features = ["Ability Score Improvement"]
+risk_dice = "5d8"
+weapon_mastery = 3
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 9
+proficiency = 4
+features = ["Critical Shot"]
+risk_dice = "5d8"
+weapon_mastery = 3
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 10
+proficiency = 4
+features = ["Subclass feature"]
+risk_dice = "5d10"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 11
+proficiency = 4
+features = ["Overkill"]
+risk_dice = "5d10"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 12
+proficiency = 4
+features = ["Ability Score Improvement"]
+risk_dice = "5d10"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 13
+proficiency = 5
+features = ["Cheat Death"]
+risk_dice = "5d10"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 14
+proficiency = 5
+features = ["Subclass feature"]
+risk_dice = "6d10"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 15
+proficiency = 5
+features = ["Dire Gambit"]
+risk_dice = "6d10"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 16
+proficiency = 5
+features = ["Ability Score Improvement"]
+risk_dice = "6d10"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 17
+proficiency = 6
+features = ["Critical Shot"]
+risk_dice = "6d10"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 18
+proficiency = 6
+features = ["Deft Maneuver"]
+risk_dice = "6d12"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 19
+proficiency = 6
+features = ["Epic Boon"]
+risk_dice = "6d12"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Gunslinger"
+source = "References/Classes"
+level = 20
+proficiency = 6
+features = ["Headshot"]
+risk_dice = "6d12"
+weapon_mastery = 4
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 1
+proficiency = 2
+features = ["Baleful Interdict", "Forked Tongue"]
+seals = 3
+seal_damage = "1d6"
+interdict_boons = 0
+infernal_conduit_dice = 0
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 2
+proficiency = 2
+features = ["Combat Mastery", "Interdiction"]
+seals = 3
+seal_damage = "1d6"
+interdict_boons = 1
+infernal_conduit_dice = 0
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 3
+proficiency = 2
+features = ["Diabolic Contract", "Invoke Hell"]
+seals = 4
+seal_damage = "1d6"
+interdict_boons = 1
+infernal_conduit_dice = 0
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 4
+proficiency = 2
+features = ["Ability Score Improvement"]
+seals = 4
+seal_damage = "1d6"
+interdict_boons = 1
+infernal_conduit_dice = 0
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 5
+proficiency = 3
+features = ["Extra Attack"]
+seals = 4
+seal_damage = "2d6"
+interdict_boons = 1
+infernal_conduit_dice = 0
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 6
+proficiency = 3
+features = ["Infernal Conduit"]
+seals = 4
+seal_damage = "2d6"
+interdict_boons = 1
+infernal_conduit_dice = 3
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 7
+proficiency = 3
+features = ["Diabolic Contract feature"]
+seals = 5
+seal_damage = "2d6"
+interdict_boons = 2
+infernal_conduit_dice = 4
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 8
+proficiency = 3
+features = ["Ability Score Improvement"]
+seals = 5
+seal_damage = "2d6"
+interdict_boons = 2
+infernal_conduit_dice = 4
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 9
+proficiency = 4
+features = ["Forked Tongue improvement"]
+seals = 5
+seal_damage = "2d6"
+interdict_boons = 2
+infernal_conduit_dice = 5
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 10
+proficiency = 4
+features = ["Blood Price"]
+seals = 5
+seal_damage = "2d6"
+interdict_boons = 2
+infernal_conduit_dice = 5
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 11
+proficiency = 4
+features = ["Diabolic Contract feature", "Infernal Conduit improvement", "Terrorizing Force"]
+seals = 5
+seal_damage = "3d6"
+interdict_boons = 2
+infernal_conduit_dice = 6
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 12
+proficiency = 4
+features = ["Ability Score Improvement"]
+seals = 5
+seal_damage = "3d6"
+interdict_boons = 2
+infernal_conduit_dice = 6
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 13
+proficiency = 5
+features = []
+seals = 6
+seal_damage = "3d6"
+interdict_boons = 3
+infernal_conduit_dice = 7
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 14
+proficiency = 5
+features = ["Superior Interdict"]
+seals = 6
+seal_damage = "3d6"
+interdict_boons = 3
+infernal_conduit_dice = 7
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 15
+proficiency = 5
+features = ["Diabolic Contract feature"]
+seals = 6
+seal_damage = "3d6"
+interdict_boons = 3
+infernal_conduit_dice = 8
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 16
+proficiency = 5
+features = ["Ability Score Improvement"]
+seals = 6
+seal_damage = "3d6"
+interdict_boons = 3
+infernal_conduit_dice = 8
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 17
+proficiency = 6
+features = ["Infernal Majesty"]
+seals = 6
+seal_damage = "3d6"
+interdict_boons = 3
+infernal_conduit_dice = 9
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 18
+proficiency = 6
+features = []
+seals = 7
+seal_damage = "3d6"
+interdict_boons = 4
+infernal_conduit_dice = 9
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 19
+proficiency = 6
+features = ["Ability Score Improvement"]
+seals = 7
+seal_damage = "3d6"
+interdict_boons = 4
+infernal_conduit_dice = 10
+
+[[class_level]]
+class = "Illrigger"
+source = "References/Classes"
+level = 20
+proficiency = 6
+features = ["Master of Hell"]
+seals = 7
+seal_damage = "4d6"
+interdict_boons = 4
+infernal_conduit_dice = 10

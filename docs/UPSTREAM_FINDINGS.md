@@ -62,3 +62,16 @@ Not filed, and why (the lint is noisy on the dnd55e layer):
   level-up check of whether the choices are offered twice.
 MCP follow-ups: the icon check must read the layer's own atlas; known engine statuses (DYING) and boost names need a vocabulary list.
 
+
+## 2026-10-05: answers
+- Fixed by the owner (ship after 4.12.18.1; upstream tagged 4.12.18.3 on 2026-10-05): #1539 Danse Macabre (also rebuilt for
+  5.5), #1540 Awaken at 6th level, #1564 Alchemist list entry, #1569 Holy Weapon Burst BLINDED.
+- #1556 closed as not planned, and our report was WRONG: the 2024 Guided Strike is the War Domain's level 3 passive and its
+  interrupts; the old level 2 Shout_GuidedStrike node is a harmless leftover. We read "the node is never applied" as "the
+  feature is never granted" without searching for the feature by name. The progression lint now treats a feature granted later
+  under another id with the same display name as moved (bg3-data-mcp testing.UPSTREAM_ANSWERED records #1556).
+- #1570 closed as not planned: no gameplay effect.
+- The owner asked us not to send AI-generated or automated reports. From now on an issue is filed only for a bug reproduced
+  in game with a visible gameplay effect, written and checked by hand, after the user approves the draft.
+- Discussions answered: Apocalypse Domain = Cthulhu by Torchlight (#1567); Dragon Domain = Valda's Spire of Secrets: Player
+  Pack 2 (#1568).

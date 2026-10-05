@@ -30,6 +30,8 @@ ALIASES = {
     "ChoreographyCollege": ("Bard", "College of Choreography"), "Fractured": ("Barbarian", "Path of the Fractured"),
     "CircleOfTheUnbroken": ("Druid", "Circle of the Unbroken"), "CircleOfDragons": ("Druid", "Circle of Dragons"),
     "AstralDomain": ("Cleric", "Astral Domain"), "BladeOfRadiance": ("Rogue", "Blade of Radiance"),
+    "HighRoller": ("Gunslinger", "High Roller"), "WhiteHat": ("Gunslinger", "White Hat"),
+    "ArchitectOfRuin": ("Illrigger", "Architect of Ruin"), "SanguineKnight": ("Illrigger", "Sanguine Knight"),
     "ValorCollege": ("Bard", "College of Valor"),
     "DraconicBloodline": ("Sorcerer", "Draconic Sorcery"),
     "FourElements": ("Monk", "Warrior of the Elements"),
@@ -99,7 +101,8 @@ MEMORY.update({
 NAME_FIX = {"Jllus Ory Reality": "Illusory Reality", "Keeper Ofsouls": "Keeper of Souls"}
 
 # Subclasses with no source past level 12 (docs/SUBCLASS_SOURCING.md: dnd55e's own design, or no text reachable).
-NONE = {("Cleric", "Apocalypse Domain"): "no source found (dnd55e design)", ("Cleric", "Dragon Domain"): "no source found (dnd55e design)",
+NONE = {("Cleric", "Apocalypse Domain"): "source Cthulhu by Torchlight (bg3dnd #1567) - no text yet",
+        ("Cleric", "Dragon Domain"): "source Valda's Spire of Secrets: Player Pack 2 (bg3dnd #1568) - no text yet",
         ("Sorcerer", "Frost Sorcery"): "no source found", ("Sorcerer", "Heroic Sorcery"): "source text not reachable",
         ("Monk", "Warrior of the Mystic Arts"): "no source recorded"}
 
@@ -139,9 +142,48 @@ def ref_sections():
     return out
 
 
+CLASS_REFS = os.path.join(REPO, "..", "References", "Classes")
+OTHER_SUBS = {"Gunslinger": ["Deadeye", "Secret Agent"]}
+CLASS_SUBS = {"Gunslinger": ["High Roller", "Spellslinger", "White Hat"],
+              "Illrigger": ["Architect of Ruin", "Hellspeaker", "Painkiller", "Sanguine Knight", "Shadowmaster"]}
+
+
+def class_ref_subclasses():
+    """Subclass features 13-20 from the class files in References/Classes (Gunslinger: subclass headings + "Level N: Name";
+    Illrigger, MCDM's 2014 layout: a title line then "15th-Level Architect of Ruin Feature", and "Name (13th Level)" boons)."""
+    out = {}
+    for cls, subs in CLASS_SUBS.items():
+        path = os.path.join(CLASS_REFS, f"{cls}.txt")
+        if not os.path.exists(path):
+            continue
+        lines = [l.strip() for l in open(path, encoding="utf-8", errors="replace") if l.strip()]
+        cur = None
+        for i, line in enumerate(lines):
+            # a subclass heading - including the file's subclasses the mod doesn't use, which must end the previous one
+            if line in subs or line in OTHER_SUBS.get(cls, ()):
+                cur = line
+                continue
+            m = re.match(r"Level\s*(\d+)\s*:\s*(.+?)(?:\s*\[.*\])?$", line, re.I)
+            if m and cur in subs and int(m.group(1)) >= 13:
+                out.setdefault((cls, cur), {}).setdefault(int(m.group(1)), []).append(m.group(2).strip())
+                continue
+            m = re.match(r"(\d+)(?:st|nd|rd|th)-Level (.+?) Features?$", line)
+            if m and m.group(2) in subs and int(m.group(1)) >= 13:
+                title = next((lines[k] for k in range(i - 1, max(0, i - 4), -1) if lines[k]), "")
+                out.setdefault((cls, m.group(2)), {}).setdefault(int(m.group(1)), []).append(title)
+                continue
+            for name, lv in re.findall(r"(?:^|\. )([A-Z][A-Za-z'’ ]{2,40}) \((\d+)(?:st|nd|rd|th) Level", line):
+                if cur in subs and int(lv) >= 13:
+                    out.setdefault((cls, cur), {}).setdefault(int(lv), []).append(name.strip())
+    return out
+
+
 def main():
     texts = {os.path.basename(p): level_lines(p) for p in glob.glob(os.path.join(BOOKS, "*.txt")) + REFS}
     refs = ref_sections()
+    for k, v in class_ref_subclasses().items():
+        for lv, names in v.items():
+            refs.setdefault(k, {}).setdefault(lv, []).extend(names)
     con = sqlite3.connect(DB)
     oracle = {}
     for name, cls, feats, src in con.execute("SELECT name, class_name, features, source FROM rules_subclass"):
