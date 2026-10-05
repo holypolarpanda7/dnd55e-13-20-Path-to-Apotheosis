@@ -1,0 +1,4 @@
+# Hand-kept: rules features the check should not expect, with the reason (2026-10-05). Read with aliases.toml.
+[feature]
+# Arachnoid Stalker 17: dnd55e already has a Cunning Strike Paralytic Venom at 9 (docs/SUBCLASS_SOURCING.md)
+"Paralytic Venom" = "skip"
