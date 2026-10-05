@@ -2,13 +2,13 @@
   "deps": {
     "897914ef-5c96-053c-44af-0be823f895fe": {
       "layer": "dnd55e",
-      "locked_at": "2026-10-03 13:52 CDT",
-      "md5": "a98bd2bf2f1c592ca711c30d08ef5039",
+      "locked_at": "2026-10-05 17:20 CDT",
+      "md5": "62548a904b63fb520cd3ce354eb01ba0",
       "name": "DnD 5.5e All-in-One BEYOND",
-      "snapshot": "dnd55e-145804076590825473-a98bd2bf2f",
+      "snapshot": "dnd55e-145804076590825475-62548a904b",
       "source": "/mnt/d/vortex/BG3/mods/DnD 5.5e All-in-One BEYOND 12727 4.12.18.1 2026-10-03T14-01Z D2O3Y0ypR/DnD2024_897914ef-5c96-053c-44af-0be823f895fe.pak",
-      "version": "4.12.18.1",
-      "version64": "145804076590825473"
+      "version": "4.12.18.3",
+      "version64": "145804076590825475"
     }
   }
 }
