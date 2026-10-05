@@ -2,9 +2,9 @@
 
 Writes tests/bg3/rules/local/subclasses.toml (book-derived: local only, like The Oracle keeps it): one [[subclass_feature]]
 per feature with its source and how sure we are -
-  verified  the feature's "LEVEL N: NAME" line was found in an owned text (PHB 2024, the References/Subclasses texts, ...)
+  verified  the feature's "LEVEL N: NAME" line was found in an owned text (PHB 2024, the library excerpts, ...)
   oracle    from The Oracle's ingested data (rules_subclass) only; the owned texts don't show the line (scan gaps)
-  reference read from References/Subclasses (the texts the mod's third-party 13+ features were built from)
+  reference read from the library excerpts/subclasses (the texts the mod's third-party 13+ features were built from)
   memory    from knowledge of a book we don't have as text (Tasha's, PHB/DMG 2014, SCAG) - review these
   none      the subclass has no source with features past 12 (dnd55e's own design): nothing is expected at 13-20
 
@@ -20,10 +20,11 @@ import sqlite3
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ORACLE = os.environ.get("ORACLE_ROOT", "/mnt/d/Projects/The Oracle")
-BOOKS = os.path.join(ORACLE, "owned_books")
+LIBRARY = os.environ.get("DND_LIBRARY", "/mnt/d/Library/DnD")   # the shared source library (CATALOG.md there)
+BOOKS = os.path.join(LIBRARY, "text")
 DB = os.path.join(ORACLE, "oracle-dm-backend", "oracle.db")
-REFS = glob.glob(os.path.join(REPO, "..", "References", "Subclasses", "*.txt")) + \
-    [os.path.join(REPO, "..", "References", "Classes", "UA-Arcane Subclasses.txt")]
+REFS = glob.glob(os.path.join(LIBRARY, "excerpts", "subclasses", "*.txt")) + \
+    [os.path.join(LIBRARY, "excerpts", "classes", "UA-Arcane Subclasses.txt")]
 OUT = os.path.join(REPO, "tests", "bg3", "rules")
 
 # mod subclass (ClassDescription Name) -> (class, rules subclass name). Only where the names differ.
@@ -88,6 +89,10 @@ REFERENCE = {
     ("Rogue", "Blade of Radiance"): ("References/Subclasses/missing_subclass_ref.txt", {13: ["Saintly Revelations"], 17: ["Final Judgement"]}),
     ("Druid", "Circle of the Unbroken"): ("References/Subclasses/missing_subclass_ref.txt (Griffon's Saddlebag)", {14: ["Nature Armor"]}),
     ("Druid", "Circle of Dragons"): ("References/Subclasses/griffons_saddlebag_circle_of_dragons.txt", {14: ["Heart of a Dragon"]}),
+    ("Sorcerer", "Frost Sorcery"): ("\"Frost Magic\", The Griffon's Saddlebag: Book One p.167 (page photographed by the user 2026-10-04)",
+                                    {14: ["Flash Freeze"], 18: ["Frozen Soul"]}),
+    ("Sorcerer", "Heroic Sorcery"): ("Mage Hand Press \"Reincarnated Hero\" (page photographed by the user 2026-10-04)",
+                                     {14: ["Sorcerous Kindling"], 18: ["Heroic Legacy"]}),
     ("Bard", "College of Choreography"): ("Griffon's Saddlebag page photographed by the user 2026-10-04 (docs/SUBCLASS_SOURCING.md)",
                                           {14: ["Fast Movement", "Entrancing Movement", "Endless Dance"]}),
 }
@@ -109,7 +114,6 @@ NAME_FIX = {"Jllus Ory Reality": "Illusory Reality", "Keeper Ofsouls": "Keeper o
 # Subclasses with no source past level 12 (docs/SUBCLASS_SOURCING.md: dnd55e's own design, or no text reachable).
 NONE = {("Cleric", "Apocalypse Domain"): "source Cthulhu by Torchlight (bg3dnd #1567) - no text yet",
         ("Cleric", "Dragon Domain"): "source Valda's Spire of Secrets: Player Pack 2 (bg3dnd #1568) - no text yet",
-        ("Sorcerer", "Frost Sorcery"): "no source found", ("Sorcerer", "Heroic Sorcery"): "source text not reachable",
 }
 
 
@@ -133,7 +137,7 @@ REF_MOVE = {("Wizard", "Enchanter", "Splintered Summons"): ("Wizard", "Conjurer"
 
 
 def ref_sections():
-    """References/Subclasses texts: 'CLASS: SUBCLASS' headers, then LEVEL lines -> {(class, subclass): {level: [names]}}."""
+    """Library excerpts/subclasses texts: 'CLASS: SUBCLASS' headers, then LEVEL lines -> {(class, subclass): {level: [names]}}."""
     out = {}
     for f in REFS:
         cur = None
@@ -159,14 +163,14 @@ def ref_sections():
     return out
 
 
-CLASS_REFS = os.path.join(REPO, "..", "References", "Classes")
-OTHER_SUBS = {"Gunslinger": ["Deadeye", "Secret Agent"]}
+CLASS_REFS = os.path.join(LIBRARY, "excerpts", "classes")
+OTHER_SUBS = {"Gunslinger": ["Deadeye", "Secret Agent", "Trick Shot"]}
 CLASS_SUBS = {"Gunslinger": ["High Roller", "Spellslinger", "White Hat"],
               "Illrigger": ["Architect of Ruin", "Hellspeaker", "Painkiller", "Sanguine Knight", "Shadowmaster"]}
 
 
 def class_ref_subclasses():
-    """Subclass features 13-20 from the class files in References/Classes (Gunslinger: subclass headings + "Level N: Name";
+    """Subclass features 13-20 from the class files in the library excerpts/classes (Gunslinger: subclass headings + "Level N: Name";
     Illrigger, MCDM's 2014 layout: a title line then "15th-Level Architect of Ruin Feature", and "Name (13th Level)" boons)."""
     out = {}
     for cls, subs in CLASS_SUBS.items():
@@ -200,7 +204,7 @@ def main():
     refs = ref_sections()
     for k, v in class_ref_subclasses().items():
         for lv, names in v.items():
-            refs.setdefault(k, {}).setdefault(lv, []).extend((n, f"References/Classes/{k[0]}.txt") for n in names)
+            refs.setdefault(k, {}).setdefault(lv, []).extend((n, f"excerpts/classes/{k[0]}.txt") for n in names)
     con = sqlite3.connect(DB)
     oracle = {}
     for name, cls, feats, src in con.execute("SELECT name, class_name, features, source FROM rules_subclass"):

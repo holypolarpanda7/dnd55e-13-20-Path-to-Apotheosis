@@ -21,12 +21,12 @@ source identified but its rules text isn't reachable (paid book, site blocks aut
 | Bard | College of Choreography | The Griffon's Saddlebag: Book One (Hit Point Press; D&D Beyond source gsb1) - certain; the PHB 2024 College of Dance pasted 2026-10-04 is a different subclass | 14 Fast Movement +5 ft, Entrancing Movement (Irresistible Dance), Endless Dance (page photographed by the user 2026-10-04, shown in the Griffon's Saddlebag as "College of Dance") | BUILT, tested in game 2026-10-04 |
 | Cleric | Astral Domain | The Griffon's Saddlebag: Book One - certain | 17 Supreme Switching (upgrades Spatial Exchange / Misty Step) | NO TEXT |
 | Cleric | Dragon Domain | Valda's Spire of Secrets: Player Pack 2 - certain (dnd55e owner, bg3dnd discussion #1568, 2026-10-05) | 17: ? | NO TEXT (17 feature unknown until the Player Pack 2 text is available) |
-| Sorcerer | Heroic Sorcery | Valda's Spire of Secrets "Heroic Bloodline" (capstone: Haste without Concentration) - likely; dnd55e's version (Heroic Spells, Martial Sorcery, Extra Attack, War Magic) is a rework | 14 / 18: ? | NO TEXT (Mage Hand Press's 2017 "Reincarnated Hero" is a different, older subclass) |
+| Sorcerer | Heroic Sorcery | Mage Hand Press "Reincarnated Hero" (page photographed by the user 2026-10-04; user confirmed 2026-10-05) | 14 Sorcerous Kindling, 18 Heroic Legacy | BUILT |
 | Fighter | Viking | Kobold Press, Northlands Worldbook (Seaborne, Savage Charge, Call of the Northlands) - certain | 15 Marauder's Reprisal, 18 Unstoppable Assault (levels per the dnd55e gap) | NO TEXT |
 | Rogue | Blade of Radiance | Steinhardt's Guide to the Eldritch Hunt (World Anvil homebrew, masongarth2000) - certain | 13 / 17: ? (Chains of Judgement, Divine Retaliation are 9) | NO TEXT (World Anvil returns 403) |
 | Barbarian | Fractured | Grim Hollow, "Barbarian: Path of the Fractured" (grimhollow.fandom.com, Scribd copy) - certain | 14: ? (3 Face of Rage / Mask of Civility, 6 Brains and Brawn, 10 Cunning and Brutal) | NO TEXT (fandom returns 402) |
 | Cleric | Apocalypse Domain | Cthulhu by Torchlight - certain (dnd55e owner, bg3dnd discussion #1567, 2026-10-05) | ? | NO TEXT (17 feature unknown until the book's text is available) |
-| Sorcerer | Frost Sorcery | dandwiki "Frost Sorcery" is a different design | ? | UNKNOWN |
+| Sorcerer | Frost Sorcery | "Frost Magic", The Griffon's Saddlebag: Book One p.167 (page photographed by the user 2026-10-04; user confirmed 2026-10-05) | 14 Flash Freeze, 18 Frozen Soul | BUILT |
 
 Built with a known gap:
 - **Highway Rider 17 Desperado** ("reduced to 0 HP: use your Reaction for one Hair Trigger action before you fall"): a stand-in

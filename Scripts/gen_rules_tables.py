@@ -3,10 +3,10 @@ from the rules texts - not from this mod's own progressions, so a test can tell 
 
   tests/bg3/rules/classes.toml           12 core classes, levels 1-20: features, cantrips, prepared spells, slots and the
                                          other table columns. SRD 5.2.1 (CC-BY-4.0) - committed. Plus Artificer, Gunslinger
-                                         and Illrigger from References/Classes (tagged source = "References/Classes").
+                                         and Illrigger from the library's excerpts/classes (tagged source = "References/Classes").
   (subclass features: Scripts/gen_subclass_rules.py -> tests/bg3/rules/local/subclasses.toml)
 
-Sources: /mnt/d/Projects/The Oracle/owned_books/srd-cc-v5-2-1.txt and oracle-dm-backend/oracle.db (rules_subclass).
+Sources: the library (DND_LIBRARY, default /mnt/d/Library/DnD): text/srd-cc-v5-2-1.txt, excerpts/classes/.
 Run: python3 Scripts/gen_rules_tables.py
 """
 import json
@@ -16,7 +16,8 @@ import sqlite3
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ORACLE = os.environ.get("ORACLE_ROOT", "/mnt/d/Projects/The Oracle")
-SRD = os.path.join(ORACLE, "owned_books", "srd-cc-v5-2-1.txt")
+LIBRARY = os.environ.get("DND_LIBRARY", "/mnt/d/Library/DnD")   # the shared source library (CATALOG.md there)
+SRD = os.path.join(LIBRARY, "text", "srd-cc-v5-2-1.txt")
 DB = os.path.join(ORACLE, "oracle-dm-backend", "oracle.db")
 OUT = os.path.join(REPO, "tests", "bg3", "rules")
 
@@ -66,7 +67,7 @@ def class_rows(text, cls):
 
 # classes outside the SRD: the tab-separated "Level / Proficiency Bonus / ..." tables in References/Classes (the texts the mod
 # builds them from)
-REF_CLASSES = os.path.join(REPO, "..", "References", "Classes")
+REF_CLASSES = os.path.join(LIBRARY, "excerpts", "classes")
 EXTRA = ["Artificer", "Gunslinger", "Illrigger"]
 
 
