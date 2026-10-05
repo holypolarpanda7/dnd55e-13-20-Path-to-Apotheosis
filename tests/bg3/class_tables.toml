@@ -1,0 +1,28 @@
+# PHB 2024 / SRD 5.2.1 class tables for the classes that LEARN their spells at level-up (SelectSpells), read by
+# bg3_lint_progressions (SPELLS PER LEVEL): the spells chosen at each level this mod defines must equal the table's
+# increase, and `replace` classes must be able to swap one spell every level. 2026-10-05.
+# Prepared-casters that get their whole list (Cleric, Druid, Paladin, Ranger) aren't listed: they don't pick at level-up.
+
+[suite]
+name = "class_tables"
+
+[[class_table]]
+class = "Sorcerer"
+prepared = [2, 4, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22]
+replace = true
+
+[[class_table]]
+class = "Bard"
+prepared = [4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16, 16, 17, 17, 18, 18, 19, 20, 21, 22]
+replace = true
+
+[[class_table]]
+class = "Warlock"
+prepared = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15]
+replace = true
+
+# the spellbook: six at level 1, two more every level
+[[class_table]]
+class = "Wizard"
+prepared = [6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44]
+replace = false

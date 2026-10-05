@@ -542,18 +542,19 @@
   <content contentuid="hsm2020a0000000000000000000000001" version="1">Master: Web</content>
   <content contentuid="hsm2020a0000000000000000000000002" version="1">Select Web as your mastered level 2 spell. You can cast it at will without expending a spell slot.</content>
 
-  <content contentuid="hps0001a0000000000000000000000001" version="1">Prismatic Spray</content>
-  <content contentuid="hps0001a0000000000000000000000002" version="1">Unleash rays of prismatic light in a [1] cone. Choose which elemental ray to release - each creature in the area must make a Dexterity Saving Throw or take [2] damage (half on a successful save).</content>
-  <content contentuid="hps0002a0000000000000000000000001" version="1">Prismatic Spray: Fire</content>
-  <content contentuid="hps0002a0000000000000000000000002" version="1">Release a red ray of fire in a [1] cone. Each creature in the area must make a Dexterity Saving Throw or take [2] damage (half on a successful save).</content>
-  <content contentuid="hps0003a0000000000000000000000001" version="1">Prismatic Spray: Acid</content>
-  <content contentuid="hps0003a0000000000000000000000002" version="1">Release an orange ray of acid in a [1] cone. Each creature in the area must make a Dexterity Saving Throw or take [2] damage (half on a successful save).</content>
-  <content contentuid="hps0004a0000000000000000000000001" version="1">Prismatic Spray: Lightning</content>
-  <content contentuid="hps0004a0000000000000000000000002" version="1">Release a yellow ray of lightning in a [1] cone. Each creature in the area must make a Dexterity Saving Throw or take [2] damage (half on a successful save).</content>
-  <content contentuid="hps0005a0000000000000000000000001" version="1">Prismatic Spray: Poison</content>
-  <content contentuid="hps0005a0000000000000000000000002" version="1">Release a green ray of poison in a [1] cone. Each creature in the area must make a Dexterity Saving Throw or take [2] damage (half on a successful save).</content>
-  <content contentuid="hps0006a0000000000000000000000001" version="1">Prismatic Spray: Cold</content>
-  <content contentuid="hps0006a0000000000000000000000002" version="1">Release a blue ray of cold in a [1] cone. Each creature in the area must make a Dexterity Saving Throw or take [2] damage (half on a successful save).</content>
+  <content contentuid="hps0001a0000000000000000000000001" version="2">Prismatic Spray</content>
+  <content contentuid="hps0001a0000000000000000000000002" version="2">Eight rays of light flash from you in a [1] cone. Each creature in it makes a Dexterity saving throw, and a d8 decides which ray strikes it.&lt;br&gt;1-5 Red, orange, yellow, green or blue: [2], Acid, Lightning, Poison or Cold damage; half on a successful save.&lt;br&gt;6 Indigo: on a failed save, Restrained. It makes a Constitution saving throw at the end of each of its turns: three successes end it, three failures turn it to stone (Petrified until Greater Restoration).&lt;br&gt;7 Violet: on a failed save, Blinded. At the start of your next turn it makes a Wisdom saving throw: on a failure it is sent to another plane (Banished).&lt;br&gt;8: two rays (roll twice, rerolling any 8).</content>
+  <content contentuid="hps0002a0000000000000000000000001" version="2">Prismatic Spray: Red Ray</content>
+  <content contentuid="hps0003a0000000000000000000000001" version="2">Prismatic Spray: Orange Ray</content>
+  <content contentuid="hps0004a0000000000000000000000001" version="2">Prismatic Spray: Yellow Ray</content>
+  <content contentuid="hps0005a0000000000000000000000001" version="2">Prismatic Spray: Green Ray</content>
+  <content contentuid="hps0006a0000000000000000000000001" version="2">Prismatic Spray: Blue Ray</content>
+  <content contentuid="hps0007a0000000000000000000000001" version="1">Prismatic Spray: Indigo</content>
+  <content contentuid="hps0007a0000000000000000000000002" version="1">Restrained. At the end of each of its turns it makes a Constitution saving throw. Three successes end this; three failures turn it to stone (Petrified until freed by Greater Restoration).</content>
+  <content contentuid="hps0008a0000000000000000000000001" version="1">Prismatic Spray: Violet</content>
+  <content contentuid="hps0008a0000000000000000000000002" version="1">Blinded. At the start of the caster's next turn it makes a Wisdom saving throw: on a success this ends; on a failure it is sent to another plane.</content>
+  <content contentuid="hps0009a0000000000000000000000001" version="1">Lost to Another Plane</content>
+  <content contentuid="hps0009a0000000000000000000000002" version="1">A violet ray of Prismatic Spray sent this creature to another plane of existence.</content>
 
   <content contentuid="hrg0001a0000000000000000000000001" version="1">Regenerate</content>
   <content contentuid="hrg0001a0000000000000000000000002" version="1">Touch a creature to restore [1] Hit Points. For 1 hour, the target regains [2] at the start of each of its turns.</content>
@@ -3512,4 +3513,8 @@
   <content contentuid="hd2305214ba2c5a16a00cc5eca794d04f" version="1">Cast Wall of Ice without expending a spell slot. You can't do so again until you finish a Long Rest.</content>
   <content contentuid="h5ba4bbaa77b859ac8e64874d5e6e2f03" version="1">Frozen Soul</content>
   <content contentuid="h797333581ded58fc934d45e751a2e7d3" version="1">You are immune to Cold damage and resistant to Fire damage. You can cast Wall of Ice once per Long Rest without expending a spell slot (it doesn't count against your spells known).</content>
+  <content contentuid="h821ab902ff445e26b161677897ec82d7" version="1">Signature Arcanum: Prismatic Spray (level 7)</content>
+  <content contentuid="h5d073c9ff2df53228a2ae84ec841597b" version="1">Choose Prismatic Spray as your Signature Arcanum spell.</content>
+  <content contentuid="hfc7b12c6be7d572081e4ea2e9dcadd5a" version="1">Signature Arcanum: Prismatic Spray</content>
+  <content contentuid="ha5db512eacae57a28d7edebb14415baf" version="1">Prismatic Spray (Signature)</content>
 </contentList>

@@ -1188,6 +1188,13 @@ if Ext and type(Ext.Require) == "function" then
         Log.Warn("SubclassFeatures bootstrap load failed: " .. tostring(sfOrErr))
     end
 
+    local okPs, psOrErr = pcall(Ext.Require, "PrismaticSpray.lua")
+    if okPs and type(psOrErr) == "table" then
+        Log.Info("PrismaticSpray loaded at bootstrap")
+    else
+        Log.Warn("PrismaticSpray bootstrap load failed: " .. tostring(psOrErr))
+    end
+
     local okSm, smnOrErr = pcall(Ext.Require, "Summons.lua")
     if okSm and type(smnOrErr) == "table" then
         Log.Info("Summons loaded at bootstrap")

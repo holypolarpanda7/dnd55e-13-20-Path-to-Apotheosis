@@ -253,10 +253,24 @@ Two implementations of Prismatic Spray and of Dominate Monster were both on the 
 Foresight was defined twice in Spell_HighLevel.txt (the later, less accurate copy won), and Feeblemind sat on the Bard
 lists next to its PHB 2024 replacement Befuddlement. Kept the more accurate version (VISION: accuracy over homebrew):
 - Prismatic Spray: Spell_Zone.txt `Zone_PrismaticSpray` (12d6 per ray, as the rule) - the generated one dealt 2d6 of five
-  types. Concentration flag removed (the spell has none). Known gap: the caster picks the ray (the rule rolls a d8 per
-  creature) and the indigo/violet rays aren't implemented.
+  types. Reworked the same day to the full PHB 2024 rule (user decision): one cast, a d8 per creature (8 = two rays),
+  indigo (Restrained, Con save at each turn end until three of a kind; three failures = Petrified) and violet (Blinded,
+  Wis save at the start of the caster's next turn; failure = APO_PRISMATIC_BANISHED, our stand-in for "another plane").
+  The d8s and follow-up saves are ScriptExtender/Lua/PrismaticSpray.lua; damage stays in the spell (Evasion, combat
+  log, spell DC). No higher-level casting (the 14d6/16d6 upcasts were homebrew). Back in Magic School Mastery.
 - Dominate Monster: Spell_Target.txt `Target_DominateMonster` (Wisdom save, advantage when fighting, its own status, 9th
   level upcast) - the generated one was a Dominate Person reskin.
 - Foresight: the 8-hour, touch version, limited to willing creatures.
 - Feeblemind: off every list; kept only as Befuddlement's chassis.
 generate_level79_spells.py REMOVE_FROM_LISTS strips the dropped ones on every regen.
+
+## Spells learned at level-up, 13-20 (2026-10-05)
+The level-up screen offers a selector's list as the game loads it: dnd55e's one-level lists are cumulative in game through
+`MergedInto` lists, ours had none, so Sorcerer 13 offered only level 7 spells (seen in game). Fixed by
+Scripts/gen_learn_lists.py, against the PHB 2024 tables (tests/bg3/class_tables.toml):
+- Sorcerer: cumulative lists (1-7 / 1-8 / 1-9), +1 spell at 13, 15, 17, 18, 19, 20 (was 13, 14, 15, 17), replace one every level.
+- Warlock: a regular pact spell (levels 1-5) at 13, 15, 17, 19 - there was none - and a replacement every level.
+- Bard: one Magical Secrets spell a level (was two: Magical Secrets + a Bard-list pick), replacement at 14 and 16 too.
+- Occultist Guild: learns from the level 1-3 Wizard list (was 1-2, with 3rd-level slots).
+Caught from now on by bg3_lint_progressions (NARROW SPELL CHOICES, SPELLS PER LEVEL) and by every test build, which fails a
+level whose level-up screen offers spell levels with gaps.

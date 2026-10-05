@@ -1191,6 +1191,13 @@ data "UseCosts" "ActionPoint:1;EpicBoonSignature:1"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade"
 data "DisplayName" "h604a07db18965404a1e087d2921afd43"
 
+new entry "Zone_PrismaticSpray_EpicSignature"
+type "SpellData"
+using "Zone_PrismaticSpray"
+data "UseCosts" "ActionPoint:1;EpicBoonSignature:1"
+data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell;CanAreaDamageEvade"
+data "DisplayName" "ha5db512eacae57a28d7edebb14415baf"
+
 new entry "Zone_RimesBindingIce_EpicSignature"
 type "SpellData"
 using "Zone_RimesBindingIce"

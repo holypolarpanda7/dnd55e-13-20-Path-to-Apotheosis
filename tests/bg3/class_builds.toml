@@ -536,3 +536,19 @@ title = "Sorcerer - FrostSorcery, levels 2-20"
 subclass = "FrostSorcery"
 from = "sorcerer-base"
 levels = [2, 20]
+
+[[build]]
+id = "fighter-eldritchknight"
+class = "Fighter"
+title = "Fighter - Eldritch Knight, levels 2-20 (third caster: Wizard spells, learned at level-up)"
+subclass = "EldritchKnight"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-arcanetrickster"
+class = "Rogue"
+title = "Rogue - Arcane Trickster, levels 2-20 (third caster: Wizard spells, learned at level-up)"
+subclass = "ArcaneTrickster"
+from = "rogue-base"
+levels = [2, 20]

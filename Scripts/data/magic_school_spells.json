@@ -201,7 +201,8 @@
       "7": [
         "Projectile_Apo_DelayedBlastFireball",
         "Target_Apo_FireStorm",
-        "Target_Apo_Forcecage"
+        "Target_Apo_Forcecage",
+        "Zone_PrismaticSpray"
       ]
     },
     "Illusion": {
@@ -353,8 +354,7 @@
     "Target_SpiritualWeapon",
     "Target_SummonBeast",
     "Zone_AstralFlood",
-    "Zone_ElementalExhalation",
-    "Zone_PrismaticSpray"
+    "Zone_ElementalExhalation"
   ],
   "spells": {
     "Projectile_Apo_DelayedBlastFireball": {
@@ -1208,7 +1208,7 @@
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
       "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
       "level": 1,
-      "name": "Hell\u2019s Lash",
+      "name": "Hell’s Lash",
       "school": "Evocation"
     },
     "Target_Heroism": {
@@ -1798,6 +1798,13 @@
       "level": 3,
       "name": "Tidal Wave",
       "school": "Conjuration"
+    },
+    "Zone_PrismaticSpray": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell;CanAreaDamageEvade",
+      "level": 7,
+      "name": "Prismatic Spray",
+      "school": "Evocation"
     }
   }
 }

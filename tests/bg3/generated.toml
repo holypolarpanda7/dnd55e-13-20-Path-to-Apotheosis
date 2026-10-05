@@ -73,20 +73,31 @@ expect = [
 ]
 
 [[case]]
-id = "spell-WildMagic-Zone_PrismaticSpray_Fire"
+id = "spell-WildMagic-Zone_PrismaticSpray-indigo"
 class = "Sorcerer"
 subclass = "WildMagic"
 level = 13
-spell = "Zone_PrismaticSpray_Fire"
-title = "Prismatic Spray damages a hostile wolf"
+spell = "Zone_PrismaticSpray"
+title = "Prismatic Spray: indigo Restrains; three failed Constitution saves at its turn ends turn it to stone"
 target = "A"
-retries = 1
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
-expect = [
-  { target = "A", hp_change = [-999, -1] },
-  { cast = true },
-  { resource = "SpellSlot", level = 7, change = -1 },
-]
+setup = [{ target = "A", status = "APO_PRISM_FORCE_6", turns = 10 }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity);AbilityFailedSavingThrow(Constitution)" }]
+end_turns = 6
+expect = [{ target = "A", status_applied = ["APO_PRISMATIC_INDIGO", "PETRIFIED"] }, { target = "A", status_absent = ["APO_PRISMATIC_INDIGO"] },
+          { target = "A", hp_change = [0, 0] }]
+
+[[case]]
+id = "spell-WildMagic-Zone_PrismaticSpray-violet"
+class = "Sorcerer"
+subclass = "WildMagic"
+level = 13
+spell = "Zone_PrismaticSpray"
+title = "Prismatic Spray: violet Blinds; a failed Wisdom save at the start of the caster's next turn sends it to another plane"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", status = "APO_PRISM_FORCE_7", turns = 10 }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity);AbilityFailedSavingThrow(Wisdom)" }]
+end_turns = 2
+expect = [{ target = "A", status_applied = ["APO_PRISMATIC_VIOLET", "APO_PRISMATIC_BANISHED"] }, { target = "A", status_absent = ["APO_PRISMATIC_VIOLET"] }]
 
 [[case]]
 id = "spell-Fiend-Target_Apo_Forcecage"
@@ -398,13 +409,13 @@ class = "Warlock"
 subclass = "GreatOldOne"
 level = 15
 spell = "Target_DominateMonster"
-title = "Dominate Monster applies DOMINATE_PERSON to a hostile wolf"
+title = "Dominate Monster applies DOMINATE_MONSTER to a hostile wolf"
 target = "A"
 retries = 2
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 notes = "the wolf can pass a save: the case retries up to twice"
 expect = [
-  { target = "A", status_applied_any = ["DOMINATE_PERSON"] },
+  { target = "A", status_applied_any = ["DOMINATE_MONSTER"] },
   { cast = true },
 ]
 
@@ -700,3 +711,62 @@ expect_log = "FeatureTest Barbarian_PersistentRage: PASS"
 fail_log = "FeatureTest Barbarian_PersistentRage: FAILED"
 wait = 12
 retries = 2
+
+[[case]]
+id = "spell-WildMagic-Zone_PrismaticSpray"
+class = "Sorcerer"
+subclass = "WildMagic"
+level = 13
+spell = "Zone_PrismaticSpray"
+title = "Prismatic Spray into a pack of five wolves: each gets its own ray (pinned) - red, indigo, two rays (red + blue), violet, green"
+target = "A"
+spawn = [{ as = "W1", template = "wolf", faction = "hostile", hp = 300, distance = 7 },
+         { as = "W2", template = "wolf", faction = "hostile", hp = 300, distance = 7 },
+         { as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 7 },
+         { as = "W4", template = "wolf", faction = "hostile", hp = 300, distance = 7 },
+         { as = "W5", template = "wolf", faction = "hostile", hp = 300, distance = 7 }]
+spread = 9
+setup = [{ target = "W1", status = "APO_PRISM_FORCE_1", turns = 10 }, { target = "W2", status = "APO_PRISM_FORCE_6", turns = 10 },
+         { target = "A", status = "APO_PRISM_FORCE_1", turns = 10 }, { target = "A", status = "APO_PRISM_FORCE_5", turns = 10 },
+         { target = "W4", status = "APO_PRISM_FORCE_7", turns = 10 }, { target = "W5", status = "APO_PRISM_FORCE_4", turns = 10 },
+         { target = "W1", boost = "AbilityFailedSavingThrow(Dexterity)" }, { target = "W2", boost = "AbilityFailedSavingThrow(Dexterity)" },
+         { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }, { target = "W4", boost = "AbilityFailedSavingThrow(Dexterity)" },
+         { target = "W5", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [
+  { target = "W1", status_applied = ["APO_PRISMATIC_FIRE"] }, { target = "W1", hp_change = [-999, -1] },
+  { target = "W2", status_applied = ["APO_PRISMATIC_INDIGO"] }, { target = "W2", hp_change = [0, 0] },
+  { target = "A", status_applied = ["APO_PRISMATIC_FIRE", "APO_PRISMATIC_COLD"] }, { target = "A", hp_change = [-999, -1] },
+  { target = "W4", status_applied = ["APO_PRISMATIC_VIOLET"] }, { target = "W4", hp_change = [0, 0] },
+  { target = "W5", status_applied = ["APO_PRISMATIC_POISON"] },
+  { cast = true },
+  { resource = "SpellSlot", level = 7, change = -1 },
+]
+
+[[case]]
+id = "spell-WildMagic-Zone_PrismaticSpray-saves"
+class = "Sorcerer"
+subclass = "WildMagic"
+level = 13
+title = "Prismatic Spray, the save results: half on a save, Evasion halves a failure and cancels a success, indigo does nothing on a save"
+notes = "a scripted cast never rolls saves (every creature fails), so the save results the spell records are applied directly, by you"
+spawn = [{ as = "W1", template = "wolf", faction = "hostile", hp = 300, distance = 7 },
+         { as = "W2", template = "wolf", faction = "hostile", hp = 300, distance = 7 },
+         { as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 7 },
+         { as = "W4", template = "wolf", faction = "hostile", hp = 300, distance = 7 },
+         { as = "W5", template = "wolf", faction = "hostile", hp = 300, distance = 7 }]
+spread = 9
+setup = [{ target = "W1", status = "APO_PRISM_FORCE_1", turns = 10 }, { target = "W2", status = "APO_PRISM_FORCE_1", turns = 10 },
+         { target = "W2", passive = "Rogue_7_Evasion" }, { target = "A", status = "APO_PRISM_FORCE_1", turns = 10 },
+         { target = "A", passive = "Rogue_7_Evasion" }, { target = "W4", status = "APO_PRISM_FORCE_6", turns = 10 },
+         { target = "W5", status = "APO_PRISM_FORCE_1", turns = 10 },
+         { target = "W1", status = "APO_PRISMATIC_GRAZED", turns = 1, by = "host" }, { target = "W2", status = "APO_PRISMATIC_GRAZED", turns = 1, by = "host" },
+         { target = "A", status = "APO_PRISMATIC_STRUCK", turns = 1, by = "host" }, { target = "W4", status = "APO_PRISMATIC_GRAZED", turns = 1, by = "host" },
+         { target = "W5", status = "APO_PRISMATIC_STRUCK", turns = 1, by = "host" }]
+expect = [
+  { target = "W1", status_applied = ["APO_PRISMATIC_FIRE_HALF"] }, { target = "W1", status_applied_count = { status = "APO_PRISMATIC_FIRE", count = [0, 0] } },
+  { target = "W2", status_applied_count = { status = "APO_PRISMATIC_FIRE_HALF", count = [0, 0] } },
+  { target = "W2", status_applied_count = { status = "APO_PRISMATIC_FIRE", count = [0, 0] } }, { target = "W2", hp = 300 },
+  { target = "A", status_applied = ["APO_PRISMATIC_FIRE_HALF"] }, { target = "A", status_applied_count = { status = "APO_PRISMATIC_FIRE", count = [0, 0] } },
+  { target = "W4", status_applied_count = { status = "APO_PRISMATIC_INDIGO", count = [0, 0] } }, { target = "W4", hp = 300 },
+  { target = "W5", status_applied = ["APO_PRISMATIC_FIRE"] },
+]
