@@ -238,3 +238,12 @@ Attack action.
 - Object into creature: a nonmagical object becomes a Minotaur, Dire Wolf, Phase Spider or Shadow Mastiff that
   follows you; it reverts if Concentration ends early, stays after the full hour. BG3 has no full-statblock
   forms between CR 7 and CR 9 to offer for objects, so the choice stops at CR 3 there.
+
+## Hotbar: 9th-level spell slots (fixed 2026-10-04)
+The hotbar's action resource bar (HotBar.xaml `ActionResourcesList`, bound to the engine's
+`CurrentPlayer.UIData.ActionResourcesCostPreview`) lists spell slot levels 1 to MaxLevel - 1 of the `SpellSlot` resource
+definition. The base game's MaxLevel is 9, so a level 17+ caster's 9th-level slots existed (and could be spent) but never
+showed: the bar ended at VIII. Apotheosis overrides the base `SpellSlot` definition (same UUID) with MaxLevel 10 in
+ActionResourceDefinitions.lsx; checked in game: the engine list then holds levels 1-9 and the bar shows IX. No UI file is
+replaced, so it can't conflict with UI mods.
+

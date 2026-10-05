@@ -4,6 +4,19 @@
     <region id="ActionResourceDefinitions">
         <node id="root">
             <children>
+                <!-- ==================== SPELL SLOT DISPLAY (2026-10-04) ==================== -->
+                <!-- Base SpellSlot with MaxLevel 10: the hotbar lists slot levels 1..MaxLevel-1, so 9 hid the 9th-level slots -->
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="h6ba89950gb4e2g4363ga6eagd245088261ad" version="3"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4e0bbc17g498dg4eebgbd9fg439e25625039" version="2"/>
+                    <attribute id="IsSpellResource" type="bool" value="true"/>
+                    <attribute id="MaxLevel" type="uint32" value="10"/>
+                    <attribute id="Name" type="FixedString" value="SpellSlot"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="d136c5d9-0ff0-43da-acce-a74a07f8d6bf"/>
+                    <attribute id="UpdatesSpellPowerLevel" type="bool" value="true"/>
+                </node>
                 <!-- ==================== SPELL MASTERY RESOURCES ==================== -->
                 <!-- Resource for selecting Level 1 Spell Mastery spell -->
                 <node id="ActionResourceDefinition">
