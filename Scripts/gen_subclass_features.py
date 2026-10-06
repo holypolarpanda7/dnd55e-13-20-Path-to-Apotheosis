@@ -872,8 +872,8 @@ EXISTING["bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbb905"] = {
 
 # ================================================================ Cleric: Apocalypse Domain 17 Life Beyond Death (Cthulhu by Torchlight;
 # library excerpts/subclasses/ApocalypseDomain_CthulhuByTorchlight.txt, from the user 2026-10-05). "About to make a Death Saving
-# Throw" has no BG3 trigger: offered when you or an ally within 36m drops (gains DOWNED), i.e. before its first death save. No action
-# or Reaction; works while you're Downed too. The slot level is picked in the prompt like Hellish Rebuke (a Stack of 1-9).
+# Throw" has no BG3 trigger: offered when an attack or spell drops an ally within 36m (its HP after the hit), i.e. before its first
+# death save; verified with a borrowed party member 2026-10-06. No action or Reaction. The slot level is picked in the prompt like Hellish Rebuke (a Stack of 1-9).
 APOCALYPSE = "26eaf048-405d-442a-b44f-d500bb1cc613"
 LBD_TEXT = ("When you or an ally within 36m drops to 0 Hit Points, you can expend a spell slot (no action required) to heal them "
             "ten times the slot's level.")
@@ -886,14 +886,16 @@ for lv in range(1, 10):
              **({} if lv == 1 else {"RootSpellID": "Shout_Apo_LifeBeyondDeath", "PowerLevel": str(lv)})},
             icon="Spell_Necromancy_Revivify")
     G.interrupt(f"Interrupt_Apo_LifeBeyondDeath{sfx}", "Life Beyond Death", f"Heal a fallen ally {10 * lv} Hit Points.",
-                {"InterruptContext": "OnStatusApplied", "InterruptContextScope": "Nearby", "Container": "YesNoDecision",
-                 "Conditions": "not Dead(context.Observer) and HasStatus('DOWNED',context.Target) and "
-                               "(Self(context.Target,context.Observer) or Ally(context.Target,context.Observer)) and "
+                {"InterruptContext": "OnCastHit", "InterruptContextScope": "Nearby", "Container": "YesNoDecision",
+                 "Conditions": "not Dead(context.Observer) and not Self(context.Target,context.Observer) and "
+                               "Ally(context.Target,context.Observer) and HasDamageEffectFlag(DamageFlags.Hit) and "
+                               "HasFunctor(StatsFunctorType.DealDamage) and HasHPLessThan(1,context.Target) and "
                                "not DistanceToEntityGreaterThan(36, context.ObserverPosition, context.Target)",
-                 "Properties": f"RegainHitPoints({10 * lv})", "Cost": f"SpellSlotsGroup:1:1:{lv}",
+                 "Properties": f"ApplyStatus(OBSERVER_TARGET,APO_LIFE_BEYOND_DEATH_{lv},100,0)", "Cost": f"SpellSlotsGroup:1:1:{lv}",
                  "Stack": "ApoLifeBeyondDeath", "InterruptDefaultValue": "Ask;Enabled"},
                 icon="Spell_Necromancy_Revivify",
-                comment="OnStatusApplied + Nearby as dnd55e Interrupt_ArcaneJolt_SteelDefender; Stack as Hellish Rebuke" if lv == 1 else None)
+                comment=("OnCastHit + Nearby with the target's HP after the hit, as dnd55e Interrupt_Bloodthirst_10 (an OnStatusApplied "
+                         "DOWNED interrupt never fired for a party member, 2026-10-06); Stack as Hellish Rebuke") if lv == 1 else None)
 # you yourself: a Downed character gets no reaction prompt (seen in game 2026-10-05), so when YOU drop, SubclassFeatures.lua
 # spends your lowest spell slot with a charge and applies APO_LIFE_BEYOND_DEATH_<level> (user decision 2026-10-06)
 for lv in range(1, 10):

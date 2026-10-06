@@ -556,6 +556,20 @@ expect = [{ target = "host", dead = false }, { target = "host", status_applied =
 notes = "A Downed character gets no reaction prompt, so for yourself SubclassFeatures.lua spends the lowest slot (user decision 2026-10-06). Allies keep the prompt (needs a party member to test)."
 
 [[case]]
+id = "apocalypse-17-life-beyond-death-ally"
+title = "Apocalypse Domain 17 Life Beyond Death (reaction): an ally within 36m drops to 0 - spend a spell slot, it regains 10 x the slot level"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "B"
+safety = false
+reactions = ["LifeBeyondDeath"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 3 },
+         { as = "B", companion = "shadowheart", distance = 2 }]
+setup = [{ target = "host", passive = "Apocalypse_17_LifeBeyondDeath" }, { target = "B", hp = 1 }, { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ target = "B", status_absent = ["DOWNED"] }, { target = "B", status_applied = ["APO_LIFE_BEYOND_DEATH_1"] }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
+notes = "Shadowheart is borrowed into the party (a spawned NPC dies at 0 HP instead of dropping). The reaction is an OnCastHit check of the ally's HP after the hit: an OnStatusApplied DOWNED interrupt never fired (2026-10-06)."
+
+[[case]]
 id = "aberrant-18-warping-implosion"
 title = "Aberrant Sorcery 18 Warping Implosion: you teleport; a creature near the space you left fails Strength - 3d10 Force once, pulled toward it"
 spell = "Target_Apotheosis_WarpingImplosion"
