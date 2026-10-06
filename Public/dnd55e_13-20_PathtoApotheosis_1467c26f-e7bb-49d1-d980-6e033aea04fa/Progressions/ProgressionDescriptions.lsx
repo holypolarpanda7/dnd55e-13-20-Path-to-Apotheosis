@@ -4,7 +4,6 @@
     <region id="ProgressionDescriptions">
         <node id="root">
             <children>
-                <!-- EPIC BOONS BEGIN (Scripts/gen_epic_boons.py) -->
                 <node id="ProgressionDescription">
                     <attribute id="Description" type="TranslatedString" handle="h9277c5ef205053659d6ca467baa04b51" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="he30df88513a253bfb2b0ab0ce34b4721" version="1"/>
@@ -17,7 +16,12 @@
                     <attribute id="SelectorId" type="FixedString" value="EpicBoonAbility"/>
                     <attribute id="UUID" type="guid" value="46ed5b45-1d27-5a4b-92e6-ccd55d82f120"/>
                 </node>
-                <!-- EPIC BOONS END -->
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h02cfc9f7f9a35f0dbd1a211135f76201" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hb71f8d903c745ec48525755b605e027a" version="1"/>
+                    <attribute id="SelectorId" type="FixedString" value="PowerOfTheWilds"/>
+                    <attribute id="UUID" type="guid" value="053e2d28-85c4-5e51-a283-08918394a3d8"/>
+                </node>
             </children>
         </node>
     </region>

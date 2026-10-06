@@ -4333,4 +4333,6 @@
   <content contentuid="he30df88513a253bfb2b0ab0ce34b4721" version="1">Epic Boon</content>
   <content contentuid="hc3e776c2e60e5606b5884682dba73775" version="1">Every Epic Boon raises one ability score by 1, to a maximum of 30. If your boon already names its ability (for example Boon of Irresistible Offense (+1 Strength)), choose "increase included in my boon".</content>
   <content contentuid="h5d3d50c9148c5818816233cdd1cebdc8" version="1">Epic Boon: Ability Increase</content>
+  <content contentuid="hb71f8d903c745ec48525755b605e027a" version="1">Power of the Wilds</content>
+  <content contentuid="h02cfc9f7f9a35f0dbd1a211135f76201" version="1">Choose the power of the wilds you gain whenever you enter a Rage.</content>
 </contentList>
