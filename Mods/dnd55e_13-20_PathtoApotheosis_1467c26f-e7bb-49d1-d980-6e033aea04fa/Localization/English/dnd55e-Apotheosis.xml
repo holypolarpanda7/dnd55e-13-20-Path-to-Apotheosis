@@ -3517,4 +3517,38 @@
   <content contentuid="h5d073c9ff2df53228a2ae84ec841597b" version="1">Choose Prismatic Spray as your Signature Arcanum spell.</content>
   <content contentuid="hfc7b12c6be7d572081e4ea2e9dcadd5a" version="1">Signature Arcanum: Prismatic Spray</content>
   <content contentuid="ha5db512eacae57a28d7edebb14415baf" version="1">Prismatic Spray (Signature)</content>
+  <content contentuid="hdbee23df9624570cb36fc43a607f9555" version="1">Lay on Hands: Restore (Blinded)</content>
+  <content contentuid="hb84e93f900df563b83e891c0b46231e6" version="1">Restoring Touch: spend Lay on Hands to end the Blinded condition on a creature you touch.</content>
+  <content contentuid="h4834c33a23b15b58a4fcac5d3fc62970" version="1">Lay on Hands: Restore (Charmed)</content>
+  <content contentuid="hb09fd31aa5525469b0e147935769a607" version="1">Restoring Touch: spend Lay on Hands to end the Charmed condition on a creature you touch.</content>
+  <content contentuid="h36c8bf8d55ae51c7a35e9e2bb0ccb4df" version="1">Lay on Hands: Restore (Frightened)</content>
+  <content contentuid="hec381a45e9265e1aab57c694029772f6" version="1">Restoring Touch: spend Lay on Hands to end the Frightened condition on a creature you touch.</content>
+  <content contentuid="h25111418ba325aec9b99e4653ea6e8fd" version="1">Lay on Hands: Restore (Paralyzed)</content>
+  <content contentuid="hed927e8f9cd75edab649a2b42a31f6fd" version="1">Restoring Touch: spend Lay on Hands to end the Paralyzed condition on a creature you touch.</content>
+  <content contentuid="h19d98e6a1b3a5855ae618e9fa1f8e5aa" version="1">Lay on Hands: Restore (Stunned)</content>
+  <content contentuid="h9fa0575da9f857fc8e1bdc47582ab66f" version="1">Restoring Touch: spend Lay on Hands to end the Stunned condition on a creature you touch.</content>
+  <content contentuid="h9e544de5cbf257b99b48d23ecaf278ae" version="1">Restoring Touch</content>
+  <content contentuid="h1ba7cf504b7a5d3485de9f29c6852ded" version="1">When you use Lay on Hands on a creature, you can also remove the Blinded, Charmed, Frightened, Paralyzed or Stunned condition (one Lay on Hands use for each). (The rule also lists Deafened, which BG3 doesn't have.)</content>
+  <content contentuid="h61b62e1a2797577dbf808f5382ae494d" version="1">Cunning Strike: Daze</content>
+  <content contentuid="hd08d0b44229459e5952a7e4f8270ade4" version="1">Daze: the target makes a Constitution saving throw or, on its next turn, can't take Bonus Actions or Reactions. (Devious Strikes.)</content>
+  <content contentuid="ha221069439fa5363b9ca6fed0cf2a8c0" version="1">Cunning Strike: Knock Out</content>
+  <content contentuid="h0b21494522c65c75a1c89adf6cc215ff" version="1">Knock Out: the target makes a Constitution saving throw or falls Unconscious for 1 minute or until it takes damage (it repeats the save at the end of each of its turns). (Devious Strikes.)</content>
+  <content contentuid="ha5517d14bbd85f6fb7d4f276d3508817" version="1">Cunning Strike: Obscure</content>
+  <content contentuid="hbdbdd1b79e8759e8af590911e1a5a435" version="1">Obscure: the target makes a Dexterity saving throw or is Blinded until the end of its next turn. (Devious Strikes.)</content>
+  <content contentuid="he629130d07925ee197e2aea40439c339" version="1">Dazed</content>
+  <content contentuid="h1f3eeb5bffca591fa18dc8a2c81e2d94" version="1">Can't take Bonus Actions or Reactions this turn (Devious Strikes).</content>
+  <content contentuid="hc45aee05e703597aa2df93d81e579520" version="1">Knocked Out</content>
+  <content contentuid="h5c6f5aef81d05f09837374b67433ed61" version="1">Unconscious until it takes damage or succeeds on a Constitution saving throw at the end of its turn (Devious Strikes).</content>
+  <content contentuid="h34d5b6fc834f59718c5bffea8deb5312" version="1">Devious Strikes</content>
+  <content contentuid="hf3b63334c4045e038a0ab0a981ad1b7e" version="1">New Cunning Strike options: Daze, Knock Out and Obscure. (Toggle one before your Sneak Attack, like the other Cunning Strike options; the dice costs aren't modelled, as in dnd55e's Cunning Strike.)</content>
+  <content contentuid="h1b7992252ee252bdac9af208ed76c91c" version="1">Envenom Weapons</content>
+  <content contentuid="ha8abcf6463e55b3487b665bb489b6b6d" version="1">When you use the Poison option of your Cunning Strike, a target that fails the saving throw also takes 2d6 Poison damage, and again each time it fails the repeat save. Your Poison damage ignores Resistance.</content>
+  <content contentuid="haa018bdb7b7a56abafe164c5a98601fa" version="1">Advanced Artifice</content>
+  <content contentuid="h65d9beae82f350b0bbc05a389f8a3255" version="1">Refreshed Genius: when you finish a Short Rest, you regain one expended use of Flash of Genius. (Magic Item Savant - attuning to five magic items - has no counterpart in BG3, which has no attunement.)</content>
+  <content contentuid="ha11a987c72cd55609e15bcfd53a65097" version="1">Inspiring Commander</content>
+  <content contentuid="hb5a23a55348a515dba6c07ffb5a8c841" version="1">Bolstered Rally: Group Recovery and Rallying Surge reach allies in a 60-foot Emanation. Unshakable Bravery: you have Immunity to the Charmed and Frightened conditions.</content>
+  <content contentuid="h11351a6a92375c07ba77d2c92333f246" version="1">Aura of Malevolence</content>
+  <content contentuid="hacb5cd5fb8fc53239f9935721738765b" version="1">When you use Bloodthirst and teleport, each enemy within 10 feet of your destination takes damage equal to your Intelligence modifier, of your Dread Allegiance's type (Bane: Psychic, Bhaal: Poison, Myrkul: Necrotic).</content>
+  <content contentuid="h5b3ed5affb415abbb559bd0a6f810025" version="1">Dread Incarnate</content>
+  <content contentuid="h3b3825133eff5b33a11c958d3f102dea" version="1">Cutthroat: you regain one expended use of Bloodthirst when you finish a Short Rest. Murderous Intent: when you roll damage for a weapon attack (your Sneak Attack included), a 1 or 2 on a die counts as a 3.</content>
 </contentList>

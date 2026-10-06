@@ -473,18 +473,6 @@ FT.Register("Archfey_14_BewitchingMagic", {
 })
 
 -- Scion of the Three L13: static self boosts; no target needed.
-FT.Register("DeadThree_UnholyInfiltration", {
-    mode = "auto",
-    target = "none",
-    note = "static boosts (Stealth/Deception advantage, 18m darkvision); presence is the observable",
-    run = function(ctx, finish)
-        finish(true)
-    end,
-})
-
--- Barbarian L15: self only. Checks both halves of Persistent Rage: the
--- permanent RAGE_STOP_REMOVE marker, and the scripted Initiative refill
--- (spend one Rage use, call the feature, expect full Rage + the marker).
 FT.Register("Barbarian_PersistentRage", {
     mode = "auto",
     target = "none",

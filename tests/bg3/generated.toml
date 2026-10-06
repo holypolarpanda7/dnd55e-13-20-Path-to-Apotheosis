@@ -691,17 +691,6 @@ wait = 12
 retries = 2
 
 [[case]]
-id = "feature-DeadThree_UnholyInfiltration"
-subclass = "ScionThree"
-level = 13
-title = "DeadThree_UnholyInfiltration: static boosts (Stealth/Deception advantage, 18m darkvision); presence is the observable"
-console = "!apofeature DeadThree_UnholyInfiltration"
-expect_log = "FeatureTest DeadThree_UnholyInfiltration: PASS"
-fail_log = "FeatureTest DeadThree_UnholyInfiltration: FAILED"
-wait = 12
-retries = 2
-
-[[case]]
 id = "feature-Barbarian_PersistentRage"
 class = "Barbarian"
 level = 15

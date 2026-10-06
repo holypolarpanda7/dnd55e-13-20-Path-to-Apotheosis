@@ -274,3 +274,19 @@ Scripts/gen_learn_lists.py, against the PHB 2024 tables (tests/bg3/class_tables.
 - Occultist Guild: learns from the level 1-3 Wizard list (was 1-2, with 3rd-level slots).
 Caught from now on by bg3_lint_progressions (NARROW SPELL CHOICES, SPELLS PER LEVEL) and by every test build, which fails a
 level whose level-up screen offers spell levels with gaps.
+
+## Level 13-20 features aligned with the rules texts (2026-10-05)
+Found by bg3_lint_rules, approved by the user, built by Scripts/gen_rules_fixes.py (texts in D:\Library\DnD):
+- Paladin 14 Restoring Touch (PHB 2024) replaces our Cleansing Touch: Lay on Hands gains Restore options for Blinded, Charmed,
+  Frightened, Paralyzed, Stunned (one use each; BG3 has no Deafened).
+- Rogue 13 Subtle Strikes (+2 attack, not a rules feature) removed; Rogue 14 Devious Strikes: Daze, Knock Out, Obscure Cunning
+  Strike toggles, wired into dnd55e's 12 Sneak Attack entries like its Terrify option (dice costs not modelled, as in dnd55e).
+- Assassin 13 Envenom Weapons replaces our Infiltration Expertise: the Poison Cunning Strike deals 2d6 Poison on the failed
+  save and at each failed repeat save; the Assassin's Poison damage ignores Resistance.
+- Artificer 14 Advanced Artifice (Eberron: Forge of the Artificer): Refreshed Genius + the 4th cantrip; our "+1 to saves"
+  Magic Item Savant stand-in removed (BG3 has no attunement).
+- Banneret 18 Inspiring Commander (Heroes of Faerun) replaces Inspiring Surge (Improved): Group Recovery / Rallying Surge reach
+  doubled to 60 ft, Immunity to Charmed and Frightened.
+- Scion of the Three 13 Aura of Malevolence (Lua: SubclassFeatures.lua, after a Bloodthirst teleport) and 17 Dread Incarnate
+  (Cutthroat + Murderous Intent as written) replace our Unholy Infiltration and homebrew Murderous Intent.
+Static checks only (stats, progression and rules lints clean); not yet run in game.

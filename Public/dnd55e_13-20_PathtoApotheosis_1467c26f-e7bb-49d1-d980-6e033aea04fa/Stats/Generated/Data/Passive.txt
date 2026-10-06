@@ -141,14 +141,6 @@ data "Boosts" "ProficiencyBonus(SavingThrow,Strength);ProficiencyBonus(SavingThr
 // ROGUE - Base Class Passives (Levels 13-20)
 // ==============================================================================
 
-new entry "Rogue_SubtleStrikes"
-type "PassiveData"
-data "DisplayName" "ha2c3d4e50000000000000000000001f"
-data "Description" "ha2c3d4e600000000000000000000020"
-data "Icon" "Action_SneakAttack_Melee"
-data "Properties" "Highlighted"
-data "Boosts" "IF(IsWeaponAttack()):RollBonus(Attack,2)"
-
 new entry "Rogue_SlipperyMind"
 type "PassiveData"
 data "DisplayName" "h0000000000000000000000000000d003"
@@ -176,14 +168,6 @@ data "Boosts" "MinimumRollResult(SkillCheck,10);MinimumRollResult(SavingThrow,10
 // ==============================================================================
 // PALADIN - Base Class Passives (Levels 13-20)
 // ==============================================================================
-
-new entry "Paladin_CleansingTouch"
-type "PassiveData"
-data "DisplayName" "hd5f6a7b800000000000000000000025"
-data "Description" "hd5f6a7b900000000000000000000026"
-data "Icon" "Action_Paladin_LayOnHands_Cure"
-data "Properties" "Highlighted"
-data "Boosts" "UnlockSpell(Shout_Apotheosis_CleansingTouch)"
 
 new entry "Paladin_Aura30ft"
 type "PassiveData"
@@ -371,14 +355,6 @@ data "Boosts" "UnlockSpell(Shout_Apotheosis_EldritchMaster)"
 // ARTIFICER - Base Class Passives (Homebrew)
 // ==============================================================================
 
-new entry "Artificer_MagicItemSavant"
-type "PassiveData"
-data "DisplayName" "hd3f4a5b6a0000000000000000000049"
-data "Description" "hd3f4a5b7a000000000000000000004a"
-data "Icon" "Apo_Feat_MagicItemSavant"
-data "Properties" "Highlighted"
-data "Boosts" "RollBonus(SavingThrow,1)"
-
 new entry "Artificer_MagicItemMaster"
 type "PassiveData"
 data "DisplayName" "he4a5b6c7a000000000000000000004b"
@@ -461,14 +437,6 @@ data "Icon" "Apo_Feat_TelekineticMaster"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockSpell(Shout_Apotheosis_TelekineticThrust)"
 
-new entry "Banneret_InspiringSurge_Improved"
-type "PassiveData"
-data "DisplayName" "ha8c9d0e1a0000000000000000000067"
-data "Description" "ha8c9d0e2a0000000000000000000068"
-data "Icon" "Apo_Feat_ApotheosisInspiringSurge"
-data "Properties" "Highlighted"
-data "Boosts" "UnlockSpell(Shout_Apotheosis_InspiringSurge)"
-
 new entry "RuneKnight_RunicJuggernaut"
 type "PassiveData"
 data "DisplayName" "hb9d0e1f2a0000000000000000000069"
@@ -489,14 +457,6 @@ data "Icon" "Spell_Conjuration_MageHand"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockSpell(Target_Apotheosis_VersatileTrickster)"
 
-new entry "Assassin_InfiltrationExpertise"
-type "PassiveData"
-data "DisplayName" "hd1f2a3b4a000000000000000000006d"
-data "Description" "hd1f2a3b5a000000000000000000006e"
-data "Icon" "Apo_Feat_InfiltrationExpertise"
-data "Properties" "Highlighted"
-data "Boosts" "ExpertiseBonus(Stealth);Initiative(5)"
-
 new entry "Thief_UseMagicDevice"
 type "PassiveData"
 data "DisplayName" "hf3b4c5d6a0000000000000000000071"
@@ -504,18 +464,6 @@ data "Description" "hf3b4c5d7a0000000000000000000072"
 data "Icon" "PassiveFeature_FastHands"
 data "Properties" "Highlighted"
 data "Boosts" "ExpertiseBonus(Arcana);ExpertiseBonus(SleightOfHand)"
-
-new entry "DeadThree_UnholyInfiltration"
-type "PassiveData"
-data "DisplayName" "hb5d6e7f8a0000000000000000000075"
-data "Description" "hb5d6e7f9a0000000000000000000076"
-data "Icon" "Apo_Feat_UnholyInfiltration"
-data "Properties" "Highlighted"
-data "Boosts" "Advantage(Skill,Stealth);Advantage(Skill,Deception);DarkvisionRangeMin(18)"
-
-// ==============================================================================
-// SORCERER SUBCLASS PASSIVES
-// ==============================================================================
 
 new entry "WildMagic_18_TamedSurge"
 type "PassiveData"
@@ -1314,14 +1262,6 @@ data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnCast;OnStatusRemoved;OnStatusApplied"
 data "Conditions" "((context.HasContextFlag(StatsFunctorContext.OnCast) and IsSpell() and not IsWeaponAttack() and not IsRecastSpell() and HasUseCosts('ActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_WAR_MAGIC_TECHNICAL') and TurnBased()) or (context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and StatusId('EXTRA_ATTACK_WAR_MAGIC_Q'))) and not HasStatus('TAD_MIND_SANCTUARY',context.Source) and HasActionResource('BonusActionPoint', 1, 0, false, false, context.Source);"
 data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(SELF,EXTRA_ATTACK_WAR_MAGIC_Q,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusRemoved)):ApplyStatus(EXTRA_ATTACK_WAR_MAGIC_Q,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and not HasHigherPriorityExtraAttackQueued('EXTRA_ATTACK_WAR_MAGIC_Q') and not HasAnyExtraAttack()):ApplyStatus(EXTRA_ATTACK_WAR_MAGIC, 100, 1)"
-
-new entry "DeadThree_11_MurderousIntent"
-type "PassiveData"
-data "DisplayName" "hap0000000000000000000000000065"
-data "Description" "hap0000000000000000000000000066"
-data "Icon" "PassiveFeature_Reaper"
-data "Properties" "Highlighted"
-data "Boosts" "IF(IsWeaponAttack()):ReduceCriticalAttackThreshold(1);IF(IsWeaponAttack()):CharacterWeaponDamage(1d6,Necrotic)"
 
 new entry "ImprovedBlessedStrikes"
 type "PassiveData"

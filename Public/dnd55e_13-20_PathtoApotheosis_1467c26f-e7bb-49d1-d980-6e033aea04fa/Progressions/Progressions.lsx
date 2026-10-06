@@ -224,12 +224,12 @@
                 <node id="Progression">
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Rogue"/>
-                    <attribute id="PassivesAdded" type="LSString" value="Rogue_SubtleStrikes"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="9a44e828-92db-4d6c-acbc-a4f8ef340415"/>
                     <attribute id="UUID" type="guid" value="33333333-3333-3333-3333-333333333301"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="Rogue_14_DeviousStrikes;CunningStrike_Daze;CunningStrike_KnockOut;CunningStrike_Obscure"/>
                     <attribute id="Level" type="uint8" value="14"/>
                     <attribute id="Name" type="LSString" value="Rogue"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -295,9 +295,9 @@
                     <attribute id="UUID" type="guid" value="44444444-4444-4444-4444-444444444401"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="Paladin_14_RestoringTouch"/>
                     <attribute id="Level" type="uint8" value="14"/>
                     <attribute id="Name" type="LSString" value="Paladin"/>
-                    <attribute id="PassivesAdded" type="LSString" value="Paladin_CleansingTouch"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="ba2afe85-acba-4ea1-a238-2b4543f47821"/>
                     <attribute id="UUID" type="guid" value="44444444-4444-4444-4444-444444444402"/>
@@ -901,9 +901,10 @@
                     <attribute id="UUID" type="guid" value="cccccccc-cccc-cccc-cccc-ccccccccc901"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="Artificer_14_AdvancedArtifice"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(d5f17616-b3cf-47ff-b898-3e37c3961034,1,0,,,,AlwaysPrepared)"/>
                     <attribute id="Level" type="uint8" value="14"/>
                     <attribute id="Name" type="LSString" value="Artificer"/>
-                    <attribute id="PassivesAdded" type="LSString" value="Artificer_MagicItemSavant"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="1e84493e-aeff-4d0e-b3ae-6c2187245d23"/>
                     <attribute id="UUID" type="guid" value="cccccccc-cccc-cccc-cccc-ccccccccc902"/>
@@ -1196,9 +1197,9 @@
                 </node>
                 <!-- Assassin Level 13: Infiltration Expertise (or Impostor per 2024 PHB) -->
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="Assassin_13_EnvenomWeapons"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Assassin"/>
-                    <attribute id="PassivesAdded" type="LSString" value="Assassin_InfiltrationExpertise"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="TableUUID" type="guid" value="43c75b78-757b-4875-9932-427bc95278a0"/>
                     <attribute id="UUID" type="guid" value="02020202-0202-0202-0202-020202020202"/>
@@ -1281,28 +1282,20 @@
                 
                 <!-- SCION OF THE THREE (ScionThree) -->
                 <!-- Remove Murderous Intent at level 11 (was granted early) -->
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="11"/>
-                    <attribute id="Name" type="LSString" value="ScionThree"/>
-                    <attribute id="PassivesRemoved" type="LSString" value="DeadThree_11_MurderousIntent"/>
-                    <attribute id="ProgressionType" type="uint8" value="1"/>
-                    <attribute id="TableUUID" type="guid" value="60cd0d4d-532d-4a1c-bc6e-1bc2ca458db8"/>
-                    <attribute id="UUID" type="guid" value="05050505-0505-0505-0505-050505050501"/>
-                </node>
                 <!-- ScionThree Level 13: (homebrew feature placeholder) -->
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="DeadThree_13_AuraOfMalevolence"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="ScionThree"/>
-                    <attribute id="PassivesAdded" type="LSString" value="DeadThree_UnholyInfiltration"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="TableUUID" type="guid" value="60cd0d4d-532d-4a1c-bc6e-1bc2ca458db8"/>
                     <attribute id="UUID" type="guid" value="05050505-0505-0505-0505-050505050502"/>
                 </node>
                 <!-- ScionThree Level 17: Murderous Intent (correct level) -->
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="DeadThree_17_DreadIncarnate"/>
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="ScionThree"/>
-                    <attribute id="PassivesAdded" type="LSString" value="DeadThree_11_MurderousIntent"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="TableUUID" type="guid" value="60cd0d4d-532d-4a1c-bc6e-1bc2ca458db8"/>
                     <attribute id="UUID" type="guid" value="05050505-0505-0505-0505-050505050503"/>
@@ -1422,9 +1415,9 @@
                 </node>
                 <!-- Purple Dragon Knight Level 18: Inspiring Surge Improvement -->
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="Banneret_18_InspiringCommander"/>
                     <attribute id="Level" type="uint8" value="18"/>
                     <attribute id="Name" type="LSString" value="PurpleDragonKnight"/>
-                    <attribute id="PassivesAdded" type="LSString" value="Banneret_InspiringSurge_Improved"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="TableUUID" type="guid" value="9791d0bf-56f4-4c33-a16f-c3616d46ae01"/>
                     <attribute id="UUID" type="guid" value="09090909-0909-0909-0909-090909090903"/>

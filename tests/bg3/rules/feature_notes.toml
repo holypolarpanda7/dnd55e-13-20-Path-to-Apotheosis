@@ -2,3 +2,5 @@
 [feature]
 # Arachnoid Stalker 17: dnd55e already has a Cunning Strike Paralytic Venom at 9 (docs/SUBCLASS_SOURCING.md)
 "Paralytic Venom" = "skip"
+# Rogue 14: Devious Strikes is the passive plus its three Cunning Strike toggles
+"Devious Strikes" = ["Rogue_14_DeviousStrikes", "CunningStrike_Daze", "CunningStrike_KnockOut", "CunningStrike_Obscure"]

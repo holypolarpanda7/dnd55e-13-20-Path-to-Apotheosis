@@ -28,7 +28,7 @@
         "14": {
           "boosts": "",
           "passives": [
-            "Artificer_MagicItemSavant"
+            "Artificer_14_AdvancedArtifice"
           ],
           "selectors": ""
         },
@@ -586,7 +586,7 @@
         "14": {
           "boosts": "",
           "passives": [
-            "Paladin_CleansingTouch"
+            "Paladin_14_RestoringTouch"
           ],
           "selectors": ""
         },
@@ -686,9 +686,7 @@
       "levels": {
         "13": {
           "boosts": "",
-          "passives": [
-            "Rogue_SubtleStrikes"
-          ],
+          "passives": [],
           "selectors": ""
         },
         "14": {
@@ -1206,7 +1204,7 @@
         "13": {
           "boosts": "",
           "passives": [
-            "Assassin_InfiltrationExpertise"
+            "Assassin_13_EnvenomWeapons"
           ],
           "selectors": ""
         },
@@ -2286,7 +2284,7 @@
         "18": {
           "boosts": "",
           "passives": [
-            "Banneret_InspiringSurge_Improved"
+            "Banneret_18_InspiringCommander"
           ],
           "selectors": ""
         }
@@ -2361,14 +2359,14 @@
         "13": {
           "boosts": "",
           "passives": [
-            "DeadThree_UnholyInfiltration"
+            "DeadThree_13_AuraOfMalevolence"
           ],
           "selectors": ""
         },
         "17": {
           "boosts": "",
           "passives": [
-            "DeadThree_11_MurderousIntent"
+            "DeadThree_17_DreadIncarnate"
           ],
           "selectors": ""
         }

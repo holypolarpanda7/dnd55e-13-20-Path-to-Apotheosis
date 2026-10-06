@@ -9,6 +9,7 @@
 --  * Fractured 14 Better Half: at 0 HP once per rest, 1 HP + half-max temp HP, and the Rage state swaps.
 --  * Cavalier 18 Vigilant Defender (special Reaction per turn), Drunken Master 17 Intoxicated Frenzy (strikes after
 --    Flurry of Blows), Watchers 15 Vigilant Rebuke (successful Int/Wis/Cha saves).
+--  * Scion of the Three 13 Aura of Malevolence: damage around you after a Bloodthirst teleport.
 local Log = Apotheosis and Apotheosis.Log or { Info = print, Warn = print, Error = print, Debug = print }
 local SF = {}
 local NULL = "NULL_00000000-0000-0000-0000-000000000000"
@@ -353,6 +354,32 @@ function SF.BetterHalf(c)  -- APO_BETTER_HALF_DOWNED: up at 1 HP; half-max temp 
     Log.Info("Better Half: 1 HP, temp HP " .. tostring(health and health.TemporaryHp) .. ", raging was " .. tostring(raging))
 end
 
+-- ---------------------------------------------------------------- Scion of the Three 13 Aura of Malevolence (Heroes of Faerun)
+-- After a Bloodthirst teleport: each enemy within 10 feet of where you land takes damage equal to your Intelligence modifier,
+-- of your Dread Allegiance's type (Bane Psychic, Bhaal Poison, Myrkul Necrotic). The rule's "ignores Resistance" isn't modelled.
+local MALEVOLENCE = { DREAD_ALLEGIANCE_1 = "Psychic", DREAD_ALLEGIANCE_2 = "Poison", DREAD_ALLEGIANCE_3 = "Necrotic" }
+
+function SF.AuraOfMalevolence(c)
+    if not has(c, "DeadThree_13_AuraOfMalevolence") then return end
+    local dtype
+    for st, t in pairs(MALEVOLENCE) do
+        if Osi.HasActiveStatus(c, st) == 1 then dtype = t end
+    end
+    if not dtype then return end
+    local dmg = math.max(1, abilityMod(c, "Intelligence"))
+    Ext.Timer.WaitFor(800, function()   -- the jump has landed
+        local x, _, z = Osi.GetPosition(c)
+        if not x then return end
+        for _, g in ipairs(inCombatWith(c)) do
+            local gx, _, gz = Osi.GetPosition(g)
+            if g ~= c and gx and Osi.IsEnemy(c, g) == 1 and Osi.IsDead(g) ~= 1 and math.sqrt((gx - x) ^ 2 + (gz - z) ^ 2) <= 3 then
+                Osi.ApplyDamage(g, dmg, dtype, c)
+                Log.Info(string.format("Aura of Malevolence: %s takes %d %s", g, dmg, dtype))
+            end
+        end
+    end)
+end
+
 -- ---------------------------------------------------------------- listeners
 local function guard(name, fn)
     return function(...)
@@ -400,6 +427,7 @@ end))
 
 Ext.Osiris.RegisterListener("CastedSpell", 5, "after", guard("CastedSpell", function(c, spell)
     SF.OnCasted(short(c), spell)
+    if spell == "Projectile_Bloodthirst" then SF.AuraOfMalevolence(short(c)) end
     desperadoCasted(short(c), spell)
 end))
 Ext.Osiris.RegisterListener("TurnStarted", 1, "after", guard("TurnStarted", function(c)

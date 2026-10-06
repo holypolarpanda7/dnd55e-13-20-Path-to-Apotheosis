@@ -108,7 +108,7 @@ M.classes["Artificer"] = {
             selectors = "AddSpells(ee537fcf-8372-502b-ba07-a0887575e49f)",
         },
         [14] = {
-            passives  = { "Artificer_MagicItemSavant" },
+            passives  = { "Artificer_14_AdvancedArtifice" },
         },
         [15] = {
             passives  = {},
@@ -466,7 +466,7 @@ M.classes["Paladin"] = {
             selectors = "AddSpells(b88aff43-b75a-5947-b283-3c6ca5bf2591)",
         },
         [14] = {
-            passives  = { "Paladin_CleansingTouch" },
+            passives  = { "Paladin_14_RestoringTouch" },
         },
         [15] = {
             passives  = {},
@@ -533,7 +533,7 @@ M.classes["Ranger"] = {
 M.classes["Rogue"] = {
     levels = {
         [13] = {
-            passives  = { "Rogue_SubtleStrikes" },
+            passives  = {},
         },
         [14] = {
             passives  = {},
@@ -829,7 +829,7 @@ M.subclasses["Assassin"] = {
             passives  = {},
         },
         [13] = {
-            passives  = { "Assassin_InfiltrationExpertise" },
+            passives  = { "Assassin_13_EnvenomWeapons" },
         },
         [17] = {
             passives  = { "Assassin_11_DeathStrike" },
@@ -1541,7 +1541,7 @@ M.subclasses["PurpleDragonKnight"] = {
             passives  = { "Banneret_12_SharedResilience" },
         },
         [18] = {
-            passives  = { "Banneret_InspiringSurge_Improved" },
+            passives  = { "Banneret_18_InspiringCommander" },
         },
     },
 }
@@ -1586,10 +1586,10 @@ M.subclasses["ScionThree"] = {
             passives  = {},
         },
         [13] = {
-            passives  = { "DeadThree_UnholyInfiltration" },
+            passives  = { "DeadThree_13_AuraOfMalevolence" },
         },
         [17] = {
-            passives  = { "DeadThree_11_MurderousIntent" },
+            passives  = { "DeadThree_17_DreadIncarnate" },
         },
     },
 }

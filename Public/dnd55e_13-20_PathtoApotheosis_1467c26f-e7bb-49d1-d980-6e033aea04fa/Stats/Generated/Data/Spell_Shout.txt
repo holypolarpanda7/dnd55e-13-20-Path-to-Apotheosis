@@ -26,7 +26,6 @@ data "UseCosts" "BonusActionPoint:1"
 data "RequirementConditions" "HasStatus('SG_Rage',context.Source)"
 data "RequirementEvents" "OnStatusApplied;OnStatusRemoved"
 
-
 // ==============================================================================
 // WILD MAGIC BARBARIAN - Controlled Surge (Level 14)
 // Secondary Wild Magic Table Effects
@@ -166,7 +165,6 @@ data "Icon" "Spell_Transmutation_Slow"
 data "DisplayName" "hcc11111111111111111111111111d027;1"
 data "Description" "hcc11111111111111111111111111d028;1"
 data "TooltipStatusApply" "ApplyStatus(SLOW,100,3)"
-
 
 // ==============================================================================
 // WIZARD - SPELL MASTERY (Level 18 PHB 2024)
@@ -781,29 +779,7 @@ data "PrepareLoopSound" "Spell_Prepare_Buff_Gen_L1to3_01_Loop"
 data "CastSound" "Spell_Cast_Buff_Blur_L1to3"
 data "TargetSound" "Spell_Impact_Buff_Blur_L1to3"
 data "HitAnimationType" "MagicalNonDamage"
-new entry "Shout_Apotheosis_CleansingTouch"
-type "SpellData"
-data "SpellType" "Shout"
-data "Level" "0"
-data "SpellSchool" "Abjuration"
-data "SpellProperties" "RemoveStatus(SG_Charmed);RemoveStatus(SG_Frightened);RemoveStatus(SG_Poisoned);RemoveStatus(SG_Cursed);RemoveStatus(SG_Disease)"
-data "TargetConditions" "Self()"
-data "Icon" "Action_Paladin_LayOnHands_Cure"
-data "DisplayName" "hd5f6a7b800000000000000000000025"
-data "Description" "hd5f6a7b900000000000000000000026"
-data "CastTextEvent" "Cast"
-data "UseCosts" "ActionPoint:1"
-data "Cooldown" "OncePerRest"
-data "VerbalIntent" "Utility"
-data "SpellFlags" "HasSomaticComponent;IsSpell"
 
-// Holy Nimbus (Devotion L20): burst of sunlight damaging enemies, plus a self radiant ward.
-// visual kit from Shout_AuraOfVitality (a spell with no SpellAnimation never resolves - #14)
-data "SpellAnimation" "03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,,;e9ad50df-e7f1-43a0-b782-4c08f92b0f5a,,;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;,,;,,"
-data "PrepareEffect" "747ac7e5-c52e-4e5a-be78-1f9de85b55ea"
-data "CastEffect" "8265c6d6-662a-40fe-888b-024af0e2b1b9"
-data "CastSound" "Spell_Cast_Healing_ActivateAuraOfVitality_L1to3"
-data "TargetSound" "Spell_Impact_Paladin_AuraOfVitality_L1to3"
 new entry "Shout_Apotheosis_HolyNimbus"
 type "SpellData"
 data "SpellType" "Shout"
@@ -959,33 +935,7 @@ data "PrepareLoopSound" "Action_Loop_Weapon_TelekineticBolt"
 data "CastSound" "Action_Cast_Weapon_TelekineticBolt"
 data "TargetSound" "Action_Impact_Weapon_TelekineticBolt"
 data "SpellAnimationIntentType" "Aggressive"
-new entry "Shout_Apotheosis_InspiringSurge"
-type "SpellData"
-data "SpellType" "Shout"
-data "Level" "0"
-data "SpellSchool" "Evocation"
-data "AreaRadius" "9"
-data "SpellProperties" "ApplyStatus(INSPIRING_SURGE_BUFF,100,2)"
-data "TargetConditions" "(Ally() or Self()) and not Dead()"
-data "Icon" "Apo_Feat_ApotheosisInspiringSurge"
-data "DisplayName" "ha8c9d0e1a0000000000000000000067"
-data "Description" "ha8c9d0e2a0000000000000000000068"
-data "CastTextEvent" "Cast"
-data "UseCosts" "BonusActionPoint:1"
-data "Cooldown" "OncePerRest"
-data "VerbalIntent" "Buff"
-data "SpellFlags" "HasVerbalComponent;IsSpell"
 
-// ====== DRUID 13-20 SHOUTS ======
-
-// Oceanic Gift (Circle of the Sea L14): bless allies within 9m with the sea's protection.
-// visual kit from Shout_ActionSurge (a spell with no SpellAnimation never resolves - #14)
-data "SpellAnimation" "5e57443f-284e-47b2-915e-5b6417db269c,,;925779e7-8bf6-4d56-8c4d-42c3bc01c60c,,;50398f4e-dd82-4d6a-ad43-aedd578543d9,,;1c343e00-7e6c-4f53-b588-074a3cdb9c7d,,;5bcdefbb-2194-46c2-ac77-0b2d8472a5f7,,;,,;5fdb66be-7506-411a-a7ea-c4783288aac8,,;,,;,,"
-data "PrepareEffect" "49dd385f-fd25-4372-8628-30b775af7c79"
-data "CastEffect" "2550e2bb-c9f9-4440-9cd4-146a03f2e9bc"
-data "CastSound" "Action_Cast_Surge"
-data "TargetSound" "Action_Impact_Surge"
-data "SpellAnimationIntentType" "Aggressive"
 new entry "Shout_Apotheosis_OceanicGift"
 type "SpellData"
 data "SpellType" "Shout"
