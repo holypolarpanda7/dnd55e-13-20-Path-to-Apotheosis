@@ -545,13 +545,12 @@ expect = [{ cast = true }, { target = "host", status_present = ["APO_LEGENDARY_R
 
 [[case]]
 id = "apocalypse-17-life-beyond-death"
-title = "Apocalypse Domain 17 Life Beyond Death: dropping to 0 offers a no-action spell-slot heal (10 x slot level) that gets you back up"
+title = "Apocalypse Domain 17 Life Beyond Death: when you drop to 0, your lowest spell slot is spent to heal 10 x its level"
 spell = "Target_Bite_Wolf"
 caster = "A"
 target = "host"
 safety = false
-reactions = ["Interrupt_Apo_LifeBeyondDeath"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
 setup = [{ target = "host", remove_status = "ARCANE_WARD*" }, { target = "host", passive = "Apocalypse_17_LifeBeyondDeath" }, { target = "host", hp = 1 }, { target = "A", boost = "RollBonus(Attack,30)" }]
-expect = [{ target = "host", dead = false }, { target = "host", hp_change = [9, 99] }]
-notes = "Which slot level the auto-accepted reaction spends is up to the game (a player picks it in the prompt)."
+expect = [{ target = "host", dead = false }, { target = "host", status_applied = ["APO_LIFE_BEYOND_DEATH_1"] }, { target = "host", hp_change = [9, 20] }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
+notes = "A Downed character gets no reaction prompt, so for yourself SubclassFeatures.lua spends the lowest slot (user decision 2026-10-06). Allies keep the prompt (needs a party member to test)."

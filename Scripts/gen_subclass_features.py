@@ -894,7 +894,14 @@ for lv in range(1, 10):
                  "Stack": "ApoLifeBeyondDeath", "InterruptDefaultValue": "Ask;Enabled"},
                 icon="Spell_Necromancy_Revivify",
                 comment="OnStatusApplied + Nearby as dnd55e Interrupt_ArcaneJolt_SteelDefender; Stack as Hellish Rebuke" if lv == 1 else None)
-G.passive("Apocalypse_17_LifeBeyondDeath", "Life Beyond Death", LBD_TEXT + " (Offered when they drop, before their first death save.)",
+# you yourself: a Downed character gets no reaction prompt (seen in game 2026-10-05), so when YOU drop, SubclassFeatures.lua
+# spends your lowest spell slot with a charge and applies APO_LIFE_BEYOND_DEATH_<level> (user decision 2026-10-06)
+for lv in range(1, 10):
+    G.status(f"APO_LIFE_BEYOND_DEATH_{lv}", "Life Beyond Death", f"A level {lv} spell slot heals {10 * lv} Hit Points.",
+             {"StackId": "APO_LIFE_BEYOND_DEATH", "OnApplyFunctors": f"RegainHitPoints({10 * lv},Guaranteed)",
+              "StatusPropertyFlags": "DisableOverhead"}, icon="Spell_Necromancy_Revivify")
+G.passive("Apocalypse_17_LifeBeyondDeath", "Life Beyond Death", LBD_TEXT + " (Offered when an ally drops, before their first "
+          "death save. When you drop, your lowest spell slot with a charge is spent automatically.)",
           {"Boosts": "UnlockSpell(Shout_Apo_LifeBeyondDeath)"}, icon="Spell_Necromancy_Revivify")
 node(APOCALYPSE, "ApocalypseDomain", 17, "Apocalypse_17_LifeBeyondDeath")
 

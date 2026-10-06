@@ -274,6 +274,28 @@ end
 
 function SF.SpendReaction(c) setResource(c, "ReactionActionPoint", 0) end
 
+-- Apocalypse Domain 17 Life Beyond Death, for yourself: a Downed character gets no reaction prompt, so when you drop your
+-- lowest spell slot with a charge is spent and heals 10 x its level (user decision 2026-10-06; allies keep the prompt).
+function SF.LifeBeyondDeathSelf(c)
+    if not has(c, "Apocalypse_17_LifeBeyondDeath") then return end
+    local e = Ext.Entity.Get(c)
+    local best
+    for u, entries in pairs(e.ActionResources.Resources) do
+        local def = Ext.StaticData.Get(u, "ActionResource")
+        if def and def.Name == "SpellSlot" then
+            for _, en in ipairs(entries) do
+                if en.Amount >= 1 and (en.Level or 0) >= 1 and (not best or en.Level < best.Level) then best = en end
+            end
+        end
+    end
+    if not best then return end
+    local lvl = best.Level
+    best.Amount = best.Amount - 1
+    e:Replicate("ActionResources")
+    Osi.ApplyStatus(c, "APO_LIFE_BEYOND_DEATH_" .. lvl, 0, 1, c)
+    Log.Info(string.format("Life Beyond Death: %s spends a level %d slot and heals %d", c, lvl, 10 * lvl))
+end
+
 local function inCombatWith(c)  -- characters near c (60 m) that are in combat
     local out, cx, cy, cz = {}, Osi.GetPosition(c)
     if not cx then return out end
@@ -402,6 +424,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", 
         SF.Desperado(target)
     elseif status == "APO_HEROIC_LEGACY_TRIGGER" then
         SF.HeroicLegacyTriggered(target)
+    elseif status == "DOWNED" then
+        SF.LifeBeyondDeathSelf(target)
     elseif status == "APO_BETTER_HALF_DOWNED" then
         SF.BetterHalf(target)
     elseif status == "APO_INFECTIOUS_HEX" and causee then
