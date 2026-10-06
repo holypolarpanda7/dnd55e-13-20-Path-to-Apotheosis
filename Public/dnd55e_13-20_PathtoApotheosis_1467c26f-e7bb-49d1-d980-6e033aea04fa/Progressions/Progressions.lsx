@@ -856,7 +856,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="PassivesAdded" type="LSString" value="Warlock_MysticArcanum_9"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,1,5)"/>
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="Warlock"/>
@@ -4089,6 +4089,22 @@
                     <attribute id="Selectors" type="LSString" value="SelectSpells(820b1220-0385-426d-ae15-458dc8a6f5c0,1,1,ArcaneTricksterIlluEnch)"/>
                     <attribute id="TableUUID" type="guid" value="7205dbe2-5eef-4cd6-ad7f-45b3dc254f78"/>
                     <attribute id="UUID" type="guid" value="0e62001c-91df-5912-be06-239900a939d8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="ApocalypseDomain"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Apocalypse_17_LifeBeyondDeath"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="26eaf048-405d-442a-b44f-d500bb1cc613"/>
+                    <attribute id="UUID" type="guid" value="37814434-b87f-5f58-82b9-67d6d623b149"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="DragonDomain"/>
+                    <attribute id="PassivesAdded" type="LSString" value="DragonDomain_17_LegendaryAspect"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="8c4f7e8a-2e36-4ece-9327-ca309b45617b"/>
+                    <attribute id="UUID" type="guid" value="6e6a44d3-b43c-5929-ad25-5e6d0f617ecf"/>
                 </node>
                 <!-- SUBCLASS FEATURES 13-20 END -->
             </children>

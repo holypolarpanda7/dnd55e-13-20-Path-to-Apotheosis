@@ -95,6 +95,10 @@ REFERENCE = {
                                      {14: ["Sorcerous Kindling"], 18: ["Heroic Legacy"]}),
     ("Bard", "College of Choreography"): ("Griffon's Saddlebag page photographed by the user 2026-10-04 (docs/SUBCLASS_SOURCING.md)",
                                           {14: ["Fast Movement", "Entrancing Movement", "Endless Dance"]}),
+    ("Cleric", "Apocalypse Domain"): ("Cthulhu by Torchlight, pages photographed by the user 2026-10-05 (library "
+                                      "excerpts/subclasses/ApocalypseDomain_CthulhuByTorchlight.txt)", {17: ["Life Beyond Death"]}),
+    ("Cleric", "Dragon Domain"): ("Valda's Spire of Secrets: Player Pack 2, page photographed by the user 2026-10-05 (library "
+                                  "excerpts/subclasses/DragonDomain_ValdasSpire_PlayerPack2.txt)", {17: ["Legendary Aspect"]}),
 }
 # PHB 2024 features whose page is missing from the text extract and from The Oracle's ingest
 MEMORY.update({
@@ -112,9 +116,7 @@ BOOK_TAGS = {"Player's Handbook 2024": ["PHB 2024", "SRD/PHB"], "Xanathar's Guid
 NAME_FIX = {"Jllus Ory Reality": "Illusory Reality", "Keeper Ofsouls": "Keeper of Souls"}
 
 # Subclasses with no source past level 12 (docs/SUBCLASS_SOURCING.md: dnd55e's own design, or no text reachable).
-NONE = {("Cleric", "Apocalypse Domain"): "source Cthulhu by Torchlight (bg3dnd #1567) - no text yet",
-        ("Cleric", "Dragon Domain"): "source Valda's Spire of Secrets: Player Pack 2 (bg3dnd #1568) - no text yet",
-}
+NONE = {}
 
 
 def norm(s):

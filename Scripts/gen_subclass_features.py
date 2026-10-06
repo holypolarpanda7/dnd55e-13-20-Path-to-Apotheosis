@@ -870,6 +870,85 @@ EXISTING["bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbb905"] = {
     "PassivesAdded": "Warlock_MysticArcanum_9", "Selectors": "SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)",
     "Boosts": "ActionResource(WarlockSpellSlot,1,5)"}
 
+# ================================================================ Cleric: Apocalypse Domain 17 Life Beyond Death (Cthulhu by Torchlight;
+# library excerpts/subclasses/ApocalypseDomain_CthulhuByTorchlight.txt, from the user 2026-10-05). "About to make a Death Saving
+# Throw" has no BG3 trigger: offered when you or an ally within 36m drops (gains DOWNED), i.e. before its first death save. No action
+# or Reaction; works while you're Downed too. The slot level is picked in the prompt like Hellish Rebuke (a Stack of 1-9).
+APOCALYPSE = "26eaf048-405d-442a-b44f-d500bb1cc613"
+LBD_TEXT = ("When you or an ally within 36m drops to 0 Hit Points, you can expend a spell slot (no action required) to heal them "
+            "ten times the slot's level.")
+for lv in range(1, 10):
+    sfx = "" if lv == 1 else f"_{lv}"
+    G.spell(f"Shout_Apo_LifeBeyondDeath{sfx}", "Life Beyond Death", LBD_TEXT,
+            {"SpellType": "Shout", "Level": "1", "SpellSchool": "Necromancy", "TargetConditions": "Self()",
+             "UseCosts": f"SpellSlotsGroup:1:1:{lv}", "InterruptPrototype": f"Interrupt_Apo_LifeBeyondDeath{sfx}",
+             "VerbalIntent": "Healing", "SpellStyleGroup": "Class",
+             **({} if lv == 1 else {"RootSpellID": "Shout_Apo_LifeBeyondDeath", "PowerLevel": str(lv)})},
+            icon="Spell_Necromancy_Revivify")
+    G.interrupt(f"Interrupt_Apo_LifeBeyondDeath{sfx}", "Life Beyond Death", f"Heal a fallen ally {10 * lv} Hit Points.",
+                {"InterruptContext": "OnStatusApplied", "InterruptContextScope": "Nearby", "Container": "YesNoDecision",
+                 "Conditions": "not Dead(context.Observer) and HasStatus('DOWNED',context.Target) and "
+                               "(Self(context.Target,context.Observer) or Ally(context.Target,context.Observer)) and "
+                               "not DistanceToEntityGreaterThan(36, context.ObserverPosition, context.Target)",
+                 "Properties": f"RegainHitPoints({10 * lv})", "Cost": f"SpellSlotsGroup:1:1:{lv}",
+                 "Stack": "ApoLifeBeyondDeath", "InterruptDefaultValue": "Ask;Enabled"},
+                icon="Spell_Necromancy_Revivify",
+                comment="OnStatusApplied + Nearby as dnd55e Interrupt_ArcaneJolt_SteelDefender; Stack as Hellish Rebuke" if lv == 1 else None)
+G.passive("Apocalypse_17_LifeBeyondDeath", "Life Beyond Death", LBD_TEXT + " (Offered when they drop, before their first death save.)",
+          {"Boosts": "UnlockSpell(Shout_Apo_LifeBeyondDeath)"}, icon="Spell_Necromancy_Revivify")
+node(APOCALYPSE, "ApocalypseDomain", 17, "Apocalypse_17_LifeBeyondDeath")
+
+# ================================================================ Cleric: Dragon Domain 17 Legendary Aspect (Valda's Spire of Secrets:
+# Player Pack 2; library excerpts/subclasses/DragonDomain_ValdasSpire_PlayerPack2.txt, from the user 2026-10-05). BG3 has no turns
+# between turns, so the Legendary Actions are taken on your own turn at no action cost (3 per Long Rest, each once a turn, a level
+# 2+ slot restores one). Rend: Speed back + one melee weapon/unarmed attack or a cantrip at no action cost (EXTRA_ATTACK's
+# mechanism), the attack using Wisdom (Shillelagh's override); any cantrip, not only Cleric ones.
+DRAGON_DOMAIN = "8c4f7e8a-2e36-4ece-9327-ca309b45617b"
+G.resource("ApoLegendaryAspect", 3, "Rest", "Legendary Aspect", "Legendary Actions: Rend, Tail Swipe, Wingbeat. Returns on a Long Rest.")
+LA = {"SpellType": "Shout", "Level": "0", "SpellSchool": "Transmutation", "TargetConditions": "Self()", "Cooldown": "OncePerTurn",
+      "UseCosts": "ApoLegendaryAspect:1", "SpellStyleGroup": "Class", "VerbalIntent": "Utility"}
+G.spell("Shout_Apo_LegendaryAspect_Rend", "Legendary Aspect: Rend",
+        "Legendary Action: regain your movement, then make one melee attack (weapon or Unarmed Strike, using Wisdom) or cast a "
+        "cantrip, with no action.",
+        {**LA, "SpellProperties": "RestoreResource(Movement,100%,0);ApplyStatus(APO_LEGENDARY_REND,100,1)"}, icon="Action_Monk_FlurryOfBlows")
+G.status("APO_LEGENDARY_REND", "Rend", "Your next melee attack or cantrip costs no action; the attack uses Wisdom.",
+         {"StackId": "APO_LEGENDARY_REND",
+          "Boosts": "UnlockSpellVariant(ExtraAttackCheck() and IsMeleeAttack(),ModifyUseCosts(Replace,ActionPoint,0,0,ActionPoint),ModifyIconGlow(),ModifyTooltipDescription());"
+                    "UnlockSpellVariant(IsCantrip(),ModifyUseCosts(Replace,ActionPoint,0,0,ActionPoint),ModifyIconGlow(),ModifyTooltipDescription());"
+                    "WeaponAttackRollAbilityOverride(Wisdom)",
+          "RemoveConditions": "(ExtraAttackSpellCheck() and HasUseCosts('ActionPoint',false,context.Target)) or (IsCantrip() and HasUseCosts('ActionPoint',false,context.Target))",
+          "RemoveEvents": "OnSpellCast", "StatusPropertyFlags": "DisableCombatlog"}, icon="Action_Monk_FlurryOfBlows",
+         comment="EXTRA_ATTACK's free-attack/free-cantrip form; WeaponAttackRollAbilityOverride as dnd55e SHILLELAGH")
+G.spell("Shout_Apo_LegendaryAspect_TailSwipe", "Legendary Aspect: Tail Swipe",
+        "Legendary Action: each Large or smaller enemy within 3m is knocked Prone (no saving throw).",
+        {**LA, "AreaRadius": "3", "VerbalIntent": "Control",
+         "TargetConditions": "Enemy() and not Dead() and TargetSizeEqualOrSmaller(Size.Large)",
+         "SpellProperties": "ApplyStatus(PRONE,100,1)", "SpellRoll": "", "SpellSuccess": "", "SpellFail": "", "DamageType": "",
+         "TooltipDamageList": "", "SpellFlags": "IsHarmful", "ContainerSpells": "", "SpellContainerID": ""},
+        using="Shout_DestructiveWave", icon="Action_Shove")
+G.spell("Shout_Apo_LegendaryAspect_Wingbeat", "Legendary Aspect: Wingbeat",
+        "Legendary Action: regain your movement; this turn you can Fly and don't provoke Opportunity Attacks.",
+        {**LA, "SpellProperties": "RestoreResource(Movement,100%,0);ApplyStatus(APO_LEGENDARY_WINGBEAT,100,1)"}, icon="Spell_Transmutation_Fly")
+G.status("APO_LEGENDARY_WINGBEAT", "Wingbeat", "You can Fly and don't provoke Opportunity Attacks.",
+         {"StackId": "APO_LEGENDARY_WINGBEAT", "Boosts": "UnlockSpell(Projectile_Fly);IgnoreLeaveAttackRange()"}, icon="Spell_Transmutation_Fly")
+for lv in range(2, 10):
+    sfx = "" if lv == 2 else f"_{lv}"
+    G.spell(f"Shout_Apo_LegendaryAspect_Restore{sfx}", "Legendary Aspect: Restore", "Expend a level 2+ spell slot (no action) to regain one use of Legendary Aspect.",
+            {"SpellType": "Shout", "Level": "2", "SpellSchool": "Transmutation", "TargetConditions": "Self()", "UseCosts": f"SpellSlotsGroup:1:1:{lv}",
+             "SpellProperties": "RestoreResource(ApoLegendaryAspect,1,0)", "VerbalIntent": "Utility", "SpellStyleGroup": "Class",
+             "RequirementConditions": "not HasActionResource('ApoLegendaryAspect',3,0,false,false,context.Source)",
+             **({} if lv == 2 else {"RootSpellID": "Shout_Apo_LegendaryAspect_Restore", "PowerLevel": str(lv)})}, icon="Action_Dragonborn_BreathWeapon_FireCone")
+G.passive("DragonDomain_17_LegendaryAspect", "Legendary Aspect",
+          "Three times per Long Rest, take a Legendary Action at no action cost, each at most once a turn: Rend (regain your movement "
+          "and make a Wisdom melee attack or cast a cantrip), Tail Swipe (Large or smaller enemies within 3m fall Prone) or Wingbeat "
+          "(regain your movement and Fly without provoking Opportunity Attacks). Expend a level 2+ spell slot to regain a use. (The rule "
+          "takes them right after another creature's turn; BG3 has no such moment, so they happen on your turn.)",
+          {"Boosts": "ActionResource(ApoLegendaryAspect,3,0);UnlockSpell(Shout_Apo_LegendaryAspect_Rend);UnlockSpell(Shout_Apo_LegendaryAspect_TailSwipe);"
+                     "UnlockSpell(Shout_Apo_LegendaryAspect_Wingbeat);UnlockSpell(Shout_Apo_LegendaryAspect_Restore)"},
+          icon="Action_Dragonborn_BreathWeapon_FireCone")
+node(DRAGON_DOMAIN, "DragonDomain", 17, "DragonDomain_17_LegendaryAspect")
+
+
 def write():
     new_nodes = []
     for table, name, level, passives, boosts, selectors in NODES:

@@ -525,3 +525,20 @@ spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance 
 setup = [{ target = "host", passive = "Dragons_14_HeartOfADragon" }]
 expect = [{ cast = true }, { target = "A", damage_type = "Fire" }]
 notes = "LevelMapValue(DragonShapeBreath) reads the minimum on a non-Druid host; the 5d6 at 14 is checked on the Circle of Dragons build."
+
+[[case]]
+id = "dragondomain-17-tailswipe"
+title = "Dragon Domain 17 Legendary Aspect: Tail Swipe knocks a Large-or-smaller enemy within 3m Prone, costs a Legendary Aspect use"
+spell = "Shout_Apo_LegendaryAspect_TailSwipe"
+target = "host"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", passive = "DragonDomain_17_LegendaryAspect" }]
+expect = [{ cast = true }, { target = "A", status_applied = ["PRONE"] }, { resource = "ApoLegendaryAspect", level = 0, change = -1 }]
+
+[[case]]
+id = "dragondomain-17-rend"
+title = "Dragon Domain 17 Legendary Aspect: Rend readies a free Wisdom melee attack or cantrip"
+spell = "Shout_Apo_LegendaryAspect_Rend"
+target = "host"
+setup = [{ target = "host", passive = "DragonDomain_17_LegendaryAspect" }]
+expect = [{ cast = true }, { target = "host", status_present = ["APO_LEGENDARY_REND"] }, { resource = "ApoLegendaryAspect", level = 0, change = -1 }]

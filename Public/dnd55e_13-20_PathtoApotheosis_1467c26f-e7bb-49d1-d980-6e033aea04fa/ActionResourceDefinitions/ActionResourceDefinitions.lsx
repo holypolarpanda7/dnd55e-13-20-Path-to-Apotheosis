@@ -618,6 +618,17 @@
                     <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
                     <attribute id="UUID" type="guid" value="a47add42-2a30-5902-9d62-f6ecbe6f34c2"/>
                 </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h88e356698f645f2bbb9a8282ca59cac3" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hd392535079eb557cb8362b3abb3225c8" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="MaxValue" type="uint32" value="3"/>
+                    <attribute id="Name" type="FixedString" value="ApoLegendaryAspect"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="87ccf91b-41c3-5845-9b69-410ff72b5130"/>
+                </node>
                 <!-- SUBCLASS FEATURES 13-20 END -->
             </children>
         </node>
