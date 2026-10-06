@@ -6,7 +6,6 @@
 --   Recovery            Last Stand heals to 1 + half the Hit Point maximum
 --   Fate                Improve Fate recharges when you roll Initiative
 --   Energy Resistance   Energy Redirection: spends your Reaction to send the damage back at the attacker
---   Ability pick        a restricted boon (+1 built in) plus a separate +1 would double the increase
 -- Documented gaps: Overwhelming Strike and Peerless Aim trigger on any critical / keep natural 1s as misses;
 -- Energy Redirection targets whoever damaged you and fires automatically.
 local Log = Apotheosis and Apotheosis.Log or { Info = print, Warn = print, Error = print, Debug = function() end }
@@ -16,7 +15,6 @@ local VARIANT_ABILITY = {
     EpicBoon_IrresistibleOffense_Str = "Strength", EpicBoon_IrresistibleOffense_Dex = "Dexterity",
     EpicBoon_SpellRecall_Int = "Intelligence", EpicBoon_SpellRecall_Wis = "Wisdom", EpicBoon_SpellRecall_Cha = "Charisma",
 }
-local ABILITY_PICKS = { "EpicBoonAbility_Str", "EpicBoonAbility_Dex", "EpicBoonAbility_Con", "EpicBoonAbility_Int", "EpicBoonAbility_Wis", "EpicBoonAbility_Cha" }
 local ABILITY_INDEX = { Strength = 2, Dexterity = 3, Constitution = 4, Intelligence = 5, Wisdom = 6, Charisma = 7 }
 
 local function has(c, passive) return Osi.HasPassive(c, passive) == 1 end
@@ -160,34 +158,24 @@ function EB.OnEnteredCombat(object)
     end
 end
 
--- A restricted boon already contains its +1; a second +1 from the ability pick is removed.
+-- After a level-up: arm the standing statuses of boons just gained (passives gained at level-up don't run OnCreate).
+-- Boons are feats since 2026-10-06, so one can arrive at any level from 19 (a multiclass character's later feat pick):
+-- "just gained" is tracked per character in PersistentVars instead of by level, so a used status isn't re-armed early.
+local ARMED_ON_GAIN = { EpicBoon_Recovery = "EPIC_LAST_STAND", EpicBoon_ExquisiteRadiance = "EPIC_POWERFUL_RADIANCE" }
 function EB.Validate(c)
-    local restricted = nil  -- any boon with its +1 built in (EpicBoon_<Name>_<Str|Dex|Con|Int|Wis|Cha>)
-    pcall(function()
-        for _, p in ipairs(Ext.Entity.Get(c).PassiveContainer.Passives) do
-            local id = p.Passive.PassiveId
-            if id:match("^EpicBoon_.+_%u%l%l$") then restricted = id end
+    PersistentVars = PersistentVars or {}
+    PersistentVars.EpicBoonArmed = PersistentVars.EpicBoonArmed or {}
+    local armed = PersistentVars.EpicBoonArmed
+    for passive, status in pairs(ARMED_ON_GAIN) do
+        local key = c .. "|" .. passive
+        if has(c, passive) and not armed[key] then
+            armed[key] = true
+            if Osi.HasActiveStatus(c, status) ~= 1 then Osi.ApplyStatus(c, status, -1, 1) end
         end
-    end)
-    if restricted then
-        for _, pick in ipairs(ABILITY_PICKS) do
-            if has(c, pick) then
-                Osi.RemovePassive(c, pick)
-                Log.Warn(string.format("Epic Boon: %s already includes its ability increase; removed the extra %s", restricted, pick))
-            end
-        end
-    elseif has(c, "EpicBoonAbility_InBoon") then
-        Log.Warn("Epic Boon: 'increase included in my boon' was picked with a boon that doesn't include one - no +1 was gained")
     end
-    -- passives gained at level-up don't run OnCreate: apply their standing statuses now
-    if has(c, "EpicBoon_Recovery") and Osi.HasActiveStatus(c, "EPIC_LAST_STAND") ~= 1 and Osi.GetLevel(c) == 19 then
-        Osi.ApplyStatus(c, "EPIC_LAST_STAND", -1, 1)
-    end
+    -- standing statuses that don't get used up
     if has(c, "EpicBoon_Truesight") and Osi.HasActiveStatus(c, "TRUESIGHT") ~= 1 then
         Osi.ApplyStatus(c, "TRUESIGHT", -1, 1)
-    end
-    if has(c, "EpicBoon_ExquisiteRadiance") and Osi.HasActiveStatus(c, "EPIC_POWERFUL_RADIANCE") ~= 1 and Osi.GetLevel(c) == 19 then
-        Osi.ApplyStatus(c, "EPIC_POWERFUL_RADIANCE", -1, 1)
     end
     if has(c, "EpicBoon_PoisonMastery") and Osi.HasActiveStatus(c, "EPIC_PERFECT_POISONER") ~= 1 then
         Osi.ApplyStatus(c, "EPIC_PERFECT_POISONER", -1, 1)

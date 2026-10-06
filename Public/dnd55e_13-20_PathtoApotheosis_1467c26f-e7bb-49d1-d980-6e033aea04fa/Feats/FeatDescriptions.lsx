@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="500"/>
+    <region id="FeatDescriptions">
+        <node id="root">
+            <children>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h8cb09ad5271a51889d40f440eaebae6d" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h07109fede297590d8ad816e36146c75d" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_CombatProwess"/>
+                    <attribute id="FeatId" type="guid" value="4c265cb0-c98a-539b-9e33-b0d099bdf7a1"/>
+                    <attribute id="UUID" type="guid" value="86fe1db7-536b-5f03-8bd4-f35bd15296f2"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="he65654313d9055769170c0f31b119006" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hc7688a3a950a57128f01ed8b017fc9ac" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_DimensionalTravel"/>
+                    <attribute id="FeatId" type="guid" value="b059e813-e3c2-5954-ab3b-5bb4e7668dfa"/>
+                    <attribute id="UUID" type="guid" value="cd4bb42d-0679-53ab-80d3-b074fd45e1a0"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="he19bfb5a87e352358562eea6f13fd79f" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hf90d90a120705b7e94a12651dfcb822e" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_EnergyResistance"/>
+                    <attribute id="FeatId" type="guid" value="5fab78da-fe9e-5beb-9844-a566b20ec9ec"/>
+                    <attribute id="UUID" type="guid" value="9f339c26-ee37-5102-8f53-315d7f35b1ef"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="heb9fc111f1d251b1bb77745f0f0fdc5d" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h25985ba8d6b858f3a7bfc7d1ce90089c" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Fate"/>
+                    <attribute id="FeatId" type="guid" value="a3ce3003-2d3d-5907-b993-37127c512dac"/>
+                    <attribute id="UUID" type="guid" value="a0f98a52-ce41-5da6-8426-e32b0d13c8a4"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h77b12f6da4c252e0a713a81207845b21" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hb25aa5d21be153f7b55b18ff62dcccf1" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Fortitude"/>
+                    <attribute id="FeatId" type="guid" value="a3caaf9d-be5e-56fc-bc0c-1c076d550c0c"/>
+                    <attribute id="UUID" type="guid" value="221819f0-eb20-57e8-bb3d-3d5ef9588376"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h45abb7c5f9865699a09cd2ba32fbeef5" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="heccd065848715f6d822f57c06c5c4a71" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_IrresistibleOffense"/>
+                    <attribute id="FeatId" type="guid" value="541f3935-b682-5dc0-9cbf-b24281cc1393"/>
+                    <attribute id="UUID" type="guid" value="680781e5-863e-5a6a-8392-cb614a010d0f"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hc1d09e93b62d56c698108716687c652a" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5c6c2c4b598d56a2be72ea926d1d1e05" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Recovery"/>
+                    <attribute id="FeatId" type="guid" value="884c01b3-0448-59ea-be47-1d8bf06d5beb"/>
+                    <attribute id="UUID" type="guid" value="df052893-f33c-5146-90e1-65f9d1ef5ddf"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h30f5684755945a5d87d4779f49a6d2cf" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="heb844ad6d02b5058a1ad26e5abaf8a9d" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Skill"/>
+                    <attribute id="FeatId" type="guid" value="02769ff6-85b7-5893-ad6f-43111419ba7b"/>
+                    <attribute id="UUID" type="guid" value="910132e6-ddff-566d-bc24-234a0fb655a7"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hbb53af0745155b918ceab1ccc1898ba3" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="ha90efd1834575e3ebdf0d3ed0c4aac18" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Speed"/>
+                    <attribute id="FeatId" type="guid" value="62bd4ee2-e85b-56d0-b294-5cc674f5448c"/>
+                    <attribute id="UUID" type="guid" value="339699ef-0f81-598f-ab60-881897780eed"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="he77e908d23fb57599e16d933aedaa509" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hc2ac160f1bf1538488b2d136d91f9f44" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_SpellRecall"/>
+                    <attribute id="FeatId" type="guid" value="52940996-64af-52b1-ba0e-68bd57320d9a"/>
+                    <attribute id="UUID" type="guid" value="32cbe7cd-5f17-5905-bdc0-406b009a123f"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h75587408860a5e049cae2332a783c22b" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h120e4d06ad855a1bacfbb3176a751c91" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_NightSpirit"/>
+                    <attribute id="FeatId" type="guid" value="d88f9b86-0ea7-557d-a767-880680d68ede"/>
+                    <attribute id="UUID" type="guid" value="75cfaef9-b647-5d5f-8b34-2ad27d61595b"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hcad4f457a2375abea65d0f233146f8ea" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h712ffa9145f55898ac19f3cc509edfeb" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Truesight"/>
+                    <attribute id="FeatId" type="guid" value="77fd117e-5283-5002-80ab-326fbb3e209d"/>
+                    <attribute id="UUID" type="guid" value="dd9414f6-4370-5d3e-b4bb-97d52314e2d6"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hc200f65b5d315ceb960fa4ad9baa7bf0" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="he2c9a9936b965d24aab12937b35375d3" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Bloodshed"/>
+                    <attribute id="FeatId" type="guid" value="56da9a49-474e-55a8-989b-8be33dc884ab"/>
+                    <attribute id="UUID" type="guid" value="79a1005c-87bb-57d1-a60c-37e31b026093"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hcb906bb27de653a59835349029f88fb8" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h95b65a5591fc535d899f40c78ab73bd6" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_BountifulHealth"/>
+                    <attribute id="FeatId" type="guid" value="2f85dd14-e224-5791-ba8b-71caef0a49e0"/>
+                    <attribute id="UUID" type="guid" value="2fa7fb3a-04c9-56a1-a689-d3485d6ae35b"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h464c4f0cdf1a55079bc0e9f33bad5ab1" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h7fdaf306fd5f5b56a7fdab8b751961d1" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Communication"/>
+                    <attribute id="FeatId" type="guid" value="7babaaee-4156-5928-b187-5e814ff28435"/>
+                    <attribute id="UUID" type="guid" value="517fe428-aed3-5adb-8b62-799f2bbc5fda"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hec4369a1cbab56eaba6d5024586b9564" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h6c071bf255bf5d9e9ba1ce7658ac7eeb" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_DesperateResilience"/>
+                    <attribute id="FeatId" type="guid" value="712a58f3-4bfb-5414-8d4f-49d2dcc0de6a"/>
+                    <attribute id="UUID" type="guid" value="766e9eb6-0db7-5f06-97e8-b9bb194e8d01"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h24d63283cf5f5a878f069a0a3b26309b" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h3ff68333f44d58f9b71745cd7c0e1f5b" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_ExquisiteRadiance"/>
+                    <attribute id="FeatId" type="guid" value="78de518f-4877-551e-a977-d19a77d2cc14"/>
+                    <attribute id="UUID" type="guid" value="2afcd527-9c49-516b-affb-74e706f60c68"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h5c3b8e429c6e56e1b38d31d0e11d9abb" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h166c8fd0565c540881b56ccb27f61683" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_FluidForms"/>
+                    <attribute id="FeatId" type="guid" value="d33872b1-e0cc-59b9-b183-26bbba5ca521"/>
+                    <attribute id="UUID" type="guid" value="3f9cb97d-e0c6-596d-bf70-a2f015819141"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h0774d1ba05995549bb9d1f0c73cb5c92" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h750790e04c225b7689aa4acdfe04aaaa" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_FortunesFavor"/>
+                    <attribute id="FeatId" type="guid" value="f3e521ed-decc-5930-97a3-984e3153fe2f"/>
+                    <attribute id="UUID" type="guid" value="bfce54c0-3f88-57df-8313-b260a09436c4"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h366c0195b2f95eef92b5cbe59a4224c7" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h95b44b4cc28058d283ab1eb5c88587df" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_PoisonMastery"/>
+                    <attribute id="FeatId" type="guid" value="398c50d8-3d56-5176-a472-e568388b82fb"/>
+                    <attribute id="UUID" type="guid" value="7cf224b1-c01b-524b-8374-ad86938cdec3"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h13e7f7f2f3545d56acba70dd2a574039" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h9288babb92d351b28b212b81a1d616c9" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Revelry"/>
+                    <attribute id="FeatId" type="guid" value="9c019e4d-c00d-5e35-8a22-0bd8664bb2d5"/>
+                    <attribute id="UUID" type="guid" value="69c10257-0e90-5e7d-a1b0-cb66ff2a866e"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h9084914204735eebb14c71a0e85b7cb5" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h3a698a4d97195954a726960b4b098d67" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_Terror"/>
+                    <attribute id="FeatId" type="guid" value="48ee076f-8082-5301-a5bf-29ac105e6e21"/>
+                    <attribute id="UUID" type="guid" value="4ef8c49e-13cb-517f-b288-d150726f9bbf"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hded4e84fe3045eb089fa1d0351bed6e5" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hb551e7f77099542e9df622db6592480a" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_BrightSun"/>
+                    <attribute id="FeatId" type="guid" value="dd2e5f0e-db7e-55a0-91ce-4b5585f0477b"/>
+                    <attribute id="UUID" type="guid" value="b5f1890b-3f85-52d5-b5ac-13f47ef1798f"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h1f5e7ef72e4c53c0a30b7194983d8813" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5357c3b9ec55511db41035dab0857c47" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_FuriousStorm"/>
+                    <attribute id="FeatId" type="guid" value="bc66db3f-89bc-50cb-b85d-be72f217801f"/>
+                    <attribute id="UUID" type="guid" value="7f92a226-3217-54b5-94c5-3c23085f8ef5"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="had35284dd7c65c0688da3a335bd8ba75" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hf7f95492f8cc5e16a9cd095772b8abc0" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_SoulDrinker"/>
+                    <attribute id="FeatId" type="guid" value="72650b73-5b34-5a75-ac3e-e8a48ecfd7e8"/>
+                    <attribute id="UUID" type="guid" value="0a654a12-0b16-5800-ae90-5052af6cbff6"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="ha25c9380fa6f5fc68d9f6ed22a73a914" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hed7d46f2e5165b678b1e18e339e7a330" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_EruptingSpellpower"/>
+                    <attribute id="FeatId" type="guid" value="79fcfcb5-2e3f-5fed-a1ae-b2d060bf4887"/>
+                    <attribute id="UUID" type="guid" value="f96e0894-6efd-55c6-a95b-09b377dec1ee"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h822d436534fd55bfab9863d78586f4fd" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="ha45e2df0f683508cab15bd52876828da" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_IronMind"/>
+                    <attribute id="FeatId" type="guid" value="7c698a29-e13e-514c-851a-8d4100d3d56e"/>
+                    <attribute id="UUID" type="guid" value="fe178fbd-c936-5944-aa5c-9348f0824ca3"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h017844e171d356d38d1482e9af4e62cf" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h86f4ba2818c957508e9ae832b390449d" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoon_MagicSchoolMastery"/>
+                    <attribute id="FeatId" type="guid" value="f5409630-9a97-5e23-9e9c-89913749196b"/>
+                    <attribute id="UUID" type="guid" value="53983bc7-bca6-5450-921c-8089040947ca"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h8cb09ad5271a51889d40f440eaebae6d" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="he8a6d0b27f1d50e3a4d1c813a31ad880" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoonProbe"/>
+                    <attribute id="FeatId" type="guid" value="a5689189-a8a9-584f-9a6d-82df41ebab19"/>
+                    <attribute id="UUID" type="guid" value="e61d13a8-434a-5e31-b1ed-45bd0a78812e"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h8cb09ad5271a51889d40f440eaebae6d" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h551e56d27c4a5de09b40cebb1547cd40" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoonProbeAbilities"/>
+                    <attribute id="FeatId" type="guid" value="08acc136-fcdb-5f5c-80ca-355f18b62bf2"/>
+                    <attribute id="UUID" type="guid" value="c60a7ee6-f972-5b8e-b962-386084e82a90"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h8cb09ad5271a51889d40f440eaebae6d" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h44c7398e827d52409d927999faa58ef1" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="EpicBoonProbeNever"/>
+                    <attribute id="FeatId" type="guid" value="ef81f215-62e1-5cc5-b545-15c347596c01"/>
+                    <attribute id="UUID" type="guid" value="7f6c3d39-5d40-58ec-921d-255176bea94a"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

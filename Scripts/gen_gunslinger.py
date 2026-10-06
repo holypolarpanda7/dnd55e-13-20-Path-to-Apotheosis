@@ -2,8 +2,8 @@
 (References/Classes/Gunslinger.txt). Replaces the earlier build from Mercer's older Gunslinger.
 
 Base class: 13 Cheat Death, 14 +1 Risk Die (6), 15 Dire Gambit, 17 Critical Shot 17-20, 18 Deft Maneuver and
-Risk Die d12, 19 Epic Boon (dnd55e's own level-19 node is overridden to drop its ASI; Scripts/gen_epic_boons.py
-adds the boon pick), 20 Headshot. Subclasses dnd55e ships: High Roller 14 Double or Nothing, White Hat 14 Gold
+Risk Die d12, 19 Epic Boon (dnd55e's own level-19 node and its feat pick: the boons are feats with a level 19
+prerequisite since 2026-10-06, Scripts/gen_epic_boons.py), 20 Headshot. Subclasses dnd55e ships: High Roller 14 Double or Nothing, White Hat 14 Gold
 Star Hero, Spellslinger 14 Magic Bullet and its 13-20 spell table.
 
 Owns (rewritten every run): Stats/Generated/Data/{Passive,Status,Spell,Interrupt}_Gunslinger.txt.
@@ -197,7 +197,7 @@ NODES = {  # uuid -> attributes (PassivesAdded / Boosts / Selectors); None = del
     "7b222222-0000-0000-0000-000000000119": {"Boosts": "ActionResource(SpellSlot,1,4)", "Selectors": SEL(WIZ4)},
     "7b222222-0000-0000-0000-000000000120": {"Selectors": SEL(WIZ4)},
 }
-DND_L19 = "465b1578-a2dd-476a-b4ac-d3955332b5f3"  # dnd55e Gunslinger level 19 (HP die + ASI)
+DND_L19 = "465b1578-a2dd-476a-b4ac-d3955332b5f3"  # dnd55e Gunslinger level 19 (HP die + feat pick): no override
 OLD_PASSIVES = ["Gunslinger_LightningReload", "Gunslinger_ViciousIntent", "Gunslinger_HemorrhagingCritical",
                 "HighRoller_14_DoubleOrNothing", "HighRoller_15_StackedDeck", "HighRoller_18_Jackpot",
                 "WhiteHat_14_GoldStarHero", "WhiteHat_15_Peacekeeper", "WhiteHat_18_LawgiversReach",
@@ -228,13 +228,9 @@ def patch_progressions():
     s = NODE_RE.sub(fix, s)
     missing = [u for u, w in NODES.items() if w is not None and u not in seen]
     assert not missing, f"progression nodes not found: {missing}"
-    # dnd55e's level-19 node, minus its ASI: the Epic Boon pick replaces it (gen_epic_boons.py adds the selectors)
-    dnd = open(os.path.join(DND, "Progressions", "Progressions.lsx"), encoding="utf-8").read()
-    node = next(m.group(0) for m in NODE_RE.finditer(dnd) if DND_L19 in m.group(0))
-    node = re.sub(r'\s*<attribute id="AllowImprovement" type="bool" value="true"/>', "", node)
-    if DND_L19 not in s:
-        i = s.rindex("            </children>")
-        s = s[:i] + node + s[i:]
+    # dnd55e's level-19 node was overridden here until 2026-10-06 to drop its feat pick for the old Epic Boon passive pick; the
+    # boons are feats now, so dnd55e's node (HP die + feat pick) is right as it is - remove the old override
+    s = NODE_RE.sub(lambda m: "" if DND_L19 in m.group(0) else m.group(0), s)
     open(path, "w", encoding="utf-8", newline="").write(s)
 
 
