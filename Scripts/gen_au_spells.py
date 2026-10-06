@@ -251,11 +251,16 @@ spell("Projectile_Apo_Detonate", "Detonate",
        "SpellProperties": "TARGET:ApplyStatus(APO_DETONATE_SEED,100,1);CreateExplosion(Projectile_Apo_Detonate_Explosion)",
        "TooltipDamageList": "DealDamage(10d10,Fire);DealDamage(10d10,Fire)",
        "SpellFlags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"})
+# A CreateExplosion spell's SpellRoll/SpellSuccess/SpellFail never deal damage (its saves roll, nothing lands - seen in game
+# 2026-10-05); explosions damage through SpellProperties (Alchemist's Oil) and AOE: functors with the save inline (Ice
+# Knife). One roll per creature: half always, the other half on a failed save = full on a failure, half on a success.
+DET_AOE = "not HasStatus('APO_DETONATE_SEED') and not Dead()"
 G.spell("Projectile_Apo_Detonate_Explosion", "Detonate (Explosion)", "Dexterity save, 10d10 Fire damage, half on a success.",
-        {"UseCosts": "", "ExplodeRadius": "18", "TargetConditions": "not HasStatus('APO_DETONATE_SEED') and not Dead()",
-         "SpellRoll": "not SavingThrow(Ability.Dexterity, SourceSpellDC())",
-         "SpellSuccess": "DealDamage(10d10,Fire,Magical)", "SpellFail": "DealDamage((10d10)/2,Fire,Magical)",
-         "SpellProperties": "GROUND:SurfaceChange(Ignite);GROUND:SurfaceChange(Melt)",
+        {"UseCosts": "", "ExplodeRadius": "18", "TargetConditions": DET_AOE,
+         "SpellRoll": "", "SpellSuccess": "", "SpellFail": "",
+         "SpellProperties": "GROUND:SurfaceChange(Ignite);GROUND:SurfaceChange(Melt);"
+                            f"AOE:IF({DET_AOE}):DealDamage((10d10)/2,Fire,Magical);"
+                            f"AOE:IF({DET_AOE} and not SavingThrow(Ability.Dexterity, SourceSpellDC())):DealDamage((10d10)/2,Fire,Magical)",
          "SpellFlags": "IsHarmful;CanAreaDamageEvade"}, using="Projectile_Fireball")
 G.status("APO_DETONATE_SEED", "Detonated", None, {"StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"},
          comment="marks Detonate's target so its own explosion leaves it out")

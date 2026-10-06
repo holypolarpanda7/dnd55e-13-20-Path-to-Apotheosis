@@ -66,13 +66,14 @@ expect = [{ cast = true }, { target = "host", status_present = ["APO_LIGHTNING_R
 
 [[case]]
 id = "au-detonate"
-title = "Detonate: the target fails Con (10d10 Fire), a creature 5m away fails Dex (10d10 Fire)"
+title = "Detonate: the target fails Con (10d10 Fire), a creature within 18m of it fails Dex (10d10 Fire)"
 spell = "Projectile_Apo_Detonate"
 target = "A"
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 10 },
-         { as = "B", template = "wolf", faction = "hostile", hp = 300, distance = 15 }]
-setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "B", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 },
+         { as = "B", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", max_hp = 300 }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "B", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ cast = true }, { target = "A", hp_change = [-100, -10] }, { target = "B", hp_change = [-100, -10] }]
+notes = "The explosion reaches every creature within 18m of the target but the target - you too when you stand there (the rule's 60-foot Emanation has no caster exception)."
 
 [[case]]
 id = "au-wail-of-the-banshee"
@@ -91,3 +92,12 @@ spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance 
 setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Intelligence)" }]
 end_turns = 1
 expect = [{ cast = true }, { target = "A", status_present = ["APO_ELAPSING_EONS", "APO_EXHAUSTION_1"] }]
+
+[[case]]
+id = "au-wail-of-the-banshee-healthy"
+title = "Wail of the Banshee: a creature over 50 Hit Points fails Constitution - 12d10 Psychic, no death"
+spell = "Target_Apo_WailOfTheBanshee"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ cast = true }, { target = "A", dead = false }, { target = "A", hp_change = [-300, -12] }]

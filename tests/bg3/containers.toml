@@ -26,8 +26,8 @@ id = "cont-shout-aponaturemagician-shout-aponaturemagician-1"
 title = "Shout_ApoNatureMagician: Shout_ApoNatureMagician_1"
 spell = "Shout_ApoNatureMagician_1"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(WildShape,7,0)" }, { target = "host", passive = "Druid_Archdruid" }]
-expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "WildShape", level = 0, change = -1 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
+setup = [{ target = "host", resource = "SpellSlot", level = 2, amount = 0 }, { target = "host", boost = "ActionResource(WildShape,7,0)" }, { target = "host", passive = "Druid_Archdruid" }]
+expect = [{ resource = "SpellSlot", level = 2, amount_change = 1 }, { resource = "WildShape", level = 0, change = -1 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
 
 # draft confidence: high
 [[case]]
@@ -35,8 +35,8 @@ id = "cont-shout-aponaturemagician-shout-aponaturemagician-3"
 title = "Shout_ApoNatureMagician: Shout_ApoNatureMagician_3"
 spell = "Shout_ApoNatureMagician_3"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(WildShape,9,0)" }, { target = "host", passive = "Druid_Archdruid" }]
-expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "WildShape", level = 0, change = -3 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
+setup = [{ target = "host", resource = "SpellSlot", level = 6, amount = 0 }, { target = "host", boost = "ActionResource(WildShape,9,0)" }, { target = "host", passive = "Druid_Archdruid" }]
+expect = [{ resource = "SpellSlot", level = 6, amount_change = 1 }, { resource = "WildShape", level = 0, change = -3 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
 
 # draft confidence: high
 [[case]]
@@ -44,8 +44,8 @@ id = "cont-shout-aponaturemagician-shout-aponaturemagician-4"
 title = "Shout_ApoNatureMagician: Shout_ApoNatureMagician_4"
 spell = "Shout_ApoNatureMagician_4"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(WildShape,10,0)" }, { target = "host", passive = "Druid_Archdruid" }]
-expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "WildShape", level = 0, change = -4 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
+setup = [{ target = "host", resource = "SpellSlot", level = 8, amount = 0 }, { target = "host", boost = "ActionResource(WildShape,10,0)" }, { target = "host", passive = "Druid_Archdruid" }]
+expect = [{ resource = "SpellSlot", level = 8, amount_change = 1 }, { resource = "WildShape", level = 0, change = -4 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
 
 # hand-written (the draft can't split Self() / not Self() branches)
 [[case]]
@@ -402,7 +402,7 @@ id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-seals-1"
 title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Seals_1"
 spell = "Shout_Illrigger_Vile_Seals_1"
 target = "host"
-setup = [{ target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+setup = [{ target = "host", boost = "ActionResource(Seal,10,0)" }, { target = "host", resource = "Seal", level = 0, amount = 0 }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
 expect = [{ resource = "Seal", level = 0, amount_change = 1 }, { resource = "IllriggerVileSeals", level = 0, change = -1 }]
 
 # draft confidence: high
@@ -411,7 +411,7 @@ id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-seals-3"
 title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Seals_3"
 spell = "Shout_Illrigger_Vile_Seals_3"
 target = "host"
-setup = [{ target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+setup = [{ target = "host", boost = "ActionResource(Seal,10,0)" }, { target = "host", resource = "Seal", level = 0, amount = 0 }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
 expect = [{ resource = "Seal", level = 0, amount_change = 3 }, { resource = "IllriggerVileSeals", level = 0, change = -1 }]
 
 # draft confidence: high
@@ -420,7 +420,7 @@ id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-seals-4"
 title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Seals_4"
 spell = "Shout_Illrigger_Vile_Seals_4"
 target = "host"
-setup = [{ target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+setup = [{ target = "host", boost = "ActionResource(Seal,10,0)" }, { target = "host", resource = "Seal", level = 0, amount = 0 }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
 expect = [{ resource = "Seal", level = 0, amount_change = 4 }, { resource = "IllriggerVileSeals", level = 0, change = -1 }]
 
 # draft confidence: high
@@ -429,8 +429,8 @@ id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-slot-1"
 title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Slot_1"
 spell = "Shout_Illrigger_Vile_Slot_1"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(Seal,9,0)" }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
-expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "Seal", level = 0, change = -3 }, { resource = "IllriggerVileSlots", level = 0, change = -1 }]
+setup = [{ target = "host", resource = "SpellSlot", level = 1, amount = 0 }, { target = "host", boost = "ActionResource(Seal,9,0)" }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+expect = [{ resource = "SpellSlot", level = 1, amount_change = 1 }, { resource = "Seal", level = 0, change = -3 }, { resource = "IllriggerVileSlots", level = 0, change = -1 }]
 
 # draft confidence: high
 [[case]]
@@ -438,8 +438,8 @@ id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-slot-2"
 title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Slot_2"
 spell = "Shout_Illrigger_Vile_Slot_2"
 target = "host"
-setup = [{ target = "host", boost = "ActionResource(Seal,12,0)" }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
-expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "Seal", level = 0, change = -6 }, { resource = "IllriggerVileSlots", level = 0, change = -1 }]
+setup = [{ target = "host", resource = "SpellSlot", level = 2, amount = 0 }, { target = "host", boost = "ActionResource(Seal,12,0)" }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+expect = [{ resource = "SpellSlot", level = 2, amount_change = 1 }, { resource = "Seal", level = 0, change = -6 }, { resource = "IllriggerVileSlots", level = 0, change = -1 }]
 
 # draft confidence: high
 [[case]]
@@ -475,7 +475,7 @@ id = "cont-shout-wish-greaterdivineintervention-target-wish-heal"
 title = "Shout_Wish_GreaterDivineIntervention: Target_Wish_Heal"
 spell = "Target_Wish_Heal"
 target = "A"
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
 setup = [{ target = "host", passive = "Cleric_GreaterDivineIntervention" }, { target = "A", hp = 5 }]
 expect = [{ target = "A", hp_change = [1, 999] }]
 
@@ -568,24 +568,32 @@ expect = [{ summon = { template = "739b8af1-643d-4cc9-b5bd-3628cd3acc40" } }]
 # draft confidence: high
 [[case]]
 id = "cont-target-layonhands-target-layonhands-smallheal"
+class = "Paladin"
+level = 14
 title = "Target_LayOnHands: Target_LayOnHands_SmallHeal"
 spell = "Target_LayOnHands_SmallHeal"
 target = "A"
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }]
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
 setup = [{ target = "host", boost = "ActionResource(LayOnHandsCharge,7,0)" }, { target = "A", hp = 5 }]
 expect = [{ target = "A", hp_change = [1, 999] }, { resource = "LayOnHandsCharge", level = 0, change = -1 }]
 
 # draft confidence: high
+notes = "Heals 2 (or more) x Paladin level: needs a Paladin host - on another class it heals 0 (seen on a Cleric 2026-10-05)."
+
 [[case]]
 id = "cont-target-layonhands-target-layonhands-bigheal"
+class = "Paladin"
+level = 14
 title = "Target_LayOnHands: Target_LayOnHands_BigHeal"
 spell = "Target_LayOnHands_BigHeal"
 target = "A"
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }]
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
 setup = [{ target = "host", boost = "ActionResource(LayOnHandsCharge,8,0)" }, { target = "A", hp = 5 }]
 expect = [{ target = "A", hp_change = [1, 999] }, { resource = "LayOnHandsCharge", level = 0, change = -2 }]
 
 # draft confidence: high
+notes = "Heals 2 (or more) x Paladin level: needs a Paladin host - on another class it heals 0 (seen on a Cleric 2026-10-05)."
+
 [[case]]
 id = "cont-target-layonhands-target-layonhands-cure"
 title = "Target_LayOnHands: Target_LayOnHands_Cure"
