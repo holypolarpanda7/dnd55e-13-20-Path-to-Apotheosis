@@ -542,3 +542,16 @@ spell = "Shout_Apo_LegendaryAspect_Rend"
 target = "host"
 setup = [{ target = "host", passive = "DragonDomain_17_LegendaryAspect" }]
 expect = [{ cast = true }, { target = "host", status_present = ["APO_LEGENDARY_REND"] }, { resource = "ApoLegendaryAspect", level = 0, change = -1 }]
+
+[[case]]
+id = "apocalypse-17-life-beyond-death"
+title = "Apocalypse Domain 17 Life Beyond Death: dropping to 0 offers a no-action spell-slot heal (10 x slot level) that gets you back up"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+safety = false
+reactions = ["Interrupt_Apo_LifeBeyondDeath"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", remove_status = "ARCANE_WARD*" }, { target = "host", passive = "Apocalypse_17_LifeBeyondDeath" }, { target = "host", hp = 1 }, { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ target = "host", dead = false }, { target = "host", hp_change = [9, 99] }]
+notes = "Which slot level the auto-accepted reaction spends is up to the game (a player picks it in the prompt)."
