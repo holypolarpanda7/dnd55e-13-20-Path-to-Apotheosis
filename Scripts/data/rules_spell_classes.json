@@ -1,0 +1,851 @@
+{
+ "generated": "Scripts/extract_rules_spells.py",
+ "spells": {
+  "Animal Shapes": {
+   "level": 8,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Druid"
+   ],
+   "entries": [
+    "Shout_Apo_AnimalShapes"
+   ]
+  },
+  "Antimagic Field": {
+   "level": 8,
+   "school": "Abjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_AntimagicField"
+   ]
+  },
+  "Antipathy/Sympathy": {
+   "level": 8,
+   "school": "Enchantment",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Druid",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Antipathy"
+   ]
+  },
+  "Arcane Sword": {
+   "level": 7,
+   "school": "Evocation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_MordenkainensSword"
+   ]
+  },
+  "Astral Projection": {
+   "level": 9,
+   "school": "Necromancy",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_AstralProjection"
+   ]
+  },
+  "Aura of Evasion": {
+   "level": 7,
+   "school": "Abjuration",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_AuraOfEvasion"
+   ]
+  },
+  "Befuddlement": {
+   "level": 8,
+   "school": "Enchantment",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Druid",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Befuddlement"
+   ]
+  },
+  "Clone": {
+   "level": 8,
+   "school": "Necromancy",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Clone"
+   ]
+  },
+  "Conjure Celestial": {
+   "level": 7,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric"
+   ],
+   "entries": [
+    "Shout_Apo_ConjureCelestial"
+   ]
+  },
+  "Control Weather": {
+   "level": 8,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric",
+    "Druid",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_ControlWeather"
+   ]
+  },
+  "Delayed Blast Fireball": {
+   "level": 7,
+   "school": "Evocation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Projectile_Apo_DelayedBlastFireball"
+   ]
+  },
+  "Demiplane": {
+   "level": 8,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Demiplane"
+   ]
+  },
+  "Detonate": {
+   "level": 9,
+   "school": "Evocation",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Projectile_Apo_Detonate"
+   ]
+  },
+  "Divine Word": {
+   "level": 7,
+   "school": "Evocation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric"
+   ],
+   "entries": [
+    "Shout_Apo_DivineWord"
+   ]
+  },
+  "Dominate Monster": {
+   "level": 8,
+   "school": "Enchantment",
+   "source": "PHB 2024",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_DominateMonster"
+   ]
+  },
+  "Earthquake": {
+   "level": 8,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric",
+    "Druid",
+    "Sorcerer"
+   ],
+   "entries": [
+    "Target_Apo_Earthquake"
+   ]
+  },
+  "Entrancing Mirrors": {
+   "level": 8,
+   "school": "Illusion",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_EntrancingMirrors"
+   ]
+  },
+  "Finger of Death": {
+   "level": 7,
+   "school": "Necromancy",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_FingerOfDeath"
+   ]
+  },
+  "Fire Storm": {
+   "level": 7,
+   "school": "Evocation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric",
+    "Druid",
+    "Sorcerer"
+   ],
+   "entries": [
+    "Target_Apo_FireStorm"
+   ]
+  },
+  "Forcecage": {
+   "level": 7,
+   "school": "Evocation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Forcecage"
+   ]
+  },
+  "Foresight": {
+   "level": 9,
+   "school": "Divination",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Druid",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Foresight"
+   ]
+  },
+  "Fractured Awareness": {
+   "level": 7,
+   "school": "Divination",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_FracturedAwareness"
+   ]
+  },
+  "Gate": {
+   "level": 9,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Gate"
+   ]
+  },
+  "Glibness": {
+   "level": 8,
+   "school": "Enchantment",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Warlock"
+   ],
+   "entries": [
+    "Target_Glibness"
+   ]
+  },
+  "Hindsight": {
+   "level": 9,
+   "school": "Divination",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": []
+  },
+  "Holy Aura": {
+   "level": 8,
+   "school": "Abjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric"
+   ],
+   "entries": [
+    "Shout_Apo_HolyAura"
+   ]
+  },
+  "Illusory Dragon": {
+   "level": 8,
+   "school": "Illusion",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_IllusoryDragon"
+   ]
+  },
+  "Imprisonment": {
+   "level": 9,
+   "school": "Abjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Imprisonment"
+   ]
+  },
+  "Incendiary Cloud": {
+   "level": 8,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Druid",
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_IncendiaryCloud"
+   ]
+  },
+  "Invulnerability": {
+   "level": 9,
+   "school": "Abjuration",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_Invulnerability"
+   ]
+  },
+  "Iron Body": {
+   "level": 8,
+   "school": "Transmutation",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_IronBody"
+   ]
+  },
+  "Lightning Ring": {
+   "level": 8,
+   "school": "Evocation",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Druid",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_LightningRing"
+   ]
+  },
+  "Magnificent Mansion": {
+   "level": 7,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_MagnificentMansion"
+   ]
+  },
+  "Mass Heal": {
+   "level": 9,
+   "school": "Abjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric"
+   ],
+   "entries": [
+    "Target_MassHeal"
+   ]
+  },
+  "Maze": {
+   "level": 8,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Maze"
+   ]
+  },
+  "Meteor Swarm": {
+   "level": 9,
+   "school": "Evocation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Projectile_MeteorSwarm"
+   ]
+  },
+  "Mind Blank": {
+   "level": 8,
+   "school": "Abjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_MindBlank"
+   ]
+  },
+  "Mirage Arcane": {
+   "level": 7,
+   "school": "Illusion",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Druid",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_MirageArcane"
+   ]
+  },
+  "Moment of Prescience": {
+   "level": 8,
+   "school": "Divination",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_MomentOfPrescience"
+   ]
+  },
+  "Power Word Fortify": {
+   "level": 7,
+   "school": "Enchantment",
+   "source": "PHB 2024",
+   "classes": [
+    "Bard",
+    "C/e1·ic"
+   ],
+   "entries": [
+    "Target_Apo_PowerWordFortify"
+   ]
+  },
+  "Power Word Heal": {
+   "level": 9,
+   "school": "Enchantment",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Cleric"
+   ],
+   "entries": [
+    "Target_PowerWordHeal"
+   ]
+  },
+  "Power Word Kill": {
+   "level": 9,
+   "school": "Enchantment",
+   "source": "PHB 2024",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_PowerWordKill"
+   ]
+  },
+  "Power Word Pain": {
+   "level": 7,
+   "school": "Enchantment",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_PowerWordPain"
+   ]
+  },
+  "Power Word Stun": {
+   "level": 8,
+   "school": "Enchantment",
+   "source": "PHB 2024",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_PowerWordStun"
+   ]
+  },
+  "Prismatic Spray": {
+   "level": 7,
+   "school": "Evocation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Zone_PrismaticSpray"
+   ]
+  },
+  "Prismatic Wall": {
+   "level": 9,
+   "school": "Abjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_PrismaticWall"
+   ]
+  },
+  "Project Image": {
+   "level": 7,
+   "school": "Illusion",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_ProjectImage"
+   ]
+  },
+  "Regenerate": {
+   "level": 7,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Cleric",
+    "Druid"
+   ],
+   "entries": [
+    "Target_Regenerate"
+   ]
+  },
+  "Resurrection": {
+   "level": 7,
+   "school": "Necromancy",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Cleric"
+   ],
+   "entries": [
+    "Target_Resurrection"
+   ]
+  },
+  "Reverse Gravity": {
+   "level": 7,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Druid",
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_ReverseGravity"
+   ]
+  },
+  "Reweave Fate": {
+   "level": 7,
+   "school": "Divination",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Bard",
+    "Cleric",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Apo_ReweaveFate"
+   ]
+  },
+  "Sequester": {
+   "level": 7,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Sequester"
+   ]
+  },
+  "Shapechange": {
+   "level": 9,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Druid",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Shapechange"
+   ]
+  },
+  "Simulacrum": {
+   "level": 7,
+   "school": "Illusion",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Simulacrum"
+   ]
+  },
+  "Storm of Vengeance": {
+   "level": 9,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Druid"
+   ],
+   "entries": [
+    "Shout_Apo_StormOfVengeance"
+   ]
+  },
+  "Sunburst": {
+   "level": 8,
+   "school": "Evocation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric",
+    "Druid",
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Sunburst"
+   ]
+  },
+  "Symbol": {
+   "level": 7,
+   "school": "Abjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Cleric",
+    "Druid",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Symbol"
+   ]
+  },
+  "Telepathy": {
+   "level": 8,
+   "school": "Divination",
+   "source": "PHB 2024",
+   "classes": [
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Telepathy"
+   ]
+  },
+  "Teleport": {
+   "level": 7,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Teleport"
+   ]
+  },
+  "Time Stop": {
+   "level": 9,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_TimeStop"
+   ]
+  },
+  "Transfix": {
+   "level": 7,
+   "school": "Enchantment",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Bard",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Transfix"
+   ]
+  },
+  "True Polymorph": {
+   "level": 9,
+   "school": "Transmutation",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Bard",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_TruePolymorph"
+   ]
+  },
+  "True Resurrection": {
+   "level": 9,
+   "school": "Necromancy",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Cleric",
+    "Druid"
+   ],
+   "entries": [
+    "Target_Apo_TrueResurrection"
+   ]
+  },
+  "Tsunami": {
+   "level": 8,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Druid"
+   ],
+   "entries": [
+    "Zone_Apo_Tsunami"
+   ]
+  },
+  "Vision of Elapsing Eons": {
+   "level": 9,
+   "school": "Illusion",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Bard",
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_VisionOfElapsingEons"
+   ]
+  },
+  "Wail of the Banshee": {
+   "level": 9,
+   "school": "Necromancy",
+   "source": "Arcana Unleashed",
+   "classes": [
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_WailOfTheBanshee"
+   ]
+  },
+  "Weird": {
+   "level": 9,
+   "school": "Illusion",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_Apo_Weird"
+   ]
+  },
+  "Wish": {
+   "level": 9,
+   "school": "Conjuration",
+   "source": "SRD 5.2.1",
+   "classes": [
+    "Sorcerer",
+    "Wizard"
+   ],
+   "entries": [
+    "Shout_Wish"
+   ]
+  }
+ }
+}

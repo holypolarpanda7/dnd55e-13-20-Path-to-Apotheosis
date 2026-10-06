@@ -1,0 +1,965 @@
+{
+ "generated": "2026-10-05 from the Sorcerer L1-8 learn list + the Siberys Dragonmark Spells table (bg3-data-mcp)",
+ "skipped_containers": [
+  "Projectile_ChromaticOrb",
+  "Shout_ArcaneVigor",
+  "Shout_DisguiseSelf",
+  "Shout_FireShield",
+  "Target_Daylight_Container",
+  "Target_DragonsBreath",
+  "Target_EnhanceAbility",
+  "Target_EnlargeReduce",
+  "Target_Eyebite",
+  "Target_FreezingSphere",
+  "Target_ProtectionFromEnergy",
+  "Zone_AstralFlood",
+  "Zone_ElementalExhalation"
+ ],
+ "spells": {
+  "Projectile_Apo_DelayedBlastFireball": {
+   "name": "Delayed Blast Fireball",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Projectile_Catapult": {
+   "name": "Catapult",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
+   "flags": "HasSomaticComponent;IsHarmful;IsSpell;HasHighGroundRangeExtension",
+   "table": false
+  },
+  "Projectile_ChainLightning": {
+   "name": "Chain Lightning",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsSpell",
+   "table": false
+  },
+  "Projectile_Darkbolt": {
+   "name": "Darkbolt",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_DazingBlast": {
+   "name": "Dazing Blast",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_Disintegrate": {
+   "name": "Disintegrate",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
+   "table": false
+  },
+  "Projectile_Fireball": {
+   "name": "Fireball",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Projectile_IceKnife": {
+   "name": "Ice Knife",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_MagicMissile": {
+   "name": "Magic Missile",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_RayOfSickness": {
+   "name": "Ray of Sickness",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_ScorchingRay": {
+   "name": "Scorching Ray",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasHighGroundRangeExtension;HasSomaticComponent;HasVerbalComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_SnowballSwarm": {
+   "name": "Snilloc's Snowball Swarm",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+   "flags": "IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_SpellfireFlare": {
+   "name": "Spellfire Flare",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_VitriolicSphere": {
+   "name": "Vitriolic Sphere",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4;",
+   "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Projectile_WitchBolt": {
+   "name": "Witch Bolt",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold;IsHarmful",
+   "table": false
+  },
+  "Shout_AbsorbElements": {
+   "name": "Absorb Elements",
+   "level": 1,
+   "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:1;",
+   "flags": "HasSomaticComponent;IsSpell",
+   "table": false
+  },
+  "Shout_AlterSelf": {
+   "name": "Alter Self",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+   "table": false
+  },
+  "Shout_Apo_AnimalShapes": {
+   "name": "Animal Shapes",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;IsSpell",
+   "table": true
+  },
+  "Shout_Apo_AuraOfEvasion": {
+   "name": "Aura of Evasion",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Shout_Apo_ControlWeather": {
+   "name": "Control Weather",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful;IsLinkedSpellContainer",
+   "table": true
+  },
+  "Shout_Apo_LightningRing": {
+   "name": "Lightning Ring",
+   "level": 8,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Shout_AshardalonsStride": {
+   "name": "Ashardalon's Stride",
+   "level": 3,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:3;",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Shout_Blink": {
+   "name": "Blink",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+   "table": false
+  },
+  "Shout_Blur": {
+   "name": "Blur",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;IsConcentration",
+   "table": false
+  },
+  "Shout_CacophonicShield": {
+   "name": "Cacophonic Shield",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Shout_DetectThoughts": {
+   "name": "Detect Thoughts",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+   "table": false
+  },
+  "Shout_EarthTremor": {
+   "name": "Earth Tremor",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful",
+   "table": false
+  },
+  "Shout_ExpeditiousRetreat": {
+   "name": "Expeditious Retreat",
+   "level": 1,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+   "table": false
+  },
+  "Shout_FalseLife": {
+   "name": "False Life",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+   "table": false
+  },
+  "Shout_FeatherFall": {
+   "name": "Feather Fall",
+   "level": 1,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsSpell;HasVerbalComponent;RangeIgnoreVerticalThreshold",
+   "table": false
+  },
+  "Shout_FireDance": {
+   "name": "Fire Dance",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Shout_FlameBlade": {
+   "name": "Flame Blade",
+   "level": 2,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+   "table": false
+  },
+  "Shout_HeroesFeast": {
+   "name": "Heroes' Feast",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;UnavailableInDialogs",
+   "table": true
+  },
+  "Shout_MirrorImage": {
+   "name": "Mirror Image",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+   "table": false
+  },
+  "Shout_PowerWordStun": {
+   "name": "Power Word Stun",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsHarmful",
+   "table": false
+  },
+  "Shout_SeeInvisibility": {
+   "name": "See Invisibility",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+   "table": false
+  },
+  "Shout_ShadowBlade_Class": {
+   "name": "Shadow Blade",
+   "level": 2,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+   "table": false
+  },
+  "Shout_Shield_Sorcerer": {
+   "name": "Shield",
+   "level": 1,
+   "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer",
+   "table": false
+  },
+  "Shout_TideOfDarkness": {
+   "name": "Tide of Darkness",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
+   "flags": "IsSpell;HasVerbalComponent;IsHarmful;HasSomaticComponent",
+   "table": false
+  },
+  "Target_ApoAnimateObjects": {
+   "name": "Animate Objects",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+   "table": false
+  },
+  "Target_ApoBigbysHand": {
+   "name": "Bigby's Hand",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter;IsConcentration",
+   "table": false
+  },
+  "Target_Apo_Demiplane": {
+   "name": "Demiplane",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+   "table": true
+  },
+  "Target_Apo_Earthquake": {
+   "name": "Earthquake",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Target_Apo_EntrancingMirrors": {
+   "name": "Entrancing Mirrors",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful;IgnorePreviouslyPickedEntities",
+   "table": false
+  },
+  "Target_Apo_Etherealness": {
+   "name": "Etherealness",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Target_Apo_FingerOfDeath": {
+   "name": "Finger of Death",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+   "table": false
+  },
+  "Target_Apo_FireStorm": {
+   "name": "Fire Storm",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Target_Apo_FracturedAwareness": {
+   "name": "Fractured Awareness",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Target_Apo_IncendiaryCloud": {
+   "name": "Incendiary Cloud",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "IsSpell;IsHarmful;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsConcentration",
+   "table": false
+  },
+  "Target_Apo_IronBody": {
+   "name": "Iron Body",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee",
+   "table": false
+  },
+  "Target_Apo_Maze": {
+   "name": "Maze",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;RangeIgnoreVerticalThreshold",
+   "table": true
+  },
+  "Target_Apo_MindBlank": {
+   "name": "Mind Blank",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+   "table": true
+  },
+  "Target_Apo_PlaneShift": {
+   "name": "Plane Shift",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsHarmful",
+   "table": true
+  },
+  "Target_Apo_PowerWordPain": {
+   "name": "Power Word Pain",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsHarmful",
+   "table": false
+  },
+  "Target_Apo_ReverseGravity": {
+   "name": "Reverse Gravity",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Target_Apo_Sunburst": {
+   "name": "Sunburst",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Target_Apo_Symbol": {
+   "name": "Symbol",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": true
+  },
+  "Target_Apo_Teleport": {
+   "name": "Teleport",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold",
+   "table": true
+  },
+  "Target_Banishment": {
+   "name": "Banishment",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;RangeIgnoreVerticalThreshold",
+   "table": false
+  },
+  "Target_Blight": {
+   "name": "Blight",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell",
+   "table": false
+  },
+  "Target_Blindness": {
+   "name": "Blindness",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasHighGroundRangeExtension;IsHarmful",
+   "table": false
+  },
+  "Target_BodyWarpingOfGorgoroth": {
+   "name": "Body Warping of Gorgoroth",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsConcentration;HasSomaticComponent;IsSpell",
+   "table": false
+  },
+  "Target_CharmMonster": {
+   "name": "Charm Monster",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities",
+   "table": false
+  },
+  "Target_CharmPerson": {
+   "name": "Charm Person",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities",
+   "table": false
+  },
+  "Target_CircleOfDeath": {
+   "name": "Circle of Death",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
+   "table": false
+  },
+  "Target_CloudOfDaggers": {
+   "name": "Cloud of Daggers",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsHarmful;CannotTargetItems",
+   "table": false
+  },
+  "Target_Cloudkill": {
+   "name": "Cloudkill",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "IsSpell;IsHarmful;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsConcentration",
+   "table": false
+  },
+  "Target_Confusion": {
+   "name": "Confusion",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Target_Counterspell": {
+   "name": "Counterspell",
+   "level": 3,
+   "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "IsSpell",
+   "table": false
+  },
+  "Target_CrownOfMadness": {
+   "name": "Crown of Madness",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Target_Darkness": {
+   "name": "Darkness",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;IsSpell;IsConcentration;Stealth;Invisible",
+   "table": false
+  },
+  "Target_Darkvision": {
+   "name": "Darkvision",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+   "table": false
+  },
+  "Target_DeathArmor": {
+   "name": "Death Armor",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+   "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent",
+   "table": false
+  },
+  "Target_DominateBeast": {
+   "name": "Dominate Beast",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;HasHighGroundRangeExtension;IsHarmful",
+   "table": false
+  },
+  "Target_DominateMonster": {
+   "name": "Dominate Monster",
+   "level": 8,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:8",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;HasHighGroundRangeExtension;IsHarmful",
+   "table": false
+  },
+  "Target_DominatePerson": {
+   "name": "Dominate Person",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;HasHighGroundRangeExtension;IsHarmful",
+   "table": false
+  },
+  "Target_Enervation": {
+   "name": "Enervation",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
+   "table": false
+  },
+  "Target_FlamingSphere": {
+   "name": "Flaming Sphere",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;CannotTargetCharacter;CannotTargetItems;IsConcentration",
+   "table": false
+  },
+  "Target_FleshToStone": {
+   "name": "Flesh to Stone",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Target_Fly": {
+   "name": "Fly",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsSpell;IsConcentration",
+   "table": false
+  },
+  "Target_FogCloud": {
+   "name": "Fog Cloud",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold",
+   "table": false
+  },
+  "Target_GaseousForm": {
+   "name": "Gaseous Form",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;UnavailableInDialogs",
+   "table": false
+  },
+  "Target_GlobeOfInvulnerability": {
+   "name": "Globe of Invulnerability",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+   "table": false
+  },
+  "Target_Haste": {
+   "name": "Haste",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Target_HellsLash": {
+   "name": "Hell\u2019s Lash",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsConcentration",
+   "table": false
+  },
+  "Target_HoldMonster": {
+   "name": "Hold Monster",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;IsHarmful",
+   "table": false
+  },
+  "Target_HoldPerson": {
+   "name": "Hold Person",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;IsHarmful;IgnorePreviouslyPickedEntities",
+   "table": false
+  },
+  "Target_HypnoticPattern": {
+   "name": "Hypnotic Pattern",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Target_IceStorm": {
+   "name": "Ice Storm",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CanAreaDamageEvade",
+   "table": false
+  },
+  "Target_InsectPlague": {
+   "name": "Insect Plague",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsConcentration;CannotTargetItems",
+   "table": false
+  },
+  "Target_Invisibility": {
+   "name": "Invisibility",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;UnavailableInDialogs;IgnorePreviouslyPickedEntities",
+   "table": false
+  },
+  "Target_Invisibility_Greater": {
+   "name": "Greater Invisibility",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Target_Jump": {
+   "name": "Enhance Leap",
+   "level": 1,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsMelee;IsSpell;HasVerbalComponent;HasSomaticComponent",
+   "table": false
+  },
+  "Target_Knock": {
+   "name": "Knock",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasHighGroundRangeExtension",
+   "table": false
+  },
+  "Target_MageArmor": {
+   "name": "Mage Armour",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
+   "table": false
+  },
+  "Target_MagicWeapon": {
+   "name": "Magic Weapon",
+   "level": 2,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee",
+   "table": false
+  },
+  "Target_MindSpike": {
+   "name": "Mind Spike",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsHarmful;HasSomaticComponent;IsSpell",
+   "table": false
+  },
+  "Target_MindWhip": {
+   "name": "Tasha's Mind Whip",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasVerbalComponent",
+   "table": false
+  },
+  "Target_MistyStep": {
+   "name": "Misty Step",
+   "level": 2,
+   "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold",
+   "table": false
+  },
+  "Target_PhantasmalForce": {
+   "name": "Phantasmal Force",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Target_Polymorph": {
+   "name": "Polymorph",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Target_ProjectImage": {
+   "name": "Project Image",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+   "table": true
+  },
+  "Target_Regenerate": {
+   "name": "Regenerate",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee",
+   "table": true
+  },
+  "Target_Seeming": {
+   "name": "Seeming",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems",
+   "table": false
+  },
+  "Target_Shatter": {
+   "name": "Shatter",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;IsHarmful",
+   "table": false
+  },
+  "Target_Sleep": {
+   "name": "Sleep",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;RangeIgnoreVerticalThreshold;IsConcentration",
+   "table": false
+  },
+  "Target_SleetStorm": {
+   "name": "Sleet Storm",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+   "table": false
+  },
+  "Target_Slow": {
+   "name": "Slow",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IgnorePreviouslyPickedEntities",
+   "table": false
+  },
+  "Target_SpellfireStorm": {
+   "name": "Spellfire Storm",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
+   "table": false
+  },
+  "Target_StinkingCloud": {
+   "name": "Stinking Cloud",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Target_Stoneskin": {
+   "name": "Stoneskin",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee",
+   "table": false
+  },
+  "Target_SynapticStatic": {
+   "name": "Synaptic Static",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Target_TrueSeeing": {
+   "name": "True Seeing",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsMelee",
+   "table": true
+  },
+  "Target_UmbralTendril": {
+   "name": "Umbral Tendril",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent",
+   "table": false
+  },
+  "Target_VampiricTouch": {
+   "name": "Vampiric Touch",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee;IsConcentration;IsHarmful",
+   "table": false
+  },
+  "Target_Web": {
+   "name": "Web",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold",
+   "table": false
+  },
+  "Teleportation_ArcaneGate": {
+   "name": "Arcane Gate",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;CannotTargetItems;CannotTargetCharacter;RangeIgnoreVerticalThreshold",
+   "table": false
+  },
+  "Teleportation_DimensionDoor": {
+   "name": "Dimension Door",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;CannotTargetItems",
+   "table": false
+  },
+  "Throw_Telekinesis": {
+   "name": "Telekinesis",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "InventorySelection;RangeIgnoreVerticalThreshold;IsHarmful;HasHighGroundRangeExtension;IgnoreVisionBlock;AddFallDamageOnLand;HasVerbalComponent;HasSomaticComponent;AbortOnSpellRollFail;AbortOnSecondarySpellRollFail;IsConcentration;CombatLogSetSingleLineRoll;IsSpell",
+   "table": false
+  },
+  "Wall_WallOfFire": {
+   "name": "Wall of Fire",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Wall_WallOfStone": {
+   "name": "Wall of Stone",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Zone_AganazzarsScorcher": {
+   "name": "Aganazzar's Scorcher",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Zone_BurningHands": {
+   "name": "Burning Hands",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Zone_ColorSpray": {
+   "name": "Colour Spray",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Zone_ConeOfCold": {
+   "name": "Cone of Cold",
+   "level": 5,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
+   "table": false
+  },
+  "Zone_Fear": {
+   "name": "Fear",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
+   "table": false
+  },
+  "Zone_GustOfWind": {
+   "name": "Gust of Wind",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsConcentration",
+   "table": false
+  },
+  "Zone_LaeralsSilverLance": {
+   "name": "Laeral's Silver Lance",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful",
+   "table": false
+  },
+  "Zone_LightningBolt": {
+   "name": "Lightning Bolt",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Zone_MurderOfCrows": {
+   "name": "Murder of Crows ",
+   "level": 4,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4;",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
+   "table": false
+  },
+  "Zone_PrismaticSpray": {
+   "name": "Prismatic Spray",
+   "level": 7,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell;CanAreaDamageEvade",
+   "table": false
+  },
+  "Zone_RimesBindingIce": {
+   "name": "Rime's Binding Ice",
+   "level": 2,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
+   "table": false
+  },
+  "Zone_Sunbeam": {
+   "name": "Sunbeam",
+   "level": 6,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
+   "table": false
+  },
+  "Zone_Thunderwave": {
+   "name": "Thunderwave",
+   "level": 1,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;AddFallDamageOnLand;IsHarmful",
+   "table": false
+  },
+  "Zone_TidalWave": {
+   "name": "Tidal Wave",
+   "level": 3,
+   "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+   "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;DisableBlood",
+   "table": false
+  }
+ }
+}

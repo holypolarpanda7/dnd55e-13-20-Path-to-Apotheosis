@@ -143,6 +143,10 @@ Approximations and gaps (2026-10-02):
   prerequisite isn't enforced (true of every boon that has it).
 - **Bright Sun:** Daylight Presence lights the area but doesn't dispel magical Darkness.
 - **Eternal Rest** (Soul Drinker) isn't implemented.
+- **Siberys** (Eberron: Forge of the Artificer, added 2026-10-05): the casting ability is the boon's choice (three
+  variants, `EpicBoon_Siberys_Cast<Int|Wis|Cha>`); the +1 is the ordinary ability pick. The pool is the Sorcerer level 1-8
+  list plus the Siberys Dragonmark Spells table (Scripts/data/siberys_spells.json, Scripts/export_siberys_spells.py).
+  Container spells aren't offered, as for Magic School Mastery. The Eberron-campaign prerequisite isn't enforced.
 
 
 ## Gunslinger 13-20
@@ -263,6 +267,29 @@ lists next to its PHB 2024 replacement Befuddlement. Kept the more accurate vers
 - Foresight: the 8-hour, touch version, limited to willing creatures.
 - Feeblemind: off every list; kept only as Befuddlement's chassis.
 generate_level79_spells.py REMOVE_FROM_LISTS strips the dropped ones on every regen.
+
+## Level 7-9 spells on their rules classes' lists (2026-10-05)
+Scripts/extract_rules_spells.py reads each level 7-9 spell's class tags from the rules texts (SRD 5.2.1, PHB 2024, Arcana
+Unleashed) into Scripts/data/rules_spell_classes.json (names and tags only) with the mod entries of that name;
+Scripts/gen_rules_spell_lists.py puts every entry on those classes' lists and on Bard Magical Secrets. It added the spells
+other generators, dnd55e or the base game provide: Project Image (Wizard, Bard), Power Word Stun (Sorcerer, Wizard, Warlock,
+Bard), Glibness (Warlock, Bard), Resurrection (Cleric, Bard), Incendiary Cloud (Druid), Antipathy/Sympathy and Prismatic
+Wall (Bard). Rerun the extractor after implementing a level 7-9 spell.
+
+## Arcana Unleashed level 7-9 spells (2026-10-05)
+Scripts/gen_au_spells.py: Aura of Evasion, Fractured Awareness, Power Word Pain, Reweave Fate, Transfix (7); Entrancing Mirrors,
+Illusory Dragon, Iron Body, Lightning Ring, Moment of Prescience (8); Detonate, Invulnerability, Vision of Elapsing Eons, Wail
+of the Banshee (9). Not made: Hindsight (watching the past 10 years has nothing in BG3 to act on). Approximations:
+- No Deafened in BG3 (Lightning Ring, Wail of the Banshee); Wail skips Silenced creatures (can't hear).
+- Power Word Pain: the Constitution save to cast a spell while Charmed isn't modelled.
+- Reweave Fate: rerolls with Advantage; the 6d10 Temporary Hit Points on a success aren't granted (the interrupt can't see
+  the new result). Offered for allies' attack rolls and saving throws.
+- Detonate: the explosion's Disadvantage when the target dropped to 0 isn't modelled.
+- Illusory Dragon: no tangible dragon. Enemies within 18m of you save when it appears; the Bonus Action breath comes from
+  you; the Frightened creature repeats its save each turn (FRIGHTENED's own) instead of only when out of the dragon's sight.
+- Vision of Elapsing Eons: Exhaustion is the 2024 rule (D20 Tests -2 per level, Speed -1.5m per level, death at 6) as new
+  statuses APO_EXHAUSTION_1-5, which a Long Rest clears entirely (2024: one level). Help shakes the target free.
+- Iron Body's "Exhaustion can't increase" blocks those statuses.
 
 ## Spells learned at level-up, 13-20 (2026-10-05)
 The level-up screen offers a selector's list as the game loads it: dnd55e's one-level lists are cumulative in game through

@@ -79,6 +79,9 @@ RESOURCES = [  # name, max, replenish, display, description
     ("EpicBoonRoteChoice", 1, "Never", "Rote Casting", "Choose your Rote Casting spell."),
     ("EpicBoonSignatureChoice", 1, "Never", "Signature Arcanum", "Choose your Signature Arcanum spell."),
     ("EpicBoonSignature", 1, "Rest", "Signature Arcanum", "Cast your Signature Arcanum without a spell slot. Returns on a Long Rest."),
+    # Eberron: Forge of the Artificer (2026-10-05)
+    ("EpicBoonSiberysChoice", 1, "Never", "Aberrant Magic", "Choose your Boon of Siberys spell."),
+    ("EpicBoonSiberys", 1, "ShortRest", "Aberrant Magic", "Cast your Boon of Siberys spell without a spell slot or components. Returns on a Short or Long Rest."),
 ]
 
 
@@ -462,15 +465,16 @@ def picker(name, title, desc, children, cost):
                                         "UseCosts": cost, "TargetConditions": "Self()"}))
 
 
-def free_copy(spell, suffix, extra_cost, strip_components):
-    info = MSM["spells"][spell]
+def free_copy(spell, suffix, extra_cost, strip_components, info=None, label=None):
+    info = info or MSM["spells"][spell]
+    label = label or ("Rote" if suffix == "EpicRote" else "Signature")
     costs = ";".join(c for c in info["costs"].split(";") if c and not c.startswith("SpellSlotsGroup") and not c.startswith("WarlockSpellSlot"))
     costs = ";".join(c for c in [costs, extra_cost] if c)
     flags = info["flags"]
     if strip_components:
         flags = ";".join(f for f in flags.split(";") if f and f not in ("HasVerbalComponent", "HasSomaticComponent"))
     SP_LATE.append(entry(f"{spell}_{suffix}", "SpellData", {"UseCosts": costs, "SpellFlags": flags,
-                                                       "DisplayName": h(f"{spell}_{suffix}:n", f"{info['name']} ({'Rote' if suffix == 'EpicRote' else 'Signature'})")},
+                                                       "DisplayName": h(f"{spell}_{suffix}:n", f"{info['name']} ({label})")},
                     using=spell))
 
 
@@ -515,6 +519,54 @@ for sch in SCHOOLS:
                                                  "Boosts": f"UnlockSpell({sp});UnlockSpell({sp}_{suffix})",
                                                  "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;IgnoreResting", "StatusGroups": "SG_RemoveOnRespec"})
             free_copy(sp, suffix, extra, strip)
+
+
+# Boon of Siberys (Eberron: Forge of the Artificer, 2025; added 2026-10-05). Aberrant Magic: a level 1-8 Sorcerer spell or
+# a Siberys Dragonmark Spells table spell, always prepared, cast once per Short or Long Rest without a slot or components
+# and with any slots; Int, Wis or Cha is its spellcasting ability. The +1 goes to any ability (the ordinary ability pick),
+# so the three variants are the casting ability only - named _Cast<Abi> so EpicBoons.lua doesn't read them as boons with
+# a built-in +1. The ability goes on UnlockSpell's last argument, chosen in the pick status by IF(HasPassive(...)) as the
+# base game's ABERRANT_SHAPE unlocks by passive. Pool: Scripts/data/siberys_spells.json (export_siberys_spells.py);
+# container spells aren't offered, as for Magic School Mastery.
+SIB = json.load(open(os.path.join(REPO, "Scripts", "data", "siberys_spells.json"), encoding="utf-8"))
+SLOT_CAST = "d136c5d9-0ff0-43da-acce-a74a07f8d6bf"  # cast with spell slots (the base game's racial/feat UnlockSpell)
+SIB_BANDS = (("L1", "a level 1 Sorcerer spell", lambda v: not v["table"] and v["level"] == 1),
+             ("L2", "a level 2 Sorcerer spell", lambda v: not v["table"] and v["level"] == 2),
+             ("L34", "a level 3-4 Sorcerer spell", lambda v: not v["table"] and v["level"] in (3, 4)),
+             ("L58", "a level 5-8 Sorcerer spell", lambda v: not v["table"] and v["level"] >= 5),
+             ("Mark", "a Siberys Dragonmark spell", lambda v: v["table"]))
+SIB_TEXT = ("Aberrant Magic: choose a level 8 or lower Sorcerer spell or a Siberys Dragonmark spell (Animal Shapes, Control "
+            "Weather, Demiplane, Heroes' Feast, Maze, Mind Blank, Plane Shift, Project Image, Regenerate, Symbol, Teleport, "
+            "True Seeing). You always have it prepared. You can cast it once without a spell slot or components, regaining "
+            "that use when you finish a Short or Long Rest, and with any spell slots of its level. {ab} is your spellcasting "
+            "ability for it. (Spells with variant menus aren't offered.)")
+for ab in MENTAL:
+    vn = f"EpicBoon_Siberys_Cast{SHORT[ab]}"
+    P.append(entry(vn, "PassiveData", {
+        "DisplayName": h(vn + ":n", f"Boon of Siberys ({ab} spellcasting)"), "Description": h(vn + ":d", SIB_TEXT.format(ab=ab)),
+        "Icon": "PassiveFeature_Generic_Magical", "Properties": "Highlighted",
+        "Boosts": ";".join(f"UnlockSpell(Shout_EpicBoon_Sib_{b})" for b, _, _ in SIB_BANDS)
+                  + ";ActionResource(EpicBoonSiberysChoice,1,0);ActionResource(EpicBoonSiberys,1,0)"}))
+    BOONS.append(vn)
+for b, what, keep in SIB_BANDS:
+    band = sorted(sp for sp, v in SIB["spells"].items() if keep(v))
+    picker(f"Shout_EpicBoon_Sib_{b}", f"Aberrant Magic ({what})", f"Choose {what} for your Boon of Siberys.",
+           [f"Shout_EpicBoon_Sib_Pick_{sp}" for sp in band], "EpicBoonSiberysChoice:1")
+    for sp in band:
+        info = SIB["spells"][sp]
+        SP.append(entry(f"Shout_EpicBoon_Sib_Pick_{sp}", "SpellData", {
+            "SpellType": "Shout", "Level": "0", "SpellContainerID": f"Shout_EpicBoon_Sib_{b}",
+            "DisplayName": h(f"SibPick{sp}:n", f"Aberrant Magic: {info['name']} (level {info['level']})"),
+            "Description": h(f"SibPick{sp}:d", f"Choose {info['name']} as your Boon of Siberys spell."),
+            "Icon": "PassiveFeature_Generic_Magical", "UseCosts": "EpicBoonSiberysChoice:1", "TargetConditions": "Self()",
+            "SpellProperties": f"ApplyStatus(SELF,EPIC_SIB_{sp.upper()},100,-1)"}))
+        st(f"EPIC_SIB_{sp.upper()}", {"DisplayName": h(f"SibSt{sp}:n", f"Aberrant Magic: {info['name']}"),
+                                      "Boosts": ";".join(
+                                          f"IF(HasPassive('EpicBoon_Siberys_Cast{SHORT[ab]}',context.Source)):UnlockSpell({sp},AddChildren,{SLOT_CAST},,{ab});"
+                                          f"IF(HasPassive('EpicBoon_Siberys_Cast{SHORT[ab]}',context.Source)):UnlockSpell({sp}_EpicSiberys,Singular,,,{ab})"
+                                          for ab in MENTAL),
+                                      "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;IgnoreResting", "StatusGroups": "SG_RemoveOnRespec"})
+        free_copy(sp, "EpicSiberys", "EpicBoonSiberys:1", True, info=info, label="Aberrant Magic")
 
 
 # ---------------------------------------------------------------- ability pick

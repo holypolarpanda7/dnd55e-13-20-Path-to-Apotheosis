@@ -31,6 +31,8 @@
  "EpicBoonRecoveryDie": "Skill_Fighter_SecondWind",
  "EpicBoonRevelry": "Spell_OttosIrresistibleDance",
  "EpicBoonRoteChoice": "PassiveFeature_MagicInitiateWizard",
+ "EpicBoonSiberys": "Apo_Spell_Symbol",
+ "EpicBoonSiberysChoice": "Apo_Feat_SignatureSpells",
  "EpicBoonSignature": "Apo_Spell_Symbol",
  "EpicBoonSignatureChoice": "Apo_Feat_SignatureSpells",
  "EpicBoonSoulDrinker": "Spell_Necromancy_VampiricTouch",

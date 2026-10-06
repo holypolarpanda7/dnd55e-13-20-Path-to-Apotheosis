@@ -3551,4 +3551,694 @@
   <content contentuid="hacb5cd5fb8fc53239f9935721738765b" version="1">When you use Bloodthirst and teleport, each enemy within 10 feet of your destination takes damage equal to your Intelligence modifier, of your Dread Allegiance's type (Bane: Psychic, Bhaal: Poison, Myrkul: Necrotic).</content>
   <content contentuid="h5b3ed5affb415abbb559bd0a6f810025" version="1">Dread Incarnate</content>
   <content contentuid="h3b3825133eff5b33a11c958d3f102dea" version="1">Cutthroat: you regain one expended use of Bloodthirst when you finish a Short Rest. Murderous Intent: when you roll damage for a weapon attack (your Sneak Attack included), a 1 or 2 on a die counts as a 3.</content>
+  <content contentuid="h4da2acd4bf0e5722aaf58088c9581601" version="1">Boon of Siberys (Intelligence spellcasting)</content>
+  <content contentuid="h3e32f4803a3d5e1e970e7219d4b06d0f" version="1">Aberrant Magic: choose a level 8 or lower Sorcerer spell or a Siberys Dragonmark spell (Animal Shapes, Control Weather, Demiplane, Heroes' Feast, Maze, Mind Blank, Plane Shift, Project Image, Regenerate, Symbol, Teleport, True Seeing). You always have it prepared. You can cast it once without a spell slot or components, regaining that use when you finish a Short or Long Rest, and with any spell slots of its level. Intelligence is your spellcasting ability for it. (Spells with variant menus aren't offered.)</content>
+  <content contentuid="h86f89cfe74fe5710bcd31936a8a275a5" version="1">Boon of Siberys (Wisdom spellcasting)</content>
+  <content contentuid="hf16e23366fb15946b012d9acbd8215dd" version="1">Aberrant Magic: choose a level 8 or lower Sorcerer spell or a Siberys Dragonmark spell (Animal Shapes, Control Weather, Demiplane, Heroes' Feast, Maze, Mind Blank, Plane Shift, Project Image, Regenerate, Symbol, Teleport, True Seeing). You always have it prepared. You can cast it once without a spell slot or components, regaining that use when you finish a Short or Long Rest, and with any spell slots of its level. Wisdom is your spellcasting ability for it. (Spells with variant menus aren't offered.)</content>
+  <content contentuid="h4955ba9f28735320afb6a8f239352072" version="1">Boon of Siberys (Charisma spellcasting)</content>
+  <content contentuid="h348c5250229556c1a162ee43e5b5e717" version="1">Aberrant Magic: choose a level 8 or lower Sorcerer spell or a Siberys Dragonmark spell (Animal Shapes, Control Weather, Demiplane, Heroes' Feast, Maze, Mind Blank, Plane Shift, Project Image, Regenerate, Symbol, Teleport, True Seeing). You always have it prepared. You can cast it once without a spell slot or components, regaining that use when you finish a Short or Long Rest, and with any spell slots of its level. Charisma is your spellcasting ability for it. (Spells with variant menus aren't offered.)</content>
+  <content contentuid="hca7e77c51c515e95be0ba0c5f1437582" version="1">Aberrant Magic (a level 1 Sorcerer spell)</content>
+  <content contentuid="h1dbf86672d3d53cda9afc55b0adebb5b" version="1">Choose a level 1 Sorcerer spell for your Boon of Siberys.</content>
+  <content contentuid="h9c7a44b0c73e502a8de3b47c0ef473d9" version="1">Aberrant Magic: Catapult (level 1)</content>
+  <content contentuid="h54a7fdc26dae5e29b16b4a60cc1c5125" version="1">Choose Catapult as your Boon of Siberys spell.</content>
+  <content contentuid="h078c362c4d755d8494d9a54980d25b95" version="1">Aberrant Magic: Catapult</content>
+  <content contentuid="he41c73fb2f935c8a9ad60c87fb0976c8" version="1">Catapult (Aberrant Magic)</content>
+  <content contentuid="he99052767b41518c97490d3668b539b7" version="1">Aberrant Magic: Ice Knife (level 1)</content>
+  <content contentuid="h5b4c1a4d08cc507dbc161a0269fe871f" version="1">Choose Ice Knife as your Boon of Siberys spell.</content>
+  <content contentuid="h2a0e1e6a2bbd5952920419347695257f" version="1">Aberrant Magic: Ice Knife</content>
+  <content contentuid="hace6c59f44495a419853c24c042a9c37" version="1">Ice Knife (Aberrant Magic)</content>
+  <content contentuid="h04818ca736de551c9e8c082990c237a5" version="1">Aberrant Magic: Magic Missile (level 1)</content>
+  <content contentuid="h3976aeb233f658feb0120c5a2574c8ad" version="1">Choose Magic Missile as your Boon of Siberys spell.</content>
+  <content contentuid="h9e7bcea4be255951a28557eb48435dbf" version="1">Aberrant Magic: Magic Missile</content>
+  <content contentuid="h1cd87a37303f5483b6fe7f118929f152" version="1">Magic Missile (Aberrant Magic)</content>
+  <content contentuid="hdf711b48503c50a0b515d2dab2954ce0" version="1">Aberrant Magic: Ray of Sickness (level 1)</content>
+  <content contentuid="ha9b3dac323df5788857f7a1398f92233" version="1">Choose Ray of Sickness as your Boon of Siberys spell.</content>
+  <content contentuid="hd5ba339272bd5b60b03305a6126af1f2" version="1">Aberrant Magic: Ray of Sickness</content>
+  <content contentuid="h0c2a9428979a5f359ab7cad544c84129" version="1">Ray of Sickness (Aberrant Magic)</content>
+  <content contentuid="hb35c097b70d059358d6a77e9e7e913b8" version="1">Aberrant Magic: Spellfire Flare (level 1)</content>
+  <content contentuid="h53ac4c381cde53a8a404f078b196ccb8" version="1">Choose Spellfire Flare as your Boon of Siberys spell.</content>
+  <content contentuid="ha3773bfca824580d9a620dc323bd3d7c" version="1">Aberrant Magic: Spellfire Flare</content>
+  <content contentuid="h606c9e20c1a85d6bb487bbedd879fb1e" version="1">Spellfire Flare (Aberrant Magic)</content>
+  <content contentuid="h32409f6d0e375aa6b510021ee9f0f062" version="1">Aberrant Magic: Witch Bolt (level 1)</content>
+  <content contentuid="h20547e80aeff589bba531e93be356270" version="1">Choose Witch Bolt as your Boon of Siberys spell.</content>
+  <content contentuid="h793f484c324d5fceb43ff615bfff78e8" version="1">Aberrant Magic: Witch Bolt</content>
+  <content contentuid="h90b5a205df4d58c19652828cb3437b3e" version="1">Witch Bolt (Aberrant Magic)</content>
+  <content contentuid="h3437f180a44e55d6a82a3482345e4c4d" version="1">Aberrant Magic: Absorb Elements (level 1)</content>
+  <content contentuid="hccf31388f6805ab28ed89acb33c5da44" version="1">Choose Absorb Elements as your Boon of Siberys spell.</content>
+  <content contentuid="h5cc7d192f1685bc495d94129fbac9efc" version="1">Aberrant Magic: Absorb Elements</content>
+  <content contentuid="hb9c539dfdd5454a8a89f44cd05d2680b" version="1">Absorb Elements (Aberrant Magic)</content>
+  <content contentuid="h0f527eb8ab155f589817f8cda216bb31" version="1">Aberrant Magic: Earth Tremor (level 1)</content>
+  <content contentuid="hb8953da77ef652b9a0737d405bb4e13b" version="1">Choose Earth Tremor as your Boon of Siberys spell.</content>
+  <content contentuid="h7b5a641cdd995e6dbf6cc4344848ebd5" version="1">Aberrant Magic: Earth Tremor</content>
+  <content contentuid="heb8c5bc0fc1352d9848f0d6021a36f8f" version="1">Earth Tremor (Aberrant Magic)</content>
+  <content contentuid="h453482f1bda85eea935822c2b33642fc" version="1">Aberrant Magic: Expeditious Retreat (level 1)</content>
+  <content contentuid="hfbd789f2fa375b3f943333516e5d5027" version="1">Choose Expeditious Retreat as your Boon of Siberys spell.</content>
+  <content contentuid="hb5d8d5600eb55fa58ccccb45d3174a75" version="1">Aberrant Magic: Expeditious Retreat</content>
+  <content contentuid="he0ff637f68e8585cb2227582e5cbacf4" version="1">Expeditious Retreat (Aberrant Magic)</content>
+  <content contentuid="he7fa108134c95cfbbcd9079969f0ba0a" version="1">Aberrant Magic: False Life (level 1)</content>
+  <content contentuid="h009f5d3eb5df57a2ab4ba83bfddfd5fe" version="1">Choose False Life as your Boon of Siberys spell.</content>
+  <content contentuid="h37607c4f36f4508d9f7d11b68b6b80a7" version="1">Aberrant Magic: False Life</content>
+  <content contentuid="h88ba4143de71541b89f40f9bc7404776" version="1">False Life (Aberrant Magic)</content>
+  <content contentuid="hb29413a0382c51779e11137e5f1ec3ab" version="1">Aberrant Magic: Feather Fall (level 1)</content>
+  <content contentuid="hd5de0c3ad9955e219c508fd6657d86c0" version="1">Choose Feather Fall as your Boon of Siberys spell.</content>
+  <content contentuid="h2c8ebeae174f56aea2b0c3de951c15f7" version="1">Aberrant Magic: Feather Fall</content>
+  <content contentuid="h7fab7cffa4715008823fc3eaec986685" version="1">Feather Fall (Aberrant Magic)</content>
+  <content contentuid="h16bbf9d6bb3d562a8bf3609a1934aa22" version="1">Aberrant Magic: Shield (level 1)</content>
+  <content contentuid="h95a99f8b0abb510bb83fce0a91f507ca" version="1">Choose Shield as your Boon of Siberys spell.</content>
+  <content contentuid="h5ec0f09ecfea540f83d6c183147b7d4a" version="1">Aberrant Magic: Shield</content>
+  <content contentuid="h6225039fc49153e6aa4965d31ddc8ded" version="1">Shield (Aberrant Magic)</content>
+  <content contentuid="h8320c68d75bc5bda9eeef4e104feead4" version="1">Aberrant Magic: Tide of Darkness (level 1)</content>
+  <content contentuid="hb046b8c744c659ca85b510fa9f579264" version="1">Choose Tide of Darkness as your Boon of Siberys spell.</content>
+  <content contentuid="h9f64b993df235a088400cf0940a6e3a5" version="1">Aberrant Magic: Tide of Darkness</content>
+  <content contentuid="h817633199c6d562b9ef4620cdd869b18" version="1">Tide of Darkness (Aberrant Magic)</content>
+  <content contentuid="h71c65808308b5b09b899053522726600" version="1">Aberrant Magic: Body Warping of Gorgoroth (level 1)</content>
+  <content contentuid="h8ae8bbde1f4c53438517d0e8cb7b8a98" version="1">Choose Body Warping of Gorgoroth as your Boon of Siberys spell.</content>
+  <content contentuid="ha9e28118133d54d2a1a5e2f26904e917" version="1">Aberrant Magic: Body Warping of Gorgoroth</content>
+  <content contentuid="hb491f11590ef564588227a8a00fbfab5" version="1">Body Warping of Gorgoroth (Aberrant Magic)</content>
+  <content contentuid="h6cea11b4f95753ebaf28db8b469f194f" version="1">Aberrant Magic: Charm Person (level 1)</content>
+  <content contentuid="h9a318cf6a72c522ebef90dffeee08820" version="1">Choose Charm Person as your Boon of Siberys spell.</content>
+  <content contentuid="h99e713150743543a9a7bd4574364a42f" version="1">Aberrant Magic: Charm Person</content>
+  <content contentuid="hc72b5db44db8521496b5d8c227fdf4db" version="1">Charm Person (Aberrant Magic)</content>
+  <content contentuid="h1fc41b46d1bc518fa80020be025e29da" version="1">Aberrant Magic: Fog Cloud (level 1)</content>
+  <content contentuid="h0f949b9eb8e752cfa6ab2d1265c6f1dd" version="1">Choose Fog Cloud as your Boon of Siberys spell.</content>
+  <content contentuid="h16556a80e2225dd1a42b7462bcf463f4" version="1">Aberrant Magic: Fog Cloud</content>
+  <content contentuid="h9a1e7290adaa56799062afb462dd09d3" version="1">Fog Cloud (Aberrant Magic)</content>
+  <content contentuid="h1d3ec3b274015358a1aa4e743724a083" version="1">Aberrant Magic: Hell’s Lash (level 1)</content>
+  <content contentuid="h3574bc5d104253acaf003ba512f5b9c4" version="1">Choose Hell’s Lash as your Boon of Siberys spell.</content>
+  <content contentuid="hd9b1988bb818500594299f47ee998ac2" version="1">Aberrant Magic: Hell’s Lash</content>
+  <content contentuid="hb68a1ac8150950268a61d10e6c7bf518" version="1">Hell’s Lash (Aberrant Magic)</content>
+  <content contentuid="heade5eb20cc2550baffa91ea7d5359e7" version="1">Aberrant Magic: Enhance Leap (level 1)</content>
+  <content contentuid="haf82c0784921565f8c627cf9133e13c5" version="1">Choose Enhance Leap as your Boon of Siberys spell.</content>
+  <content contentuid="h6ec67a169943533296715168234eec37" version="1">Aberrant Magic: Enhance Leap</content>
+  <content contentuid="heb03eb316d3e54968864d2291e2a3277" version="1">Enhance Leap (Aberrant Magic)</content>
+  <content contentuid="hb870cfdf41e151808fd44504ef755aef" version="1">Aberrant Magic: Mage Armour (level 1)</content>
+  <content contentuid="hab2fff39e7635ad39a24caf392304fb6" version="1">Choose Mage Armour as your Boon of Siberys spell.</content>
+  <content contentuid="hcf82c25c00765768a126854cf763e6e9" version="1">Aberrant Magic: Mage Armour</content>
+  <content contentuid="h510bc0730164586bafe89a75da99ac56" version="1">Mage Armour (Aberrant Magic)</content>
+  <content contentuid="h3a83a880124854dba9a6e0f64c65bd9d" version="1">Aberrant Magic: Sleep (level 1)</content>
+  <content contentuid="hf10fea6b837e54f0b4e520b1e5686cd2" version="1">Choose Sleep as your Boon of Siberys spell.</content>
+  <content contentuid="hd382e86a0ab45ad6a2c64d688dc8f45c" version="1">Aberrant Magic: Sleep</content>
+  <content contentuid="h0a4e2def93cc526abfdd3b23689810a1" version="1">Sleep (Aberrant Magic)</content>
+  <content contentuid="h7df75ee20a81525faed63668bcc8c339" version="1">Aberrant Magic: Umbral Tendril (level 1)</content>
+  <content contentuid="h2a8b05cf54cb5f228e906905cea7d755" version="1">Choose Umbral Tendril as your Boon of Siberys spell.</content>
+  <content contentuid="hf78923c52d685d02b2b29b0d213ee74c" version="1">Aberrant Magic: Umbral Tendril</content>
+  <content contentuid="h033e03d414e35094b242c1f359f01852" version="1">Umbral Tendril (Aberrant Magic)</content>
+  <content contentuid="hba28b8822ca45ed988fcfe9525eb9866" version="1">Aberrant Magic: Burning Hands (level 1)</content>
+  <content contentuid="hcb3ffdf869ff532e9748f7d5ce94a0a0" version="1">Choose Burning Hands as your Boon of Siberys spell.</content>
+  <content contentuid="h9aca834962b15a1e8ceba482473fdb01" version="1">Aberrant Magic: Burning Hands</content>
+  <content contentuid="h2a0dd16ca8615307880ce3a20b04fce1" version="1">Burning Hands (Aberrant Magic)</content>
+  <content contentuid="hb53b5b25267e5129b4b679e86945248f" version="1">Aberrant Magic: Colour Spray (level 1)</content>
+  <content contentuid="hc188cd6f763d595f9336f052da07b1c0" version="1">Choose Colour Spray as your Boon of Siberys spell.</content>
+  <content contentuid="he9bf512b7d5f5d2ebe71217c39750ce3" version="1">Aberrant Magic: Colour Spray</content>
+  <content contentuid="h8a8e502af066514988c9cebe2eb0ce7e" version="1">Colour Spray (Aberrant Magic)</content>
+  <content contentuid="hae4676b4f6d05d128faafbb9e4cafab3" version="1">Aberrant Magic: Thunderwave (level 1)</content>
+  <content contentuid="hfbf541a054695e269f2416848c691f8e" version="1">Choose Thunderwave as your Boon of Siberys spell.</content>
+  <content contentuid="h6d74fd533e565697b20c52f79d2119a5" version="1">Aberrant Magic: Thunderwave</content>
+  <content contentuid="h1ff98e6c32bd5531834d212f573be3bd" version="1">Thunderwave (Aberrant Magic)</content>
+  <content contentuid="h4824dd23be0459ed9bd908c3886b5e97" version="1">Aberrant Magic (a level 2 Sorcerer spell)</content>
+  <content contentuid="hd8bba6de1fb8572fbf0f9ebbec3ba3a3" version="1">Choose a level 2 Sorcerer spell for your Boon of Siberys.</content>
+  <content contentuid="h086b08ad7fd3571fbc8bdbe8dffb55cf" version="1">Aberrant Magic: Darkbolt (level 2)</content>
+  <content contentuid="h48f51949f57b543180ba648854554c6e" version="1">Choose Darkbolt as your Boon of Siberys spell.</content>
+  <content contentuid="h585ca670518a54c899de2edda6c58a0a" version="1">Aberrant Magic: Darkbolt</content>
+  <content contentuid="hdedbfc00b0865101b460a223eaa95ddc" version="1">Darkbolt (Aberrant Magic)</content>
+  <content contentuid="h3a632a48794a5cbdbb3768d817bb240a" version="1">Aberrant Magic: Dazing Blast (level 2)</content>
+  <content contentuid="h446b50a6c5095974ae1e03ce0a9ca08a" version="1">Choose Dazing Blast as your Boon of Siberys spell.</content>
+  <content contentuid="hedfb0593c98e54bf83c0d51344292092" version="1">Aberrant Magic: Dazing Blast</content>
+  <content contentuid="h5745b00b307b5d83854f629cab8483e8" version="1">Dazing Blast (Aberrant Magic)</content>
+  <content contentuid="haecb4707ff235b8ebeea392f3b78b5b3" version="1">Aberrant Magic: Scorching Ray (level 2)</content>
+  <content contentuid="h5b58e10d374d5cada6b36fcb209dc3c2" version="1">Choose Scorching Ray as your Boon of Siberys spell.</content>
+  <content contentuid="heae046d5879d519e9a2f43b1a09e16e1" version="1">Aberrant Magic: Scorching Ray</content>
+  <content contentuid="hbd96d25ff2c45a3d87604435aff53169" version="1">Scorching Ray (Aberrant Magic)</content>
+  <content contentuid="h49ce9e38534152f7a3feeaa456694a2c" version="1">Aberrant Magic: Snilloc's Snowball Swarm (level 2)</content>
+  <content contentuid="h119c898b2697598f8c61dbaba71e2488" version="1">Choose Snilloc's Snowball Swarm as your Boon of Siberys spell.</content>
+  <content contentuid="h43cdb2f439dd5714a1b6622f6fdb3560" version="1">Aberrant Magic: Snilloc's Snowball Swarm</content>
+  <content contentuid="h4ba065036e5b548ea12c5002fefc4598" version="1">Snilloc's Snowball Swarm (Aberrant Magic)</content>
+  <content contentuid="hfc34049e35305cef9671459a0df6caf0" version="1">Aberrant Magic: Alter Self (level 2)</content>
+  <content contentuid="ha9b592d021625e4586d351b5b0640822" version="1">Choose Alter Self as your Boon of Siberys spell.</content>
+  <content contentuid="hd337a9cbd3335b639195d8d5f628785f" version="1">Aberrant Magic: Alter Self</content>
+  <content contentuid="hf5515edd614d5802a7d2417ed61bbc7e" version="1">Alter Self (Aberrant Magic)</content>
+  <content contentuid="h6a0a718803bf5c9ba12b76f46eef6303" version="1">Aberrant Magic: Blur (level 2)</content>
+  <content contentuid="h452d155858fa5c20b0b282d051e11a4b" version="1">Choose Blur as your Boon of Siberys spell.</content>
+  <content contentuid="h663384126a5a56f7bd8e15968cef10ee" version="1">Aberrant Magic: Blur</content>
+  <content contentuid="h31c6bec1ad825b9e85ab651b0b4bb95d" version="1">Blur (Aberrant Magic)</content>
+  <content contentuid="h08e640a290a55aac82c1d520fc57948e" version="1">Aberrant Magic: Detect Thoughts (level 2)</content>
+  <content contentuid="ha4743a9a22de56ce9b5e14893ded7c5f" version="1">Choose Detect Thoughts as your Boon of Siberys spell.</content>
+  <content contentuid="h825b57833f9c525ca67aeca3dc30bcda" version="1">Aberrant Magic: Detect Thoughts</content>
+  <content contentuid="he60867334c005206a002e38fc7e85114" version="1">Detect Thoughts (Aberrant Magic)</content>
+  <content contentuid="h373158f9055056e2b8117026612d370e" version="1">Aberrant Magic: Flame Blade (level 2)</content>
+  <content contentuid="hc994069fc6195edb9ffd773b92e5228d" version="1">Choose Flame Blade as your Boon of Siberys spell.</content>
+  <content contentuid="hfb1ed5034b0c5f9f8d6d3e3bfa21e44d" version="1">Aberrant Magic: Flame Blade</content>
+  <content contentuid="he5f8656797415fa5b5af0777b77fa479" version="1">Flame Blade (Aberrant Magic)</content>
+  <content contentuid="h538243f08f3f5f9d8a2cde278fe6acb6" version="1">Aberrant Magic: Mirror Image (level 2)</content>
+  <content contentuid="h75fc8d06b2d856388667957646dce580" version="1">Choose Mirror Image as your Boon of Siberys spell.</content>
+  <content contentuid="h20062a75c77454ec906fad66d89d71c3" version="1">Aberrant Magic: Mirror Image</content>
+  <content contentuid="hbd5e7c1a76d25bc7856b428118e2b748" version="1">Mirror Image (Aberrant Magic)</content>
+  <content contentuid="h540933bd23f3582c8cddad073bde02d3" version="1">Aberrant Magic: See Invisibility (level 2)</content>
+  <content contentuid="h94952c933aa054ce8ad830a6131f4610" version="1">Choose See Invisibility as your Boon of Siberys spell.</content>
+  <content contentuid="hc39cd4bd2a1a51319504f3cbf9dcedb9" version="1">Aberrant Magic: See Invisibility</content>
+  <content contentuid="ha859ce24d0d752fdafa2ae1be11e91f2" version="1">See Invisibility (Aberrant Magic)</content>
+  <content contentuid="hec097a5360055e46a1ba9f42b95d7c43" version="1">Aberrant Magic: Shadow Blade (level 2)</content>
+  <content contentuid="hff9c16d34f7d5b488af083ab38db5744" version="1">Choose Shadow Blade as your Boon of Siberys spell.</content>
+  <content contentuid="h8e102fb07a3c5ed5bcfec2de1c7e194d" version="1">Aberrant Magic: Shadow Blade</content>
+  <content contentuid="h0cce41c24c165b63a2f85d116e20774c" version="1">Shadow Blade (Aberrant Magic)</content>
+  <content contentuid="hc0fca7d68b3b50989bd7e20a3552801a" version="1">Aberrant Magic: Blindness (level 2)</content>
+  <content contentuid="hd1ad83b3e2965a5081ecbfb58a09c4a2" version="1">Choose Blindness as your Boon of Siberys spell.</content>
+  <content contentuid="h2f2793c2ab1c5ddd9dfd5afee7b2b334" version="1">Aberrant Magic: Blindness</content>
+  <content contentuid="h2e8e1d6d72f459e8ac3f8904a99e5a19" version="1">Blindness (Aberrant Magic)</content>
+  <content contentuid="he0ba4b6db9f35f6d86cd6458fd162a29" version="1">Aberrant Magic: Cloud of Daggers (level 2)</content>
+  <content contentuid="h7ebf69f53bad52999342960e99a52781" version="1">Choose Cloud of Daggers as your Boon of Siberys spell.</content>
+  <content contentuid="h44bcae7fb1675c1f87d3af62474c4f78" version="1">Aberrant Magic: Cloud of Daggers</content>
+  <content contentuid="h9954cc5922785ef98bc09253234aa0e2" version="1">Cloud of Daggers (Aberrant Magic)</content>
+  <content contentuid="h41b35156389e5fb5846615fb2ac87eda" version="1">Aberrant Magic: Crown of Madness (level 2)</content>
+  <content contentuid="h4d4a3b055041532ab31cfa33f74a38af" version="1">Choose Crown of Madness as your Boon of Siberys spell.</content>
+  <content contentuid="hff4501a9d70d5bb5bd7d7db81bce9bec" version="1">Aberrant Magic: Crown of Madness</content>
+  <content contentuid="h89b902c88a695c0d87f28c6da4af8f81" version="1">Crown of Madness (Aberrant Magic)</content>
+  <content contentuid="hd663ff439a065d7eb5d2aac93e4b836b" version="1">Aberrant Magic: Darkness (level 2)</content>
+  <content contentuid="hb9e225a19845560c8e04190f12a13dc7" version="1">Choose Darkness as your Boon of Siberys spell.</content>
+  <content contentuid="h0e0c45863b6c59099ddc53fd9614b255" version="1">Aberrant Magic: Darkness</content>
+  <content contentuid="h257fd67918ce5d90bf744cc324b8cdf8" version="1">Darkness (Aberrant Magic)</content>
+  <content contentuid="h5e25dd5dc322572eaa87c2b5a6ef359f" version="1">Aberrant Magic: Darkvision (level 2)</content>
+  <content contentuid="h26893186e6f65742982926607ececddb" version="1">Choose Darkvision as your Boon of Siberys spell.</content>
+  <content contentuid="hcfea45a4b2a250c080cab95685f6e640" version="1">Aberrant Magic: Darkvision</content>
+  <content contentuid="h2169e062b50353e7b930876229f24c2d" version="1">Darkvision (Aberrant Magic)</content>
+  <content contentuid="h0ad6103ea2f55aed9431567ed8d13b28" version="1">Aberrant Magic: Death Armor (level 2)</content>
+  <content contentuid="h6606e66ba3a251a18f6fec6f5e03037e" version="1">Choose Death Armor as your Boon of Siberys spell.</content>
+  <content contentuid="h001c69f9681d516e86a5f60e0f55ec98" version="1">Aberrant Magic: Death Armor</content>
+  <content contentuid="h6fcf9b2efff256b2a9796f2dca3d9883" version="1">Death Armor (Aberrant Magic)</content>
+  <content contentuid="h283dd2383ec25a518eecbdf76716ea06" version="1">Aberrant Magic: Flaming Sphere (level 2)</content>
+  <content contentuid="hb5d4112de2415faa8e4e3de8c7cba89b" version="1">Choose Flaming Sphere as your Boon of Siberys spell.</content>
+  <content contentuid="hde4ddd45fc85514199f8c197ba587c94" version="1">Aberrant Magic: Flaming Sphere</content>
+  <content contentuid="h0f060f46aa27592cac1c6919385e98c7" version="1">Flaming Sphere (Aberrant Magic)</content>
+  <content contentuid="h93db6a61f02b5be0828b6643e63ff6a2" version="1">Aberrant Magic: Hold Person (level 2)</content>
+  <content contentuid="h15ae3885446356f6adcff355a1310de7" version="1">Choose Hold Person as your Boon of Siberys spell.</content>
+  <content contentuid="hf394253e56a55314842e22923d9c945f" version="1">Aberrant Magic: Hold Person</content>
+  <content contentuid="h7504e5401d1d53fa8dc959f7d23882f5" version="1">Hold Person (Aberrant Magic)</content>
+  <content contentuid="h9482fbd7601f5794a8521cabd9157579" version="1">Aberrant Magic: Invisibility (level 2)</content>
+  <content contentuid="h3ea4d61e1c2e52558f8a2018d758094c" version="1">Choose Invisibility as your Boon of Siberys spell.</content>
+  <content contentuid="h5a716b2bae045af58987cb4e1b36eaca" version="1">Aberrant Magic: Invisibility</content>
+  <content contentuid="h76b4d8a09d9353d799594fef0b4b5af3" version="1">Invisibility (Aberrant Magic)</content>
+  <content contentuid="hd8bc2e8a993b514ea3a522dfb1a0557c" version="1">Aberrant Magic: Knock (level 2)</content>
+  <content contentuid="h25b575094b7d5830a566c38ce80ea9cc" version="1">Choose Knock as your Boon of Siberys spell.</content>
+  <content contentuid="h5c3b9bbbc8d05c2e906b06a6852d18bc" version="1">Aberrant Magic: Knock</content>
+  <content contentuid="hf0cc30a4a71e54a8ba7bbb807f421612" version="1">Knock (Aberrant Magic)</content>
+  <content contentuid="hb8d8ae306aca557085bc72cad869ab80" version="1">Aberrant Magic: Magic Weapon (level 2)</content>
+  <content contentuid="h30739e265fcc5f1c8f0c5caf886dc167" version="1">Choose Magic Weapon as your Boon of Siberys spell.</content>
+  <content contentuid="h2b4cfa80bd4c54d196e43f85bd6d3765" version="1">Aberrant Magic: Magic Weapon</content>
+  <content contentuid="h0c5550e3e82b50868005722701894fbd" version="1">Magic Weapon (Aberrant Magic)</content>
+  <content contentuid="hf56d6dceb44257a5afc3a829ff274d98" version="1">Aberrant Magic: Mind Spike (level 2)</content>
+  <content contentuid="h7fe61cb5f8ad5d388478e470bc5b6516" version="1">Choose Mind Spike as your Boon of Siberys spell.</content>
+  <content contentuid="hdf02a0dc7bef57a4bfe01d781e6c6102" version="1">Aberrant Magic: Mind Spike</content>
+  <content contentuid="hc64275c3eb045360859c4d56a207bea0" version="1">Mind Spike (Aberrant Magic)</content>
+  <content contentuid="h4b8e7c67aa935cb88b1adcde7acfbe56" version="1">Aberrant Magic: Tasha's Mind Whip (level 2)</content>
+  <content contentuid="hab056ce09ed55782a9a0b154513e2700" version="1">Choose Tasha's Mind Whip as your Boon of Siberys spell.</content>
+  <content contentuid="h8de37e78ea5a5ccf85be03d01201fe60" version="1">Aberrant Magic: Tasha's Mind Whip</content>
+  <content contentuid="h27dedb084d4c50778c4bddc863286759" version="1">Tasha's Mind Whip (Aberrant Magic)</content>
+  <content contentuid="h14396359857758598407da2f524c9d4e" version="1">Aberrant Magic: Misty Step (level 2)</content>
+  <content contentuid="h3d5e59af5fdf55448b5746baa22744b2" version="1">Choose Misty Step as your Boon of Siberys spell.</content>
+  <content contentuid="h2a6de36dd0b7515c8e72a462edb80335" version="1">Aberrant Magic: Misty Step</content>
+  <content contentuid="h0c89ffb773ed5487b971122fa2925e23" version="1">Misty Step (Aberrant Magic)</content>
+  <content contentuid="h033792f45e985ba686fa23f3f2706402" version="1">Aberrant Magic: Phantasmal Force (level 2)</content>
+  <content contentuid="h8955563176e65cbeb15b93a67599ea40" version="1">Choose Phantasmal Force as your Boon of Siberys spell.</content>
+  <content contentuid="hab15420fd4a6545a84068a101113588e" version="1">Aberrant Magic: Phantasmal Force</content>
+  <content contentuid="hdaa334d0a9955fc59e345486f9d5ac86" version="1">Phantasmal Force (Aberrant Magic)</content>
+  <content contentuid="h72b755da77f45adcb224c1f97f8f570e" version="1">Aberrant Magic: Shatter (level 2)</content>
+  <content contentuid="h637a56b976495ff5a9004e877620d6e2" version="1">Choose Shatter as your Boon of Siberys spell.</content>
+  <content contentuid="h74e756bb118657b1aea96925a017b0a7" version="1">Aberrant Magic: Shatter</content>
+  <content contentuid="hd9e46642b9d4572ea8e5e16b80abbe24" version="1">Shatter (Aberrant Magic)</content>
+  <content contentuid="h6328c5b4306f559da1862ab0476acef1" version="1">Aberrant Magic: Web (level 2)</content>
+  <content contentuid="hdf2b27f8ad875b2cb2131b84f225ea1b" version="1">Choose Web as your Boon of Siberys spell.</content>
+  <content contentuid="h0e8f331a61345508a1dd88f0bb5ddc3f" version="1">Aberrant Magic: Web</content>
+  <content contentuid="h11160681eca252c0b10eb25b3c787bb8" version="1">Web (Aberrant Magic)</content>
+  <content contentuid="h0c51f5150b99598da8a32e91bc70811d" version="1">Aberrant Magic: Aganazzar's Scorcher (level 2)</content>
+  <content contentuid="h69214dcc844250d5becdc68ccc1dd9a0" version="1">Choose Aganazzar's Scorcher as your Boon of Siberys spell.</content>
+  <content contentuid="h31bd070241195cc18670581d68a4fe2f" version="1">Aberrant Magic: Aganazzar's Scorcher</content>
+  <content contentuid="h5c8e366c21315fe49a080353bfc79d4a" version="1">Aganazzar's Scorcher (Aberrant Magic)</content>
+  <content contentuid="hbc44693bcc3458898ccbd14006001af0" version="1">Aberrant Magic: Gust of Wind (level 2)</content>
+  <content contentuid="h859d34baf4d25166bec67e12b7dca387" version="1">Choose Gust of Wind as your Boon of Siberys spell.</content>
+  <content contentuid="h1094c8de1cf9521680a82c5a23cd9423" version="1">Aberrant Magic: Gust of Wind</content>
+  <content contentuid="hfac0cfbe5e8f5e9fb397ed4d8bdb2cf7" version="1">Gust of Wind (Aberrant Magic)</content>
+  <content contentuid="h750d3c5e4a6b5991a0637e3d0f72b06f" version="1">Aberrant Magic: Rime's Binding Ice (level 2)</content>
+  <content contentuid="h5a1e6359ceb155928a7693d76a01a9aa" version="1">Choose Rime's Binding Ice as your Boon of Siberys spell.</content>
+  <content contentuid="h2d6cf6606adb55a6bb389b14c5f2e88f" version="1">Aberrant Magic: Rime's Binding Ice</content>
+  <content contentuid="h36fceced42555c52a5506f54ed71d044" version="1">Rime's Binding Ice (Aberrant Magic)</content>
+  <content contentuid="ha9873d906c0652728fba6757b1d1ba81" version="1">Aberrant Magic (a level 3-4 Sorcerer spell)</content>
+  <content contentuid="h82c84377a0055c13a369c31ec1a646d2" version="1">Choose a level 3-4 Sorcerer spell for your Boon of Siberys.</content>
+  <content contentuid="h07a741abe4f550929f3d34692536c3dd" version="1">Aberrant Magic: Fireball (level 3)</content>
+  <content contentuid="h21e19db3b48a5b95807b6925af9c0a75" version="1">Choose Fireball as your Boon of Siberys spell.</content>
+  <content contentuid="h27cb5c95a72d5497bf384f8f5ad408cf" version="1">Aberrant Magic: Fireball</content>
+  <content contentuid="h411f383cc78054ffabe52b1e139113bf" version="1">Fireball (Aberrant Magic)</content>
+  <content contentuid="he59419d1bb4c569eac7f540ca346bbdc" version="1">Aberrant Magic: Vitriolic Sphere (level 4)</content>
+  <content contentuid="h092b3129dbf65d298ee4c710b5036304" version="1">Choose Vitriolic Sphere as your Boon of Siberys spell.</content>
+  <content contentuid="he5991057343f530bbee2c085e17e4111" version="1">Aberrant Magic: Vitriolic Sphere</content>
+  <content contentuid="hcd49885a8485525dadccc16ae20b0b27" version="1">Vitriolic Sphere (Aberrant Magic)</content>
+  <content contentuid="h7a27a99a34db53a2b60250a85b1a2a44" version="1">Aberrant Magic: Ashardalon's Stride (level 3)</content>
+  <content contentuid="ha2fca1417e0d596a9fa0ad5a454d93d4" version="1">Choose Ashardalon's Stride as your Boon of Siberys spell.</content>
+  <content contentuid="h3a7660d415925ca28408436cb4493e6d" version="1">Aberrant Magic: Ashardalon's Stride</content>
+  <content contentuid="hb0442e5d5d74556e88facefce697d1bd" version="1">Ashardalon's Stride (Aberrant Magic)</content>
+  <content contentuid="ha864409feff65688a4abcbc112e30b33" version="1">Aberrant Magic: Blink (level 3)</content>
+  <content contentuid="hbb67edea1e145abda553c732c17cafcf" version="1">Choose Blink as your Boon of Siberys spell.</content>
+  <content contentuid="h6313dd88a85255beac3293d0c45509b1" version="1">Aberrant Magic: Blink</content>
+  <content contentuid="h707224856a9e55c48a357268862629f8" version="1">Blink (Aberrant Magic)</content>
+  <content contentuid="h14b39af310675d3bb899e79cf6f73315" version="1">Aberrant Magic: Cacophonic Shield (level 3)</content>
+  <content contentuid="ha3d91a085f815b83ab6fe70a149ecfd9" version="1">Choose Cacophonic Shield as your Boon of Siberys spell.</content>
+  <content contentuid="hed9405a2c3b854389e5ec551364249da" version="1">Aberrant Magic: Cacophonic Shield</content>
+  <content contentuid="hd4ac6288a6465b05a216a9b39ef863a5" version="1">Cacophonic Shield (Aberrant Magic)</content>
+  <content contentuid="hc249345dd96751d0b6c0fc0bfe84ba54" version="1">Aberrant Magic: Fire Dance (level 4)</content>
+  <content contentuid="hf3ec500943a7546292878397eba95887" version="1">Choose Fire Dance as your Boon of Siberys spell.</content>
+  <content contentuid="h040961b849c159b5893a065f2370a1bb" version="1">Aberrant Magic: Fire Dance</content>
+  <content contentuid="h1c2035f46e1d540bb26ddfee576e2bd6" version="1">Fire Dance (Aberrant Magic)</content>
+  <content contentuid="he1ce341485275f39a6c107f41758d6df" version="1">Aberrant Magic: Banishment (level 4)</content>
+  <content contentuid="h7c8d28bb8958508c9796fc9f19cb2573" version="1">Choose Banishment as your Boon of Siberys spell.</content>
+  <content contentuid="hf52ab359b84a51509ccd47246884890c" version="1">Aberrant Magic: Banishment</content>
+  <content contentuid="he4835e5ab5ff5a65aff0ad8c7f045e87" version="1">Banishment (Aberrant Magic)</content>
+  <content contentuid="h2577f31bfd455e9786eb545488a23ebd" version="1">Aberrant Magic: Blight (level 4)</content>
+  <content contentuid="hb50a97f6896d507c8a4c6a53e3b670f7" version="1">Choose Blight as your Boon of Siberys spell.</content>
+  <content contentuid="h7d0bb8f182c256e9a55761d9b5c78f8c" version="1">Aberrant Magic: Blight</content>
+  <content contentuid="h7c4900c48c4a5c9f8b29154af2bbbc79" version="1">Blight (Aberrant Magic)</content>
+  <content contentuid="h12fe60ecad875b2eb015dc3d516f0ad8" version="1">Aberrant Magic: Charm Monster (level 4)</content>
+  <content contentuid="hd9778e25ebd15093bcba671a28f5939f" version="1">Choose Charm Monster as your Boon of Siberys spell.</content>
+  <content contentuid="h2cdd8db1237752989b189fab6e248895" version="1">Aberrant Magic: Charm Monster</content>
+  <content contentuid="h1534519924fa5b4bb7b0f25b3e785dc5" version="1">Charm Monster (Aberrant Magic)</content>
+  <content contentuid="h844582a8fd36565e95ffcec6495210b2" version="1">Aberrant Magic: Confusion (level 4)</content>
+  <content contentuid="h249f6bac4e855189adbc3653d4494b11" version="1">Choose Confusion as your Boon of Siberys spell.</content>
+  <content contentuid="hed60a176a0f6505ea686dcbca18571e3" version="1">Aberrant Magic: Confusion</content>
+  <content contentuid="h7ea13f2c35835d47b2322f2f319d3abf" version="1">Confusion (Aberrant Magic)</content>
+  <content contentuid="h754dd93accaf5b59878f5c0671644740" version="1">Aberrant Magic: Counterspell (level 3)</content>
+  <content contentuid="ha23a73d734cc5f308783f24f101db8cb" version="1">Choose Counterspell as your Boon of Siberys spell.</content>
+  <content contentuid="hb8e6ab327789573b8eb5320bfd7a3a1d" version="1">Aberrant Magic: Counterspell</content>
+  <content contentuid="h97b2470f27bd5334acaf77afb1f4e6a0" version="1">Counterspell (Aberrant Magic)</content>
+  <content contentuid="h888fa64aae2d58a98ce27beabf9ded23" version="1">Aberrant Magic: Dominate Beast (level 4)</content>
+  <content contentuid="hcf3e6b67f98154e2a4af235ec6389bd6" version="1">Choose Dominate Beast as your Boon of Siberys spell.</content>
+  <content contentuid="h3be805fd2d4450beae5b0c2b3bbf7054" version="1">Aberrant Magic: Dominate Beast</content>
+  <content contentuid="hf8308f2cfb965887bfcf51be26a3f858" version="1">Dominate Beast (Aberrant Magic)</content>
+  <content contentuid="h791d7d342c1754ae814066c89d2adf5b" version="1">Aberrant Magic: Fly (level 3)</content>
+  <content contentuid="h378db3d5155b5096a5ab09c8bd6e648e" version="1">Choose Fly as your Boon of Siberys spell.</content>
+  <content contentuid="h61e067da17ef5e9b88aa5d6e06209b0b" version="1">Aberrant Magic: Fly</content>
+  <content contentuid="h525a3ccb09595b61b7cea3165ac25331" version="1">Fly (Aberrant Magic)</content>
+  <content contentuid="h23cf4cd32c615be1b153f1c523454eb2" version="1">Aberrant Magic: Gaseous Form (level 3)</content>
+  <content contentuid="hb5a9ad2bdf645f01ac2a35d2d90fe3a8" version="1">Choose Gaseous Form as your Boon of Siberys spell.</content>
+  <content contentuid="hafd8791088f15c08865a989607235d3a" version="1">Aberrant Magic: Gaseous Form</content>
+  <content contentuid="he7ee74ba41fe500a90d3431b02b9927b" version="1">Gaseous Form (Aberrant Magic)</content>
+  <content contentuid="h51a6ca4c223851f8b578379faa30464a" version="1">Aberrant Magic: Haste (level 3)</content>
+  <content contentuid="h7b9e16a34307532b86f9a6abb7790a47" version="1">Choose Haste as your Boon of Siberys spell.</content>
+  <content contentuid="hfd82577cc16e5f89a7ad3504006815d6" version="1">Aberrant Magic: Haste</content>
+  <content contentuid="h44c7b18942d25f9ba546aa0d66a465d1" version="1">Haste (Aberrant Magic)</content>
+  <content contentuid="h99b1096e87ec527c851fe40e590bf6ad" version="1">Aberrant Magic: Hypnotic Pattern (level 3)</content>
+  <content contentuid="h3213115d232d5265b6fd5b264f1cac88" version="1">Choose Hypnotic Pattern as your Boon of Siberys spell.</content>
+  <content contentuid="hdd1daa0b755f53c2afc50da6ad46738e" version="1">Aberrant Magic: Hypnotic Pattern</content>
+  <content contentuid="h1a1ed7bca1cd5e68815d5139386cbb3e" version="1">Hypnotic Pattern (Aberrant Magic)</content>
+  <content contentuid="h9e47fb406d0a53b8a91a220abc3a0616" version="1">Aberrant Magic: Ice Storm (level 4)</content>
+  <content contentuid="hc561a28858325227aca1853aa49aa066" version="1">Choose Ice Storm as your Boon of Siberys spell.</content>
+  <content contentuid="hb2dabc8a6c6857f188805f1b836faee2" version="1">Aberrant Magic: Ice Storm</content>
+  <content contentuid="h3bea02c4f00c520b92759c75ee026de6" version="1">Ice Storm (Aberrant Magic)</content>
+  <content contentuid="h0ed0f79dfa425ae9ae0ff0fb9d1abbe0" version="1">Aberrant Magic: Greater Invisibility (level 4)</content>
+  <content contentuid="h3bde93dc12785e84b5b96b993a456fc7" version="1">Choose Greater Invisibility as your Boon of Siberys spell.</content>
+  <content contentuid="h2c81fae2cbe75c529a1ca191b49c1464" version="1">Aberrant Magic: Greater Invisibility</content>
+  <content contentuid="hf1fca09425895546868baebe46063d0f" version="1">Greater Invisibility (Aberrant Magic)</content>
+  <content contentuid="h1894e67126de5d7290e96e8b9aefa645" version="1">Aberrant Magic: Polymorph (level 4)</content>
+  <content contentuid="hd8a7e04fe25d5a4b923fb1b364a254e0" version="1">Choose Polymorph as your Boon of Siberys spell.</content>
+  <content contentuid="hebe2cc2d615a59b8887d2c96d1c508f1" version="1">Aberrant Magic: Polymorph</content>
+  <content contentuid="hb044679fb85a58b1bb4db0af7473efd2" version="1">Polymorph (Aberrant Magic)</content>
+  <content contentuid="h3a22a4a1114553fba266399f4c4053fb" version="1">Aberrant Magic: Sleet Storm (level 3)</content>
+  <content contentuid="h37a9d4b6c77f5824aaf0bd4c59060da5" version="1">Choose Sleet Storm as your Boon of Siberys spell.</content>
+  <content contentuid="hf7c02d2bbaf355dba8d926eb2dd99a08" version="1">Aberrant Magic: Sleet Storm</content>
+  <content contentuid="h81c8c2a473de579fbd5f1e6f2f7f96ae" version="1">Sleet Storm (Aberrant Magic)</content>
+  <content contentuid="hb6de92b11c5e50fb9430c13ad6336c4d" version="1">Aberrant Magic: Slow (level 3)</content>
+  <content contentuid="h0d7e6a3c69d75657869be0c21e693220" version="1">Choose Slow as your Boon of Siberys spell.</content>
+  <content contentuid="h8f640762e0a85d43bca18e15eba6ddd7" version="1">Aberrant Magic: Slow</content>
+  <content contentuid="hda1dee421b185ba8bf5fd49b58079bd3" version="1">Slow (Aberrant Magic)</content>
+  <content contentuid="hd85c82b0d61f5b498170607e4bd69e9f" version="1">Aberrant Magic: Spellfire Storm (level 4)</content>
+  <content contentuid="h5aedd9e9e6ff5eceb286533275a78199" version="1">Choose Spellfire Storm as your Boon of Siberys spell.</content>
+  <content contentuid="hf2f2f2e1ff25528b83627db15feb3b6a" version="1">Aberrant Magic: Spellfire Storm</content>
+  <content contentuid="he9f86ec5bf5e543da2aed99078bd6c4e" version="1">Spellfire Storm (Aberrant Magic)</content>
+  <content contentuid="he1694c63af4b584097a84c2bb175a92f" version="1">Aberrant Magic: Stinking Cloud (level 3)</content>
+  <content contentuid="h8169359a91895a349f3f3c79f3cc1c57" version="1">Choose Stinking Cloud as your Boon of Siberys spell.</content>
+  <content contentuid="h034ddc2e9aba58948f1573078083186f" version="1">Aberrant Magic: Stinking Cloud</content>
+  <content contentuid="h44667713c4c15a6d982de59f1245bda9" version="1">Stinking Cloud (Aberrant Magic)</content>
+  <content contentuid="h9ef7c5d11e605b61a4892c27d4c6e587" version="1">Aberrant Magic: Stoneskin (level 4)</content>
+  <content contentuid="h6221e58b0f46520684db1ab33c2f5630" version="1">Choose Stoneskin as your Boon of Siberys spell.</content>
+  <content contentuid="he0a304a5e1655365b335d8848023adbb" version="1">Aberrant Magic: Stoneskin</content>
+  <content contentuid="h21d2b92be9635e9cbf2d1da6ab2706d8" version="1">Stoneskin (Aberrant Magic)</content>
+  <content contentuid="haefb2d56dba05495824e97f7ce264701" version="1">Aberrant Magic: Vampiric Touch (level 3)</content>
+  <content contentuid="hb32937b94870585890efddb9fb791611" version="1">Choose Vampiric Touch as your Boon of Siberys spell.</content>
+  <content contentuid="h528c564cc9985942aedc22134275d2fa" version="1">Aberrant Magic: Vampiric Touch</content>
+  <content contentuid="h53cc2bfac2065395a1278879386e9a44" version="1">Vampiric Touch (Aberrant Magic)</content>
+  <content contentuid="h39c51819a8eb55f19cc9847c15d82810" version="1">Aberrant Magic: Dimension Door (level 4)</content>
+  <content contentuid="h58ed41c2d0135451b6925b1bf30107c8" version="1">Choose Dimension Door as your Boon of Siberys spell.</content>
+  <content contentuid="hb39480b1e50a52828e6e5e8c119f6903" version="1">Aberrant Magic: Dimension Door</content>
+  <content contentuid="h9ff579d128a75319b85ac324adc317a4" version="1">Dimension Door (Aberrant Magic)</content>
+  <content contentuid="hfdc55639f2865b1db60a93b8e82312c9" version="1">Aberrant Magic: Wall of Fire (level 4)</content>
+  <content contentuid="h32a970dd4072567392fed854112d154c" version="1">Choose Wall of Fire as your Boon of Siberys spell.</content>
+  <content contentuid="h17c01f0d4bd35175a8d7e18559e95321" version="1">Aberrant Magic: Wall of Fire</content>
+  <content contentuid="h6ec95d1eab215f78b0667238997306c6" version="1">Wall of Fire (Aberrant Magic)</content>
+  <content contentuid="h490414243e3551409fa6d48c736d119c" version="1">Aberrant Magic: Fear (level 3)</content>
+  <content contentuid="hd8d8dc36a673556581dfc21edebd74d0" version="1">Choose Fear as your Boon of Siberys spell.</content>
+  <content contentuid="h2a2bee93bb19501ea49fb73f7b1cf083" version="1">Aberrant Magic: Fear</content>
+  <content contentuid="h32eddd7612cf5979a3c9b7d473135a30" version="1">Fear (Aberrant Magic)</content>
+  <content contentuid="h0b42cedae20a58758ae56323f6cc8133" version="1">Aberrant Magic: Laeral's Silver Lance (level 3)</content>
+  <content contentuid="h3f92b19ea58f5f9899fecde0ae767396" version="1">Choose Laeral's Silver Lance as your Boon of Siberys spell.</content>
+  <content contentuid="h946411d576d7545e8326d33920c458d6" version="1">Aberrant Magic: Laeral's Silver Lance</content>
+  <content contentuid="h569e4f0f0dc555b886ae2d7d387f2470" version="1">Laeral's Silver Lance (Aberrant Magic)</content>
+  <content contentuid="h41f0d17919695a4f89c22eaf48c2044d" version="1">Aberrant Magic: Lightning Bolt (level 3)</content>
+  <content contentuid="h2de2e8e9b54a51388e15c50cea814c2f" version="1">Choose Lightning Bolt as your Boon of Siberys spell.</content>
+  <content contentuid="h482f76c7319d50d4afff1120d82c72e8" version="1">Aberrant Magic: Lightning Bolt</content>
+  <content contentuid="hb0bb82c14ecc5f83addcdeec41ac9c09" version="1">Lightning Bolt (Aberrant Magic)</content>
+  <content contentuid="h290d361e380a54c19173f834e1cb0323" version="1">Aberrant Magic: Murder of Crows  (level 4)</content>
+  <content contentuid="hec600a05b7ea5c4680ce92a15ad608d6" version="1">Choose Murder of Crows  as your Boon of Siberys spell.</content>
+  <content contentuid="h232fbf64a85a5082a1048ba3d64f1005" version="1">Aberrant Magic: Murder of Crows </content>
+  <content contentuid="h298ed3d6497d548c876b6f44d6fc16f9" version="1">Murder of Crows  (Aberrant Magic)</content>
+  <content contentuid="h3089c2414c9f5b04a157ed6e328897a5" version="1">Aberrant Magic: Tidal Wave (level 3)</content>
+  <content contentuid="h318a3a9f5e0558689d12d17e911d680a" version="1">Choose Tidal Wave as your Boon of Siberys spell.</content>
+  <content contentuid="h3371113d340d50afaf0c57725cdddab5" version="1">Aberrant Magic: Tidal Wave</content>
+  <content contentuid="h85d0bf1c508558d5ba34ea6fb3d2628d" version="1">Tidal Wave (Aberrant Magic)</content>
+  <content contentuid="ha5b0f2db1acf5d338fd807adfc49d3da" version="1">Aberrant Magic (a level 5-8 Sorcerer spell)</content>
+  <content contentuid="h2a8e0f08624d532886cdde4196565f55" version="1">Choose a level 5-8 Sorcerer spell for your Boon of Siberys.</content>
+  <content contentuid="h4c48873da92c5aa79c778777bf5e0535" version="1">Aberrant Magic: Delayed Blast Fireball (level 7)</content>
+  <content contentuid="h35abd3fc429654c9aa713377b74e71f5" version="1">Choose Delayed Blast Fireball as your Boon of Siberys spell.</content>
+  <content contentuid="hacff4dff56f2525aa42281ff6a37d6bf" version="1">Aberrant Magic: Delayed Blast Fireball</content>
+  <content contentuid="hd5e953ac8aa95f33bc8a4066e24e8946" version="1">Delayed Blast Fireball (Aberrant Magic)</content>
+  <content contentuid="h90f78ae4dced5cdba766be873be78264" version="1">Aberrant Magic: Chain Lightning (level 6)</content>
+  <content contentuid="ha9be488e9ec053f3a7f98f45763a2062" version="1">Choose Chain Lightning as your Boon of Siberys spell.</content>
+  <content contentuid="hdf632ea4bc085d54aa29cdcc964a201f" version="1">Aberrant Magic: Chain Lightning</content>
+  <content contentuid="he9b3f9b68cd0525a887dddb5f9c14461" version="1">Chain Lightning (Aberrant Magic)</content>
+  <content contentuid="hf915610683e15819a932853012ff4cae" version="1">Aberrant Magic: Disintegrate (level 6)</content>
+  <content contentuid="hd867145f5700543caf1ad02b48ce1f7b" version="1">Choose Disintegrate as your Boon of Siberys spell.</content>
+  <content contentuid="h94cfe3a7a9ea5dda9e84ad04ae3b71b5" version="1">Aberrant Magic: Disintegrate</content>
+  <content contentuid="h87a5d2850e4452f99eb7e0624090ece3" version="1">Disintegrate (Aberrant Magic)</content>
+  <content contentuid="h726f72d6df0e5b10bcdb79c9bb56dfa0" version="1">Aberrant Magic: Power Word Stun (level 8)</content>
+  <content contentuid="hdf622647709659ffb8a910cbc213ff62" version="1">Choose Power Word Stun as your Boon of Siberys spell.</content>
+  <content contentuid="h792553e7214d57b791aa7fae8e574687" version="1">Aberrant Magic: Power Word Stun</content>
+  <content contentuid="hfa31de11c4b9515dbf9633db4ea5ecfe" version="1">Power Word Stun (Aberrant Magic)</content>
+  <content contentuid="hd5ed8161a280561c9090b03fa1dce605" version="1">Aberrant Magic: Animate Objects (level 5)</content>
+  <content contentuid="h94757dbe32cc5347867e9c0854929229" version="1">Choose Animate Objects as your Boon of Siberys spell.</content>
+  <content contentuid="hf4c60b646222548594c7151d07b2230a" version="1">Aberrant Magic: Animate Objects</content>
+  <content contentuid="hdf1a1140499958bf88c94e295143dda4" version="1">Animate Objects (Aberrant Magic)</content>
+  <content contentuid="h4a8f0c1d8f4d5c59a58ec1ac6f54fc9c" version="1">Aberrant Magic: Bigby's Hand (level 5)</content>
+  <content contentuid="h5772ce66b41754208c244b40d0f81452" version="1">Choose Bigby's Hand as your Boon of Siberys spell.</content>
+  <content contentuid="h94420e3e444b5a3f9ec68d7422bc9fef" version="1">Aberrant Magic: Bigby's Hand</content>
+  <content contentuid="h90c79cd107685d4ba90d7ef91b9db902" version="1">Bigby's Hand (Aberrant Magic)</content>
+  <content contentuid="h370eb74696455ae8b203c50375f528a3" version="1">Aberrant Magic: Earthquake (level 8)</content>
+  <content contentuid="h2718603d87235c4bb0775380d36612ca" version="1">Choose Earthquake as your Boon of Siberys spell.</content>
+  <content contentuid="h346dd06d0d8551858000968be8a6a52e" version="1">Aberrant Magic: Earthquake</content>
+  <content contentuid="hdd6b220569165a10aedede5245615fa9" version="1">Earthquake (Aberrant Magic)</content>
+  <content contentuid="h1d0f8a5aba3f5cafb5198d38af73ce86" version="1">Aberrant Magic: Etherealness (level 7)</content>
+  <content contentuid="hbba7e69efeb551feb520119e63fc5f80" version="1">Choose Etherealness as your Boon of Siberys spell.</content>
+  <content contentuid="h6861aac214915ad681d6703f228d37aa" version="1">Aberrant Magic: Etherealness</content>
+  <content contentuid="h8f127ea0ae7356b089393ac7bcc8c5fc" version="1">Etherealness (Aberrant Magic)</content>
+  <content contentuid="h5998b64089395a96aae56f6dc871447a" version="1">Aberrant Magic: Finger of Death (level 7)</content>
+  <content contentuid="h1e8bf3aee7fd5c56b78ebc181c920afc" version="1">Choose Finger of Death as your Boon of Siberys spell.</content>
+  <content contentuid="h3f2488d6035556e79b823902a21a66db" version="1">Aberrant Magic: Finger of Death</content>
+  <content contentuid="h2734f59fa35c51d8a19a9bd64eda0091" version="1">Finger of Death (Aberrant Magic)</content>
+  <content contentuid="h4b2f65570448578590d06df244c67aad" version="1">Aberrant Magic: Fire Storm (level 7)</content>
+  <content contentuid="h40173ec34a5455f495a331db065340c8" version="1">Choose Fire Storm as your Boon of Siberys spell.</content>
+  <content contentuid="h4527e50309655ae1ae8831a6d708b1e2" version="1">Aberrant Magic: Fire Storm</content>
+  <content contentuid="h646be48f7759551598b00e1af072fb86" version="1">Fire Storm (Aberrant Magic)</content>
+  <content contentuid="h85c7268275ec59cc8b3ba17bb532ea85" version="1">Aberrant Magic: Incendiary Cloud (level 8)</content>
+  <content contentuid="h82e1d865bcdf5a98b7927e2094ca33dd" version="1">Choose Incendiary Cloud as your Boon of Siberys spell.</content>
+  <content contentuid="h9c8fdc034a86538fa4147d3375f79400" version="1">Aberrant Magic: Incendiary Cloud</content>
+  <content contentuid="h8335e909067e533cabe987286b6e660c" version="1">Incendiary Cloud (Aberrant Magic)</content>
+  <content contentuid="h0c22a11afb225d8cbcef46eeb619a438" version="1">Aberrant Magic: Reverse Gravity (level 7)</content>
+  <content contentuid="h8639e837d2075c9db74714f9639c5245" version="1">Choose Reverse Gravity as your Boon of Siberys spell.</content>
+  <content contentuid="h9c99be80f4c950fe86b394ea7ed742ce" version="1">Aberrant Magic: Reverse Gravity</content>
+  <content contentuid="h93076cd6b3945603b3c342df1d90242b" version="1">Reverse Gravity (Aberrant Magic)</content>
+  <content contentuid="h9d56872f9d3755deb5d50ea0108977b1" version="1">Aberrant Magic: Sunburst (level 8)</content>
+  <content contentuid="h2605c894020f56aaaef406de0217b3ee" version="1">Choose Sunburst as your Boon of Siberys spell.</content>
+  <content contentuid="h2dafe085ec91575890e87bc1f1ac9165" version="1">Aberrant Magic: Sunburst</content>
+  <content contentuid="h7eeac00f15ab57a3bceae82ab325739d" version="1">Sunburst (Aberrant Magic)</content>
+  <content contentuid="hcc46abe1de56573ba73372405494cde1" version="1">Aberrant Magic: Circle of Death (level 6)</content>
+  <content contentuid="he3432d6a61e754af9f61d0d09c1afe06" version="1">Choose Circle of Death as your Boon of Siberys spell.</content>
+  <content contentuid="h3efb2146172f5526bdc897e20208018f" version="1">Aberrant Magic: Circle of Death</content>
+  <content contentuid="hf998181ad7f4560a921a74268e0ad292" version="1">Circle of Death (Aberrant Magic)</content>
+  <content contentuid="h09a5bad85f1b5cb59a1a00dff1e1c1dc" version="1">Aberrant Magic: Cloudkill (level 5)</content>
+  <content contentuid="h4fbdebf1690454168e2177baba08cd88" version="1">Choose Cloudkill as your Boon of Siberys spell.</content>
+  <content contentuid="h27879073df525398a9aee1bbcb48445f" version="1">Aberrant Magic: Cloudkill</content>
+  <content contentuid="h361c9d08934153f1859a54e98568bad1" version="1">Cloudkill (Aberrant Magic)</content>
+  <content contentuid="h3edb01d685cc5103a040a0657f791394" version="1">Aberrant Magic: Dominate Monster (level 8)</content>
+  <content contentuid="hacae0e7ddf1f5bd6be5e718c5179dc12" version="1">Choose Dominate Monster as your Boon of Siberys spell.</content>
+  <content contentuid="hb9236b615153527492ee62832e4b1809" version="1">Aberrant Magic: Dominate Monster</content>
+  <content contentuid="ha7e8b2baf3b255d6a9b7aaacdc584145" version="1">Dominate Monster (Aberrant Magic)</content>
+  <content contentuid="h3a51eb81d75553c9ad113ddfacec25ef" version="1">Aberrant Magic: Dominate Person (level 5)</content>
+  <content contentuid="hcd07181e1e045b9bb09779fa10fb3bf2" version="1">Choose Dominate Person as your Boon of Siberys spell.</content>
+  <content contentuid="h976f777408f45903a32d26427687af94" version="1">Aberrant Magic: Dominate Person</content>
+  <content contentuid="h44731e124483506d96bcf3e45b27b09e" version="1">Dominate Person (Aberrant Magic)</content>
+  <content contentuid="h5ed0f9391e8859e4aa2d879a693a7f06" version="1">Aberrant Magic: Enervation (level 5)</content>
+  <content contentuid="he44605a9dff75a84a07aa0fa3baebf52" version="1">Choose Enervation as your Boon of Siberys spell.</content>
+  <content contentuid="hdf2fbe0626045ae9ba24663c468c6671" version="1">Aberrant Magic: Enervation</content>
+  <content contentuid="hb8585421a2495eda84ab3299788a7a27" version="1">Enervation (Aberrant Magic)</content>
+  <content contentuid="h48b5c9d957a1504cb68247ad2a0c41f0" version="1">Aberrant Magic: Flesh to Stone (level 6)</content>
+  <content contentuid="hee858705300c5b36a3b5831995b8b66d" version="1">Choose Flesh to Stone as your Boon of Siberys spell.</content>
+  <content contentuid="h30e71b37526c514b9282380d716d51cd" version="1">Aberrant Magic: Flesh to Stone</content>
+  <content contentuid="h25aa8c7098e15c2fa73c0a8351b36ca7" version="1">Flesh to Stone (Aberrant Magic)</content>
+  <content contentuid="h7c18e8f0fb195ea68437b5124489bb85" version="1">Aberrant Magic: Globe of Invulnerability (level 6)</content>
+  <content contentuid="he5a96cb6403c50df818ff59ddc2d92a9" version="1">Choose Globe of Invulnerability as your Boon of Siberys spell.</content>
+  <content contentuid="hcc8f54b6673d5903a7fe3eabeda8d7f0" version="1">Aberrant Magic: Globe of Invulnerability</content>
+  <content contentuid="h3ec44603fa44592893cfab8e6281b0c2" version="1">Globe of Invulnerability (Aberrant Magic)</content>
+  <content contentuid="h14a08ba5d41c5230ae66d0b682b0a2d7" version="1">Aberrant Magic: Hold Monster (level 5)</content>
+  <content contentuid="h1b7f67483e9a5f989f41f4ebf2f5ce13" version="1">Choose Hold Monster as your Boon of Siberys spell.</content>
+  <content contentuid="hd6a57054180758199efacafdc5347cde" version="1">Aberrant Magic: Hold Monster</content>
+  <content contentuid="h2f4e51f08ca658cb9652d48e0fda6be4" version="1">Hold Monster (Aberrant Magic)</content>
+  <content contentuid="hf51b727959af5517a66ce2d8830781f8" version="1">Aberrant Magic: Insect Plague (level 5)</content>
+  <content contentuid="h8ce083f3aadf572c9eb56dd39ce4f0d5" version="1">Choose Insect Plague as your Boon of Siberys spell.</content>
+  <content contentuid="hd22ca3b12aa554d79349925ec2a69aa9" version="1">Aberrant Magic: Insect Plague</content>
+  <content contentuid="hd275a6972417579984c4c42af03a3a94" version="1">Insect Plague (Aberrant Magic)</content>
+  <content contentuid="ha7642a9c07e85b2c99bb311cea280668" version="1">Aberrant Magic: Seeming (level 5)</content>
+  <content contentuid="h8a37fa0815f658d9b7426ed6331ac298" version="1">Choose Seeming as your Boon of Siberys spell.</content>
+  <content contentuid="h36a285e3f7005ead9155e763b11de62c" version="1">Aberrant Magic: Seeming</content>
+  <content contentuid="hbaef386ee96a5f6eae90d505c07c1e18" version="1">Seeming (Aberrant Magic)</content>
+  <content contentuid="h01858c9becc15eb28f9ca55383f7b00a" version="1">Aberrant Magic: Synaptic Static (level 5)</content>
+  <content contentuid="hcf70a2c9559259b5855e30a9e9dc34ec" version="1">Choose Synaptic Static as your Boon of Siberys spell.</content>
+  <content contentuid="hcc54ea275dea55bea75ceb21941bdd8d" version="1">Aberrant Magic: Synaptic Static</content>
+  <content contentuid="hbcbe539aec575ac7b54de78cd59b08ac" version="1">Synaptic Static (Aberrant Magic)</content>
+  <content contentuid="h7a4c996a45bc5464986d7f7c71ca1f58" version="1">Aberrant Magic: Arcane Gate (level 6)</content>
+  <content contentuid="hd855c9024e4f5c169ff9d25af5251f22" version="1">Choose Arcane Gate as your Boon of Siberys spell.</content>
+  <content contentuid="he396d7ac45425f6b8f847fc88676a140" version="1">Aberrant Magic: Arcane Gate</content>
+  <content contentuid="h6a2b2ab49e3657ebac3340a1694b5cd4" version="1">Arcane Gate (Aberrant Magic)</content>
+  <content contentuid="h733ae503bc8653559badbbc5482ab8bb" version="1">Aberrant Magic: Telekinesis (level 5)</content>
+  <content contentuid="hfe1ee739e1e751c0956908a17f6241a1" version="1">Choose Telekinesis as your Boon of Siberys spell.</content>
+  <content contentuid="hdca0521c37e95cd89f606f61a1aa4dcd" version="1">Aberrant Magic: Telekinesis</content>
+  <content contentuid="ha8c7507c9db258978bd6b94e1c782762" version="1">Telekinesis (Aberrant Magic)</content>
+  <content contentuid="h8c704f7de3bb57a7965e056da97c5efe" version="1">Aberrant Magic: Wall of Stone (level 5)</content>
+  <content contentuid="hfd1020887a6b5695936aa9cc3200c190" version="1">Choose Wall of Stone as your Boon of Siberys spell.</content>
+  <content contentuid="hb38bf11ec5e45c2cb2c65a0dea272d87" version="1">Aberrant Magic: Wall of Stone</content>
+  <content contentuid="hc9acb13c72b65b55ad6c2ef9bebc1523" version="1">Wall of Stone (Aberrant Magic)</content>
+  <content contentuid="h7bd7f385c9975f7cbbd87bfb3817f449" version="1">Aberrant Magic: Cone of Cold (level 5)</content>
+  <content contentuid="h362656d65bac5298a6fa3a4eacfa79c9" version="1">Choose Cone of Cold as your Boon of Siberys spell.</content>
+  <content contentuid="h96ee35a6c68c56a0bef82c9d55899bd9" version="1">Aberrant Magic: Cone of Cold</content>
+  <content contentuid="he2d44100abd65cae92ff850fe0962541" version="1">Cone of Cold (Aberrant Magic)</content>
+  <content contentuid="h6096374ad8d75425b7a86db7bfe765c2" version="1">Aberrant Magic: Prismatic Spray (level 7)</content>
+  <content contentuid="h5bb4b7c136db558e8bb97f92b1c86c7c" version="1">Choose Prismatic Spray as your Boon of Siberys spell.</content>
+  <content contentuid="hb0dee8a2400b5792a6d73890b0124d48" version="1">Aberrant Magic: Prismatic Spray</content>
+  <content contentuid="h3e1937302d82512993d039134176b6a7" version="1">Prismatic Spray (Aberrant Magic)</content>
+  <content contentuid="h76f1fe6e35475837bcc239463035c7b1" version="1">Aberrant Magic: Sunbeam (level 6)</content>
+  <content contentuid="h9474ab17532d51f387c7966cbc0a8a68" version="1">Choose Sunbeam as your Boon of Siberys spell.</content>
+  <content contentuid="hbb12b391dcb15d8eb238132d116a6fe2" version="1">Aberrant Magic: Sunbeam</content>
+  <content contentuid="h0028da1839675cbb98320a35d22cef0b" version="1">Sunbeam (Aberrant Magic)</content>
+  <content contentuid="h2a71cfe0d3b5519abc4a121b299b6fa2" version="1">Aberrant Magic (a Siberys Dragonmark spell)</content>
+  <content contentuid="hd79a6a3ccc155f40a2de999f1df234ad" version="1">Choose a Siberys Dragonmark spell for your Boon of Siberys.</content>
+  <content contentuid="h8d62680dc81c515db794c1c04f1fe9f0" version="1">Aberrant Magic: Animal Shapes (level 8)</content>
+  <content contentuid="h6d551504580e56759d2d5d131d16739e" version="1">Choose Animal Shapes as your Boon of Siberys spell.</content>
+  <content contentuid="h13cd5cfd97595d3fa4e4fc1d8a428986" version="1">Aberrant Magic: Animal Shapes</content>
+  <content contentuid="h8b7d32879ab05c318cd5c31f72484f9a" version="1">Animal Shapes (Aberrant Magic)</content>
+  <content contentuid="ha2a60319c47053bd9d7f28467137ef2d" version="1">Aberrant Magic: Control Weather (level 8)</content>
+  <content contentuid="h0510ab7ecd8455fd8d833545450e8c12" version="1">Choose Control Weather as your Boon of Siberys spell.</content>
+  <content contentuid="h9428bc1b6e955de18a40f94a4f918e02" version="1">Aberrant Magic: Control Weather</content>
+  <content contentuid="haae6fbb4157c55e582b8b59d583a557d" version="1">Control Weather (Aberrant Magic)</content>
+  <content contentuid="h5272790e27dd543dafd79cdbce8ace65" version="1">Aberrant Magic: Heroes' Feast (level 6)</content>
+  <content contentuid="h72c2fb45e8895efcb41d76c6822df834" version="1">Choose Heroes' Feast as your Boon of Siberys spell.</content>
+  <content contentuid="h18857a8039165e6ba3ac50d7a361450f" version="1">Aberrant Magic: Heroes' Feast</content>
+  <content contentuid="h9fef97af947d5c2790fdb7306eb71ef5" version="1">Heroes' Feast (Aberrant Magic)</content>
+  <content contentuid="h1fc497b073515ed0830b96e2053aaf53" version="1">Aberrant Magic: Demiplane (level 8)</content>
+  <content contentuid="haf3de2d209625f13aefbbee4cab5b20b" version="1">Choose Demiplane as your Boon of Siberys spell.</content>
+  <content contentuid="h634be0fe39da538487ac8bbdb5c04f46" version="1">Aberrant Magic: Demiplane</content>
+  <content contentuid="hd405cab5686c53a4bdcc3a0de95ea7e1" version="1">Demiplane (Aberrant Magic)</content>
+  <content contentuid="h68a3d2ae841e5ec1b1fe3e661093df80" version="1">Aberrant Magic: Maze (level 8)</content>
+  <content contentuid="h2080f086770c557eb092622016174cb1" version="1">Choose Maze as your Boon of Siberys spell.</content>
+  <content contentuid="h356fb3efbb6a53688cb23935b986b429" version="1">Aberrant Magic: Maze</content>
+  <content contentuid="h00c17e8b03985e5a815eda53a3a00b2a" version="1">Maze (Aberrant Magic)</content>
+  <content contentuid="hbed4a69d144e5d408638f796ea2ddb40" version="1">Aberrant Magic: Mind Blank (level 8)</content>
+  <content contentuid="h9849b9aeb6545b719353c53e27b49726" version="1">Choose Mind Blank as your Boon of Siberys spell.</content>
+  <content contentuid="h45a87224106356b68b145463b249d05e" version="1">Aberrant Magic: Mind Blank</content>
+  <content contentuid="h8791d7f9d02f5c72976d896cc3642fd7" version="1">Mind Blank (Aberrant Magic)</content>
+  <content contentuid="hddfdf5d2e9865f0fa18dcfa211bad65f" version="1">Aberrant Magic: Plane Shift (level 7)</content>
+  <content contentuid="he596760b2280578ca1d1683c62302bfd" version="1">Choose Plane Shift as your Boon of Siberys spell.</content>
+  <content contentuid="hc1a3b2a267c1548cb4c38210eefd15b1" version="1">Aberrant Magic: Plane Shift</content>
+  <content contentuid="h2eaa0a99c49454aa908b0e918f90bb02" version="1">Plane Shift (Aberrant Magic)</content>
+  <content contentuid="h066e62f5f2c65d458130f568325bd121" version="1">Aberrant Magic: Symbol (level 7)</content>
+  <content contentuid="h147d2b34f140536cbc18a99559481b69" version="1">Choose Symbol as your Boon of Siberys spell.</content>
+  <content contentuid="h0481ed187c5d52248eb7c90b3e9ec2fc" version="1">Aberrant Magic: Symbol</content>
+  <content contentuid="h07e3d435ca685eaf8ac74a44c30d701f" version="1">Symbol (Aberrant Magic)</content>
+  <content contentuid="he3b5f10841ab585991d664d4b81ecd84" version="1">Aberrant Magic: Teleport (level 7)</content>
+  <content contentuid="hc31787dd8f0d5c10bf204ed62dbe845f" version="1">Choose Teleport as your Boon of Siberys spell.</content>
+  <content contentuid="h3518d59a07945ffb9f7cfd972db14720" version="1">Aberrant Magic: Teleport</content>
+  <content contentuid="h28fb842d04655a879cf6d30a9b000adf" version="1">Teleport (Aberrant Magic)</content>
+  <content contentuid="h618600d5c0555d258060e664f2da25cd" version="1">Aberrant Magic: Project Image (level 7)</content>
+  <content contentuid="h73f69b00203957a6beeaaa62f5ab840c" version="1">Choose Project Image as your Boon of Siberys spell.</content>
+  <content contentuid="h29e9dbc33b345846ad4d85b3b3ce53be" version="1">Aberrant Magic: Project Image</content>
+  <content contentuid="h0ea8c9efcbc4577c8a633dc63e20cd22" version="1">Project Image (Aberrant Magic)</content>
+  <content contentuid="h5426bb3337d355cb9018470ca60e17a8" version="1">Aberrant Magic: Regenerate (level 7)</content>
+  <content contentuid="h5ead5ed297045d1cbcec8f1ec7f96c2a" version="1">Choose Regenerate as your Boon of Siberys spell.</content>
+  <content contentuid="ha7688fec810d5a30aaab09a731804368" version="1">Aberrant Magic: Regenerate</content>
+  <content contentuid="hc250590b520d564ba91e8c5e6a001fca" version="1">Regenerate (Aberrant Magic)</content>
+  <content contentuid="ha509167197795640b5309f1974717d8d" version="1">Aberrant Magic: True Seeing (level 6)</content>
+  <content contentuid="h47fb8087d8285c64906ff01d32afbe13" version="1">Choose True Seeing as your Boon of Siberys spell.</content>
+  <content contentuid="h474899e7cf8a5ad2a1e7920f3da3f367" version="1">Aberrant Magic: True Seeing</content>
+  <content contentuid="hbda0d027ce7d5020807104bc0b9653d0" version="1">True Seeing (Aberrant Magic)</content>
+  <content contentuid="hc1c24ade6b6157059990b2b85d2a65c7" version="1">Aberrant Magic</content>
+  <content contentuid="hee9f4e8a32d05346bebb663120214808" version="1">Choose your Boon of Siberys spell.</content>
+  <content contentuid="h1d114ea272b15bf4894dee676ba10342" version="1">Aberrant Magic</content>
+  <content contentuid="heba26764cf685a0bb05007546045a3af" version="1">Cast your Boon of Siberys spell without a spell slot or components. Returns on a Short or Long Rest.</content>
+  <content contentuid="hf7fc68ecb6495675aec625768ecf83d4" version="1">Aura of Evasion</content>
+  <content contentuid="h26389fdd5dbb5f8eab9f9c25907b2bb6" version="1">For 1 minute, you and your allies within 9m have Advantage on Dexterity saving throws and take no damage on a successful save against an effect that deals half damage on a success (half on a failure). Incapacitated creatures don't benefit.</content>
+  <content contentuid="hc79b85c8d77f5ca7a25436b227ae3577" version="1">Aura of Evasion</content>
+  <content contentuid="h6e4b7a4c8ea853418a7cc91f39009611" version="1">You and allies within 9m have Advantage on Dexterity saves and Evasion.</content>
+  <content contentuid="h87736d2ee18a542ab70bb06660f68018" version="1">Aura of Evasion</content>
+  <content contentuid="h1082a60741bf5bfd8aa8461da976d476" version="1">Advantage on Dexterity saving throws; no damage on a successful save against an area effect, half on a failure.</content>
+  <content contentuid="h1a4c57e2bee55f6e97fa3e7e3182cebf" version="1">Fractured Awareness</content>
+  <content contentuid="h4f02773891ab53c7b72ff2595651fdf6" version="1">Conflicting visions of possible futures assail a creature (Intelligence save). On a failure it takes 12d10 Psychic damage and has Disadvantage on D20 Tests, repeating the save at the end of each of its turns. On a success, half damage only.</content>
+  <content contentuid="h9911ab1e54a152ffbda7aa3ad2f5e407" version="1">Fractured Awareness</content>
+  <content contentuid="h5d75355d1fa252558e135c0c92066d5c" version="1">Disadvantage on D20 Tests. Repeats the Intelligence save at the end of each of its turns.</content>
+  <content contentuid="h95f907f9abd55d839671124f809847b0" version="1">Power Word Pain</content>
+  <content contentuid="h7fb6b5ca231f5300ab9771c989364d93" version="1">A word of power deals 6d8 Force damage. If the creature had 100 Hit Points or fewer, it is also Charmed for 1 minute: Speed at most 3m and Disadvantage on D20 Tests except Constitution saves. It repeats a Constitution save at the end of each of its turns.</content>
+  <content contentuid="h4dc5a67b44dd5e14b38f7908b4b18fb3" version="1">Power Word Pain</content>
+  <content contentuid="h5cd9538765cb5448a4f4e43f0467eb62" version="1">Charmed: Speed at most 3m, Disadvantage on D20 Tests except Constitution saves. Repeats the Constitution save at the end of each of its turns.</content>
+  <content contentuid="h697921928953504eabc0552cbb8d18f6" version="1">Reweave Fate</content>
+  <content contentuid="hdb976ace6ba65988b455cc06f159042e" version="1">Reaction, when an ally within 18m fails an attack roll or saving throw: it rerolls with Advantage and must use the new roll.</content>
+  <content contentuid="hc02b05199b8253cda9ff9474d1700ef8" version="1">Reweave Fate</content>
+  <content contentuid="ha4b87de124be53f98d883039327600d9" version="1">An ally failed a roll: reroll it with Advantage.</content>
+  <content contentuid="h56070afc80b35988ae9b53c5a317c4d3" version="1">Transfix</content>
+  <content contentuid="h0b7d959f41905adab8474a4c0f316b3a" version="1">An alluring otherworldly aura: a creature within 18m makes a Charisma save or is Charmed and Incapacitated, moving toward you, and takes 4d8 Psychic damage whenever it ends its turn within 1.5m of you. While you concentrate you can use an action to target another creature (not one that saved).</content>
+  <content contentuid="h86e03de5d5105a3d9baaa45533084a29" version="1">Transfix: New Target</content>
+  <content contentuid="hef6a0db074b258f7bf347cd9c8b32097" version="1">Transfix another creature (not one that saved).</content>
+  <content contentuid="hc38e5c58e5d153fcbfe3e58cbc03d298" version="1">Transfix</content>
+  <content contentuid="hea5a3484e13b5b6face6b665173e0f1d" version="1">You can Transfix another creature with an action.</content>
+  <content contentuid="h60976e9fb56e55e88ed8d4316513dc7a" version="1">Transfixed</content>
+  <content contentuid="h9fce0a6500ee513791c673e2943988b8" version="1">Charmed and Incapacitated; moves toward the caster and takes 4d8 Psychic damage when it ends its turn within 1.5m of them.</content>
+  <content contentuid="h4dff236ad0365cd3b028fcd5b690fc05" version="1">Transfix</content>
+  <content contentuid="h41772709d65e5029bd2f014354f6e9c2" version="1">An alluring otherworldly aura: a creature within 18m makes a Charisma save or is Charmed and Incapacitated, moving toward you, and takes 5d8 Psychic damage whenever it ends its turn within 1.5m of you. While you concentrate you can use an action to target another creature (not one that saved).</content>
+  <content contentuid="hbac40dd4a4d6526fb1605330321f048c" version="1">Transfix: New Target</content>
+  <content contentuid="h4db5f24bac345273aa9c51ecf69b6429" version="1">Transfix another creature (not one that saved).</content>
+  <content contentuid="hdf26cc70d5a45ca39bba256e9c98bd62" version="1">Transfix</content>
+  <content contentuid="h9dff391970645733aaa8cc823a404623" version="1">You can Transfix another creature with an action.</content>
+  <content contentuid="h46fab82768f75db09e2fb9fcb1334abf" version="1">Transfixed</content>
+  <content contentuid="h052e2aecd61f547b84614b0c37ad48db" version="1">Charmed and Incapacitated; moves toward the caster and takes 5d8 Psychic damage when it ends its turn within 1.5m of them.</content>
+  <content contentuid="hf96a5354f78d5b0aad6334c869cefad5" version="1">Transfix</content>
+  <content contentuid="h45704a3cbc645f11b253ca5e39cf44bc" version="1">An alluring otherworldly aura: a creature within 18m makes a Charisma save or is Charmed and Incapacitated, moving toward you, and takes 6d8 Psychic damage whenever it ends its turn within 1.5m of you. While you concentrate you can use an action to target another creature (not one that saved).</content>
+  <content contentuid="h0138d25e2b8d53b2bac8ab90040fd72a" version="1">Transfix: New Target</content>
+  <content contentuid="habbeec2a04a65971a8b0ee330099242c" version="1">Transfix another creature (not one that saved).</content>
+  <content contentuid="h061e1eab89235ae2b73c3175d3987565" version="1">Transfix</content>
+  <content contentuid="h955595c9a0a558e1a497f1d272f58d67" version="1">You can Transfix another creature with an action.</content>
+  <content contentuid="h34d93d2ab1c75e7a8ca74793b9cd901e" version="1">Transfixed</content>
+  <content contentuid="h9ecffa1a6ab455439e25218482061261" version="1">Charmed and Incapacitated; moves toward the caster and takes 6d8 Psychic damage when it ends its turn within 1.5m of them.</content>
+  <content contentuid="h9fed23eaa5345579beaea40668370ceb" version="1">Resisted Transfix</content>
+  <content contentuid="hd45bea12c3fa553e8752464b3eeb358d" version="1">Can't be targeted by this Transfix again.</content>
+  <content contentuid="h500cfff91b4b5c849ba43f63df5d06e4" version="1">Entrancing Mirrors</content>
+  <content contentuid="h754ebdc614c65045adb34e56d3e4a1e0" version="1">Illusory mirrors confound up to three creatures within 27m (Intelligence save). On a failure, 7d6 Psychic damage and Stunned with halved Speed, repeating the save at the end of each of its turns. On a success, half damage only.</content>
+  <content contentuid="h7c67aefe66c25701b8b0b23650fab8a4" version="1">Entranced</content>
+  <content contentuid="hcb29056a6c6653f896cdb295e58629bd" version="1">Stunned, Speed halved. Repeats the Intelligence save at the end of each of its turns.</content>
+  <content contentuid="ha786051a46865a57b577458428be7a14" version="1">Illusory Dragon</content>
+  <content contentuid="hac437ce3d956515896c4fbb126275ce7" version="1">A Huge shadowy dragon appears. Enemies within 18m make a Wisdom save or drop their weapon and are Frightened. While you concentrate (1 minute), as a Bonus Action the dragon exhales an 18m cone: Intelligence save, 6d6 Acid, Cold, Fire, Lightning, Necrotic or Poison (your choice) damage, half on a success.</content>
+  <content contentuid="ha3a3abd1743d5a00bf9c9ea141dafcf8" version="1">Illusory Dragon (Acid)</content>
+  <content contentuid="h1e5cc622e9a85a14982d577bcb2444cf" version="1">A Huge shadowy dragon appears. Enemies within 18m make a Wisdom save or drop their weapon and are Frightened. While you concentrate (1 minute), as a Bonus Action the dragon exhales an 18m cone: Intelligence save, 6d6 Acid damage, half on a success.</content>
+  <content contentuid="h32c0b38e36845909a10fda6691d761e2" version="1">Illusory Dragon</content>
+  <content contentuid="h3a0221920b6957ddb0266c23bdd927ec" version="1">Your shadowy dragon can exhale Acid as a Bonus Action.</content>
+  <content contentuid="h4de4bf15ee885f30adc8a16bdd3a3656" version="1">Illusory Dragon: Exhale (Acid)</content>
+  <content contentuid="h38af536f96885dfc90f65cbdc14b537d" version="1">The shadowy dragon exhales an 18m cone: Intelligence save, 6d6 Acid damage, half on a success.</content>
+  <content contentuid="h31f6102390445987af43b0abf2bdf647" version="1">Illusory Dragon (Cold)</content>
+  <content contentuid="h83a28790950f5a2f830fee7509976423" version="1">A Huge shadowy dragon appears. Enemies within 18m make a Wisdom save or drop their weapon and are Frightened. While you concentrate (1 minute), as a Bonus Action the dragon exhales an 18m cone: Intelligence save, 6d6 Cold damage, half on a success.</content>
+  <content contentuid="hdef9ed63a3f95a859f5e46406a8a5403" version="1">Illusory Dragon</content>
+  <content contentuid="hf6531e77303452b08498050ab2ed593e" version="1">Your shadowy dragon can exhale Cold as a Bonus Action.</content>
+  <content contentuid="h60903f732df45530b673d70d3ad5a9f5" version="1">Illusory Dragon: Exhale (Cold)</content>
+  <content contentuid="hec0f739060fb527f9531837d2a782059" version="1">The shadowy dragon exhales an 18m cone: Intelligence save, 6d6 Cold damage, half on a success.</content>
+  <content contentuid="h8e967482b4f2543ab67623683e301624" version="1">Illusory Dragon (Fire)</content>
+  <content contentuid="h7d2c0d7be0f25d86ad804af334e64623" version="1">A Huge shadowy dragon appears. Enemies within 18m make a Wisdom save or drop their weapon and are Frightened. While you concentrate (1 minute), as a Bonus Action the dragon exhales an 18m cone: Intelligence save, 6d6 Fire damage, half on a success.</content>
+  <content contentuid="h87cf57cc49585de8a115578e58a08ebc" version="1">Illusory Dragon</content>
+  <content contentuid="h96cec201368e5476adc5f1e232e709ce" version="1">Your shadowy dragon can exhale Fire as a Bonus Action.</content>
+  <content contentuid="h58f8a4d7be145051bf303d83450e0ab3" version="1">Illusory Dragon: Exhale (Fire)</content>
+  <content contentuid="hd7f0537bd76b5228b5a5c2993e634df4" version="1">The shadowy dragon exhales an 18m cone: Intelligence save, 6d6 Fire damage, half on a success.</content>
+  <content contentuid="hc4a3fec8d40a5ddf9f1e3637e857c65e" version="1">Illusory Dragon (Lightning)</content>
+  <content contentuid="h56ddb7f82c155e7fb3490de4eb3ba609" version="1">A Huge shadowy dragon appears. Enemies within 18m make a Wisdom save or drop their weapon and are Frightened. While you concentrate (1 minute), as a Bonus Action the dragon exhales an 18m cone: Intelligence save, 6d6 Lightning damage, half on a success.</content>
+  <content contentuid="h938e171b72e1592dbe1973cf1633a445" version="1">Illusory Dragon</content>
+  <content contentuid="h55fc2307c6455f1492b5436d21fd4610" version="1">Your shadowy dragon can exhale Lightning as a Bonus Action.</content>
+  <content contentuid="heca33e802b5b53418944a90ae5f65395" version="1">Illusory Dragon: Exhale (Lightning)</content>
+  <content contentuid="h1a7ab163de8e5d1b86e1640b533bf2e4" version="1">The shadowy dragon exhales an 18m cone: Intelligence save, 6d6 Lightning damage, half on a success.</content>
+  <content contentuid="h729e75be0760575ab398df5ba2971a56" version="1">Illusory Dragon (Necrotic)</content>
+  <content contentuid="h751fc0c38e5f54308c1bc6acc34cd771" version="1">A Huge shadowy dragon appears. Enemies within 18m make a Wisdom save or drop their weapon and are Frightened. While you concentrate (1 minute), as a Bonus Action the dragon exhales an 18m cone: Intelligence save, 6d6 Necrotic damage, half on a success.</content>
+  <content contentuid="h3ede122c22b953cea1e4b1a57fb3caeb" version="1">Illusory Dragon</content>
+  <content contentuid="h4e7d1a3eeb385eb58e47574298f2043e" version="1">Your shadowy dragon can exhale Necrotic as a Bonus Action.</content>
+  <content contentuid="h1d43240bcfd954e5bbc399835042c5ca" version="1">Illusory Dragon: Exhale (Necrotic)</content>
+  <content contentuid="hcd873dc2a32551668db21c9f220b60c7" version="1">The shadowy dragon exhales an 18m cone: Intelligence save, 6d6 Necrotic damage, half on a success.</content>
+  <content contentuid="h3296b90912ed59cfa6b415373e73166f" version="1">Illusory Dragon (Poison)</content>
+  <content contentuid="hb8cdcd2daa4a5b38bce0e728e742e301" version="1">A Huge shadowy dragon appears. Enemies within 18m make a Wisdom save or drop their weapon and are Frightened. While you concentrate (1 minute), as a Bonus Action the dragon exhales an 18m cone: Intelligence save, 6d6 Poison damage, half on a success.</content>
+  <content contentuid="h07fd2029cfac5b50b9e26f5324e2e8a9" version="1">Illusory Dragon</content>
+  <content contentuid="hdac0e869910d5633ad2ab1802ab81f3b" version="1">Your shadowy dragon can exhale Poison as a Bonus Action.</content>
+  <content contentuid="h89d2062960c45cdd8168be5c44337755" version="1">Illusory Dragon: Exhale (Poison)</content>
+  <content contentuid="hfd868654b3cd5f8ab3b3b3fc967fd085" version="1">The shadowy dragon exhales an 18m cone: Intelligence save, 6d6 Poison damage, half on a success.</content>
+  <content contentuid="hd1e3d6e5a88c5ac6b131281832a172d2" version="1">Frightened by the Illusory Dragon</content>
+  <content contentuid="hd7151f3200b357549939533c0647858d" version="1">Frightened of a shadowy dragon.</content>
+  <content contentuid="ha4a21a030fa1517bb06da2311d3f04b6" version="1">Iron Body</content>
+  <content contentuid="hcbb23eadac785a4f821015add6591127" version="1">A willing creature you touch becomes living metal: Resistance to Bludgeoning, Fire, Piercing and Slashing damage, Immunity to Poison damage and the Paralyzed, Petrified and Poisoned conditions (ending them), and its Exhaustion can't increase.</content>
+  <content contentuid="h899d552d95ca5dddb3fde3f1bb7bf2af" version="1">Iron Body</content>
+  <content contentuid="ha831324c453e5707b92f7a07b8090543" version="1">Resistance to Bludgeoning, Fire, Piercing and Slashing; Immunity to Poison damage, Paralyzed, Petrified and Poisoned; Exhaustion can't increase.</content>
+  <content contentuid="h3b43d93ac1c55fd5a2c89f20747ae027" version="1">Lightning Ring</content>
+  <content contentuid="h3d5163c15b2359fc8a3d4f1595fe86e0" version="1">Bonus Action. For 10 minutes a 3m ring of electricity surrounds you: an enemy it reaches, or that ends its turn in it, makes a Constitution save, taking 3d6 Lightning and 3d6 Thunder damage (half on a success). As an action you can loose an 18m line: Dexterity save, 6d6 Lightning damage, half on a success.</content>
+  <content contentuid="h3e52f03521d85d7f8536a023da43f788" version="1">Lightning Ring</content>
+  <content contentuid="h352be97b677d51febba07e319d868d8a" version="1">A 3m ring of electricity surrounds you.</content>
+  <content contentuid="h39d907d7de0a5760a0c6fede3d86e114" version="1">Lightning Ring</content>
+  <content contentuid="h2499966ca62b58a99105ed897b03a062" version="1">In the ring: a Constitution save when it reaches you and when you end your turn here.</content>
+  <content contentuid="h262de930b0f15d96a5f66d220e256245" version="1">Lightning Ring</content>
+  <content contentuid="h75c06fa77ec159f3bd12fd54acb09ff0" version="1">Lightning Ring: Line</content>
+  <content contentuid="ha3bc9888113c5386929ed90c4fa044ff" version="1">An 18m line of lightning: Dexterity save, 6d6 Lightning damage, half on a success.</content>
+  <content contentuid="h1148da9104a25a0e9d2a455b524c4193" version="1">Moment of Prescience</content>
+  <content contentuid="hfc0cca6fc88a51cd8ce7c8b513d87ff1" version="1">Reaction, when you fail an attack roll or saving throw: the roll becomes a 20. Or when a creature hits you with an attack roll: its roll becomes a 1.</content>
+  <content contentuid="h0767a431981a564d8c14c5fa12103677" version="1">Moment of Prescience</content>
+  <content contentuid="hd60eacb51f235c67a57c49ddf0d3f4ac" version="1">Turn your failed roll into a 20, or an attack that hits you into a 1.</content>
+  <content contentuid="h2fc672a3056f5b0299a3f316f28bb7f4" version="1">Detonate</content>
+  <content contentuid="ha92c97b908fc5c78afb8ab30ea375a82" version="1">An explosive seed inside a creature within 150m: Constitution save, 10d10 Fire damage, half on a success. Then each other creature within 18m of it makes a Dexterity save, taking 10d10 Fire damage, half on a success.</content>
+  <content contentuid="h4a99ce18ed765ae3aab4fc529371d080" version="1">Detonate (Explosion)</content>
+  <content contentuid="h5b25faf7fa8f58bf9d48bd03eedacd11" version="1">Dexterity save, 10d10 Fire damage, half on a success.</content>
+  <content contentuid="h8ebdd093d83e5e9da11a382f1e73c1f4" version="1">Detonated</content>
+  <content contentuid="h21a6add59331584d81da3ce6800dd5c1" version="1">Invulnerability</content>
+  <content contentuid="hb139b39a29185354be95b0b612d11dbf" version="1">For up to 10 minutes (Concentration) you have Immunity to all damage.</content>
+  <content contentuid="hae76762f00d556c8848e31f1db320c66" version="1">Invulnerability</content>
+  <content contentuid="hb09146c3284a5046a93be5d131a29263" version="1">Immunity to all damage.</content>
+  <content contentuid="ha6540d4980d05edb97871e04015ebbac" version="1">Vision of Elapsing Eons</content>
+  <content contentuid="h873222dec0205e718863a7ce9b8fa6a1" version="1">A creature within 36m sees eons pass in moments (Intelligence save): on a failure, 10d12 Psychic damage and Paralyzed for 1 minute. At the end of each of its turns it repeats the save, gaining a level of Exhaustion on a failure and ending the spell on a success. An ally can shake it free with the Help action.</content>
+  <content contentuid="h39aad9b8608c5eb0ae4e231e7626a946" version="1">Vision of Elapsing Eons</content>
+  <content contentuid="h56d769d2ede95819abace1d41f45d76b" version="1">Paralyzed. At the end of each of its turns: Intelligence save; a failure adds a level of Exhaustion, a success ends this. The Help action ends it.</content>
+  <content contentuid="h5c9668bdbb885e6386d375580418f17a" version="1">Exhaustion 1</content>
+  <content contentuid="hc20302a05b365d0eaeb86f2ec9aa8728" version="1">D20 Tests -2, Speed -1.5m. A sixth level is death. A Long Rest ends it.</content>
+  <content contentuid="h00af7701ba3e513ebc7886528331687b" version="1">Exhaustion 2</content>
+  <content contentuid="h8bc9643bf2ba59b59dc4b54457a5b632" version="1">D20 Tests -4, Speed -3m. A sixth level is death. A Long Rest ends it.</content>
+  <content contentuid="ha1245aa4373552c7a6517f8963c51e86" version="1">Exhaustion 3</content>
+  <content contentuid="h2d642a7aff95527ebdb9d40f34587821" version="1">D20 Tests -6, Speed -4.5m. A sixth level is death. A Long Rest ends it.</content>
+  <content contentuid="hd94eb19bc8965f0c9705de410776ad2f" version="1">Exhaustion 4</content>
+  <content contentuid="h2cb7065855c45effb7c3f04fbe25a398" version="1">D20 Tests -8, Speed -6m. A sixth level is death. A Long Rest ends it.</content>
+  <content contentuid="h5ea28cea178f5677ad7ae2cce8db5264" version="1">Exhaustion 5</content>
+  <content contentuid="h374f9bdd92755c16a759e1e4c487549b" version="1">D20 Tests -10, Speed -7.5m. A sixth level is death. A Long Rest ends it.</content>
+  <content contentuid="h05a459f7ced8581f8f1e05fc7251282f" version="1">Wail of the Banshee</content>
+  <content contentuid="hf8e404292a565cf0a43257addb027b07" version="1">A terrible scream reaches up to ten creatures within 18m. Each with 50 Hit Points or fewer dies. The others make a Constitution save: 12d10 Psychic damage on a failure, half on a success. A creature that can't hear you is unaffected.</content>
+  <content contentuid="hf99de825e6855e42b9f76bc14d895862" version="1">Aberrant Magic: Aura of Evasion (level 7)</content>
+  <content contentuid="h7c347519efc150f38abff032b5f77cb7" version="1">Choose Aura of Evasion as your Boon of Siberys spell.</content>
+  <content contentuid="hf4f5e5720c5655a69c98995edf78173c" version="1">Aberrant Magic: Aura of Evasion</content>
+  <content contentuid="h9ba3bd61ae7d5f4886a7da377c76890c" version="1">Aura of Evasion (Aberrant Magic)</content>
+  <content contentuid="hb9163b7740d75d19ae84cf070a6177c8" version="1">Aberrant Magic: Lightning Ring (level 8)</content>
+  <content contentuid="h7bb2124dcb5e55c096cc7e6fb8a1aca9" version="1">Choose Lightning Ring as your Boon of Siberys spell.</content>
+  <content contentuid="ha03964c1db51577f86a150c7b7da66be" version="1">Aberrant Magic: Lightning Ring</content>
+  <content contentuid="h0bf29b2069c05dd397981b718b5f9690" version="1">Lightning Ring (Aberrant Magic)</content>
+  <content contentuid="hcf5e3d78407553fbbc2b2cee2b142a4e" version="1">Aberrant Magic: Entrancing Mirrors (level 8)</content>
+  <content contentuid="hcd7ff985d4f254ae9019a080eb910e0f" version="1">Choose Entrancing Mirrors as your Boon of Siberys spell.</content>
+  <content contentuid="hd4b9b24041745abd82e534e84445a620" version="1">Aberrant Magic: Entrancing Mirrors</content>
+  <content contentuid="hd85c288d16885c00942e3101354bd5a7" version="1">Entrancing Mirrors (Aberrant Magic)</content>
+  <content contentuid="h7396d06cc3da5111878dc5eb5cc746e8" version="1">Aberrant Magic: Fractured Awareness (level 7)</content>
+  <content contentuid="haa5332686141551ba485dcd904529f9e" version="1">Choose Fractured Awareness as your Boon of Siberys spell.</content>
+  <content contentuid="hdda635c212365bf19868a6468ec7ad16" version="1">Aberrant Magic: Fractured Awareness</content>
+  <content contentuid="hc1aab05ae5a354cd8a71c2bca9f1cadd" version="1">Fractured Awareness (Aberrant Magic)</content>
+  <content contentuid="hebf451aa9d045d659906aed09a9c7274" version="1">Aberrant Magic: Iron Body (level 8)</content>
+  <content contentuid="h9f5ee722a0c8532c858b777b6a0187b3" version="1">Choose Iron Body as your Boon of Siberys spell.</content>
+  <content contentuid="h6e5039393d3b516aac85f3fad09ea806" version="1">Aberrant Magic: Iron Body</content>
+  <content contentuid="hfdc2aca8ca1a5ae89af8cc785ca47c6a" version="1">Iron Body (Aberrant Magic)</content>
+  <content contentuid="hdedc6c3816145a948785265e934b48cf" version="1">Aberrant Magic: Power Word Pain (level 7)</content>
+  <content contentuid="h191ac794efde5d2185185505429c319b" version="1">Choose Power Word Pain as your Boon of Siberys spell.</content>
+  <content contentuid="hac71477247ba5ef682833241b8d8145f" version="1">Aberrant Magic: Power Word Pain</content>
+  <content contentuid="hb8bb1db3c34a5435afabfec9b4073ccc" version="1">Power Word Pain (Aberrant Magic)</content>
 </contentList>

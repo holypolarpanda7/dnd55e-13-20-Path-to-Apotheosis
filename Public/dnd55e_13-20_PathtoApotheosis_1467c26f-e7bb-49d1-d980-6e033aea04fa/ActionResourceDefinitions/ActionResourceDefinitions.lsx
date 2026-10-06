@@ -247,6 +247,28 @@
                     <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
                     <attribute id="UUID" type="guid" value="c031f16a-583d-5f7a-b711-af51a2bb1476"/>
                 </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="hc1c24ade6b6157059990b2b85d2a65c7" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hee9f4e8a32d05346bebb663120214808" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="MaxValue" type="uint32" value="1"/>
+                    <attribute id="Name" type="FixedString" value="EpicBoonSiberysChoice"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Never"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="2807fbad-0f6d-55bc-9e43-441c9ec5508f"/>
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h1d114ea272b15bf4894dee676ba10342" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="heba26764cf685a0bb05007546045a3af" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="MaxValue" type="uint32" value="1"/>
+                    <attribute id="Name" type="FixedString" value="EpicBoonSiberys"/>
+                    <attribute id="ReplenishType" type="FixedString" value="ShortRest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="801b260b-d304-50a7-b82a-611ea78d1b8b"/>
+                </node>
                 <!-- EPIC BOONS END -->
                 <!-- GUNSLINGER 13-20 BEGIN (Scripts/gen_gunslinger.py) -->
                 <node id="ActionResourceDefinition">

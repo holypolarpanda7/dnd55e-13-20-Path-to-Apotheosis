@@ -1,0 +1,93 @@
+# Arcana Unleashed level 7-9 spells (Scripts/gen_au_spells.py, 2026-10-05). Written before any in-game run.
+# Run: bg3_test_run("apotheosis", "<id>") for each.
+
+[suite]
+name = "Arcana Unleashed spells"
+mode = "script"
+
+[[case]]
+id = "au-fractured-awareness"
+title = "Fractured Awareness: failed Intelligence save - 12d10 Psychic and Disadvantage on D20 Tests"
+spell = "Target_Apo_FracturedAwareness"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Intelligence)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-120, -12] }, { target = "A", status_present = ["APO_FRACTURED_AWARENESS"] }]
+
+[[case]]
+id = "au-power-word-pain"
+title = "Power Word Pain: 6d8 Force and Charmed on a creature with 100 Hit Points or fewer"
+spell = "Target_Apo_PowerWordPain"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 90, distance = 6 }]
+expect = [{ cast = true }, { target = "A", hp_change = [-48, -6] }, { target = "A", status_present = ["APO_POWER_WORD_PAIN"] }]
+
+[[case]]
+id = "au-power-word-pain-healthy"
+title = "Power Word Pain: a creature over 100 Hit Points takes the damage only"
+spell = "Target_Apo_PowerWordPain"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+expect = [{ cast = true }, { target = "A", hp_change = [-48, -6] }, { target = "A", status_absent = ["APO_POWER_WORD_PAIN"] }]
+
+[[case]]
+id = "au-entrancing-mirrors"
+title = "Entrancing Mirrors: failed Intelligence save - 7d6 Psychic and Entranced (Stunned, half Speed)"
+spell = "Target_Apo_EntrancingMirrors"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Intelligence)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-42, -7] }, { target = "A", status_present = ["APO_ENTRANCED"] }]
+
+[[case]]
+id = "au-iron-body"
+title = "Iron Body: Resistance to Bludgeoning/Fire/Piercing/Slashing, Poison immunity, Poisoned ended"
+spell = "Target_Apo_IronBody"
+target = "host"
+setup = [{ target = "host", status = "POISONED", turns = 5 }]
+expect = [{ cast = true }, { target = "host", status_present = ["APO_IRON_BODY"] }, { target = "host", status_absent = ["POISONED"] }]
+
+[[case]]
+id = "au-invulnerability"
+title = "Invulnerability: Immunity to all damage while concentrating"
+spell = "Shout_Apo_Invulnerability"
+target = "host"
+expect = [{ cast = true }, { target = "host", status_present = ["APO_INVULNERABILITY"] }]
+
+[[case]]
+id = "au-lightning-ring"
+title = "Lightning Ring (Bonus Action): an enemy in the ring fails its Constitution save - 3d6 Lightning + 3d6 Thunder"
+spell = "Shout_Apo_LightningRing"
+target = "host"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ cast = true }, { target = "host", status_present = ["APO_LIGHTNING_RING_AURA"] }, { target = "A", status_applied = ["APO_LIGHTNING_RING"] },
+          { target = "A", hp_change = [-36, -6] }]
+
+[[case]]
+id = "au-detonate"
+title = "Detonate: the target fails Con (10d10 Fire), a creature 5m away fails Dex (10d10 Fire)"
+spell = "Projectile_Apo_Detonate"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 10 },
+         { as = "B", template = "wolf", faction = "hostile", hp = 300, distance = 15 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "B", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-100, -10] }, { target = "B", hp_change = [-100, -10] }]
+
+[[case]]
+id = "au-wail-of-the-banshee"
+title = "Wail of the Banshee: a creature with 50 Hit Points or fewer dies"
+spell = "Target_Apo_WailOfTheBanshee"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 40, distance = 6 }]
+expect = [{ cast = true }, { target = "A", dead = true }]
+
+[[case]]
+id = "au-vision-of-elapsing-eons"
+title = "Vision of Elapsing Eons: failed Intelligence save - 10d12 Psychic and Paralyzed; a failed repeat save adds Exhaustion 1"
+spell = "Target_Apo_VisionOfElapsingEons"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Intelligence)" }]
+end_turns = 1
+expect = [{ cast = true }, { target = "A", status_present = ["APO_ELAPSING_EONS", "APO_EXHAUSTION_1"] }]

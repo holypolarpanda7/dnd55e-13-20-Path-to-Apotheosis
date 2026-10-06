@@ -453,3 +453,13 @@ spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance 
 setup = [{ target = "host", max_hp = 300 }, { target = "host", passive = "EpicBoon_MagicSchoolMastery_Int" }]
 casts = [{ spell = "Shout_EpicBoon_MSM_School_Evocation", target = "host" }, { spell = "Shout_EpicBoon_MSM_SigPick_Projectile_Fireball", target = "host", wait = 3 }]
 expect = [{ target = "host", status_present = ["EPIC_MSM_SIG_PROJECTILE_FIREBALL"] }, { cast = true }, { resource = "SpellSlot", level = 3, change = 0 }, { resource = "EpicBoonSignature", level = 0, change = -1 }]
+
+[[case]]
+id = "boon2-siberys"
+title = "Boon of Siberys (Wisdom): Aberrant Magic Fireball - cast once per Short or Long Rest without a spell slot"
+spell = "Projectile_Fireball_EpicSiberys"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", max_hp = 300 }, { target = "host", passive = "EpicBoon_Siberys_CastWis" }]
+casts = [{ spell = "Shout_EpicBoon_Sib_Pick_Projectile_Fireball", target = "host", wait = 3 }]
+expect = [{ target = "host", status_present = ["EPIC_SIB_PROJECTILE_FIREBALL"] }, { cast = true }, { resource = "SpellSlot", level = 3, change = 0 }, { resource = "EpicBoonSiberys", level = 0, change = -1 }]
