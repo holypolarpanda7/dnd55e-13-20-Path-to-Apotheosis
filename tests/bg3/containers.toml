@@ -1,0 +1,781 @@
+# Spell container coverage (2026-10-05): one case per behaviour group of every container's children
+# (bg3_lint_container_tests). Drafted by bg3-data-mcp drafting.spell_cases, reviewed; `covers` lists the alike
+# children a case stands for. Written before any in-game run.
+# Run: bg3_test_run("apotheosis", "<id>").
+
+[suite]
+name = "Spell containers"
+mode = "script"
+
+# draft confidence: high
+[[case]]
+id = "cont-projectile-chromaticorb-sm-projectile-chromaticorb-acid-sm"
+title = "Projectile_ChromaticOrb_SM: Projectile_ChromaticOrb_Acid_SM (+5 alike)"
+spell = "Projectile_ChromaticOrb_Acid_SM"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", status = "SM_UNLOCK_CHROMATICORB", turns = -1 }, { target = "host", boost = "RollBonus(RangedSpellAttack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-48, -3] }]
+covers = ["Projectile_ChromaticOrb_Cold_SM", "Projectile_ChromaticOrb_Fire_SM", "Projectile_ChromaticOrb_Lightning_SM", "Projectile_ChromaticOrb_Poison_SM", "Projectile_ChromaticOrb_Thunder_SM"]
+notes = "Stands for 5 alike option(s) of Projectile_ChromaticOrb_SM."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-aponaturemagician-shout-aponaturemagician-1"
+title = "Shout_ApoNatureMagician: Shout_ApoNatureMagician_1"
+spell = "Shout_ApoNatureMagician_1"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(WildShape,7,0)" }, { target = "host", passive = "Druid_Archdruid" }]
+expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "WildShape", level = 0, change = -1 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-aponaturemagician-shout-aponaturemagician-3"
+title = "Shout_ApoNatureMagician: Shout_ApoNatureMagician_3"
+spell = "Shout_ApoNatureMagician_3"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(WildShape,9,0)" }, { target = "host", passive = "Druid_Archdruid" }]
+expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "WildShape", level = 0, change = -3 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-aponaturemagician-shout-aponaturemagician-4"
+title = "Shout_ApoNatureMagician: Shout_ApoNatureMagician_4"
+spell = "Shout_ApoNatureMagician_4"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(WildShape,10,0)" }, { target = "host", passive = "Druid_Archdruid" }]
+expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "WildShape", level = 0, change = -4 }, { resource = "ApoNatureMagician", level = 0, change = -1 }]
+
+# hand-written (the draft can't split Self() / not Self() branches)
+[[case]]
+id = "cont-shout-apo-illusorydragon-shout-apo-illusorydragon-acid"
+title = "Shout_Apo_IllusoryDragon: Acid (+5 alike) - you get the Bonus Action breath, an enemy that fails Wisdom is Frightened"
+spell = "Shout_Apo_IllusoryDragon_Acid"
+target = "host"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "host", status_applied = ["APO_ILLUSORY_DRAGON_ACID"] }, { target = "A", status_applied = ["APO_ILLUSORY_DRAGON_FEAR"] }]
+covers = ["Shout_Apo_IllusoryDragon_Cold", "Shout_Apo_IllusoryDragon_Fire", "Shout_Apo_IllusoryDragon_Lightning", "Shout_Apo_IllusoryDragon_Necrotic", "Shout_Apo_IllusoryDragon_Poison"]
+notes = "The spell is held off every list (user decision 2026-10-05) but still tested. A wolf holds no weapon, so DISARM isn't expected."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-disguiseself-sm-shout-disguiseself-tiefling-male-sm"
+title = "Shout_DisguiseSelf_SM: Shout_DisguiseSelf_Tiefling_Male_SM (+31 alike)"
+spell = "Shout_DisguiseSelf_Tiefling_Male_SM"
+target = "host"
+setup = [{ target = "host", status = "SM_UNLOCK_DISGUISESELF", turns = -1 }]
+expect = [{ target = "host", status_applied = ["DISGUISE_SELF_TIEFLING_MALE"] }]
+covers = ["Shout_DisguiseSelf_Tiefling_Female_SM", "Shout_DisguiseSelf_Drow_Male_SM", "Shout_DisguiseSelf_Drow_Female_SM", "Shout_DisguiseSelf_Human_Male_SM", "Shout_DisguiseSelf_Human_Female_SM", "Shout_DisguiseSelf_Githyanki_Male_SM", "Shout_DisguiseSelf_Githyanki_Female_SM", "Shout_DisguiseSelf_Dwarf_Male_SM", "Shout_DisguiseSelf_Dwarf_Female_SM", "Shout_DisguiseSelf_Elf_Male_SM", "Shout_DisguiseSelf_Elf_Female_SM", "Shout_DisguiseSelf_HalfElf_Male_SM", "Shout_DisguiseSelf_HalfElf_Female_SM", "Shout_DisguiseSelf_Halfling_Male_SM", "Shout_DisguiseSelf_Halfling_Female_SM", "Shout_DisguiseSelf_Dragonborn_Male_SM", "Shout_DisguiseSelf_Dragonborn_Female_SM", "Shout_DisguiseSelf_HalfOrc_Male_SM", "Shout_DisguiseSelf_HalfOrc_Female_SM", "Shout_DisguiseSelf_Gnome_Male_SM", "Shout_DisguiseSelf_Gnome_Female_SM", "Shout_DisguiseSelf_Human_Strong_Male_SM", "Shout_DisguiseSelf_Human_Strong_Female_SM", "Shout_DisguiseSelf_Drow_Strong_Male_SM", "Shout_DisguiseSelf_Drow_Strong_Female_SM", "Shout_DisguiseSelf_Elf_Strong_Male_SM", "Shout_DisguiseSelf_Elf_Strong_Female_SM", "Shout_DisguiseSelf_HalfElf_Strong_Male_SM", "Shout_DisguiseSelf_HalfElf_Strong_Female_SM", "Shout_DisguiseSelf_Tiefling_Strong_Male_SM", "Shout_DisguiseSelf_Tiefling_Strong_Female_SM"]
+notes = "Stands for 31 alike option(s) of Shout_DisguiseSelf_SM."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-rote-abjuration-shout-epicboon-msm-rotepick-projectile-wardaway"
+title = "Shout_EpicBoon_MSM_Rote_Abjuration: Shout_EpicBoon_MSM_RotePick_Projectile_Wardaway (+9 alike)"
+spell = "Shout_EpicBoon_MSM_RotePick_Projectile_Wardaway"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ABJURATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonRoteChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_ROTE_PROJECTILE_WARDAWAY"] }, { resource = "EpicBoonRoteChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_RotePick_Shout_AbsorbElements", "Shout_EpicBoon_MSM_RotePick_Shout_Shield_Sorcerer", "Shout_EpicBoon_MSM_RotePick_Target_CureWounds", "Shout_EpicBoon_MSM_RotePick_Target_HealingWord", "Shout_EpicBoon_MSM_RotePick_Target_MageArmor", "Shout_EpicBoon_MSM_RotePick_Target_ProtectionFromEvilAndGood", "Shout_EpicBoon_MSM_RotePick_Target_Sanctuary", "Shout_EpicBoon_MSM_RotePick_Target_ShieldOfFaith", "Shout_EpicBoon_MSM_RotePick_Target_ThornArmor"]
+notes = "Stands for 9 alike option(s) of Shout_EpicBoon_MSM_Rote_Abjuration."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-rote-conjuration-shout-epicboon-msm-rotepick-projectile-hailofthorns"
+title = "Shout_EpicBoon_MSM_Rote_Conjuration: Shout_EpicBoon_MSM_RotePick_Projectile_HailOfThorns (+5 alike)"
+spell = "Shout_EpicBoon_MSM_RotePick_Projectile_HailOfThorns"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_CONJURATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonRoteChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_ROTE_PROJECTILE_HAILOFTHORNS"] }, { resource = "EpicBoonRoteChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_RotePick_Projectile_IceKnife", "Shout_EpicBoon_MSM_RotePick_Shout_TideOfDarkness", "Shout_EpicBoon_MSM_RotePick_Target_Entangle", "Shout_EpicBoon_MSM_RotePick_Target_FogCloud", "Shout_EpicBoon_MSM_RotePick_Target_SpectralSlash"]
+notes = "Stands for 5 alike option(s) of Shout_EpicBoon_MSM_Rote_Conjuration."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-rote-divination-shout-epicboon-msm-rotepick-shout-speakwithanimals"
+title = "Shout_EpicBoon_MSM_Rote_Divination: Shout_EpicBoon_MSM_RotePick_Shout_SpeakWithAnimals (+1 alike)"
+spell = "Shout_EpicBoon_MSM_RotePick_Shout_SpeakWithAnimals"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_DIVINATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonRoteChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_ROTE_SHOUT_SPEAKWITHANIMALS"] }, { resource = "EpicBoonRoteChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_RotePick_Target_HuntersMark"]
+notes = "Stands for 1 alike option(s) of Shout_EpicBoon_MSM_Rote_Divination."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-rote-enchantment-shout-epicboon-msm-rotepick-target-animalfriendship"
+title = "Shout_EpicBoon_MSM_Rote_Enchantment: Shout_EpicBoon_MSM_RotePick_Target_AnimalFriendship (+8 alike)"
+spell = "Shout_EpicBoon_MSM_RotePick_Target_AnimalFriendship"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ENCHANTMENT", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonRoteChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_ROTE_TARGET_ANIMALFRIENDSHIP"] }, { resource = "EpicBoonRoteChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_RotePick_Target_Bane", "Shout_EpicBoon_MSM_RotePick_Target_Bless", "Shout_EpicBoon_MSM_RotePick_Target_CharmPerson", "Shout_EpicBoon_MSM_RotePick_Target_CompelledDuel", "Shout_EpicBoon_MSM_RotePick_Target_DissonantWhispers", "Shout_EpicBoon_MSM_RotePick_Target_Heroism", "Shout_EpicBoon_MSM_RotePick_Target_HideousLaughter", "Shout_EpicBoon_MSM_RotePick_Target_Sleep"]
+notes = "Stands for 8 alike option(s) of Shout_EpicBoon_MSM_Rote_Enchantment."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-rote-illusion-shout-epicboon-msm-rotepick-zone-colorspray"
+title = "Shout_EpicBoon_MSM_Rote_Illusion: Shout_EpicBoon_MSM_RotePick_Zone_ColorSpray"
+spell = "Shout_EpicBoon_MSM_RotePick_Zone_ColorSpray"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ILLUSION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonRoteChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_ROTE_ZONE_COLORSPRAY"] }, { resource = "EpicBoonRoteChoice", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-rote-necromancy-shout-epicboon-msm-rotepick-projectile-rayofsickness"
+title = "Shout_EpicBoon_MSM_Rote_Necromancy: Shout_EpicBoon_MSM_RotePick_Projectile_RayOfSickness (+4 alike)"
+spell = "Shout_EpicBoon_MSM_RotePick_Projectile_RayOfSickness"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_NECROMANCY", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonRoteChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_ROTE_PROJECTILE_RAYOFSICKNESS"] }, { resource = "EpicBoonRoteChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_RotePick_Shout_FalseLife", "Shout_EpicBoon_MSM_RotePick_Shout_HungeringBlade", "Shout_EpicBoon_MSM_RotePick_Target_InflictWounds", "Shout_EpicBoon_MSM_RotePick_Target_Smite_Wrathful"]
+notes = "Stands for 4 alike option(s) of Shout_EpicBoon_MSM_Rote_Necromancy."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-rote-transmutation-shout-epicboon-msm-rotepick-projectile-catapult"
+title = "Shout_EpicBoon_MSM_Rote_Transmutation: Shout_EpicBoon_MSM_RotePick_Projectile_Catapult (+7 alike)"
+spell = "Shout_EpicBoon_MSM_RotePick_Projectile_Catapult"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_TRANSMUTATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonRoteChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_ROTE_PROJECTILE_CATAPULT"] }, { resource = "EpicBoonRoteChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_RotePick_Shout_DivineFavor", "Shout_EpicBoon_MSM_RotePick_Shout_ExpeditiousRetreat", "Shout_EpicBoon_MSM_RotePick_Shout_FeatherFall", "Shout_EpicBoon_MSM_RotePick_Target_BodyWarpingOfGorgoroth", "Shout_EpicBoon_MSM_RotePick_Target_Goodberry", "Shout_EpicBoon_MSM_RotePick_Target_Jump", "Shout_EpicBoon_MSM_RotePick_Target_Longstrider"]
+notes = "Stands for 7 alike option(s) of Shout_EpicBoon_MSM_Rote_Transmutation."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-abjuration-l13-shout-epicboon-msm-sigpick-projectile-wardaway"
+title = "Shout_EpicBoon_MSM_Signature_Abjuration_L13: Shout_EpicBoon_MSM_SigPick_Projectile_Wardaway (+20 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Projectile_Wardaway"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ABJURATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_PROJECTILE_WARDAWAY"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Shout_AbsorbElements", "Shout_EpicBoon_MSM_SigPick_Shout_AuraOfVitality", "Shout_EpicBoon_MSM_SigPick_Shout_BeaconOfHope", "Shout_EpicBoon_MSM_SigPick_Shout_HealingWord_Mass", "Shout_EpicBoon_MSM_SigPick_Shout_PassWithoutTrace", "Shout_EpicBoon_MSM_SigPick_Shout_PrayerOfHealing", "Shout_EpicBoon_MSM_SigPick_Shout_Shield_Sorcerer", "Shout_EpicBoon_MSM_SigPick_Target_Aid", "Shout_EpicBoon_MSM_SigPick_Target_Counterspell", "Shout_EpicBoon_MSM_SigPick_Target_CureWounds", "Shout_EpicBoon_MSM_SigPick_Target_HealingWord", "Shout_EpicBoon_MSM_SigPick_Target_LesserRestoration", "Shout_EpicBoon_MSM_SigPick_Target_MageArmor", "Shout_EpicBoon_MSM_SigPick_Target_ProtectionFromEvilAndGood", "Shout_EpicBoon_MSM_SigPick_Target_ProtectionFromPoison", "Shout_EpicBoon_MSM_SigPick_Target_RemoveCurse", "Shout_EpicBoon_MSM_SigPick_Target_Sanctuary", "Shout_EpicBoon_MSM_SigPick_Target_ShieldOfFaith", "Shout_EpicBoon_MSM_SigPick_Target_ThornArmor", "Shout_EpicBoon_MSM_SigPick_Target_WardingBond"]
+notes = "Stands for 20 alike option(s) of Shout_EpicBoon_MSM_Signature_Abjuration_L13."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-abjuration-l47-shout-epicboon-msm-sigpick-shout-circleofpower"
+title = "Shout_EpicBoon_MSM_Signature_Abjuration_L47: Shout_EpicBoon_MSM_SigPick_Shout_CircleOfPower (+9 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Shout_CircleOfPower"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ABJURATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_SHOUT_CIRCLEOFPOWER"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Shout_DispelEvilAndGood", "Shout_EpicBoon_MSM_SigPick_Target_Apo_Symbol", "Shout_EpicBoon_MSM_SigPick_Target_Banishment", "Shout_EpicBoon_MSM_SigPick_Target_CureWounds_Mass", "Shout_EpicBoon_MSM_SigPick_Target_DeathWard", "Shout_EpicBoon_MSM_SigPick_Target_FreedomOfMovement", "Shout_EpicBoon_MSM_SigPick_Target_GlobeOfInvulnerability", "Shout_EpicBoon_MSM_SigPick_Target_GreaterRestoration", "Shout_EpicBoon_MSM_SigPick_Target_PlanarBinding"]
+notes = "Stands for 9 alike option(s) of Shout_EpicBoon_MSM_Signature_Abjuration_L47."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-conjuration-l13-shout-epicboon-msm-sigpick-projectile-hailofthorns"
+title = "Shout_EpicBoon_MSM_Signature_Conjuration_L13: Shout_EpicBoon_MSM_SigPick_Projectile_HailOfThorns (+15 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Projectile_HailOfThorns"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_CONJURATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_PROJECTILE_HAILOFTHORNS"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Projectile_IceKnife", "Shout_EpicBoon_MSM_SigPick_Shout_TideOfDarkness", "Shout_EpicBoon_MSM_SigPick_Target_CallLightning", "Shout_EpicBoon_MSM_SigPick_Target_CloudOfDaggers", "Shout_EpicBoon_MSM_SigPick_Target_Entangle", "Shout_EpicBoon_MSM_SigPick_Target_FlamingSphere", "Shout_EpicBoon_MSM_SigPick_Target_FogCloud", "Shout_EpicBoon_MSM_SigPick_Target_MistyStep", "Shout_EpicBoon_MSM_SigPick_Target_SleetStorm", "Shout_EpicBoon_MSM_SigPick_Target_SpectralSlash", "Shout_EpicBoon_MSM_SigPick_Target_StinkingCloud", "Shout_EpicBoon_MSM_SigPick_Target_SummonFey", "Shout_EpicBoon_MSM_SigPick_Target_Web", "Shout_EpicBoon_MSM_SigPick_Zone_ConjureBarrage", "Shout_EpicBoon_MSM_SigPick_Zone_TidalWave"]
+notes = "Stands for 15 alike option(s) of Shout_EpicBoon_MSM_Signature_Conjuration_L13."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-conjuration-l47-shout-epicboon-msm-sigpick-shout-apo-magnificentmansion"
+title = "Shout_EpicBoon_MSM_Signature_Conjuration_L47: Shout_EpicBoon_MSM_SigPick_Shout_Apo_MagnificentMansion (+14 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Shout_Apo_MagnificentMansion"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_CONJURATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_SHOUT_APO_MAGNIFICENTMANSION"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Shout_HeroesFeast", "Shout_EpicBoon_MSM_SigPick_Target_Apo_PlaneShift", "Shout_EpicBoon_MSM_SigPick_Target_Apo_Teleport", "Shout_EpicBoon_MSM_SigPick_Target_Cloudkill", "Shout_EpicBoon_MSM_SigPick_Target_ConjureElementals_Minor_Container", "Shout_EpicBoon_MSM_SigPick_Target_ConjureWoodlandBeings", "Shout_EpicBoon_MSM_SigPick_Target_GraspingVine", "Shout_EpicBoon_MSM_SigPick_Target_GuardianOfFaith", "Shout_EpicBoon_MSM_SigPick_Target_InsectPlague", "Shout_EpicBoon_MSM_SigPick_Target_SummonCelestial", "Shout_EpicBoon_MSM_SigPick_Teleportation_ArcaneGate", "Shout_EpicBoon_MSM_SigPick_Teleportation_DimensionDoor", "Shout_EpicBoon_MSM_SigPick_Wall_WallOfThorns", "Shout_EpicBoon_MSM_SigPick_Zone_MurderOfCrows"]
+notes = "Stands for 14 alike option(s) of Shout_EpicBoon_MSM_Signature_Conjuration_L47."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-divination-l13-shout-epicboon-msm-sigpick-shout-detectthoughts"
+title = "Shout_EpicBoon_MSM_Signature_Divination_L13: Shout_EpicBoon_MSM_SigPick_Shout_DetectThoughts (+4 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Shout_DetectThoughts"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_DIVINATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_SHOUT_DETECTTHOUGHTS"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Shout_SeeInvisibility", "Shout_EpicBoon_MSM_SigPick_Shout_SpeakWithAnimals", "Shout_EpicBoon_MSM_SigPick_Target_HuntersMark", "Shout_EpicBoon_MSM_SigPick_Target_MindSpike"]
+notes = "Stands for 4 alike option(s) of Shout_EpicBoon_MSM_Signature_Divination_L13."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-enchantment-l13-shout-epicboon-msm-sigpick-target-animalfriendship"
+title = "Shout_EpicBoon_MSM_Signature_Enchantment_L13: Shout_EpicBoon_MSM_SigPick_Target_AnimalFriendship (+13 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Target_AnimalFriendship"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ENCHANTMENT", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_TARGET_ANIMALFRIENDSHIP"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Target_Bane", "Shout_EpicBoon_MSM_SigPick_Target_Bless", "Shout_EpicBoon_MSM_SigPick_Target_CalmEmotions", "Shout_EpicBoon_MSM_SigPick_Target_CharmPerson", "Shout_EpicBoon_MSM_SigPick_Target_CompelledDuel", "Shout_EpicBoon_MSM_SigPick_Target_CrownOfMadness", "Shout_EpicBoon_MSM_SigPick_Target_DissonantWhispers", "Shout_EpicBoon_MSM_SigPick_Target_Enthrall", "Shout_EpicBoon_MSM_SigPick_Target_Heroism", "Shout_EpicBoon_MSM_SigPick_Target_HideousLaughter", "Shout_EpicBoon_MSM_SigPick_Target_HoldPerson", "Shout_EpicBoon_MSM_SigPick_Target_MindWhip", "Shout_EpicBoon_MSM_SigPick_Target_Sleep"]
+notes = "Stands for 13 alike option(s) of Shout_EpicBoon_MSM_Signature_Enchantment_L13."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-enchantment-l47-shout-epicboon-msm-sigpick-target-apo-powerwordfortify"
+title = "Shout_EpicBoon_MSM_Signature_Enchantment_L47: Shout_EpicBoon_MSM_SigPick_Target_Apo_PowerWordFortify (+7 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Target_Apo_PowerWordFortify"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ENCHANTMENT", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_TARGET_APO_POWERWORDFORTIFY"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Target_CharmMonster", "Shout_EpicBoon_MSM_SigPick_Target_Confusion", "Shout_EpicBoon_MSM_SigPick_Target_DominateBeast", "Shout_EpicBoon_MSM_SigPick_Target_DominatePerson", "Shout_EpicBoon_MSM_SigPick_Target_HoldMonster", "Shout_EpicBoon_MSM_SigPick_Target_IrresistibleDance", "Shout_EpicBoon_MSM_SigPick_Target_SynapticStatic"]
+notes = "Stands for 7 alike option(s) of Shout_EpicBoon_MSM_Signature_Enchantment_L47."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-evocation-l47-shout-epicboon-msm-sigpick-projectile-apo-delayedblastfireball"
+title = "Shout_EpicBoon_MSM_Signature_Evocation_L47: Shout_EpicBoon_MSM_SigPick_Projectile_Apo_DelayedBlastFireball (+17 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Projectile_Apo_DelayedBlastFireball"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_EVOCATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_PROJECTILE_APO_DELAYEDBLASTFIREBALL"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Projectile_ChainLightning", "Shout_EpicBoon_MSM_SigPick_Projectile_VitriolicSphere", "Shout_EpicBoon_MSM_SigPick_Shout_FountOfMoonlight", "Shout_EpicBoon_MSM_SigPick_Target_Apo_FireStorm", "Shout_EpicBoon_MSM_SigPick_Target_Apo_Forcecage", "Shout_EpicBoon_MSM_SigPick_Target_Dawn", "Shout_EpicBoon_MSM_SigPick_Target_FlameStrike", "Shout_EpicBoon_MSM_SigPick_Target_Heal", "Shout_EpicBoon_MSM_SigPick_Target_HolyWeapon", "Shout_EpicBoon_MSM_SigPick_Target_IceStorm", "Shout_EpicBoon_MSM_SigPick_Target_SpellfireStorm", "Shout_EpicBoon_MSM_SigPick_Wall_BladeBarrier", "Shout_EpicBoon_MSM_SigPick_Wall_WallOfFire", "Shout_EpicBoon_MSM_SigPick_Wall_WallOfStone", "Shout_EpicBoon_MSM_SigPick_Zone_ConeOfCold", "Shout_EpicBoon_MSM_SigPick_Zone_PrismaticSpray", "Shout_EpicBoon_MSM_SigPick_Zone_Sunbeam"]
+notes = "Stands for 17 alike option(s) of Shout_EpicBoon_MSM_Signature_Evocation_L47."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-illusion-l13-shout-epicboon-msm-sigpick-shout-blur"
+title = "Shout_EpicBoon_MSM_Signature_Illusion_L13: Shout_EpicBoon_MSM_SigPick_Shout_Blur (+8 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Shout_Blur"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ILLUSION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_SHOUT_BLUR"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Shout_MirrorImage", "Shout_EpicBoon_MSM_SigPick_Shout_ShadowBlade_Class", "Shout_EpicBoon_MSM_SigPick_Target_HypnoticPattern", "Shout_EpicBoon_MSM_SigPick_Target_Invisibility", "Shout_EpicBoon_MSM_SigPick_Target_PhantasmalForce", "Shout_EpicBoon_MSM_SigPick_Target_Silence", "Shout_EpicBoon_MSM_SigPick_Zone_ColorSpray", "Shout_EpicBoon_MSM_SigPick_Zone_Fear"]
+notes = "Stands for 8 alike option(s) of Shout_EpicBoon_MSM_Signature_Illusion_L13."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-illusion-l47-shout-epicboon-msm-sigpick-shout-firedance"
+title = "Shout_EpicBoon_MSM_Signature_Illusion_L47: Shout_EpicBoon_MSM_SigPick_Shout_FireDance (+7 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Shout_FireDance"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_ILLUSION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_SHOUT_FIREDANCE"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Target_Apo_MirageArcane", "Shout_EpicBoon_MSM_SigPick_Target_Apo_Simulacrum", "Shout_EpicBoon_MSM_SigPick_Target_Dream", "Shout_EpicBoon_MSM_SigPick_Target_Invisibility_Greater", "Shout_EpicBoon_MSM_SigPick_Target_PhantasmalKiller", "Shout_EpicBoon_MSM_SigPick_Target_ProjectImage", "Shout_EpicBoon_MSM_SigPick_Target_Seeming"]
+notes = "Stands for 7 alike option(s) of Shout_EpicBoon_MSM_Signature_Illusion_L47."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-necromancy-l13-shout-epicboon-msm-sigpick-projectile-rayofsickness"
+title = "Shout_EpicBoon_MSM_Signature_Necromancy_L13: Shout_EpicBoon_MSM_SigPick_Projectile_RayOfSickness (+10 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Projectile_RayOfSickness"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_NECROMANCY", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_PROJECTILE_RAYOFSICKNESS"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Shout_FalseLife", "Shout_EpicBoon_MSM_SigPick_Shout_HungeringBlade", "Shout_EpicBoon_MSM_SigPick_Target_DeathArmor", "Shout_EpicBoon_MSM_SigPick_Target_FeignDeath", "Shout_EpicBoon_MSM_SigPick_Target_InflictWounds", "Shout_EpicBoon_MSM_SigPick_Target_MurmursOfDoom", "Shout_EpicBoon_MSM_SigPick_Target_Smite_Wrathful", "Shout_EpicBoon_MSM_SigPick_Target_SpeakWithDead", "Shout_EpicBoon_MSM_SigPick_Target_VampiricTouch", "Shout_EpicBoon_MSM_SigPick_Teleportation_Revivify"]
+notes = "Stands for 10 alike option(s) of Shout_EpicBoon_MSM_Signature_Necromancy_L13."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-necromancy-l47-shout-epicboon-msm-sigpick-target-apo-fingerofdeath"
+title = "Shout_EpicBoon_MSM_Signature_Necromancy_L47: Shout_EpicBoon_MSM_SigPick_Target_Apo_FingerOfDeath (+6 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Target_Apo_FingerOfDeath"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_NECROMANCY", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_TARGET_APO_FINGEROFDEATH"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Target_Blight", "Shout_EpicBoon_MSM_SigPick_Target_CircleOfDeath", "Shout_EpicBoon_MSM_SigPick_Target_CreateUndead", "Shout_EpicBoon_MSM_SigPick_Target_Enervation", "Shout_EpicBoon_MSM_SigPick_Target_Harm", "Shout_EpicBoon_MSM_SigPick_Target_Resurrection"]
+notes = "Stands for 6 alike option(s) of Shout_EpicBoon_MSM_Signature_Necromancy_L47."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-transmutation-l13-shout-epicboon-msm-sigpick-projectile-catapult"
+title = "Shout_EpicBoon_MSM_Signature_Transmutation_L13: Shout_EpicBoon_MSM_SigPick_Projectile_Catapult (+24 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Projectile_Catapult"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_TRANSMUTATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_PROJECTILE_CATAPULT"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Projectile_LightningArrow", "Shout_EpicBoon_MSM_SigPick_Shout_AlterSelf", "Shout_EpicBoon_MSM_SigPick_Shout_AshardalonsStride", "Shout_EpicBoon_MSM_SigPick_Shout_Blink", "Shout_EpicBoon_MSM_SigPick_Shout_DivineFavor", "Shout_EpicBoon_MSM_SigPick_Shout_ExpeditiousRetreat", "Shout_EpicBoon_MSM_SigPick_Shout_FeatherFall", "Shout_EpicBoon_MSM_SigPick_Target_Barkskin", "Shout_EpicBoon_MSM_SigPick_Target_Blindness", "Shout_EpicBoon_MSM_SigPick_Target_BodyWarpingOfGorgoroth", "Shout_EpicBoon_MSM_SigPick_Target_Darkvision", "Shout_EpicBoon_MSM_SigPick_Target_Fly", "Shout_EpicBoon_MSM_SigPick_Target_GaseousForm", "Shout_EpicBoon_MSM_SigPick_Target_Goodberry", "Shout_EpicBoon_MSM_SigPick_Target_Haste", "Shout_EpicBoon_MSM_SigPick_Target_HeatMetal", "Shout_EpicBoon_MSM_SigPick_Target_Jump", "Shout_EpicBoon_MSM_SigPick_Target_Knock", "Shout_EpicBoon_MSM_SigPick_Target_Longstrider", "Shout_EpicBoon_MSM_SigPick_Target_MagicWeapon", "Shout_EpicBoon_MSM_SigPick_Target_PlantGrowth", "Shout_EpicBoon_MSM_SigPick_Target_Slow", "Shout_EpicBoon_MSM_SigPick_Target_SpikeGrowth", "Shout_EpicBoon_MSM_SigPick_Target_TrollbloodInfusion"]
+notes = "Stands for 24 alike option(s) of Shout_EpicBoon_MSM_Signature_Transmutation_L13."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-msm-signature-transmutation-l47-shout-epicboon-msm-sigpick-projectile-disintegrate"
+title = "Shout_EpicBoon_MSM_Signature_Transmutation_L47: Shout_EpicBoon_MSM_SigPick_Projectile_Disintegrate (+10 alike)"
+spell = "Shout_EpicBoon_MSM_SigPick_Projectile_Disintegrate"
+target = "host"
+setup = [{ target = "host", status = "EPIC_MSM_TRANSMUTATION", turns = -1 }, { target = "host", boost = "ActionResource(EpicBoonSignatureChoice,7,0)" }]
+expect = [{ target = "host", status_applied = ["EPIC_MSM_SIG_PROJECTILE_DISINTEGRATE"] }, { resource = "EpicBoonSignatureChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_MSM_SigPick_Shout_WindWalk", "Shout_EpicBoon_MSM_SigPick_Target_Apo_Etherealness", "Shout_EpicBoon_MSM_SigPick_Target_Apo_ReverseGravity", "Shout_EpicBoon_MSM_SigPick_Target_Apo_Sequester", "Shout_EpicBoon_MSM_SigPick_Target_Awaken", "Shout_EpicBoon_MSM_SigPick_Target_FleshToStone", "Shout_EpicBoon_MSM_SigPick_Target_Polymorph", "Shout_EpicBoon_MSM_SigPick_Target_Regenerate", "Shout_EpicBoon_MSM_SigPick_Target_Stoneskin", "Shout_EpicBoon_MSM_SigPick_Throw_Telekinesis"]
+notes = "Stands for 10 alike option(s) of Shout_EpicBoon_MSM_Signature_Transmutation_L47."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-recovervitality-shout-epicboon-recovervitality-1"
+title = "Shout_EpicBoon_RecoverVitality: Shout_EpicBoon_RecoverVitality_1"
+spell = "Shout_EpicBoon_RecoverVitality_1"
+target = "host"
+safety = false
+setup = [{ target = "host", passive = "EpicBoon_Recovery" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "EpicBoonRecoveryDie", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-recovervitality-shout-epicboon-recovervitality-2"
+title = "Shout_EpicBoon_RecoverVitality: Shout_EpicBoon_RecoverVitality_2"
+spell = "Shout_EpicBoon_RecoverVitality_2"
+target = "host"
+safety = false
+setup = [{ target = "host", passive = "EpicBoon_Recovery" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "EpicBoonRecoveryDie", level = 0, change = -2 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-recovervitality-shout-epicboon-recovervitality-5"
+title = "Shout_EpicBoon_RecoverVitality: Shout_EpicBoon_RecoverVitality_5"
+spell = "Shout_EpicBoon_RecoverVitality_5"
+target = "host"
+safety = false
+setup = [{ target = "host", passive = "EpicBoon_Recovery" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "EpicBoonRecoveryDie", level = 0, change = -5 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-recovervitality-shout-epicboon-recovervitality-10"
+title = "Shout_EpicBoon_RecoverVitality: Shout_EpicBoon_RecoverVitality_10"
+spell = "Shout_EpicBoon_RecoverVitality_10"
+target = "host"
+safety = false
+setup = [{ target = "host", passive = "EpicBoon_Recovery" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "EpicBoonRecoveryDie", level = 0, change = -10 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-sib-l1-shout-epicboon-sib-pick-projectile-catapult"
+title = "Shout_EpicBoon_Sib_L1: Shout_EpicBoon_Sib_Pick_Projectile_Catapult (+23 alike)"
+spell = "Shout_EpicBoon_Sib_Pick_Projectile_Catapult"
+target = "host"
+setup = [{ target = "host", passive = "EpicBoon_Siberys_CastInt" }]
+expect = [{ target = "host", status_applied = ["EPIC_SIB_PROJECTILE_CATAPULT"] }, { resource = "EpicBoonSiberysChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_Sib_Pick_Projectile_IceKnife", "Shout_EpicBoon_Sib_Pick_Projectile_MagicMissile", "Shout_EpicBoon_Sib_Pick_Projectile_RayOfSickness", "Shout_EpicBoon_Sib_Pick_Projectile_SpellfireFlare", "Shout_EpicBoon_Sib_Pick_Projectile_WitchBolt", "Shout_EpicBoon_Sib_Pick_Shout_AbsorbElements", "Shout_EpicBoon_Sib_Pick_Shout_EarthTremor", "Shout_EpicBoon_Sib_Pick_Shout_ExpeditiousRetreat", "Shout_EpicBoon_Sib_Pick_Shout_FalseLife", "Shout_EpicBoon_Sib_Pick_Shout_FeatherFall", "Shout_EpicBoon_Sib_Pick_Shout_Shield_Sorcerer", "Shout_EpicBoon_Sib_Pick_Shout_TideOfDarkness", "Shout_EpicBoon_Sib_Pick_Target_BodyWarpingOfGorgoroth", "Shout_EpicBoon_Sib_Pick_Target_CharmPerson", "Shout_EpicBoon_Sib_Pick_Target_FogCloud", "Shout_EpicBoon_Sib_Pick_Target_HellsLash", "Shout_EpicBoon_Sib_Pick_Target_Jump", "Shout_EpicBoon_Sib_Pick_Target_MageArmor", "Shout_EpicBoon_Sib_Pick_Target_Sleep", "Shout_EpicBoon_Sib_Pick_Target_UmbralTendril", "Shout_EpicBoon_Sib_Pick_Zone_BurningHands", "Shout_EpicBoon_Sib_Pick_Zone_ColorSpray", "Shout_EpicBoon_Sib_Pick_Zone_Thunderwave"]
+notes = "Stands for 23 alike option(s) of Shout_EpicBoon_Sib_L1."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-sib-l2-shout-epicboon-sib-pick-projectile-darkbolt"
+title = "Shout_EpicBoon_Sib_L2: Shout_EpicBoon_Sib_Pick_Projectile_Darkbolt (+30 alike)"
+spell = "Shout_EpicBoon_Sib_Pick_Projectile_Darkbolt"
+target = "host"
+setup = [{ target = "host", passive = "EpicBoon_Siberys_CastInt" }]
+expect = [{ target = "host", status_applied = ["EPIC_SIB_PROJECTILE_DARKBOLT"] }, { resource = "EpicBoonSiberysChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_Sib_Pick_Projectile_DazingBlast", "Shout_EpicBoon_Sib_Pick_Projectile_ScorchingRay", "Shout_EpicBoon_Sib_Pick_Projectile_SnowballSwarm", "Shout_EpicBoon_Sib_Pick_Shout_AlterSelf", "Shout_EpicBoon_Sib_Pick_Shout_Blur", "Shout_EpicBoon_Sib_Pick_Shout_DetectThoughts", "Shout_EpicBoon_Sib_Pick_Shout_FlameBlade", "Shout_EpicBoon_Sib_Pick_Shout_MirrorImage", "Shout_EpicBoon_Sib_Pick_Shout_SeeInvisibility", "Shout_EpicBoon_Sib_Pick_Shout_ShadowBlade_Class", "Shout_EpicBoon_Sib_Pick_Target_Blindness", "Shout_EpicBoon_Sib_Pick_Target_CloudOfDaggers", "Shout_EpicBoon_Sib_Pick_Target_CrownOfMadness", "Shout_EpicBoon_Sib_Pick_Target_Darkness", "Shout_EpicBoon_Sib_Pick_Target_Darkvision", "Shout_EpicBoon_Sib_Pick_Target_DeathArmor", "Shout_EpicBoon_Sib_Pick_Target_FlamingSphere", "Shout_EpicBoon_Sib_Pick_Target_HoldPerson", "Shout_EpicBoon_Sib_Pick_Target_Invisibility", "Shout_EpicBoon_Sib_Pick_Target_Knock", "Shout_EpicBoon_Sib_Pick_Target_MagicWeapon", "Shout_EpicBoon_Sib_Pick_Target_MindSpike", "Shout_EpicBoon_Sib_Pick_Target_MindWhip", "Shout_EpicBoon_Sib_Pick_Target_MistyStep", "Shout_EpicBoon_Sib_Pick_Target_PhantasmalForce", "Shout_EpicBoon_Sib_Pick_Target_Shatter", "Shout_EpicBoon_Sib_Pick_Target_Web", "Shout_EpicBoon_Sib_Pick_Zone_AganazzarsScorcher", "Shout_EpicBoon_Sib_Pick_Zone_GustOfWind", "Shout_EpicBoon_Sib_Pick_Zone_RimesBindingIce"]
+notes = "Stands for 30 alike option(s) of Shout_EpicBoon_Sib_L2."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-sib-l58-shout-epicboon-sib-pick-projectile-apo-delayedblastfireball"
+title = "Shout_EpicBoon_Sib_L58: Shout_EpicBoon_Sib_Pick_Projectile_Apo_DelayedBlastFireball (+35 alike)"
+spell = "Shout_EpicBoon_Sib_Pick_Projectile_Apo_DelayedBlastFireball"
+target = "host"
+setup = [{ target = "host", passive = "EpicBoon_Siberys_CastInt" }]
+expect = [{ target = "host", status_applied = ["EPIC_SIB_PROJECTILE_APO_DELAYEDBLASTFIREBALL"] }, { resource = "EpicBoonSiberysChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_Sib_Pick_Projectile_ChainLightning", "Shout_EpicBoon_Sib_Pick_Projectile_Disintegrate", "Shout_EpicBoon_Sib_Pick_Shout_Apo_AuraOfEvasion", "Shout_EpicBoon_Sib_Pick_Shout_Apo_LightningRing", "Shout_EpicBoon_Sib_Pick_Shout_PowerWordStun", "Shout_EpicBoon_Sib_Pick_Target_ApoAnimateObjects", "Shout_EpicBoon_Sib_Pick_Target_ApoBigbysHand", "Shout_EpicBoon_Sib_Pick_Target_Apo_Earthquake", "Shout_EpicBoon_Sib_Pick_Target_Apo_EntrancingMirrors", "Shout_EpicBoon_Sib_Pick_Target_Apo_Etherealness", "Shout_EpicBoon_Sib_Pick_Target_Apo_FingerOfDeath", "Shout_EpicBoon_Sib_Pick_Target_Apo_FireStorm", "Shout_EpicBoon_Sib_Pick_Target_Apo_FracturedAwareness", "Shout_EpicBoon_Sib_Pick_Target_Apo_IncendiaryCloud", "Shout_EpicBoon_Sib_Pick_Target_Apo_IronBody", "Shout_EpicBoon_Sib_Pick_Target_Apo_PowerWordPain", "Shout_EpicBoon_Sib_Pick_Target_Apo_ReverseGravity", "Shout_EpicBoon_Sib_Pick_Target_Apo_Sunburst", "Shout_EpicBoon_Sib_Pick_Target_CircleOfDeath", "Shout_EpicBoon_Sib_Pick_Target_Cloudkill", "Shout_EpicBoon_Sib_Pick_Target_DominateMonster", "Shout_EpicBoon_Sib_Pick_Target_DominatePerson", "Shout_EpicBoon_Sib_Pick_Target_Enervation", "Shout_EpicBoon_Sib_Pick_Target_FleshToStone", "Shout_EpicBoon_Sib_Pick_Target_GlobeOfInvulnerability", "Shout_EpicBoon_Sib_Pick_Target_HoldMonster", "Shout_EpicBoon_Sib_Pick_Target_InsectPlague", "Shout_EpicBoon_Sib_Pick_Target_Seeming", "Shout_EpicBoon_Sib_Pick_Target_SynapticStatic", "Shout_EpicBoon_Sib_Pick_Teleportation_ArcaneGate", "Shout_EpicBoon_Sib_Pick_Throw_Telekinesis", "Shout_EpicBoon_Sib_Pick_Wall_WallOfStone", "Shout_EpicBoon_Sib_Pick_Zone_ConeOfCold", "Shout_EpicBoon_Sib_Pick_Zone_PrismaticSpray", "Shout_EpicBoon_Sib_Pick_Zone_Sunbeam"]
+notes = "Stands for 35 alike option(s) of Shout_EpicBoon_Sib_L58."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-epicboon-sib-mark-shout-epicboon-sib-pick-shout-apo-animalshapes"
+title = "Shout_EpicBoon_Sib_Mark: Shout_EpicBoon_Sib_Pick_Shout_Apo_AnimalShapes (+11 alike)"
+spell = "Shout_EpicBoon_Sib_Pick_Shout_Apo_AnimalShapes"
+target = "host"
+setup = [{ target = "host", passive = "EpicBoon_Siberys_CastInt" }]
+expect = [{ target = "host", status_applied = ["EPIC_SIB_SHOUT_APO_ANIMALSHAPES"] }, { resource = "EpicBoonSiberysChoice", level = 0, change = -1 }]
+covers = ["Shout_EpicBoon_Sib_Pick_Shout_Apo_ControlWeather", "Shout_EpicBoon_Sib_Pick_Shout_HeroesFeast", "Shout_EpicBoon_Sib_Pick_Target_Apo_Demiplane", "Shout_EpicBoon_Sib_Pick_Target_Apo_Maze", "Shout_EpicBoon_Sib_Pick_Target_Apo_MindBlank", "Shout_EpicBoon_Sib_Pick_Target_Apo_PlaneShift", "Shout_EpicBoon_Sib_Pick_Target_Apo_Symbol", "Shout_EpicBoon_Sib_Pick_Target_Apo_Teleport", "Shout_EpicBoon_Sib_Pick_Target_ProjectImage", "Shout_EpicBoon_Sib_Pick_Target_Regenerate", "Shout_EpicBoon_Sib_Pick_Target_TrueSeeing"]
+notes = "Stands for 11 alike option(s) of Shout_EpicBoon_Sib_Mark."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-illrigger-masterofhell-projectile-illrigger-masterofhell-pestilence"
+title = "Shout_Illrigger_MasterOfHell: Projectile_Illrigger_MasterOfHell_Pestilence"
+spell = "Projectile_Illrigger_MasterOfHell_Pestilence"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", passive = "Illrigger_20_MasterOfHell" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", status_applied = ["POISONED"] }, { target = "A", hp_change = [-100, -5] }, { resource = "IllriggerMasterOfHell", level = 0, change = -1 }]
+notes = "The Constitution save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-seals-1"
+title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Seals_1"
+spell = "Shout_Illrigger_Vile_Seals_1"
+target = "host"
+setup = [{ target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+expect = [{ resource = "Seal", level = 0, amount_change = 1 }, { resource = "IllriggerVileSeals", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-seals-3"
+title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Seals_3"
+spell = "Shout_Illrigger_Vile_Seals_3"
+target = "host"
+setup = [{ target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+expect = [{ resource = "Seal", level = 0, amount_change = 3 }, { resource = "IllriggerVileSeals", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-seals-4"
+title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Seals_4"
+spell = "Shout_Illrigger_Vile_Seals_4"
+target = "host"
+setup = [{ target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+expect = [{ resource = "Seal", level = 0, amount_change = 4 }, { resource = "IllriggerVileSeals", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-slot-1"
+title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Slot_1"
+spell = "Shout_Illrigger_Vile_Slot_1"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(Seal,9,0)" }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "Seal", level = 0, change = -3 }, { resource = "IllriggerVileSlots", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-illrigger-viletransmogrification-shout-illrigger-vile-slot-2"
+title = "Shout_Illrigger_VileTransmogrification: Shout_Illrigger_Vile_Slot_2"
+spell = "Shout_Illrigger_Vile_Slot_2"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(Seal,12,0)" }, { target = "host", passive = "ArchitectsOfRuin_15_VileTransmogrification" }]
+expect = [{ resource = "SpellSlot", level = 0, amount_change = 1 }, { resource = "Seal", level = 0, change = -6 }, { resource = "IllriggerVileSlots", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-wish-shout-wish-massheal"
+title = "Shout_Wish: Shout_Wish_MassHeal"
+spell = "Shout_Wish_MassHeal"
+target = "host"
+safety = false
+setup = [{ target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-wish-shout-wish-resurrect"
+title = "Shout_Wish: Shout_Wish_Resurrect"
+spell = "Shout_Wish_Resurrect"
+target = "host"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "A", dead = true }]
+expect = [{ target = "A", dead = false }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-wish-shout-wish-blessing"
+title = "Shout_Wish: Shout_Wish_Blessing"
+spell = "Shout_Wish_Blessing"
+target = "host"
+expect = [{ target = "host", status_applied = ["WISH_BLESSING"] }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-wish-greaterdivineintervention-target-wish-heal"
+title = "Shout_Wish_GreaterDivineIntervention: Target_Wish_Heal"
+spell = "Target_Wish_Heal"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", passive = "Cleric_GreaterDivineIntervention" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-wish-greaterdivineintervention-target-wish-revive"
+title = "Shout_Wish_GreaterDivineIntervention: Target_Wish_Revive"
+spell = "Target_Wish_Revive"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", passive = "Cleric_GreaterDivineIntervention" }, { target = "A", dead = true }]
+expect = [{ target = "A", dead = false }]
+
+# draft confidence: high
+[[case]]
+id = "cont-shout-wish-greaterdivineintervention-target-wish-buff"
+title = "Shout_Wish_GreaterDivineIntervention: Target_Wish_Buff"
+spell = "Target_Wish_Buff"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", passive = "Cleric_GreaterDivineIntervention" }]
+expect = [{ target = "A", status_applied = ["WISH_BLESSING"] }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-enlargereduce-sm-target-enlarge-sm"
+title = "Target_EnlargeReduce_SM: Target_Enlarge_SM (+1 alike)"
+spell = "Target_Enlarge_SM"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", status = "SM_UNLOCK_ENLARGEREDUCE", turns = -1 }]
+expect = [{ target = "A", status_applied = ["ENLARGE"] }]
+covers = ["Target_Reduce_SM"]
+notes = "Stands for 1 alike option(s) of Target_EnlargeReduce_SM."
+
+# draft confidence: high
+[[case]]
+id = "cont-target-findfamiliar-sm-target-findfamiliar-cat-sm"
+title = "Target_FindFamiliar_SM: Target_FindFamiliar_Cat_SM"
+spell = "Target_FindFamiliar_Cat_SM"
+target = "ground"
+setup = [{ target = "host", status = "SM_UNLOCK_FINDFAMILIAR", turns = -1 }]
+expect = [{ summon = { template = "be212ed5-a622-4560-96be-0ee27ea1f913" } }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-findfamiliar-sm-target-findfamiliar-crab-sm"
+title = "Target_FindFamiliar_SM: Target_FindFamiliar_Crab_SM"
+spell = "Target_FindFamiliar_Crab_SM"
+target = "ground"
+setup = [{ target = "host", status = "SM_UNLOCK_FINDFAMILIAR", turns = -1 }]
+expect = [{ summon = { template = "48cda2b7-04bc-40c2-81f5-1dddabcd15ab" } }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-findfamiliar-sm-target-findfamiliar-frog-sm"
+title = "Target_FindFamiliar_SM: Target_FindFamiliar_Frog_SM"
+spell = "Target_FindFamiliar_Frog_SM"
+target = "ground"
+setup = [{ target = "host", status = "SM_UNLOCK_FINDFAMILIAR", turns = -1 }]
+expect = [{ summon = { template = "4521a4d1-0940-41de-b4c2-0314b8c8f32d" } }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-findfamiliar-sm-target-findfamiliar-rat-sm"
+title = "Target_FindFamiliar_SM: Target_FindFamiliar_Rat_SM"
+spell = "Target_FindFamiliar_Rat_SM"
+target = "ground"
+setup = [{ target = "host", status = "SM_UNLOCK_FINDFAMILIAR", turns = -1 }]
+expect = [{ summon = { template = "d779b7f9-2c7b-4f85-b914-f09e00c117f2" } }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-findfamiliar-sm-target-findfamiliar-raven-sm"
+title = "Target_FindFamiliar_SM: Target_FindFamiliar_Raven_SM"
+spell = "Target_FindFamiliar_Raven_SM"
+target = "ground"
+setup = [{ target = "host", status = "SM_UNLOCK_FINDFAMILIAR", turns = -1 }]
+expect = [{ summon = { template = "ecdffa46-80bd-41d2-8a50-4460a2810672" } }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-findfamiliar-sm-target-findfamiliar-spider-sm"
+title = "Target_FindFamiliar_SM: Target_FindFamiliar_Spider_SM"
+spell = "Target_FindFamiliar_Spider_SM"
+target = "ground"
+setup = [{ target = "host", status = "SM_UNLOCK_FINDFAMILIAR", turns = -1 }]
+expect = [{ summon = { template = "739b8af1-643d-4cc9-b5bd-3628cd3acc40" } }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-layonhands-target-layonhands-smallheal"
+title = "Target_LayOnHands: Target_LayOnHands_SmallHeal"
+spell = "Target_LayOnHands_SmallHeal"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(LayOnHandsCharge,7,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { resource = "LayOnHandsCharge", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-layonhands-target-layonhands-bigheal"
+title = "Target_LayOnHands: Target_LayOnHands_BigHeal"
+spell = "Target_LayOnHands_BigHeal"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(LayOnHandsCharge,8,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { resource = "LayOnHandsCharge", level = 0, change = -2 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-layonhands-target-layonhands-cure"
+title = "Target_LayOnHands: Target_LayOnHands_Cure"
+spell = "Target_LayOnHands_Cure"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(LayOnHandsCharge,7,0)" }, { target = "A", status = "POISONED", turns = 10 }]
+expect = [{ target = "A", status_removed = ["POISONED"] }, { resource = "LayOnHandsCharge", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-layonhands-target-layonhands-restoreblinded"
+title = "Target_LayOnHands: Target_LayOnHands_RestoreBlinded (+4 alike)"
+spell = "Target_LayOnHands_RestoreBlinded"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(LayOnHandsCharge,7,0)" }, { target = "host", passive = "Paladin_14_RestoringTouch" }, { target = "A", status = "BLINDED", turns = 10 }]
+expect = [{ target = "A", status_removed = ["BLINDED"] }, { resource = "LayOnHandsCharge", level = 0, change = -1 }]
+covers = ["Target_LayOnHands_RestoreCharmed", "Target_LayOnHands_RestoreFrightened", "Target_LayOnHands_RestoreParalyzed", "Target_LayOnHands_RestoreStunned"]
+notes = "Stands for 4 alike option(s) of Target_LayOnHands."
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-base"
+title = "Target_RecklessAttack: Target_RecklessAttack_Base"
+spell = "Target_RecklessAttack_Base"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-forcefulblow"
+title = "Target_RecklessAttack: Target_RecklessAttack_ForcefulBlow"
+spell = "Target_RecklessAttack_ForcefulBlow"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "BrutalCritical" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "host", status_applied = ["FORCEFUL_BLOW"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-hamstringblow"
+title = "Target_RecklessAttack: Target_RecklessAttack_HamstringBlow"
+spell = "Target_RecklessAttack_HamstringBlow"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "BrutalCritical" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["HAMSTRING"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-staggeringblow"
+title = "Target_RecklessAttack: Target_RecklessAttack_StaggeringBlow"
+spell = "Target_RecklessAttack_StaggeringBlow"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_Improved" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED_NO_OA"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-sunderingblow"
+title = "Target_RecklessAttack: Target_RecklessAttack_SunderingBlow"
+spell = "Target_RecklessAttack_SunderingBlow"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_Improved" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-forceful-hamstring"
+title = "Target_RecklessAttack: Target_RecklessAttack_Forceful_Hamstring"
+spell = "Target_RecklessAttack_Forceful_Hamstring"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "host", status_applied = ["FORCEFUL_BLOW"] }, { target = "A", status_applied = ["HAMSTRING"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-forceful-staggering"
+title = "Target_RecklessAttack: Target_RecklessAttack_Forceful_Staggering"
+spell = "Target_RecklessAttack_Forceful_Staggering"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "host", status_applied = ["FORCEFUL_BLOW"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED_NO_OA"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-forceful-sundering"
+title = "Target_RecklessAttack: Target_RecklessAttack_Forceful_Sundering"
+spell = "Target_RecklessAttack_Forceful_Sundering"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "host", status_applied = ["FORCEFUL_BLOW"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-hamstring-staggering"
+title = "Target_RecklessAttack: Target_RecklessAttack_Hamstring_Staggering"
+spell = "Target_RecklessAttack_Hamstring_Staggering"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["HAMSTRING"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED_NO_OA"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-hamstring-sundering"
+title = "Target_RecklessAttack: Target_RecklessAttack_Hamstring_Sundering"
+spell = "Target_RecklessAttack_Hamstring_Sundering"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["HAMSTRING"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-recklessattack-target-recklessattack-staggering-sundering"
+title = "Target_RecklessAttack: Target_RecklessAttack_Staggering_Sundering"
+spell = "Target_RecklessAttack_Staggering_Sundering"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED_NO_OA"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-truepolymorph-target-truepolymorph-shadowmastiff"
+title = "Target_TruePolymorph: Target_TruePolymorph_ShadowMastiff"
+spell = "Target_TruePolymorph_ShadowMastiff"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["TRUE_POLYMORPH_SHADOWMASTIFF"] }]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: high
+[[case]]
+id = "cont-target-truepolymorph-target-truepolymorph-phasespider"
+title = "Target_TruePolymorph: Target_TruePolymorph_PhaseSpider (+1 alike)"
+spell = "Target_TruePolymorph_PhaseSpider"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["TRUE_POLYMORPH_PHASESPIDER"] }]
+covers = ["Target_TruePolymorph_Minotaur"]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch. Stands for 1 alike option(s) of Target_TruePolymorph."
+
+# draft confidence: high
+[[case]]
+id = "cont-target-truepolymorph-target-truepolymorph-objectminotaur"
+title = "Target_TruePolymorph: Target_TruePolymorph_ObjectMinotaur"
+spell = "Target_TruePolymorph_ObjectMinotaur"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+expect = [{ target = "A", status_applied = ["TRUE_POLYMORPH_OBJECT_MINOTAUR"] }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-truepolymorph-target-truepolymorph-objectphasespider"
+title = "Target_TruePolymorph: Target_TruePolymorph_ObjectPhaseSpider"
+spell = "Target_TruePolymorph_ObjectPhaseSpider"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+expect = [{ target = "A", status_applied = ["TRUE_POLYMORPH_OBJECT_PHASESPIDER"] }]
+
+# draft confidence: high
+[[case]]
+id = "cont-target-truepolymorph-target-truepolymorph-objectshadowmastiff"
+title = "Target_TruePolymorph: Target_TruePolymorph_ObjectShadowMastiff"
+spell = "Target_TruePolymorph_ObjectShadowMastiff"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+expect = [{ target = "A", status_applied = ["TRUE_POLYMORPH_OBJECT_SHADOWMASTIFF"] }]
