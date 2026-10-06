@@ -856,7 +856,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="PassivesAdded" type="LSString" value="Warlock_MysticArcanum_9"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,1,5)"/>
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="Warlock"/>
