@@ -1,9 +1,9 @@
 name: Build & Release BG3 Mod
 
+# Manual fallback only (2026-10-06): releases are made locally after the gate (bg3-data-mcp bg3data/gate.py + release.py),
+# which needs the game and the dependency paks. A tag push no longer triggers this, so it can't race the local release.
 on:
-  push:
-    tags:
-      - "v*.*.*"   # e.g. v1.2.3
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -43,7 +43,7 @@ jobs:
         id: meta
         shell: pwsh
         run: |
-          $tag = "${{ github.ref_name }}"
+          $tag = "${{ github.ref_name }}"  # run it from a tag (Use workflow from: v1.2.3)
           if (-not $tag.StartsWith("v")) {
             throw "Tag must start with v (e.g. v1.2.3). Got: $tag"
           }
@@ -183,7 +183,7 @@ jobs:
             dist/checksums.txt
 
   release:
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: startsWith(github.ref, 'refs/tags/v')  # dispatched from a tag
     name: Create GitHub Release + (WIP) publish
     needs: build
     runs-on: ubuntu-latest
