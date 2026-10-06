@@ -4102,9 +4102,9 @@
   <content contentuid="h4dc5a67b44dd5e14b38f7908b4b18fb3" version="1">Power Word Pain</content>
   <content contentuid="h5cd9538765cb5448a4f4e43f0467eb62" version="1">Charmed: Speed at most 3m, Disadvantage on D20 Tests except Constitution saves. Repeats the Constitution save at the end of each of its turns.</content>
   <content contentuid="h697921928953504eabc0552cbb8d18f6" version="1">Reweave Fate</content>
-  <content contentuid="hdb976ace6ba65988b455cc06f159042e" version="1">Reaction, when an ally within 18m fails an attack roll or saving throw: it rerolls with Advantage and must use the new roll.</content>
+  <content contentuid="hdb976ace6ba65988b455cc06f159042e" version="1">Reaction, when an ally within 18m fails an attack roll or saving throw: it rerolls with Advantage, must use the new roll, and gains 3d10 Temporary Hit Points.</content>
   <content contentuid="hc02b05199b8253cda9ff9474d1700ef8" version="1">Reweave Fate</content>
-  <content contentuid="ha4b87de124be53f98d883039327600d9" version="1">An ally failed a roll: reroll it with Advantage.</content>
+  <content contentuid="ha4b87de124be53f98d883039327600d9" version="1">An ally failed a roll: reroll it with Advantage; it gains 3d10 Temporary Hit Points.</content>
   <content contentuid="h56070afc80b35988ae9b53c5a317c4d3" version="1">Transfix</content>
   <content contentuid="h0b7d959f41905adab8474a4c0f316b3a" version="1">An alluring otherworldly aura: a creature within 18m makes a Charisma save or is Charmed and Incapacitated, moving toward you, and takes 4d8 Psychic damage whenever it ends its turn within 1.5m of you. While you concentrate you can use an action to target another creature (not one that saved).</content>
   <content contentuid="h86e03de5d5105a3d9baaa45533084a29" version="1">Transfix: New Target</content>
@@ -4241,4 +4241,6 @@
   <content contentuid="h191ac794efde5d2185185505429c319b" version="1">Choose Power Word Pain as your Boon of Siberys spell.</content>
   <content contentuid="hac71477247ba5ef682833241b8d8145f" version="1">Aberrant Magic: Power Word Pain</content>
   <content contentuid="hb8bb1db3c34a5435afabfec9b4073ccc" version="1">Power Word Pain (Aberrant Magic)</content>
+  <content contentuid="h6bfcccc000bb50729e69b4dd2f07bdc0" version="1">Rewoven Fate</content>
+  <content contentuid="hdeb92d4bc7bb508b880fb72d9fdf0e64" version="1">3d10 Temporary Hit Points from a strengthened fate.</content>
 </contentList>

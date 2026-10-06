@@ -50,6 +50,18 @@ data "RemoveEvents" "OnTurn"
 data "StatusPropertyFlags" "OverheadOnTurn"
 data "StatusGroups" "SG_Charmed;SG_Condition"
 
+// EPIC_FORTIFYING_LIGHT's temporary-HP form
+new entry "APO_REWOVEN_FATE"
+type "StatusData"
+data "DisplayName" "h6bfcccc000bb50729e69b4dd2f07bdc0"
+data "Description" "hdeb92d4bc7bb508b880fb72d9fdf0e64"
+data "Icon" "PassiveFeature_Lucky_RollAdditionalDie"
+data "StatusType" "BOOST"
+data "StackId" "APO_REWOVEN_FATE"
+data "Boosts" "TemporaryHP(3d10)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnDamage"
+
 new entry "APO_TRANSFIX_CASTER"
 type "StatusData"
 data "DisplayName" "hc38e5c58e5d153fcbfe3e58cbc03d298"

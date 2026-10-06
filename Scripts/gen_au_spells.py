@@ -6,9 +6,11 @@ mechanics follow the rules text (library: excerpts/subclasses/ArcanaUnleashed.tx
 rules_spell_classes.json via gen_rules_spell_lists.py (rerun Scripts/extract_rules_spells.py after changing names here).
 
 Not modelled (no BG3 equivalent): Deafened (Lightning Ring, Wail of the Banshee); Power Word Pain's Constitution save to cast
-a spell; Reweave Fate's 6d10 Temporary Hit Points when the reroll succeeds (the interrupt can't see the new result);
+a spell; Reweave Fate always grants half its Temporary Hit Points, 3d10 (the rule: 6d10 if the reroll succeeds - the
+interrupt can't see the new result; user decision 2026-10-05);
 Detonate's Disadvantage when the target dropped to 0 (damage IF() conditions are read at cast start); Illusory Dragon is
-the frightening appearance plus a Bonus Action breath from you (no tangible dragon to move; a creature can't study it).
+the frightening appearance plus a Bonus Action breath from you - kept off every list (gen_rules_spell_lists.HOLD) until the
+dragon itself can be modelled (user decision 2026-10-05).
 Exhaustion (Vision of Elapsing Eons) is the 2024 rule as statuses APO_EXHAUSTION_1-5, level 6 kills; a Long Rest clears
 it all (2024: one level).
 Run: python3 Scripts/gen_au_spells.py
@@ -80,18 +82,25 @@ G.status("APO_POWER_WORD_PAIN", "Power Word Pain", "Charmed: Speed at most 3m, D
           **repeat_save("Constitution"), "StatusGroups": "SG_Charmed;SG_Condition"}, icon="Status_Charmed")
 
 G.spell("Shout_Apo_ReweaveFate", "Reweave Fate",
-        "Reaction, when an ally within 18m fails an attack roll or saving throw: it rerolls with Advantage and must use the new roll.",
+        "Reaction, when an ally within 18m fails an attack roll or saving throw: it rerolls with Advantage, must use the new roll, "
+        "and gains 3d10 Temporary Hit Points.",
         {"Level": "7", "SpellSchool": "Divination", "UseCosts": slot(7, "ReactionActionPoint"),
          "InterruptPrototype": "Interrupt_Apo_ReweaveFate", "SpellFlags": "HasSomaticComponent;IsSpell;IsLinkedSpellContainer"},
         using="Shout_Shield_Wizard", icon="PassiveFeature_Lucky_RollAdditionalDie")
-G.interrupt("Interrupt_Apo_ReweaveFate", "Reweave Fate", "An ally failed a roll: reroll it with Advantage.",
+G.interrupt("Interrupt_Apo_ReweaveFate", "Reweave Fate", "An ally failed a roll: reroll it with Advantage; it gains 3d10 Temporary Hit Points.",
             {"InterruptContext": "OnPostRoll", "InterruptContextScope": "Nearby", "Container": "YesNoDecision",
              "Conditions": "IsAbleToReact(context.Observer) and not AnyEntityIsItem() and not HasVerbalComponentBlocked(context.Observer) and "
                            "((HasInterruptedAttack() and Ally(context.Source,context.Observer) and IsRerollInterruptInteresting(context.Source)) or "
                            "(HasInterruptedSavingThrow() and Ally(context.Target,context.Observer) and IsRerollInterruptInteresting()))",
-             "Properties": "SetAdvantage()", "Cost": slot(7, "ReactionActionPoint"), "InterruptDefaultValue": "Ask;Enabled"},
+             "Properties": "SetAdvantage();IF(HasInterruptedAttack()):ApplyStatus(OBSERVER_SOURCE,APO_REWOVEN_FATE,100,-1);"
+                           "IF(HasInterruptedSavingThrow()):ApplyStatus(OBSERVER_TARGET,APO_REWOVEN_FATE,100,-1)",
+             "Cost": slot(7, "ReactionActionPoint"), "InterruptDefaultValue": "Ask;Enabled"},
             icon="PassiveFeature_Lucky_RollAdditionalDie",
             comment="SetAdvantage() rerolls with Advantage, as Interrupt_ApoMasterDuelist / dnd55e Seeking Spell")
+
+G.status("APO_REWOVEN_FATE", "Rewoven Fate", "3d10 Temporary Hit Points from a strengthened fate.",
+         {"StackId": "APO_REWOVEN_FATE", "Boosts": "TemporaryHP(3d10)", "RemoveConditions": "not HasTemporaryHP()", "RemoveEvents": "OnDamage"},
+         icon="PassiveFeature_Lucky_RollAdditionalDie", comment="EPIC_FORTIFYING_LIGHT's temporary-HP form")
 
 TRANSFIX = "An alluring otherworldly aura: a creature within 18m makes a Charisma save or is Charmed and Incapacitated, moving toward you, and takes {d} Psychic damage whenever it ends its turn within 1.5m of you. While you concentrate you can use an action to target another creature (not one that saved)."
 for lv, d in ((7, "4d8"), (8, "5d8"), (9, "6d8")):

@@ -282,10 +282,11 @@ Illusory Dragon, Iron Body, Lightning Ring, Moment of Prescience (8); Detonate, 
 of the Banshee (9). Not made: Hindsight (watching the past 10 years has nothing in BG3 to act on). Approximations:
 - No Deafened in BG3 (Lightning Ring, Wail of the Banshee); Wail skips Silenced creatures (can't hear).
 - Power Word Pain: the Constitution save to cast a spell while Charmed isn't modelled.
-- Reweave Fate: rerolls with Advantage; the 6d10 Temporary Hit Points on a success aren't granted (the interrupt can't see
-  the new result). Offered for allies' attack rolls and saving throws.
+- Reweave Fate: rerolls with Advantage and always grants half the Temporary Hit Points, 3d10 (the rule gives 6d10 only if the
+  reroll succeeds, which the interrupt can't see; user decision 2026-10-05). Offered for allies' attack rolls and saves.
 - Detonate: the explosion's Disadvantage when the target dropped to 0 isn't modelled.
-- Illusory Dragon: no tangible dragon. Enemies within 18m of you save when it appears; the Bonus Action breath comes from
+- Illusory Dragon: implemented but kept off every list (gen_rules_spell_lists.HOLD) until the dragon itself can be modelled
+  (user decision 2026-10-05). As built: no tangible dragon. Enemies within 18m of you save when it appears; the Bonus Action breath comes from
   you; the Frightened creature repeats its save each turn (FRIGHTENED's own) instead of only when out of the dragon's sight.
 - Vision of Elapsing Eons: Exhaustion is the 2024 rule (D20 Tests -2 per level, Speed -1.5m per level, death at 6) as new
   statuses APO_EXHAUSTION_1-5, which a Long Rest clears entirely (2024: one level). Help shakes the target free.

@@ -10,7 +10,7 @@ data "InterruptContext" "OnPostRoll"
 data "InterruptContextScope" "Nearby"
 data "Container" "YesNoDecision"
 data "Conditions" "IsAbleToReact(context.Observer) and not AnyEntityIsItem() and not HasVerbalComponentBlocked(context.Observer) and ((HasInterruptedAttack() and Ally(context.Source,context.Observer) and IsRerollInterruptInteresting(context.Source)) or (HasInterruptedSavingThrow() and Ally(context.Target,context.Observer) and IsRerollInterruptInteresting()))"
-data "Properties" "SetAdvantage()"
+data "Properties" "SetAdvantage();IF(HasInterruptedAttack()):ApplyStatus(OBSERVER_SOURCE,APO_REWOVEN_FATE,100,-1);IF(HasInterruptedSavingThrow()):ApplyStatus(OBSERVER_TARGET,APO_REWOVEN_FATE,100,-1)"
 data "Cost" "ReactionActionPoint:1;SpellSlotsGroup:1:1:7"
 data "InterruptDefaultValue" "Ask;Enabled"
 

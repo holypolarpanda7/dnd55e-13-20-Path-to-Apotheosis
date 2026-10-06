@@ -25,7 +25,7 @@
                     <attribute id="Comment" type="LSString" value="Wizard Level 8 Spells merged into main list"/>
                     <attribute id="MergedInto" type="guid" value="bc917f22-7f71-4a25-9a77-7d2f91a96a65"/>
                     <attribute id="Name" type="FixedString" value="Wizard SLevel 8"/>
-                    <attribute id="Spells" type="LSString" value="Target_DominateMonster;Shout_Apo_AntimagicField;Target_Apo_Antipathy;Target_Apo_Befuddlement;Target_Apo_Clone;Shout_Apo_ControlWeather;Target_Apo_Demiplane;Target_Apo_IncendiaryCloud;Target_Apo_Maze;Target_Apo_MindBlank;Target_Apo_Sunburst;Target_Apo_Telepathy;Shout_PowerWordStun;Target_Apo_EntrancingMirrors;Shout_Apo_IllusoryDragon;Target_Apo_IronBody;Shout_Apo_LightningRing;Shout_Apo_MomentOfPrescience"/>
+                    <attribute id="Spells" type="LSString" value="Target_DominateMonster;Shout_Apo_AntimagicField;Target_Apo_Antipathy;Target_Apo_Befuddlement;Target_Apo_Clone;Shout_Apo_ControlWeather;Target_Apo_Demiplane;Target_Apo_IncendiaryCloud;Target_Apo_Maze;Target_Apo_MindBlank;Target_Apo_Sunburst;Target_Apo_Telepathy;Shout_PowerWordStun;Target_Apo_EntrancingMirrors;Target_Apo_IronBody;Shout_Apo_LightningRing;Shout_Apo_MomentOfPrescience"/>
                     <attribute id="UUID" type="guid" value="00180001-0001-0001-0001-000000000001"/>
                 </node>
                 <node id="SpellList">
@@ -135,7 +135,7 @@
                     <attribute id="Comment" type="LSString" value="Bard Magical Secrets Level 8"/>
                     <attribute id="MergedInto" type="guid" value="858d4322-9e9f-4aa4-aada-9c68835dc6fe"/>
                     <attribute id="Name" type="FixedString" value="Bard Magical Secrets SLevel 8"/>
-                    <attribute id="Spells" type="LSString" value="Target_DominateMonster;Shout_Apo_AnimalShapes;Shout_Apo_AntimagicField;Target_Apo_Antipathy;Target_Apo_Befuddlement;Target_Apo_Clone;Shout_Apo_ControlWeather;Target_Apo_Demiplane;Target_Apo_Earthquake;Shout_Apo_HolyAura;Target_Apo_IncendiaryCloud;Target_Apo_Maze;Target_Apo_MindBlank;Target_Apo_Sunburst;Target_Apo_Telepathy;Zone_Apo_Tsunami;Target_Glibness;Shout_PowerWordStun;Target_Apo_EntrancingMirrors;Shout_Apo_IllusoryDragon;Target_Apo_IronBody;Shout_Apo_LightningRing;Shout_Apo_MomentOfPrescience"/>
+                    <attribute id="Spells" type="LSString" value="Target_DominateMonster;Shout_Apo_AnimalShapes;Shout_Apo_AntimagicField;Target_Apo_Antipathy;Target_Apo_Befuddlement;Target_Apo_Clone;Shout_Apo_ControlWeather;Target_Apo_Demiplane;Target_Apo_Earthquake;Shout_Apo_HolyAura;Target_Apo_IncendiaryCloud;Target_Apo_Maze;Target_Apo_MindBlank;Target_Apo_Sunburst;Target_Apo_Telepathy;Zone_Apo_Tsunami;Target_Glibness;Shout_PowerWordStun;Target_Apo_EntrancingMirrors;Target_Apo_IronBody;Shout_Apo_LightningRing;Shout_Apo_MomentOfPrescience"/>
                     <attribute id="UUID" type="guid" value="00180001-0001-0001-0001-000000000006"/>
                 </node>
                 <node id="SpellList">
@@ -185,7 +185,7 @@
                 <node id="SpellList">
                     <attribute id="Comment" type="LSString" value="Arcana Domain Arcane Mastery - Wizard Level 8 spells only"/>
                     <attribute id="Name" type="FixedString" value="ArcanaMastery_WizardL8"/>
-                    <attribute id="Spells" type="LSString" value="Shout_Apo_AntimagicField;Target_Apo_Antipathy;Target_Apo_Befuddlement;Target_Apo_Clone;Shout_Apo_ControlWeather;Target_Apo_Demiplane;Target_Apo_IncendiaryCloud;Target_Apo_Maze;Target_Apo_MindBlank;Target_Apo_Sunburst;Target_Apo_Telepathy;Target_DominateMonster;Shout_PowerWordStun;Target_Apo_EntrancingMirrors;Shout_Apo_IllusoryDragon;Target_Apo_IronBody;Shout_Apo_LightningRing;Shout_Apo_MomentOfPrescience"/>
+                    <attribute id="Spells" type="LSString" value="Shout_Apo_AntimagicField;Target_Apo_Antipathy;Target_Apo_Befuddlement;Target_Apo_Clone;Shout_Apo_ControlWeather;Target_Apo_Demiplane;Target_Apo_IncendiaryCloud;Target_Apo_Maze;Target_Apo_MindBlank;Target_Apo_Sunburst;Target_Apo_Telepathy;Target_DominateMonster;Shout_PowerWordStun;Target_Apo_EntrancingMirrors;Target_Apo_IronBody;Shout_Apo_LightningRing;Shout_Apo_MomentOfPrescience"/>
                     <attribute id="UUID" type="guid" value="00180001-aaaa-0001-0001-000000000001"/>
                 </node>
                 <node id="SpellList">
