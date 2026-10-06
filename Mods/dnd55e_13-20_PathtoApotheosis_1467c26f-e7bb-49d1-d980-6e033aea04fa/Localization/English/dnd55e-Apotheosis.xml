@@ -4329,4 +4329,8 @@
   <content contentuid="h1b165bffa5c35708a4cf0d2a94959f90" version="1">A level 8 spell slot heals 80 Hit Points.</content>
   <content contentuid="hba04499ea1f3572e814ff5b9145737ae" version="1">Life Beyond Death</content>
   <content contentuid="hec0d0e4b274350a08eb63e47e775c28d" version="1">A level 9 spell slot heals 90 Hit Points.</content>
+  <content contentuid="h9277c5ef205053659d6ca467baa04b51" version="1">Choose an Epic Boon: a feat of great power for reaching level 19.</content>
+  <content contentuid="he30df88513a253bfb2b0ab0ce34b4721" version="1">Epic Boon</content>
+  <content contentuid="hc3e776c2e60e5606b5884682dba73775" version="1">Every Epic Boon raises one ability score by 1, to a maximum of 30. If your boon already names its ability (for example Boon of Irresistible Offense (+1 Strength)), choose "increase included in my boon".</content>
+  <content contentuid="h5d3d50c9148c5818816233cdd1cebdc8" version="1">Epic Boon: Ability Increase</content>
 </contentList>

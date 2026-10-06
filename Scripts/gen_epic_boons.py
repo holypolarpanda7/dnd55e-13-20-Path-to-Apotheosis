@@ -10,7 +10,8 @@ as one entry per allowed ability with the +1 built in; for those the ability pic
 
 Owns (rewritten every run): Stats/Generated/Data/{Passive,Status,Spell,Interrupt}_EpicBoons.txt.
 Patches idempotently (between markers / by UUID): Lists/PassiveLists.lsx, ActionResourceDefinitions,
-Localization/English/dnd55e-Apotheosis.xml, Progressions.lsx (level-19 nodes).
+Localization/English/dnd55e-Apotheosis.xml, Progressions.lsx (level-19 nodes), Progressions/ProgressionDescriptions.lsx (the
+level-up screen's headings for the two picks: a SelectorId with no ProgressionDescription shows the generic "Class Passives").
 Script Extender halves live in ScriptExtender/Lua/EpicBoons.lua.
 
 Run: python3 Scripts/gen_epic_boons.py
@@ -637,6 +638,43 @@ def patch_lists():
     patch_between(path, "                <!-- EPIC BOONS BEGIN", "<!-- EPIC BOONS END -->\n", block, "            </children>")
 
 
+PD_HEAD = """<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="500"/>
+    <region id="ProgressionDescriptions">
+        <node id="root">
+            <children>
+            </children>
+        </node>
+    </region>
+</save>
+"""
+# SelectorId -> heading and text on the level-up screen (ProgressionDescriptions, as base and dnd55e name FightingStyle,
+# WeaponMasteryList...). Without these both picks read "Class Passives" (seen in game 2026-10-06).
+SELECTOR_TEXT = [
+    ("EpicBoon", "Epic Boon", "Choose an Epic Boon: a feat of great power for reaching level 19."),
+    ("EpicBoonAbility", "Epic Boon: Ability Increase",
+     "Every Epic Boon raises one ability score by 1, to a maximum of 30. If your boon already names its ability "
+     "(for example Boon of Irresistible Offense (+1 Strength)), choose \"increase included in my boon\"."),
+]
+
+
+def patch_selector_descriptions():
+    path = os.path.join(PUB, "Progressions", "ProgressionDescriptions.lsx")
+    if not os.path.exists(path):
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(PD_HEAD)
+    rows = "".join(f"""                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="{h('sel:' + sid + ':d', text)}" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="{h('sel:' + sid + ':n', title)}" version="1"/>
+                    <attribute id="SelectorId" type="FixedString" value="{sid}"/>
+                    <attribute id="UUID" type="guid" value="{gid('progdesc:' + sid)}"/>
+                </node>
+""" for sid, title, text in SELECTOR_TEXT)
+    block = "                <!-- EPIC BOONS BEGIN (Scripts/gen_epic_boons.py) -->\n" + rows + "                <!-- EPIC BOONS END -->\n"
+    patch_between(path, "                <!-- EPIC BOONS BEGIN", "<!-- EPIC BOONS END -->\n", block, "            </children>")
+
+
 def patch_resources():
     path = glob.glob(os.path.join(PUB, "ActionResourceDefinitions", "*.lsx"))[0]
     rows = []
@@ -701,6 +739,7 @@ if __name__ == "__main__":
     write_stats()
     patch_lists()
     patch_resources()
+    patch_selector_descriptions()
     patch_loca()
     classes = patch_progressions()
     print(f"{len(BOONS)} boon entries, {len(ABILITY_PASSIVES)} ability options, {len(P)} passives, {len(S)} statuses, "
