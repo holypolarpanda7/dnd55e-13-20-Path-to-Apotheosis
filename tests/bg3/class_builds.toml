@@ -552,3 +552,508 @@ title = "Rogue - Arcane Trickster, levels 2-20 (third caster: Wizard spells, lea
 subclass = "ArcaneTrickster"
 from = "rogue-base"
 levels = [2, 20]
+
+# every other subclass with level 13+ content (added 2026-10-06 so each one's level-ups are checked in game, not only its features)
+[[build]]
+id = "barbarian-giantpath"
+class = "Barbarian"
+title = "Barbarian - GiantPath, levels 2-20"
+subclass = "GiantPath"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
+id = "barbarian-shadowgnawer"
+class = "Barbarian"
+title = "Barbarian - ShadowGnawer, levels 2-20"
+subclass = "ShadowGnawer"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
+id = "barbarian-totemwarriorpath"
+class = "Barbarian"
+title = "Barbarian - TotemWarriorPath, levels 2-20"
+subclass = "TotemWarriorPath"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
+id = "barbarian-wildmagicpath"
+class = "Barbarian"
+title = "Barbarian - WildMagicPath, levels 2-20"
+subclass = "WildMagicPath"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
+id = "barbarian-worldtreepath"
+class = "Barbarian"
+title = "Barbarian - WorldTreePath, levels 2-20"
+subclass = "WorldTreePath"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
+id = "barbarian-zealotpath"
+class = "Barbarian"
+title = "Barbarian - ZealotPath, levels 2-20"
+subclass = "ZealotPath"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
+id = "bard-dancecollege"
+class = "Bard"
+title = "Bard - DanceCollege, levels 2-20"
+subclass = "DanceCollege"
+from = "bard-base"
+levels = [2, 20]
+
+[[build]]
+id = "bard-mooncollege"
+class = "Bard"
+title = "Bard - MoonCollege, levels 2-20"
+subclass = "MoonCollege"
+from = "bard-base"
+levels = [2, 20]
+
+[[build]]
+id = "bard-spiritscollege"
+class = "Bard"
+title = "Bard - SpiritsCollege, levels 2-20"
+subclass = "SpiritsCollege"
+from = "bard-base"
+levels = [2, 20]
+
+[[build]]
+id = "bard-swordscollege"
+class = "Bard"
+title = "Bard - SwordsCollege, levels 2-20"
+subclass = "SwordsCollege"
+from = "bard-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-apocalypsedomain"
+class = "Cleric"
+title = "Cleric - ApocalypseDomain, levels 2-20"
+subclass = "ApocalypseDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-deathdomain"
+class = "Cleric"
+title = "Cleric - DeathDomain, levels 2-20"
+subclass = "DeathDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-dragondomain"
+class = "Cleric"
+title = "Cleric - DragonDomain, levels 2-20"
+subclass = "DragonDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-forgedomain"
+class = "Cleric"
+title = "Cleric - ForgeDomain, levels 2-20"
+subclass = "ForgeDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-gravedomain"
+class = "Cleric"
+title = "Cleric - GraveDomain, levels 2-20"
+subclass = "GraveDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-minddomain"
+class = "Cleric"
+title = "Cleric - MindDomain, levels 2-20"
+subclass = "MindDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-naturedomain"
+class = "Cleric"
+title = "Cleric - NatureDomain, levels 2-20"
+subclass = "NatureDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-shadowdomain"
+class = "Cleric"
+title = "Cleric - ShadowDomain, levels 2-20"
+subclass = "ShadowDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-tempestdomain"
+class = "Cleric"
+title = "Cleric - TempestDomain, levels 2-20"
+subclass = "TempestDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-trickerydomain"
+class = "Cleric"
+title = "Cleric - TrickeryDomain, levels 2-20"
+subclass = "TrickeryDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "cleric-twilightdomain"
+class = "Cleric"
+title = "Cleric - TwilightDomain, levels 2-20"
+subclass = "TwilightDomain"
+from = "cleric-base"
+levels = [2, 20]
+
+[[build]]
+id = "druid-circleofdreams"
+class = "Druid"
+title = "Druid - CircleOfDreams, levels 2-20"
+subclass = "CircleOfDreams"
+from = "druid-base"
+levels = [2, 20]
+
+[[build]]
+id = "druid-circleofthespores"
+class = "Druid"
+title = "Druid - CircleOfTheSpores, levels 2-20"
+subclass = "CircleOfTheSpores"
+from = "druid-base"
+levels = [2, 20]
+
+[[build]]
+id = "fighter-arcanearcher"
+class = "Fighter"
+title = "Fighter - ArcaneArcher, levels 2-20"
+subclass = "ArcaneArcher"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "fighter-banneret"
+class = "Fighter"
+title = "Fighter - Banneret, levels 2-20"
+subclass = "Banneret"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "fighter-battlemaster"
+class = "Fighter"
+title = "Fighter - BattleMaster, levels 2-20"
+subclass = "BattleMaster"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "fighter-cavalier"
+class = "Fighter"
+title = "Fighter - Cavalier, levels 2-20"
+subclass = "Cavalier"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "fighter-psiwarrior"
+class = "Fighter"
+title = "Fighter - PsiWarrior, levels 2-20"
+subclass = "PsiWarrior"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "fighter-runeknight"
+class = "Fighter"
+title = "Fighter - RuneKnight, levels 2-20"
+subclass = "RuneKnight"
+from = "fighter-base"
+levels = [2, 20]
+
+[[build]]
+id = "monk-drunkenmaster"
+class = "Monk"
+title = "Monk - DrunkenMaster, levels 2-20"
+subclass = "DrunkenMaster"
+from = "monk-base"
+levels = [2, 20]
+
+[[build]]
+id = "monk-fourelements"
+class = "Monk"
+title = "Monk - FourElements, levels 2-20"
+subclass = "FourElements"
+from = "monk-base"
+levels = [2, 20]
+
+[[build]]
+id = "monk-kensei"
+class = "Monk"
+title = "Monk - Kensei, levels 2-20"
+subclass = "Kensei"
+from = "monk-base"
+levels = [2, 20]
+
+[[build]]
+id = "monk-mercy"
+class = "Monk"
+title = "Monk - Mercy, levels 2-20"
+subclass = "Mercy"
+from = "monk-base"
+levels = [2, 20]
+
+[[build]]
+id = "monk-mysticarts"
+class = "Monk"
+title = "Monk - MysticArts, levels 2-20"
+subclass = "MysticArts"
+from = "monk-base"
+levels = [2, 20]
+
+[[build]]
+id = "monk-shadow"
+class = "Monk"
+title = "Monk - Shadow, levels 2-20"
+subclass = "Shadow"
+from = "monk-base"
+levels = [2, 20]
+
+[[build]]
+id = "monk-sunsoul"
+class = "Monk"
+title = "Monk - SunSoul, levels 2-20"
+subclass = "SunSoul"
+from = "monk-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-ancients"
+class = "Paladin"
+title = "Paladin - Ancients, levels 2-20"
+subclass = "Ancients"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-conquest"
+class = "Paladin"
+title = "Paladin - Conquest, levels 2-20"
+subclass = "Conquest"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-crown"
+class = "Paladin"
+title = "Paladin - Crown, levels 2-20"
+subclass = "Crown"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-glory"
+class = "Paladin"
+title = "Paladin - Glory, levels 2-20"
+subclass = "Glory"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-noblegenie"
+class = "Paladin"
+title = "Paladin - NobleGenie, levels 2-20"
+subclass = "NobleGenie"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-oathbreaker"
+class = "Paladin"
+title = "Paladin - Oathbreaker, levels 2-20"
+subclass = "Oathbreaker"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-vengeance"
+class = "Paladin"
+title = "Paladin - Vengeance, levels 2-20"
+subclass = "Vengeance"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "paladin-watchers"
+class = "Paladin"
+title = "Paladin - Watchers, levels 2-20"
+subclass = "Watchers"
+from = "paladin-base"
+levels = [2, 20]
+
+[[build]]
+id = "ranger-beastmaster"
+class = "Ranger"
+title = "Ranger - BeastMaster, levels 2-20"
+subclass = "BeastMaster"
+from = "ranger-base"
+levels = [2, 20]
+
+[[build]]
+id = "ranger-feywanderer"
+class = "Ranger"
+title = "Ranger - FeyWanderer, levels 2-20"
+subclass = "FeyWanderer"
+from = "ranger-base"
+levels = [2, 20]
+
+[[build]]
+id = "ranger-gloomstalker"
+class = "Ranger"
+title = "Ranger - GloomStalker, levels 2-20"
+subclass = "GloomStalker"
+from = "ranger-base"
+levels = [2, 20]
+
+[[build]]
+id = "ranger-hollowwarden"
+class = "Ranger"
+title = "Ranger - HollowWarden, levels 2-20"
+subclass = "HollowWarden"
+from = "ranger-base"
+levels = [2, 20]
+
+[[build]]
+id = "ranger-swarmkeeper"
+class = "Ranger"
+title = "Ranger - Swarmkeeper, levels 2-20"
+subclass = "Swarmkeeper"
+from = "ranger-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-arachnoidstalker"
+class = "Rogue"
+title = "Rogue - ArachnoidStalker, levels 2-20"
+subclass = "ArachnoidStalker"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-assassin"
+class = "Rogue"
+title = "Rogue - Assassin, levels 2-20"
+subclass = "Assassin"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-deadthree"
+class = "Rogue"
+title = "Rogue - DeadThree, levels 2-20"
+subclass = "DeadThree"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-highwayrider"
+class = "Rogue"
+title = "Rogue - HighwayRider, levels 2-20"
+subclass = "HighwayRider"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-soulknife"
+class = "Rogue"
+title = "Rogue - Soulknife, levels 2-20"
+subclass = "Soulknife"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "rogue-swashbuckler"
+class = "Rogue"
+title = "Rogue - Swashbuckler, levels 2-20"
+subclass = "Swashbuckler"
+from = "rogue-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-aberrant"
+class = "Sorcerer"
+title = "Sorcerer - Aberrant, levels 2-20"
+subclass = "Aberrant"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-clockwork"
+class = "Sorcerer"
+title = "Sorcerer - Clockwork, levels 2-20"
+subclass = "Clockwork"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-divinesoul"
+class = "Sorcerer"
+title = "Sorcerer - DivineSoul, levels 2-20"
+subclass = "DivineSoul"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-shadowmagic"
+class = "Sorcerer"
+title = "Sorcerer - ShadowMagic, levels 2-20"
+subclass = "ShadowMagic"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-spellfire"
+class = "Sorcerer"
+title = "Sorcerer - Spellfire, levels 2-20"
+subclass = "Spellfire"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "sorcerer-stormsorcery"
+class = "Sorcerer"
+title = "Sorcerer - StormSorcery, levels 2-20"
+subclass = "StormSorcery"
+from = "sorcerer-base"
+levels = [2, 20]
+
+[[build]]
+id = "warlock-hexblade"
+class = "Warlock"
+title = "Warlock - Hexblade, levels 2-20"
+subclass = "Hexblade"
+from = "warlock-base"
+levels = [2, 20]
+
+[[build]]
+id = "warlock-undeadpatron"
+class = "Warlock"
+title = "Warlock - UndeadPatron, levels 2-20"
+subclass = "UndeadPatron"
+from = "warlock-base"
+levels = [2, 20]
