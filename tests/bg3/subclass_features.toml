@@ -554,3 +554,12 @@ spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance 
 setup = [{ target = "host", remove_status = "ARCANE_WARD*" }, { target = "host", passive = "Apocalypse_17_LifeBeyondDeath" }, { target = "host", hp = 1 }, { target = "A", boost = "RollBonus(Attack,30)" }]
 expect = [{ target = "host", dead = false }, { target = "host", status_applied = ["APO_LIFE_BEYOND_DEATH_1"] }, { target = "host", hp_change = [9, 20] }, { resource = "SpellSlot", level = 1, amount_change = -1 }]
 notes = "A Downed character gets no reaction prompt, so for yourself SubclassFeatures.lua spends the lowest slot (user decision 2026-10-06). Allies keep the prompt (needs a party member to test)."
+
+[[case]]
+id = "aberrant-18-warping-implosion"
+title = "Aberrant Sorcery 18 Warping Implosion: you teleport; a creature near the space you left fails Strength - 3d10 Force once, pulled toward it"
+spell = "Target_Apotheosis_WarpingImplosion"
+target = "ground"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", passive = "AberrantSorcery_18_WarpingImplosion" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-30, -3] }, { target = "A", damage_count = { count = [1, 1] } }]

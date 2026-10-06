@@ -72,8 +72,8 @@ target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 },
          { as = "B", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
 setup = [{ target = "host", max_hp = 300 }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "B", boost = "AbilityFailedSavingThrow(Dexterity)" }]
-expect = [{ cast = true }, { target = "A", hp_change = [-100, -10] }, { target = "B", hp_change = [-100, -10] }]
-notes = "The explosion reaches every creature within 18m of the target but the target - you too when you stand there (the rule's 60-foot Emanation has no caster exception)."
+expect = [{ cast = true }, { target = "A", hp_change = [-100, -10] }, { target = "B", hp_change = [-100, -10] }, { target = "B", damage_count = { count = [2, 2] } }]
+notes = "B takes the explosion as two half-damage hits (half always, half on the failed save). The explosion reaches every creature within 18m of the target but the target - you too when you stand there (the rule's 60-foot Emanation has no caster exception)."
 
 [[case]]
 id = "au-wail-of-the-banshee"

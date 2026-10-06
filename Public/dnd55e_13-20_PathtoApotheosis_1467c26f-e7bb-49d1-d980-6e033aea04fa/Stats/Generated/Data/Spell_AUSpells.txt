@@ -482,7 +482,7 @@ data "TargetConditions" "Character() and not Self() and not Dead()"
 data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
 data "SpellSuccess" "DealDamage(10d10,Fire,Magical)"
 data "SpellFail" "DealDamage((10d10)/2,Fire,Magical)"
-data "SpellProperties" "TARGET:ApplyStatus(APO_DETONATE_SEED,100,1);CreateExplosion(Projectile_Apo_Detonate_Explosion)"
+data "SpellProperties" "TARGET:ApplyStatus(APO_DETONATE_SEED,100,1);TARGET:CreateExplosion(Projectile_Apo_Detonate_Explosion)"
 data "TooltipDamageList" "DealDamage(10d10,Fire);DealDamage(10d10,Fire)"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"
 

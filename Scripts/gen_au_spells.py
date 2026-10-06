@@ -248,7 +248,7 @@ spell("Projectile_Apo_Detonate", "Detonate",
       {"TargetRadius": "150", "ExplodeRadius": "0", "TargetConditions": "Character() and not Self() and not Dead()",
        "SpellRoll": "not SavingThrow(Ability.Constitution, SourceSpellDC())",
        "SpellSuccess": "DealDamage(10d10,Fire,Magical)", "SpellFail": "DealDamage((10d10)/2,Fire,Magical)",
-       "SpellProperties": "TARGET:ApplyStatus(APO_DETONATE_SEED,100,1);CreateExplosion(Projectile_Apo_Detonate_Explosion)",
+       "SpellProperties": "TARGET:ApplyStatus(APO_DETONATE_SEED,100,1);TARGET:CreateExplosion(Projectile_Apo_Detonate_Explosion)",
        "TooltipDamageList": "DealDamage(10d10,Fire);DealDamage(10d10,Fire)",
        "SpellFlags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"})
 # A CreateExplosion spell's SpellRoll/SpellSuccess/SpellFail never deal damage (its saves roll, nothing lands - seen in game

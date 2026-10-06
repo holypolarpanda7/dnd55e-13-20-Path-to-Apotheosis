@@ -1429,3 +1429,13 @@ using "EXTRA_ATTACK_2_Q"
 data "StackPriority" "35"
 data "RemoveConditions" "not RemoveCause(StatusRemoveCause.TimeOut) and not HasHigherPriorityExtraAttackQueued('EXTRA_ATTACK_3_Q') and not HasAnyExtraAttack()"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition)):ApplyStatus(EXTRA_ATTACK_3, 100, 1)"
+
+// Warping Implosion (Aberrant Sorcery 18): the explosion at the space you leave - applied to you before the teleport, so the
+// status's CreateExplosion goes off where you stood (a spell's own GROUND:CreateExplosion lands at the destination).
+new entry "APO_WARPING_IMPLOSION_ORIGIN"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "he4a5b6c7b0000000000000000000087"
+data "Icon" "Spell_Conjuration_MistyStep"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "OnApplyFunctors" "CreateExplosion(Projectile_Apotheosis_WarpingImplosion)"
