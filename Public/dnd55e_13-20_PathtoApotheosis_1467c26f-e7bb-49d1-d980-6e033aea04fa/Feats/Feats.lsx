@@ -189,27 +189,6 @@
                     <attribute id="Selectors" type="LSString" value="SelectPassives(66927e1d-4c1d-5f7d-9cf1-d025b33ac2f4,1,EpicBoon)"/>
                     <attribute id="UUID" type="guid" value="f5409630-9a97-5e23-9e9c-89913749196b"/>
                 </node>
-                <node id="Feat">
-                    <attribute id="Name" type="FixedString" value="EpicBoonProbe"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_CombatProwess"/>
-                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(17)"/>
-                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
-                    <attribute id="UUID" type="guid" value="a5689189-a8a9-584f-9a6d-82df41ebab19"/>
-                </node>
-                <node id="Feat">
-                    <attribute id="Name" type="FixedString" value="EpicBoonProbeAbilities"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_CombatProwess"/>
-                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(17)"/>
-                    <attribute id="Selectors" type="LSString" value="SelectAbilities(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,1,1,EpicBoonAbility)"/>
-                    <attribute id="UUID" type="guid" value="08acc136-fcdb-5f5c-80ca-355f18b62bf2"/>
-                </node>
-                <node id="Feat">
-                    <attribute id="Name" type="FixedString" value="EpicBoonProbeNever"/>
-                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_CombatProwess"/>
-                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(30)"/>
-                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
-                    <attribute id="UUID" type="guid" value="ef81f215-62e1-5cc5-b545-15c347596c01"/>
-                </node>
             </children>
         </node>
     </region>

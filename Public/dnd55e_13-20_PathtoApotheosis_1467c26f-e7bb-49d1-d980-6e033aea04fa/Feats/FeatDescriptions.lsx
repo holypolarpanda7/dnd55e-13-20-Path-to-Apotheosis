@@ -200,27 +200,6 @@
                     <attribute id="FeatId" type="guid" value="f5409630-9a97-5e23-9e9c-89913749196b"/>
                     <attribute id="UUID" type="guid" value="53983bc7-bca6-5450-921c-8089040947ca"/>
                 </node>
-                <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="h8cb09ad5271a51889d40f440eaebae6d" version="1"/>
-                    <attribute id="DisplayName" type="TranslatedString" handle="he8a6d0b27f1d50e3a4d1c813a31ad880" version="1"/>
-                    <attribute id="ExactMatch" type="FixedString" value="EpicBoonProbe"/>
-                    <attribute id="FeatId" type="guid" value="a5689189-a8a9-584f-9a6d-82df41ebab19"/>
-                    <attribute id="UUID" type="guid" value="e61d13a8-434a-5e31-b1ed-45bd0a78812e"/>
-                </node>
-                <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="h8cb09ad5271a51889d40f440eaebae6d" version="1"/>
-                    <attribute id="DisplayName" type="TranslatedString" handle="h551e56d27c4a5de09b40cebb1547cd40" version="1"/>
-                    <attribute id="ExactMatch" type="FixedString" value="EpicBoonProbeAbilities"/>
-                    <attribute id="FeatId" type="guid" value="08acc136-fcdb-5f5c-80ca-355f18b62bf2"/>
-                    <attribute id="UUID" type="guid" value="c60a7ee6-f972-5b8e-b962-386084e82a90"/>
-                </node>
-                <node id="FeatDescription">
-                    <attribute id="Description" type="TranslatedString" handle="h8cb09ad5271a51889d40f440eaebae6d" version="1"/>
-                    <attribute id="DisplayName" type="TranslatedString" handle="h44c7398e827d52409d927999faa58ef1" version="1"/>
-                    <attribute id="ExactMatch" type="FixedString" value="EpicBoonProbeNever"/>
-                    <attribute id="FeatId" type="guid" value="ef81f215-62e1-5cc5-b545-15c347596c01"/>
-                    <attribute id="UUID" type="guid" value="7f6c3d39-5d40-58ec-921d-255176bea94a"/>
-                </node>
             </children>
         </node>
     </region>
