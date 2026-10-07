@@ -8,7 +8,7 @@ MCP="$(cd .. && pwd)/bg3-data-mcp"
 export UV_PROJECT_ENVIRONMENT="${UV_PROJECT_ENVIRONMENT:-$HOME/.cache/bg3-data-mcp/venv}"
 for g in gen_spells_2024 generate_level79_spells gen_au_spells gen_true_polymorph gen_indomitable_might gen_summons \
          gen_class_features gen_subclass_features gen_subclass_spells gen_epic_boons gen_gunslinger gen_illrigger gen_rules_spell_lists gen_learn_lists gen_rules_fixes \
-         gen_levelmaps; do
+         gen_levelmaps gen_selector_headings; do
   echo "== $g"; python3 "Scripts/$g.py" | tail -2
 done
 uv run --project "$MCP" bg3-data refresh apotheosis > /dev/null  # gen_upcasts reads the index (incl. the files above)

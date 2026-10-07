@@ -10,6 +10,7 @@ Owns (rewritten every run): Stats/Generated/Data/{Passive,Status,Spell,Interrupt
 Feats/FeatDescriptions.lsx.
 Patches idempotently (between markers / by UUID): Lists/PassiveLists.lsx, ActionResourceDefinitions,
 Localization/English/dnd55e-Apotheosis.xml, Progressions.lsx (level-19 nodes).
+The two picks' level-up screen headings ("Epic Boon", "Epic Boon: Ability Increase") are in gen_selector_headings.py.
 Script Extender halves live in ScriptExtender/Lua/EpicBoons.lua.
 
 Run: python3 Scripts/gen_epic_boons.py
