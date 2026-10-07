@@ -889,6 +889,8 @@ title = "Paladin - Oathbreaker, levels 2-20"
 subclass = "Oathbreaker"
 from = "paladin-base"
 levels = [2, 20]
+# the level-up screen never offers Oathbreaker: pick Vengeance at 3, then the game's Oathbreaker respec (breaking an oath)
+oathbreaker_from = "Vengeance"
 
 [[build]]
 id = "paladin-vengeance"
