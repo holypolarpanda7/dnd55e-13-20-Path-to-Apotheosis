@@ -15,14 +15,64 @@
                 
                 <!-- EPIC BOONS BEGIN (Scripts/gen_epic_boons.py) -->
                 <node id="PassiveList">
-                    <attribute id="Name" type="FixedString" value="EpicBoons"/>
-                    <attribute id="Passives" type="LSString" value="EpicBoon_CombatProwess,EpicBoon_DimensionalTravel,EpicBoon_EnergyResistance,EpicBoon_Fate,EpicBoon_Fortitude,EpicBoon_IrresistibleOffense_Str,EpicBoon_IrresistibleOffense_Dex,EpicBoon_Recovery,EpicBoon_Skill,EpicBoon_Speed,EpicBoon_SpellRecall_Int,EpicBoon_SpellRecall_Wis,EpicBoon_SpellRecall_Cha,EpicBoon_NightSpirit,EpicBoon_Truesight,EpicBoon_Bloodshed,EpicBoon_BountifulHealth,EpicBoon_Communication_Int,EpicBoon_Communication_Wis,EpicBoon_Communication_Cha,EpicBoon_DesperateResilience_Str,EpicBoon_DesperateResilience_Con,EpicBoon_ExquisiteRadiance,EpicBoon_FluidForms_Int,EpicBoon_FluidForms_Wis,EpicBoon_FluidForms_Cha,EpicBoon_FortunesFavor,EpicBoon_PoisonMastery,EpicBoon_Revelry_Int,EpicBoon_Revelry_Wis,EpicBoon_Revelry_Cha,EpicBoon_Terror_Cha,EpicBoon_BrightSun_Con,EpicBoon_BrightSun_Wis,EpicBoon_BrightSun_Cha,EpicBoon_FuriousStorm_Int,EpicBoon_FuriousStorm_Wis,EpicBoon_FuriousStorm_Cha,EpicBoon_SoulDrinker,EpicBoon_EruptingSpellpower_Int,EpicBoon_EruptingSpellpower_Wis,EpicBoon_EruptingSpellpower_Cha,EpicBoon_IronMind,EpicBoon_MagicSchoolMastery_Int,EpicBoon_MagicSchoolMastery_Wis,EpicBoon_MagicSchoolMastery_Cha,EpicBoon_Siberys_CastInt,EpicBoon_Siberys_CastWis,EpicBoon_Siberys_CastCha"/>
-                    <attribute id="UUID" type="guid" value="23b18ae7-dc54-5b4f-8939-a9af322e3cef"/>
+                    <attribute id="Name" type="FixedString" value="EpicBoonAbility"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoonAbility_Str,EpicBoonAbility_Dex,EpicBoonAbility_Con,EpicBoonAbility_Int,EpicBoonAbility_Wis,EpicBoonAbility_Cha"/>
+                    <attribute id="UUID" type="guid" value="4ef62eb1-4735-5e99-8568-dc013af9df15"/>
                 </node>
                 <node id="PassiveList">
-                    <attribute id="Name" type="FixedString" value="EpicBoonAbility"/>
-                    <attribute id="Passives" type="LSString" value="EpicBoonAbility_Str,EpicBoonAbility_Dex,EpicBoonAbility_Con,EpicBoonAbility_Int,EpicBoonAbility_Wis,EpicBoonAbility_Cha,EpicBoonAbility_InBoon"/>
-                    <attribute id="UUID" type="guid" value="4ef62eb1-4735-5e99-8568-dc013af9df15"/>
+                    <attribute id="Name" type="FixedString" value="EpicBoon_IrresistibleOffense"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_IrresistibleOffense_Str,EpicBoon_IrresistibleOffense_Dex"/>
+                    <attribute id="UUID" type="guid" value="9879ee73-bdd0-52c5-bf74-42fd9ef70341"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_SpellRecall"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_SpellRecall_Int,EpicBoon_SpellRecall_Wis,EpicBoon_SpellRecall_Cha"/>
+                    <attribute id="UUID" type="guid" value="21949435-8579-5a18-bb95-b303c312fa4a"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Communication"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_Communication_Int,EpicBoon_Communication_Wis,EpicBoon_Communication_Cha"/>
+                    <attribute id="UUID" type="guid" value="9964867e-ffb2-5c30-968d-5bd3a5aa644a"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_DesperateResilience"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_DesperateResilience_Str,EpicBoon_DesperateResilience_Con"/>
+                    <attribute id="UUID" type="guid" value="cc7eb278-a4b6-5648-a9e6-1ea3101f504e"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_FluidForms"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_FluidForms_Int,EpicBoon_FluidForms_Wis,EpicBoon_FluidForms_Cha"/>
+                    <attribute id="UUID" type="guid" value="4c0a6110-1ed0-5395-b58d-fe9eda88257d"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Revelry"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_Revelry_Int,EpicBoon_Revelry_Wis,EpicBoon_Revelry_Cha"/>
+                    <attribute id="UUID" type="guid" value="48a82d44-c0ee-57ef-b1a4-09a69e3fe028"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Terror"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_Terror_Cha"/>
+                    <attribute id="UUID" type="guid" value="a50df84c-5fc1-561c-9cd0-e8afe7808ec0"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_BrightSun"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_BrightSun_Con,EpicBoon_BrightSun_Wis,EpicBoon_BrightSun_Cha"/>
+                    <attribute id="UUID" type="guid" value="9889a6f7-278a-5088-a9a2-45aa6c95aef0"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_FuriousStorm"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_FuriousStorm_Int,EpicBoon_FuriousStorm_Wis,EpicBoon_FuriousStorm_Cha"/>
+                    <attribute id="UUID" type="guid" value="663b05d2-e86b-5876-8ce1-deb0ac65b710"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_EruptingSpellpower"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_EruptingSpellpower_Int,EpicBoon_EruptingSpellpower_Wis,EpicBoon_EruptingSpellpower_Cha"/>
+                    <attribute id="UUID" type="guid" value="a4655bb6-3b4f-5c49-b55b-b8be410a3a2d"/>
+                </node>
+                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_MagicSchoolMastery"/>
+                    <attribute id="Passives" type="LSString" value="EpicBoon_MagicSchoolMastery_Int,EpicBoon_MagicSchoolMastery_Wis,EpicBoon_MagicSchoolMastery_Cha"/>
+                    <attribute id="UUID" type="guid" value="66927e1d-4c1d-5f7d-9cf1-d025b33ac2f4"/>
                 </node>
                 <!-- EPIC BOONS END -->
                 <!-- ILLRIGGER 13-20 BEGIN (generated) -->

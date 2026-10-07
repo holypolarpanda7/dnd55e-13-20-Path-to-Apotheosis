@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="500"/>
+    <region id="Feats">
+        <node id="root">
+            <children>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_CombatProwess"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_CombatProwess"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="4c265cb0-c98a-539b-9e33-b0d099bdf7a1"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_DimensionalTravel"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_DimensionalTravel"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="b059e813-e3c2-5954-ab3b-5bb4e7668dfa"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_EnergyResistance"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_EnergyResistance"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="5fab78da-fe9e-5beb-9844-a566b20ec9ec"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Fate"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_Fate"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="a3ce3003-2d3d-5907-b993-37127c512dac"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Fortitude"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_Fortitude"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="a3caaf9d-be5e-56fc-bc0c-1c076d550c0c"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_IrresistibleOffense"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(9879ee73-bdd0-52c5-bf74-42fd9ef70341,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="541f3935-b682-5dc0-9cbf-b24281cc1393"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Recovery"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_Recovery"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="884c01b3-0448-59ea-be47-1d8bf06d5beb"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Skill"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_Skill"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="02769ff6-85b7-5893-ad6f-43111419ba7b"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Speed"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_Speed"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="62bd4ee2-e85b-56d0-b294-5cc674f5448c"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_SpellRecall"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(21949435-8579-5a18-bb95-b303c312fa4a,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="52940996-64af-52b1-ba0e-68bd57320d9a"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_NightSpirit"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_NightSpirit"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="d88f9b86-0ea7-557d-a767-880680d68ede"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Truesight"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_Truesight"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="77fd117e-5283-5002-80ab-326fbb3e209d"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Bloodshed"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_Bloodshed"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="56da9a49-474e-55a8-989b-8be33dc884ab"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_BountifulHealth"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_BountifulHealth"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="2f85dd14-e224-5791-ba8b-71caef0a49e0"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Communication"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(9964867e-ffb2-5c30-968d-5bd3a5aa644a,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="7babaaee-4156-5928-b187-5e814ff28435"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_DesperateResilience"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(cc7eb278-a4b6-5648-a9e6-1ea3101f504e,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="712a58f3-4bfb-5414-8d4f-49d2dcc0de6a"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_ExquisiteRadiance"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_ExquisiteRadiance"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="78de518f-4877-551e-a977-d19a77d2cc14"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_FluidForms"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4c0a6110-1ed0-5395-b58d-fe9eda88257d,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="d33872b1-e0cc-59b9-b183-26bbba5ca521"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_FortunesFavor"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_FortunesFavor"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="f3e521ed-decc-5930-97a3-984e3153fe2f"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_PoisonMastery"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_PoisonMastery"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="398c50d8-3d56-5176-a472-e568388b82fb"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Revelry"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(48a82d44-c0ee-57ef-b1a4-09a69e3fe028,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="9c019e4d-c00d-5e35-8a22-0bd8664bb2d5"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_Terror"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(a50df84c-5fc1-561c-9cd0-e8afe7808ec0,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="48ee076f-8082-5301-a5bf-29ac105e6e21"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_BrightSun"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(9889a6f7-278a-5088-a9a2-45aa6c95aef0,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="dd2e5f0e-db7e-55a0-91ce-4b5585f0477b"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_FuriousStorm"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(663b05d2-e86b-5876-8ce1-deb0ac65b710,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="bc66db3f-89bc-50cb-b85d-be72f217801f"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_SoulDrinker"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_SoulDrinker"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="72650b73-5b34-5a75-ac3e-e8a48ecfd7e8"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_EruptingSpellpower"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(a4655bb6-3b4f-5c49-b55b-b8be410a3a2d,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="79fcfcb5-2e3f-5fed-a1ae-b2d060bf4887"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_IronMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EpicBoon_IronMind"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)"/>
+                    <attribute id="UUID" type="guid" value="7c698a29-e13e-514c-851a-8d4100d3d56e"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="EpicBoon_MagicSchoolMastery"/>
+                    <attribute id="Requirements" type="LSString" value="CharacterLevelGreaterThan(18)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(66927e1d-4c1d-5f7d-9cf1-d025b33ac2f4,1,EpicBoon)"/>
+                    <attribute id="UUID" type="guid" value="f5409630-9a97-5e23-9e9c-89913749196b"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

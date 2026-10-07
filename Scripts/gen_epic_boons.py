@@ -1,14 +1,18 @@
 """Generate the Epic Boons (PHB 2024 level-19 feats) - issue #1.
-
-BG3 feats can't require a character level, so boons are a level-19 pick list (agreed 2026-09-30):
-each PHB-class level-19 progression node gets
-    SelectPassives(<EpicBoons>,1,EpicBoon);SelectPassives(<EpicBoonAbility>,1,EpicBoonAbility)
-instead of the ordinary feat. The +1 ability is its own pick (Ability boosts aren't capped at 20, verified
-in game). Boons that restrict the ability (Irresistible Offense: Str/Dex, Spell Recall: Int/Wis/Cha) come
-as one entry per allowed ability with the +1 built in; for those the ability pick is "Included in my boon"
-(EpicBoons.lua removes a doubled +1 and logs it).
-
-Owns (rewritten every run): Stats/Generated/Data/{Passive,Status,Spell,Interrupt}_EpicBoons.txt.
+Since 2026-10-06 every boon is a real FEAT (Feats/Feats.lsx + FeatDescriptions.lsx) with the PHB prerequisite "Level 19+".
+The engine can't express it: Feats.lsx Requirements only parses FeatRequirementProficiency / FeatRequirementAbilityGreaterEqual
+and drops anything else (verified in game). So the data states it (Requirements CharacterLevelGreaterThan(18), allowed in
+tests/bg3/lint_allow.toml; each description starts "Prerequisite: Level 19+") and the client script
+ScriptExtender/Lua/EpicBoonFeatLock.lua enforces it: it writes the parsed Feat.FeatRequirements of every EpicBoon_ feat - an
+unmeetable check while the controlled character is below level 18 (taking level 19 or later unlocks them). The server
+doesn't re-check feat requirements, so the client lock is the whole gate, per player. The class-level-19 node of
+each class gets an ordinary feat pick (AllowImprovement) - "an Epic Boon feat or another feat of your choice" - and the boons
+also show up in any later feat pick at character level 19+ (a multiclass character's ASI), as the rules allow.
+The +1 ability (to a maximum of 30) is part of the feat: a boon that names no ability picks one of the six (ABILITY_SELECT);
+a boon that restricts it (Irresistible Offense: Str/Dex, Spell Recall: Int/Wis/Cha) picks one of its per-ability variants,
+each with the +1 built in, because the ability also drives the boon (casting ability, damage bonus).
+Owns (rewritten every run): Stats/Generated/Data/{Passive,Status,Spell,Interrupt}_EpicBoons.txt, Feats/Feats.lsx,
+Feats/FeatDescriptions.lsx.
 Patches idempotently (between markers / by UUID): Lists/PassiveLists.lsx, ActionResourceDefinitions,
 Localization/English/dnd55e-Apotheosis.xml, Progressions.lsx (level-19 nodes).
 The two picks' level-up screen headings ("Epic Boon", "Epic Boon: Ability Increase") are in gen_selector_headings.py.
@@ -96,22 +100,36 @@ def entry(name, typ, fields, using=None, comment=None):
 
 P, S, SP, I = [], [], [], []  # passives, statuses, spells, interrupts
 BOONS, ABILITY_PASSIVES = [], []
+FEATS = []  # (name, title handle, text handle, passives added, variant passives)
+# The PHB prerequisite "Level 19+", stated in the data for readers and bg3_lint_rules; the engine ignores it, and
+# EpicBoonFeatLock.lua enforces it on the client.
+FEAT_REQ = "CharacterLevelGreaterThan(18)"
+FEAT_REQ_NOTE = "enforced by EpicBoonFeatLock.lua"
+PREREQ = "Prerequisite: Level 19+.<br><br>"
+# "abilities": SelectAbilities over all six (the game's ability picker); "passives": a pick of EpicBoonAbility_<Ab> passives
+# (Ability() boosts aren't capped at 20, verified in game 2026-09-30). Epic Boons allow a score of up to 30.
+ABILITY_SELECT = "passives"
+ALL_ABILITIES_LIST = "b9149c8e-52c8-46e5-9cb6-fc39301c05fe"  # base AbilityList with all six ("Human List")
 
 
 def boon(name, title, text, fields, variants=None):
-    """variants: abilities the boon's own +1 may go to (restricted boons get one entry per ability)."""
+    """variants: abilities the boon's own +1 may go to (restricted boons get one entry per ability, picked inside the feat)."""
     base = {"DisplayName": h(name + ":n", title), "Description": h(name + ":d", text),
             "Icon": fields.pop("Icon", "PassiveFeature_Generic_Magical"), "Properties": fields.pop("Properties", "Highlighted")}
     if not variants:
         P.append(entry(name, "PassiveData", {**base, **fields}))
         BOONS.append(name)
+        FEATS.append((name, base["DisplayName"], h(name + ":featd", PREREQ + text), [name], []))
         return
+    names = []
     for ab in variants:
         vn = f"{name}_{SHORT[ab]}"
         boosts = ";".join(x for x in [f"Ability({ab},1)", fields.get("Boosts")] if x)
         P.append(entry(vn, "PassiveData", {**base, **fields, "Boosts": boosts,
                                              "DisplayName": h(vn + ":n", f"{title} (+1 {ab})")}))
         BOONS.append(vn)
+        names.append(vn)
+    FEATS.append((name, base["DisplayName"], h(name + ":featd", PREREQ + text), [], names))
 
 
 # ---------------------------------------------------------------- PHB 2024 boons (phase 1)
@@ -577,13 +595,7 @@ for ab in ABILITIES:
                                       "Description": h(n + ":d", f"Increase your {ab} score by 1 (to a maximum of 30)."),
                                       "Icon": "PassiveFeature_Generic_Magical", "Properties": "Highlighted", "Boosts": f"Ability({ab},1)"}))
     ABILITY_PASSIVES.append(n)
-P.append(entry("EpicBoonAbility_InBoon", "PassiveData", {
-    "DisplayName": h("InBoon:n", "Epic Boon: increase included in my boon"),
-    "Description": h("InBoon:d", "Pick this if your boon already names its ability, e.g. Boon of Irresistible Offense (+1 Strength)."),
-    "Icon": "PassiveFeature_Generic_Magical", "Properties": None}))
-ABILITY_PASSIVES.append("EpicBoonAbility_InBoon")
-
-BOON_LIST, ABILITY_LIST = gid("list:boons"), gid("list:ability")
+ABILITY_LIST = gid("list:ability")
 
 
 # ---------------------------------------------------------------- write / patch
@@ -620,22 +632,79 @@ def patch_between(path, start, end, block, anchor):
     open(path, "w", encoding="utf-8", newline="").write(s)
 
 
+def _plist(name, passives, uid):
+    return f"""                <node id="PassiveList">
+                    <attribute id="Name" type="FixedString" value="{name}"/>
+                    <attribute id="Passives" type="LSString" value="{','.join(passives)}"/>
+                    <attribute id="UUID" type="guid" value="{uid}"/>
+                </node>
+"""
+
+
 def patch_lists():
+    """The six +1 picks, and per restricted boon the list of its per-ability variants (picked inside its feat)."""
     path = os.path.join(PUB, "Lists", "PassiveLists.lsx")
-    block = ("                <!-- EPIC BOONS BEGIN (Scripts/gen_epic_boons.py) -->\n"
-             f"""                <node id="PassiveList">
-                    <attribute id="Name" type="FixedString" value="EpicBoons"/>
-                    <attribute id="Passives" type="LSString" value="{','.join(BOONS)}"/>
-                    <attribute id="UUID" type="guid" value="{BOON_LIST}"/>
-                </node>
-                <node id="PassiveList">
-                    <attribute id="Name" type="FixedString" value="EpicBoonAbility"/>
-                    <attribute id="Passives" type="LSString" value="{','.join(ABILITY_PASSIVES)}"/>
-                    <attribute id="UUID" type="guid" value="{ABILITY_LIST}"/>
-                </node>
-                <!-- EPIC BOONS END -->
-""")
+    block = ("                <!-- EPIC BOONS BEGIN (Scripts/gen_epic_boons.py) -->\n" + _plist("EpicBoonAbility", ABILITY_PASSIVES, ABILITY_LIST)
+             + "".join(_plist(name, variants, gid("list:variants:" + name)) for name, _, _, _, variants in FEATS if variants)
+             + "                <!-- EPIC BOONS END -->\n")
     patch_between(path, "                <!-- EPIC BOONS BEGIN", "<!-- EPIC BOONS END -->\n", block, "            </children>")
+
+
+FEAT_HEAD = """<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="8" revision="0" build="500"/>
+    <region id="{region}">
+        <node id="root">
+            <children>
+"""
+FEAT_TAIL = """            </children>
+        </node>
+    </region>
+</save>
+"""
+
+
+def write_feats(probe=False):
+    """Feats/Feats.lsx + FeatDescriptions.lsx: one feat per boon, prerequisite FEAT_REQ. probe: also a copy of the first boon
+    whose prerequisite is one level lower (EpicBoonProbe), for the in-game check of which level the feat list sees."""
+    d = os.path.join(PUB, "Feats")
+    os.makedirs(d, exist_ok=True)
+    rows = list(FEATS)
+    if probe:  # test-only feats, never committed: EPIC_BOON_PROBE=1 when regenerating for the in-game check
+        name, dn, desc, added, variants = rows[0]
+        rows.append(("EpicBoonProbe", h("probe:n", "PROBE: Combat Prowess (level > 17)"), desc, added, variants))
+        rows.append(("EpicBoonProbeAbilities", h("probe2:n", "PROBE: Combat Prowess (level > 17, ability picker)"), desc, added, variants))
+        rows.append(("EpicBoonProbeNever", h("probe3:n", "PROBE: Combat Prowess (level > 30)"), desc, added, variants))
+    feats, descs = [], []
+    for name, dn, desc, added, variants in rows:
+        if variants:
+            sel = f"SelectPassives({gid('list:variants:' + name)},1,EpicBoon)"
+        elif ABILITY_SELECT == "abilities" or name == "EpicBoonProbeAbilities":
+            sel = f"SelectAbilities({ALL_ABILITIES_LIST},1,1,EpicBoonAbility)"
+        else:
+            sel = f"SelectPassives({ABILITY_LIST},1,EpicBoonAbility)"
+        req = {"EpicBoonProbeNever": "CharacterLevelGreaterThan(30)"}.get(name, "CharacterLevelGreaterThan(17)" if name.startswith("EpicBoonProbe") else FEAT_REQ)
+        fid = gid("feat:" + name)
+        feats.append(f"""                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="{name}"/>
+""" + (f"""                    <attribute id="PassivesAdded" type="LSString" value="{';'.join(added)}"/>
+""" if added else "") + f"""                    <attribute id="Requirements" type="LSString" value="{req}"/>
+                    <attribute id="Selectors" type="LSString" value="{sel}"/>
+                    <attribute id="UUID" type="guid" value="{fid}"/>
+                </node>
+""")
+        descs.append(f"""                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="{desc}" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="{dn}" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="{name}"/>
+                    <attribute id="FeatId" type="guid" value="{fid}"/>
+                    <attribute id="UUID" type="guid" value="{gid('featdesc:' + name)}"/>
+                </node>
+""")
+    for fname, region, body in (("Feats.lsx", "Feats", feats), ("FeatDescriptions.lsx", "FeatDescriptions", descs)):
+        with open(os.path.join(d, fname), "w", encoding="utf-8", newline="\n") as f:
+            f.write(FEAT_HEAD.format(region=region) + "".join(body) + FEAT_TAIL)
+    return len(rows)
 
 
 def patch_resources():
@@ -671,9 +740,10 @@ PHB_CLASSES = {"Artificer", "Barbarian", "Bard", "Cleric", "Druid", "Fighter", "
 
 
 def patch_progressions():
+    """Each class's level-19 node: an ordinary feat pick (AllowImprovement) - the Epic Boon feats are on the feat list from
+    character level 19 - and none of the old EpicBoon/EpicBoonAbility passive picks (before 2026-10-06)."""
     path = os.path.join(PUB, "Progressions", "Progressions.lsx")
     s = open(path, encoding="utf-8").read()
-    sel = f"SelectPassives({BOON_LIST},1,EpicBoon);SelectPassives({ABILITY_LIST},1,EpicBoonAbility)"
     done = []
 
     def fix(m):
@@ -682,14 +752,12 @@ def patch_progressions():
         lvl = re.search(r'id="Level" type="uint8" value="(\d+)"', b)
         if not (name and lvl and name.group(1) in PHB_CLASSES and lvl.group(1) == "19") or "IsMulticlass" in b:
             return b
-        b = re.sub(r'\s*<attribute id="AllowImprovement" type="bool" value="true"/>', "", b)
-        if 'id="Selectors"' in b:
-            def merged(mm):
-                keep = [x for x in mm.group(2).split(";") if x and "EpicBoon" not in x]
-                return mm.group(1) + ";".join(keep + [sel]) + mm.group(3)
-            b = re.sub(r'(id="Selectors" type="LSString" value=")([^"]*)(")', merged, b)
-        else:
-            b = re.sub(r'(\s*)(<attribute id="TableUUID")', lambda mm: f'{mm.group(1)}<attribute id="Selectors" type="LSString" value="{sel}"/>{mm.group(1)}{mm.group(2)}', b, count=1)
+        def drop_boon_picks(mm):
+            keep = ";".join(x for x in mm.group(2).split(";") if x and "EpicBoon" not in x)
+            return f"{mm.group(1)}{keep}{mm.group(3)}" if keep else ""
+        b = re.sub(r'(\s*<attribute id="Selectors" type="LSString" value=")([^"]*)("/>)', drop_boon_picks, b)
+        if 'id="AllowImprovement"' not in b:
+            b = re.sub(r'(\s*)(<attribute id="Level")', r'\1<attribute id="AllowImprovement" type="bool" value="true"/>\1\2', b, count=1)
         done.append(name.group(1))
         return b
 
@@ -700,9 +768,10 @@ def patch_progressions():
 
 if __name__ == "__main__":
     write_stats()
+    n_feats = write_feats(probe=os.environ.get("EPIC_BOON_PROBE") == "1")
     patch_lists()
     patch_resources()
     patch_loca()
     classes = patch_progressions()
-    print(f"{len(BOONS)} boon entries, {len(ABILITY_PASSIVES)} ability options, {len(P)} passives, {len(S)} statuses, "
+    print(f"{n_feats} feats ({FEAT_REQ}, prerequisite level {FEAT_REQ_NOTE}; +1 via {ABILITY_SELECT}), {len(BOONS)} boon entries, {len(ABILITY_PASSIVES)} ability options, {len(P)} passives, {len(S)} statuses, "
           f"{len(SP)} spells, {len(I)} interrupts, {len(LOCA_ROWS)} strings; level 19 set for {sorted(classes)}")
