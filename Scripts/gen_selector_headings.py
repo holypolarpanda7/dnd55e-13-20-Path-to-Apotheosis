@@ -16,10 +16,8 @@ from gen_common import PUB, update_loca
 # (SelectorId, heading, text). The hash seeds below are the ones gen_epic_boons.py first used for the Epic Boon rows - kept
 # so their handles and UUIDs don't change.
 HEADINGS = [
-    ("EpicBoon", "Epic Boon", "Choose an Epic Boon: a feat of great power for reaching level 19."),
-    ("EpicBoonAbility", "Epic Boon: Ability Increase",
-     "Every Epic Boon raises one ability score by 1, to a maximum of 30. If your boon already names its ability "
-     "(for example Boon of Irresistible Offense (+1 Strength)), choose \"increase included in my boon\"."),
+    ("EpicBoon", "Epic Boon", "Choose the ability this boon uses. It also raises that ability by 1, to a maximum of 30."),
+    ("EpicBoonAbility", "Epic Boon: Ability Increase", "Raise one ability score by 1, to a maximum of 30."),
     ("PowerOfTheWilds", "Power of the Wilds", "Choose the power of the wilds you gain whenever you enter a Rage."),
 ]
 

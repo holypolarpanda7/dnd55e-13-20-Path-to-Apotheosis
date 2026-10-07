@@ -1,6 +1,11 @@
 """Generate the Epic Boons (PHB 2024 level-19 feats) - issue #1.
-Since 2026-10-06 every boon is a real FEAT (Feats/Feats.lsx + FeatDescriptions.lsx) with the PHB prerequisite "Level 19+"
-as a feat requirement: FeatRequirement = CharacterLevelGreaterThan(N) (base CommonConditions.khn). The class-level-19 node of
+Since 2026-10-06 every boon is a real FEAT (Feats/Feats.lsx + FeatDescriptions.lsx) with the PHB prerequisite "Level 19+".
+The engine can't express it: Feats.lsx Requirements only parses FeatRequirementProficiency / FeatRequirementAbilityGreaterEqual
+and drops anything else (verified in game). So the data states it (Requirements CharacterLevelGreaterThan(18), allowed in
+tests/bg3/lint_allow.toml; each description starts "Prerequisite: Level 19+") and the client script
+ScriptExtender/Lua/EpicBoonFeatLock.lua enforces it: it writes the parsed Feat.FeatRequirements of every EpicBoon_ feat - an
+unmeetable check while the controlled character is below level 18 (taking level 19 or later unlocks them). The server
+doesn't re-check feat requirements, so the client lock is the whole gate, per player. The class-level-19 node of
 each class gets an ordinary feat pick (AllowImprovement) - "an Epic Boon feat or another feat of your choice" - and the boons
 also show up in any later feat pick at character level 19+ (a multiclass character's ASI), as the rules allow.
 The +1 ability (to a maximum of 30) is part of the feat: a boon that names no ability picks one of the six (ABILITY_SELECT);
@@ -96,10 +101,11 @@ def entry(name, typ, fields, using=None, comment=None):
 P, S, SP, I = [], [], [], []  # passives, statuses, spells, interrupts
 BOONS, ABILITY_PASSIVES = [], []
 FEATS = []  # (name, title handle, text handle, passives added, variant passives)
-# The PHB prerequisite "Level 19+". Which value the feat list sees while the level-up screen is open (the level before or
-# after the level being taken) is verified in game - see FEAT_REQ_NOTE.
+# The PHB prerequisite "Level 19+", stated in the data for readers and bg3_lint_rules; the engine ignores it, and
+# EpicBoonFeatLock.lua enforces it on the client.
 FEAT_REQ = "CharacterLevelGreaterThan(18)"
-FEAT_REQ_NOTE = "unverified"
+FEAT_REQ_NOTE = "enforced by EpicBoonFeatLock.lua"
+PREREQ = "Prerequisite: Level 19+.<br><br>"
 # "abilities": SelectAbilities over all six (the game's ability picker); "passives": a pick of EpicBoonAbility_<Ab> passives
 # (Ability() boosts aren't capped at 20, verified in game 2026-09-30). Epic Boons allow a score of up to 30.
 ABILITY_SELECT = "passives"
@@ -113,7 +119,7 @@ def boon(name, title, text, fields, variants=None):
     if not variants:
         P.append(entry(name, "PassiveData", {**base, **fields}))
         BOONS.append(name)
-        FEATS.append((name, base["DisplayName"], base["Description"], [name], []))
+        FEATS.append((name, base["DisplayName"], h(name + ":featd", PREREQ + text), [name], []))
         return
     names = []
     for ab in variants:
@@ -123,7 +129,7 @@ def boon(name, title, text, fields, variants=None):
                                              "DisplayName": h(vn + ":n", f"{title} (+1 {ab})")}))
         BOONS.append(vn)
         names.append(vn)
-    FEATS.append((name, base["DisplayName"], base["Description"], [], names))
+    FEATS.append((name, base["DisplayName"], h(name + ":featd", PREREQ + text), [], names))
 
 
 # ---------------------------------------------------------------- PHB 2024 boons (phase 1)

@@ -1,0 +1,7 @@
+# Deliberate lint exceptions (bg3_lint_stats reads this; allowed findings are still listed, not counted). Every entry needs
+# a reason - say what enforces the thing the lint warns about.
+
+[[allow]]
+kind = "FEAT"
+name = "EpicBoon_*"
+reason = "PHB 2024 'Level 19+' stated in the data; the engine ignores it, ScriptExtender/Lua/EpicBoonFeatLock.lua enforces it on the client (Feat.FeatRequirements)"
