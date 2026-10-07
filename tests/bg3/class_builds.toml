@@ -889,6 +889,8 @@ title = "Paladin - Oathbreaker, levels 2-20"
 subclass = "Oathbreaker"
 from = "paladin-base"
 levels = [2, 20]
+# base shows Oathbreaker only to a character tagged OATHBREAKER (set when an oath is broken)
+tags = ["c7bdcdf2-15e7-456e-adf1-21dda3172e18"]
 
 [[build]]
 id = "paladin-vengeance"
