@@ -92,7 +92,7 @@ real_rolls = true
 retries = 2
 reactions = ["ImpalingShot"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
-setup = [{ target = "host", boost = "ActionResource(Seal,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "InterdictBoons_13_ImpalingShot" }, { target = "A", status = "INTERDICTED", turns = -1, by = "host" }]
+setup = [{ target = "host", toggle_off = "Illrigger_1_BalefulInterdict" }, { target = "host", boost = "ActionResource(Seal,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "InterdictBoons_13_ImpalingShot" }, { target = "A", status = "INTERDICTED", turns = -1, by = "host" }]
 expect = [{ target = "A", status_present = ["ILLRIGGER_IMPALED"] }, { resource = "Seal", level = 0, amount_change = -1 }]
 
 [[case]]
@@ -165,7 +165,7 @@ real_rolls = true
 retries = 2
 reactions = ["Deathstrike"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "ActionResource(IllriggerDeathstrike,5,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "Painkiller_15_Deathstrike" }, { target = "A", status = "INTERDICTED", turns = -1, by = "host" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+setup = [{ target = "host", toggle_off = "Illrigger_1_BalefulInterdict" }, { target = "host", boost = "ActionResource(IllriggerDeathstrike,5,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "host", passive = "Painkiller_15_Deathstrike" }, { target = "A", status = "INTERDICTED", turns = -1, by = "host" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "A", status_applied = ["ILLRIGGER_DEATHSTRIKE_SEAL"] }, { target = "A", status_absent = ["INTERDICTED"] }, { resource = "IllriggerDeathstrike", level = 0, amount_change = -1 }]
 
 [[case]]
