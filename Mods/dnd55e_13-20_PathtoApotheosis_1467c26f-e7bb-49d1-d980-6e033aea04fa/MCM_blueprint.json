@@ -1,0 +1,25 @@
+{
+  "SchemaVersion": 1,
+  "Optional": true,
+  "ModName": "Path to Apotheosis",
+  "Tabs": [
+    {
+      "TabId": "experience",
+      "TabName": "Experience",
+      "Settings": [
+        {
+          "Id": "xp_multiplier",
+          "Name": "XP gain multiplier",
+          "Type": "slider_float",
+          "Default": 1.0,
+          "Description": "Scales the experience your party earns. 1.0 is the standard curve, tuned to reach level 20 by the end of the game. Below 1.0 levelling is slower, above 1.0 it is faster. Only experience earned from now on is scaled.",
+          "Options": {
+            "Min": 0.25,
+            "Max": 2.0,
+            "Step": 0.05
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1160,6 +1160,13 @@ if Ext and type(Ext.Require) == "function" then
         Log.Warn("IndomitableMight bootstrap load failed: " .. tostring(imOrErr))
     end
 
+    local okXc, xcOrErr = pcall(Ext.Require, "XPCurve.lua")
+    if okXc and type(xcOrErr) == "table" then
+        Log.Info("XPCurve loaded at bootstrap")
+    else
+        Log.Warn("XPCurve bootstrap load failed: " .. tostring(xcOrErr))
+    end
+
     local okGs, gsOrErr = pcall(Ext.Require, "Gunslinger.lua")
     if okGs and type(gsOrErr) == "table" then
         Log.Info("Gunslinger loaded at bootstrap")
