@@ -18,6 +18,40 @@
             "Max": 2.0,
             "Step": 0.05
           }
+        },
+        {
+          "Id": "xp_scope",
+          "Name": "Apply the multiplier to",
+          "Type": "enum",
+          "Default": "All levels",
+          "Description": "Which part of the 1-20 range the XP multiplier covers, judged by the level a gain starts at. The base game's own levels 1-12 and Apotheosis's levels 13-20 can be paced separately.",
+          "Options": {
+            "Choices": [
+              "All levels",
+              "Levels 1-12 only",
+              "Levels 13-20 only"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "TabId": "general",
+      "TabName": "General",
+      "Settings": [
+        {
+          "Id": "epic_boon_level_gate",
+          "Name": "Epic Boons need level 19",
+          "Type": "checkbox",
+          "Default": true,
+          "Description": "PHB 2024: Epic Boon feats have the prerequisite Level 19+. Untick to be able to pick them at any level (for example for a one-shot or a high-level start)."
+        },
+        {
+          "Id": "debug_logging",
+          "Name": "Debug logging",
+          "Type": "checkbox",
+          "Default": false,
+          "Description": "Writes extra [Apotheosis] [dbg] lines to the Script Extender log. Turn on when reporting a bug."
         }
       ]
     }

@@ -10,7 +10,11 @@
 local Log = Apotheosis and Apotheosis.Log or { Info = print, Warn = print, Error = print }
 local XC = {}
 
+local Settings = Ext.Require("MCMSettings.lua")
 local SETTING = "xp_multiplier"
+local SCOPE_SETTING = "xp_scope"      -- "all" | "early" (levels 1-12) | "late" (levels 13-20): by the level the gain starts at
+local scope = "all"
+local SCOPES = { ["All levels"] = "all", ["Levels 1-12 only"] = "early", ["Levels 13-20 only"] = "late" }
 local MIN_MULT, MAX_MULT = 0.25, 2.0
 local START = Ext.Require("XPTable.lua")   -- total XP at which level L starts (needs the mod context: load time, not inside events)
 
@@ -70,6 +74,11 @@ local function onExperience(entity)
     if base == nil or total == base then baseline[uuid] = total return end
     local gain = total - base
     if gain <= 0 then baseline[uuid] = total return end
+    local startLevel = levelForTotal(base)
+    if (scope == "early" and startLevel > 12) or (scope == "late" and startLevel < 13) then
+        baseline[uuid] = total
+        return
+    end
     local want = math.floor(gain * mult + 0.5)
     local diff = want - gain
     baseline[uuid] = base + want          -- what the total will be once the correction lands
@@ -103,20 +112,14 @@ local function apply(value)
     end
 end
 
--- MCM injects the global `MCM` into mods that load after it. Mods that load before it only get the functions
--- copied to Mods.BG3MCM, so fall back to those (needs the modUUID argument).
-local function mcmGet()
-    if type(MCM) == "table" and type(MCM.Get) == "function" then return MCM.Get(SETTING) end
-    local api = Mods and Mods.BG3MCM
-    if api and type(api.Get) == "function" then return api.Get({ settingId = SETTING, modUUID = ModuleUUID }) end
-end
-
 function XC.Init()
-    local v = mcmGet()
+    local v = Settings.Get(SETTING)
     if v == nil then return end   -- no MCM (or no value yet): standard curve
+    scope = SCOPES[Settings.Get(SCOPE_SETTING)] or scope
     apply(v)
-    Ext.ModEvents.BG3MCM["MCM_Setting_Saved"]:Subscribe(function(payload)
-        if payload and payload.modUUID == ModuleUUID and payload.settingId == SETTING then apply(payload.value) end
+    Settings.Watch(function(id, value)
+        if id == SETTING then apply(value)
+        elseif id == SCOPE_SETTING then scope = SCOPES[value] or "all" end
     end)
     -- a character joining later starts with a fresh baseline
     Ext.Osiris.RegisterListener("CharacterJoinedParty", 1, "after", function(uuid)

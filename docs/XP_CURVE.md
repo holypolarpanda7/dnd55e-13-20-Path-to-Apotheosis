@@ -1,8 +1,18 @@
-# XP curve multiplier (optional, via Mod Configuration Menu)
+# Optional MCM settings (XP curve multiplier and more)
 
 Added 2026-10-08. One build for everyone: with [MCM](https://www.nexusmods.com/baldursgate3/mods/9162) installed the player
 gets an "XP gain multiplier" slider (0.25 to 2.0, default 1.0) under Path to Apotheosis > Experience; without MCM nothing
 changes. 1.0 is the shipped curve (`XPData.txt`), tuned to reach level 20 by the end of the game.
+
+## Settings (MCM_blueprint.json)
+| tab | id | default | effect |
+|---|---|---|---|
+| Experience | `xp_multiplier` | 1.0 | scales XP gains, 0.25 to 2.0 |
+| Experience | `xp_scope` | All levels | multiplier covers all levels, 1-12 only or 13-20 only, judged by the level a gain starts at |
+| General | `epic_boon_level_gate` | on | off = Epic Boon feats pickable at any level (client, `EpicBoonFeatLock.lua`) |
+| General | `debug_logging` | off | `Apotheosis.DEBUG` in both contexts (`MCMSettings.lua`) |
+
+`MCMSettings.lua` is the shared helper (Get with the `Mods.BG3MCM` fallback, Watch for `MCM_Setting_Saved`).
 
 ## Files
 - `Mods/<folder>/MCM_blueprint.json` - the setting. `"Optional": true` so MCM doesn't warn that it is a missing dependency.
@@ -43,6 +53,10 @@ changes. 1.0 is the shipped curve (`XPData.txt`), tuned to reach level 20 by the
 | 1.5x, +400 crossing level 13 only after scaling | earned level 13 |
 | back to 1.0 | subscription removed, +1,000 unscaled |
 | MCM not installed | no errors, gains unscaled |
+| xp_scope late-only, level 10 character, 0.5x | +1,000 unscaled |
+| xp_scope early-only, level 10 character, 0.5x | +1,000 became +500 |
+| debug_logging on / off | `Apotheosis.DEBUG` follows |
+| epic_boon_level_gate off at level 10 | boons unlocked (`State().locked` false); on again: locked |
 
 Not verified: the `Mods.BG3MCM.Get` fallback when MCM loads after PTA, multi-character parties, other mods that change
 XP (UnlockLevelCurve, XP Curve Adjustment Patch: they replace `XPData`, which makes `XPTable.lua` wrong).

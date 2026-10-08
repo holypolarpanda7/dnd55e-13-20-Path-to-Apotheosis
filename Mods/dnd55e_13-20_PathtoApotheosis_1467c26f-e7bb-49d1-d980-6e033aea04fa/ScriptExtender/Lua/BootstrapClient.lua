@@ -16,4 +16,5 @@ Apotheosis.Log = Log
 
 Log.Info("BootstrapClient.lua loading - client context")
 
+Ext.Require("MCMSettings.lua")
 Ext.Require("EpicBoonFeatLock.lua")

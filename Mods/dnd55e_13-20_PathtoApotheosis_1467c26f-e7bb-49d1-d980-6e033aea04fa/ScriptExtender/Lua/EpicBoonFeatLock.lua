@@ -13,6 +13,8 @@ local LOCK = { { Requirement = "ApotheosisEpicBoonLevel19", Type = 0, Ability = 
 local MIN_LEVEL = 18          -- the level a character has while it takes level 19
 local POLL_MS = 250
 
+local Settings = Ext.Require("MCMSettings.lua")
+local enforce = true         -- MCM "epic_boon_level_gate" (default on; off = boons selectable at any level)
 local boons = nil             -- the EpicBoon_ feat resources
 local locked = nil            -- current state (nil = not applied yet)
 local lastPoll = 0
@@ -47,12 +49,18 @@ local function update()
     if not boons then return end
     local lvl = controlledLevel()
     if lvl == nil then return end            -- no controlled character yet (menus, loading)
-    apply(lvl < MIN_LEVEL)
+    apply(enforce and lvl < MIN_LEVEL)
 end
 
 Ext.Events.SessionLoaded:Subscribe(function()
+    local v = Settings.Get("epic_boon_level_gate")
+    if v ~= nil then enforce = v and true or false end
     collect()
     update()
+end)
+
+Settings.Watch(function(id, value)
+    if id == "epic_boon_level_gate" then enforce = value and true or false; update() end
 end)
 
 Ext.Events.Tick:Subscribe(function()
