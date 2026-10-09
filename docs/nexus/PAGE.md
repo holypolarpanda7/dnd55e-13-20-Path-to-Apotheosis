@@ -49,6 +49,14 @@ Every class/subclass build is levelled 1 to 20 in the running game by an automat
 [*]Load order: DnD 5.5e All-in-One BEYOND, then Path to Apotheosis.
 [/list]
 
+[size=4][b]Optional settings (Mod Configuration Menu)[/b][/size]
+Install [url=https://www.nexusmods.com/baldursgate3/mods/9162]Mod Configuration Menu[/url] and load it [b]before[/b] Path to Apotheosis to get an in-game settings page. Without it everything uses the defaults below, so it is the same mod either way.
+[list]
+[*][b]XP gain multiplier[/b] (0.25 to 2.0, default 1.0 = the shipped curve, built to reach level 20 by the end of the game) and [b]Apply the multiplier to[/b] (all levels, 1-12 only, or 13-20 only). Only XP earned from then on is scaled.
+[*][b]Epic Boons need level 19[/b] (default on, as in the PHB 2024). Untick it to pick boons at any level.
+[*][b]Debug logging[/b] (default off), for bug reports.
+[/list]
+
 [size=4][b]Compatibility[/b][/size]
 [list]
 [*]Made for the current DnD 5.5e release; when DnD 5.5e updates, check here for a matching update.
