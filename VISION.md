@@ -48,3 +48,12 @@ Before any change, confirm:
       (principle 3)?
 - [ ] If stats can't express it faithfully, can a Script Extender script? Only if neither can: is the
       approximation the closest possible, and is the gap documented (principle 4)?
+
+## Approved exceptions
+
+Deliberate additions outside levels 13–20, each approved by the user and to be dropped once dnd55e ships its own.
+
+- **Portal Jumper origin feat** (Arcana Unleashed), approved 2026-10-10. dnd55e doesn't have the feat yet and its author plans
+  to add the Arcana Unleashed origin feats. Offered in the Human origin-feat pick through a `MergedInto` passive list (dnd55e's
+  list is not overridden), switchable in MCM (`portal_jumper`). Generator `Scripts/gen_portal_jumper.py`, Lua
+  `PortalJumper.lua`. Principle served: accuracy (4) — rules text from the shared library, no homebrew.

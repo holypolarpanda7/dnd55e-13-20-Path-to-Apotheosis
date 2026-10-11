@@ -1168,6 +1168,13 @@ if Ext and type(Ext.Require) == "function" then
         Log.Warn("XPCurve bootstrap load failed: " .. tostring(xcOrErr))
     end
 
+    local okPj, pjOrErr = pcall(Ext.Require, "PortalJumper.lua")
+    if okPj and type(pjOrErr) ~= "string" then
+        Log.Info("PortalJumper loaded at bootstrap")
+    else
+        Log.Warn("PortalJumper bootstrap load failed: " .. tostring(pjOrErr))
+    end
+
     local okGs, gsOrErr = pcall(Ext.Require, "Gunslinger.lua")
     if okGs and type(gsOrErr) == "table" then
         Log.Info("Gunslinger loaded at bootstrap")

@@ -18,3 +18,4 @@ Log.Info("BootstrapClient.lua loading - client context")
 
 Ext.Require("MCMSettings.lua")
 Ext.Require("EpicBoonFeatLock.lua")
+Ext.Require("PortalJumper.lua")

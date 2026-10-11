@@ -528,5 +528,11 @@ FT.Register("Celestial_14_SearingVengeance", {
     note = "stage: !apospawn bear hostile - let it down the warlock; expect the scripted half-HP revive (SEARING_VENGEANCE_DOWNED)",
 })
 
+FT.Register("OriginFeat_PortalJumper_Radiant", {
+    mode = "manual",
+    target = "none",
+    note = "pick Portal Jumper in the Human origin-feat step at character creation; expect Radiant resistance, Portal Step on the hotbar (2 uses at L1, +1 above L4/8/12/16); casting costs 15 ft of movement + 1 use, once per turn, 15 ft range; MCM 'Portal Jumper origin feat' off hides the pick",
+})
+
 _G.ApotheosisFeatureTests = FT
 return FT

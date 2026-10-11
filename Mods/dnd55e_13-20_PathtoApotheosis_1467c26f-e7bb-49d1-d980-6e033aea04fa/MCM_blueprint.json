@@ -47,6 +47,13 @@
           "Description": "PHB 2024: Epic Boon feats have the prerequisite Level 19+. Untick to be able to pick them at any level (for example for a one-shot or a high-level start)."
         },
         {
+          "Id": "portal_jumper",
+          "Name": "Portal Jumper origin feat",
+          "Type": "checkbox",
+          "Default": true,
+          "Description": "Offers the Arcana Unleashed origin feat Portal Jumper (Otherworldly Resilience and Portal Step) in the Human origin feat pick at character creation. Untick to hide it. Characters who already have it keep it. Takes effect the next time the screen opens."
+        },
+        {
           "Id": "debug_logging",
           "Name": "Debug logging",
           "Type": "checkbox",
