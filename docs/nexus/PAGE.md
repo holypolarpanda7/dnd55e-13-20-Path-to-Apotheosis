@@ -30,6 +30,7 @@ Baldur's Gate 3 stops at level 12, and so does DnD 5.5e. [b]Path to Apotheosis[/
 [*][b]7th-, 8th- and 9th-level spells and spell slots[/b], on each class's rules spell list, learned through the normal level-up screen.
 [*][b]Upcasting to 9th level[/b] for existing spells.
 [*][b]Epic Boons at level 19[/b]: all 12 from the 2024 PHB, plus boons from Heroes of Faerûn and Arcana Unleashed.
+[*][b]Portal Jumper[/b], the Arcana Unleashed origin feat, in the Human origin feat pick at character creation (Otherworldly Resilience and Portal Step; one entry per resistance). The one addition below level 13; switchable in the settings below.
 [*][b]Features back at their real levels[/b]: DnD 5.5e squeezes some level 13+ features into lower levels to fit the cap. Apotheosis moves them back to their 2024 levels. Apart from that, levels 1-12 play exactly as DnD 5.5e alone.
 [/list]
 
@@ -54,12 +55,13 @@ Install [url=https://www.nexusmods.com/baldursgate3/mods/9162]Mod Configuration 
 [list]
 [*][b]XP gain multiplier[/b] (0.25 to 2.0, default 1.0 = the shipped curve, built to reach level 20 by the end of the game) and [b]Apply the multiplier to[/b] (all levels, 1-12 only, or 13-20 only). Only XP earned from then on is scaled.
 [*][b]Epic Boons need level 19[/b] (default on, as in the PHB 2024). Untick it to pick boons at any level.
+[*][b]Portal Jumper origin feat[/b] (default on). Untick to hide it from the Human origin feat pick; characters who already have it keep it.
 [*][b]Debug logging[/b] (default off), for bug reports.
 [/list]
 
 [size=4][b]Compatibility[/b][/size]
 [list]
-[*]Made for the current DnD 5.5e release; when DnD 5.5e updates, check here for a matching update.
+[*]Made for DnD 5.5e All-in-One BEYOND 4.13.1.0 and newer; when DnD 5.5e updates, check here for a matching update.
 [*]Other mods that change the level cap, XP table or class progressions above 12 will conflict.
 [*]Existing saves: [b]DECIDE / test[/b] (new game recommended until verified).
 [/list]
