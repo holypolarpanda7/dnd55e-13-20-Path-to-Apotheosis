@@ -123,3 +123,10 @@ expect = [
   { resource = "SpellSlot", level = 1, change = -1 },
 ]
 notes = "Only needed once per resource type: auto cases check costs against the data."
+
+[[build]]
+id = "wiz-sangromancer"
+title = "Wizard - Sangromancer (Grim Hollow), levels 3-20"
+subclass = "Sangromancer"
+from = "wiz-base"
+levels = [3, 20]

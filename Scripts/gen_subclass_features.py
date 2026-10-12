@@ -957,6 +957,34 @@ G.passive("DragonDomain_17_LegendaryAspect", "Legendary Aspect",
           icon="Action_Dragonborn_BreathWeapon_FireCone")
 node(DRAGON_DOMAIN, "DragonDomain", 17, "DragonDomain_17_LegendaryAspect")
 
+# ================================================================ Wizard: Sangromancer 13-20 (Grim Hollow Player's Guide; dnd55e 4.13.7.1,
+# added 2026-10-12; library excerpts/subclasses/grim-hollow_sangromancy.md). dnd55e stops at 12:
+# - Full-Blooded: the pool is 1 + your Wizard level (dnd55e: 4 dice at 3, +1 per level) -> +1 HitPointDice12 every level to 21.
+# - Sangromancy Savant: dnd55e's pick from the Sangromancy list (398d9fdb) at each new spell-slot level (3, 5, 7, 9, 11) goes on
+#   at 13, 15 and 17 like the other schools' Savant picks; Grim Hollow's 7th-9th level Sangromancy spells join that list once built.
+# - 14 Red Renewal: "when you finish a short rest ... regain expended hit dice equal to half your wizard level ... and an
+#   equivalent number from Full-Blooded; once per long rest." The choice of dice has no BG3 dialog: it happens on your first Short
+#   Rest after a Long Rest and restores Wizard d6 Hit Point Dice (a multiclass character's other dice aren't picked).
+SANGROMANCER = "bd5f7880-233d-4ce5-8833-636988444183"
+SANGROMANCY_LIST = "398d9fdb-0101-4226-b2eb-08a2dae9accb"
+G.resource("ApoRedRenewal", 1, "Rest", "Red Renewal", "Recover Hit Point Dice on a Short Rest. Returns on a Long Rest.")
+HALF = [(20, 10), (18, 9), (16, 8), (14, 7)]   # half your Wizard level, rounded down, from 14 on
+RR_FUNCTORS = ";".join(
+    f"IF(ClassLevelHigherOrEqualThan({lv},'Wizard'){'' if lv == 20 else f' and not ClassLevelHigherOrEqualThan({lv + 2},' + chr(39) + 'Wizard' + chr(39) + ')'}):"
+    f"RestoreResource(HitPointDice06,{n},0);IF(ClassLevelHigherOrEqualThan({lv},'Wizard'){'' if lv == 20 else f' and not ClassLevelHigherOrEqualThan({lv + 2},' + chr(39) + 'Wizard' + chr(39) + ')'}):"
+    f"RestoreResource(HitPointDice12,{n},0)" for lv, n in HALF) + ";UseActionResource(SELF,ApoRedRenewal,1,0)"
+G.passive("Sangromancer_14_RedRenewal", "Red Renewal",
+          "When you finish a Short Rest, you regain expended Hit Point Dice equal to half your Wizard level, and as many dice from "
+          "Full-Blooded. Once you use this feature, you can't do so again until you finish a Long Rest. (It happens on your first "
+          "Short Rest after a Long Rest and restores Wizard Hit Point Dice.)",
+          {"Boosts": "ActionResource(ApoRedRenewal,1,0)", "StatsFunctorContext": "OnShortRest",
+           "Conditions": "HasActionResource('ApoRedRenewal',1,0,false,false,context.Source)", "StatsFunctors": RR_FUNCTORS},
+          icon="PassiveFeature_Generic_Blood", comment="Full-Blooded's own short-rest die (dnd55e) comes on top.")
+for lvl in range(13, 21):
+    node(SANGROMANCER, "Sangromancer", lvl, *(["Sangromancer_14_RedRenewal"] if lvl == 14 else []),
+         boosts="ActionResource(HitPointDice12,1,0)",
+         selectors=f"SelectSpells({SANGROMANCY_LIST},1,0,Wizard_3_Savant)" if lvl in (13, 15, 17) else None)
+
 
 def write():
     new_nodes = []

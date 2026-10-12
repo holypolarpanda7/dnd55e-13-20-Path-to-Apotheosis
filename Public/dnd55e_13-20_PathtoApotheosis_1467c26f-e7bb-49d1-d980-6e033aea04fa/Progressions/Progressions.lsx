@@ -6,7 +6,7 @@
             <children>
                 <!-- ==================== FIGHTER LEVELS 13-20 ==================== -->
                 <node id="Progression">
-                    <attribute id="PassivesAdded" type="LSString" value="Fighter_StudiedAttacks"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Fighter_StudiedAttacks;Apo_HitPointDice_Fighter"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(Interrupt_Indomitable,1,0)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Fighter"/>
@@ -83,7 +83,7 @@
                 </node>
                 <!-- Level 13: Improved Brutal Strike -->
                 <node id="Progression">
-                    <attribute id="PassivesAdded" type="LSString" value="Barbarian_BrutalStrike_Improved"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Barbarian_BrutalStrike_Improved;Apo_HitPointDice_Barbarian"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Barbarian"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -152,7 +152,7 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(KiPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Monk"/>
-                    <attribute id="PassivesAdded" type="LSString" value="Monk_DeflectEnergy"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Monk_DeflectEnergy;Apo_HitPointDice_Monk"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="fe1319a2-86be-469c-aab5-e3b0bd714e0e"/>
                     <attribute id="UUID" type="guid" value="22222222-2222-2222-2222-222222222201"/>
@@ -222,6 +222,7 @@
                 
                 <!-- ==================== ROGUE LEVELS 13-20 ==================== -->
                 <node id="Progression">
+                    <attribute id="PassivesAdded" type="LSString" value="Apo_HitPointDice_Rogue"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Rogue"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -287,6 +288,7 @@
                 <!-- ==================== PALADIN LEVELS 13-20 ==================== -->
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4)"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Apo_HitPointDice_Paladin"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Paladin"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -358,7 +360,7 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Ranger"/>
-                    <attribute id="PassivesAdded" type="LSString" value="Ranger_RelentlessHunter"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Ranger_RelentlessHunter;Apo_HitPointDice_Ranger"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(6e77d7ac-4b79-5691-bde3-357017ad4cdc)"/>
                     <attribute id="TableUUID" type="guid" value="8f068974-ed32-43fc-a9d9-028be1c01a9c"/>
@@ -429,7 +431,7 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Wizard"/>
-                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7;Apo_HitPointDice_Wizard"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="Selectors" type="LSString" value="SelectSpells(aa384b4e-36b4-5b2d-93b3-c1063ba2ffb2,2,0,WizardSpellList)"/>
                     <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
@@ -517,7 +519,7 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Cleric"/>
-                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7;Apo_HitPointDice_Cleric"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(00170001-0001-0001-0001-000000000003)"/>
                     <attribute id="TableUUID" type="guid" value="64474b62-b4f5-46b3-b94a-c676c6da3116"/>
@@ -591,7 +593,7 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Druid"/>
-                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7;Apo_HitPointDice_Druid"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(00170001-0001-0001-0001-000000000004)"/>
                     <attribute id="TableUUID" type="guid" value="6e7b7bad-e122-4679-8b3c-8f8987a9d466"/>
@@ -665,7 +667,7 @@
                 <!-- Regular Bard spells: 1 new spell at 13,15,17,18,19,20 -->
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7)"/>
-                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7;Apo_HitPointDice_Bard"/>
                     <attribute id="Selectors" type="LSString" value="SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Bard"/>
@@ -744,7 +746,7 @@
                 <!-- ==================== SORCERER LEVELS 13-20 ==================== -->
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0)"/>
-                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7;Apo_HitPointDice_Sorcerer"/>
                     <attribute id="Selectors" type="LSString" value="SelectSpells(00170002-0001-0001-0001-000000000002,1,1,SorcererSpell)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Sorcerer"/>
@@ -823,7 +825,7 @@
                 
                 <!-- ==================== WARLOCK LEVELS 13-20 ==================== -->
                 <node id="Progression">
-                    <attribute id="PassivesAdded" type="LSString" value="Warlock_MysticArcanum_7"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Warlock_MysticArcanum_7;Apo_HitPointDice_Warlock"/>
                     <attribute id="Selectors" type="LSString" value="SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00170001-0001-0001-0001-000000000007,1,0,MysticArcanum7,,None,AlwaysPrepared,UntilRest)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Warlock"/>
@@ -4100,6 +4102,74 @@
                     <attribute id="ProgressionType" type="uint8" value="1"/>
                     <attribute id="TableUUID" type="guid" value="8c4f7e8a-2e36-4ece-9327-ca309b45617b"/>
                     <attribute id="UUID" type="guid" value="6e6a44d3-b43c-5929-ad25-5e6d0f617ecf"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice12,1,0)"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="Sangromancer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"/>
+                    <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
+                    <attribute id="UUID" type="guid" value="96800266-6488-56b9-8de9-3c0e32263feb"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice12,1,0)"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="Sangromancer"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Sangromancer_14_RedRenewal"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
+                    <attribute id="UUID" type="guid" value="98ca6b0d-c9bc-5a7f-9efa-173d11b6704f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice12,1,0)"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="Sangromancer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"/>
+                    <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
+                    <attribute id="UUID" type="guid" value="0c97976b-5323-5349-9542-5e1b642f8c1b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice12,1,0)"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="Sangromancer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
+                    <attribute id="UUID" type="guid" value="1c61ce59-f8ae-5306-8bd2-5e987815d5ff"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice12,1,0)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="Sangromancer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"/>
+                    <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
+                    <attribute id="UUID" type="guid" value="0c1ea1dd-3ede-5569-adc7-7f5f4bd67a82"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice12,1,0)"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="Sangromancer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
+                    <attribute id="UUID" type="guid" value="cd59b214-545c-5ab1-bfd5-a54eb87b49ee"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice12,1,0)"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="Sangromancer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
+                    <attribute id="UUID" type="guid" value="9dc54193-486c-5580-9bef-b69dd03b2732"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice12,1,0)"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="Sangromancer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
+                    <attribute id="UUID" type="guid" value="b0a068bb-82c4-5e61-ba2d-f73f33ddb1db"/>
                 </node>
                 <!-- SUBCLASS FEATURES 13-20 END -->
             </children>

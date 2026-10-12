@@ -4373,4 +4373,32 @@
   <content contentuid="h5a3c6391f06156eda2be10a18377d413" version="1">Otherworldly Resilience: you have Resistance to Psychic damage. Portal Step: you can spend 15 feet of movement to teleport to an unoccupied space you can see within 15 feet of yourself (a number of times equal to your Proficiency Bonus, once per turn, regained on a Long Rest).</content>
   <content contentuid="he3a85ed5d11b5f76ad8712b4d4579432" version="1">Origin Feat: Portal Jumper (Radiant)</content>
   <content contentuid="h41e2e6ac20b15d1591e80ca792389632" version="1">Otherworldly Resilience: you have Resistance to Radiant damage. Portal Step: you can spend 15 feet of movement to teleport to an unoccupied space you can see within 15 feet of yourself (a number of times equal to your Proficiency Bonus, once per turn, regained on a Long Rest).</content>
+  <content contentuid="h2eb761cd9a4d56638931e738cd282aeb" version="1">Red Renewal</content>
+  <content contentuid="h98b6bee3e0595c728f21a6cc8205ec43" version="1">Recover Hit Point Dice on a Short Rest. Returns on a Long Rest.</content>
+  <content contentuid="h84b1d45b9510520eb9577150207518a5" version="1">Red Renewal</content>
+  <content contentuid="h0894696504a75ab4adb5500abbcc2327" version="1">When you finish a Short Rest, you regain expended Hit Point Dice equal to half your Wizard level, and as many dice from Full-Blooded. Once you use this feature, you can't do so again until you finish a Long Rest. (It happens on your first Short Rest after a Long Rest and restores Wizard Hit Point Dice.)</content>
+  <content contentuid="hc36f47322da75faea20f3fbe28345b06" version="1">Hit Point Dice</content>
+  <content contentuid="h029c06e3e293543a94d13068e5ea3eba" version="1">One d12 Hit Point Die for each Barbarian level from 13 on.</content>
+  <content contentuid="ha7b16ade06205b5aba1342c105e118e0" version="1">Hit Point Dice</content>
+  <content contentuid="h2c8fe7d7a49e5be6b00cf2123b0f4462" version="1">One d8 Hit Point Die for each Bard level from 13 on.</content>
+  <content contentuid="h7ccfa1a8b5225010b7a96cc6798088fa" version="1">Hit Point Dice</content>
+  <content contentuid="h4ef882489c375c828d83db46f3b0d231" version="1">One d8 Hit Point Die for each Cleric level from 13 on.</content>
+  <content contentuid="h9ce17745062250f0999797bf85e33802" version="1">Hit Point Dice</content>
+  <content contentuid="h853c31ab27b25615b7c477c7cb756595" version="1">One d8 Hit Point Die for each Druid level from 13 on.</content>
+  <content contentuid="hf95a96ad776c5aad8fabf1fbade89a72" version="1">Hit Point Dice</content>
+  <content contentuid="hdf66cb7b47a2541bb13090e0662e2715" version="1">One d10 Hit Point Die for each Fighter level from 13 on.</content>
+  <content contentuid="h5ddde9027d5159d38d02f294d70b9529" version="1">Hit Point Dice</content>
+  <content contentuid="h75cb43f7cefb5751b018c6452a627e2f" version="1">One d8 Hit Point Die for each Monk level from 13 on.</content>
+  <content contentuid="h6d48df53e3665a4496067516790ba9f8" version="1">Hit Point Dice</content>
+  <content contentuid="h5338ebf23dda5bd297e35bedf061b4df" version="1">One d10 Hit Point Die for each Paladin level from 13 on.</content>
+  <content contentuid="hc93297206f4956cf95bd699d21c8710a" version="1">Hit Point Dice</content>
+  <content contentuid="he5e65ef2f5a255cbb5c0e94d9e2562ab" version="1">One d10 Hit Point Die for each Ranger level from 13 on.</content>
+  <content contentuid="h337ff9f85ab75ef7a53f10a31aa1e53d" version="1">Hit Point Dice</content>
+  <content contentuid="h9802c487751752a0a554b7444623e2b5" version="1">One d8 Hit Point Die for each Rogue level from 13 on.</content>
+  <content contentuid="h1638628f65fb565e99789362032bdc22" version="1">Hit Point Dice</content>
+  <content contentuid="h4913452c3c5b50cc9f08f7b8667b63c4" version="1">One d6 Hit Point Die for each Sorcerer level from 13 on.</content>
+  <content contentuid="h8dd9fc5a9ea05eb29c8b2ea9ade737fc" version="1">Hit Point Dice</content>
+  <content contentuid="h34cdbca711fd59918abc751fbdecbd57" version="1">One d8 Hit Point Die for each Warlock level from 13 on.</content>
+  <content contentuid="h2ac90f7597c15eaf93a234b305fd2d12" version="1">Hit Point Dice</content>
+  <content contentuid="h56e4c9cad4f55531a99a844c29c9bc66" version="1">One d6 Hit Point Die for each Wizard level from 13 on.</content>
 </contentList>

@@ -6,6 +6,8 @@
 - Spells that had no effects now have them (Meteor Swarm, Time Stop, Gate, Mass Heal, Foresight, Prismatic Wall, Wish, True Resurrection, Resurrection, Project Image, Feeblemind, Glibness, Power Word Stun) and spells that borrowed a mismatched look get a fitting one (Fire Storm and Earthquake no longer look radiant; the Illusory Dragon's necrotic breath no longer looks like fire).
 - Fixed: Meteor Swarm did no damage. It now drops four meteors, each a 12 m (40 ft) blast: Dexterity save, 20d6 Fire + 20d6 Bludgeoning, half on a success.
 - Fixed: the Wild Magic Darkness Shroud and Frozen Vortex statuses showed no visual (their effects didn't exist).
+- Sangromancer (Grim Hollow wizard, new in DnD 5.5e 4.13.7): levels 13-20 - Red Renewal at 14 (your first Short Rest after a Long Rest restores Hit Point Dice and Full-Blooded dice equal to half your Wizard level), the Full-Blooded pool keeps growing to 1 + Wizard level, and Sangromancy Savant picks at 13, 15 and 17.
+- Fixed: Hit Point Dice stopped at 12 for every base class; you now gain one per level through 20 (PHB 2024), which also gives short rests and Hit Point Dice costs their full range.
 
 ## v1.0.0 - 2026-10-11
 
