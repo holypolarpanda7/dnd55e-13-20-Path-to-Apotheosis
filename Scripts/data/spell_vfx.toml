@@ -1,0 +1,318 @@
+# Spell -> visual effect fields (2026-10-12). Values are effect names from Scripts/data/vfx.toml (UUIDs in
+# vfx_generated.json); "" clears a field the spell would otherwise inherit (e.g. a radiant TargetEffect from Flame Strike
+# on a spell that deals no radiant damage). Applied by Scripts/apply_spell_vfx.py, which runs last in regen_all.sh.
+# Variants that `using` a parent (True Polymorph forms, Words of Creation, Befuddlement -> Feeblemind) inherit from it.
+
+# ------------------------------------------------------------------------------------------------ 9th level
+[Projectile_MeteorSwarm]
+PrepareEffect = "PTA_MeteorSwarm_PrepareEffect"
+CastEffect = "PTA_MeteorSwarm_CastEffect"
+HitEffect = "PTA_MeteorSwarm_HitEffect"
+
+[Projectile_Apo_Detonate]
+HitEffect = "PTA_Detonate_HitEffect"
+
+[Target_Apo_WailOfTheBanshee]
+PrepareEffect = "PTA_WailOfTheBanshee_PrepareEffect"
+CastEffect = "PTA_WailOfTheBanshee_CastEffect"
+TargetEffect = "PTA_WailOfTheBanshee_TargetEffect"
+
+[Target_PowerWordKill]
+PrepareEffect = "PTA_PowerWordKill_PrepareEffect"
+CastEffect = "PTA_PowerWordKill_CastEffect"
+TargetEffect = "PTA_PowerWordKill_TargetEffect"
+
+[Target_PowerWordHeal]
+PrepareEffect = "PTA_GreatHeal_PrepareEffect"
+CastEffect = "PTA_PowerWordHeal_CastEffect"
+TargetEffect = "PTA_GreatHeal_TargetEffect"
+
+[Target_MassHeal]
+PrepareEffect = "PTA_GreatHeal_PrepareEffect"
+CastEffect = "PTA_MassHeal_CastEffect"
+TargetEffect = "PTA_GreatHeal_TargetEffect"
+
+[Target_Apo_TrueResurrection]
+PrepareEffect = "PTA_TrueResurrection_PrepareEffect"
+CastEffect = "PTA_TrueResurrection_CastEffect"
+TargetEffect = "PTA_TrueResurrection_TargetEffect"
+
+[Shout_TimeStop]
+PrepareEffect = "PTA_TimeStop_PrepareEffect"
+CastEffect = "PTA_TimeStop_CastEffect"
+TargetEffect = "PTA_TimeStop_TargetEffect"
+
+[Shout_Wish_Blessing]
+PrepareEffect = "PTA_Wish_PrepareEffect"
+CastEffect = "PTA_Wish_CastEffect"
+TargetEffect = "PTA_Foresight_TargetEffect"
+
+[Shout_Wish_MassHeal]
+PrepareEffect = "PTA_Wish_Heal_PrepareEffect"
+CastEffect = "PTA_Wish_Heal_CastEffect"
+TargetEffect = "PTA_GreatHeal_TargetEffect"
+
+[Shout_Wish_Resurrect]
+PrepareEffect = "PTA_Wish_Heal_PrepareEffect"
+CastEffect = "PTA_Wish_Heal_CastEffect"
+TargetEffect = "PTA_TrueResurrection_TargetEffect"
+
+[Target_Wish_Heal]
+PrepareEffect = "PTA_Wish_Heal_PrepareEffect"
+CastEffect = "PTA_Wish_Heal_CastEffect"
+TargetEffect = "PTA_GreatHeal_TargetEffect"
+
+[Target_Wish_Revive]
+PrepareEffect = "PTA_Wish_Heal_PrepareEffect"
+CastEffect = "PTA_Wish_Heal_CastEffect"
+TargetEffect = "PTA_TrueResurrection_TargetEffect"
+
+[Target_Wish_Buff]
+PrepareEffect = "PTA_Wish_PrepareEffect"
+CastEffect = "PTA_Wish_Attack_CastEffect"
+TargetEffect = "PTA_Foresight_TargetEffect"
+
+[Target_Gate]
+PrepareEffect = "PTA_ConjureCelestial_PrepareEffect"
+CastEffect = "PTA_Gate_CastEffect"
+PositionEffect = "PTA_Gate_PositionEffect"
+
+[Target_Foresight]
+PrepareEffect = "PTA_ElapsingEons_PrepareEffect"
+CastEffect = "PTA_Foresight_CastEffect"
+TargetEffect = "PTA_Foresight_TargetEffect"
+
+[Target_PrismaticWall]
+PrepareEffect = "PTA_TimeStop_PrepareEffect"
+CastEffect = "PTA_PrismaticWall_CastEffect"
+PositionEffect = "PTA_PrismaticWall_PositionEffect"
+
+[Target_Apo_AstralProjection]
+CastEffect = "PTA_Teleport_CastEffect"
+TargetEffect = "PTA_AstralProjection_TargetEffect"
+
+[Target_Apo_Imprisonment]
+CastEffect = "PTA_Imprisonment_CastEffect"
+TargetEffect = "PTA_Imprisonment_TargetEffect"
+
+[Target_Apo_Shapechange]
+PrepareEffect = "PTA_Shapechange_PrepareEffect"
+CastEffect = "PTA_Shapechange_CastEffect"
+TargetEffect = "PTA_Shapechange_TargetEffect"
+
+[Target_TruePolymorph]
+PrepareEffect = "PTA_TruePolymorph_PrepareEffect"
+CastEffect = "PTA_TruePolymorph_CastEffect"
+TargetEffect = "PTA_TruePolymorph_TargetEffect"
+
+[Target_Apo_Weird]
+PrepareEffect = "PTA_Weird_PrepareEffect"
+CastEffect = "PTA_Weird_CastEffect"
+PositionEffect = "PTA_Weird_PositionEffect"
+TargetEffect = "PTA_Weird_TargetEffect"
+
+[Target_Apo_VisionOfElapsingEons]
+PrepareEffect = "PTA_ElapsingEons_PrepareEffect"
+CastEffect = "PTA_ElapsingEons_CastEffect"
+TargetEffect = "PTA_ElapsingEons_TargetEffect"
+
+[Shout_Apo_Invulnerability]
+PrepareEffect = "PTA_Invulnerability_PrepareEffect"
+CastEffect = "PTA_Invulnerability_CastEffect"
+TargetEffect = "PTA_Invulnerability_TargetEffect"
+
+[Shout_Apo_StormOfVengeance]
+PrepareEffect = "PTA_StormOfVengeance_PrepareEffect"
+CastEffect = "PTA_StormOfVengeance_CastEffect"
+TargetEffect = "PTA_StormOfVengeance_TargetEffect"
+
+# ------------------------------------------------------------------------------------------------ 8th level
+[Target_Apo_Sunburst]
+PrepareEffect = "PTA_Sunburst_PrepareEffect"
+CastEffect = "PTA_Sunburst_CastEffect"
+PositionEffect = "PTA_Sunburst_PositionEffect"
+TargetEffect = "PTA_Sunburst_TargetEffect"
+
+[Target_Apo_Earthquake]
+PrepareEffect = "PTA_Earthquake_PrepareEffect"
+CastEffect = "PTA_Earthquake_CastEffect"
+PositionEffect = "PTA_Earthquake_PositionEffect"
+TargetEffect = ""
+
+[Target_Apo_IncendiaryCloud]
+PrepareEffect = "PTA_IncendiaryCloud_PrepareEffect"
+CastEffect = "PTA_IncendiaryCloud_CastEffect"
+PositionEffect = "PTA_IncendiaryCloud_PositionEffect"
+
+[Target_DominateMonster]
+CastEffect = "PTA_DominateMonster_CastEffect"
+BeamEffect = "PTA_DominateMonster_BeamEffect"
+TargetEffect = "PTA_DominateMonster_TargetEffect"
+
+[Target_Feeblemind]
+PrepareEffect = "PTA_Feeblemind_PrepareEffect"
+CastEffect = "PTA_Feeblemind_CastEffect"
+TargetEffect = "PTA_Feeblemind_TargetEffect"
+
+[Shout_Apo_AntimagicField]
+CastEffect = "PTA_AntimagicField_CastEffect"
+TargetEffect = "PTA_AntimagicField_TargetEffect"
+
+[Shout_Apo_HolyAura]
+PrepareEffect = "PTA_HolyAura_PrepareEffect"
+CastEffect = "PTA_HolyAura_CastEffect"
+TargetEffect = "PTA_HolyAura_TargetEffect"
+
+[Shout_Apo_ControlWeather]
+PrepareEffect = "PTA_ControlWeather_PrepareEffect"
+CastEffect = "PTA_ControlWeather_CastEffect"
+
+[Shout_Apo_AnimalShapes]
+CastEffect = "PTA_Shapechange_CastEffect"
+TargetEffect = "PTA_AnimalShapes_TargetEffect"
+
+[Target_Apo_Clone]
+CastEffect = "PTA_Clone_CastEffect"
+TargetEffect = "PTA_Clone_TargetEffect"
+
+[Target_Apo_Demiplane]
+CastEffect = "PTA_Teleport_CastEffect"
+TargetEffect = "PTA_Demiplane_TargetEffect"
+
+[Target_Apo_Maze]
+CastEffect = "PTA_Maze_CastEffect"
+TargetEffect = "PTA_Maze_TargetEffect"
+
+[Target_Apo_MindBlank]
+CastEffect = "PTA_MindBlank_CastEffect"
+TargetEffect = "PTA_MindBlank_TargetEffect"
+
+[Target_Apo_Telepathy]
+CastEffect = "PTA_Telepathy_CastEffect"
+TargetEffect = "PTA_Telepathy_TargetEffect"
+
+[Target_Apo_IronBody]
+CastEffect = "PTA_IronBody_CastEffect"
+TargetEffect = "PTA_IronBody_TargetEffect"
+
+[Shout_Apo_LightningRing]
+PrepareEffect = "PTA_LightningRing_PrepareEffect"
+CastEffect = "PTA_LightningRing_CastEffect"
+TargetEffect = "PTA_LightningRing_TargetEffect"
+
+[Zone_Apo_Tsunami]
+PrepareEffect = "PTA_Tsunami_PrepareEffect"
+CastEffect = "PTA_Tsunami_CastEffect"
+
+[Shout_Apo_IllusoryDragon_Acid]
+CastEffect = "PTA_IllusoryDragon_CastEffect"
+
+[Shout_Apo_IllusoryDragon_Cold]
+CastEffect = "PTA_IllusoryDragon_CastEffect"
+
+[Shout_Apo_IllusoryDragon_Fire]
+CastEffect = "PTA_IllusoryDragon_CastEffect"
+
+[Shout_Apo_IllusoryDragon_Lightning]
+CastEffect = "PTA_IllusoryDragon_CastEffect"
+
+[Shout_Apo_IllusoryDragon_Necrotic]
+CastEffect = "PTA_IllusoryDragon_CastEffect"
+
+[Shout_Apo_IllusoryDragon_Poison]
+CastEffect = "PTA_IllusoryDragon_CastEffect"
+
+[Zone_Apo_IllusoryDragonBreath_Necrotic]
+PrepareEffect = "PTA_IllusoryDragonBreath_Necrotic_PrepareEffect"
+CastEffect = "PTA_IllusoryDragonBreath_Necrotic_CastEffect"
+TargetEffect = "PTA_IllusoryDragonBreath_Necrotic_TargetEffect"
+
+[Shout_PowerWordStun]
+CastEffect = "PTA_PowerWordStun_CastEffect"
+TargetEffect = "PTA_PowerWordStun_TargetEffect"
+
+[Target_Glibness]
+PrepareEffect = "PTA_Glibness_PrepareEffect"
+CastEffect = "PTA_Glibness_CastEffect"
+
+[Target_Apo_EntrancingMirrors]
+PrepareEffect = "PTA_EntrancingMirrors_PrepareEffect"
+CastEffect = "PTA_EntrancingMirrors_CastEffect"
+TargetEffect = "PTA_EntrancingMirrors_TargetEffect"
+
+[Target_Apo_Antipathy]
+CastEffect = "PTA_Antipathy_CastEffect"
+TargetEffect = "PTA_Antipathy_TargetEffect"
+
+# ------------------------------------------------------------------------------------------------ 7th level
+[Target_Apo_FireStorm]
+PrepareEffect = "PTA_IncendiaryCloud_PrepareEffect"
+CastEffect = "PTA_IncendiaryCloud_CastEffect"
+PositionEffect = "PTA_FireStorm_PositionEffect"
+TargetEffect = "PTA_FireStorm_TargetEffect"
+
+[Target_Apo_FingerOfDeath]
+BeamEffect = "PTA_FingerOfDeath_BeamEffect"
+TargetEffect = "PTA_FingerOfDeath_TargetEffect"
+
+[Projectile_Apo_DelayedBlastFireball]
+HitEffect = "PTA_DelayedBlastFireball_HitEffect"
+
+[Shout_Apo_DivineWord]
+CastEffect = "PTA_DivineWord_CastEffect"
+TargetEffect = "PTA_DivineWord_TargetEffect"
+
+[Target_Apo_Forcecage]
+TargetEffect = "PTA_Forcecage_TargetEffect"
+
+[Target_Apo_MirageArcane]
+CastEffect = "PTA_MirageArcane_CastEffect"
+PositionEffect = "PTA_MirageArcane_PositionEffect"
+TargetEffect = ""
+
+[Target_Apo_PlaneShift]
+CastEffect = "PTA_PlaneShift_CastEffect"
+
+[Target_Apo_PowerWordFortify]
+CastEffect = "PTA_PowerWordFortify_CastEffect"
+TargetEffect = "PTA_PowerWordFortify_TargetEffect"
+
+[Target_Apo_PowerWordPain]
+CastEffect = "PTA_PowerWordPain_CastEffect"
+TargetEffect = "PTA_PowerWordPain_TargetEffect"
+
+[Target_Apo_ReverseGravity]
+CastEffect = "PTA_ReverseGravity_CastEffect"
+PositionEffect = ""
+TargetEffect = "PTA_ReverseGravity_TargetEffect"
+
+[Target_Apo_Simulacrum]
+PrepareEffect = "PTA_Simulacrum_PrepareEffect"
+CastEffect = "PTA_Simulacrum_CastEffect"
+TargetEffect = "PTA_Simulacrum_TargetEffect"
+
+[Target_Apo_Symbol]
+PositionEffect = "PTA_Symbol_PositionEffect"
+TargetEffect = ""
+
+[Target_Apo_Teleport]
+CastEffect = "PTA_Teleport_CastEffect"
+PositionEffect = "PTA_Teleport_PositionEffect"
+
+[Target_Resurrection]
+PrepareEffect = "PTA_Resurrection_PrepareEffect"
+CastEffect = "PTA_Resurrection_CastEffect"
+TargetEffect = "PTA_Resurrection_TargetEffect"
+
+[Target_ProjectImage]
+PrepareEffect = "PTA_ProjectImage_PrepareEffect"
+CastEffect = "PTA_ProjectImage_CastEffect"
+PositionEffect = "PTA_ProjectImage_PositionEffect"
+
+[Shout_Apo_ConjureCelestial]
+PrepareEffect = "PTA_ConjureCelestial_PrepareEffect"
+CastEffect = "PTA_ConjureCelestial_CastEffect"
+
+[Shout_Apo_MagnificentMansion]
+CastEffect = "PTA_MagnificentMansion_CastEffect"
+TargetEffect = ""

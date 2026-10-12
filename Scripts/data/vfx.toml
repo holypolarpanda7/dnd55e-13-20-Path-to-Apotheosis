@@ -1,0 +1,652 @@
+# Spell visual effects (2026-10-12), built by the bg3-data MCP: bg3_fx_build("apotheosis", apply=True).
+# Every effect here is derived from the base game's own effects only (never another mod's - see bg3_fx_provenance
+# against=[...]): layered (parts), recoloured (palette) and/or enlarged (scale). Output: Public/<mod>/Assets/Effects/
+# Effects_Banks/PTA_VFX/*.lsfx, Content/[PAK]_PTA_VFX/_merged.lsf, MultiEffectInfos/*.lsx and Scripts/data/vfx_generated.json
+# (name -> UUID). Spells get them through Scripts/data/spell_vfx.toml + Scripts/apply_spell_vfx.py.
+# Rules kept when layering: a part stays in the field kind it was made for (a CastEffect part in a CastEffect, a target
+# effect in a TargetEffect); only parts with no bone (bones=-) are moved, e.g. ground AoE parts into a PositionEffect.
+# Secondary layers take just their big area parts (`only`) so hand/eye glows don't double up. 8th/9th-level spells get
+# the grand treatment (several layers, boss-scale parts, scale > 1); 7th-level spells mostly get a better-fitting look.
+
+bank = "PTA_VFX"
+
+[palettes.deathly]          # BG3's necrotic: pale teal
+color = "#3fe0c0"
+mode = "hue"
+
+[palettes.nature]
+color = "#5cbf3a"
+mode = "hue"
+
+[palettes.earth]            # dust and rock
+color = "#8a6a3a"
+mode = "tint"
+brightness = 0.8
+saturation = 0.7
+
+[palettes.storm]
+color = "#6fb0ff"
+mode = "hue"
+
+[palettes.water]
+color = "#2f8fff"
+mode = "hue"
+
+[palettes.wish]             # arcane violet-gold for Wish's divine-intervention look on an arcane caster
+color = "#b07cff"
+mode = "hue"
+
+# ======================================================================================== 9th level
+
+# Meteor Swarm: four Netherbrain-orb meteors; each impact = doubled fireball, the orb's blast, a ground shockwave
+[[effect]]
+name = "PTA_MeteorSwarm_PrepareEffect"
+parts = [ { from = "Fireball_PrepareEffect" }, { from = "Flamestrike_PrepareEffect" } ]
+
+[[effect]]
+name = "PTA_MeteorSwarm_CastEffect"
+parts = [ { from = "Fireball_CastEffect" }, { from = "Overheat_Azer_CastEffect", only = [4] } ]
+
+[[effect]]
+name = "PTA_MeteorSwarm_HitEffect"
+parts = [ { from = "Fireball_HitEffect", scale = 2.0 },
+          { from = "END_OrbOfObliteration_HitEffect" },
+          { from = "Stomp_AdamantineGolem_CastEffect", only = [2, 4], palette = "fire", scale = 1.5 } ]
+
+# Detonate (Arcana Unleashed): one big orb blast
+[[effect]]
+name = "PTA_Detonate_HitEffect"
+parts = [ { from = "END_OrbOfObliteration_HitEffect" }, { from = "Fireball_HitEffect", scale = 1.6 } ]
+
+# Wail of the Banshee: Ketheric's howl, a necrotic destructive wave and the Slayer's 52 m sacrifice burst, souls torn out
+[[effect]]
+name = "PTA_WailOfTheBanshee_PrepareEffect"
+from = "MAG_Ketheric_HowlOfTheDead_PrepareEffect"
+
+[[effect]]
+name = "PTA_WailOfTheBanshee_CastEffect"
+parts = [ { from = "DestructiveWave_Necrotic_CastEffect" }, { from = "CallOfTheDamned_Apostle_CastEffect", only = [1] },
+          { from = "LOW_LivingSacrifice_Slayer_CastEffect", only = [2], palette = "deathly" } ]
+
+[[effect]]
+name = "PTA_WailOfTheBanshee_TargetEffect"
+parts = [ { from = "SoulPluck_Specter_TargetEffect" }, { from = "DestructiveWave_Necrotic_TargetEffect" } ]
+
+# Power Word Kill: a dark word - a necrotic mind-blast from the hand, the soul seized
+[[effect]]
+name = "PTA_PowerWordKill_PrepareEffect"
+from = "Generic_Necrotic_PrepareEffect"
+
+[[effect]]
+name = "PTA_PowerWordKill_CastEffect"
+parts = [ { from = "Generic_Necrotic_TargetSingle_CastEffect" }, { from = "MindBlast_CastEffect", only = [2, 3], palette = "deathly" } ]
+
+[[effect]]
+name = "PTA_PowerWordKill_TargetEffect"
+parts = [ { from = "SoulSeize_Specter_TargetEffect" }, { from = "HAG_SinisterStrike_TargetEffect", palette = "deathly" } ]
+
+# Power Word Heal / Mass Heal / True Resurrection: Divine Intervention and Isobel's great heal
+[[effect]]
+name = "PTA_GreatHeal_PrepareEffect"
+from = "DivineIntervention_Healing_PrepareEffect"
+
+[[effect]]
+name = "PTA_PowerWordHeal_CastEffect"
+parts = [ { from = "HealingWord_Mass_CastEffect" }, { from = "END_AllyAbility_IsobelHeal_CastEffect", only = [3] } ]
+
+[[effect]]
+name = "PTA_GreatHeal_TargetEffect"
+parts = [ { from = "Heal_TargetEffect" }, { from = "END_AllyAbility_IsobelHeal_HitEffect" } ]
+
+[[effect]]
+name = "PTA_MassHeal_CastEffect"
+parts = [ { from = "DivineIntervention_Healing_CastEffect" }, { from = "END_AllyAbility_IsobelHeal_CastEffect", only = [3], scale = 1.3 } ]
+
+[[effect]]
+name = "PTA_TrueResurrection_PrepareEffect"
+from = "Revivify_Deva_PrepareEffect"
+
+[[effect]]
+name = "PTA_TrueResurrection_CastEffect"
+parts = [ { from = "RadianceOfTheDawn_CastEffect" }, { from = "DivineIntervention_Healing_CastEffect", only = [1] } ]
+
+[[effect]]
+name = "PTA_TrueResurrection_TargetEffect"
+parts = [ { from = "Heal_TargetEffect" }, { from = "DivineIntervention_Healing_TargetEffect" }, { from = "END_AllyAbility_IsobelHeal_HitEffect" } ]
+
+# Time Stop: the world held still - a frozen arcane shockwave, a sphere around the caster
+[[effect]]
+name = "PTA_TimeStop_PrepareEffect"
+from = "ArcaneRecovery_2_PrepareEffect"
+
+[[effect]]
+name = "PTA_TimeStop_CastEffect"
+parts = [ { from = "BenignTransposition_CastEffect" }, { from = "MindBlast_CastEffect", only = [2, 3], palette = "frost", scale = 1.6 } ]
+
+[[effect]]
+name = "PTA_TimeStop_TargetEffect"
+from = "ResilientSphere_TargetEffect"
+
+# Wish: Divine Intervention with its big parts recoloured arcane
+[[effect]]
+name = "PTA_Wish_PrepareEffect"
+parts = [ { from = "DivineIntervention_Supplies_PrepareEffect", only = [3, 4], palette = "wish" },
+          { from = "DivineIntervention_Supplies_PrepareEffect", only = [1, 2, 5, 6, 7, 8, 9] } ]   # only the big parts recoloured; hands/eyes stay vanilla
+
+[[effect]]
+name = "PTA_Wish_CastEffect"
+parts = [ { from = "DivineIntervention_Supplies_CastEffect", only = [2, 7], palette = "wish" },
+          { from = "DivineIntervention_Supplies_CastEffect", only = [1, 3, 4, 5, 6, 8] } ]   # only the big parts recoloured; hands/eyes stay vanilla
+
+[[effect]]
+name = "PTA_Wish_Heal_PrepareEffect"
+parts = [ { from = "DivineIntervention_Healing_PrepareEffect", only = [7, 33], palette = "wish" },
+          { from = "DivineIntervention_Healing_PrepareEffect", only = [1, 2, 3, 4, 5, 6, 8] } ]   # only the big parts recoloured; hands/eyes stay vanilla
+
+[[effect]]
+name = "PTA_Wish_Heal_CastEffect"
+parts = [ { from = "DivineIntervention_Healing_CastEffect", only = [1, 2, 6], palette = "wish" },
+          { from = "DivineIntervention_Healing_CastEffect", only = [3, 4, 5, 7, 8] } ]   # only the big parts recoloured; hands/eyes stay vanilla
+
+[[effect]]
+name = "PTA_Wish_Attack_CastEffect"
+parts = [ { from = "DivineIntervention_Attack_CastEffect", only = [3, 4, 7, 8], palette = "wish" },
+          { from = "DivineIntervention_Attack_CastEffect", only = [1, 2, 5, 6] } ]   # only the big parts recoloured; hands/eyes stay vanilla
+
+# Gate: a planar portal - two Planar Ally summoning circles at the point
+[[effect]]
+name = "PTA_Gate_CastEffect"
+parts = [ { from = "PlanarAlly_CastEffect" }, { from = "Banishment_CastEffect", only = [2] } ]
+
+[[effect]]
+name = "PTA_Gate_PositionEffect"
+parts = [ { from = "PlanarAlly_Cambion_PositionEffect" }, { from = "PlanarAlly_Deva_PositionEffect" } ]
+
+# Foresight: the third eye
+[[effect]]
+name = "PTA_Foresight_CastEffect"
+parts = [ { from = "SeeInvisibility_CastEffect" }, { from = "ArcaneRecovery_2_CastEffect", only = [8], palette = "radiant" } ]
+
+[[effect]]
+name = "PTA_Foresight_TargetEffect"
+parts = [ { from = "Dominate_Beast_TargetEffect" }, { from = "Bless_TargetEffect" } ]
+
+# Prismatic Wall: every colour at once
+[[effect]]
+name = "PTA_PrismaticWall_CastEffect"
+from = "ColorSpray_CastEffect"
+
+[[effect]]
+name = "PTA_PrismaticWall_PositionEffect"
+parts = [ { from = "HypnoticPattern_PositionEffect" }, { from = "Generic_Control_PositionEffect" } ]
+
+# Astral Projection: a silver-blue departure
+[[effect]]
+name = "PTA_AstralProjection_TargetEffect"
+from = "Banishment_TargetEffect"
+palette = "frost"
+scale = 1.3
+
+# Imprisonment: Gortash's chains of tyranny, a planar binding, a sealing sphere
+[[effect]]
+name = "PTA_Imprisonment_CastEffect"
+parts = [ { from = "Banishment_CastEffect" }, { from = "LOW_RamazithsTower_Nightsong_Banish_CastEffect", only = [2] } ]
+
+[[effect]]
+name = "PTA_Imprisonment_TargetEffect"
+parts = [ { from = "WYR_ChainsOfTyranny_Gortash_TargetEffect" }, { from = "PlanarBinding_TargetEffect" }, { from = "ResilientSphere_TargetEffect", palette = "arcane" } ]
+
+# Shapechange / True Polymorph: Gale's god-tier polymorph
+[[effect]]
+name = "PTA_Shapechange_PrepareEffect"
+from = "Polymorph_GaleGod_PrepareEffect"
+
+[[effect]]
+name = "PTA_Shapechange_CastEffect"
+from = "Polymorph_GaleGod_CastEffect"
+
+[[effect]]
+name = "PTA_Shapechange_TargetEffect"
+from = "Polymorph_GaleGod_TargetEffect"
+
+[[effect]]
+name = "PTA_TruePolymorph_PrepareEffect"
+from = "Polymorph_GaleGod_PrepareEffect"
+
+[[effect]]
+name = "PTA_TruePolymorph_CastEffect"
+from = "PartyTime_GaleGod_CastEffect"
+
+[[effect]]
+name = "PTA_TruePolymorph_TargetEffect"
+from = "PartyTime_GaleGod_TargetEffect"
+
+# Weird: the hag's mask of terror, a psychic dread wave, a nightmare pattern on the ground
+[[effect]]
+name = "PTA_Weird_PrepareEffect"
+from = "PhantasmalKiller_PrepareEffect"
+
+[[effect]]
+name = "PTA_Weird_CastEffect"
+parts = [ { from = "HAG_MaskOfTerror_CastEffect" }, { from = "Dreadful_Aspect_CastEffect", only = [1], palette = "psychic" } ]
+
+[[effect]]
+name = "PTA_Weird_PositionEffect"
+from = "HAG_MaskOfRegret_PositionEffect"
+
+[[effect]]
+name = "PTA_Weird_TargetEffect"
+parts = [ { from = "PhantasmalKiller_TargetEffect" }, { from = "HAG_ViciousMockery_TargetEffect" } ]
+
+# Vision of Elapsing Eons (Arcana Unleashed): ages pass in a golden mind-blast
+[[effect]]
+name = "PTA_ElapsingEons_PrepareEffect"
+from = "KnowledgeOfTheAges_PrepareEffect"
+
+[[effect]]
+name = "PTA_ElapsingEons_CastEffect"
+parts = [ { from = "MindBlast_CastEffect", only = [2, 3], palette = "radiant" }, { from = "KnowledgeOfTheAges_CastEffect" } ]
+
+[[effect]]
+name = "PTA_ElapsingEons_TargetEffect"
+from = "HAG_HoldPerson_TargetEffect"
+
+# Invulnerability (Arcana Unleashed): a radiant shell
+[[effect]]
+name = "PTA_Invulnerability_PrepareEffect"
+from = "GuardianOfFaith_PrepareEffect"
+
+[[effect]]
+name = "PTA_Invulnerability_CastEffect"
+from = "DivineIntervention_Attack_CastEffect"
+
+[[effect]]
+name = "PTA_Invulnerability_TargetEffect"
+from = "ResilientSphere_TargetEffect"
+
+# Storm of Vengeance: ice storm, a doubled thunder shockwave, the skeletal dragon's storm ring
+[[effect]]
+name = "PTA_StormOfVengeance_PrepareEffect"
+from = "Generic_Thunder_AoE_PrepareEffect"
+palette = "storm"
+
+[[effect]]
+name = "PTA_StormOfVengeance_CastEffect"
+parts = [ { from = "IceStorm_CastEffect" }, { from = "Generic_Thunder_AoE_CastEffect", only = [3], palette = "storm", scale = 2.0 },
+          { from = "FrightfulPresence_Dragon_Skeletal_CastEffect", only = [3] } ]
+
+[[effect]]
+name = "PTA_StormOfVengeance_TargetEffect"
+from = "ChainLightning_HitEffect"
+
+# ======================================================================================== 8th level
+
+# Sunburst: Divine Intervention's strike, a doubled radiant ground burst
+[[effect]]
+name = "PTA_Sunburst_PrepareEffect"
+from = "Sunbeam_PrepareEffect"
+
+[[effect]]
+name = "PTA_Sunburst_CastEffect"
+from = "DivineIntervention_Attack_CastEffect"
+
+[[effect]]
+name = "PTA_Sunburst_PositionEffect"
+parts = [ { from = "Flamestrike_PositionEffect", palette = "radiant", scale = 1.8 }, { from = "Dreadful_Aspect_CastEffect", only = [1, 2], palette = "radiant" } ]
+
+[[effect]]
+name = "PTA_Sunburst_TargetEffect"
+from = "Sunbeam_TargetEffect"
+
+# Earthquake: the adamantine golem's stomp, doubled, in a cloud of dust
+[[effect]]
+name = "PTA_Earthquake_PrepareEffect"
+from = "Generic_Thunder_AoE_PrepareEffect"
+palette = "earth"
+
+[[effect]]
+name = "PTA_Earthquake_CastEffect"
+from = "Generic_Thunder_AoE_CastEffect"
+
+[[effect]]
+name = "PTA_Earthquake_PositionEffect"
+parts = [ { from = "Stomp_AdamantineGolem_CastEffect", only = [2, 4], palette = "earth", scale = 2.0 }, { from = "CloudKill_PositionEffect", palette = "earth", scale = 1.5 } ]
+
+# Incendiary Cloud: a burning cloud
+[[effect]]
+name = "PTA_IncendiaryCloud_PrepareEffect"
+from = "Fireball_PrepareEffect"
+
+[[effect]]
+name = "PTA_IncendiaryCloud_CastEffect"
+from = "Fireball_CastEffect"
+
+[[effect]]
+name = "PTA_IncendiaryCloud_PositionEffect"
+parts = [ { from = "CloudKill_PositionEffect", palette = "fire" }, { from = "RedDragon_Flight_PositionEffect", only = [1] } ]
+
+# Dominate Monster: the Absolute's psionic dominance
+[[effect]]
+name = "PTA_DominateMonster_CastEffect"
+parts = [ { from = "Dominate_Beast_CastEffect" }, { from = "TAD_PSIONIC_DOMINANCE_CastEffect" } ]
+
+[[effect]]
+name = "PTA_DominateMonster_BeamEffect"
+from = "TAD_PSIONIC_DOMINANCE_BeamEffect"
+
+[[effect]]
+name = "PTA_DominateMonster_TargetEffect"
+parts = [ { from = "Dominate_Beast_TargetEffect" }, { from = "TAD_PSIONIC_DOMINANCE_Success_TargetEffect" } ]
+
+# Feeblemind / Befuddlement: a psychic mind-flayer blast that shatters the mind
+[[effect]]
+name = "PTA_Feeblemind_PrepareEffect"
+from = "PhantasmalKiller_PrepareEffect"
+
+[[effect]]
+name = "PTA_Feeblemind_CastEffect"
+parts = [ { from = "PhantasmalKiller_CastEffect" }, { from = "MindBlast_CastEffect", only = [2], palette = "psychic" } ]
+
+[[effect]]
+name = "PTA_Feeblemind_TargetEffect"
+parts = [ { from = "PlanarBinding_TargetEffect" }, { from = "HAG_ViciousMockery_TargetEffect" } ]
+
+# Antimagic Field: magic pushed away
+[[effect]]
+name = "PTA_AntimagicField_CastEffect"
+from = "Repulsor_CastEffect"
+only = [1, 4, 5]   # 2-3 start on a mind-flayer text key
+
+[[effect]]
+name = "PTA_AntimagicField_TargetEffect"
+from = "ResilientSphere_TargetEffect"
+
+# Holy Aura: Divine Intervention's blessing
+[[effect]]
+name = "PTA_HolyAura_PrepareEffect"
+from = "DivineIntervention_Supplies_PrepareEffect"
+
+[[effect]]
+name = "PTA_HolyAura_CastEffect"
+from = "DivineIntervention_Supplies_CastEffect"
+
+[[effect]]
+name = "PTA_HolyAura_TargetEffect"
+from = "HealingRadiance_TargetEffect"
+
+# Control Weather: the sky turns - ice storm and a storm ring
+[[effect]]
+name = "PTA_ControlWeather_PrepareEffect"
+from = "ChainLightning_PrepareEffect"
+
+[[effect]]
+name = "PTA_ControlWeather_CastEffect"
+parts = [ { from = "IceStorm_CastEffect" }, { from = "FrightfulPresence_Dragon_Skeletal_CastEffect", only = [3] } ]
+
+# Animal Shapes
+[[effect]]
+name = "PTA_AnimalShapes_TargetEffect"
+from = "Polymorph_TargetEffect"
+
+# Clone / Simulacrum
+[[effect]]
+name = "PTA_Clone_CastEffect"
+from = "Doppelganger_Shapeshift_CastEffect"
+
+[[effect]]
+name = "PTA_Clone_TargetEffect"
+from = "Polymorph_TargetEffect"
+
+# Demiplane / Maze / Mind Blank / Telepathy / Iron Body
+[[effect]]
+name = "PTA_Demiplane_TargetEffect"
+from = "Banishment_TargetEffect"
+
+[[effect]]
+name = "PTA_Maze_CastEffect"
+parts = [ { from = "Banishment_CastEffect" }, { from = "LOW_RamazithsTower_Nightsong_Banish_CastEffect", only = [2] } ]
+
+[[effect]]
+name = "PTA_Maze_TargetEffect"
+parts = [ { from = "Banishment_TargetEffect" }, { from = "PlanarBinding_TargetEffect" } ]
+
+[[effect]]
+name = "PTA_MindBlank_CastEffect"
+from = "ReadThoughts_CastEffect"
+
+[[effect]]
+name = "PTA_MindBlank_TargetEffect"
+from = "ResilientSphere_TargetEffect"
+
+[[effect]]
+name = "PTA_Telepathy_CastEffect"
+from = "DetectThoughts_CastEffect"
+
+[[effect]]
+name = "PTA_Telepathy_TargetEffect"
+from = "Dominate_Beast_TargetEffect"
+
+[[effect]]
+name = "PTA_IronBody_CastEffect"
+from = "Stoneskin_CastEffect"
+
+[[effect]]
+name = "PTA_IronBody_TargetEffect"
+parts = [ { from = "Stoneskin_TargetEffect" }, { from = "TransmuterStone_TargetEffect" } ]
+
+# Lightning Ring (Arcana Unleashed): a crackling thunder ring
+[[effect]]
+name = "PTA_LightningRing_PrepareEffect"
+from = "ChainLightning_PrepareEffect"
+
+[[effect]]
+name = "PTA_LightningRing_CastEffect"
+parts = [ { from = "LightningBolt_CastEffect" }, { from = "Generic_Thunder_AoE_CastEffect", only = [3], palette = "storm", scale = 1.4 } ]
+
+[[effect]]
+name = "PTA_LightningRing_TargetEffect"
+from = "ChainLightning_HitEffect"
+
+# Tsunami: a wall of water
+[[effect]]
+name = "PTA_Tsunami_PrepareEffect"
+from = "WintersBreath_Elemental_Water_PrepareEffect"
+
+[[effect]]
+name = "PTA_Tsunami_CastEffect"
+parts = [ { from = "ConeOfCold_CastEffect" }, { from = "WintersBreath_Elemental_Water_CastEffect" } ]
+
+# Illusory Dragon: a shadowy dragon's presence; the necrotic breath gets necrotic colours (it borrowed fire's)
+[[effect]]
+name = "PTA_IllusoryDragon_CastEffect"
+from = "FrightfulPresence_Dragon_Skeletal_CastEffect"
+palette = "shadow"
+
+[[effect]]
+name = "PTA_IllusoryDragonBreath_Necrotic_PrepareEffect"
+from = "BreathWeapon_Fire_PrepareEffect"
+palette = "deathly"
+
+[[effect]]
+name = "PTA_IllusoryDragonBreath_Necrotic_CastEffect"
+from = "BreathWeapon_Fire_Cone_CastEffect"
+palette = "deathly"
+
+[[effect]]
+name = "PTA_IllusoryDragonBreath_Necrotic_TargetEffect"
+from = "Generic_Fire_Zone_TargetEffect"
+palette = "deathly"
+
+# Power Word Stun / Glibness / Entrancing Mirrors / Antipathy
+[[effect]]
+name = "PTA_PowerWordStun_CastEffect"
+parts = [ { from = "Generic_Control_TargetSingle_CastEffect" }, { from = "MindBlast_CastEffect", only = [2], palette = "psychic" } ]
+
+[[effect]]
+name = "PTA_PowerWordStun_TargetEffect"
+parts = [ { from = "HAG_HoldPerson_TargetEffect" }, { from = "MindBlast_MindFlayer_TargetEffect" } ]
+
+[[effect]]
+name = "PTA_Glibness_PrepareEffect"
+from = "Generic_Bard_Buff_PrepareEffect"
+
+[[effect]]
+name = "PTA_Glibness_CastEffect"
+from = "Nightsong_LunarBlessing_CastEffect"
+
+[[effect]]
+name = "PTA_EntrancingMirrors_PrepareEffect"
+from = "InvokeDuplicity_PrepareEffect"
+
+[[effect]]
+name = "PTA_EntrancingMirrors_CastEffect"
+from = "InvokeDuplicity_CastEffect"
+
+[[effect]]
+name = "PTA_EntrancingMirrors_TargetEffect"
+parts = [ { from = "PhantasmalKiller_TargetEffect" }, { from = "HAG_ViciousMockery_TargetEffect" } ]
+
+[[effect]]
+name = "PTA_Antipathy_CastEffect"
+from = "Dreadful_Aspect_CastEffect"
+palette = "psychic"
+only = [1]
+
+[[effect]]
+name = "PTA_Antipathy_TargetEffect"
+from = "PlanarBinding_TargetEffect"
+
+# ======================================================================================== 7th level (better fits)
+
+[[effect]]
+name = "PTA_FireStorm_PositionEffect"
+parts = [ { from = "Flamestrike_PositionEffect", palette = "fire" }, { from = "IceStorm_PositionEffect", palette = "fire" } ]
+
+[[effect]]
+name = "PTA_FireStorm_TargetEffect"
+from = "Fireball_HitEffect"
+
+[[effect]]
+name = "PTA_FingerOfDeath_BeamEffect"
+from = "Gaze_Apostle_BeamEffect"
+palette = "deathly"
+
+[[effect]]
+name = "PTA_FingerOfDeath_TargetEffect"
+parts = [ { from = "Blight_TargetEffect" }, { from = "SoulSeize_Specter_TargetEffect" } ]
+
+[[effect]]
+name = "PTA_DelayedBlastFireball_HitEffect"
+from = "Fireball_HitEffect"
+scale = 1.4
+
+[[effect]]
+name = "PTA_DivineWord_CastEffect"
+from = "DestructiveWave_Radiant_CastEffect"
+
+[[effect]]
+name = "PTA_DivineWord_TargetEffect"
+from = "HolyRebuke_TargetEffect"
+
+[[effect]]
+name = "PTA_Forcecage_TargetEffect"
+from = "ResilientSphere_TargetEffect"
+
+[[effect]]
+name = "PTA_MirageArcane_CastEffect"
+from = "SeeInvisibility_CastEffect"
+
+[[effect]]
+name = "PTA_MirageArcane_PositionEffect"
+from = "Generic_Control_PositionEffect"
+
+[[effect]]
+name = "PTA_PlaneShift_CastEffect"
+parts = [ { from = "Banishment_CastEffect" }, { from = "LOW_RamazithsTower_Nightsong_Banish_CastEffect", only = [2] } ]
+
+[[effect]]
+name = "PTA_PowerWordFortify_CastEffect"
+from = "HealingWord_Mass_CastEffect"
+
+[[effect]]
+name = "PTA_PowerWordFortify_TargetEffect"
+from = "Heal_TargetEffect"
+
+[[effect]]
+name = "PTA_PowerWordPain_CastEffect"
+parts = [ { from = "Generic_Control_TargetSingle_CastEffect" }, { from = "MindBlast_CastEffect", only = [2], palette = "psychic" } ]
+
+[[effect]]
+name = "PTA_PowerWordPain_TargetEffect"
+from = "HAG_SinisterStrike_TargetEffect"
+palette = "psychic"
+
+[[effect]]
+name = "PTA_ReverseGravity_CastEffect"
+from = "Repulsor_CastEffect"
+only = [1, 4, 5]
+
+[[effect]]
+name = "PTA_ReverseGravity_TargetEffect"
+from = "Repulsor_TargetEffect"
+
+[[effect]]
+name = "PTA_Simulacrum_PrepareEffect"
+from = "InvokeDuplicity_PrepareEffect"
+
+[[effect]]
+name = "PTA_Simulacrum_CastEffect"
+from = "InvokeDuplicity_CastEffect"
+
+[[effect]]
+name = "PTA_Simulacrum_TargetEffect"
+from = "Polymorph_TargetEffect"
+
+[[effect]]
+name = "PTA_Symbol_PositionEffect"
+from = "Generic_Control_PositionEffect"
+
+[[effect]]
+name = "PTA_Teleport_CastEffect"
+from = "BenignTransposition_CastEffect"
+
+[[effect]]
+name = "PTA_Teleport_PositionEffect"
+from = "MistyStep_Myrmidon_PositionEffect"
+only = [9]
+
+[[effect]]
+name = "PTA_Resurrection_PrepareEffect"
+from = "Revivify_Deva_PrepareEffect"
+
+[[effect]]
+name = "PTA_Resurrection_CastEffect"
+from = "RadianceOfTheDawn_CastEffect"
+
+[[effect]]
+name = "PTA_Resurrection_TargetEffect"
+from = "Heal_TargetEffect"
+
+[[effect]]
+name = "PTA_ProjectImage_PrepareEffect"
+from = "InvokeDuplicity_PrepareEffect"
+
+[[effect]]
+name = "PTA_ProjectImage_CastEffect"
+from = "InvokeDuplicity_CastEffect"
+
+[[effect]]
+name = "PTA_ProjectImage_PositionEffect"
+from = "InvokeDuplicity_PositionEffect"
+
+[[effect]]
+name = "PTA_ConjureCelestial_PrepareEffect"
+from = "Generic_Cleric_Summon_PrepareEffect"
+
+[[effect]]
+name = "PTA_ConjureCelestial_CastEffect"
+from = "PlanarAlly_CastEffect"
+
+[[effect]]
+name = "PTA_MagnificentMansion_CastEffect"
+from = "BenignTransposition_CastEffect"

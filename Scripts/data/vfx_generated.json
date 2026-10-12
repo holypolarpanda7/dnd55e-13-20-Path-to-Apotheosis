@@ -1,0 +1,1102 @@
+{
+ "PTA_MeteorSwarm_PrepareEffect": {
+  "uuid": "7d2a72d2-1f88-5dab-8cf5-d7784467ed22",
+  "parts": [
+   "Fireball_PrepareEffect",
+   "Flamestrike_PrepareEffect"
+  ]
+ },
+ "PTA_MeteorSwarm_CastEffect": {
+  "uuid": "67c2f495-77d1-565d-b21b-5e6874cf5350",
+  "parts": [
+   "Fireball_CastEffect",
+   "Overheat_Azer_CastEffect #4"
+  ]
+ },
+ "PTA_MeteorSwarm_HitEffect": {
+  "uuid": "4f14eb65-5c4a-5cc8-a62f-25e83ba90e1e",
+  "parts": [
+   "Fireball_HitEffect x2",
+   "END_OrbOfObliteration_HitEffect",
+   "Stomp_AdamantineGolem_CastEffect fire x1.5 #2,4"
+  ]
+ },
+ "PTA_Detonate_HitEffect": {
+  "uuid": "9b9b0b1c-91a1-549a-81f6-20b992d9cb8c",
+  "parts": [
+   "END_OrbOfObliteration_HitEffect",
+   "Fireball_HitEffect x1.6"
+  ]
+ },
+ "PTA_WailOfTheBanshee_PrepareEffect": {
+  "uuid": "8d08b2c3-304e-541b-85d5-57261963edfe",
+  "parts": [
+   "MAG_Ketheric_HowlOfTheDead_PrepareEffect"
+  ]
+ },
+ "PTA_WailOfTheBanshee_CastEffect": {
+  "uuid": "b86e4fcb-79eb-596a-95d4-04301d9382d5",
+  "parts": [
+   "DestructiveWave_Necrotic_CastEffect",
+   "CallOfTheDamned_Apostle_CastEffect #1",
+   "LOW_LivingSacrifice_Slayer_CastEffect deathly #2"
+  ]
+ },
+ "PTA_WailOfTheBanshee_TargetEffect": {
+  "uuid": "ea817080-f33d-5a90-a0e5-902fd58cfc62",
+  "parts": [
+   "SoulPluck_Specter_TargetEffect",
+   "DestructiveWave_Necrotic_TargetEffect"
+  ]
+ },
+ "PTA_PowerWordKill_PrepareEffect": {
+  "uuid": "2a71f34c-86cb-5224-83c2-7f4adc05302e",
+  "parts": [
+   "Generic_Necrotic_PrepareEffect"
+  ]
+ },
+ "PTA_PowerWordKill_CastEffect": {
+  "uuid": "8cc6346d-7eea-5ae4-b08e-c8636084888d",
+  "parts": [
+   "Generic_Necrotic_TargetSingle_CastEffect",
+   "MindBlast_CastEffect deathly #2,3"
+  ]
+ },
+ "PTA_PowerWordKill_TargetEffect": {
+  "uuid": "8b6d7780-95e1-5508-a23c-1b0bb3b820cb",
+  "parts": [
+   "SoulSeize_Specter_TargetEffect",
+   "HAG_SinisterStrike_TargetEffect deathly"
+  ]
+ },
+ "PTA_GreatHeal_PrepareEffect": {
+  "uuid": "60eb825c-5618-5ad5-9424-96d0b9aded30",
+  "parts": [
+   "DivineIntervention_Healing_PrepareEffect"
+  ]
+ },
+ "PTA_PowerWordHeal_CastEffect": {
+  "uuid": "394eb119-9deb-53cc-8f82-120ccf9bde48",
+  "parts": [
+   "HealingWord_Mass_CastEffect",
+   "END_AllyAbility_IsobelHeal_CastEffect #3"
+  ]
+ },
+ "PTA_GreatHeal_TargetEffect": {
+  "uuid": "03ccb318-f19f-5d43-aed1-22fea7e20d3e",
+  "parts": [
+   "Heal_TargetEffect",
+   "END_AllyAbility_IsobelHeal_HitEffect"
+  ]
+ },
+ "PTA_MassHeal_CastEffect": {
+  "uuid": "58a14748-4019-54fb-876c-2bfbc1ac1336",
+  "parts": [
+   "DivineIntervention_Healing_CastEffect",
+   "END_AllyAbility_IsobelHeal_CastEffect x1.3 #3"
+  ]
+ },
+ "PTA_TrueResurrection_PrepareEffect": {
+  "uuid": "29508699-5c5a-5662-8e7f-9133a57fab96",
+  "parts": [
+   "Revivify_Deva_PrepareEffect"
+  ]
+ },
+ "PTA_TrueResurrection_CastEffect": {
+  "uuid": "f11524b9-39ee-5e54-bb33-1a8d9c3fb47f",
+  "parts": [
+   "RadianceOfTheDawn_CastEffect",
+   "DivineIntervention_Healing_CastEffect #1"
+  ]
+ },
+ "PTA_TrueResurrection_TargetEffect": {
+  "uuid": "d7f9709c-722f-5f44-9b68-8b213c27c405",
+  "parts": [
+   "Heal_TargetEffect",
+   "DivineIntervention_Healing_TargetEffect",
+   "END_AllyAbility_IsobelHeal_HitEffect"
+  ]
+ },
+ "PTA_TimeStop_PrepareEffect": {
+  "uuid": "58da776b-6866-5b21-9bd3-41e87755073e",
+  "parts": [
+   "ArcaneRecovery_2_PrepareEffect"
+  ]
+ },
+ "PTA_TimeStop_CastEffect": {
+  "uuid": "787e8f55-2f0f-5dc5-a74b-c3c5d9452dcd",
+  "parts": [
+   "BenignTransposition_CastEffect",
+   "MindBlast_CastEffect frost x1.6 #2,3"
+  ]
+ },
+ "PTA_TimeStop_TargetEffect": {
+  "uuid": "d1ab54b8-d8a8-5f65-a6fb-5a71389d6ed4",
+  "parts": [
+   "ResilientSphere_TargetEffect"
+  ]
+ },
+ "PTA_Wish_PrepareEffect": {
+  "uuid": "e729a8b9-9f44-52a5-96b4-def2521ebf0a",
+  "parts": [
+   "DivineIntervention_Supplies_PrepareEffect wish #3,4",
+   "DivineIntervention_Supplies_PrepareEffect #1,2,5,6,7,8,9"
+  ]
+ },
+ "PTA_Wish_CastEffect": {
+  "uuid": "7039f6e4-2bfb-5816-8881-3b25a96f27f1",
+  "parts": [
+   "DivineIntervention_Supplies_CastEffect wish #2,7",
+   "DivineIntervention_Supplies_CastEffect #1,3,4,5,6,8"
+  ]
+ },
+ "PTA_Wish_Heal_PrepareEffect": {
+  "uuid": "e2593507-c04e-5804-b83d-0d795c944a2a",
+  "parts": [
+   "DivineIntervention_Healing_PrepareEffect wish #7,33",
+   "DivineIntervention_Healing_PrepareEffect #1,2,3,4,5,6,8"
+  ]
+ },
+ "PTA_Wish_Heal_CastEffect": {
+  "uuid": "97dd973c-70a5-5cd4-8cc9-a7a72764ddd8",
+  "parts": [
+   "DivineIntervention_Healing_CastEffect wish #1,2,6",
+   "DivineIntervention_Healing_CastEffect #3,4,5,7,8"
+  ]
+ },
+ "PTA_Wish_Attack_CastEffect": {
+  "uuid": "19bd8333-3547-59e2-872f-8d0c76677850",
+  "parts": [
+   "DivineIntervention_Attack_CastEffect wish #3,4,7,8",
+   "DivineIntervention_Attack_CastEffect #1,2,5,6"
+  ]
+ },
+ "PTA_Gate_CastEffect": {
+  "uuid": "0799d355-6680-51a8-a3d6-36138f41c064",
+  "parts": [
+   "PlanarAlly_CastEffect",
+   "Banishment_CastEffect #2"
+  ]
+ },
+ "PTA_Gate_PositionEffect": {
+  "uuid": "00558c8d-b998-5d96-a97e-d4fccd9cf87d",
+  "parts": [
+   "PlanarAlly_Cambion_PositionEffect",
+   "PlanarAlly_Deva_PositionEffect"
+  ]
+ },
+ "PTA_Foresight_CastEffect": {
+  "uuid": "5aaa5d37-54cd-52aa-a683-54472010a989",
+  "parts": [
+   "SeeInvisibility_CastEffect",
+   "ArcaneRecovery_2_CastEffect radiant #8"
+  ]
+ },
+ "PTA_Foresight_TargetEffect": {
+  "uuid": "d62d2eb0-6ba9-5b41-9ca3-007601dfe24f",
+  "parts": [
+   "Dominate_Beast_TargetEffect",
+   "Bless_TargetEffect"
+  ]
+ },
+ "PTA_PrismaticWall_CastEffect": {
+  "uuid": "f6b57050-c42b-55ab-b09b-16f0e3a11127",
+  "parts": [
+   "ColorSpray_CastEffect"
+  ]
+ },
+ "PTA_PrismaticWall_PositionEffect": {
+  "uuid": "8ce416fb-bf1a-55e3-b513-9fdfeb5f5f3e",
+  "parts": [
+   "HypnoticPattern_PositionEffect",
+   "Generic_Control_PositionEffect"
+  ]
+ },
+ "PTA_AstralProjection_TargetEffect": {
+  "uuid": "fe781d59-7612-5fb3-833c-a60574871557",
+  "parts": [
+   "Banishment_TargetEffect frost x1.3"
+  ]
+ },
+ "PTA_Imprisonment_CastEffect": {
+  "uuid": "6c17f610-9025-5edb-8ee7-58a18c48f855",
+  "parts": [
+   "Banishment_CastEffect",
+   "LOW_RamazithsTower_Nightsong_Banish_CastEffect #2"
+  ]
+ },
+ "PTA_Imprisonment_TargetEffect": {
+  "uuid": "7ef8effc-bce3-536b-bade-5e767ed1eedd",
+  "parts": [
+   "WYR_ChainsOfTyranny_Gortash_TargetEffect",
+   "PlanarBinding_TargetEffect",
+   "ResilientSphere_TargetEffect arcane"
+  ]
+ },
+ "PTA_Shapechange_PrepareEffect": {
+  "uuid": "84bedd22-8805-5b20-a47b-e685a476bba0",
+  "parts": [
+   "Polymorph_GaleGod_PrepareEffect"
+  ]
+ },
+ "PTA_Shapechange_CastEffect": {
+  "uuid": "5532ee2d-f56c-5881-b5d2-57d93eaab9fe",
+  "parts": [
+   "Polymorph_GaleGod_CastEffect"
+  ]
+ },
+ "PTA_Shapechange_TargetEffect": {
+  "uuid": "0282c72b-26d5-5a3b-93cc-e01763b8fdc3",
+  "parts": [
+   "Polymorph_GaleGod_TargetEffect"
+  ]
+ },
+ "PTA_TruePolymorph_PrepareEffect": {
+  "uuid": "e60f29bb-568b-5071-99e1-0bb399cbf0fe",
+  "parts": [
+   "Polymorph_GaleGod_PrepareEffect"
+  ]
+ },
+ "PTA_TruePolymorph_CastEffect": {
+  "uuid": "84bd4e85-4df7-51dd-96b9-2fab11b1798d",
+  "parts": [
+   "PartyTime_GaleGod_CastEffect"
+  ]
+ },
+ "PTA_TruePolymorph_TargetEffect": {
+  "uuid": "cb340052-7a57-5ff8-acc7-40114ca1af6f",
+  "parts": [
+   "PartyTime_GaleGod_TargetEffect"
+  ]
+ },
+ "PTA_Weird_PrepareEffect": {
+  "uuid": "b55b34f4-ff28-577b-b549-e1754ad9c309",
+  "parts": [
+   "PhantasmalKiller_PrepareEffect"
+  ]
+ },
+ "PTA_Weird_CastEffect": {
+  "uuid": "d4ef4d6a-00c8-51b3-bbd9-351ac5937a9c",
+  "parts": [
+   "HAG_MaskOfTerror_CastEffect",
+   "Dreadful_Aspect_CastEffect psychic #1"
+  ]
+ },
+ "PTA_Weird_PositionEffect": {
+  "uuid": "a94b0ac9-773d-5aaa-a85e-759fd35bf49f",
+  "parts": [
+   "HAG_MaskOfRegret_PositionEffect"
+  ]
+ },
+ "PTA_Weird_TargetEffect": {
+  "uuid": "b2b0dcdf-647e-5114-846b-fe3f677909f0",
+  "parts": [
+   "PhantasmalKiller_TargetEffect",
+   "HAG_ViciousMockery_TargetEffect"
+  ]
+ },
+ "PTA_ElapsingEons_PrepareEffect": {
+  "uuid": "78c6d93a-e8ff-59df-821b-72bdba3892fc",
+  "parts": [
+   "KnowledgeOfTheAges_PrepareEffect"
+  ]
+ },
+ "PTA_ElapsingEons_CastEffect": {
+  "uuid": "5ac4ef09-16b9-5a50-9b17-585787885b4d",
+  "parts": [
+   "MindBlast_CastEffect radiant #2,3",
+   "KnowledgeOfTheAges_CastEffect"
+  ]
+ },
+ "PTA_ElapsingEons_TargetEffect": {
+  "uuid": "b6404b53-42a2-572d-aa88-43eb9ab8c15b",
+  "parts": [
+   "HAG_HoldPerson_TargetEffect"
+  ]
+ },
+ "PTA_Invulnerability_PrepareEffect": {
+  "uuid": "b058120a-86c2-5f4e-a069-929ded56b8d9",
+  "parts": [
+   "GuardianOfFaith_PrepareEffect"
+  ]
+ },
+ "PTA_Invulnerability_CastEffect": {
+  "uuid": "7593f961-0390-591d-b3c0-796f851ce2d7",
+  "parts": [
+   "DivineIntervention_Attack_CastEffect"
+  ]
+ },
+ "PTA_Invulnerability_TargetEffect": {
+  "uuid": "8bcd25a6-b0ac-5bd9-ac9d-29de84c30fb1",
+  "parts": [
+   "ResilientSphere_TargetEffect"
+  ]
+ },
+ "PTA_StormOfVengeance_PrepareEffect": {
+  "uuid": "f0c3871d-8b2f-5590-9a8b-bc577faf98b4",
+  "parts": [
+   "Generic_Thunder_AoE_PrepareEffect storm"
+  ]
+ },
+ "PTA_StormOfVengeance_CastEffect": {
+  "uuid": "d61f2030-e4bd-5daf-ab9c-c2494a33c0de",
+  "parts": [
+   "IceStorm_CastEffect",
+   "Generic_Thunder_AoE_CastEffect storm x2 #3",
+   "FrightfulPresence_Dragon_Skeletal_CastEffect #3"
+  ]
+ },
+ "PTA_StormOfVengeance_TargetEffect": {
+  "uuid": "86e3f2e2-7083-5716-b39e-99e27c5d5bca",
+  "parts": [
+   "ChainLightning_HitEffect"
+  ]
+ },
+ "PTA_Sunburst_PrepareEffect": {
+  "uuid": "cad86ee6-72a1-53e2-b091-7e590666755f",
+  "parts": [
+   "Sunbeam_PrepareEffect"
+  ]
+ },
+ "PTA_Sunburst_CastEffect": {
+  "uuid": "4c7bbf66-facf-5f85-a139-54173cd46b32",
+  "parts": [
+   "DivineIntervention_Attack_CastEffect"
+  ]
+ },
+ "PTA_Sunburst_PositionEffect": {
+  "uuid": "7877f617-1482-56ce-ba64-eea5abb9ae02",
+  "parts": [
+   "Flamestrike_PositionEffect radiant x1.8",
+   "Dreadful_Aspect_CastEffect radiant #1,2"
+  ]
+ },
+ "PTA_Sunburst_TargetEffect": {
+  "uuid": "0fb68ae6-d308-5f3e-867b-b39e0ef6202b",
+  "parts": [
+   "Sunbeam_TargetEffect"
+  ]
+ },
+ "PTA_Earthquake_PrepareEffect": {
+  "uuid": "f51adcfc-1df6-5347-abdf-ae37662d6e4d",
+  "parts": [
+   "Generic_Thunder_AoE_PrepareEffect earth"
+  ]
+ },
+ "PTA_Earthquake_CastEffect": {
+  "uuid": "eeed19ea-8b56-50f0-919b-51bd81dd4377",
+  "parts": [
+   "Generic_Thunder_AoE_CastEffect"
+  ]
+ },
+ "PTA_Earthquake_PositionEffect": {
+  "uuid": "8f0e8d20-8358-5026-84e0-76ed9c6a0911",
+  "parts": [
+   "Stomp_AdamantineGolem_CastEffect earth x2 #2,4",
+   "CloudKill_PositionEffect earth x1.5"
+  ]
+ },
+ "PTA_IncendiaryCloud_PrepareEffect": {
+  "uuid": "3448f583-2cbf-5005-9192-7957d90636f2",
+  "parts": [
+   "Fireball_PrepareEffect"
+  ]
+ },
+ "PTA_IncendiaryCloud_CastEffect": {
+  "uuid": "909d2c9d-7ab3-5443-bd0a-7041f02946be",
+  "parts": [
+   "Fireball_CastEffect"
+  ]
+ },
+ "PTA_IncendiaryCloud_PositionEffect": {
+  "uuid": "6eae25d6-3873-5757-ae2c-3155d4bce6aa",
+  "parts": [
+   "CloudKill_PositionEffect fire",
+   "RedDragon_Flight_PositionEffect #1"
+  ]
+ },
+ "PTA_DominateMonster_CastEffect": {
+  "uuid": "40ef4174-3fcb-510e-9a8d-7a435a4e9e92",
+  "parts": [
+   "Dominate_Beast_CastEffect",
+   "TAD_PSIONIC_DOMINANCE_CastEffect"
+  ]
+ },
+ "PTA_DominateMonster_BeamEffect": {
+  "uuid": "87846f86-5d45-5c98-a5c5-1831ab7958d7",
+  "parts": [
+   "TAD_PSIONIC_DOMINANCE_BeamEffect"
+  ]
+ },
+ "PTA_DominateMonster_TargetEffect": {
+  "uuid": "de7ee36f-e0bd-5ab8-88f2-b6f0807e0238",
+  "parts": [
+   "Dominate_Beast_TargetEffect",
+   "TAD_PSIONIC_DOMINANCE_Success_TargetEffect"
+  ]
+ },
+ "PTA_Feeblemind_PrepareEffect": {
+  "uuid": "fa79565a-5076-5d18-9d99-f733a317934d",
+  "parts": [
+   "PhantasmalKiller_PrepareEffect"
+  ]
+ },
+ "PTA_Feeblemind_CastEffect": {
+  "uuid": "3ea8bdd9-80f5-5bb0-9b86-899b5e997197",
+  "parts": [
+   "PhantasmalKiller_CastEffect",
+   "MindBlast_CastEffect psychic #2"
+  ]
+ },
+ "PTA_Feeblemind_TargetEffect": {
+  "uuid": "c9cc649b-38f1-5183-81a8-b23d8b2e00f9",
+  "parts": [
+   "PlanarBinding_TargetEffect",
+   "HAG_ViciousMockery_TargetEffect"
+  ]
+ },
+ "PTA_AntimagicField_CastEffect": {
+  "uuid": "26800387-93ab-5caf-b4a2-d0c1e279f6b3",
+  "parts": [
+   "Repulsor_CastEffect #1,4,5"
+  ]
+ },
+ "PTA_AntimagicField_TargetEffect": {
+  "uuid": "08fcf826-6cd2-594b-8098-719333a775c6",
+  "parts": [
+   "ResilientSphere_TargetEffect"
+  ]
+ },
+ "PTA_HolyAura_PrepareEffect": {
+  "uuid": "de8f5376-b242-5abc-8cd5-74129b325fa0",
+  "parts": [
+   "DivineIntervention_Supplies_PrepareEffect"
+  ]
+ },
+ "PTA_HolyAura_CastEffect": {
+  "uuid": "a0854f86-1d9f-5476-a52e-0b1c6e388072",
+  "parts": [
+   "DivineIntervention_Supplies_CastEffect"
+  ]
+ },
+ "PTA_HolyAura_TargetEffect": {
+  "uuid": "52c661ca-f37c-5c72-8132-2a139c5c3686",
+  "parts": [
+   "HealingRadiance_TargetEffect"
+  ]
+ },
+ "PTA_ControlWeather_PrepareEffect": {
+  "uuid": "e738b0cb-3693-5c77-8c80-aac30b7a307d",
+  "parts": [
+   "ChainLightning_PrepareEffect"
+  ]
+ },
+ "PTA_ControlWeather_CastEffect": {
+  "uuid": "3f5cc07b-5145-5466-a800-742b1a30de06",
+  "parts": [
+   "IceStorm_CastEffect",
+   "FrightfulPresence_Dragon_Skeletal_CastEffect #3"
+  ]
+ },
+ "PTA_AnimalShapes_TargetEffect": {
+  "uuid": "d0688a17-1a89-576d-afc9-5827e9c8a25b",
+  "parts": [
+   "Polymorph_TargetEffect"
+  ]
+ },
+ "PTA_Clone_CastEffect": {
+  "uuid": "bba709d1-87cd-5c25-8fac-c3296d08b275",
+  "parts": [
+   "Doppelganger_Shapeshift_CastEffect"
+  ]
+ },
+ "PTA_Clone_TargetEffect": {
+  "uuid": "137669b8-8a4c-53e3-8cc9-0405169c3364",
+  "parts": [
+   "Polymorph_TargetEffect"
+  ]
+ },
+ "PTA_Demiplane_TargetEffect": {
+  "uuid": "994618f5-c4aa-5082-ba18-4d1ce19e71ae",
+  "parts": [
+   "Banishment_TargetEffect"
+  ]
+ },
+ "PTA_Maze_CastEffect": {
+  "uuid": "0e43f9fb-520a-54e5-a3db-32766310afc0",
+  "parts": [
+   "Banishment_CastEffect",
+   "LOW_RamazithsTower_Nightsong_Banish_CastEffect #2"
+  ]
+ },
+ "PTA_Maze_TargetEffect": {
+  "uuid": "f1366a1c-c5e7-5d3c-af52-b4d4ce4037f3",
+  "parts": [
+   "Banishment_TargetEffect",
+   "PlanarBinding_TargetEffect"
+  ]
+ },
+ "PTA_MindBlank_CastEffect": {
+  "uuid": "9c0f24df-7218-529d-8ec1-f18cf6910169",
+  "parts": [
+   "ReadThoughts_CastEffect"
+  ]
+ },
+ "PTA_MindBlank_TargetEffect": {
+  "uuid": "7d2ad316-977a-54e6-b405-cc6a878a4d39",
+  "parts": [
+   "ResilientSphere_TargetEffect"
+  ]
+ },
+ "PTA_Telepathy_CastEffect": {
+  "uuid": "75a5e5a8-f9af-5d0f-8843-8a7820cf085c",
+  "parts": [
+   "DetectThoughts_CastEffect"
+  ]
+ },
+ "PTA_Telepathy_TargetEffect": {
+  "uuid": "dc3175cc-0ff0-5819-b102-5b5493ed7932",
+  "parts": [
+   "Dominate_Beast_TargetEffect"
+  ]
+ },
+ "PTA_IronBody_CastEffect": {
+  "uuid": "5b8bbcd0-c41c-5e7f-8316-9dc7f45dff99",
+  "parts": [
+   "Stoneskin_CastEffect"
+  ]
+ },
+ "PTA_IronBody_TargetEffect": {
+  "uuid": "0b1eb688-61be-5c85-a154-ec8ee3c644ea",
+  "parts": [
+   "Stoneskin_TargetEffect",
+   "TransmuterStone_TargetEffect"
+  ]
+ },
+ "PTA_LightningRing_PrepareEffect": {
+  "uuid": "a8bef7f3-4a8a-5fd2-86b3-d3f5eda9db9c",
+  "parts": [
+   "ChainLightning_PrepareEffect"
+  ]
+ },
+ "PTA_LightningRing_CastEffect": {
+  "uuid": "12d85062-b886-5a5c-a1e1-1d06bc8f5c07",
+  "parts": [
+   "LightningBolt_CastEffect",
+   "Generic_Thunder_AoE_CastEffect storm x1.4 #3"
+  ]
+ },
+ "PTA_LightningRing_TargetEffect": {
+  "uuid": "ac1d1891-c3ea-5ec0-a113-12a2867dc48c",
+  "parts": [
+   "ChainLightning_HitEffect"
+  ]
+ },
+ "PTA_Tsunami_PrepareEffect": {
+  "uuid": "f3a29b1e-be04-53cd-bfb6-cf25c4e98f8b",
+  "parts": [
+   "WintersBreath_Elemental_Water_PrepareEffect"
+  ]
+ },
+ "PTA_Tsunami_CastEffect": {
+  "uuid": "fdbb28e9-1875-564d-8d97-ed97b8c8521d",
+  "parts": [
+   "ConeOfCold_CastEffect",
+   "WintersBreath_Elemental_Water_CastEffect"
+  ]
+ },
+ "PTA_IllusoryDragon_CastEffect": {
+  "uuid": "1d78cf07-7641-5ac2-ac2c-9ecd0b46a51f",
+  "parts": [
+   "FrightfulPresence_Dragon_Skeletal_CastEffect shadow"
+  ]
+ },
+ "PTA_IllusoryDragonBreath_Necrotic_PrepareEffect": {
+  "uuid": "4af1d106-4d6c-5487-9908-2935330e9f6e",
+  "parts": [
+   "BreathWeapon_Fire_PrepareEffect deathly"
+  ]
+ },
+ "PTA_IllusoryDragonBreath_Necrotic_CastEffect": {
+  "uuid": "6fc7c07f-0c06-5574-8b3d-b31d78f807c9",
+  "parts": [
+   "BreathWeapon_Fire_Cone_CastEffect deathly"
+  ]
+ },
+ "PTA_IllusoryDragonBreath_Necrotic_TargetEffect": {
+  "uuid": "269d8ae0-70ef-5d6c-aa44-81a1afc6cc49",
+  "parts": [
+   "Generic_Fire_Zone_TargetEffect deathly"
+  ]
+ },
+ "PTA_PowerWordStun_CastEffect": {
+  "uuid": "e27fa05f-eb85-59b3-95f3-f0cd35c4aa05",
+  "parts": [
+   "Generic_Control_TargetSingle_CastEffect",
+   "MindBlast_CastEffect psychic #2"
+  ]
+ },
+ "PTA_PowerWordStun_TargetEffect": {
+  "uuid": "e0ec0d35-b359-5613-b69c-eb9a81212dae",
+  "parts": [
+   "HAG_HoldPerson_TargetEffect",
+   "MindBlast_MindFlayer_TargetEffect"
+  ]
+ },
+ "PTA_Glibness_PrepareEffect": {
+  "uuid": "c1800f43-0f5f-5ada-b0b3-e387878ec685",
+  "parts": [
+   "Generic_Bard_Buff_PrepareEffect"
+  ]
+ },
+ "PTA_Glibness_CastEffect": {
+  "uuid": "2ac03ab1-8138-5fd9-87b6-7b1830fd3b17",
+  "parts": [
+   "Nightsong_LunarBlessing_CastEffect"
+  ]
+ },
+ "PTA_EntrancingMirrors_PrepareEffect": {
+  "uuid": "3ccf8cd1-8358-58a2-92fd-fe95a36e1ffc",
+  "parts": [
+   "InvokeDuplicity_PrepareEffect"
+  ]
+ },
+ "PTA_EntrancingMirrors_CastEffect": {
+  "uuid": "b694ba6c-333c-5312-8d4a-23a9a3d5aa32",
+  "parts": [
+   "InvokeDuplicity_CastEffect"
+  ]
+ },
+ "PTA_EntrancingMirrors_TargetEffect": {
+  "uuid": "cd7baed6-2530-556c-bf6e-e1e3ca2e45a2",
+  "parts": [
+   "PhantasmalKiller_TargetEffect",
+   "HAG_ViciousMockery_TargetEffect"
+  ]
+ },
+ "PTA_Antipathy_CastEffect": {
+  "uuid": "f94bf39e-86cb-571d-9a68-c2b2b1a29693",
+  "parts": [
+   "Dreadful_Aspect_CastEffect psychic #1"
+  ]
+ },
+ "PTA_Antipathy_TargetEffect": {
+  "uuid": "c17afc91-834f-5872-be01-e1f4f3a1e7eb",
+  "parts": [
+   "PlanarBinding_TargetEffect"
+  ]
+ },
+ "PTA_FireStorm_PositionEffect": {
+  "uuid": "9c94d575-60c5-599d-8595-89663bfae0bc",
+  "parts": [
+   "Flamestrike_PositionEffect fire",
+   "IceStorm_PositionEffect fire"
+  ]
+ },
+ "PTA_FireStorm_TargetEffect": {
+  "uuid": "3fd4c5a8-6f9a-5f4f-8cb5-37e1e11e697a",
+  "parts": [
+   "Fireball_HitEffect"
+  ]
+ },
+ "PTA_FingerOfDeath_BeamEffect": {
+  "uuid": "95baa868-e566-5a43-8e51-7956ed8ce872",
+  "parts": [
+   "Gaze_Apostle_BeamEffect deathly"
+  ]
+ },
+ "PTA_FingerOfDeath_TargetEffect": {
+  "uuid": "13899f90-875d-55e2-a632-8c5d2bf08d79",
+  "parts": [
+   "Blight_TargetEffect",
+   "SoulSeize_Specter_TargetEffect"
+  ]
+ },
+ "PTA_DelayedBlastFireball_HitEffect": {
+  "uuid": "dda2bc27-2b9f-5ebf-bd4c-67d4693ae133",
+  "parts": [
+   "Fireball_HitEffect x1.4"
+  ]
+ },
+ "PTA_DivineWord_CastEffect": {
+  "uuid": "ca07b2f0-c7d8-563a-8bae-9f4273247246",
+  "parts": [
+   "DestructiveWave_Radiant_CastEffect"
+  ]
+ },
+ "PTA_DivineWord_TargetEffect": {
+  "uuid": "2347636a-437a-58e7-9a9c-99c1cb8e3053",
+  "parts": [
+   "HolyRebuke_TargetEffect"
+  ]
+ },
+ "PTA_Forcecage_TargetEffect": {
+  "uuid": "cda2ef75-2dfb-51e4-b3c8-9605c156ac47",
+  "parts": [
+   "ResilientSphere_TargetEffect"
+  ]
+ },
+ "PTA_MirageArcane_CastEffect": {
+  "uuid": "4614c11e-2622-52e7-abb3-9bb405f2fea6",
+  "parts": [
+   "SeeInvisibility_CastEffect"
+  ]
+ },
+ "PTA_MirageArcane_PositionEffect": {
+  "uuid": "164ea108-b29e-5a14-9bc0-d3bb941bf92e",
+  "parts": [
+   "Generic_Control_PositionEffect"
+  ]
+ },
+ "PTA_PlaneShift_CastEffect": {
+  "uuid": "dc42364a-67f7-5d38-9221-f94b1f12d729",
+  "parts": [
+   "Banishment_CastEffect",
+   "LOW_RamazithsTower_Nightsong_Banish_CastEffect #2"
+  ]
+ },
+ "PTA_PowerWordFortify_CastEffect": {
+  "uuid": "6bb67cbd-b2c6-5f64-b120-644c3899d21e",
+  "parts": [
+   "HealingWord_Mass_CastEffect"
+  ]
+ },
+ "PTA_PowerWordFortify_TargetEffect": {
+  "uuid": "296385e2-b659-5c2e-a733-80de2791a682",
+  "parts": [
+   "Heal_TargetEffect"
+  ]
+ },
+ "PTA_PowerWordPain_CastEffect": {
+  "uuid": "85582daa-dcc2-5672-85d7-c06dec4afdcc",
+  "parts": [
+   "Generic_Control_TargetSingle_CastEffect",
+   "MindBlast_CastEffect psychic #2"
+  ]
+ },
+ "PTA_PowerWordPain_TargetEffect": {
+  "uuid": "32064b5b-20e9-50d6-8a3e-6c379d1c9e1d",
+  "parts": [
+   "HAG_SinisterStrike_TargetEffect psychic"
+  ]
+ },
+ "PTA_ReverseGravity_CastEffect": {
+  "uuid": "366ae316-af6c-5986-87e2-c6562236e811",
+  "parts": [
+   "Repulsor_CastEffect #1,4,5"
+  ]
+ },
+ "PTA_ReverseGravity_TargetEffect": {
+  "uuid": "ad0d45cd-f03f-593a-ae2b-b50afad9acf5",
+  "parts": [
+   "Repulsor_TargetEffect"
+  ]
+ },
+ "PTA_Simulacrum_PrepareEffect": {
+  "uuid": "4e88906a-257e-50f5-8208-95926baa5a6f",
+  "parts": [
+   "InvokeDuplicity_PrepareEffect"
+  ]
+ },
+ "PTA_Simulacrum_CastEffect": {
+  "uuid": "8064fb6d-40b1-52d2-ac8e-0a37675d18cd",
+  "parts": [
+   "InvokeDuplicity_CastEffect"
+  ]
+ },
+ "PTA_Simulacrum_TargetEffect": {
+  "uuid": "09a77072-e1d5-53e1-bdf2-74555472db05",
+  "parts": [
+   "Polymorph_TargetEffect"
+  ]
+ },
+ "PTA_Symbol_PositionEffect": {
+  "uuid": "71f6dcfe-da03-51bf-84f4-9723bc34695b",
+  "parts": [
+   "Generic_Control_PositionEffect"
+  ]
+ },
+ "PTA_Teleport_CastEffect": {
+  "uuid": "a51e6830-94d7-5303-b781-e5328483ed09",
+  "parts": [
+   "BenignTransposition_CastEffect"
+  ]
+ },
+ "PTA_Teleport_PositionEffect": {
+  "uuid": "d5f270ab-c552-5b7b-92d6-fbe341ce2224",
+  "parts": [
+   "MistyStep_Myrmidon_PositionEffect #9"
+  ]
+ },
+ "PTA_Resurrection_PrepareEffect": {
+  "uuid": "067a7fbb-77cf-5b69-8fc3-1c97c7a400bc",
+  "parts": [
+   "Revivify_Deva_PrepareEffect"
+  ]
+ },
+ "PTA_Resurrection_CastEffect": {
+  "uuid": "ae99df93-0a17-5591-b720-14065436b2cb",
+  "parts": [
+   "RadianceOfTheDawn_CastEffect"
+  ]
+ },
+ "PTA_Resurrection_TargetEffect": {
+  "uuid": "0b186afd-8d70-5a09-a1ba-4f4e6875b627",
+  "parts": [
+   "Heal_TargetEffect"
+  ]
+ },
+ "PTA_ProjectImage_PrepareEffect": {
+  "uuid": "4f0a1855-f6eb-5716-8846-bacadf295aab",
+  "parts": [
+   "InvokeDuplicity_PrepareEffect"
+  ]
+ },
+ "PTA_ProjectImage_CastEffect": {
+  "uuid": "5b3b0554-240b-552b-9df0-f71f02291868",
+  "parts": [
+   "InvokeDuplicity_CastEffect"
+  ]
+ },
+ "PTA_ProjectImage_PositionEffect": {
+  "uuid": "52c726a1-1802-528e-8eee-a412cae9b8ce",
+  "parts": [
+   "InvokeDuplicity_PositionEffect"
+  ]
+ },
+ "PTA_ConjureCelestial_PrepareEffect": {
+  "uuid": "c623b7fc-9fc8-50b7-ad18-99405cde0e5a",
+  "parts": [
+   "Generic_Cleric_Summon_PrepareEffect"
+  ]
+ },
+ "PTA_ConjureCelestial_CastEffect": {
+  "uuid": "b338700e-25ed-53b7-8006-5205c8eb283f",
+  "parts": [
+   "PlanarAlly_CastEffect"
+  ]
+ },
+ "PTA_MagnificentMansion_CastEffect": {
+  "uuid": "94170dbd-1a81-5076-9dc5-124cc556c39c",
+  "parts": [
+   "BenignTransposition_CastEffect"
+  ]
+ },
+ "_files": [
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/7d2a72d2-1f88-5dab-8cf5-d7784467ed22.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/67c2f495-77d1-565d-b21b-5e6874cf5350.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/4f14eb65-5c4a-5cc8-a62f-25e83ba90e1e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/9b9b0b1c-91a1-549a-81f6-20b992d9cb8c.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/8d08b2c3-304e-541b-85d5-57261963edfe.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/b86e4fcb-79eb-596a-95d4-04301d9382d5.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/ea817080-f33d-5a90-a0e5-902fd58cfc62.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/2a71f34c-86cb-5224-83c2-7f4adc05302e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/8cc6346d-7eea-5ae4-b08e-c8636084888d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/8b6d7780-95e1-5508-a23c-1b0bb3b820cb.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/60eb825c-5618-5ad5-9424-96d0b9aded30.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/394eb119-9deb-53cc-8f82-120ccf9bde48.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/03ccb318-f19f-5d43-aed1-22fea7e20d3e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/58a14748-4019-54fb-876c-2bfbc1ac1336.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/29508699-5c5a-5662-8e7f-9133a57fab96.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/f11524b9-39ee-5e54-bb33-1a8d9c3fb47f.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/d7f9709c-722f-5f44-9b68-8b213c27c405.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/58da776b-6866-5b21-9bd3-41e87755073e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/787e8f55-2f0f-5dc5-a74b-c3c5d9452dcd.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/d1ab54b8-d8a8-5f65-a6fb-5a71389d6ed4.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/e729a8b9-9f44-52a5-96b4-def2521ebf0a.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/7039f6e4-2bfb-5816-8881-3b25a96f27f1.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/e2593507-c04e-5804-b83d-0d795c944a2a.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/97dd973c-70a5-5cd4-8cc9-a7a72764ddd8.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/19bd8333-3547-59e2-872f-8d0c76677850.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/0799d355-6680-51a8-a3d6-36138f41c064.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/00558c8d-b998-5d96-a97e-d4fccd9cf87d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/5aaa5d37-54cd-52aa-a683-54472010a989.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/d62d2eb0-6ba9-5b41-9ca3-007601dfe24f.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/f6b57050-c42b-55ab-b09b-16f0e3a11127.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/8ce416fb-bf1a-55e3-b513-9fdfeb5f5f3e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/fe781d59-7612-5fb3-833c-a60574871557.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/6c17f610-9025-5edb-8ee7-58a18c48f855.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/7ef8effc-bce3-536b-bade-5e767ed1eedd.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/84bedd22-8805-5b20-a47b-e685a476bba0.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/5532ee2d-f56c-5881-b5d2-57d93eaab9fe.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/0282c72b-26d5-5a3b-93cc-e01763b8fdc3.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/e60f29bb-568b-5071-99e1-0bb399cbf0fe.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/84bd4e85-4df7-51dd-96b9-2fab11b1798d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/cb340052-7a57-5ff8-acc7-40114ca1af6f.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/b55b34f4-ff28-577b-b549-e1754ad9c309.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/d4ef4d6a-00c8-51b3-bbd9-351ac5937a9c.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/a94b0ac9-773d-5aaa-a85e-759fd35bf49f.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/b2b0dcdf-647e-5114-846b-fe3f677909f0.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/78c6d93a-e8ff-59df-821b-72bdba3892fc.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/5ac4ef09-16b9-5a50-9b17-585787885b4d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/b6404b53-42a2-572d-aa88-43eb9ab8c15b.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/b058120a-86c2-5f4e-a069-929ded56b8d9.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/7593f961-0390-591d-b3c0-796f851ce2d7.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/8bcd25a6-b0ac-5bd9-ac9d-29de84c30fb1.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/f0c3871d-8b2f-5590-9a8b-bc577faf98b4.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/d61f2030-e4bd-5daf-ab9c-c2494a33c0de.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/86e3f2e2-7083-5716-b39e-99e27c5d5bca.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/cad86ee6-72a1-53e2-b091-7e590666755f.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/4c7bbf66-facf-5f85-a139-54173cd46b32.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/7877f617-1482-56ce-ba64-eea5abb9ae02.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/0fb68ae6-d308-5f3e-867b-b39e0ef6202b.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/f51adcfc-1df6-5347-abdf-ae37662d6e4d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/eeed19ea-8b56-50f0-919b-51bd81dd4377.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/8f0e8d20-8358-5026-84e0-76ed9c6a0911.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/3448f583-2cbf-5005-9192-7957d90636f2.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/909d2c9d-7ab3-5443-bd0a-7041f02946be.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/6eae25d6-3873-5757-ae2c-3155d4bce6aa.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/40ef4174-3fcb-510e-9a8d-7a435a4e9e92.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/87846f86-5d45-5c98-a5c5-1831ab7958d7.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/de7ee36f-e0bd-5ab8-88f2-b6f0807e0238.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/fa79565a-5076-5d18-9d99-f733a317934d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/3ea8bdd9-80f5-5bb0-9b86-899b5e997197.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/c9cc649b-38f1-5183-81a8-b23d8b2e00f9.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/26800387-93ab-5caf-b4a2-d0c1e279f6b3.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/08fcf826-6cd2-594b-8098-719333a775c6.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/de8f5376-b242-5abc-8cd5-74129b325fa0.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/a0854f86-1d9f-5476-a52e-0b1c6e388072.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/52c661ca-f37c-5c72-8132-2a139c5c3686.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/e738b0cb-3693-5c77-8c80-aac30b7a307d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/3f5cc07b-5145-5466-a800-742b1a30de06.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/d0688a17-1a89-576d-afc9-5827e9c8a25b.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/bba709d1-87cd-5c25-8fac-c3296d08b275.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/137669b8-8a4c-53e3-8cc9-0405169c3364.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/994618f5-c4aa-5082-ba18-4d1ce19e71ae.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/0e43f9fb-520a-54e5-a3db-32766310afc0.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/f1366a1c-c5e7-5d3c-af52-b4d4ce4037f3.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/9c0f24df-7218-529d-8ec1-f18cf6910169.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/7d2ad316-977a-54e6-b405-cc6a878a4d39.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/75a5e5a8-f9af-5d0f-8843-8a7820cf085c.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/dc3175cc-0ff0-5819-b102-5b5493ed7932.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/5b8bbcd0-c41c-5e7f-8316-9dc7f45dff99.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/0b1eb688-61be-5c85-a154-ec8ee3c644ea.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/a8bef7f3-4a8a-5fd2-86b3-d3f5eda9db9c.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/12d85062-b886-5a5c-a1e1-1d06bc8f5c07.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/ac1d1891-c3ea-5ec0-a113-12a2867dc48c.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/f3a29b1e-be04-53cd-bfb6-cf25c4e98f8b.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/fdbb28e9-1875-564d-8d97-ed97b8c8521d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/1d78cf07-7641-5ac2-ac2c-9ecd0b46a51f.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/4af1d106-4d6c-5487-9908-2935330e9f6e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/6fc7c07f-0c06-5574-8b3d-b31d78f807c9.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/269d8ae0-70ef-5d6c-aa44-81a1afc6cc49.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/e27fa05f-eb85-59b3-95f3-f0cd35c4aa05.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/e0ec0d35-b359-5613-b69c-eb9a81212dae.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/c1800f43-0f5f-5ada-b0b3-e387878ec685.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/2ac03ab1-8138-5fd9-87b6-7b1830fd3b17.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/3ccf8cd1-8358-58a2-92fd-fe95a36e1ffc.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/b694ba6c-333c-5312-8d4a-23a9a3d5aa32.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/cd7baed6-2530-556c-bf6e-e1e3ca2e45a2.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/f94bf39e-86cb-571d-9a68-c2b2b1a29693.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/c17afc91-834f-5872-be01-e1f4f3a1e7eb.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/9c94d575-60c5-599d-8595-89663bfae0bc.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/3fd4c5a8-6f9a-5f4f-8cb5-37e1e11e697a.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/95baa868-e566-5a43-8e51-7956ed8ce872.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/13899f90-875d-55e2-a632-8c5d2bf08d79.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/dda2bc27-2b9f-5ebf-bd4c-67d4693ae133.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/ca07b2f0-c7d8-563a-8bae-9f4273247246.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/2347636a-437a-58e7-9a9c-99c1cb8e3053.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/cda2ef75-2dfb-51e4-b3c8-9605c156ac47.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/4614c11e-2622-52e7-abb3-9bb405f2fea6.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/164ea108-b29e-5a14-9bc0-d3bb941bf92e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/dc42364a-67f7-5d38-9221-f94b1f12d729.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/6bb67cbd-b2c6-5f64-b120-644c3899d21e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/296385e2-b659-5c2e-a733-80de2791a682.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/85582daa-dcc2-5672-85d7-c06dec4afdcc.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/32064b5b-20e9-50d6-8a3e-6c379d1c9e1d.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/366ae316-af6c-5986-87e2-c6562236e811.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/ad0d45cd-f03f-593a-ae2b-b50afad9acf5.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/4e88906a-257e-50f5-8208-95926baa5a6f.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/8064fb6d-40b1-52d2-ac8e-0a37675d18cd.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/09a77072-e1d5-53e1-bdf2-74555472db05.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/71f6dcfe-da03-51bf-84f4-9723bc34695b.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/a51e6830-94d7-5303-b781-e5328483ed09.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/d5f270ab-c552-5b7b-92d6-fbe341ce2224.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/067a7fbb-77cf-5b69-8fc3-1c97c7a400bc.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/ae99df93-0a17-5591-b720-14065436b2cb.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/0b186afd-8d70-5a09-a1ba-4f4e6875b627.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/4f0a1855-f6eb-5716-8846-bacadf295aab.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/5b3b0554-240b-552b-9df0-f71f02291868.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/52c726a1-1802-528e-8eee-a412cae9b8ce.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/c623b7fc-9fc8-50b7-ad18-99405cde0e5a.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/b338700e-25ed-53b7-8006-5205c8eb283f.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/94170dbd-1a81-5076-9dc5-124cc556c39c.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_Impact_01_S200.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_BodyFX_Overlay_01_S200.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_AdamantineGolem_Stomp_Root_01_Fire_S150.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_AdamantineGolem_Stomp_Root_Textkey_01_Fire_S150.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_Impact_01_S160.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_BodyFX_Overlay_01_S160.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_LOW_Slayer_Cast_LivingSacrifice_Root_Textkey_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_MindFlayer_MindBlast_CastFX_Textkey_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_Hag_SinisterStrike_Impact_BodyFX_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Healing_TargetAoE_IsobelHeal_Root_Textkey_01_S130.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_MindFlayer_MindBlast_CastFX_Textkey_01_Frost_S160.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Intent_Buff_Bless_BodyFX_Textkey_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Cleric_CastFX_Textkey_02_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Cleric_ShoutSelf_DivineIntervention_Supplies_CastFX_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Cleric_ShoutSelf_DivineIntervention_Supplies_Root_Textkey_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Intent_Healing_DivineIntervention_Healing_Root_Textkey_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Intent_Healing_DivineIntervention_Healing_HandFX_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Healing_ShoutAoE_DivineIntervention_Healing_Root_Textkey_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Healing_ShoutAoE_DivineIntervention_Healing_CastFX_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Healing_ShoutAoE_DivineIntervention_Healing_CastFX_Textkey_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Radiant_DivineIntervention_Attack_CastFX_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Radiant_DivineIntervention_Attack_CastFX_Textkey_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Radiant_DivineIntervention_Attack_Root_Textkey_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Radiant_DivineIntervention_Attack_BodyFX_Textkey_01_Wish.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Control_TargetSingle_Impact_Root_Textkey_01_Frost_S130.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Control_TargetSingle_Impact_BodyFX_Textkey_01_Frost_S130.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Control_TargetSingle_Banishment_BodyFX_Impact_Textkey_01_Frost_S130.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Control_TargetSingle_Banishment_BodyFX_Impact_01_Frost_S130.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Wizard_Utility_ShoutSelf_Cast_BodyFX_01_Arcane.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Wizard_Utility_ShoutSelf_Root_01_Arcane.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Wizard_Utility_ShoutSelf_Impact_EyeFX_01_Arcane.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Wizard_Utility_ShoutSelf_Impact_EyeFX_02_Arcane.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Wizard_Utility_ShoutSelf_Cast_HandFX_Overlay_01_Arcane.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Wizard_Utility_ShoutSelf_Cast_HandFX_Overlay_02_Arcane.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Wizard_Utility_ShoutSelf_CastFX_01_Arcane.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Paladin_ShoutAoE_DreadfulAspect_Impact_Texkey_01_Psychic.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_MindFlayer_MindBlast_CastFX_Textkey_01_Radiant.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Thunder_R_HandFX_01_Storm.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Thunder_R_HandFX_Textkey_01_Storm.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Thunder_Root_Textkey_01_Storm.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Thunder_Generic_EyeFX_02_Storm.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Thunder_ZoneSquare_Root_Textkey_01_Storm_S200.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Cleric_TargetAoE_FlameStrike_TextKey_01_Radiant_S180.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Buff_TargetAoE_Bless_Impact_Textkey_01_Radiant_S180.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Paladin_ShoutAoE_DreadfulAspect_Impact_Texkey_01_Radiant.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Paladin_ShoutAoE_DreadfulAspect_Impact_01_Radiant.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Thunder_R_HandFX_01_Earth.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Thunder_R_HandFX_Textkey_01_Earth.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Thunder_Root_Textkey_01_Earth.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Thunder_R_HandFX_Overlay_01_Earth.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Thunder_L_HandFX_Overlay_01_Earth.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Thunder_Generic_EyeFX_01_Earth.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Thunder_Generic_EyeFX_02_Earth.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_AdamantineGolem_Stomp_Root_01_Earth_S200.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_AdamantineGolem_Stomp_Root_Textkey_01_Earth_S200.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Control_TargetAoE_Impact_Textkey_01_Earth_S150.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Poison_TargetAoE_CloudKill_Impact_Textkey_01_Earth_S150.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Control_TargetAoE_Impact_Textkey_01_Fire.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Poison_TargetAoE_CloudKill_Impact_Textkey_01_Fire.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_MindFlayer_MindBlast_CastFX_Textkey_01_Psychic.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Thunder_ZoneSquare_Root_Textkey_01_Storm_S140.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_DragonSkeletal_FrightfulPresence_MouthFX_Textkey_01_Shadow.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_DragonSkeletal_FrightfulPresence_Root_Textkey_01_Shadow.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Fire_BreathWeapon_MouthFX_Textkey_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fire_Zone_BreathWeapon_MouthFX_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fire_Zone_BreathWeapon_FireCone_CastFX_Textkey_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fire_Generic_Impact_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fire_BodyFX_Overlay_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Cleric_TargetAoE_FlameStrike_TextKey_01_Fire.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Intent_Buff_TargetAoE_Bless_Impact_Textkey_01_Fire.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Cold_TargetAoE_IceStorm_Position_01_Fire.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Cold_TargetAoE_IceStorm_Position_Textkey_01_Fire.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_Apostle_Gaze_Beam_EyeFX_Textkey_01_Deathly.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_Impact_01_S140.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_BodyFX_Overlay_01_S140.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_Hag_SinisterStrike_Impact_BodyFX_01_Psychic.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Content/[PAK]_PTA_VFX/_merged.lsf"
+ ]
+}
