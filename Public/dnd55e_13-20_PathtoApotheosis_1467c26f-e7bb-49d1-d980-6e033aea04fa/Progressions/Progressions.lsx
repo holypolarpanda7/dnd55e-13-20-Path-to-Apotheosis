@@ -34,6 +34,7 @@
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="true"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice10,1,0)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(b9543135-eceb-4ca9-b9fc-43befc11de3b,1,WeaponMasteryList)"/>
                     <attribute id="Level" type="uint8" value="16"/>
                     <attribute id="Name" type="LSString" value="Fighter"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -4490,14 +4491,6 @@
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="fe1319a2-86be-469c-aab5-e3b0bd714e0e"/>
                     <attribute id="UUID" type="guid" value="6529f282-ed21-5ab7-b67a-343f463e0a06"/>
-                </node>
-                <node id="Progression">
-                    <attribute id="Level" type="uint8" value="16"/>
-                    <attribute id="Name" type="LSString" value="Fighter"/>
-                    <attribute id="ProgressionType" type="uint8" value="0"/>
-                    <attribute id="Selectors" type="LSString" value="SelectPassives(b9543135-eceb-4ca9-b9fc-43befc11de3b,1,WeaponMasteryList)"/>
-                    <attribute id="TableUUID" type="guid" value="ba4e707e-4bbd-4630-963b-ce2f2947f971"/>
-                    <attribute id="UUID" type="guid" value="89d0f166-9b58-5504-b3e9-8094d304d5bf"/>
                 </node>
                 <!-- CLASS RESOURCES 13-20 END -->
             </children>

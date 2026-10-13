@@ -654,6 +654,19 @@
                     <attribute id="UUID" type="guid" value="481f7180-1422-5a40-b220-2af51a26b132"/>
                 </node>
                 <!-- PORTAL JUMPER 2026-10-10 END -->
+                <!-- ARTIFICER PLANS 14 BEGIN (generated) -->
+                <node id="ActionResourceDefinition">
+                    <attribute id="DisplayName" type="TranslatedString" handle="h9d539d1db0925d7fb8efac6bb49a54b3" version="1"/>
+                    <attribute id="Description" type="TranslatedString" handle="hdfca4126c2345ccca9ff97ddb4f1ea97" version="1"/>
+                    <attribute id="IsHidden" type="bool" value="false"/>
+                    <attribute id="MaxLevel" type="uint32" value="0"/>
+                    <attribute id="MaxValue" type="uint32" value="3"/>
+                    <attribute id="Name" type="FixedString" value="ApoRamRing"/>
+                    <attribute id="ReplenishType" type="FixedString" value="Rest"/>
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true"/>
+                    <attribute id="UUID" type="guid" value="bc017ac7-3692-5640-9cf4-a324db276d1d"/>
+                </node>
+                <!-- ARTIFICER PLANS 14 END -->
             </children>
         </node>
     </region>

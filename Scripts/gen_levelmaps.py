@@ -33,6 +33,12 @@ ADD = {  # series name -> {level: value} (2024 rules)
     "HaloOfSpores": {14: "1d10"},                              # TCoE: 1d10 at 14
     "BreathWeapon": {17: "4d10"},                              # Dragonborn 2024: 4d10 at 17
     "D8CantripCleric": {13: "3d8", 18: "4d8"},                 # only Divine Spark uses it (PHB 2024: 1d8, +1 die at 7, 13, 18; see FIX)
+    # Way of the Four Elements disciplines (user decision 2026-10-13: extend): the 2014 PHB lets a monk spend one more ki per
+    # discipline at 13 and 17 (3, 4, 5, 6 ki at 5, 9, 13, 17), i.e. one more die / ray / target; base/dnd55e stop at the level 9 step
+    "BurningHands_Monk": {13: "5d6", 17: "6d6"}, "FistOfUnbrokenAir": {13: "5d10", 17: "6d10"}, "Shatter_Monk": {13: "5d8", 17: "6d8"},
+    "Thunderwave_Monk": {13: "4d8", 17: "5d8"}, "WaterWhip": {13: "5d10", 17: "6d10"},
+    "RayOfFrost_Monk": {13: "3d10", 17: "4d10"}, "ShockingGrasp_Monk": {13: "3d10", 17: "4d10"},
+    "ScorchingRay_Monk": {13: "5", 17: "6"}, "HoldPerson_Monk": {13: "3", 17: "4"},
     "RageDamageDice": {16: "4d6"},                             # World Tree Life-Giving Force: d6s equal to the Rage Damage (+4 at 16)
     "VenomousStrike": {13: "7d8", 15: "8d8", 17: "9d8", 19: "10d8"},   # Sneak Attack as Poison d8s: as many dice as Sneak Attack
 }

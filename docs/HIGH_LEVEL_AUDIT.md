@@ -43,18 +43,37 @@ How it was done, and how to repeat it:
 All of these are per-level node boosts (or the dnd55e passive extended with itself, re-read at each regen), so they apply at the
 level-up and survive dnd55e updates. Generators: `gen_class_resources.py`, `gen_levelmaps.py`, `gen_hit_dice.py`.
 
-## Needs a decision or a source
+## Decided 2026-10-13 and done
 
-- **Experimental Elixir potency at 15** (Healing 4d8, Speed +20 ft, Resilience 8 hours, Boldness, Flight 30 ft): the elixirs are items
-  summoned into the inventory per tier (`Shout_EE_*`); a 15+ tier needs new item templates.
-- **Way of the Four Elements disciplines** (Burning Hands, Fist of Unbroken Air, Shatter, Thunderwave, Water Whip, Ray of Frost,
-  Shocking Grasp, Scorching Ray, Hold Person; level maps `*_Monk`, `FistOfUnbrokenAir`, `WaterWhip`): dnd55e steps them at 9; the 2014
-  PHB lets monks spend one more ki at 13 and 17 (a die or ray more). Not in the library, so from memory: not changed.
-- **Wild Shape**: forms' damage dice (`WildShapeDamageLow/Medium`, 1d8 / 1d10 at 12) and the CR limit (Druid level / 3) are capped at
-  12 in dnd55e; unchecked in game.
-- **Wizard / Illusion summons** (`Target_SummonBeast_*_Illusion`, `Target_SummonFey_Illusion`) have the same band-to-11 shape as the
-  companions; not changed (rules text not checked).
-- **Artificer plans**: plans known 7 at 14 and 8 at 18, and the 14+ plan list, aren't modelled (dnd55e unlocks plans by tier up to 10).
+- **Way of the Four Elements disciplines** (user: extend): the `*_Monk` level maps get the two further steps the 2014 PHB gives
+  (3, 4, 5, 6 ki at Monk 5, 9, 13, 17): Burning Hands 5d6 / 6d6, Fist of Unbroken Air and Water Whip 5d10 / 6d10, Shatter 5d8 / 6d8,
+  Thunderwave 4d8 / 5d8, Ray of Frost and Shocking Grasp 3d10 / 4d10, Scorching Ray 5 / 6 rays, Hold Person 3 / 4 targets at 13 / 17.
+  Sun Soul's Searing Arc Strike gets spell levels 6-9 (8d6-11d6, 7-10 ki) at Monk 14, 16, 18, 20.
+- **Artificer plans** (user: model and implement): dnd55e has no plans-known choice (every plan is available at its level), so "plans
+  known 7 / 8" needs nothing. The level 14 list is added (`gen_artificer_plans.py`): Armor +2 (the +1 status becomes +2), Flame Tongue
+  (+2d6 Fire), Arrow-Catching Shield (a flat +2 AC: the engine has no AC bonus per attack type), Ring of the Ram (three charges,
+  2d10 Force and a push per charge, an attack against a creature in sight). The learn-repeatedly "Rare Wondrous Item" plan is not
+  modelled. New icons for Flame Tongue, Arrow-Catching Shield and Ring of the Ram (rule: every new spell gets its own).
+- **Wild Shape and the illusion summons** (user: check the rules): see below; nothing in the rules table needed a data change.
+
+## Checked against the rules, no change
+
+- **Wild Shape (PHB 2024)**: the Beast Shapes table ends at Druid 8 (known forms 8, CR 1, Fly Speed); Temporary Hit Points = Druid
+  level (dnd55e applies `WILDSHAPE_TEMPHP_DRUIDLEVEL`). Nothing changes at 13-20. Circle of the Moon: Temporary Hit Points = 3 x
+  Druid level and AC 13 + Wisdom modifier (already per level); the maximum CR is Druid level / 3 (4 at 12, 5 at 15, 6 at 18).
+  **Open: the CR 4-6 Moon forms don't exist** (dnd55e's Moon list ends at its level 10 forms and the base game has no CR 4-6 beasts
+  as player forms); a content item (three to four new beast forms: templates, stats, models), not a cap.
+- **Wizard Illusion summons** (Phantasmal Creatures): the rule has no level scaling (free cast = the base spell at half Hit Points);
+  dnd55e's bands at 5 / 7 / 9 / 11 are its own design, so nothing to extend.
+- **Experimental Elixir potency at 15**: dnd55e's elixirs are the base game's potions (Healing is Greater / Superior / Supreme at
+  Artificer 5 and 9; Speed, Flying, Invisibility ... are single-tier potions). Every one is already stronger than the book's top tier
+  (Supreme Healing is about 45 hit points against 4d8 + Intelligence), so a level 15 tier would only weaken them. The 15 gain in the
+  rules is the fifth elixir (done). Not built.
+
+## Still open
+
+- **Moon forms at CR 4-6** (above).
+- The learn-repeatedly "Rare Wondrous Item" Replicate Magic Item plan; the Arrow-Catching Shield's ranged-only AC bonus and Reaction.
 - **Lay on Hands** is a charge pool whose heal scales with the Paladin level (not 5 x level Hit Points): kept, as decided 2026-10-03.
 - **Star Map / Cosmic Omen** uses are Wisdom-modifier based in the 2024 text; dnd55e steps them by level. Not a cap problem; left.
 - **Bladesong** (`Bladesong` level map 2/3/4): the Bladesinger moved to dnd55e.
@@ -66,4 +85,4 @@ level-up and survive dnd55e updates. Generators: `gen_class_resources.py`, `gen_
 - Abjuration Arcane Ward: the base game's and dnd55e's nodes both sit in the table, the audit counts 31 at level 12 (2 x level + 7).
 - A feat's Proficiency Bonus uses at the level-up that raises the Proficiency Bonus (the conditional boosts may wait for the next
   load, as the level-conditional passives did): take Lucky at 12, level to 13, read the Luck Points.
-- Companion HP and Proficiency Bonus at 13, 15, 17, 19; Balm 7-10 dice; Warrior of the Gods 7 dice; Unarmored Movement at 14/18.
+- Companion HP and Proficiency Bonus at 13, 15, 17, 19; Balm 7-10 dice; Warrior of the Gods 7 dice; Unarmored Movement at 14/18; the cases in `tests/bg3/high_level_resources.toml` (Balm 7, Warrior of the Gods 7, Searing Arc Strike 6, Ring of the Ram, Armor +2).

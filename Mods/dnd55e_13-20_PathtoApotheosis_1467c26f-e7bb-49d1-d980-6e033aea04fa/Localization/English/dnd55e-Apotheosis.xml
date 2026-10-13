@@ -4551,4 +4551,28 @@
   <content contentuid="hefd5833bb0d55506b1d849414cfe3e6e" version="1">Hit points +[1] over the level 11 form, and your Proficiency Bonus.</content>
   <content contentuid="h2925d13f1376505289cc84db335e3bef" version="1">Companion at level 19</content>
   <content contentuid="h1fbd8206a0f15dccace8832fee14a13a" version="1">Hit points +[1] over the level 11 form, and your Proficiency Bonus.</content>
+  <content contentuid="h27da72a395a950f38f0d21a5197e673a" version="1">Armor, +2</content>
+  <content contentuid="h7cca66670f075526bc78adbda85c3e45" version="1">You have a +2 bonus to Armor Class while wearing armor.</content>
+  <content contentuid="h0c7b1e107c205a08bd2a5c5f847158dd" version="1">Flame Tongue</content>
+  <content contentuid="h8baeaa56175c5d489e5c3d678b1be0ac" version="1">Your weapon attacks deal an extra 2d6 Fire damage while the item lasts.</content>
+  <content contentuid="h27a23a6b355c53eeb4a2a663fc0ea9ae" version="1">Flame Tongue</content>
+  <content contentuid="h463a6fa7be455267b2f4f5eaeddc40f1" version="1">Your weapon attacks deal an extra 2d6 Fire damage while the item lasts.</content>
+  <content contentuid="h455579acbf2a5443923d5a04e58ccdb6" version="1">Arrow-Catching Shield</content>
+  <content contentuid="h7f823124ae095c7c9e06bb2ba8c7ba28" version="1">You have a +2 bonus to Armor Class while you hold a shield.</content>
+  <content contentuid="hca3bebe992c55bc9b1d5123353e1b075" version="1">Arrow-Catching Shield</content>
+  <content contentuid="h433bb54d856256c7b627104024bb39ce" version="1">You have a +2 bonus to Armor Class while you hold a shield.</content>
+  <content contentuid="h9d539d1db0925d7fb8efac6bb49a54b3" version="1">Ring of the Ram charges</content>
+  <content contentuid="hdfca4126c2345ccca9ff97ddb4f1ea97" version="1">Charges of the Ring of the Ram you made with Replicate Magic Item.</content>
+  <content contentuid="h91bc7b4d40845403965d129f726bbb61" version="1">Ring of the Ram (1 charge)</content>
+  <content contentuid="hecefd830ebd3510db835194c35880946" version="1">Spend 1 charge of the Ring of the Ram: a spectral ram's head makes a ranged attack against a creature you can see; on a hit the target takes 2d10 Force damage and is pushed 5 feet.</content>
+  <content contentuid="ha4d61f7012ac58c581f2c14e246329f1" version="1">Ring of the Ram (2 charges)</content>
+  <content contentuid="hc894138354a4577ab2105b4f26c9f923" version="1">Spend 2 charges of the Ring of the Ram: a spectral ram's head makes a ranged attack against a creature you can see; on a hit the target takes 4d10 Force damage and is pushed 10 feet.</content>
+  <content contentuid="h6d0b4da69350533395dd2c6a9aa4b542" version="1">Ring of the Ram (3 charges)</content>
+  <content contentuid="hfe971b55dbb95a1ba5abfe71251027c7" version="1">Spend 3 charges of the Ring of the Ram: a spectral ram's head makes a ranged attack against a creature you can see; on a hit the target takes 6d10 Force damage and is pushed 15 feet.</content>
+  <content contentuid="h299d6946b86f545ab0101ba83c8f9dd3" version="1">Ring of the Ram</content>
+  <content contentuid="h5d1b12cba512529d96a0b049386a4b23" version="1">Spend 1 to 3 charges of the Ring of the Ram: a spectral ram's head makes a ranged attack; on a hit the target takes 2d10 Force damage and is pushed 5 feet for each charge spent.</content>
+  <content contentuid="h81b4f834c7f158168ce67a6d5d52bddf" version="1">Ring of the Ram</content>
+  <content contentuid="h9f0be9b67ef2511589a15f5434e984fa" version="1">A ring with three charges: spend them to ram a creature with spectral force (see the spell).</content>
+  <content contentuid="h05f8b754c23e54979e7c354d3b9b9abc" version="1">Ring of the Ram</content>
+  <content contentuid="hb0831497a30b5b6fb1f099f7f7c7f2e4" version="1">A ring with three charges that fires a spectral ram's head (2d10 Force and a push per charge).</content>
 </contentList>

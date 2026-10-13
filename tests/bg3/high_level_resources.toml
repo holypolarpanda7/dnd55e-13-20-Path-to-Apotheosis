@@ -1,0 +1,55 @@
+# Spend variants and plans added for levels 13-20 by Scripts/gen_class_resources.py and Scripts/gen_artificer_plans.py
+# (2026-10-13). Written before any in-game run: run bg3_test_run("apotheosis", "<id>") for each. The pools themselves (Healing Light,
+# Arcane Ward, Proficiency Bonus uses, companion bands ...) are checked by bg3_level_check on the class builds and by
+# Scripts/resource_audit.py; these cases cover the spells.
+
+[suite]
+name = "High-level resources 13-20"
+mode = "script"
+
+[[case]]
+id = "hl-balm-7-dice"
+title = "Circle of Dreams Balm, 7 dice (Druid 14): heals 7d6 and gives 7 temporary Hit Points; costs 7 Balm"
+spell = "Target_Balm_7"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(Balm,7,0)" }, { target = "host", hp = 1 }]
+expect = [{ cast = true }, { target = "host", hp_change = [7, 999] }, { target = "host", status_applied = ["BALM_TEMPHP_7"] }, { resource = "Balm", level = 0, change = -7 }]
+
+[[case]]
+id = "hl-warrior-of-the-gods-7-dice"
+title = "Zealot Warrior of the Gods, 7 dice (Barbarian 17): heals 7d12 + Constitution modifier; costs 7 dice"
+spell = "Shout_WarriorOfTheGods_7"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(WarriorOfTheGods,7,0)" }, { target = "host", hp = 1 }]
+expect = [{ cast = true }, { target = "host", hp_change = [7, 999] }, { resource = "WarriorOfTheGods", level = 0, change = -7 }]
+
+[[case]]
+id = "hl-searing-arc-strike-6"
+title = "Sun Soul Searing Arc Strike at spell level 6 (Monk 14): 8d6 Fire in the cone; costs 7 ki"
+spell = "Zone_SearingArcStrike_6"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-48, -8] }, { resource = "KiPoint", level = 0, change = -7 }]
+
+[[case]]
+id = "hl-ring-of-the-ram-3"
+title = "Ring of the Ram (Artificer 14 plan), 3 charges: a ranged attack, 6d10 Force and a push; costs 3 charges"
+spell = "Projectile_Apo_RingOfTheRam_3"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 400, distance = 10 }]
+setup = [{ target = "host", boost = "ActionResource(ApoRamRing,3,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+real_rolls = true
+expect = [{ cast = true }, { target = "A", hp_change = [-120, -6] }, { resource = "ApoRamRing", level = 0, change = -3 }]
+
+[[case]]
+id = "hl-replicate-armor-plus-2"
+title = "Replicate Magic Item at Artificer 14: Armor +2 (RMI_MAGICARMOR_2) instead of +1"
+build = "artificer-armorer"
+class = "Artificer"
+level = 14
+subclass = "Armorer"
+spell = "Target_RMI_MagicArmor"
+target = "host"
+expect = [{ cast = true }, { target = "host", status_applied = ["RMI_MAGICARMOR_2"] }]
+notes = "Needs a level 14 Artificer so ClassLevelHigherOrEqualThan(14,'Artificer') holds; the build name is a stand-in for any Artificer checkpoint."

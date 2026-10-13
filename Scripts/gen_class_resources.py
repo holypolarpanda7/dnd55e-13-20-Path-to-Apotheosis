@@ -32,7 +32,7 @@ import glob
 import os
 import re
 
-from gen_common import DND, Gen, patch_progressions
+from gen_common import DND, Gen, append_progressions, patch_progressions
 
 G = Gen("classres", "CLASS RESOURCES 13-20")
 CLASS, SUB, SPECIES = 0, 1, 2
@@ -77,8 +77,8 @@ for lvl, (metres, feet, prev) in UM.items():
               comment=f"Monk {lvl}: +{feet} ft (PHB 2024 Monk Features table)")
     NODES.append((MONK, "Monk", CLASS, lvl, {"PassivesAdded": name, "PassivesRemoved": prev}))
 # Fighter: a sixth Weapon Mastery at 16 (the table's Weapon Mastery column: 3, 4 at 4, 5 at 10, 6 at 16; dnd55e's nodes stop at 10)
-NODES.append(("ba4e707e-4bbd-4630-963b-ce2f2947f971", "Fighter", CLASS, 16,
-              {"Selectors": "SelectPassives(b9543135-eceb-4ca9-b9fc-43befc11de3b,1,WeaponMasteryList)"}))
+FIGHTER_16 = "d4e5f6a7-b8c9-40d1-e2f3-a4b5c6d7e8f9"   # PTA's Fighter level 16 node (the feat / Ability Score Improvement): the mastery pick joins it
+MASTERY_PICK = "SelectPassives(b9543135-eceb-4ca9-b9fc-43befc11de3b,1,WeaponMasteryList)"
 
 # feat / background passives whose uses are the Proficiency Bonus: passive -> resource
 PB_PASSIVES = {
@@ -181,7 +181,24 @@ def summon_bands():
                             comment="summon bands for levels 13-19 added (re-read from dnd55e at each regen)"))
 
 
+# Sun Soul Monk: Searing Arc Strike spends more ki for a higher level Burning Hands (3d6 + 1d6 per level, 2 ki + 1 per level above the
+# first); dnd55e's variants run 1-5 at Monk levels 4, 6, 8, 10, 12 - one more level every two Monk levels: 6 to 9 at 14, 16, 18, 20.
+def searing_arc_variants():
+    for lvl in range(6, 10):
+        monk = 2 * lvl + 2
+        G.SP.append(G.entry(f"Zone_SearingArcStrike_{lvl}", "SpellData", {
+            "SpellSuccess": f"DealDamage({lvl + 2}d6, Fire,Magical);", "DescriptionParams": f"DealDamage({lvl + 2}d6,Fire)",
+            "TooltipDamageList": f"DealDamage({lvl + 2}d6,Fire)", "UseCosts": f"BonusActionPoint:1;KiPoint:{lvl + 1};",
+            "PowerLevel": str(lvl), "RequirementConditions": f"ClassLevelHigherOrEqualThan({monk},'Monk',context.Source);"},
+            using="Zone_SearingArcStrike_5", comment=f"Searing Arc Strike at spell level {lvl} (Monk {monk})"))
+    cont = dnd_field("Zone_SearingArcStrike", "ContainerSpells", "Spell*.txt").rstrip(";")
+    if "_6" not in cont:
+        G.SP.append(G.entry("Zone_SearingArcStrike", "SpellData", {"ContainerSpells": cont + ";" + ";".join(f"Zone_SearingArcStrike_{n}" for n in range(6, 10)) + ";"},
+                            using="Zone_SearingArcStrike", comment="Searing Arc Strike: spell levels 6-9 (re-read from dnd55e at each regen)"))
+
+
 def write():
+    searing_arc_variants()
     summon_bands()
     extend_pb_passives()
     balm_variants()
@@ -191,6 +208,7 @@ def write():
     G.write_stats("ClassResources", "gen_class_resources.py", "class resources 13-20")
     G.patch_files()
     patch_progressions({}, new_nodes, G.marker)
+    append_progressions({FIGHTER_16: {"Selectors": MASTERY_PICK}})
     G.patch_loca()
 
 

@@ -4,3 +4,7 @@
 "Paralytic Venom" = "skip"
 # Rogue 14: Devious Strikes is the passive plus its three Cunning Strike toggles
 "Devious Strikes" = ["Rogue_14_DeviousStrikes", "CunningStrike_Daze", "CunningStrike_KnockOut", "CunningStrike_Obscure"]
+
+[technical]
+# the Monk Features table's Unarmored Movement column at 14 and 18 (not a feature row of its own); passives scaling a column value
+names = ["Apo_UnarmoredMovement_4", "Apo_UnarmoredMovement_5"]

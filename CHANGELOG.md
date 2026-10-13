@@ -15,6 +15,8 @@
 - Fixed: Monk Unarmored Movement now reaches +25 ft at 14 and +30 ft at 18; Fighters get their sixth Weapon Mastery at 16.
 - Fixed: Cleric Divine Spark now follows the PHB 2024 dice (1d8, 2d8 at 7, 3d8 at 13, 4d8 at 18; dnd55e used the cantrip steps); Life-Giving Force rolls 4d6 at 16; Venomous Strike keeps up with Sneak Attack's dice.
 - Fixed: Beast Master companions and the Steel Defender grow after level 11 (+10 hit points at 13, 15, 17 and 19, and your Proficiency Bonus) instead of staying at their level 11 strength.
+- New: the level 14 Artificer Replicate Magic Item plans - Armor +2 (the +1 armor becomes +2), Flame Tongue (+2d6 Fire), Arrow-Catching Shield and Ring of the Ram (three charges, 2d10 Force and a push each). Sun Soul Monks' Searing Arc Strike reaches spell levels 6-9 at Monk 14-20.
+- Fixed: the Way of the Four Elements disciplines (Burning Hands, Fist of Unbroken Air, Shatter, Thunderwave, Water Whip, Ray of Frost, Shocking Grasp, Scorching Ray, Hold Person) get their ki steps at Monk 13 and 17.
 - Requires DnD 5.5e All-in-One BEYOND 4.13.7.2 (was 4.13.7.1). Our upcast copies of smites, Armor of Agathys and Hail of Thorns and the Sneak Attack rules fixes carry its Hex fix: damage riders such as Hex no longer repeat on extra damage.
 
 ## v1.0.0 - 2026-10-11
