@@ -11,6 +11,7 @@
 - Fixed: Hit Point Dice stopped at 12 for every base class; you now gain one per level through 20 (PHB 2024), which also gives short rests and Hit Point Dice costs their full range.
 - Fixed: Barbarians and Clerics reaching level 12 got no Hit Point Die for that level.
 - Fixed: Ranger Favored Enemy uses stopped at 4 (now 5 at level 13 and 6 at 17) and Wizard Arcane Recovery stopped at 6 (now 7, 8, 9, 10 at levels 13, 15, 17, 19), as in the PHB 2024.
+- Requires DnD 5.5e All-in-One BEYOND 4.13.7.2 (was 4.13.7.1). Our upcast copies of smites, Armor of Agathys and Hail of Thorns and the Sneak Attack rules fixes carry its Hex fix: damage riders such as Hex no longer repeat on extra damage.
 
 ## v1.0.0 - 2026-10-11
 
