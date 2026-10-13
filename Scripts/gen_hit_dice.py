@@ -40,6 +40,9 @@ def class_nodes():
     """{node uuid: (class, level)} for each class's nodes in PTA's Progressions.lsx (same table as its level-13 node): levels
     13-20 and every dnd55e node PTA overrides."""
     s = open(os.path.join(PUB, "Progressions", "Progressions.lsx"), encoding="utf-8").read()
+    # nodes other generators add on top of a class (gen_class_resources.py: Monk 14 / 18 Unarmored Movement ...) are not level nodes of
+    # their own: they would get a second Hit Point Die
+    s = re.sub(r"[ \t]*<!-- (CLASS RESOURCES 13-20|ARTIFICER PLANS 14|WILD SHAPE FORMS) BEGIN.*?<!-- \1 END -->\n", "", s, flags=re.S)
     nodes = re.findall(r'<node id="Progression">.*?</node>', s, re.S)
     by_uuid = {ATTR("UUID", b): b for b in nodes}
     out = {}
