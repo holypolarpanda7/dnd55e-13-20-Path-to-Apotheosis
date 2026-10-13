@@ -375,7 +375,7 @@
                 </node>
                 <!-- ==================== RANGER LEVELS 13-20 ==================== -->
                 <node id="Progression">
-                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0);ActionResource(FavoredEnemy,1,0)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Ranger"/>
                     <attribute id="PassivesAdded" type="LSString" value="Ranger_RelentlessHunter"/>
@@ -412,7 +412,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="PassivesAdded" type="LSString" value="Ranger_17_PreciseHunter"/>
-                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0);ActionResource(FavoredEnemy,1,0)"/>
                     <attribute id="Selectors" type="LSString" value="AddSpells(6b625ece-306d-576a-9fa2-896d884e4e05)"/>
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="Ranger"/>
@@ -449,7 +449,7 @@
                 </node>
                 <!-- ==================== WIZARD LEVELS 13-20 ==================== -->
                 <node id="Progression">
-                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7);ActionResource(HitPointDice06,1,0)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Wizard"/>
                     <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7"/>
@@ -468,7 +468,7 @@
                     <attribute id="UUID" type="guid" value="66666666-6666-6666-6666-666666666602"/>
                 </node>
                 <node id="Progression">
-                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,8);ActionResource(HitPointDice06,1,0)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,8);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="15"/>
                     <attribute id="Name" type="LSString" value="Wizard"/>
                     <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel8"/>
@@ -488,7 +488,7 @@
                     <attribute id="UUID" type="guid" value="66666666-6666-6666-6666-666666666604"/>
                 </node>
                 <node id="Progression">
-                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,9);ActionResource(HitPointDice06,1,0)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,9);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="Wizard"/>
                     <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel9"/>
@@ -508,7 +508,7 @@
                     <attribute id="UUID" type="guid" value="66666666-6666-6666-6666-666666666606"/>
                 </node>
                 <node id="Progression">
-                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,6);ActionResource(HitPointDice06,1,0)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,6);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)"/>
                     <attribute id="AllowImprovement" type="bool" value="true"/>
                     <attribute id="Level" type="uint8" value="19"/>
                     <attribute id="Name" type="LSString" value="Wizard"/>

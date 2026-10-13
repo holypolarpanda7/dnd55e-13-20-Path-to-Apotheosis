@@ -10,6 +10,9 @@ is applied (and on a save load), not on level-up, so a Wizard 14 had 13 d6 until
 tests the rule). The nodes are rewritten in full by other generators, so this appends (gen_common.append_progressions) and runs
 after them in regen_all.sh.
 
+The same per-node way carries the other class resources dnd55e stopped growing at 12 (found by Scripts/resource_audit.py
+2026-10-13): Ranger Favored Enemy (5 at 13, 6 at 17) and Wizard Arcane Recovery (half the level, rounded up: 7/8/9/10 at 13/15/17/19).
+
 Run: python3 Scripts/gen_hit_dice.py
 """
 import os
@@ -25,6 +28,10 @@ CLASSES = {  # class: (hit die, its level-13 node in Progressions.lsx - the clas
     "Paladin": (10, "44444444-4444-4444-4444-444444444401"), "Ranger": (10, "55555555-5555-5555-5555-555555555501"),
     "Rogue": (8, "33333333-3333-3333-3333-333333333301"), "Sorcerer": (6, "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaa901"),
     "Warlock": (8, "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbb901"), "Wizard": (6, "66666666-6666-6666-6666-666666666601"),
+}
+RESOURCES = {  # (class, level): extra boost on that level's node (PHB 2024 tables)
+    ("Ranger", 13): "ActionResource(FavoredEnemy,1,0)", ("Ranger", 17): "ActionResource(FavoredEnemy,1,0)",
+    **{("Wizard", L): "ActionResource(ArcaneRecoveryPoint,1,0)" for L in (13, 15, 17, 19)},
 }
 ATTR = lambda k, b: (re.search(rf'id="{k}" type="[^"]*" value="([^"]*)"', b) or [None, None])[1]
 
@@ -72,5 +79,6 @@ if __name__ == "__main__":
     G.write_stats("HitDice", "gen_hit_dice.py", "Hit Point Dice 13-20")
     drop_old_passive()
     nodes = class_nodes()
-    append_progressions({u: {"Boosts": f"ActionResource(HitPointDice{CLASSES[c][0]:02d},1,0)"} for u, (c, _n) in nodes.items()})
+    append_progressions({u: {"Boosts": ";".join([f"ActionResource(HitPointDice{CLASSES[c][0]:02d},1,0)"] + ([RESOURCES[c, n]] if (c, n) in RESOURCES else []))}
+         for u, (c, n) in nodes.items()})
     print(f"{len(nodes)} class level nodes get a Hit Point Die (13-20 + overridden ones)")

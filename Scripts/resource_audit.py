@@ -19,6 +19,8 @@ EXPECT = {  # class: {resource: {level: total}} - 2024 values at 13-20 (and the 
     "Barbarian": {"Rage": {12: 5, 17: 6}},
     "Druid": {"WildShape": {12: 3, 17: 4}},
     "Cleric": {"ChannelDivinity": {12: 3, 18: 4}},
+    "Ranger": {"FavoredEnemy": {12: 4, 13: 5, 16: 5, 17: 6}},
+    "Wizard": {"ArcaneRecoveryPoint": {12: 6, 13: 7, 15: 8, 17: 9, 19: 10}},
     "Fighter": {"Interrupt_Indomitable": {12: 1, 13: 2, 17: 3}},
     # not counted here: Action Surge (a once-per-Short-Rest cooldown; the second use at 17 is its own spell) and
     # dnd55e's Lay on Hands (its own charge model, not the 5 x level pool)
