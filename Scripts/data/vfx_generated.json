@@ -882,6 +882,99 @@
    "BenignTransposition_CastEffect"
   ]
  },
+ "PTA_BurstForth_PrepareEffect": {
+  "uuid": "42dbe4f1-fd2e-5d47-aa28-4247943d4096",
+  "parts": [
+   "Generic_Necrotic_PrepareEffect blood"
+  ]
+ },
+ "PTA_BurstForth_CastEffect": {
+  "uuid": "a29c57e5-0cef-5822-9751-b318a14f4e1a",
+  "parts": [
+   "LOW_LivingSacrifice_Slayer_CastEffect"
+  ]
+ },
+ "PTA_BurstForth_TargetEffect": {
+  "uuid": "bf4a583e-d1c6-5d30-8c3f-b73e7bc36b98",
+  "parts": [
+   "Blight_TargetEffect blood",
+   "HAG_SinisterStrike_TargetEffect blood"
+  ]
+ },
+ "PTA_Fusillade_PrepareEffect": {
+  "uuid": "069f3b1a-d1a9-54eb-8ebb-97600713f626",
+  "parts": [
+   "Generic_Necrotic_PrepareEffect blood"
+  ]
+ },
+ "PTA_Fusillade_CastEffect": {
+  "uuid": "008804a8-2609-5886-aa72-8059c089a657",
+  "parts": [
+   "Generic_Necrotic_TargetSingle_CastEffect blood"
+  ]
+ },
+ "PTA_Fusillade_TargetEffect": {
+  "uuid": "7fed4695-5cb2-5e87-851e-3e3169b3335b",
+  "parts": [
+   "Blight_TargetEffect blood"
+  ]
+ },
+ "PTA_Fusillade_DartCastEffect": {
+  "uuid": "49d59006-5a0c-5262-b275-8e189dbc8c2c",
+  "parts": [
+   "MagicMissile_CastEffect"
+  ]
+ },
+ "PTA_CreepingDeath_PrepareEffect": {
+  "uuid": "de271826-6fc8-5437-9717-4c780e2e59f1",
+  "parts": [
+   "Generic_Necrotic_PrepareEffect blood"
+  ]
+ },
+ "PTA_CreepingDeath_CastEffect": {
+  "uuid": "062904a7-d557-5c0a-9d02-9c7e4a039461",
+  "parts": [
+   "Generic_Necrotic_TargetSingle_CastEffect blood"
+  ]
+ },
+ "PTA_CreepingDeath_TargetEffect": {
+  "uuid": "de548850-00e9-551e-83fc-8303ae78ae97",
+  "parts": [
+   "SoulSeize_Specter_TargetEffect blood",
+   "Blight_TargetEffect blood"
+  ]
+ },
+ "PTA_RedRain_PrepareEffect": {
+  "uuid": "6ea761e8-02d7-5572-94d5-54c14edec5cf",
+  "parts": [
+   "SleetStorm_PrepareEffect blood"
+  ]
+ },
+ "PTA_RedRain_CastEffect": {
+  "uuid": "996e0a93-7ba9-5199-9b9b-4e1fb2f6713e",
+  "parts": [
+   "SleetStorm_CastEffect blood",
+   "SleetStorm_PositionEffect blood x3"
+  ]
+ },
+ "PTA_RedRain_StatusEffect": {
+  "uuid": "8c522150-7aa3-56ec-bfb3-c1d14d0741ce",
+  "parts": [
+   "SPIRIT_GUARDIANS_EVIL_StatusEffect blood x2"
+  ]
+ },
+ "PTA_StealImmortality_CastEffect": {
+  "uuid": "d030a2e8-b1c3-51b8-8184-0d88819b2339",
+  "parts": [
+   "SoulSeize_Specter_CastEffect blood #1,2"
+  ]
+ },
+ "PTA_StealImmortality_StatusEffect": {
+  "uuid": "862e0099-760a-585d-b17f-a596696e738a",
+  "parts": [
+   "SPIRIT_GUARDIANS_GOOD_StatusEffect shadow"
+  ]
+ },
  "_files": [
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/7d2a72d2-1f88-5dab-8cf5-d7784467ed22.lsx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/67c2f495-77d1-565d-b21b-5e6874cf5350.lsx",
@@ -1021,6 +1114,21 @@
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/c623b7fc-9fc8-50b7-ad18-99405cde0e5a.lsx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/b338700e-25ed-53b7-8006-5205c8eb283f.lsx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/94170dbd-1a81-5076-9dc5-124cc556c39c.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/42dbe4f1-fd2e-5d47-aa28-4247943d4096.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/a29c57e5-0cef-5822-9751-b318a14f4e1a.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/bf4a583e-d1c6-5d30-8c3f-b73e7bc36b98.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/069f3b1a-d1a9-54eb-8ebb-97600713f626.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/008804a8-2609-5886-aa72-8059c089a657.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/7fed4695-5cb2-5e87-851e-3e3169b3335b.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/49d59006-5a0c-5262-b275-8e189dbc8c2c.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/de271826-6fc8-5437-9717-4c780e2e59f1.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/062904a7-d557-5c0a-9d02-9c7e4a039461.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/de548850-00e9-551e-83fc-8303ae78ae97.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/6ea761e8-02d7-5572-94d5-54c14edec5cf.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/996e0a93-7ba9-5199-9b9b-4e1fb2f6713e.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/8c522150-7aa3-56ec-bfb3-c1d14d0741ce.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/d030a2e8-b1c3-51b8-8184-0d88819b2339.lsx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/MultiEffectInfos/862e0099-760a-585d-b17f-a596696e738a.lsx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_Impact_01_S200.lsfx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_BodyFX_Overlay_01_S200.lsfx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_AdamantineGolem_Stomp_Root_01_Fire_S150.lsfx",
@@ -1097,6 +1205,32 @@
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_Impact_01_S140.lsfx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Fireball_BodyFX_Overlay_01_S140.lsfx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_Hag_SinisterStrike_Impact_BodyFX_01_Psychic.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Necrotic_R_HandFX_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Necrotic_R_HandFX_Textkey_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetSingle_Blight_Impact_BodyFX_Textkey_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetSingle_Blight_Impact_Root_Textkey_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Enemies_Hag_SinisterStrike_Impact_BodyFX_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetSingle_R_HandFX_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetSingle_R_HandFX_Textkey_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetTouch_Impact_BodyFX_ChillTouch_Textkey_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetTouch_Impact_BodyFX_Textkey_02_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetTouch_Impact_HandFX_Textkey_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Cold_RootFX_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Cold_HandFX_Frost_Overlay_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Cold_HandFX_Frost_Overlay_02_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Cold_EyeFX_Frost_Overlay_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Damage_Cold_EyeFX_Frost_Overlay_02_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Prepare_Arcane_Damage_Cold_R_HandFX_Textkey_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Cold_Generic_EyeFX_Overlay_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Cold_Generic_EyeFX_Overlay_02_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Wizard_Buff_FireShield_Chill_CastFX_TextKey_02_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Cold_Generic_HandFX_Overlay_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Cold_Generic_HandFX_Overlay_02_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Cold_TargetAoE_SleetStorm_Impact_Textkey_01_Blood_S300.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Status_SpiritGuardians_Evil_01_Blood_S200.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetTouch_R_HandFX_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Spells_Cast_Damage_Necrotic_TargetTouch_R_HandFX_Textkey_01_Blood.lsfx",
+  "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Assets/Effects/Effects_Banks/PTA_VFX/VFX_Status_SpiritGuardians_Good_01_Shadow.lsfx",
   "Public/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/Content/[PAK]_PTA_VFX/_merged.lsf"
  ]
 }

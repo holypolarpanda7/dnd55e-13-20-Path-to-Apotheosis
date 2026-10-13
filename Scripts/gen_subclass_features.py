@@ -961,12 +961,13 @@ node(DRAGON_DOMAIN, "DragonDomain", 17, "DragonDomain_17_LegendaryAspect")
 # added 2026-10-12; library excerpts/subclasses/grim-hollow_sangromancy.md). dnd55e stops at 12:
 # - Full-Blooded: the pool is 1 + your Wizard level (dnd55e: 4 dice at 3, +1 per level) -> +1 HitPointDice12 every level to 21.
 # - Sangromancy Savant: dnd55e's pick from the Sangromancy list (398d9fdb) at each new spell-slot level (3, 5, 7, 9, 11) goes on
-#   at 13, 15 and 17 like the other schools' Savant picks; Grim Hollow's 7th-9th level Sangromancy spells join that list once built.
+#   at 13, 15 and 17 like the other schools' Savant picks (a 7th, an 8th and a 9th level spell): from SangromancySavantL7/8/9, the
+#   Grim Hollow Sangromancy spells of that level (gen_sangromancy.py).
 # - 14 Red Renewal: "when you finish a short rest ... regain expended hit dice equal to half your wizard level ... and an
 #   equivalent number from Full-Blooded; once per long rest." The choice of dice has no BG3 dialog: it happens on your first Short
 #   Rest after a Long Rest and restores Wizard d6 Hit Point Dice (a multiclass character's other dice aren't picked).
 SANGROMANCER = "bd5f7880-233d-4ce5-8833-636988444183"
-SANGROMANCY_LIST = "398d9fdb-0101-4226-b2eb-08a2dae9accb"
+from gen_sangromancy import SAVANT_UUID  # noqa: E402  SangromancySavantL7/8/9: the Grim Hollow 7th-9th level Sangromancy spells (gen_sangromancy.py)
 G.resource("ApoRedRenewal", 1, "Rest", "Red Renewal", "Recover Hit Point Dice on a Short Rest. Returns on a Long Rest.")
 HALF = [(20, 10), (18, 9), (16, 8), (14, 7)]   # half your Wizard level, rounded down, from 14 on
 RR_FUNCTORS = ";".join(
@@ -983,7 +984,7 @@ G.passive("Sangromancer_14_RedRenewal", "Red Renewal",
 for lvl in range(13, 21):
     node(SANGROMANCER, "Sangromancer", lvl, *(["Sangromancer_14_RedRenewal"] if lvl == 14 else []),
          boosts="ActionResource(HitPointDice12,1,0)",
-         selectors=f"SelectSpells({SANGROMANCY_LIST},1,0,Wizard_3_Savant)" if lvl in (13, 15, 17) else None)
+         selectors=f"SelectSpells({SAVANT_UUID[{13: 7, 15: 8, 17: 9}[lvl]]},1,0,Wizard_3_Savant)" if lvl in (13, 15, 17) else None)
 
 
 def write():

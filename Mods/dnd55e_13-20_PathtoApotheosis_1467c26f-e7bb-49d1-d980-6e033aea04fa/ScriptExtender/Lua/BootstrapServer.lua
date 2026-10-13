@@ -1217,6 +1217,13 @@ if Ext and type(Ext.Require) == "function" then
         Log.Warn("Summons bootstrap load failed: " .. tostring(smnOrErr))
     end
 
+    local okSg, sgOrErr = pcall(Ext.Require, "Sangromancy.lua")
+    if okSg and type(sgOrErr) == "table" then
+        Log.Info("Sangromancy loaded at bootstrap")
+    else
+        Log.Warn("Sangromancy bootstrap load failed: " .. tostring(sgOrErr))
+    end
+
     local okSt, stOrErr = pcall(Ext.Require, "SpellTests.lua")
     if okSt and type(stOrErr) == "table" then
         Log.Info("SpellTests loaded at bootstrap")

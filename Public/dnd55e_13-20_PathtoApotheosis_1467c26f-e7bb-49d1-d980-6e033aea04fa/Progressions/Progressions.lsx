@@ -4108,7 +4108,7 @@
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Sangromancer"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(b13878fd-5eb7-5172-b6de-87529488852c,1,0,Wizard_3_Savant)"/>
                     <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
                     <attribute id="UUID" type="guid" value="96800266-6488-56b9-8de9-3c0e32263feb"/>
                 </node>
@@ -4126,7 +4126,7 @@
                     <attribute id="Level" type="uint8" value="15"/>
                     <attribute id="Name" type="LSString" value="Sangromancer"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(86286cc3-a978-5270-bb89-43b22a2d6a8a,1,0,Wizard_3_Savant)"/>
                     <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
                     <attribute id="UUID" type="guid" value="0c97976b-5323-5349-9542-5e1b642f8c1b"/>
                 </node>
@@ -4143,7 +4143,7 @@
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="Sangromancer"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(832afb33-9ec1-5f27-a2e4-88b25ddd72e2,1,0,Wizard_3_Savant)"/>
                     <attribute id="TableUUID" type="guid" value="bd5f7880-233d-4ce5-8833-636988444183"/>
                     <attribute id="UUID" type="guid" value="0c1ea1dd-3ede-5569-adc7-7f5f4bd67a82"/>
                 </node>

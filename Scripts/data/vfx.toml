@@ -650,3 +650,79 @@ from = "PlanarAlly_CastEffect"
 [[effect]]
 name = "PTA_MagnificentMansion_CastEffect"
 from = "BenignTransposition_CastEffect"
+
+# ======================================================================================== Grim Hollow Sangromancy 7-9 (Scripts/gen_sangromancy.py)
+# Blood: the `blood` palette over necrotic base effects; the Slayer's Living Sacrifice (already red) for the bursting; Magic Missile's
+# already-red darts. Effects named @PTA_<name> in the generator are resolved from vfx_generated.json.
+
+[[effect]]
+name = "PTA_BurstForth_PrepareEffect"
+from = "Generic_Necrotic_PrepareEffect"
+palette = "blood"
+
+[[effect]]
+name = "PTA_BurstForth_CastEffect"
+from = "LOW_LivingSacrifice_Slayer_CastEffect"
+
+[[effect]]
+name = "PTA_BurstForth_TargetEffect"
+parts = [ { from = "Blight_TargetEffect", palette = "blood" }, { from = "HAG_SinisterStrike_TargetEffect", palette = "blood" } ]
+
+[[effect]]
+name = "PTA_Fusillade_PrepareEffect"
+from = "Generic_Necrotic_PrepareEffect"
+palette = "blood"
+
+[[effect]]
+name = "PTA_Fusillade_CastEffect"
+from = "Generic_Necrotic_TargetSingle_CastEffect"
+palette = "blood"
+
+[[effect]]
+name = "PTA_Fusillade_TargetEffect"
+from = "Blight_TargetEffect"
+palette = "blood"
+
+[[effect]]
+name = "PTA_Fusillade_DartCastEffect"
+from = "MagicMissile_CastEffect"
+
+[[effect]]
+name = "PTA_CreepingDeath_PrepareEffect"
+from = "Generic_Necrotic_PrepareEffect"
+palette = "blood"
+
+[[effect]]
+name = "PTA_CreepingDeath_CastEffect"
+from = "Generic_Necrotic_TargetSingle_CastEffect"
+palette = "blood"
+
+[[effect]]
+name = "PTA_CreepingDeath_TargetEffect"
+parts = [ { from = "SoulSeize_Specter_TargetEffect", palette = "blood" }, { from = "Blight_TargetEffect", palette = "blood" } ]
+
+[[effect]]
+name = "PTA_RedRain_PrepareEffect"
+from = "SleetStorm_PrepareEffect"
+palette = "blood"
+
+[[effect]]
+name = "PTA_RedRain_CastEffect"
+parts = [ { from = "SleetStorm_CastEffect", palette = "blood" }, { from = "SleetStorm_PositionEffect", palette = "blood", scale = 3.0 } ]
+
+[[effect]]
+name = "PTA_RedRain_StatusEffect"
+from = "SPIRIT_GUARDIANS_EVIL_StatusEffect"
+palette = "blood"
+scale = 2.0
+
+[[effect]]
+name = "PTA_StealImmortality_CastEffect"
+from = "SoulSeize_Specter_CastEffect"
+palette = "blood"
+only = [1, 2]   # 3-4 are on the monster-only Extra_Dummy bones
+
+[[effect]]
+name = "PTA_StealImmortality_StatusEffect"
+from = "SPIRIT_GUARDIANS_GOOD_StatusEffect"
+palette = "shadow"

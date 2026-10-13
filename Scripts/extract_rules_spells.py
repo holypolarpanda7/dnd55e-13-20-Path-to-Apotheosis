@@ -1,7 +1,7 @@
 """Which classes get each level 7-9 spell, by the rules texts (2026-10-05) -> Scripts/data/rules_spell_classes.json.
 
 Reads the "Level N School (Class, Class)" line under each spell name in the library (DND_LIBRARY): SRD 5.2.1, PHB 2024,
-Arcana Unleashed. Only names, levels, schools and class tags are written (no book text), plus the mod's spell entries with
+Arcana Unleashed, Grim Hollow (sangromancy). Only names, levels, schools and class tags are written (no book text), plus the mod's spell entries with
 that display name, resolved through the bg3-data index. gen_rules_spell_lists.py puts each entry on its classes' lists.
 
 Run (needs the bg3-data venv): UV_PROJECT_ENVIRONMENT=~/.cache/bg3-data-mcp/venv uv run --project ../bg3-data-mcp \
@@ -19,7 +19,8 @@ LIBRARY = os.environ.get("DND_LIBRARY", "/mnt/d/Library/DnD")
 OUT = os.path.join(REPO, "Scripts", "data", "rules_spell_classes.json")
 # first source wins for a spell in several (the SRD is the 2024 text too)
 SOURCES = [("SRD 5.2.1", "text/srd-cc-v5-2-1.txt"), ("PHB 2024", "text/d-d-5e-players-handbook-2024.txt"),
-           ("Arcana Unleashed", "excerpts/subclasses/ArcanaUnleashed.txt")]
+           ("Arcana Unleashed", "excerpts/subclasses/ArcanaUnleashed.txt"),
+           ("Grim Hollow", "excerpts/spells/grim-hollow_sangromancy-spells.txt")]   # the 7th-9th level Sangromancy spells (2026-10-12)
 SCHOOL = "Abjuration|Conjuration|Divination|Enchantment|Evocation|Illusion|Necromancy|Transmutation"
 # rules name -> the mod's display name, where they differ
 ALIASES = {"Arcane Sword": "Mordenkainen's Sword", "Magnificent Mansion": "Mordenkainen's Magnificent Mansion"}
