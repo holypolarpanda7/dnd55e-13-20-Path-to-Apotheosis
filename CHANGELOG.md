@@ -17,6 +17,8 @@
 - Fixed: Beast Master companions and the Steel Defender grow after level 11 (+10 hit points at 13, 15, 17 and 19, and your Proficiency Bonus) instead of staying at their level 11 strength.
 - New: the level 14 Artificer Replicate Magic Item plans - Armor +2 (the +1 armor becomes +2), Flame Tongue (+2d6 Fire), Arrow-Catching Shield and Ring of the Ram (three charges, 2d10 Force and a push each). Sun Soul Monks' Searing Arc Strike reaches spell levels 6-9 at Monk 14-20.
 - New: Experimental Elixir at Artificer 15 offers five more in-game potions: Elixir of Cloud Giant Strength, Battlemage's Power, Viciousness, Guileful Movement and Barkskin.
+- New: Circle of the Moon Wild Shape forms at the rules' Challenge Rating tiers (Druid level / 3): Elephant at 12 (CR 4), Triceratops at 15 (CR 5), Mammoth at 18 (CR 6), with Gore and Stomp attacks (re-skinned models).
+- Fixed: Illusionist Phantasmal Creatures keeps pace with your spell slots - the Illusion Summon Beast and Summon Fey summon level 7, 8 and 9 creatures at Wizard 13, 15 and 17 (dnd55e stopped at level 6).
 - Fixed: the Way of the Four Elements disciplines (Burning Hands, Fist of Unbroken Air, Shatter, Thunderwave, Water Whip, Ray of Frost, Shocking Grasp, Scorching Ray, Hold Person) get their ki steps at Monk 13 and 17.
 - Requires DnD 5.5e All-in-One BEYOND 4.13.7.2 (was 4.13.7.1). Our upcast copies of smites, Armor of Agathys and Hail of Thorns and the Sneak Attack rules fixes carry its Hex fix: damage riders such as Hex no longer repeat on extra damage.
 

@@ -64,3 +64,38 @@ subclass = "Alchemist"
 spell = "Shout_EE_CloudGiantStrength"
 target = "host"
 expect = [{ cast = true }, { resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+[[case]]
+id = "hl-moon-form-elephant"
+title = "Circle of the Moon 12: the Elephant form (CR 4) - the polymorph status and the Wild Shape use"
+build = "druid-circleofthemoon"
+class = "Druid"
+level = 12
+subclass = "CircleOfTheMoon"
+spell = "Shout_WildShape_Combat_Apo_Elephant"
+target = "host"
+expect = [{ cast = true }, { target = "host", status_applied = ["WILDSHAPE_APO_ELEPHANT_PLAYER"] }, { resource = "WildShape", level = 0, change = -1 }]
+notes = "Then check by hand: 76 HP, Gore and Stomp (a Prone target only) on the form's hotbar, the Radiant swap with Primal Strike, the form ending cleanly."
+
+[[case]]
+id = "hl-moon-form-mammoth"
+title = "Circle of the Moon 18: the Mammoth form (CR 6)"
+build = "druid-circleofthemoon"
+class = "Druid"
+level = 18
+subclass = "CircleOfTheMoon"
+spell = "Shout_WildShape_Combat_Apo_Mammoth"
+target = "host"
+expect = [{ cast = true }, { target = "host", status_applied = ["WILDSHAPE_APO_MAMMOTH_PLAYER"] }, { resource = "WildShape", level = 0, change = -1 }]
+
+[[case]]
+id = "hl-illusion-summon-level-7"
+title = "Illusionist 13: Phantasmal Creatures summons the level 7 Wolf (Wolf_7) with the Illusion version"
+build = "wiz-illusionist"
+class = "Wizard"
+level = 13
+subclass = "IllusionSchool"
+spell = "Target_SummonBeast_Wolf_Illusion"
+target = "host"
+expect = [{ cast = true }]
+notes = "Check the summoned wolf is Wolf_7 (about 70 HP at the level 7 step, ghost effect) and not the level 6 one."

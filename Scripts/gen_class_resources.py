@@ -197,7 +197,43 @@ def searing_arc_variants():
                             using="Zone_SearingArcStrike", comment="Searing Arc Strike: spell levels 6-9 (re-read from dnd55e at each regen)"))
 
 
+# Illusionist Phantasmal Creatures (user decision 2026-10-13: follow dnd55e's design). dnd55e's Illusion version of Summon Beast / Summon Fey
+# summons the creature at the highest slot level the Wizard has: Wizard 5 -> level 3, 7 -> 4, 9 -> 5, 11 -> 6 (templates Wolf_3 ... Wolf_6). The
+# slots go on to 7th, 8th and 9th at Wizard 13, 15 and 17 and PTA already has those summon levels (Wolf_7-9, GiantEagle_7-9, RedCap_7-9 from
+# gen_upcasts.py), so the bands continue: the same call with the level 7, 8, 9 creature.
+ILLUSIONS = [("Target_SummonBeast_Wolf_Illusion", "Target_SummonBeast_Wolf"), ("Target_SummonBeast_GiantEagle_Illusion", "Target_SummonBeast_GiantEagle"),
+             ("Target_SummonFey_Illusion", "Target_SummonFey")]
+
+
+def pta_summon_template(spell):
+    for f in glob.glob(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Public", "*", "Stats", "Generated", "Data", "Spell_Upcast79.txt")):
+        t = open(f, encoding="utf-8").read()
+        m = re.search(rf'new entry "{spell}"\r?\n.*?data "SpellProperties" "[^"]*?Summon\(([0-9a-f-]{{36}})', t, re.S)
+        if m:
+            return m.group(1)
+    raise SystemExit(f"{spell}: not in Spell_Upcast79.txt - run gen_upcasts.py once, then this generator (gen_class_resources.py)")
+
+
+def illusion_bands():
+    for spell, upcast in ILLUSIONS:
+        props = dnd_field(spell, "SpellProperties", "Spell*.txt")
+        segs = [x for x in props.split(";") if x.strip()]
+        last = segs[-1]
+        m = re.match(r"(GROUND:)?IF\(ClassLevelHigherOrEqualThan\(11,'Wizard'\)\):Summon\(([0-9a-f-]{36})(.*)\)$", last)
+        assert m, f"{spell}: unexpected last band: {last}"
+        if "ClassLevelHigherOrEqualThan(13,'Wizard'" in props:
+            continue
+        ground, rest = m.group(1) or "", m.group(3)
+        out = segs[:-1] + [f"{ground}IF(ClassLevelHigherOrEqualThan(11,'Wizard') and not ClassLevelHigherOrEqualThan(13,'Wizard')):Summon({m.group(2)}{rest})"]
+        for wizard, level in ((13, 7), (15, 8), (17, 9)):
+            cap = f" and not ClassLevelHigherOrEqualThan({wizard + 2},'Wizard')" if wizard < 17 else ""
+            out.append(f"{ground}IF(ClassLevelHigherOrEqualThan({wizard},'Wizard'){cap}):Summon({pta_summon_template(f'{upcast}_{level}')}{rest})")
+        G.SP.append(G.entry(spell, "SpellData", {"SpellProperties": ";".join(out) + ";"}, using=spell,
+                            comment="Illusion summon bands for Wizard 13, 15, 17 = spell levels 7-9 (re-read from dnd55e at each regen)"))
+
+
 def write():
+    illusion_bands()
     searing_arc_variants()
     summon_bands()
     extend_pb_passives()

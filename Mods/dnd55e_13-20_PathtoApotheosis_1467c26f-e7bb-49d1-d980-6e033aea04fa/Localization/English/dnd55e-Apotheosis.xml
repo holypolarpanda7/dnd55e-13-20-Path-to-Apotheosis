@@ -4585,4 +4585,31 @@
   <content contentuid="h26f51b79aefd5904b0147248cdf0862e" version="1">You create an Elixir of Guileful Movement.</content>
   <content contentuid="he1984f6d0494567cbc8843e13467a8c8" version="1">Elixir of Barkskin</content>
   <content contentuid="h975233faef5d50cda1cc71625037abca" version="1">You create an Elixir of Barkskin.</content>
+  <content contentuid="h1604842df8fd542f9e0f5be42beed653" version="1">Gore (Elephant)</content>
+  <content contentuid="h3f50a3e4518856139f93481ddac6bf1a" version="1">Gore with your horns or tusks: a melee attack for 3d8 + your Strength modifier Piercing damage.</content>
+  <content contentuid="h5899594fc0be5ecc992de4839c2601c2" version="1">Stomp (Elephant)</content>
+  <content contentuid="h0a9e68dc1a2d5ed3978663de5b4e3c16" version="1">Stomp a Prone creature: a melee attack for 3d10 + your Strength modifier Bludgeoning damage.</content>
+  <content contentuid="hbe440228839a59d58fe359781eb2cc6c" version="1">Elephant (Wild Shape)</content>
+  <content contentuid="hdc2f97838af85b19a6b8bb892f27c875" version="1">Elephant Form</content>
+  <content contentuid="h189f384ed4a35d849e103561c95a0184" version="1">You have taken the form of a elephant.</content>
+  <content contentuid="h6bf2c20b09bb5a5baecd149f32ed6e97" version="1">Elephant</content>
+  <content contentuid="h697e371430475bc9b068dff1adbe0ba7" version="1">Assume the form of a elephant (Challenge Rating 4): 76 Hit Points, AC 12, Strength 22; Gore and Stomp attacks. Circle of the Moon, Druid level 12.</content>
+  <content contentuid="h51eef184a53955ab9a46b29679fccb16" version="1">Gore (Triceratops)</content>
+  <content contentuid="h5cec221e6a15563794cbc3904033365c" version="1">Gore with your horns or tusks: a melee attack for 4d8 + your Strength modifier Piercing damage.</content>
+  <content contentuid="h686a76c4e33a562fb1606620a582307b" version="1">Stomp (Triceratops)</content>
+  <content contentuid="hacba97c8c5ef5820b63f1f310971986d" version="1">Stomp a Prone creature: a melee attack for 3d10 + your Strength modifier Bludgeoning damage.</content>
+  <content contentuid="h3afb98faec185b0f96243f8cd84fd31b" version="1">Triceratops (Wild Shape)</content>
+  <content contentuid="h880b52eeaf1e5e04bb8256f3b999cac6" version="1">Triceratops Form</content>
+  <content contentuid="hb7d8e136cb895105864b33921d879b01" version="1">You have taken the form of a triceratops.</content>
+  <content contentuid="ha5f7a1dac0cc56d29f44824c161359fe" version="1">Triceratops</content>
+  <content contentuid="h7f849bd9e1ca5eecabfd4b414dd61c0a" version="1">Assume the form of a triceratops (Challenge Rating 5): 114 Hit Points, AC 13, Strength 22; Gore and Stomp attacks. Circle of the Moon, Druid level 15.</content>
+  <content contentuid="hda773257bdc55198b85eb401bf8242b1" version="1">Gore (Mammoth)</content>
+  <content contentuid="h487e45bc755d53308edb4b2892576d2f" version="1">Gore with your horns or tusks: a melee attack for 4d8 + your Strength modifier Piercing damage.</content>
+  <content contentuid="h6dae7c0ccd5258f18b3fd292453c2fd3" version="1">Stomp (Mammoth)</content>
+  <content contentuid="h26768f34bf8f5f85b9c6c1224f4bb8e7" version="1">Stomp a Prone creature: a melee attack for 4d10 + your Strength modifier Bludgeoning damage.</content>
+  <content contentuid="hd4c11334a3a35730993fdd08afa99f1b" version="1">Mammoth (Wild Shape)</content>
+  <content contentuid="h253b3da631625a5fbb9a2551b248e530" version="1">Mammoth Form</content>
+  <content contentuid="ha5d523d822085fa18fa4d092eb7cca20" version="1">You have taken the form of a mammoth.</content>
+  <content contentuid="hd4d06fd96f075f63a7a93102b8affb48" version="1">Mammoth</content>
+  <content contentuid="hc1edcda20d54528e858015e1b262742c" version="1">Assume the form of a mammoth (Challenge Rating 6): 126 Hit Points, AC 13, Strength 24; Gore and Stomp attacks. Circle of the Moon, Druid level 18.</content>
 </contentList>

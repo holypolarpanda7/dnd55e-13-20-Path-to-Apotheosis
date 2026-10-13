@@ -4493,6 +4493,32 @@
                     <attribute id="UUID" type="guid" value="6529f282-ed21-5ab7-b67a-343f463e0a06"/>
                 </node>
                 <!-- CLASS RESOURCES 13-20 END -->
+                <!-- WILD SHAPE FORMS BEGIN (generated) -->
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="UnlockSpell(Shout_WildShape_Combat_Apo_Elephant)"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="CircleOfTheMoon"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="ede8583c-434b-4fb2-87a8-af8e0e239d62"/>
+                    <attribute id="UUID" type="guid" value="dd790730-3f8a-5087-88a0-1539581ceeb0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="UnlockSpell(Shout_WildShape_Combat_Apo_Triceratops)"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="CircleOfTheMoon"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="ede8583c-434b-4fb2-87a8-af8e0e239d62"/>
+                    <attribute id="UUID" type="guid" value="d276a6c9-d160-5b7e-8f89-d5f28e0bffc4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="UnlockSpell(Shout_WildShape_Combat_Apo_Mammoth)"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="CircleOfTheMoon"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="ede8583c-434b-4fb2-87a8-af8e0e239d62"/>
+                    <attribute id="UUID" type="guid" value="dedbce4d-156d-5cf6-9441-55c6313f8d21"/>
+                </node>
+                <!-- WILD SHAPE FORMS END -->
             </children>
         </node>
     </region>

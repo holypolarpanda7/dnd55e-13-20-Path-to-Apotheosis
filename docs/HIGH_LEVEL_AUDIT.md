@@ -57,9 +57,12 @@ level-up and survive dnd55e updates. Generators: `gen_class_resources.py`, `gen_
 - **Experimental Elixir at 15** (user: provide other potion capability from in-game potions): five more elixir options for the level 15
   Artificer, taken from the base game's potions (Rare, Barkskin Uncommon): Cloud Giant Strength, Battlemage's Power, Viciousness,
   Guileful Movement, Barkskin (`Shout_EE_*`, same container and elixir cost as dnd55e's, potion item icons).
-- **Wild Shape and the illusion summons**: Wild Shape ends at 8 (fine); the illusion summons keep dnd55e's own band design (user
-  decision: it is their BG3-specific answer to a rule that doesn't translate). New forms: analysis in `docs/WILD_SHAPE_FORMS_ANALYSIS.md`
-  (the bigger gap is that every form stops scaling at band 12).
+- **Wild Shape** (user: scaling in scope, follow the rules' tiers, re-skins fine): three new Circle of the Moon forms at the CR / 3
+  tiers - Elephant (CR 4, Moon 12), Triceratops (CR 5, 15), Mammoth (CR 6, 18) - on re-skinned models, with the Monster Manual stat blocks
+  (`gen_wildshape_forms.py`, `docs/WILD_SHAPE_FORMS_ANALYSIS.md`). Wild Shape itself ends at Druid 8, as the rules say.
+- **Illusion summons** (Phantasmal Creatures): yes, new bands were needed. dnd55e's Illusion version summons at the highest slot level
+  (Wizard 5 / 7 / 9 / 11 = level 3 / 4 / 5 / 6 creatures), the slots go on to 7th, 8th and 9th at Wizard 13 / 15 / 17, and PTA already has
+  the level 7-9 creatures (`Wolf_7-9`, `GiantEagle_7-9`, `RedCap_7-9`): bands at 13 / 15 / 17 added for the Wolf, Giant Eagle and Fey forms.
 
 ## Checked against the rules, no change
 
@@ -68,8 +71,6 @@ level-up and survive dnd55e updates. Generators: `gen_class_resources.py`, `gen_
   Druid level and AC 13 + Wisdom modifier (already per level); the maximum CR is Druid level / 3 (4 at 12, 5 at 15, 6 at 18).
   **Open: the CR 4-6 Moon forms don't exist** (dnd55e's Moon list ends at its level 10 forms and the base game has no CR 4-6 beasts
   as player forms); a content item (three to four new beast forms: templates, stats, models), not a cap.
-- **Wizard Illusion summons** (Phantasmal Creatures): the rule has no level scaling (free cast = the base spell at half Hit Points);
-  dnd55e's bands at 5 / 7 / 9 / 11 are its own design, so nothing to extend.
 - **Experimental Elixir potency at 15** (the book's tier): dnd55e's elixirs are the base game's potions (Healing is Greater / Superior / Supreme at
   Artificer 5 and 9; Speed, Flying, Invisibility ... are single-tier potions). Every one is already stronger than the book's top tier
   (Supreme Healing is about 45 hit points against 4d8 + Intelligence), so a stronger tier would only weaken them; the 15 gain in the
@@ -77,7 +78,7 @@ level-up and survive dnd55e updates. Generators: `gen_class_resources.py`, `gen_
 
 ## Still open
 
-- **Moon forms at CR 4-6, and Wild Shape forms stopping at band 12**: `docs/WILD_SHAPE_FORMS_ANALYSIS.md`, nothing built.
+- Moon form visuals (re-skins) and the in-game check of the new forms: `docs/WILD_SHAPE_FORMS_ANALYSIS.md`.
 - The learn-repeatedly "Rare Wondrous Item" Replicate Magic Item plan (a GitHub issue); the Arrow-Catching Shield's ranged-only AC bonus and Reaction.
 - **Lay on Hands** is a charge pool whose heal scales with the Paladin level (not 5 x level Hit Points): kept, as decided 2026-10-03.
 - **Star Map / Cosmic Omen** uses are Wisdom-modifier based in the 2024 text; dnd55e steps them by level. Not a cap problem; left.

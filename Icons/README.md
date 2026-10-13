@@ -42,3 +42,7 @@ gradients `blood` / `scarlet` / `crimson` (iconkit.PALETTE). Rule: every new spe
 ## Artificer level 14 plans (2026-10-13)
 Flame Tongue, Arrow-Catching Shield, Ring of the Ram: same pipeline, jobs Icons/jobs_plans14.json (seeds 3001-3003), picks #4/#4/#2
 (assistant's picks; swap any), tints fire / arcane / force.
+
+## Moon Wild Shape forms (2026-10-13)
+Elephant, Triceratops, Mammoth forms and the Gore / Stomp attacks: same pipeline, jobs Icons/jobs_wsforms.json (seeds 4001-4005), picks
+#3/#3/#1/#3/#1 (assistant's picks), tints earth (forms) and force (attacks).
