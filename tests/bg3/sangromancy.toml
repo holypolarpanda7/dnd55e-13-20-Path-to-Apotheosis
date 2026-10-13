@@ -136,3 +136,17 @@ subclass = "Sangromancer"
 rest = "short"
 setup = [{ target = "host", resource = "HitPointDice06", level = 0, amount = 0 }, { target = "host", resource = "HitPointDice12", level = 0, amount = 0 }, { target = "host", resource = "ApoRedRenewal", level = 0, amount = 0 }]
 expect = [{ resource = "HitPointDice12", level = 0, amount_change = [1, 1] }, { resource = "ApoRedRenewal", level = 0, amount_change = 0 }]
+
+[[case]]
+id = "sangromancer-sanguine-vigor-79"
+title = "Sanguine Vigor (dnd55e, Sangromancer 6) covers the 7th-9th level spells: casting Burst Forth (7th) with a slot heals you 7"
+build = "wiz-sangromancer"
+class = "Wizard"
+level = 20
+subclass = "Sangromancer"
+spell = "Target_BurstForth6"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
+setup = [{ target = "host", hp = 150 }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "host", hp_change = [7, 9] }]
+notes = "dnd55e's IsSangromancySpell() is a SpellId whitelist; PTA ships a second definition with ours added (Scripts/thoth/helpers/ApoSangromancy.khn). This proves the game uses it: without it the heal is 0."
