@@ -31,8 +31,8 @@ G = Gen("sangromancy", "SANGROMANCY 7-9")
 DICE = (6, 8, 10, 12)
 GUID = os.path.basename(PUB)
 KHN = os.path.join(REPO, "Mods", GUID, "Scripts", "thoth", "helpers", "ApoSangromancy.khn")
-ICON = {"BurstForth": "Spell_CrimsonLash", "Fusillade": "Spell_VibratingHumors", "CreepingDeath": "Spell_Consumption",
-        "RedRain": "Spell_BloodWisp", "StealImmortality": "Spell_TheftOfVitae"}   # dnd55e's sangromancy icons until we have our own
+ICON = {"BurstForth": "Apo_Spell_BurstForth", "Fusillade": "Apo_Spell_SanguineFusillade", "CreepingDeath": "Apo_Spell_CreepingDeath",
+        "RedRain": "Apo_Spell_RedRain", "StealImmortality": "Apo_Spell_StealImmortality"}   # own icons, shades of red (Icons/src, 2026-10-13)
 SPELLS = []   # every spell entry name this generator writes (the .khn whitelist)
 SAVANT = {7: [], 8: [], 9: []}
 EXHAUST_UP = ";".join(["IF(HasStatus('APO_EXHAUSTION_5')):Kill()"]
