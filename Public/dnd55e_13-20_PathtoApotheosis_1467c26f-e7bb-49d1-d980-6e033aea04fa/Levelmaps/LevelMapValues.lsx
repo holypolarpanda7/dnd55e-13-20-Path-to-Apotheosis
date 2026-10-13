@@ -241,23 +241,6 @@
                     <attribute id="UUID" type="guid" value="67432a46-f078-4c62-bade-e5a0f96db334"/>
                 </node>
                 <node id="LevelMapSeries">
-                    <attribute id="Level1" type="LSString" value="1d8"/>
-                    <attribute id="Level2" type="LSString" value="1d8"/>
-                    <attribute id="Level3" type="LSString" value="1d8"/>
-                    <attribute id="Level4" type="LSString" value="1d8"/>
-                    <attribute id="Level5" type="LSString" value="2d8"/>
-                    <attribute id="Level6" type="LSString" value="2d8"/>
-                    <attribute id="Level7" type="LSString" value="2d8"/>
-                    <attribute id="Level8" type="LSString" value="2d8"/>
-                    <attribute id="Level9" type="LSString" value="2d8"/>
-                    <attribute id="Level10" type="LSString" value="2d8"/>
-                    <attribute id="Level11" type="LSString" value="3d8"/>
-                    <attribute id="Level17" type="LSString" value="4d8"/>
-                    <attribute id="Name" type="FixedString" value="D8CantripCleric"/>
-                    <attribute id="PreferredClassUUID" type="guid" value="114e7aee-d1d4-4371-8d90-8a2080592faf"/>
-                    <attribute id="UUID" type="guid" value="0cb5ba84-1f50-4a99-bd5f-4d5230d38f81"/>
-                </node>
-                <node id="LevelMapSeries">
                     <attribute id="Level1" type="LSString" value="1"/>
                     <attribute id="Level2" type="LSString" value="1"/>
                     <attribute id="Level3" type="LSString" value="1"/>
@@ -359,6 +342,25 @@
                     <attribute id="Level17" type="LSString" value="4d10"/>
                     <attribute id="Name" type="FixedString" value="BreathWeapon"/>
                     <attribute id="UUID" type="guid" value="b1341ab8-3254-4594-813d-2f3ce35f5843"/>
+                </node>
+                <node id="LevelMapSeries">
+                    <attribute id="Level1" type="LSString" value="1d8"/>
+                    <attribute id="Level2" type="LSString" value="1d8"/>
+                    <attribute id="Level3" type="LSString" value="1d8"/>
+                    <attribute id="Level4" type="LSString" value="1d8"/>
+                    <attribute id="Level5" type="LSString" value="1d8"/>
+                    <attribute id="Level6" type="LSString" value="1d8"/>
+                    <attribute id="Level7" type="LSString" value="2d8"/>
+                    <attribute id="Level8" type="LSString" value="2d8"/>
+                    <attribute id="Level9" type="LSString" value="2d8"/>
+                    <attribute id="Level10" type="LSString" value="2d8"/>
+                    <attribute id="Level11" type="LSString" value="2d8"/>
+                    <attribute id="Level12" type="LSString" value="2d8"/>
+                    <attribute id="Level13" type="LSString" value="3d8"/>
+                    <attribute id="Level18" type="LSString" value="4d8"/>
+                    <attribute id="Name" type="FixedString" value="D8CantripCleric"/>
+                    <attribute id="PreferredClassUUID" type="guid" value="114e7aee-d1d4-4371-8d90-8a2080592faf"/>
+                    <attribute id="UUID" type="guid" value="0cb5ba84-1f50-4a99-bd5f-4d5230d38f81"/>
                 </node>
                 <node id="LevelMapSeries">
                     <attribute id="Level1" type="LSString" value="2d6"/>

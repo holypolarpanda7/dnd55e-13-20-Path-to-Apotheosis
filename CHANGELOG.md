@@ -11,6 +11,10 @@
 - Fixed: Hit Point Dice stopped at 12 for every base class; you now gain one per level through 20 (PHB 2024), which also gives short rests and Hit Point Dice costs their full range.
 - Fixed: Barbarians and Clerics reaching level 12 got no Hit Point Die for that level.
 - Fixed: Ranger Favored Enemy uses stopped at 4 (now 5 at level 13 and 6 at 17) and Wizard Arcane Recovery stopped at 6 (now 7, 8, 9, 10 at levels 13, 15, 17, 19), as in the PHB 2024.
+- Fixed (found by a sweep of class resources against the PHB 2024): pools and uses that dnd55e stops growing at level 12 now keep growing - Celestial Healing Light (1 + level d6s), Circle of Dreams Balm (Druid level, with 7-10 dice spend options), Abjuration Arcane Ward (2 x level), Circle of the Land Natural Recovery (half the level), Zealot Warrior of the Gods (7 dice at 17), Alchemist elixirs (5 at 15), Artificer Magic Items (5 at 14, 6 at 18), Rune Knight runes and Runic Shield, Psi Warrior and Soulknife Psionic Energy Dice (10 at 13, 12 at 17), Swarmkeeper Writhing Tide, and the Proficiency Bonus uses of Dragonborn, Eladrin, Goliath, Shadar-kai and 13 feats (Lucky, Healer, Poisoner, the Giant feats ...).
+- Fixed: Monk Unarmored Movement now reaches +25 ft at 14 and +30 ft at 18; Fighters get their sixth Weapon Mastery at 16.
+- Fixed: Cleric Divine Spark now follows the PHB 2024 dice (1d8, 2d8 at 7, 3d8 at 13, 4d8 at 18; dnd55e used the cantrip steps); Life-Giving Force rolls 4d6 at 16; Venomous Strike keeps up with Sneak Attack's dice.
+- Fixed: Beast Master companions and the Steel Defender grow after level 11 (+10 hit points at 13, 15, 17 and 19, and your Proficiency Bonus) instead of staying at their level 11 strength.
 - Requires DnD 5.5e All-in-One BEYOND 4.13.7.2 (was 4.13.7.1). Our upcast copies of smites, Armor of Agathys and Hail of Thorns and the Sneak Attack rules fixes carry its Hex fix: damage riders such as Hex no longer repeat on extra damage.
 
 ## v1.0.0 - 2026-10-11

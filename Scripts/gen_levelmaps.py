@@ -24,7 +24,7 @@ ADD = {  # series name -> {level: value} (2024 rules)
     "RageDamageThrown": {16: "8"},                             # the base game's doubled thrown rage damage
     "BardicInspiration": {15: "1d12"},                         # Bardic Inspiration d12 at 15
     "D4Cantrip": {17: "4d4"}, "D6Cantrip": {17: "4d6"}, "D8Cantrip": {17: "4d8"}, "D10Cantrip": {17: "4d10"},
-    "D12Cantrip": {17: "4d12"}, "D8CantripCleric": {17: "4d8"},  # cantrip damage: four dice at 17
+    "D12Cantrip": {17: "4d12"},  # cantrip damage: four dice at 17
     "EldritchBlast": {17: "4"},                                # four beams at 17
     "TrueStrike": {17: "3d6"},                                 # True Strike extra Radiant 3d6 at 17
     "BoomingBlade": {17: "3d8"}, "BoomingBlade_Walk": {17: "4d8"},
@@ -32,6 +32,7 @@ ADD = {  # series name -> {level: value} (2024 rules)
     "ProficiencyBonusD4": {13: "5d4", 17: "6d4"},              # a d4 per point of Proficiency Bonus
     "HaloOfSpores": {14: "1d10"},                              # TCoE: 1d10 at 14
     "BreathWeapon": {17: "4d10"},                              # Dragonborn 2024: 4d10 at 17
+    "D8CantripCleric": {13: "3d8", 18: "4d8"},                 # only Divine Spark uses it (PHB 2024: 1d8, +1 die at 7, 13, 18; see FIX)
     "RageDamageDice": {16: "4d6"},                             # World Tree Life-Giving Force: d6s equal to the Rage Damage (+4 at 16)
     "VenomousStrike": {13: "7d8", 15: "8d8", 17: "9d8", 19: "10d8"},   # Sneak Attack as Poison d8s: as many dice as Sneak Attack
 }
@@ -40,9 +41,10 @@ ADD = {  # series name -> {level: value} (2024 rules)
 FIX = {  # PHB 2024 steps that base/dnd55e compress below 13: name -> {level: value, None = drop that level}
     "SneakAttack": {11: "6d6", 13: "7d6"},                     # (level + 1) / 2 d6; dnd55e jumps to 7d6 at 11
     "LandsAid": {5: None, 10: "3d6", 14: "4d6"},
+    "D8CantripCleric": {5: "1d8", 6: "1d8", 7: "2d8", 8: "2d8", 9: "2d8", 10: "2d8", 11: "2d8", 12: "2d8"},   # Divine Spark: dnd55e uses the cantrip tiers (5/11)
     "VenomousStrike": {11: "6d8"},                              # dnd55e jumps to 7d8 at 11 like its compressed Sneak Attack                # Circle of the Land: 2d6, 3d6 at 10, 4d6 at 14
 }
-MOVE_10_TO_11 = ["D4Cantrip", "D6Cantrip", "D8Cantrip", "D10Cantrip", "D12Cantrip", "D8CantripCleric", "EldritchBlast",
+MOVE_10_TO_11 = ["D4Cantrip", "D6Cantrip", "D8Cantrip", "D10Cantrip", "D12Cantrip", "EldritchBlast",
                  "TrueStrike", "BoomingBlade", "BoomingBlade_Walk", "BreathWeapon"]  # third tier at 11, not 10
 
 
