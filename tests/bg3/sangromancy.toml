@@ -1,0 +1,136 @@
+# Grim Hollow Sangromancy spells 7-9 (Scripts/gen_sangromancy.py, ScriptExtender/Lua/Sangromancy.lua) and the Sangromancer's
+# Red Renewal (2026-10-12). Written before any in-game run. Run: bg3_test_run("apotheosis", "<id>") for each.
+# Hit Point Dice are spent for real by the engine only for reactions; a scripted cast checks the declared cost
+# ({ resource = ..., change = -N } is the cost check, amount_change the measured change).
+
+[suite]
+name = "Grim Hollow Sangromancy 7-9"
+mode = "script"
+
+[[case]]
+id = "sangro-burst-forth"
+title = "Burst Forth (d6, 7th): you teleport to the target; failed Constitution save - 7d6 + spellcasting modifier Necrotic; costs 7 Hit Point Dice"
+spell = "Target_BurstForth6"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-60, -7] }, { resource = "HitPointDice06", level = 0, change = -7 }, { resource = "SpellSlot", level = 7, change = -1 }]
+notes = "The teleport (GROUND:TeleportSource(true,true)) isn't asserted by a key yet: check the host ends beside the wolf."
+
+[[case]]
+id = "sangro-burst-forth-d12-upcast"
+title = "Burst Forth (d12, 9th-level slot): 9d12 + modifier and 9 d12 Hit Point Dice (Full-Blooded)"
+spell = "Target_BurstForth12_9"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-120, -9] }, { resource = "HitPointDice12", level = 0, change = -9 }, { resource = "SpellSlot", level = 9, change = -1 }]
+
+[[case]]
+id = "sangro-fusillade"
+title = "Sanguine Fusillade (d6, 7th): the target takes 7d6 Piercing and you get the Fusillade Darts"
+spell = "Target_SanguineFusillade6"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
+setup = [{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-42, -7] }, { target = "host", status_applied = ["SANGUINE_FUSILLADE_6_7"] }, { resource = "HitPointDice06", level = 0, change = -7 }]
+
+[[case]]
+id = "sangro-fusillade-darts"
+title = "Sanguine Fusillade: the free Fusillade Darts spell - a ranged spell attack, 1d6 Piercing per dart, and the darts are used up"
+spell = "Projectile_SanguineFusillade_Dart_6_7"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
+setup = [{ target = "host", status = "SANGUINE_FUSILLADE_6_7", turns = 2 }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+real_rolls = true
+expect = [{ cast = true }, { target = "A", hp_change = [-6, -1] }, { target = "host", status_removed = ["SANGUINE_FUSILLADE_6_7"] }]
+notes = "A scripted cast picks one target, so one dart; the spell has AmountOfTargets = 7 for a real cast."
+
+[[case]]
+id = "sangro-creeping-death-mark"
+title = "Creeping Death (d6, 8th): the target is doomed, you get the Surge Bonus Action, and the Lua rolls an 8d6 threshold"
+spell = "Target_CreepingDeath6"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
+setup = [{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", status_present = ["CREEPING_DEATH_6_8", "CREEPING_DEATH_MARK"] }, { target = "host", status_present = ["CREEPING_DEATH_CASTER"] },
+          { log = "/Creeping Death: .* marked, threshold 8d6 = \\d+/" }, { resource = "HitPointDice06", level = 0, change = -8 }]
+
+[[case]]
+id = "sangro-creeping-death-kill"
+title = "Creeping Death: a creature at 9 HP dies when any damage takes it to or below its threshold (8d6 is at least 8)"
+spell = "Projectile_FireBolt"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 9, distance = 8 }]
+casts = [{ spell = "Target_CreepingDeath6", target = "A", wait = 3 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", dead = true }, { log = "/Creeping Death: .* at or below its threshold/" }]
+notes = "The Fire Bolt must hit and deal at least 1 damage; the wolf has 9 HP and the threshold is at least 8."
+
+[[case]]
+id = "sangro-creeping-death-surge"
+title = "Creeping Death: Surge (Bonus Action) - a failed Constitution save raises the threshold by 2d6"
+spell = "Target_Apo_CreepingDeath_Surge"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+casts = [{ spell = "Target_CreepingDeath6", target = "A", wait = 3 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { log = "/Creeping Death: .* threshold \\+\\d+ = \\d+ \\(0 saves\\)/" }]
+
+[[case]]
+id = "sangro-red-rain"
+title = "Red Rain (d6, 8th): an aura on you; an enemy Beast in it is exposed and, failing Wisdom, Frightened"
+spell = "Shout_RedRain6"
+target = "host"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 10 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "host", status_present = ["RED_RAIN"] }, { target = "A", status_present = ["RED_RAIN_EXPOSED", "FRIGHTENED"] }, { resource = "HitPointDice06", level = 0, change = -8 }]
+settle = 4
+
+[[case]]
+id = "sangro-red-rain-dose"
+title = "Red Rain: when a 100-turn dose ends the creature takes 2d10 Necrotic and gains a level of Exhaustion and a lower Hit Point maximum"
+spell = "Shout_RedRain6"
+target = "host"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 10 }]
+setup = [{ target = "A", status = "RED_RAIN_DOSE", turns = 1 }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+end_turns = 2
+expect = [{ target = "A", hp_change = [-20, -2] }, { target = "A", status_present = ["APO_EXHAUSTION_1", "RED_RAIN_DRAIN_1"] }]
+notes = "The dose is given 1 turn so it ends within the case instead of after 100."
+
+[[case]]
+id = "sangro-steal-immortality"
+title = "Steal Immortality (d6, reaction): an Undead you see drops to 0 - you gain 18d6 Temporary Hit Points and the Undead type with its benefits; costs 9 Hit Point Dice and a 9th-level slot"
+spell = "Projectile_FireBolt"
+target = "A"
+reactions = ["StealImmortality"]
+spawn = [{ as = "A", template = "skeleton", faction = "hostile", hp = 1, distance = 8 }]
+setup = [{ target = "host", boost = "UnlockSpell(Shout_StealImmortality6)" }, { target = "host", boost = "ActionResource(HitPointDice06,9,0)" }, { target = "host", boost = "ActionResource(SpellSlot,1,9)" },
+         { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", dead = true }, { target = "host", status_applied = ["STEAL_IMMORTALITY_UNDEAD", "STEAL_IMMORTALITY_THP_6"] }, { target = "host", temp_hp_change = [18, 108] },
+          { resource = "HitPointDice06", level = 0, amount_change = -9 }, { resource = "SpellSlot", level = 9, amount_change = -1 }]
+notes = "Also check the host now carries the UNDEAD tag, Poison immunity and Necrotic immunity (snapshot), and that Fire Bolt's own damage doesn't matter (1 HP skeleton)."
+
+[[case]]
+id = "sangromancer-14-red-renewal"
+title = "Sangromancer 14 Red Renewal: a Short Rest restores half your Wizard level in Hit Point Dice (d6) and as many Full-Blooded d12s, once until a Long Rest"
+build = "wiz-sangromancer"
+class = "Wizard"
+level = 14
+subclass = "Sangromancer"
+rest = "short"
+setup = [{ target = "host", resource = "HitPointDice06", level = 0, amount = 0 }, { target = "host", resource = "HitPointDice12", level = 0, amount = 0 }]
+expect = [{ resource = "HitPointDice06", level = 0, amount_change = [7, 14] }, { resource = "HitPointDice12", level = 0, amount_change = [8, 8] },
+          { resource = "ApoRedRenewal", level = 0, amount_change = -1 }]
+notes = "Wizard 14: half the level is 7 of each; dnd55e's own Full-Blooded short-rest die (+1 d12) comes on top, hence d12 = 8. The d6 range allows whatever the base short rest restores. A rest step (`rest = \"short\"`) is a bg3-data-mcp framework addition (2026-10-12)."
+
+[[case]]
+id = "sangromancer-14-red-renewal-once"
+title = "Red Renewal works once: a second Short Rest before a Long Rest restores only Full-Blooded's own die"
+build = "wiz-sangromancer"
+class = "Wizard"
+level = 14
+subclass = "Sangromancer"
+rest = "short"
+setup = [{ target = "host", resource = "HitPointDice06", level = 0, amount = 0 }, { target = "host", resource = "HitPointDice12", level = 0, amount = 0 }, { target = "host", resource = "ApoRedRenewal", level = 0, amount = 0 }]
+expect = [{ resource = "HitPointDice12", level = 0, amount_change = [1, 1] }, { resource = "ApoRedRenewal", level = 0, amount_change = 0 }]
