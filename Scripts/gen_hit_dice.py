@@ -3,7 +3,8 @@ dnd55e grants them per class level as action resources (HitPointDice06/08/10/12)
 Artificer, Gunslinger, Illrigger and Monster Hunter tables already go to 20); without these a level-20 character had 12 dice -
 short rests, and everything that spends Hit Point Dice (Sangromancy spells, Sangromancer's Red Renewal), came up short.
 
-Each class's level 13-20 progression nodes get one ActionResource(HitPointDiceXX,1,0) boost, applied at that level-up. The first
+Each class's level 13-20 progression nodes get one ActionResource(HitPointDiceXX,1,0) boost, applied at that level-up - and so
+does every lower-level dnd55e node PTA overrides (an override replaces the node, dnd55e's die with it). The first
 version was one passive with IF(ClassLevelHigherOrEqualThan(N,...)) boosts: the game evaluates those conditions when the passive
 is applied (and on a save load), not on level-up, so a Wizard 14 had 13 d6 until the next load (2026-10-13; the level check now
 tests the rule). The nodes are rewritten in full by other generators, so this appends (gen_common.append_progressions) and runs
@@ -29,19 +30,21 @@ ATTR = lambda k, b: (re.search(rf'id="{k}" type="[^"]*" value="([^"]*)"', b) or 
 
 
 def class_nodes():
-    """{node uuid: (class, level)} for each class's level 13-20 nodes (same table as its level-13 node)."""
+    """{node uuid: (class, level)} for each class's nodes in PTA's Progressions.lsx (same table as its level-13 node): levels
+    13-20 and every dnd55e node PTA overrides."""
     s = open(os.path.join(PUB, "Progressions", "Progressions.lsx"), encoding="utf-8").read()
     nodes = re.findall(r'<node id="Progression">.*?</node>', s, re.S)
     by_uuid = {ATTR("UUID", b): b for b in nodes}
     out = {}
     for cls, (_die, l13) in CLASSES.items():
         table = ATTR("TableUUID", by_uuid[l13])
-        lv = {int(ATTR("Level", b)): ATTR("UUID", b) for b in nodes
-              if ATTR("TableUUID", b) == table and ATTR("Name", b) == cls and 13 <= int(ATTR("Level", b) or 0) <= 20
-              and (ATTR("IsMulticlass", b) or "False") != "True"}
-        missing = sorted(set(range(13, 21)) - set(lv))
+        # 13-20 are PTA's own nodes; below 13 PTA's file only holds nodes it overrides from dnd55e - and an override replaces
+        # dnd55e's whole node, Hit Point Die included (Barbarian and Cleric 12 had 11 dice, 2026-10-13), so those get it back too
+        mine = [(int(ATTR("Level", b) or 0), ATTR("UUID", b), ATTR("IsMulticlass", b) or "False") for b in nodes
+                if ATTR("TableUUID", b) == table and ATTR("Name", b) == cls and 1 <= int(ATTR("Level", b) or 0) <= 20]
+        missing = sorted(set(range(13, 21)) - {n for n, _u, mc in mine if mc != "True"})
         assert not missing, f"{cls}: no progression node for levels {missing}"
-        out.update({u: (cls, n) for n, u in lv.items()})
+        out.update({u: (cls, n) for n, u, _mc in mine})
     return out
 
 
@@ -70,4 +73,4 @@ if __name__ == "__main__":
     drop_old_passive()
     nodes = class_nodes()
     append_progressions({u: {"Boosts": f"ActionResource(HitPointDice{CLASSES[c][0]:02d},1,0)"} for u, (c, _n) in nodes.items()})
-    print(f"{len(nodes)} class level nodes (13-20) get a Hit Point Die")
+    print(f"{len(nodes)} class level nodes get a Hit Point Die (13-20 + overridden ones)")

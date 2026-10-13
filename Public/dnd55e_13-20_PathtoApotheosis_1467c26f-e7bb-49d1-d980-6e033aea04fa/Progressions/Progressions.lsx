@@ -79,7 +79,7 @@
                 <!-- Override All-in-One Level 12 to remove PersistentRage (moved to 15 per PHB 2024) -->
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="true"/>
-                    <attribute id="Boosts" type="LSString" value="ActionResource(Rage,1,0)"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(Rage,1,0);ActionResource(HitPointDice12,1,0)"/>
                     <attribute id="Level" type="uint8" value="12"/>
                     <attribute id="Name" type="LSString" value="Barbarian"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -531,6 +531,7 @@
                 <!-- Override All-in-One Level 12 to remove ImprovedBlessedStrikes (moved to 14 per PHB 2024) -->
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice08,1,0)"/>
                     <attribute id="Level" type="uint8" value="12"/>
                     <attribute id="Name" type="LSString" value="Cleric"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>

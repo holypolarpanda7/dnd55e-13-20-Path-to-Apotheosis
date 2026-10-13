@@ -9,6 +9,7 @@
 - Sangromancer (Grim Hollow wizard, new in DnD 5.5e 4.13.7): levels 13-20 - Red Renewal at 14 (your first Short Rest after a Long Rest restores Hit Point Dice and Full-Blooded dice equal to half your Wizard level), the Full-Blooded pool keeps growing to 1 + Wizard level, and Sangromancy Savant picks at 13, 15 and 17.
 - Grim Hollow Sangromancy spells, 7th-9th level: Burst Forth, Sanguine Fusillade, Creeping Death, Red Rain, Steal Immortality - Hit Point Dice cost (a d6/d8/d10/d12 variant each, the d12 spends Full-Blooded) like DnD 5.5e's 1st-4th level ones, on the class lists their book tags give them, and offered by the Sangromancer's Savant picks at 13, 15 and 17. Sanguine Vigor works with them.
 - Fixed: Hit Point Dice stopped at 12 for every base class; you now gain one per level through 20 (PHB 2024), which also gives short rests and Hit Point Dice costs their full range.
+- Fixed: Barbarians and Clerics reaching level 12 got no Hit Point Die for that level.
 
 ## v1.0.0 - 2026-10-11
 
