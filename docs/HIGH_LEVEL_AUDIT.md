@@ -54,7 +54,12 @@ level-up and survive dnd55e updates. Generators: `gen_class_resources.py`, `gen_
   (+2d6 Fire), Arrow-Catching Shield (a flat +2 AC: the engine has no AC bonus per attack type), Ring of the Ram (three charges,
   2d10 Force and a push per charge, an attack against a creature in sight). The learn-repeatedly "Rare Wondrous Item" plan is not
   modelled. New icons for Flame Tongue, Arrow-Catching Shield and Ring of the Ram (rule: every new spell gets its own).
-- **Wild Shape and the illusion summons** (user: check the rules): see below; nothing in the rules table needed a data change.
+- **Experimental Elixir at 15** (user: provide other potion capability from in-game potions): five more elixir options for the level 15
+  Artificer, taken from the base game's potions (Rare, Barkskin Uncommon): Cloud Giant Strength, Battlemage's Power, Viciousness,
+  Guileful Movement, Barkskin (`Shout_EE_*`, same container and elixir cost as dnd55e's, potion item icons).
+- **Wild Shape and the illusion summons**: Wild Shape ends at 8 (fine); the illusion summons keep dnd55e's own band design (user
+  decision: it is their BG3-specific answer to a rule that doesn't translate). New forms: analysis in `docs/WILD_SHAPE_FORMS_ANALYSIS.md`
+  (the bigger gap is that every form stops scaling at band 12).
 
 ## Checked against the rules, no change
 
@@ -65,15 +70,15 @@ level-up and survive dnd55e updates. Generators: `gen_class_resources.py`, `gen_
   as player forms); a content item (three to four new beast forms: templates, stats, models), not a cap.
 - **Wizard Illusion summons** (Phantasmal Creatures): the rule has no level scaling (free cast = the base spell at half Hit Points);
   dnd55e's bands at 5 / 7 / 9 / 11 are its own design, so nothing to extend.
-- **Experimental Elixir potency at 15**: dnd55e's elixirs are the base game's potions (Healing is Greater / Superior / Supreme at
+- **Experimental Elixir potency at 15** (the book's tier): dnd55e's elixirs are the base game's potions (Healing is Greater / Superior / Supreme at
   Artificer 5 and 9; Speed, Flying, Invisibility ... are single-tier potions). Every one is already stronger than the book's top tier
-  (Supreme Healing is about 45 hit points against 4d8 + Intelligence), so a level 15 tier would only weaken them. The 15 gain in the
-  rules is the fifth elixir (done). Not built.
+  (Supreme Healing is about 45 hit points against 4d8 + Intelligence), so a stronger tier would only weaken them; the 15 gain in the
+  rules is the fifth elixir (done), and the extra options above are the answer.
 
 ## Still open
 
-- **Moon forms at CR 4-6** (above).
-- The learn-repeatedly "Rare Wondrous Item" Replicate Magic Item plan; the Arrow-Catching Shield's ranged-only AC bonus and Reaction.
+- **Moon forms at CR 4-6, and Wild Shape forms stopping at band 12**: `docs/WILD_SHAPE_FORMS_ANALYSIS.md`, nothing built.
+- The learn-repeatedly "Rare Wondrous Item" Replicate Magic Item plan (a GitHub issue); the Arrow-Catching Shield's ranged-only AC bonus and Reaction.
 - **Lay on Hands** is a charge pool whose heal scales with the Paladin level (not 5 x level Hit Points): kept, as decided 2026-10-03.
 - **Star Map / Cosmic Omen** uses are Wisdom-modifier based in the 2024 text; dnd55e steps them by level. Not a cap problem; left.
 - **Bladesong** (`Bladesong` level map 2/3/4): the Bladesinger moved to dnd55e.

@@ -53,3 +53,14 @@ spell = "Target_RMI_MagicArmor"
 target = "host"
 expect = [{ cast = true }, { target = "host", status_applied = ["RMI_MAGICARMOR_2"] }]
 notes = "Needs a level 14 Artificer so ClassLevelHigherOrEqualThan(14,'Artificer') holds; the build name is a stand-in for any Artificer checkpoint."
+
+[[case]]
+id = "hl-elixir-cloud-giant-strength"
+title = "Experimental Elixir at Artificer 15: the Elixir of Cloud Giant Strength option; costs one elixir use"
+build = "artificer-alchemist"
+class = "Artificer"
+level = 15
+subclass = "Alchemist"
+spell = "Shout_EE_CloudGiantStrength"
+target = "host"
+expect = [{ cast = true }, { resource = "ExperimentalElixir", level = 0, change = -1 }]

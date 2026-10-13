@@ -92,6 +92,62 @@ data "SpellProperties" "ApplyStatus(RMI_RINGOFRAM,100,-1);"
 data "RequirementConditions" "ClassLevelHigherOrEqualThan(14,'Artificer',context.Source);"
 data "TooltipStatusApply" "ApplyStatus(RMI_RINGOFRAM,100,-1)"
 
+// Experimental Elixir option at Artificer 15 (an in-game potion)
+new entry "Shout_EE_CloudGiantStrength"
+type "SpellData"
+using "Shout_EE_Bloodlust"
+data "DisplayName" "hd512f2619187503fb7e3bb1822dc3d16"
+data "Description" "h887f60e9ed085e2bb6cdfc26bafd012b"
+data "Icon" "Item_CONS_Potion_Attack_Buff_A"
+data "SpellProperties" "SummonInInventory(e6490cc8-7f81-4aac-95e8-a58ce5e88a31,-1,1);"
+data "RequirementConditions" "ClassLevelHigherOrEqualThan(14,'Artificer',context.Source);"
+
+// Experimental Elixir option at Artificer 15 (an in-game potion)
+new entry "Shout_EE_BattlemagesPower"
+type "SpellData"
+using "Shout_EE_Bloodlust"
+data "DisplayName" "h24e076523a7f5013829beb1fc5cdf6d2"
+data "Description" "h1716b7e4c5bb507cae3867dd086c386f"
+data "Icon" "Item_ALCH_Solution_Elixir_ArcaneAcuity"
+data "SpellProperties" "SummonInInventory(7d1699d9-c3fa-4761-9718-28230f78420b,-1,1);"
+data "RequirementConditions" "ClassLevelHigherOrEqualThan(14,'Artificer',context.Source);"
+
+// Experimental Elixir option at Artificer 15 (an in-game potion)
+new entry "Shout_EE_Viciousness"
+type "SpellData"
+using "Shout_EE_Bloodlust"
+data "DisplayName" "hacca320c3f0950d98fa817f6f8e6de25"
+data "Description" "h8c8ab0b61a63566ba518a2118cab419b"
+data "Icon" "Item_ALCH_Solution_Elixir_Criticals"
+data "SpellProperties" "SummonInInventory(44cd95a7-4791-4ace-bea0-a5ca4421171b,-1,1);"
+data "RequirementConditions" "ClassLevelHigherOrEqualThan(14,'Artificer',context.Source);"
+
+// Experimental Elixir option at Artificer 15 (an in-game potion)
+new entry "Shout_EE_GuilefulMovement"
+type "SpellData"
+using "Shout_EE_Bloodlust"
+data "DisplayName" "hb9d7d746288d5e6697ad32b56007e117"
+data "Description" "h26f51b79aefd5904b0147248cdf0862e"
+data "Icon" "Item_CONS_Potion_Gaseous_Form_A"
+data "SpellProperties" "SummonInInventory(b8a2f9e4-3b5e-4418-af05-5ca3cd40dd71,-1,1);"
+data "RequirementConditions" "ClassLevelHigherOrEqualThan(14,'Artificer',context.Source);"
+
+// Experimental Elixir option at Artificer 15 (an in-game potion)
+new entry "Shout_EE_Barkskin"
+type "SpellData"
+using "Shout_EE_Bloodlust"
+data "DisplayName" "he1984f6d0494567cbc8843e13467a8c8"
+data "Description" "h975233faef5d50cda1cc71625037abca"
+data "Icon" "Item_CONS_Potion_Barkskin_A"
+data "SpellProperties" "SummonInInventory(cc1a8802-675a-426b-a791-ec1d5a5b6328,-1,1);"
+data "RequirementConditions" "ClassLevelHigherOrEqualThan(14,'Artificer',context.Source);"
+
+// the level 15 elixirs (re-read from dnd55e at each regen)
+new entry "Shout_ExperimentalElixir"
+type "SpellData"
+using "Shout_ExperimentalElixir"
+data "ContainerSpells" "Shout_EE_Healing;Shout_EE_Speed;Shout_EE_Heroism;Shout_EE_Flying;Shout_EE_Invisibility;Shout_EE_PeerlessFocus;Shout_EE_Vigilance;Shout_EE_Bloodlust;Shout_EE_HillGiantStrength;Shout_EE_Colossus;Shout_EE_FeatherFall;Shout_EE_GloriousVaulting;Shout_EE_CloudGiantStrength;Shout_EE_BattlemagesPower;Shout_EE_Viciousness;Shout_EE_GuilefulMovement;Shout_EE_Barkskin;Shout_EE_Resource_1;Shout_EE_Resource_2;Shout_EE_Resource_3;Shout_EE_Resource_4;Shout_EE_Resource_5;Shout_EE_Resource_6;"
+
 // the level 14 plans (re-read from dnd55e at each regen)
 new entry "Target_ReplicateMagicItem"
 type "SpellData"

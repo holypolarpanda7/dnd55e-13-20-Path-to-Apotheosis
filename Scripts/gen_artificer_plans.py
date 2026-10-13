@@ -14,6 +14,12 @@ stops at the level 10 list: every plan is available as soon as its level is reac
 Not modelled: "Rare Wondrous Item that isn't cursed" (a learn-it-repeatedly choice of any rare item). Ring of Free Action and Ring of
 Protection are on the level 10 list in dnd55e (the 2024 table has them at 14); left as they are.
 
+Experimental Elixir at 15 (user decision 2026-10-13): the book's elixirs get stronger at 15 (Healing 4d8, Speed +20 ft, Resilience 8 hours ...),
+but dnd55e's are already the base game's potions (Healing Supreme is far above 4d8), so a stronger tier would only weaken them.
+Instead the level 15 Artificer chooses from five more in-game elixirs (Rare, or Uncommon for Barkskin): Cloud Giant Strength,
+Battlemage's Power, Viciousness, Guileful Movement, Barkskin. They go in the same Experimental Elixir container as dnd55e's
+(Shout_EE_*; potion item icons, as dnd55e does) and cost the same elixir use.
+
 Run: python3 Scripts/gen_artificer_plans.py   (after gen_class_resources.py in regen_all.sh)
 """
 import glob
@@ -87,7 +93,23 @@ G.spell("Target_RMI_RingOfTheRam", "Ring of the Ram", "A ring with three charges
          "TooltipStatusApply": "ApplyStatus(RMI_RINGOFRAM,100,-1)"}, using="Target_RMI_MagicArmor", icon="Apo_Spell_RingOfTheRam")
 
 
+ELIXIRS_15 = [  # spell, in-game potion template, item icon, name
+    ("Shout_EE_CloudGiantStrength", "e6490cc8-7f81-4aac-95e8-a58ce5e88a31", "Item_CONS_Potion_Attack_Buff_A", "Elixir of Cloud Giant Strength"),
+    ("Shout_EE_BattlemagesPower", "7d1699d9-c3fa-4761-9718-28230f78420b", "Item_ALCH_Solution_Elixir_ArcaneAcuity", "Elixir of Battlemage's Power"),
+    ("Shout_EE_Viciousness", "44cd95a7-4791-4ace-bea0-a5ca4421171b", "Item_ALCH_Solution_Elixir_Criticals", "Elixir of Viciousness"),
+    ("Shout_EE_GuilefulMovement", "b8a2f9e4-3b5e-4418-af05-5ca3cd40dd71", "Item_CONS_Potion_Gaseous_Form_A", "Elixir of Guileful Movement"),
+    ("Shout_EE_Barkskin", "cc1a8802-675a-426b-a791-ec1d5a5b6328", "Item_CONS_Potion_Barkskin_A", "Elixir of Barkskin"),
+]
+for spell, tpl, icon, title in ELIXIRS_15:
+    G.spell(spell, title, f"You create an {title}." if title[0] in "AEIOU" else f"You create a {title}.",
+            {"SpellProperties": f"SummonInInventory({tpl},-1,1);", "RequirementConditions": LVL + ";"},
+            using="Shout_EE_Bloodlust", icon=icon, comment="Experimental Elixir option at Artificer 15 (an in-game potion)")
+
+
 def write():
+    ee = dnd_field("Shout_ExperimentalElixir", "ContainerSpells").rstrip(";")
+    G.SP.append(G.entry("Shout_ExperimentalElixir", "SpellData", {"ContainerSpells": ee.replace("Shout_EE_Resource_1", ";".join(x[0] for x in ELIXIRS_15 if x[0] not in ee) + ";Shout_EE_Resource_1", 1) + ";"},
+                        using="Shout_ExperimentalElixir", comment="the level 15 elixirs (re-read from dnd55e at each regen)"))
     cont = dnd_field("Target_ReplicateMagicItem", "ContainerSpells").rstrip(";")
     new = ["Target_RMI_FlameTongue", "Target_RMI_ArrowCatchingShield", "Target_RMI_RingOfTheRam"]
     G.SP.append(G.entry("Target_ReplicateMagicItem", "SpellData", {"ContainerSpells": cont + ";" + ";".join(x for x in new if x not in cont) + ";"},
