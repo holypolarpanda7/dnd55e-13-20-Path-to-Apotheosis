@@ -32,12 +32,15 @@ ADD = {  # series name -> {level: value} (2024 rules)
     "ProficiencyBonusD4": {13: "5d4", 17: "6d4"},              # a d4 per point of Proficiency Bonus
     "HaloOfSpores": {14: "1d10"},                              # TCoE: 1d10 at 14
     "BreathWeapon": {17: "4d10"},                              # Dragonborn 2024: 4d10 at 17
+    "RageDamageDice": {16: "4d6"},                             # World Tree Life-Giving Force: d6s equal to the Rage Damage (+4 at 16)
+    "VenomousStrike": {13: "7d8", 15: "8d8", 17: "9d8", 19: "10d8"},   # Sneak Attack as Poison d8s: as many dice as Sneak Attack
 }
 
 
 FIX = {  # PHB 2024 steps that base/dnd55e compress below 13: name -> {level: value, None = drop that level}
     "SneakAttack": {11: "6d6", 13: "7d6"},                     # (level + 1) / 2 d6; dnd55e jumps to 7d6 at 11
-    "LandsAid": {5: None, 10: "3d6", 14: "4d6"},                # Circle of the Land: 2d6, 3d6 at 10, 4d6 at 14
+    "LandsAid": {5: None, 10: "3d6", 14: "4d6"},
+    "VenomousStrike": {11: "6d8"},                              # dnd55e jumps to 7d8 at 11 like its compressed Sneak Attack                # Circle of the Land: 2d6, 3d6 at 10, 4d6 at 14
 }
 MOVE_10_TO_11 = ["D4Cantrip", "D6Cantrip", "D8Cantrip", "D10Cantrip", "D12Cantrip", "D8CantripCleric", "EldritchBlast",
                  "TrueStrike", "BoomingBlade", "BoomingBlade_Walk", "BreathWeapon"]  # third tier at 11, not 10

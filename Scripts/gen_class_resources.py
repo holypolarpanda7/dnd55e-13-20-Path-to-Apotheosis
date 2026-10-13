@@ -1,0 +1,128 @@
+"""Class, subclass and species resources that dnd55e stops growing at its level-12 cap (2026-10-13).
+
+Found by Scripts/resource_audit.py (and the deep dive in docs/HIGH_LEVEL_AUDIT.md) after the Hit Point Dice turned out to stop at
+12: dnd55e hands out these pools one step per level node up to 12 (or per Proficiency Bonus step, which it stops at +4), so a level 13+
+character kept the level-12 amount. Each step here is a boost on a progression node at the level it applies (applied at that
+level-up - the level-conditional passive boosts lag until the next load, see bg3-engine-gotchas), the same way gen_hit_dice.py does
+for the Hit Point Dice. Texts: PHB 2024 / SRD 5.2.1 and the shared library (D:\\Library\\DnD excerpts/classes).
+
+Subclass and class pools (steps are the increment at that level):
+  Celestial Warlock   Healing Light       1 + Warlock level d6s                    +1 per level 13-20
+  Circle of Dreams    Balm of the Summer  d6s equal to the Druid level             +1 per level 13-20
+  Abjuration Wizard   Arcane Ward         2 x Wizard level (+ Int modifier)        +2 per level 13-20
+  Circle of the Land  Natural Recovery    half the Druid level, rounded up         +1 at 13, 15, 17, 19
+  Zealot Barbarian    Warrior of the Gods 4/5/6/7 dice at 3/6/12/17                +1 at 17
+  Alchemist           Experimental Elixir 3/4/5 elixirs at 5/9/15                  +1 at 15
+  Artificer           Magic Items         the Magic Items column: 5 at 14, 6 at 18 +1 at 14, 18
+  Rune Knight         Runes known         +1 at 15; Runic Shield = Proficiency Bonus uses (+1 at 13, 17)
+  Psi Warrior, Soulknife  Psionic Energy Dice  twice the Proficiency Bonus: 10 at 13, 12 at 17 (+2 each)
+  Swarmkeeper         Writhing Tide       Proficiency Bonus uses                   +1 at 13, 17
+Species whose uses equal the Proficiency Bonus (race nodes by character level): Dragonborn Breath Weapon, Eladrin Fey Step,
+Goliath Giant Ancestry, Shadar-kai Blessing of the Raven Queen: +1 at 13 and 17.
+Feats that give Proficiency Bonus uses (Lucky, Healer, Poisoner, the Giant feats, ...): dnd55e's passive has steps at
+CharacterLevelGreaterThan(4) and (8); this overrides it with itself plus (12) and (16), read from the dnd55e release at each regen
+(dnd55e's own `using` pattern, as gen_rules_fixes.py does), so a feat taken at level 13+ gets the right number at once.
+
+Also here (the same rules-table check found them): the Monk's Unarmored Movement stops at +20 ft (10th level), the rules add +25 ft
+at 14 and +30 ft at 18 (passives Apo_UnarmoredMovement_4 / _5, replacing the one before); the Fighter's sixth Weapon Mastery at 16.
+
+Run: python3 Scripts/gen_class_resources.py   (after gen_hit_dice.py in regen_all.sh)
+"""
+import glob
+import os
+import re
+
+from gen_common import DND, Gen, patch_progressions
+
+G = Gen("classres", "CLASS RESOURCES 13-20")
+CLASS, SUB, SPECIES = 0, 1, 2
+NODES = []   # (table, name, progression type, level, {attribute: value})
+
+
+def steps(table, name, ptype, resource, per_level):
+    """per_level: {level: amount added at that level}."""
+    for lvl, n in per_level.items():
+        NODES.append((table, name, ptype, lvl, {"Boosts": f"ActionResource({resource},{n},0)"}))
+
+
+EVERY = range(13, 21)
+steps("26e6c591-746b-4ba2-b46b-218f3a24fb84", "Celestial", SUB, "HealingLight", {l: 1 for l in EVERY})
+steps("aba806c9-d349-4c70-9a1a-0cb0ae699e3f", "CircleOfDreams", SUB, "Balm", {l: 1 for l in EVERY})
+steps("9f0fd3ac-7520-45fa-9f7d-08b1ca6eacf3", "AbjurationSchool", SUB, "ArcaneWard", {l: 2 for l in EVERY})
+steps("ba1f14d6-d40b-47ce-b071-91b491d87b27", "CircleOfTheLand", SUB, "NaturalRecoveryPoint", {l: 1 for l in (13, 15, 17, 19)})
+steps("c5fb3d32-6c46-4c9e-a2c9-8849f52e16e4", "ZealotPath", SUB, "WarriorOfTheGods", {17: 1})
+steps("c36e28a1-2fd5-475b-9689-09b83c9fd63d", "Alchemist", SUB, "ExperimentalElixir", {15: 1})
+steps("1e84493e-aeff-4d0e-b3ae-6c2187245d23", "Artificer", CLASS, "ReplicateMagicItem", {14: 1, 18: 1})
+RUNE_KNIGHT = "b8a2b9b8-8c2e-47bd-aae9-35e191ec1162"
+steps(RUNE_KNIGHT, "RuneKnight", SUB, "Rune", {15: 1})
+steps(RUNE_KNIGHT, "RuneKnight", SUB, "RunicShield", {13: 1, 17: 1})
+steps("df42bb97-2d97-44f0-8cb2-379e83208408", "PsiWarrior", SUB, "PsiWarrior", {13: 2, 17: 2})
+steps("abc7b271-82a1-4139-9653-4c90a7984a38", "Soulknife", SUB, "Soulknife", {13: 2, 17: 2})
+steps("54ad9a98-9656-4aa5-858e-b302f83c4577", "Swarmkeeper", SUB, "WrithingTidePoint", {13: 1, 17: 1})
+for table, name, resource in [("e2472b4f-682a-4ac8-b11c-723f921fd7a1", "Dragonborn", "BreathWeapon"),
+                              ("ec2603e5-cf91-47da-b02b-0df881a55c23", "Eladrin", "Eladrin"),
+                              ("fba1e7f8-9ccf-46cb-9a00-566943a25242", "Goliath", "Goliath"),
+                              ("04dc5432-4d5a-45f1-acb4-a5bec09be5dc", "ShadarKai", "ShadarKai")]:
+    steps(table, name, SPECIES, resource, {13: 1, 17: 1})
+
+# Monk: Unarmored Movement +25 ft at 14 and +30 ft at 18 (PHB 2024; the base game's passives stop at +20 ft, 3 x 1.5 m per 5 ft)
+MONK = "fe1319a2-86be-469c-aab5-e3b0bd714e0e"
+UM = {14: (7.5, "25", "UnarmoredMovement_3"), 18: (9, "30", "Apo_UnarmoredMovement_4")}
+for lvl, (metres, feet, prev) in UM.items():
+    name = f"Apo_UnarmoredMovement_{4 if lvl == 14 else 5}"
+    G.passive(name, f"Unarmored Movement {4 if lvl == 14 else 5}",
+              f"Your Speed increases by [1] while you aren't wearing armor or wielding a Shield ({feet} feet at Monk level {lvl}).",
+              {"DescriptionParams": f"Distance({metres:g})", "Boosts": f"ActionResource(Movement,{metres:g},0)"},
+              icon="PassiveFeature_UnarmoredMovement_3", using="UnarmoredMovement_3",
+              comment=f"Monk {lvl}: +{feet} ft (PHB 2024 Monk Features table)")
+    NODES.append((MONK, "Monk", CLASS, lvl, {"PassivesAdded": name, "PassivesRemoved": prev}))
+# Fighter: a sixth Weapon Mastery at 16 (the table's Weapon Mastery column: 3, 4 at 4, 5 at 10, 6 at 16; dnd55e's nodes stop at 10)
+NODES.append(("ba4e707e-4bbd-4630-963b-ce2f2947f971", "Fighter", CLASS, 16,
+              {"Selectors": "SelectPassives(b9543135-eceb-4ca9-b9fc-43befc11de3b,1,WeaponMasteryList)"}))
+
+# feat / background passives whose uses are the Proficiency Bonus: passive -> resource
+PB_PASSIVES = {
+    "AdrenalineRush": "AdrenalineRush", "EmberOfTheFireGiant": "SearingIgnition", "FairyTrickster": "FairyTrickster",
+    "FuryOfTheFrostGiant": "FrigidRetaliation", "GuileOfTheCloudGiant": "CloudyEscape", "Healer": "Healer",
+    "KeennessOfTheStoneGiant": "StoneThrow", "Lucky_Unlock": "LuckPoint", "Poisoner": "Poisoner",
+    "PurpleDragonCommandant": "EncourageAlly", "SoulOfTheStormGiant": "MaelstromAura", "SpellfireSpark": "SacredFlame",
+    "StrikeOfTheGiants": "StrikeOfTheGiants",
+}
+
+
+def dnd_boosts(entry):
+    """The Boosts of a dnd55e passive, as released (the extracted dependency pak)."""
+    for f in glob.glob(os.path.join(DND, "Stats", "Generated", "Data", "Passive*.txt")):
+        s = open(f, encoding="utf-8", errors="replace").read()
+        m = re.search(rf'new entry "{re.escape(entry)}"\r?\n(.*?)(?=\r?\nnew entry |\Z)', s, re.S)
+        if m:
+            v = re.search(r'data "Boosts" "([^"]*)"', m.group(1))
+            if v:
+                return v.group(1)
+    raise SystemExit(f"{entry} has no Boosts in the dnd55e release (gen_class_resources.py)")
+
+
+def extend_pb_passives():
+    for passive, resource in PB_PASSIVES.items():
+        boosts = dnd_boosts(passive)
+        assert "CharacterLevelGreaterThan(8)" in boosts, f"{passive}: no Proficiency Bonus steps to extend"
+        if "CharacterLevelGreaterThan(12)" in boosts:
+            continue   # dnd55e caught up
+        add = "".join(f"IF(CharacterLevelGreaterThan({n})):ActionResource({resource},1,0);" for n in (12, 16))
+        G.P.append(G.entry(passive, "PassiveData", {"Boosts": boosts.rstrip(";") + ";" + add.rstrip(";")}, using=passive,
+                           comment="Proficiency Bonus uses: +1 at level 13 and 17 (gen_class_resources.py; re-read from dnd55e at each regen)"))
+
+
+def write():
+    extend_pb_passives()
+    new_nodes = [(G.gid(f"node:{table}:{level}:{';'.join(attrs.values())}"), name, level, ptype, table, attrs)
+                 for table, name, ptype, level, attrs in NODES]
+    G.write_stats("ClassResources", "gen_class_resources.py", "class resources 13-20")
+    G.patch_files()
+    patch_progressions({}, new_nodes, G.marker)
+    G.patch_loca()
+
+
+if __name__ == "__main__":
+    write()
+    print(f"{len(NODES)} nodes, {len(G.P)} passives (Proficiency Bonus extensions and Unarmored Movement)")

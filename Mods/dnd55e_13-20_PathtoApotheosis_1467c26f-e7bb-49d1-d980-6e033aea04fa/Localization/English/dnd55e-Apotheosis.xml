@@ -4539,4 +4539,8 @@
   <content contentuid="h860353dc55a75ca7acb1a81e7628c35d" version="1">When you finish a Short Rest, you regain expended Hit Point Dice equal to half your Wizard level, and as many dice from Full-Blooded. Once you use this feature, you can't do so again until you finish a Long Rest. (It happens on your first Short Rest after a Long Rest and restores Wizard Hit Point Dice.)</content>
   <content contentuid="h39d3f040fc965a33be36feee0ab1735b" version="1">Red Renewal</content>
   <content contentuid="h6e543d849d275d49bfd4216d751d66d0" version="1">When you finish a Short Rest, you regain expended Hit Point Dice equal to half your Wizard level, and as many dice from Full-Blooded. Once you use this feature, you can't do so again until you finish a Long Rest. (It happens on your first Short Rest after a Long Rest and restores Wizard Hit Point Dice.)</content>
+  <content contentuid="h842b5a9317fe5bfcb00462f56169a922" version="1">Unarmored Movement 4</content>
+  <content contentuid="h89899236797e504ca29ef0bf0943a1f7" version="1">Your Speed increases by [1] while you aren't wearing armor or wielding a Shield (25 feet at Monk level 14).</content>
+  <content contentuid="hb322d5c9c52351d98717acb6d6da6cb0" version="1">Unarmored Movement 5</content>
+  <content contentuid="h94ffdb9989dd5cd4b90e4f0688dadd67" version="1">Your Speed increases by [1] while you aren't wearing armor or wielding a Shield (30 feet at Monk level 18).</content>
 </contentList>
