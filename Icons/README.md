@@ -36,5 +36,5 @@ warm halo; tooltips stay a bare glow. Picks: picks_ipa_all.json (+ the 12 test s
 
 ## Sangromancy spells (2026-10-13)
 Burst Forth, Sanguine Fusillade, Creeping Death, Red Rain, Steal Immortality: same pipeline, job file
-Tools/comfy/jobs_sangro.json (seeds 2001-2005, 4 variants each), picks #3/#2/#3/#2/#1, tinted with the new red
+Tools/comfy/jobs_sangro.json (seeds 2001-2005, 4 variants each), picks #3/#2/#3/#2/#4 (user), tinted with the new red
 gradients `blood` / `scarlet` / `crimson` (iconkit.PALETTE). Rule: every new spell gets its own icon.
