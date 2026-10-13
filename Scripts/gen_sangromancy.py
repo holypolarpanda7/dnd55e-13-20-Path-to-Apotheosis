@@ -263,12 +263,16 @@ for t, (boosts, text) in SI_TYPES.items():
            icon=ICON["StealImmortality"])
 for d in DICE:
     status(f"STEAL_IMMORTALITY_THP_{d}", "Steal Immortality", f"Temporary Hit Points: twice the roll of 9d{d}.",
-           {"StackId": "STEAL_IMMORTALITY_THP", "OnApplyFunctors": f"RegainTemporaryHitPoints(18d{d})", "StatusPropertyFlags": "DisableOverhead;DisableCombatlog"},
+           # base FALSE_LIFE / ARMOR_OF_AGATHYS pattern: a TemporaryHP boost that lasts until the temp HP are gone (an OnApply
+           # RegainTemporaryHitPoints on a 0-turn status gave nothing in game, 2026-10-13)
+           {"StackId": "STEAL_IMMORTALITY_THP", "Boosts": f"TemporaryHP(18d{d})", "RemoveConditions": "not HasTemporaryHP()",
+            "RemoveEvents": "OnDamage", "StatusPropertyFlags": "DisableOverhead;DisableCombatlog"},
            icon=ICON["StealImmortality"], comment="2 x 9d{d}: written as 18d{d} (same mean; dice can't be multiplied in a functor).".replace("{d}", str(d)))
     G.interrupt(f"Interrupt_Apo_StealImmortality_{d}", "Steal Immortality", "Take the creature's type and a share of its life.",
                 {"InterruptContext": "OnCastHit", "InterruptContextScope": "Nearby", "Container": "YesNoDecision", "Conditions": SI_COND,
-                 "Properties": f"ApplyStatus(OBSERVER_OBSERVER,STEAL_IMMORTALITY_THP_{d},100,0);"
-                               + ";".join(f"IF(Tagged('{t}', context.Target)):ApplyStatus(OBSERVER_OBSERVER,STEAL_IMMORTALITY_{t},100,-1)" for t in SI_TYPES),
+                 # the creature type is applied by ScriptExtender/Lua/Sangromancy.lua when this interrupt is used: an IF() before
+                 # ApplyStatus(OBSERVER_OBSERVER, ...) tests the OBSERVER, not the dying creature (no type status landed, 2026-10-13)
+                 "Properties": f"ApplyStatus(OBSERVER_OBSERVER,STEAL_IMMORTALITY_THP_{d},100,-1)",
                  "Cost": f"ReactionActionPoint:1;SpellSlotsGroup:1:1:9;{hd(d)}:9", "Stack": "ApoStealImmortality", "InterruptDefaultValue": "Ask;Enabled"},
                 icon=ICON["StealImmortality"])
 SAVANT[9].append("Shout_StealImmortality")

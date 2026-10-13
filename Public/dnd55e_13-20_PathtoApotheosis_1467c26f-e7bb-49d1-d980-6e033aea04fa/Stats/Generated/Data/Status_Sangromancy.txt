@@ -410,7 +410,9 @@ data "Description" "h3408f30942ef55a289a66ffea012f925"
 data "Icon" "Spell_TheftOfVitae"
 data "StatusType" "BOOST"
 data "StackId" "STEAL_IMMORTALITY_THP"
-data "OnApplyFunctors" "RegainTemporaryHitPoints(18d6)"
+data "Boosts" "TemporaryHP(18d6)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnDamage"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
 
 // 2 x 9d8: written as 18d8 (same mean; dice can't be multiplied in a functor).
@@ -421,7 +423,9 @@ data "Description" "h6bcb721a36c25b97a60d5db7cfe1ff8b"
 data "Icon" "Spell_TheftOfVitae"
 data "StatusType" "BOOST"
 data "StackId" "STEAL_IMMORTALITY_THP"
-data "OnApplyFunctors" "RegainTemporaryHitPoints(18d8)"
+data "Boosts" "TemporaryHP(18d8)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnDamage"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
 
 // 2 x 9d10: written as 18d10 (same mean; dice can't be multiplied in a functor).
@@ -432,7 +436,9 @@ data "Description" "h16109fde1e185a2b849a93f4b1d1d511"
 data "Icon" "Spell_TheftOfVitae"
 data "StatusType" "BOOST"
 data "StackId" "STEAL_IMMORTALITY_THP"
-data "OnApplyFunctors" "RegainTemporaryHitPoints(18d10)"
+data "Boosts" "TemporaryHP(18d10)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnDamage"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
 
 // 2 x 9d12: written as 18d12 (same mean; dice can't be multiplied in a functor).
@@ -443,7 +449,9 @@ data "Description" "ha9c6e0c0dc6e504fb8c2836799589b69"
 data "Icon" "Spell_TheftOfVitae"
 data "StatusType" "BOOST"
 data "StackId" "STEAL_IMMORTALITY_THP"
-data "OnApplyFunctors" "RegainTemporaryHitPoints(18d12)"
+data "Boosts" "TemporaryHP(18d12)"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnDamage"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
 
 // As Ranger Nature's Veil: the 2024 Invisible condition doesn't end when you attack.

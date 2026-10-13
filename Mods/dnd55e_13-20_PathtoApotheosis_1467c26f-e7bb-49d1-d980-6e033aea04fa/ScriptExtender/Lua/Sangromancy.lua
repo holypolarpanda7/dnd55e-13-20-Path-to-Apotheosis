@@ -117,5 +117,51 @@ Ext.Osiris.RegisterListener("Died", 1, "after", function(character)
     CD.Clear(id(character))
 end)
 
+-- Steal Immortality (9th): "you gain the creature's type and its benefits". The interrupt (Interrupt_Apo_StealImmortality_<die>)
+-- can't test the dying creature's type in its Properties - an IF() before ApplyStatus(OBSERVER_OBSERVER, ...) is evaluated against
+-- the observer (STEAL_IMMORTALITY_UNDEAD never landed, 2026-10-13) - so the type is read here, when the interrupt is used: the hit
+-- creature's tags -> STEAL_IMMORTALITY_<TYPE> on the reacting caster. Its Conditions already require one of these types.
+local SI_TYPES = { "CELESTIAL", "ELEMENTAL", "FEY", "FIEND", "UNDEAD" }
+
+local function tagsOf(ent)
+    local out = {}
+    pcall(function()
+        for _, t in ipairs(ent.Tag.Tags) do
+            local d = Ext.StaticData.Get(t, "Tag")
+            if d then out[d.Name] = true end
+        end
+    end)
+    return out
+end
+
+local function guidOf(ent)
+    local ok, g = pcall(function() return ent.Uuid.EntityUuid end)
+    return ok and g or nil
+end
+
+Ext.Entity.OnCreate("ServerInterruptUsed", function(e)
+    local ok, err = pcall(function()
+        for ient, events in pairs(e.ServerInterruptUsed.Interrupts) do
+            local data = ient.InterruptData
+            if data and string.find(tostring(data.Interrupt), "^Interrupt_Apo_StealImmortality_") then
+                local caster = guidOf(e) or guidOf(data.Caster)
+                for ev in pairs(events) do
+                    local victim = ev.SwapSourceTarget and ev.Source or ev.Target
+                    local tags, typ = tagsOf(victim), nil
+                    for _, t in ipairs(SI_TYPES) do if tags[t] then typ = t break end end
+                    if caster and typ then
+                        for _, t in ipairs(SI_TYPES) do Osi.RemoveStatus(caster, "STEAL_IMMORTALITY_" .. t) end   -- recast: the newest type wins
+                        Osi.ApplyStatus(caster, "STEAL_IMMORTALITY_" .. typ, -1, 1, caster)
+                        Log.Info(("Steal Immortality: %s took the %s type from %s"):format(caster, typ, tostring(guidOf(victim))))
+                    else
+                        Log.Warn(("Steal Immortality: no type applied (caster %s, victim %s)"):format(tostring(caster), tostring(guidOf(victim))))
+                    end
+                end
+            end
+        end
+    end)
+    if not ok then Log.Error("Steal Immortality (ServerInterruptUsed): " .. tostring(err)) end
+end)
+
 Apotheosis.Sangromancy = CD
 return CD

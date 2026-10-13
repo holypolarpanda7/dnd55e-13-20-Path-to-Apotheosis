@@ -23,17 +23,18 @@ title = "Burst Forth (d12, 9th-level slot): 9d12 + modifier and 9 d12 Hit Point 
 spell = "Target_BurstForth12_9"
 target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
-setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice12,9,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ cast = true }, { target = "A", hp_change = [-120, -9] }, { resource = "HitPointDice12", level = 0, change = -9 }, { resource = "SpellSlot", level = 9, change = -1 }]
 
 [[case]]
 id = "sangro-fusillade"
 title = "Sanguine Fusillade (d6, 7th): the target takes 7d6 Piercing and you get the Fusillade Darts"
+notes = "Evocation (the book): an Evoker host's Empowered Evocation adds its Intelligence modifier (+5) to one roll - hence -47."
 spell = "Target_SanguineFusillade6"
 target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
 setup = [{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
-expect = [{ cast = true }, { target = "A", hp_change = [-42, -7] }, { target = "host", status_applied = ["SANGUINE_FUSILLADE_6_7"] }, { resource = "HitPointDice06", level = 0, change = -7 }]
+expect = [{ cast = true }, { target = "A", hp_change = [-47, -7] }, { target = "host", status_applied = ["SANGUINE_FUSILLADE_6_7"] }, { resource = "HitPointDice06", level = 0, change = -7 }]
 
 [[case]]
 id = "sangro-fusillade-darts"
@@ -43,8 +44,8 @@ target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
 setup = [{ target = "host", status = "SANGUINE_FUSILLADE_6_7", turns = 2 }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 real_rolls = true
-expect = [{ cast = true }, { target = "A", hp_change = [-6, -1] }, { target = "host", status_removed = ["SANGUINE_FUSILLADE_6_7"] }]
-notes = "A scripted cast picks one target, so one dart; the spell has AmountOfTargets = 7 for a real cast."
+expect = [{ cast = true }, { target = "A", hp_change = [-17, -1] }, { target = "host", status_removed = ["SANGUINE_FUSILLADE_6_7"] }]
+notes = "A scripted cast picks one target, so one dart; the spell has AmountOfTargets = 7 for a real cast. -17: a critical hit (2d6) plus an Evoker host's Empowered Evocation (+5) - the darts are Evocation like the spell (seen: 10, 2026-10-13)."
 
 [[case]]
 id = "sangro-creeping-death-mark"
@@ -108,7 +109,8 @@ spawn = [{ as = "A", template = "skeleton", faction = "hostile", hp = 1, distanc
 setup = [{ target = "host", boost = "UnlockSpell(Shout_StealImmortality6)" }, { target = "host", boost = "ActionResource(HitPointDice06,9,0)" }, { target = "host", boost = "ActionResource(SpellSlot,1,9)" },
          { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ target = "A", dead = true }, { target = "host", status_applied = ["STEAL_IMMORTALITY_UNDEAD", "STEAL_IMMORTALITY_THP_6"] }, { target = "host", temp_hp_change = [18, 108] },
-          { resource = "HitPointDice06", level = 0, amount_change = -9 }, { resource = "SpellSlot", level = 9, amount_change = -1 }]
+          { resource = "HitPointDice06", level = 0, amount_change = -9 }, { resource = "SpellSlot", level = 9, amount_change = -1 },
+          { log = "/Steal Immortality: .* took the UNDEAD type/" }]
 notes = "Also check the host now carries the UNDEAD tag, Poison immunity and Necrotic immunity (snapshot), and that Fire Bolt's own damage doesn't matter (1 HP skeleton)."
 
 [[case]]
