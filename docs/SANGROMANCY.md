@@ -1,59 +1,44 @@
-# Sangromancer and Sangromancy spells 7-9 — plan (2026-10-12)
+# Sangromancer and Sangromancy spells 7-9 (2026-10-12)
 
 The Sangromancer (Grim Hollow Player's Guide, Ghostfire Gaming) is a Wizard subclass dnd55e added in 4.13.7 (table
 `bd5f7880-233d-4ce5-8833-636988444183`, features at 3/6/10). VISION #5: PTA completes it to 20; VISION #1: it follows
-dnd55e's source, the Grim Hollow Player's Guide. Library: `excerpts/subclasses/grim-hollow_sangromancy.md` (subclass text),
-`excerpts/spells/grim-hollow_sangromancy-spells.txt` (spell list, stat lines, summaries).
+dnd55e's source, the Grim Hollow Player's Guide. Library: `excerpts/subclasses/grim-hollow_sangromancy.md` (subclass text) and
+`excerpts/spells/grim-hollow_sangromancy-spells.txt` (all 29 sangromancy spells, verbatim from the D&D Beyond forum thread
+"Sangromancy Spells", 2026-10-12).
 
-## Done (branch feat/sangromancer-13-20)
+## Subclass, levels 13-20 (`gen_subclass_features.py`)
 
-| Level | What | Where |
-| --- | --- | --- |
-| 13-20 | +1 Full-Blooded d12 (`HitPointDice12`) every level: the pool is 1 + Wizard level (dnd55e: 4 at 3, +1 a level) | `gen_subclass_features.py` |
-| 13, 15, 17 | Sangromancy Savant pick from dnd55e's Sangromancy list `398d9fdb` (its pick at each new spell-slot level: 3, 5, 7, 9, 11) | `gen_subclass_features.py` |
-| 14 | **Red Renewal**: first Short Rest after a Long Rest restores Wizard d6 Hit Point Dice and Full-Blooded d12s, half the Wizard level each | `gen_subclass_features.py` |
-| 13-20 | Hit Point Dice for every base class (dnd55e stops at 12; PHB 2024 has one per level) - Red Renewal and every Hit Point Dice cost need them | `gen_hit_dice.py` |
+| Level | What |
+| --- | --- |
+| 13-20 | +1 Full-Blooded d12 (`HitPointDice12`) every level: the pool is 1 + Wizard level (dnd55e: 4 at 3, +1 a level) |
+| 13, 15, 17 | Sangromancy Savant pick: a 7th, an 8th and a 9th level Sangromancy spell (`SangromancySavantL7/8/9`, like the schools' picks) |
+| 14 | **Red Renewal**: first Short Rest after a Long Rest restores Wizard d6 Hit Point Dice and Full-Blooded d12s, half the Wizard level each |
+| 13-20 | Hit Point Dice for every base class (`gen_hit_dice.py`; dnd55e stops at 12, PHB 2024 has one per level) |
 
-Sanguine Vigor (6) already scales to 20 (`IncreaseMaxHP(ClassLevel(Wizard))`); Blood for Blood (10) has no level scaling.
+Sanguine Vigor (6) already scales to 20; Blood for Blood (10) has no level scaling.
 
-Not yet: a test case for Red Renewal - the test framework has no rest step (bg3-data MCP follow-up: a `rest = "short"` case
-step). The `wiz-sangromancer` build (3-20) is in `tests/bg3/wizard.toml`.
+## The five spells (`gen_sangromancy.py`)
 
-## The five 7th-9th level spells - blocked on the book text
+Each is built like dnd55e's 1st-4th level ones (verified on Circle of Scarlet): a container with one variant per Hit Point Die
+(d6/d8/d10/d12; the d12 spends Full-Blooded), a container + variants per slot level up to 9, dice expended = slot level, damage
+dice = dice expended. Class tags from the book put the containers on the class lists (`extract_rules_spells.py` reads the library).
 
-| Spell | Lvl | School | Grim Hollow class tags | Summary (not book text) |
-| --- | --- | --- | --- | --- |
-| Burst Forth | 7 | Conjuration | Bard, Warlock, Wizard | teleport inside a creature, burst out; Con save, Necrotic, half on success |
-| Sanguine Fusillade | 7 | Evocation | Sorcerer, Warlock, Wizard | a creature's blood becomes darts (Piercing) that strike creatures within 60 ft of it |
-| Creeping Death | 8 | Necromancy | Warlock, Wizard | Concentration: a death threshold; Bonus Action Con saves raise it; 3 successes end it |
-| Red Rain | 8 | Conjuration | Cleric, Warlock | 10-minute cast, blood rain for miles: Frightened beasts/plants, Exhaustion + Necrotic |
-| Steal Immortality | 9 | Transmutation | Warlock | Reaction: Temporary HP + the target's creature type (resistances by type) |
+| Spell | Lvl | Classes (book) | How it is modelled |
+| --- | --- | --- | --- |
+| Burst Forth | 7 | Bard, Warlock, Wizard | `GROUND:TeleportSource(true,true)` (Steel Wind Strike's form) to the target, Con save, Necrotic = dice + spellcasting modifier, half on a save |
+| Sanguine Fusillade | 7 | Sorcerer, Warlock, Wizard | the target takes the roll as Piercing; then a free *Fusillade Darts* spell (a status unlocks it for one turn): one ranged spell attack per dart, 1 die Piercing each, darts = slot level. **Gap:** "within 60 ft of the original target" is 18 m from you |
+| Creeping Death | 8 | Warlock, Wizard | Concentration. Lua (`Sangromancy.lua`) rolls the threshold from the dice, kills when an HP reduction takes the target to or below it. Bonus Action *Surge*: Con save, +2d6 / half, three saves end it. A raised threshold kills on the next HP loss, not at once ("reduced") |
+| Red Rain | 8 | Cleric, Warlock | Concentration aura (36 m) on you; **enemies only** are exposed. Beasts/Plants: Wisdom save or Frightened (1 min). Every 100 turns (10 min) of exposure: 2d10 Necrotic, +1 Exhaustion (PTA's `APO_EXHAUSTION`), Hit Point maximum -11 per level until a Long Rest. **Gaps:** 5-mile area, 10-minute casting, withering plants, the "won't return for N days" |
+| Steal Immortality | 9 | Warlock | Reaction (interrupt per die size) when a Celestial/Elemental/Fey/Fiend/Undead you see within 90 m is reduced to 0 HP: Temporary HP `18dX` (= twice the roll of 9 dice, same mean), the creature type (`Tag(...)`), Poison immunity, B/P/S resistance and the type's benefits (flight = `Projectile_Fly`; Fey: two Bonus Actions, Invisible / 18 m teleport). Ends when recast or at 0 HP. **Unconfirmed:** the Reaction trigger and Material component (community write-ups; the thread omits the footnotes) |
 
-Needed from the book before building (accuracy over homebrew): damage dice and their scaling, save DCs/abilities, ranges,
-the exact Hit Point Dice cost (summaries say 7/8/9 = the spell level), Creeping Death's threshold formula, Red Rain's
-Exhaustion/damage cadence, Steal Immortality's per-type benefits.
+`IsSangromancySpell()`: dnd55e decides what a sangromancy spell is with a hard-coded SpellId whitelist in `Wizard.khn` (Sanguine
+Vigor tests it). `Mods/<mod>/Scripts/thoth/helpers/ApoSangromancy.khn` is generated by `gen_sangromancy.py`: dnd55e's list (read from
+the released dnd55e on every regen) + ours. **Verify in game** that a second definition of the same function is accepted (the SE log
+shows Khonsu errors); fallback: override `Sangromancer_6_SanguineVigor`'s `Conditions` in PTA.
 
-### How they'll be built (dnd55e's pattern, verified 2026-10-12)
-
-- **Die-size variants**: each Sangromancy spell is a container with one variant per Hit Point Die size - e.g.
-  `Target_CircleOfScarlet6/8/10/12`, `UseCosts` `...;HitPointDice06:4` .. `HitPointDice12:4` (cost = spell level), damage dice
-  = that die size (`4d12+SpellCastingAbilityModifier` for the d12 variant). The d12 variant spends the Full-Blooded pool.
-- **"Is a Sangromancy spell"**: dnd55e decides with a hard-coded whitelist, `IsSangromancySpell()` in
-  `Scripts/thoth/helpers/Wizard.khn` (every variant id). Sanguine Vigor (regain HP = spell level) and Blood for Blood check
-  it, so PTA's spells must be on it. Options: (a) ship a PTA helper file redefining `IsSangromancySpell()` as dnd55e's list +
-  ours (later definition wins in Lua; fragile - `bg3_deps_diff` must watch dnd55e's Wizard.khn); (b) ask dnd55e's author to
-  add a status/flag-based check; (c) override Sanguine Vigor's `Conditions` in PTA with `IsSangromancySpell() or
-  IsApoSangromancySpell()` (a full copy of dnd55e's passive - also fragile). Decide with the user.
-- **Lists**: dnd55e puts Sangromancy spells on class lists by their Grim Hollow tags (Circle of Scarlet: Sorcerer and Warlock
-  4) and on the Savant list `398d9fdb` for Sangromancers; PTA adds the new ones with a `MergedInto` list (see memory
-  spell-list-mergedinto) and to `Scripts/data/rules_spell_classes.json` via `extract_rules_spells.py` (re-export Siberys).
-  Whether a "Wizard" tag also lands on dnd55e's general Wizard list is to be checked against dnd55e's 1st-4th spells first.
-- **Savant picks at 13/15/17** then offer the 7th/8th/9th-level ones automatically (same list).
-- **Effects**: `Scripts/data/vfx.toml` has the `blood` palette; candidates from the base game: the Slayer's Living Sacrifice
-  (52 m), Cazador's blood stream beam, Bhaal-temple/Orin effects, Concentrated Blast, Wounding Ray (`bg3_search_effects` with
-  `color="red"`).
+Icons are dnd55e's sangromancy icons for now; effects are blood-palette recolours of base-game effects (`Scripts/data/vfx.toml`).
 
 ## Upstream (dnd55e's to add, not PTA)
 
 4th-6th level Sangromancy spells missing from dnd55e 4.13.7.1: Dark Sacrament, Viscous Sheath, Mortality, Splattering Smite,
-Blood Tide, Heartseeker (memory: dnd55e-lower-level-content).
+Blood Tide, Heartseeker (memory: dnd55e-lower-level-content). Their text is in the library file too.
