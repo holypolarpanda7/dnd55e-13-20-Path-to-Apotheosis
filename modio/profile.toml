@@ -3,4 +3,5 @@
 name = "Path to Apotheosis - Levels 13-20 for DnD 5.5e"
 summary = "Raises the level cap from 12 to 20 on top of DnD 5.5e All-in-One BEYOND: every class and subclass feature for levels 13-20 at its 2024 level, 7th- to 9th-level spells and slots, upcasts to 9th level, and Epic Boons at 19."
 tags = ["Classes", "Spells", "Subclasses", "Overhaul", "Rules Changes", "All Classes", "English"]
+deps = [4419649]   # DnD 5.5e All-in-One BEYOND (mod.io bg3dnd)
 logo = "Mods/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/mod_publish_logo.png"
