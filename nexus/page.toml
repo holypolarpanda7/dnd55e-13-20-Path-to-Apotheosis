@@ -1,18 +1,23 @@
 # Nexus Mods page for this mod - applied by `python -m bg3data.nexus_web push <layer>` (dry run without --apply).
-# Draft created 2026-10-11 (Nexus mod 25717). The full description is description.bbcode (BBCode).
+# Pulled from the live page 2026-10-13 20:55. The full description is description.bbcode (BBCode).
 
 name = "Path to Apotheosis - Levels 13-20 for DnD 5.5e All-in-One"
-version = "1.0.0.0"
+version = "1.0.1.0"
 author = "holypolarpanda"
 summary = "Raises the level cap from 12 to 20 on top of DnD 5.5e All-in-One BEYOND: every class and subclass feature for levels 13-20 at its 2024 level, 7th- to 9th-level spells and slots, upcasts to 9th level and the Epic Boons at 19. PHB 2024 is the source of truth."
 
 [requirements]
 method = "legacy"
 
-[[requirements.external]]
-name = "BG3 Script Extender"
-url = "https://github.com/Norbyte/bg3se/releases"
-note = "required"
+[[requirements.nexus]]
+name = "Baldur&#039;s Gate 3 Script Extender (BG3SE)"
+note = "-"
 
-# DnD 5.5e All-in-One BEYOND (Nexus 12727) and Mod Configuration Menu (Nexus 9162) belong in the page's "Nexus Mods" requirement
-# table (add them there by hand: Nexus rejects nexusmods.com links as external resources, and its mod search errored 2026-10-11).
+[[requirements.nexus]]
+name = "DnD 5.5e All-in-One BEYOND"
+note = "-"
+
+[[requirements.external]]
+name = "Mod Configuration Menu"
+url = "https://www.nexusmods.com/baldursgate3/mods/9162"
+note = "optional - in-game settings page (XP multiplier, Epic Boon level gate, Portal Jumper)"
