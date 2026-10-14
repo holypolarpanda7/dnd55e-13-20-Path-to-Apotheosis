@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v1.0.1.0 - 2026-10-13
 
 - New spell effects for 7th- to 9th-level spells, built from the base game's own effects (layered, recoloured, enlarged; no other mod's assets). 9th- and 8th-level spells get the largest: e.g. Meteor Swarm's meteors are the Netherbrain's Orb of Obliteration, Wail of the Banshee layers a necrotic destructive wave with a 52 m soul burst, Wish uses Divine Intervention in arcane colours, Gate opens two planar portals.
 - Spells that had no effects now have them (Meteor Swarm, Time Stop, Gate, Mass Heal, Foresight, Prismatic Wall, Wish, True Resurrection, Resurrection, Project Image, Feeblemind, Glibness, Power Word Stun) and spells that borrowed a mismatched look get a fitting one (Fire Storm and Earthquake no longer look radiant; the Illusory Dragon's necrotic breath no longer looks like fire).
