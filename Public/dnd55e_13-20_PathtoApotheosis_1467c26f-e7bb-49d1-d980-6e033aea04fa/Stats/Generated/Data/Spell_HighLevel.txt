@@ -36,9 +36,9 @@ data "VerbalIntent" "Damage"
 data "SpellFlags" "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsHarmful"
 data "HitAnimationType" "MagicalDamage_Internal"
 data "MemoryCost" "1"
-data "PrepareEffect" "2fa6b127-6f8a-4150-8be6-6f62b7a85911"
-data "CastEffect" "b45f81f3-389f-4404-a0a0-c66a586229c0"
-data "TargetEffect" "4b5dc428-d623-4203-a7f0-a86c47bf9aa8"
+data "PrepareEffect" "2a71f34c-86cb-5224-83c2-7f4adc05302e"
+data "CastEffect" "8cc6346d-7eea-5ae4-b08e-c8636084888d"
+data "TargetEffect" "8b6d7780-95e1-5508-a23c-1b0bb3b820cb"
 
 // Power Word Heal (PHB 2024)
 // 9th-level Enchantment - Bard, Cleric
@@ -68,9 +68,9 @@ data "VerbalIntent" "Healing"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell"
 data "HitAnimationType" "MagicalNonDamage"
 data "MemoryCost" "1"
-data "PrepareEffect" "d39761b2-330d-455b-9225-b54dedc8c1c6"
-data "CastEffect" "0a0b5aa5-a6d0-464d-8fa1-20a1c48530f2"
-data "TargetEffect" "4df0bae6-fccf-48a0-804c-3edc40264d07"
+data "PrepareEffect" "60eb825c-5618-5ad5-9424-96d0b9aded30"
+data "CastEffect" "394eb119-9deb-53cc-8f82-120ccf9bde48"
+data "TargetEffect" "03ccb318-f19f-5d43-aed1-22fea7e20d3e"
 
 // ==============================================================================
 // WORDS OF CREATION - Enhanced Power Words (Bard Level 20)
@@ -160,6 +160,9 @@ data "VerbalIntent" "Healing"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee"
 data "HitAnimationType" "MagicalNonDamage"
 data "MemoryCost" "1"
+data "PrepareEffect" "067a7fbb-77cf-5b69-8fc3-1c97c7a400bc"
+data "CastEffect" "ae99df93-0a17-5591-b720-14065436b2cb"
+data "TargetEffect" "0b186afd-8d70-5a09-a1ba-4f4e6875b627"
 
 // ==============================================================================
 // PROJECT IMAGE - Level 7 Illusion (PHB 2024)
@@ -186,6 +189,9 @@ data "VerbalIntent" "Utility"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration"
 data "MemoryCost" "1"
 data "ConcentrationSpellID" "Target_ProjectImage"
+data "PrepareEffect" "4f0a1855-f6eb-5716-8846-bacadf295aab"
+data "CastEffect" "5b3b0554-240b-552b-9df0-f71f02291868"
+data "PositionEffect" "52c726a1-1802-528e-8eee-a412cae9b8ce"
 
 // ==============================================================================
 // POWER WORD STUN - Level 8 Enchantment (PHB 2024)
@@ -216,6 +222,8 @@ data "VerbalIntent" "Control"
 data "SpellFlags" "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsHarmful"
 data "HitAnimationType" "MagicalDamage_Internal"
 data "MemoryCost" "1"
+data "CastEffect" "e27fa05f-eb85-59b3-95f3-f0cd35c4aa05"
+data "TargetEffect" "e0ec0d35-b359-5613-b69c-eb9a81212dae"
 
 // ==============================================================================
 // GLIBNESS - Level 8 Transmutation (PHB 2024)
@@ -242,6 +250,8 @@ data "SpellAnimation" "dd86aa43-8189-4d9f-9a5c-454b5fe4a197,,;,,;8252328a-66dd-4
 data "VerbalIntent" "Buff"
 data "SpellFlags" "HasVerbalComponent;IsSpell"
 data "MemoryCost" "1"
+data "PrepareEffect" "c1800f43-0f5f-5ada-b0b3-e387878ec685"
+data "CastEffect" "2ac03ab1-8138-5fd9-87b6-7b1830fd3b17"
 
 // ==============================================================================
 // FEEBLEMIND - Level 8 Enchantment (PHB 2024)
@@ -274,6 +284,9 @@ data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundR
 data "SpellRoll" "Attack(AttackType.RangedSpellAttack)"
 data "HitAnimationType" "MagicalDamage_Internal"
 data "MemoryCost" "1"
+data "PrepareEffect" "fa79565a-5076-5d18-9d99-f733a317934d"
+data "CastEffect" "3ea8bdd9-80f5-5bb0-9b86-899b5e997197"
+data "TargetEffect" "c9cc649b-38f1-5183-81a8-b23d8b2e00f9"
 
 // ==============================================================================
 // FORESIGHT - Level 9 Divination (PHB 2024)
@@ -302,6 +315,9 @@ data "VerbalIntent" "Buff"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsMelee"
 data "HitAnimationType" "MagicalNonDamage"
 data "MemoryCost" "1"
+data "PrepareEffect" "78c6d93a-e8ff-59df-821b-72bdba3892fc"
+data "CastEffect" "5aaa5d37-54cd-52aa-a683-54472010a989"
+data "TargetEffect" "d62d2eb0-6ba9-5b41-9ca3-007601dfe24f"
 
 // ==============================================================================
 // WISH - Conjuration Level 9
@@ -346,6 +362,9 @@ data "TargetConditions" "Ally() and not Dead()"
 data "VerbalIntent" "Healing"
 data "SpellFlags" "HasVerbalComponent;IsSpell"
 data "SpellContainerID" "Shout_Wish"
+data "PrepareEffect" "e2593507-c04e-5804-b83d-0d795c944a2a"
+data "CastEffect" "97dd973c-70a5-5cd4-8cc9-a7a72764ddd8"
+data "TargetEffect" "03ccb318-f19f-5d43-aed1-22fea7e20d3e"
 
 // Wish - Resurrect Option (resurrect dead ally with full HP)
 new entry "Shout_Wish_Resurrect"
@@ -365,6 +384,9 @@ data "TargetConditions" "Ally() and Dead()"
 data "VerbalIntent" "Healing"
 data "SpellFlags" "HasVerbalComponent;IsSpell"
 data "SpellContainerID" "Shout_Wish"
+data "PrepareEffect" "e2593507-c04e-5804-b83d-0d795c944a2a"
+data "CastEffect" "97dd973c-70a5-5cd4-8cc9-a7a72764ddd8"
+data "TargetEffect" "d7f9709c-722f-5f44-9b68-8b213c27c405"
 
 // Wish - Divine Blessing Option (grant advantage and resistance)
 new entry "Shout_Wish_Blessing"
@@ -384,6 +406,9 @@ data "TargetConditions" "Ally()"
 data "VerbalIntent" "Buff"
 data "SpellFlags" "HasVerbalComponent;IsSpell"
 data "SpellContainerID" "Shout_Wish"
+data "PrepareEffect" "e729a8b9-9f44-52a5-96b4-def2521ebf0a"
+data "CastEffect" "7039f6e4-2bfb-5816-8881-3b25a96f27f1"
+data "TargetEffect" "d62d2eb0-6ba9-5b41-9ca3-007601dfe24f"
 
 // ==============================================================================
 // TRUE POLYMORPH - Transmutation Level 9
@@ -408,6 +433,9 @@ data "TooltipUpcastDescription" ""
 data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:9"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell"
 data "VerbalIntent" "Control"
+data "PrepareEffect" "e60f29bb-568b-5071-99e1-0bb399cbf0fe"
+data "CastEffect" "84bd4e85-4df7-51dd-96b9-2fab11b1798d"
+data "TargetEffect" "cb340052-7a57-5ff8-acc7-40114ca1af6f"
 
 new entry "Target_TruePolymorph_Sheep"
 type "SpellData"
@@ -496,9 +524,23 @@ data "ConcentrationSpellID" "Target_TruePolymorph"
 // ==============================================================================
 // METEOR SWARM - Evocation Level 9
 // ==============================================================================
+// SRD 5.2.1: four points, each a 40-foot-radius (12 m) Sphere; Dexterity save, 20d6 Fire + 20d6 Bludgeoning, half on a
+// success. 2026-10-12: it had no damage, trajectory or projectile count (casting only ignited the ground); it now builds on
+// Fireball (targeting, sounds) with four meteors, the Netherbrain's Orb of Obliteration as the projectile, and effects from
+// Scripts/data/spell_vfx.toml. Not modelled: "a creature in more than one Sphere is affected only once" (BG3 resolves each
+// explosion on its own).
 new entry "Projectile_MeteorSwarm"
 type "SpellData"
+using "Projectile_Fireball"
 data "SpellType" "Projectile"
+data "ProjectileCount" "4"
+data "Trajectories" "307aac42-2cfe-4267-b8f9-7851a2b1e6cb"
+data "SpellRoll" "not SavingThrow(Ability.Dexterity, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(20d6,Fire,Magical);DealDamage(20d6,Bludgeoning,Magical)"
+data "SpellFail" "DealDamage((20d6)/2,Fire,Magical);DealDamage((20d6)/2,Bludgeoning,Magical)"
+data "TooltipDamageList" "DealDamage(20d6,Fire);DealDamage(20d6,Bludgeoning)"
+data "TooltipAttackSave" "Dexterity"
+data "DamageType" "Fire"
 data "Level" "9"
 data "SpellSchool" "Evocation"
 data "TargetRadius" "150"
@@ -514,7 +556,10 @@ data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;70a28457-dba7-4
 data "SpellAnimationIntentType" "Aggressive"
 data "SpellProperties" "GROUND:SurfaceChange(Ignite);GROUND:CreateSurface(6,3,Fire)"
 data "VerbalIntent" "Damage"
-data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
+data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade"
+data "PrepareEffect" "7d2a72d2-1f88-5dab-8cf5-d7784467ed22"
+data "CastEffect" "67c2f495-77d1-565d-b21b-5e6874cf5350"
+data "HitEffect" "4f14eb65-5c4a-5cc8-a62f-25e83ba90e1e"
 
 // ==============================================================================
 // GATE - Conjuration Level 9
@@ -534,6 +579,9 @@ data "SpellAnimation" "6f42f5f3-7a5a-4441-a02e-71b0450ac4b7,,;,,;c0513845-6e0e-4
 data "VerbalIntent" "Summon"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell"
 data "ConcentrationSpellID" "Target_Gate"
+data "PrepareEffect" "c623b7fc-9fc8-50b7-ad18-99405cde0e5a"
+data "CastEffect" "0799d355-6680-51a8-a3d6-36138f41c064"
+data "PositionEffect" "00558c8d-b998-5d96-a97e-d4fccd9cf87d"
 
 // ==============================================================================
 // FORESIGHT - Divination Level 9
@@ -552,6 +600,9 @@ data "SpellAnimation" "9fd22d7d-5d7a-470b-a939-810046915bed,,;,,;4222840e-85c4-4
 data "SpellProperties" "ApplyStatus(SELF,TIME_STOP,100,10)"
 data "VerbalIntent" "Control"
 data "SpellFlags" "HasVerbalComponent;IsSpell"
+data "PrepareEffect" "58da776b-6866-5b21-9bd3-41e87755073e"
+data "CastEffect" "787e8f55-2f0f-5dc5-a74b-c3c5d9452dcd"
+data "TargetEffect" "d1ab54b8-d8a8-5f65-a6fb-5a71389d6ed4"
 
 // ==============================================================================
 // MASS HEAL - Evocation Level 9
@@ -574,6 +625,9 @@ data "SpellAnimation" "414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;8252328a-66dd-4
 data "SpellProperties" "RegainHitPoints(700);RemoveStatus(SG_Disease);RemoveStatus(SG_Blinded);RemoveStatus(SG_Deafened)"
 data "VerbalIntent" "Healing"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell"
+data "PrepareEffect" "60eb825c-5618-5ad5-9424-96d0b9aded30"
+data "CastEffect" "58a14748-4019-54fb-876c-2bfbc1ac1336"
+data "TargetEffect" "03ccb318-f19f-5d43-aed1-22fea7e20d3e"
 
 // ==============================================================================
 // PRISMATIC WALL - Abjuration Level 9
@@ -592,6 +646,9 @@ data "UseCosts" "ActionPoint:1;SpellSlotsGroup:1:1:9"
 data "SpellAnimation" "554a18f7-952e-494a-b301-7702a85d4bc9,,;,,;5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,,;e9ad50df-e7f1-43a0-b782-4c08f92b0f5a,,;22dfbbf4-f417-4c84-b39e-2039315961e6,,;,,;5bfbe9f9-4fc3-4f26-b112-43d404db6a89,,;,,;,,"
 data "VerbalIntent" "Control"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsSpell"
+data "PrepareEffect" "58da776b-6866-5b21-9bd3-41e87755073e"
+data "CastEffect" "f6b57050-c42b-55ab-b09b-16f0e3a11127"
+data "PositionEffect" "8ce416fb-bf1a-55e3-b513-9fdfeb5f5f3e"
 
 // ==================================================================================
 // BATCH 1: DAMAGE SPELL UPCASTS (Levels 7-9)
@@ -1845,6 +1902,9 @@ data "VerbalIntent" "Healing"
 data "SpellFlags" "HasVerbalComponent;IsSpell"
 data "SpellContainerID" "Shout_Wish_GreaterDivineIntervention"
 data "Cooldown" "OncePerCombat"
+data "PrepareEffect" "e2593507-c04e-5804-b83d-0d795c944a2a"
+data "CastEffect" "97dd973c-70a5-5cd4-8cc9-a7a72764ddd8"
+data "TargetEffect" "03ccb318-f19f-5d43-aed1-22fea7e20d3e"
 
 // Wish - Revive Option (resurrect dead ally with full HP)
 new entry "Target_Wish_Revive"
@@ -1865,6 +1925,9 @@ data "VerbalIntent" "Healing"
 data "SpellFlags" "HasVerbalComponent;IsSpell"
 data "SpellContainerID" "Shout_Wish_GreaterDivineIntervention"
 data "Cooldown" "OncePerCombat"
+data "PrepareEffect" "e2593507-c04e-5804-b83d-0d795c944a2a"
+data "CastEffect" "97dd973c-70a5-5cd4-8cc9-a7a72764ddd8"
+data "TargetEffect" "d7f9709c-722f-5f44-9b68-8b213c27c405"
 
 // Wish - Buff Option (grant all allies advantage for 8 hours)
 new entry "Target_Wish_Buff"
@@ -1886,6 +1949,9 @@ data "VerbalIntent" "Buff"
 data "SpellFlags" "HasVerbalComponent;IsSpell"
 data "SpellContainerID" "Shout_Wish_GreaterDivineIntervention"
 data "Cooldown" "OncePerCombat"
+data "PrepareEffect" "e729a8b9-9f44-52a5-96b4-def2521ebf0a"
+data "CastEffect" "19bd8333-3547-59e2-872f-8d0c76677850"
+data "TargetEffect" "d62d2eb0-6ba9-5b41-9ca3-007601dfe24f"
 
 // Divine Foreknowledge (Knowledge Domain L17)
 // PHB 2024: Bonus action, Advantage on D20 Tests for 1 hour, 1/LR or restore with 6+ slot

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="8" build="600"/>
+    <region id="MultiEffectInfos">
+        <node id="root">
+            <attribute id="Name" type="LSString" value="PTA_FireStorm_TargetEffect"/>
+            <attribute id="UUID" type="guid" value="3fd4c5a8-6f9a-5f4f-8cb5-37e1e11e697a"/>
+            <children>
+                <node id="EffectInfo">
+                    <attribute id="BindSourceTo" type="FixedString" value="SourceEntity"/>
+                    <attribute id="BindTargetTo" type="FixedString" value="TargetEntity"/>
+                    <attribute id="DamageType" type="uint32" value="0"/>
+                    <attribute id="DetachSource" type="bool" value="true"/>
+                    <attribute id="DetachTarget" type="bool" value="true"/>
+                    <attribute id="EffectResourceGuid" type="guid" value="8b6af7e2-3b94-edbe-91a6-d86e2c1831ea"/>
+                    <attribute id="Enabled" type="bool" value="true"/>
+                    <attribute id="KeepRotation" type="bool" value="true"/>
+                    <attribute id="KeepScale" type="bool" value="true"/>
+                    <attribute id="MainHand" type="bool" value="false"/>
+                    <attribute id="MaxDistance" type="float" value="0"/>
+                    <attribute id="MinDistance" type="float" value="0"/>
+                    <attribute id="OffHand" type="bool" value="false"/>
+                    <attribute id="Pivot" type="FixedString" value="Target"/>
+                    <attribute id="UUID" type="guid" value="26ea52b5-ecd7-561d-9471-6f2fe4f1ea16"/>
+                    <attribute id="UseDistance" type="bool" value="false"/>
+                    <attribute id="UseOrientDirection" type="bool" value="false"/>
+                    <attribute id="UseScaleOverride" type="bool" value="false"/>
+                    <attribute id="VerbalIntent" type="uint32" value="0"/>
+                    <children>
+                        <node id="TargetBone">
+                            <attribute id="Value" type="LSString" value="Dummy_BodyFX"/>
+                        </node>
+                    </children>
+                </node>
+                <node id="EffectInfo">
+                    <attribute id="BindSourceTo" type="FixedString" value="SourceEntity"/>
+                    <attribute id="BindTargetTo" type="FixedString" value="TargetEntity"/>
+                    <attribute id="DamageType" type="uint32" value="0"/>
+                    <attribute id="DetachSource" type="bool" value="false"/>
+                    <attribute id="DetachTarget" type="bool" value="false"/>
+                    <attribute id="EffectResourceGuid" type="guid" value="7349b9d9-d16e-bb7e-6401-fb78f7a5e840"/>
+                    <attribute id="Enabled" type="bool" value="true"/>
+                    <attribute id="KeepRotation" type="bool" value="true"/>
+                    <attribute id="KeepScale" type="bool" value="true"/>
+                    <attribute id="MainHand" type="bool" value="false"/>
+                    <attribute id="MaxDistance" type="float" value="0"/>
+                    <attribute id="MinDistance" type="float" value="0"/>
+                    <attribute id="OffHand" type="bool" value="false"/>
+                    <attribute id="Pivot" type="FixedString" value="Target"/>
+                    <attribute id="UUID" type="guid" value="6865bfbe-a88f-517f-90e2-9654930f3787"/>
+                    <attribute id="UseDistance" type="bool" value="false"/>
+                    <attribute id="UseOrientDirection" type="bool" value="false"/>
+                    <attribute id="UseScaleOverride" type="bool" value="false"/>
+                    <attribute id="VerbalIntent" type="uint32" value="0"/>
+                    <children>
+                        <node id="TargetBone">
+                            <attribute id="Value" type="LSString" value="Dummy_BodyFX"/>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

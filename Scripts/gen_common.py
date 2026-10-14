@@ -273,6 +273,37 @@ def drop_entries(fname, names):
     open(path, "w", encoding="utf-8", newline="").write(s)
 
 
+def append_progressions(adds):
+    """adds: existing node uuid -> {attr: ";"-list item(s)}. Appends each item to the node's attribute (creating it) unless
+    it is already there - for additions to nodes that other generators rewrite in full (patch_progressions): run after
+    them in regen_all.sh and the result is stable."""
+    path = os.path.join(PUB, "Progressions", "Progressions.lsx")
+    s = open(path, encoding="utf-8").read()
+    seen = set()
+
+    def fix(m):
+        b = m.group(0)
+        u = re.search(r'id="UUID" type="guid" value="([^"]*)"', b).group(1)
+        if u not in adds:
+            return b
+        seen.add(u)
+        ind = re.search(r'\n(\s*)<attribute id="Level"', b).group(1)
+        for k, items in adds[u].items():
+            cur = re.search(rf'<attribute id="{k}" type="LSString" value="([^"]*)"/>', b)
+            have = [x for x in (cur.group(1) if cur else "").split(";") if x]
+            new = have + [x for x in items.split(";") if x and x not in have]
+            if cur:
+                b = b.replace(cur.group(0), f'<attribute id="{k}" type="LSString" value="{";".join(new)}"/>')
+            else:
+                b = re.sub(r'(\n\s*<attribute id="Level")', f'\n{ind}<attribute id="{k}" type="LSString" value="{";".join(new)}"/>' + r"\1", b, count=1)
+        return b
+
+    s = NODE_RE.sub(fix, s)
+    missing = [u for u in adds if u not in seen]
+    assert not missing, f"progression nodes not found: {missing}"
+    open(path, "w", encoding="utf-8", newline="").write(s)
+
+
 def patch_progressions(nodes, new_nodes, marker):
     """nodes: existing uuid -> {attr: value} (PassivesAdded/PassivesRemoved/Boosts/Selectors; None deletes the node).
     new_nodes: [(uuid, name, level, progression_type, table, {attrs})], kept between markers."""

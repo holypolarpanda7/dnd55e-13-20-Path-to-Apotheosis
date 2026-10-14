@@ -33,3 +33,16 @@ bold thick glowing painted brush strokes, thick soft glow, ... on a pure black b
 Import: bg3_icon_import(key="black", tints=[damage type], crop=True) - recoloured to the base-game gradient of the damage
 type (iconkit.PALETTE). Build thickens strokes and paints hotbar tiles on Icons/hotbar_plate.png (bg3_icon_plate) with a
 warm halo; tooltips stay a bare glow. Picks: picks_ipa_all.json (+ the 12 test spells); jobs/tints in Tools/comfy.
+
+## Sangromancy spells (2026-10-13)
+Burst Forth, Sanguine Fusillade, Creeping Death, Red Rain, Steal Immortality: same pipeline, job file
+Tools/comfy/jobs_sangro.json (seeds 2001-2005, 4 variants each), picks #3/#2/#3/#2/#4 (user), tinted with the new red
+gradients `blood` / `scarlet` / `crimson` (iconkit.PALETTE). Rule: every new spell gets its own icon.
+
+## Artificer level 14 plans (2026-10-13)
+Flame Tongue, Arrow-Catching Shield, Ring of the Ram: same pipeline, jobs Icons/jobs_plans14.json (seeds 3001-3003), picks #4/#4/#2
+(assistant's picks; swap any), tints fire / arcane / force.
+
+## Moon Wild Shape forms (2026-10-13)
+Elephant, Triceratops, Mammoth forms and the Gore / Stomp attacks: same pipeline, jobs Icons/jobs_wsforms.json (seeds 4001-4005), picks
+#3/#3/#1/#3/#1 (assistant's picks), tints earth (forms) and force (attacks).

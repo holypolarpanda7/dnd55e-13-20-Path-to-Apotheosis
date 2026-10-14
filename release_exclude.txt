@@ -1,0 +1,8 @@
+# Left out of the shipped pak (bg3-data-mcp release package): the test registries the SE console commands load through pcall, and the
+# mod.io publish logo (the Toolkit needs it back in the folder for the mod.io publish). Globs relative to the mod root's Mods/ and Public/
+# staging folders; the gate runs on the full pak and the stripped one is smoke-tested.
+Mods/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/ScriptExtender/Lua/FeatureTests.lua
+Mods/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/ScriptExtender/Lua/SpellTests.lua
+Mods/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/ScriptExtender/Lua/ClassExpectations.lua
+Mods/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/ScriptExtender/Lua/WizardManifestExpectations.lua
+Mods/dnd55e_13-20_PathtoApotheosis_1467c26f-e7bb-49d1-d980-6e033aea04fa/mod_publish_logo.png

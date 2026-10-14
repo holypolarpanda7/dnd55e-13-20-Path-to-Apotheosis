@@ -1,0 +1,2 @@
+# Khonsu scripts (.khn) must keep CRLF line endings and carry no comments, as dnd55e's do: Scripts/gen_sangromancy.py
+Mods/**/Scripts/thoth/**/*.khn -text

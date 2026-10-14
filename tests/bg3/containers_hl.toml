@@ -1,0 +1,974 @@
+# Container coverage for the spells PTA added or extended in the 2026-10-13 high-level round (bg3_lint_container_tests): Sangromancy
+# upcast variants, Balm 7-10, Warrior of the Gods, Searing Arc Strike 6-9, the Experimental Elixir options, Replicate Magic Item plans,
+# the Ring of the Ram, the Beast Master companions, the Illusion summons. Drafted by bg3_test_draft from the stats and NOT run in game:
+# every case carries its confidence and TODOs. The RMI cases need an Artificer of the level in their TODO (`build` / `class` / `level`),
+# the Searing Arc and companion cases a Monk / Ranger; fix or drop whatever the first run shows (written 2026-10-13).
+# Run: bg3_test_run("apotheosis", "<id>").
+
+[suite]
+name = "Container coverage, high-level round"
+mode = "script"
+
+# draft confidence: medium
+# TODO: damage scales with a class level: on a host of another class it can be 0 - test on a real character
+[[case]]
+id = "cont-hl-projectile-apo-ringoftheram-1"
+title = "Projectile_Apo_RingOfTheRam_1"
+spell = "Projectile_Apo_RingOfTheRam_1"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(ApoRamRing,7,0)" }, { target = "host", boost = "RollBonus(RangedSpellAttack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-40, -2] }, { resource = "ApoRamRing", level = 0, change = -1 }]
+
+# draft confidence: medium
+# TODO: damage scales with a class level: on a host of another class it can be 0 - test on a real character
+[[case]]
+id = "cont-hl-projectile-apo-ringoftheram-2"
+title = "Projectile_Apo_RingOfTheRam_2"
+spell = "Projectile_Apo_RingOfTheRam_2"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(ApoRamRing,8,0)" }, { target = "host", boost = "RollBonus(RangedSpellAttack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-80, -4] }, { resource = "ApoRamRing", level = 0, change = -2 }]
+
+# draft confidence: medium
+# TODO: damage scales with a class level: on a host of another class it can be 0 - test on a real character
+[[case]]
+id = "cont-hl-projectile-apo-ringoftheram-3"
+title = "Projectile_Apo_RingOfTheRam_3"
+spell = "Projectile_Apo_RingOfTheRam_3"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(ApoRamRing,9,0)" }, { target = "host", boost = "RollBonus(RangedSpellAttack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-120, -6] }, { resource = "ApoRamRing", level = 0, change = -3 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-healing"
+title = "Shout_EE_Healing"
+spell = "Shout_EE_Healing"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-speed"
+title = "Shout_EE_Speed"
+spell = "Shout_EE_Speed"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-heroism"
+title = "Shout_EE_Heroism"
+spell = "Shout_EE_Heroism"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-flying"
+title = "Shout_EE_Flying"
+spell = "Shout_EE_Flying"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-invisibility"
+title = "Shout_EE_Invisibility"
+spell = "Shout_EE_Invisibility"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-peerlessfocus"
+title = "Shout_EE_PeerlessFocus"
+spell = "Shout_EE_PeerlessFocus"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-vigilance"
+title = "Shout_EE_Vigilance"
+spell = "Shout_EE_Vigilance"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-bloodlust"
+title = "Shout_EE_Bloodlust"
+spell = "Shout_EE_Bloodlust"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-hillgiantstrength"
+title = "Shout_EE_HillGiantStrength"
+spell = "Shout_EE_HillGiantStrength"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-colossus"
+title = "Shout_EE_Colossus"
+spell = "Shout_EE_Colossus"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-featherfall"
+title = "Shout_EE_FeatherFall"
+spell = "Shout_EE_FeatherFall"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-gloriousvaulting"
+title = "Shout_EE_GloriousVaulting"
+spell = "Shout_EE_GloriousVaulting"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-cloudgiantstrength"
+title = "Shout_EE_CloudGiantStrength"
+spell = "Shout_EE_CloudGiantStrength"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-battlemagespower"
+title = "Shout_EE_BattlemagesPower"
+spell = "Shout_EE_BattlemagesPower"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-viciousness"
+title = "Shout_EE_Viciousness"
+spell = "Shout_EE_Viciousness"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-guilefulmovement"
+title = "Shout_EE_GuilefulMovement"
+spell = "Shout_EE_GuilefulMovement"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-barkskin"
+title = "Shout_EE_Barkskin"
+spell = "Shout_EE_Barkskin"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }]
+expect = [{ resource = "ExperimentalElixir", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-resource-1"
+title = "Shout_EE_Resource_1"
+spell = "Shout_EE_Resource_1"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }, { target = "host", resource = "ExperimentalElixir", level = 0, amount = 0 }]
+expect = [{ resource = "ExperimentalElixir", level = 0, amount_change = 1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-resource-2"
+title = "Shout_EE_Resource_2"
+spell = "Shout_EE_Resource_2"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }, { target = "host", resource = "ExperimentalElixir", level = 0, amount = 0 }]
+expect = [{ resource = "ExperimentalElixir", level = 0, amount_change = 1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-resource-3"
+title = "Shout_EE_Resource_3"
+spell = "Shout_EE_Resource_3"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }, { target = "host", resource = "ExperimentalElixir", level = 0, amount = 0 }]
+expect = [{ resource = "ExperimentalElixir", level = 0, amount_change = 1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-resource-4"
+title = "Shout_EE_Resource_4"
+spell = "Shout_EE_Resource_4"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }, { target = "host", resource = "ExperimentalElixir", level = 0, amount = 0 }]
+expect = [{ resource = "ExperimentalElixir", level = 0, amount_change = 1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-resource-5"
+title = "Shout_EE_Resource_5"
+spell = "Shout_EE_Resource_5"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }, { target = "host", resource = "ExperimentalElixir", level = 0, amount = 0 }]
+expect = [{ resource = "ExperimentalElixir", level = 0, amount_change = 1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-ee-resource-6"
+title = "Shout_EE_Resource_6"
+spell = "Shout_EE_Resource_6"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(ExperimentalElixir,7,0)" }, { target = "host", resource = "ExperimentalElixir", level = 0, amount = 0 }]
+expect = [{ resource = "ExperimentalElixir", level = 0, amount_change = 1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-redrain6"
+title = "Shout_RedRain6"
+spell = "Shout_RedRain6"
+target = "host"
+spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice06,14,0)" }]
+expect = [{ target = "host", status_applied = ["RED_RAIN"] }, { target = "B", status_present = ["RED_RAIN_EXPOSED"] }, { resource = "HitPointDice06", level = 0, change = -8 }]
+notes = "RED_RAIN is an aura: a friendly wolf 3 m away should get RED_RAIN_EXPOSED."
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-redrain8"
+title = "Shout_RedRain8"
+spell = "Shout_RedRain8"
+target = "host"
+spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice08,14,0)" }]
+expect = [{ target = "host", status_applied = ["RED_RAIN"] }, { target = "B", status_present = ["RED_RAIN_EXPOSED"] }, { resource = "HitPointDice08", level = 0, change = -8 }]
+notes = "RED_RAIN is an aura: a friendly wolf 3 m away should get RED_RAIN_EXPOSED."
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-redrain10"
+title = "Shout_RedRain10"
+spell = "Shout_RedRain10"
+target = "host"
+spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice10,14,0)" }]
+expect = [{ target = "host", status_applied = ["RED_RAIN"] }, { target = "B", status_present = ["RED_RAIN_EXPOSED"] }, { resource = "HitPointDice10", level = 0, change = -8 }]
+notes = "RED_RAIN is an aura: a friendly wolf 3 m away should get RED_RAIN_EXPOSED."
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-redrain12"
+title = "Shout_RedRain12"
+spell = "Shout_RedRain12"
+target = "host"
+spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice12,14,0)" }]
+expect = [{ target = "host", status_applied = ["RED_RAIN"] }, { target = "B", status_present = ["RED_RAIN_EXPOSED"] }, { resource = "HitPointDice12", level = 0, change = -8 }]
+notes = "RED_RAIN is an aura: a friendly wolf 3 m away should get RED_RAIN_EXPOSED."
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-stealimmortality6"
+title = "Shout_StealImmortality6"
+spell = "Shout_StealImmortality6"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(HitPointDice06,15,0)" }]
+expect = [{ resource = "HitPointDice06", level = 0, change = -9 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-stealimmortality8"
+title = "Shout_StealImmortality8"
+spell = "Shout_StealImmortality8"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(HitPointDice08,15,0)" }]
+expect = [{ resource = "HitPointDice08", level = 0, change = -9 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-stealimmortality10"
+title = "Shout_StealImmortality10"
+spell = "Shout_StealImmortality10"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(HitPointDice10,15,0)" }]
+expect = [{ resource = "HitPointDice10", level = 0, change = -9 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-stealimmortality12"
+title = "Shout_StealImmortality12"
+spell = "Shout_StealImmortality12"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(HitPointDice12,15,0)" }]
+expect = [{ resource = "HitPointDice12", level = 0, change = -9 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-warriorofthegods-1"
+title = "Shout_WarriorOfTheGods_1"
+spell = "Shout_WarriorOfTheGods_1"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(WarriorOfTheGods,7,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "WarriorOfTheGods", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-warriorofthegods-2"
+title = "Shout_WarriorOfTheGods_2"
+spell = "Shout_WarriorOfTheGods_2"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(WarriorOfTheGods,8,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "WarriorOfTheGods", level = 0, change = -2 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-warriorofthegods-3"
+title = "Shout_WarriorOfTheGods_3"
+spell = "Shout_WarriorOfTheGods_3"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(WarriorOfTheGods,9,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "WarriorOfTheGods", level = 0, change = -3 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-warriorofthegods-4"
+title = "Shout_WarriorOfTheGods_4"
+spell = "Shout_WarriorOfTheGods_4"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(WarriorOfTheGods,10,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "WarriorOfTheGods", level = 0, change = -4 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-warriorofthegods-5"
+title = "Shout_WarriorOfTheGods_5"
+spell = "Shout_WarriorOfTheGods_5"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(WarriorOfTheGods,11,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "WarriorOfTheGods", level = 0, change = -5 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-warriorofthegods-6"
+title = "Shout_WarriorOfTheGods_6"
+spell = "Shout_WarriorOfTheGods_6"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(WarriorOfTheGods,12,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "WarriorOfTheGods", level = 0, change = -6 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-warriorofthegods-7"
+title = "Shout_WarriorOfTheGods_7"
+spell = "Shout_WarriorOfTheGods_7"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(WarriorOfTheGods,13,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "WarriorOfTheGods", level = 0, change = -7 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-1"
+title = "Target_Balm_1"
+spell = "Target_Balm_1"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,7,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_1"] }, { resource = "Balm", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-2"
+title = "Target_Balm_2"
+spell = "Target_Balm_2"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,8,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_2"] }, { resource = "Balm", level = 0, change = -2 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-3"
+title = "Target_Balm_3"
+spell = "Target_Balm_3"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,9,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_3"] }, { resource = "Balm", level = 0, change = -3 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-4"
+title = "Target_Balm_4"
+spell = "Target_Balm_4"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,10,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_4"] }, { resource = "Balm", level = 0, change = -4 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-5"
+title = "Target_Balm_5"
+spell = "Target_Balm_5"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,11,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_5"] }, { resource = "Balm", level = 0, change = -5 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-6"
+title = "Target_Balm_6"
+spell = "Target_Balm_6"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,12,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_6"] }, { resource = "Balm", level = 0, change = -6 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-7"
+title = "Target_Balm_7"
+spell = "Target_Balm_7"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,13,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_7"] }, { resource = "Balm", level = 0, change = -7 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-8"
+title = "Target_Balm_8"
+spell = "Target_Balm_8"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,14,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_8"] }, { resource = "Balm", level = 0, change = -8 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-9"
+title = "Target_Balm_9"
+spell = "Target_Balm_9"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,15,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_9"] }, { resource = "Balm", level = 0, change = -9 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-balm-10"
+title = "Target_Balm_10"
+spell = "Target_Balm_10"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "Z", template = "wolf", faction = "hostile", hp = 300, distance = 8 }]
+setup = [{ target = "host", boost = "ActionResource(Balm,16,0)" }, { target = "A", hp = 5 }]
+expect = [{ target = "A", hp_change = [1, 999] }, { target = "A", status_applied = ["BALM_TEMPHP_10"] }, { resource = "Balm", level = 0, change = -10 }]
+
+# draft confidence: medium
+# TODO: teleports: the harness can't check positions - check a status/cast event instead
+[[case]]
+id = "cont-hl-target-burstforth6"
+title = "Target_BurstForth6"
+spell = "Target_BurstForth6"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice06,13,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", hp_change = [-84, -7] }, { resource = "HitPointDice06", level = 0, change = -7 }]
+notes = "The Constitution save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: teleports: the harness can't check positions - check a status/cast event instead
+[[case]]
+id = "cont-hl-target-burstforth8"
+title = "Target_BurstForth8"
+spell = "Target_BurstForth8"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice08,13,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", hp_change = [-112, -7] }, { resource = "HitPointDice08", level = 0, change = -7 }]
+notes = "The Constitution save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: teleports: the harness can't check positions - check a status/cast event instead
+[[case]]
+id = "cont-hl-target-burstforth10"
+title = "Target_BurstForth10"
+spell = "Target_BurstForth10"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice10,13,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", hp_change = [-140, -7] }, { resource = "HitPointDice10", level = 0, change = -7 }]
+notes = "The Constitution save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: teleports: the harness can't check positions - check a status/cast event instead
+[[case]]
+id = "cont-hl-target-burstforth12"
+title = "Target_BurstForth12"
+spell = "Target_BurstForth12"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice12,13,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", hp_change = [-168, -7] }, { resource = "HitPointDice12", level = 0, change = -7 }]
+notes = "The Constitution save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-creepingdeath6"
+title = "Target_CreepingDeath6"
+spell = "Target_CreepingDeath6"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice06,14,0)" }]
+expect = [{ target = "A", status_applied = ["CREEPING_DEATH_6_8"] }, { target = "A", status_applied = ["CREEPING_DEATH_MARK"] }, { target = "host", status_applied = ["CREEPING_DEATH_CASTER"] }, { resource = "HitPointDice06", level = 0, change = -8 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-creepingdeath8"
+title = "Target_CreepingDeath8"
+spell = "Target_CreepingDeath8"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice08,14,0)" }]
+expect = [{ target = "A", status_applied = ["CREEPING_DEATH_8_8"] }, { target = "A", status_applied = ["CREEPING_DEATH_MARK"] }, { target = "host", status_applied = ["CREEPING_DEATH_CASTER"] }, { resource = "HitPointDice08", level = 0, change = -8 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-creepingdeath10"
+title = "Target_CreepingDeath10"
+spell = "Target_CreepingDeath10"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice10,14,0)" }]
+expect = [{ target = "A", status_applied = ["CREEPING_DEATH_10_8"] }, { target = "A", status_applied = ["CREEPING_DEATH_MARK"] }, { target = "host", status_applied = ["CREEPING_DEATH_CASTER"] }, { resource = "HitPointDice10", level = 0, change = -8 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-creepingdeath12"
+title = "Target_CreepingDeath12"
+spell = "Target_CreepingDeath12"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice12,14,0)" }]
+expect = [{ target = "A", status_applied = ["CREEPING_DEATH_12_8"] }, { target = "A", status_applied = ["CREEPING_DEATH_MARK"] }, { target = "host", status_applied = ["CREEPING_DEATH_CASTER"] }, { resource = "HitPointDice12", level = 0, change = -8 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rangerscompanion-bear"
+title = "Target_RangersCompanion_Bear"
+spell = "Target_RangersCompanion_Bear"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(RangersCompanion,7,0)" }]
+expect = [{ summon = { template = "d642d398-f349-4eab-b98c-a82cbda19918" } }, { resource = "RangersCompanion", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rangerscompanion-boar"
+title = "Target_RangersCompanion_Boar"
+spell = "Target_RangersCompanion_Boar"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(RangersCompanion,7,0)" }]
+expect = [{ summon = { template = "be71d66c-5328-490f-b962-4fdb7ca2647f" } }, { resource = "RangersCompanion", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rangerscompanion-giantspider"
+title = "Target_RangersCompanion_GiantSpider"
+spell = "Target_RangersCompanion_GiantSpider"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(RangersCompanion,7,0)" }]
+expect = [{ summon = { template = "7542dc70-4f9d-439a-ba96-1bc0c1b89d9c" } }, { resource = "RangersCompanion", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rangerscompanion-raven"
+title = "Target_RangersCompanion_Raven"
+spell = "Target_RangersCompanion_Raven"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(RangersCompanion,7,0)" }]
+expect = [{ summon = { template = "ca69f1a8-28c6-4eb3-863e-fa95040dc7e7" } }, { resource = "RangersCompanion", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rangerscompanion-wolf"
+title = "Target_RangersCompanion_Wolf"
+spell = "Target_RangersCompanion_Wolf"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(RangersCompanion,7,0)" }]
+expect = [{ summon = { template = "9beee5c9-279e-49d8-a4a8-18f9ee0b1519" } }, { resource = "RangersCompanion", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-shout-rangerscompanion"
+title = "Shout_RangersCompanion"
+spell = "Shout_RangersCompanion"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(RangersCompanion,7,0)" }, { target = "host", resource = "RangersCompanion", level = 0, amount = 0 }, { target = "host", resource = "RangersCompanion", amount = 0 }]
+expect = [{ resource = "RangersCompanion", level = 0, amount_change = 1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-alchemyjug"
+title = "Target_RMI_AlchemyJug"
+spell = "Target_RMI_AlchemyJug"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_ALCHEMY"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+covers = ["Target_RMI_BagOfHolding"]
+notes = "Stands for 1 alike option(s): Target_RMI_BagOfHolding."
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-googlesofnight"
+title = "Target_RMI_GooglesOfNight"
+spell = "Target_RMI_GooglesOfNight"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_DARKVISION"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: low
+# TODO: RMI_MAGICSHIELD only lands if `not ClassLevelHigherOrEqualThan(10,'Artificer')` - set that up, or expect it absent
+# TODO: RMI_MAGICSHIELD_2 only lands if `ClassLevelHigherOrEqualThan(10,'Artificer')` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-target-rmi-magicshield"
+title = "Target_RMI_MagicShield"
+spell = "Target_RMI_MagicShield"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_MAGICSHIELD"] }, { target = "A", status_applied = ["RMI_MAGICSHIELD_2"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+covers = ["Target_RMI_WandOfTheWarMage", "Target_RMI_MagicWeapon"]
+notes = "Stands for 2 alike option(s): Target_RMI_WandOfTheWarMage, Target_RMI_MagicWeapon."
+
+# draft confidence: low
+# TODO: RMI_MAGICGLOVES only lands if `not ClassLevelHigherOrEqualThan(10,'Artificer')` - set that up, or expect it absent
+# TODO: RMI_MAGICGLOVES_2 only lands if `ClassLevelHigherOrEqualThan(10,'Artificer')` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-target-rmi-wrapsofunarmedpower"
+title = "Target_RMI_WrapsOfUnarmedPower"
+spell = "Target_RMI_WrapsOfUnarmedPower"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_MAGICGLOVES"] }, { target = "A", status_applied = ["RMI_MAGICGLOVES_2"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: low
+# TODO: RMI_MAGICARMOR only lands if `not ClassLevelHigherOrEqualThan(14,'Artificer')` - set that up, or expect it absent
+# TODO: RMI_MAGICARMOR_2 only lands if `ClassLevelHigherOrEqualThan(14,'Artificer')` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-target-rmi-magicarmor"
+title = "Target_RMI_MagicArmor"
+spell = "Target_RMI_MagicArmor"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_MAGICARMOR"] }, { target = "A", status_applied = ["RMI_MAGICARMOR_2"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-helmofawarreness"
+title = "Target_RMI_HelmOfAwarreness"
+spell = "Target_RMI_HelmOfAwarreness"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_ALERT"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-lanternofrevealing"
+title = "Target_RMI_LanternOfRevealing"
+spell = "Target_RMI_LanternOfRevealing"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }, { as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_SEEINVISIBILITY"] }, { target = "B", status_present = ["SEE_INVISIBILITY_SEEN"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+notes = "RMI_SEEINVISIBILITY is an aura: a friendly wolf 3 m away should get SEE_INVISIBILITY_SEEN."
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-mindsharpener"
+title = "Target_RMI_MindSharpener"
+spell = "Target_RMI_MindSharpener"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_CONCENTRATION"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-armorofresistance"
+title = "Target_RMI_ArmorOfResistance"
+spell = "Target_RMI_ArmorOfResistance"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_STONESKIN"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-ringoffreeaction"
+title = "Target_RMI_RingOfFreeAction"
+spell = "Target_RMI_RingOfFreeAction"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_FREEACTION"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-ringofprotection"
+title = "Target_RMI_RingOfProtection"
+spell = "Target_RMI_RingOfProtection"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_PROTECTION"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-flametongue"
+title = "Target_RMI_FlameTongue"
+spell = "Target_RMI_FlameTongue"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_FLAMETONGUE"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-arrowcatchingshield"
+title = "Target_RMI_ArrowCatchingShield"
+spell = "Target_RMI_ArrowCatchingShield"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_ARROWCATCHING"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-rmi-ringoftheram"
+title = "Target_RMI_RingOfTheRam"
+spell = "Target_RMI_RingOfTheRam"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(ReplicateMagicItem,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["RMI_RINGOFRAM"] }, { resource = "ReplicateMagicItem", level = 0, change = -1 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-sanguinefusillade6"
+title = "Target_SanguineFusillade6"
+spell = "Target_SanguineFusillade6"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice06,13,0)" }]
+expect = [{ target = "host", status_applied = ["SANGUINE_FUSILLADE_6_7"] }, { target = "A", hp_change = [-84, -7] }, { resource = "HitPointDice06", level = 0, change = -7 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-sanguinefusillade8"
+title = "Target_SanguineFusillade8"
+spell = "Target_SanguineFusillade8"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice08,13,0)" }]
+expect = [{ target = "host", status_applied = ["SANGUINE_FUSILLADE_8_7"] }, { target = "A", hp_change = [-112, -7] }, { resource = "HitPointDice08", level = 0, change = -7 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-sanguinefusillade10"
+title = "Target_SanguineFusillade10"
+spell = "Target_SanguineFusillade10"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice10,13,0)" }]
+expect = [{ target = "host", status_applied = ["SANGUINE_FUSILLADE_10_7"] }, { target = "A", hp_change = [-140, -7] }, { resource = "HitPointDice10", level = 0, change = -7 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-sanguinefusillade12"
+title = "Target_SanguineFusillade12"
+spell = "Target_SanguineFusillade12"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice12,13,0)" }]
+expect = [{ target = "host", status_applied = ["SANGUINE_FUSILLADE_12_7"] }, { target = "A", hp_change = [-168, -7] }, { resource = "HitPointDice12", level = 0, change = -7 }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-summonbeast-gianteagle-illusion"
+title = "Target_SummonBeast_GiantEagle_Illusion"
+spell = "Target_SummonBeast_GiantEagle_Illusion"
+target = "ground"
+expect = [{ summon = { template = "df3b594e-8e86-4a8b-94e2-9ca81683166e" } }]
+
+# draft confidence: high
+[[case]]
+id = "cont-hl-target-summonbeast-wolf-illusion"
+title = "Target_SummonBeast_Wolf_Illusion"
+spell = "Target_SummonBeast_Wolf_Illusion"
+target = "ground"
+expect = [{ summon = { template = "1d0ea294-cec9-47ce-9a25-4db2c316427e" } }]
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-1"
+title = "Zone_SearingArcStrike_1"
+spell = "Zone_SearingArcStrike_1"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,8,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-36, -3] }, { resource = "KiPoint", level = 0, change = -2 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-2"
+title = "Zone_SearingArcStrike_2"
+spell = "Zone_SearingArcStrike_2"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,9,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-48, -4] }, { resource = "KiPoint", level = 0, change = -3 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-3"
+title = "Zone_SearingArcStrike_3"
+spell = "Zone_SearingArcStrike_3"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,10,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-60, -5] }, { resource = "KiPoint", level = 0, change = -4 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-4"
+title = "Zone_SearingArcStrike_4"
+spell = "Zone_SearingArcStrike_4"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,11,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-72, -6] }, { resource = "KiPoint", level = 0, change = -5 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-5"
+title = "Zone_SearingArcStrike_5"
+spell = "Zone_SearingArcStrike_5"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,12,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-84, -7] }, { resource = "KiPoint", level = 0, change = -6 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-6"
+title = "Zone_SearingArcStrike_6"
+spell = "Zone_SearingArcStrike_6"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,13,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-96, -8] }, { resource = "KiPoint", level = 0, change = -7 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-7"
+title = "Zone_SearingArcStrike_7"
+spell = "Zone_SearingArcStrike_7"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,14,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-108, -9] }, { resource = "KiPoint", level = 0, change = -8 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-8"
+title = "Zone_SearingArcStrike_8"
+spell = "Zone_SearingArcStrike_8"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,15,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-120, -10] }, { resource = "KiPoint", level = 0, change = -9 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+# draft confidence: medium
+# TODO: BURNING only lands if `Item()` - set that up, or expect it absent
+[[case]]
+id = "cont-hl-zone-searingarcstrike-9"
+title = "Zone_SearingArcStrike_9"
+spell = "Zone_SearingArcStrike_9"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(KiPoint,16,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["BURNING"] }, { target = "A", hp_change = [-132, -11] }, { resource = "KiPoint", level = 0, change = -10 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+

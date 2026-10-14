@@ -4373,4 +4373,243 @@
   <content contentuid="h5a3c6391f06156eda2be10a18377d413" version="1">Otherworldly Resilience: you have Resistance to Psychic damage. Portal Step: you can spend 15 feet of movement to teleport to an unoccupied space you can see within 15 feet of yourself (a number of times equal to your Proficiency Bonus, once per turn, regained on a Long Rest).</content>
   <content contentuid="he3a85ed5d11b5f76ad8712b4d4579432" version="1">Origin Feat: Portal Jumper (Radiant)</content>
   <content contentuid="h41e2e6ac20b15d1591e80ca792389632" version="1">Otherworldly Resilience: you have Resistance to Radiant damage. Portal Step: you can spend 15 feet of movement to teleport to an unoccupied space you can see within 15 feet of yourself (a number of times equal to your Proficiency Bonus, once per turn, regained on a Long Rest).</content>
+  <content contentuid="h2eb761cd9a4d56638931e738cd282aeb" version="1">Red Renewal</content>
+  <content contentuid="h98b6bee3e0595c728f21a6cc8205ec43" version="1">Recover Hit Point Dice on a Short Rest. Returns on a Long Rest.</content>
+  <content contentuid="h84b1d45b9510520eb9577150207518a5" version="1">Red Renewal</content>
+  <content contentuid="h0894696504a75ab4adb5500abbcc2327" version="1">When you finish a Short Rest, you regain expended Hit Point Dice equal to half your Wizard level, and as many dice from Full-Blooded. Once you use this feature, you can't do so again until you finish a Long Rest. (It happens on your first Short Rest after a Long Rest and restores Wizard Hit Point Dice.)</content>
+  <content contentuid="h9ed8cd58bc5757eab3fe1f20a5e376a9" version="1">You expend one additional Hit Point Die for each spell slot level above 7.</content>
+  <content contentuid="h1376b56c38845aa7843e18091e3b2145" version="1">Burst Forth</content>
+  <content contentuid="h7ab7785c255e51df87572e3d2622351a" version="1">As part of casting this spell, you must expend [1] Hit Point Dice or the spell automatically fails. You teleport inside a creature that you can see within range and burst forth from it in a fountain of gore in the nearest unoccupied space. The target makes a Constitution saving throw, taking [2] on a failed save or half as much damage on a successful one.</content>
+  <content contentuid="h9c1835ae2f8656738c6d48e165d3816c" version="1">Burst Forth (d6)</content>
+  <content contentuid="ha893a74c675b565481792140ce046720" version="1">Burst Forth (d8)</content>
+  <content contentuid="h94eff263fbfc5c2797903f7a7baf2c95" version="1">Burst Forth (d10)</content>
+  <content contentuid="hb37a8e22fac75351bccd59915b515b0a" version="1">Burst Forth (d12)</content>
+  <content contentuid="hdff733a6e9405d12b5f9f0328261274a" version="1">You expend one additional Hit Point Die and create another dart for each spell slot level above 7.</content>
+  <content contentuid="h924dcf4248525af195050afc165e4eb6" version="1">Sanguine Fusillade</content>
+  <content contentuid="h031550fc3e5e526b847d1a436a592350" version="1">You crystalize your foe's blood into razor darts that burst forth to strike your enemies. As part of casting this spell, you must expend [1] Hit Point Dice or the spell automatically fails. Roll the Hit Point Dice expended to cast the spell. Choose a creature that you can see within range. The target takes [2] Piercing damage. When a creature takes this damage, [3] crimson darts burst from it. You can direct each dart (a free action: the Fusillade Darts spell, once) at a creature within range: make a ranged spell attack for each; on a hit it takes [4] Piercing damage.</content>
+  <content contentuid="h5b636a4156d8508cb9ca437969026286" version="1">Sanguine Fusillade (d6)</content>
+  <content contentuid="h5eff62cea62d5421ab47ace1da3b99fc" version="1">Sanguine Fusillade (d8)</content>
+  <content contentuid="h4a0aed1ffd8e58abaa4b8bc70162eae5" version="1">Sanguine Fusillade (d10)</content>
+  <content contentuid="h4eb78bd345645056a8a79b507a45e3c3" version="1">Sanguine Fusillade (d12)</content>
+  <content contentuid="hab70108608e757e7bdb7962460dc7d9c" version="1">Fusillade Darts (d6)</content>
+  <content contentuid="hf14cd287be86541c890f8cde50d41d52" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="hb1a479a7984e55d5be34e12f08dece93" version="1">Sanguine Fusillade</content>
+  <content contentuid="h04097f973af55375bed02ba420efb6e6" version="1">7 crimson darts are ready: cast Fusillade Darts (d6).</content>
+  <content contentuid="h851dafa488ed537695f9f3ce0e3fecd2" version="1">Fusillade Darts (d8)</content>
+  <content contentuid="h5a385ab93ca55e229b6db9b2de90a25c" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h94c1e6fabc7d5ed385695ecb2934611d" version="1">Sanguine Fusillade</content>
+  <content contentuid="h9277c72f784b59e28d84b39bff49f3a3" version="1">7 crimson darts are ready: cast Fusillade Darts (d8).</content>
+  <content contentuid="h38dc33ba90ea58949fefc9a3ec02091d" version="1">Fusillade Darts (d10)</content>
+  <content contentuid="h4899132165965246a697f9beeda2cb90" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h28f90ffd7ec05af0b2c4226daf0c6a8e" version="1">Sanguine Fusillade</content>
+  <content contentuid="h0da1c654c9a75d6d8db2768abd40b5c3" version="1">7 crimson darts are ready: cast Fusillade Darts (d10).</content>
+  <content contentuid="h4b3f8d2623345f8ba05a8b92c807eac0" version="1">Fusillade Darts (d12)</content>
+  <content contentuid="h7396329dfe8a53f4b4a419ae9fd21ef6" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h9f71b90b95385101ab6fe415edf33a00" version="1">Sanguine Fusillade</content>
+  <content contentuid="h37c8dd790a895f63b234e07673e771f7" version="1">7 crimson darts are ready: cast Fusillade Darts (d12).</content>
+  <content contentuid="he0b4324a7ff6518d814526b438989f70" version="1">Fusillade Darts (d6)</content>
+  <content contentuid="h511ab33862aa55fc91bb1d3ac8afb7d6" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="heaaffd95de8659ccaabe74206f4ff1cb" version="1">Sanguine Fusillade</content>
+  <content contentuid="h82f7ada0e3425b1eba5400d250c5a883" version="1">8 crimson darts are ready: cast Fusillade Darts (d6).</content>
+  <content contentuid="h591c7b6126ff555bae1b5e6a03d28b34" version="1">Fusillade Darts (d8)</content>
+  <content contentuid="h12915ad7a4b55b5890f14e12929e3b83" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="hef7fc4587be559d396d438f9fa91e1d5" version="1">Sanguine Fusillade</content>
+  <content contentuid="h3d56d08d5fe5535b8937d413e85ba3e3" version="1">8 crimson darts are ready: cast Fusillade Darts (d8).</content>
+  <content contentuid="h1a5f4b3ec73a5671a83c416d4bf61c68" version="1">Fusillade Darts (d10)</content>
+  <content contentuid="he777b7c645a15f82b8609e71d1d37e48" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h06fec03d9c91586ba253345d673bcf46" version="1">Sanguine Fusillade</content>
+  <content contentuid="h78042db0d3905f769a1bb3e27c5eff8b" version="1">8 crimson darts are ready: cast Fusillade Darts (d10).</content>
+  <content contentuid="hbb885c981279551695a0710a17ac4b19" version="1">Fusillade Darts (d12)</content>
+  <content contentuid="h3e8239fae38b554d81e6ca0a522e9d80" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h450cd646814a5188974747230869f5d4" version="1">Sanguine Fusillade</content>
+  <content contentuid="hf0a0608f878356e9b18b2d827b4a1e8a" version="1">8 crimson darts are ready: cast Fusillade Darts (d12).</content>
+  <content contentuid="h640331998abe53ad8017ea5bdf3479d1" version="1">Fusillade Darts (d6)</content>
+  <content contentuid="hb10688b34d6158b7a333017c0047b096" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h97b2412b79bb53af88f6c45a6e12bcba" version="1">Sanguine Fusillade</content>
+  <content contentuid="hd5f6002865f25dc5b3ee7e7483e1accd" version="1">9 crimson darts are ready: cast Fusillade Darts (d6).</content>
+  <content contentuid="h0357680ae14f5f38beb20d035a1d6db7" version="1">Fusillade Darts (d8)</content>
+  <content contentuid="hda6004fa55fd521599d82e09f5e10c04" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h981d7fc092b2536b84186074185d6bcc" version="1">Sanguine Fusillade</content>
+  <content contentuid="hc56da2180cb85d12ad11f0a20d2d98d0" version="1">9 crimson darts are ready: cast Fusillade Darts (d8).</content>
+  <content contentuid="h915f48b76aaf5600b240ba8218d1daae" version="1">Fusillade Darts (d10)</content>
+  <content contentuid="h1c5001ae15175f168d99a1e0d57c6ade" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h3da4c112d4fe5ce1899233da4dac4737" version="1">Sanguine Fusillade</content>
+  <content contentuid="h1bb0d43a52585020955982bb1023ebce" version="1">9 crimson darts are ready: cast Fusillade Darts (d10).</content>
+  <content contentuid="hf63772f0a26151188222c30b5cdad3df" version="1">Fusillade Darts (d12)</content>
+  <content contentuid="h43f9b492427d5fad9addc954564de1b0" version="1">The crimson darts of your Sanguine Fusillade: [1] darts, each a ranged spell attack, each dealing [2] on a hit. You can send them at one creature or several.</content>
+  <content contentuid="h381699f00cff5ef7a385d904efd4fc29" version="1">Sanguine Fusillade</content>
+  <content contentuid="haed1c6373eea5b808d4e511409609ca8" version="1">9 crimson darts are ready: cast Fusillade Darts (d12).</content>
+  <content contentuid="hf15ae91e819a5da497d218a6a34928c6" version="1">You expend one additional Hit Point Die for each spell slot level above 8.</content>
+  <content contentuid="h149f2d56bce55cdd853bc7b4fb452220" version="1">Creeping Death</content>
+  <content contentuid="h5cc64ad991a353ff8e6791c380d27138" version="1">As part of casting this spell, you must expend [1] Hit Point Dice or the spell automatically fails. Roll the expended Hit Point Dice: the target's creeping death threshold is equal to the roll's total. For the duration, if the creature's Hit Points are reduced to or lower than its creeping death threshold, it immediately dies. As a Bonus Action, you can force the target to make a Constitution saving throw. On a failed save, roll 2d6 and add the result to its threshold; on a successful save, add half the result instead. If the creature succeeds on three saving throws, which don't have to be consecutive, this spell ends early.</content>
+  <content contentuid="h59dd92a4da8b542692aba4eb53800dfa" version="1">Creeping Death (d6)</content>
+  <content contentuid="hb90bda93f6915f6f90d8806d52807e23" version="1">Creeping Death (d8)</content>
+  <content contentuid="h089ab0274e1f5ef9b7a187d17b181bf9" version="1">Creeping Death (d10)</content>
+  <content contentuid="he2120ccfa37b568093eded88d0df53ee" version="1">Creeping Death (d12)</content>
+  <content contentuid="h84081fd499de57d1a2977a9bc1103b3d" version="1">Creeping Death</content>
+  <content contentuid="h56c098dbad0f5d3a9b6059f6d4c474cd" version="1">Creeping death threshold: the roll of 8d6, set when the spell is cast. If this creature's Hit Points are reduced to or lower than it, it dies. Each failed Constitution save the caster forces raises it by 2d6 (half on a success); three successes end the spell.</content>
+  <content contentuid="h8dece4a1446659d18b686c431d953c80" version="1">Creeping Death</content>
+  <content contentuid="he9fc61cb40e35caca5fd388fef18022f" version="1">Creeping death threshold: the roll of 8d8, set when the spell is cast. If this creature's Hit Points are reduced to or lower than it, it dies. Each failed Constitution save the caster forces raises it by 2d6 (half on a success); three successes end the spell.</content>
+  <content contentuid="h1d5a20ae5f1c52e588be6d1cc8d6427d" version="1">Creeping Death</content>
+  <content contentuid="h18341758cdde5bc18112e495558384df" version="1">Creeping death threshold: the roll of 8d10, set when the spell is cast. If this creature's Hit Points are reduced to or lower than it, it dies. Each failed Constitution save the caster forces raises it by 2d6 (half on a success); three successes end the spell.</content>
+  <content contentuid="h6f1d595506fa54d2abffc422cbabcf6b" version="1">Creeping Death</content>
+  <content contentuid="h1b5557fc579d52d8a226d275f2d4b278" version="1">Creeping death threshold: the roll of 8d12, set when the spell is cast. If this creature's Hit Points are reduced to or lower than it, it dies. Each failed Constitution save the caster forces raises it by 2d6 (half on a success); three successes end the spell.</content>
+  <content contentuid="hd41beef1ea8455a58a06ae3d419307c8" version="1">Creeping Death</content>
+  <content contentuid="h784da1b658cc59f390ec6a2dc72da07f" version="1">Creeping death threshold: the roll of 9d6, set when the spell is cast. If this creature's Hit Points are reduced to or lower than it, it dies. Each failed Constitution save the caster forces raises it by 2d6 (half on a success); three successes end the spell.</content>
+  <content contentuid="h42ccb1ccd80254ddba767c78ab148d2b" version="1">Creeping Death</content>
+  <content contentuid="h12b8bcb3d34458c8928101c2f3ed6153" version="1">Creeping death threshold: the roll of 9d8, set when the spell is cast. If this creature's Hit Points are reduced to or lower than it, it dies. Each failed Constitution save the caster forces raises it by 2d6 (half on a success); three successes end the spell.</content>
+  <content contentuid="h56bad4cf67d758eb9315cfc1ca91dfae" version="1">Creeping Death</content>
+  <content contentuid="ha8c43d1274b852819542ecf5c625b0be" version="1">Creeping death threshold: the roll of 9d10, set when the spell is cast. If this creature's Hit Points are reduced to or lower than it, it dies. Each failed Constitution save the caster forces raises it by 2d6 (half on a success); three successes end the spell.</content>
+  <content contentuid="h5020737fa69b50b981e048d8ae45a988" version="1">Creeping Death</content>
+  <content contentuid="h8dbb4744344c54e1a03a47cf7eac1e96" version="1">Creeping death threshold: the roll of 9d12, set when the spell is cast. If this creature's Hit Points are reduced to or lower than it, it dies. Each failed Constitution save the caster forces raises it by 2d6 (half on a success); three successes end the spell.</content>
+  <content contentuid="h669ae7183e9758899bb7ee29dfa22dc7" version="1">Creeping Death</content>
+  <content contentuid="hd4beffcef2995f358d95f0e0a3b90f88" version="1">Doomed by creeping death (see the spell). The caster can force Constitution saves as a Bonus Action.</content>
+  <content contentuid="he1ffc79c6855539fb444fd5c772b3ba6" version="1">Creeping Death</content>
+  <content contentuid="h5616fab2c4e2525eb41acfa48000e4c9" version="1">Bonus Action: force the doomed creature to make a Constitution save (Creeping Death: Surge).</content>
+  <content contentuid="h7bf7a63599a859c9b0609a9a8759f98f" version="1">Creeping Death</content>
+  <content contentuid="h1f777e253996524baa230de6bb45e5c8" version="1">The creature failed: its threshold rises by 2d6.</content>
+  <content contentuid="h91abf71addd05a378e33b337d4329ab7" version="1">Creeping Death</content>
+  <content contentuid="hafd6bbd711175010acd881b96d7a013c" version="1">The creature saved: its threshold rises by half of 2d6.</content>
+  <content contentuid="hde69da12feb4597c8f11636b57442655" version="1">Creeping Death: Surge</content>
+  <content contentuid="h9e5424ab9389528982e419c5ef6fcfc0" version="1">Bonus Action: the creature doomed by your Creeping Death makes a Constitution saving throw. On a failed save, its creeping death threshold rises by 2d6; on a successful save, by half that. Three successful saves end the spell.</content>
+  <content contentuid="hb27e29cfb337561b84dd9a5041ada21f" version="1">You expend one additional Hit Point Die for each spell slot level above 8.</content>
+  <content contentuid="h2c08a1deb9ba501085aa85c591700ec7" version="1">Red Rain</content>
+  <content contentuid="h60c5b4ca8dd25e728fcdc5f4799079a7" version="1">As part of casting this spell, you must expend [1] Hit Point Dice or the spell automatically fails. The sky darkens and thick droplets of blood rain over the battlefield. Each enemy Beast and Plant must succeed on a Wisdom saving throw or be Frightened for 1 minute. For every 10 minutes (100 turns) that a creature is exposed to the rain, it gains 1 level of Exhaustion and takes 2d10 Necrotic damage, and its Hit Point maximum decreases by 11 per level of exhaustion until a Long Rest. (A 5-mile area and a 10-minute casting time don't fit BG3: the rain covers the area around you and only your enemies are caught in it.)</content>
+  <content contentuid="hf7998793bcde5d7180de7c3c11099a11" version="1">Red Rain (d6)</content>
+  <content contentuid="hc509a7ce70ee57709f202d1cb7400982" version="1">Red Rain (d8)</content>
+  <content contentuid="hf377986521ed5df3807a34560aaf5f1a" version="1">Red Rain (d10)</content>
+  <content contentuid="h9726f5b162e45264bbc91d34fd431129" version="1">Red Rain (d12)</content>
+  <content contentuid="hc3ce0da914e35d9ca052ab5da2cec59a" version="1">Red Rain</content>
+  <content contentuid="h748ffb5e98cd5c438cded71da3b1dc81" version="1">Blood rains over the battlefield: enemies in the rain are exposed to it (see the spell).</content>
+  <content contentuid="hbb30e51a83a85bd2bc18ede79a4123a1" version="1">Exposed to the Red Rain</content>
+  <content contentuid="h04e7c602cd465df1840f3635652d6b90" version="1">Blood rains on you. A Beast or Plant that fails a Wisdom saving throw is Frightened. After 10 minutes (100 turns) in the rain you take 2d10 Necrotic damage, gain a level of Exhaustion and your Hit Point maximum drops.</content>
+  <content contentuid="hab4d3cbdbf4551c6b09849083375161e" version="1">Red Rain: dose</content>
+  <content contentuid="hda34f7f609895220a9f6f6a248912229" version="1">Ten minutes of exposure to the rain end here: Necrotic damage, a level of Exhaustion, a lower Hit Point maximum.</content>
+  <content contentuid="h82810b7856b755f38fbe8eb6cfd310b3" version="1">Red Rain: drained</content>
+  <content contentuid="hc87c19da71d3500f881faa14df3db136" version="1">Hit Point maximum -11. A Long Rest ends it.</content>
+  <content contentuid="ha3e8a483c3f65a05adae84d6e308b127" version="1">Red Rain: drained</content>
+  <content contentuid="h9186e020861b58e0afa6433d1e7da65f" version="1">Hit Point maximum -22. A Long Rest ends it.</content>
+  <content contentuid="hb399710d44895cc38156b81e80d9ea33" version="1">Red Rain: drained</content>
+  <content contentuid="h6df22f77ead653a9a052ec3ae58a36f4" version="1">Hit Point maximum -33. A Long Rest ends it.</content>
+  <content contentuid="h3cf51677647753a384822a639d00906b" version="1">Red Rain: drained</content>
+  <content contentuid="hc6ec9cac71c350d9946e66672e051b6f" version="1">Hit Point maximum -44. A Long Rest ends it.</content>
+  <content contentuid="h7549078e6ece57d2b7e020e772b36b5a" version="1">Red Rain: drained</content>
+  <content contentuid="h66a10955369d528ba27a025f41567fbc" version="1">Hit Point maximum -55. A Long Rest ends it.</content>
+  <content contentuid="hb727083459ff5bcea55045df4c74f52e" version="1">Steal Immortality (Celestial)</content>
+  <content contentuid="h74e3dfb8985d519a875127a4bb156d98" version="1">You have the Celestial type as well as your own: Immunity to Poisoned, Resistance to Bludgeoning, Piercing and Slashing damage. Resistance to Radiant and Necrotic damage; flight. Ends when you cast the spell again or are reduced to 0 Hit Points.</content>
+  <content contentuid="h5d1770b701ea5ac6853124b0a7586b1b" version="1">Steal Immortality (Elemental)</content>
+  <content contentuid="he0ad6d1b0fcf5d5986fd9a78f63526d4" version="1">You have the Elemental type as well as your own: Immunity to Poisoned, Resistance to Bludgeoning, Piercing and Slashing damage. Resistance to Acid, Cold, Fire, Lightning and Thunder damage. Ends when you cast the spell again or are reduced to 0 Hit Points.</content>
+  <content contentuid="h6b29cd9e534e5b249f1be385315054d9" version="1">Steal Immortality (Fey)</content>
+  <content contentuid="hc9680ef5f8c85d2f9af8cff6fb0f4f92" version="1">You have the Fey type as well as your own: Immunity to Poisoned, Resistance to Bludgeoning, Piercing and Slashing damage. A Bonus Action to turn Invisible or teleport 60 feet. Ends when you cast the spell again or are reduced to 0 Hit Points.</content>
+  <content contentuid="h550726cda42a575db63aa9c7a8ad25dc" version="1">Steal Immortality (Fiend)</content>
+  <content contentuid="h5f4dbff970845f47bcb99a852bae4f2c" version="1">You have the Fiend type as well as your own: Immunity to Poisoned, Resistance to Bludgeoning, Piercing and Slashing damage. Resistance to Cold and Fire damage; flight. Ends when you cast the spell again or are reduced to 0 Hit Points.</content>
+  <content contentuid="h56fa7965f40e57df88424f4a0fe72ad5" version="1">Steal Immortality (Undead)</content>
+  <content contentuid="hf86f83211eb55ee1979464220ad40806" version="1">You have the Undead type as well as your own: Immunity to Poisoned, Resistance to Bludgeoning, Piercing and Slashing damage. Immunity to Necrotic damage, and to Charmed and Frightened. Ends when you cast the spell again or are reduced to 0 Hit Points.</content>
+  <content contentuid="he8563e63671350e28e3dadbaf50d2397" version="1">Steal Immortality</content>
+  <content contentuid="h3408f30942ef55a289a66ffea012f925" version="1">Temporary Hit Points: twice the roll of 9d6.</content>
+  <content contentuid="h81605f057e915388ad6d4118153ad6f4" version="1">Steal Immortality</content>
+  <content contentuid="h9f6d0e93d0355ba6abc81c92a110b225" version="1">Take the creature's type and a share of its life.</content>
+  <content contentuid="hb50ccd2485a455078fc8dad8ca214fd5" version="1">Steal Immortality</content>
+  <content contentuid="h6bcb721a36c25b97a60d5db7cfe1ff8b" version="1">Temporary Hit Points: twice the roll of 9d8.</content>
+  <content contentuid="h4b75b69067585084a53562fcbf3576ce" version="1">Steal Immortality</content>
+  <content contentuid="h0b9dd6dcdcdf58a2aedd799cd0d6e22b" version="1">Take the creature's type and a share of its life.</content>
+  <content contentuid="h3826b60ddc605542b1b922ad62578356" version="1">Steal Immortality</content>
+  <content contentuid="h16109fde1e185a2b849a93f4b1d1d511" version="1">Temporary Hit Points: twice the roll of 9d10.</content>
+  <content contentuid="h7636580a76c55d5face5e96b2f0cf82a" version="1">Steal Immortality</content>
+  <content contentuid="h36577912a0d956be893e1c4e782a5b71" version="1">Take the creature's type and a share of its life.</content>
+  <content contentuid="h3f4e132c4c715602b8e3d6d4759adf67" version="1">Steal Immortality</content>
+  <content contentuid="ha9c6e0c0dc6e504fb8c2836799589b69" version="1">Temporary Hit Points: twice the roll of 9d12.</content>
+  <content contentuid="h38191bfec22a595c84f96bbee6292dd7" version="1">Steal Immortality</content>
+  <content contentuid="h74d1a40878985861810fc9905d78cad3" version="1">Take the creature's type and a share of its life.</content>
+  <content contentuid="hf86e81022d0855869e8957b5b33ebb50" version="1">Steal Immortality</content>
+  <content contentuid="h1ca6c654b5c55a2caf2a14057559f9d6" version="1">As part of casting this spell, you must expend [1] Hit Point Dice or the spell automatically fails. Reaction: when a Celestial, Elemental, Fey, Fiend, or Undead creature you can see within range is reduced to 0 Hit Points, roll the Hit Point Dice expended and gain Temporary Hit Points equal to twice the roll's total. You gain that creature's type in addition to your own. While the spell lasts you have Immunity to the Poisoned condition and Resistance to Bludgeoning, Piercing and Slashing damage, and a benefit by type: Celestial: Resistance to Radiant and Necrotic, and flight. Elemental: Resistance to Acid, Cold, Fire, Lightning and Thunder. Fey: a Bonus Action to turn Invisible until your next turn, or to teleport up to 60 feet. Fiend: Resistance to Cold and Fire, and flight. Undead: Immunity to Necrotic damage and to the Charmed and Frightened conditions. You keep the type until you cast the spell again or are reduced to 0 Hit Points.</content>
+  <content contentuid="heaeaf49cdc61512eb64f852576159674" version="1">Steal Immortality (d6)</content>
+  <content contentuid="h4386fa91efb75ef791d26339ce390f17" version="1">Steal Immortality (d8)</content>
+  <content contentuid="hec28c0db44a25596a41606f6007a717d" version="1">Steal Immortality (d10)</content>
+  <content contentuid="h657180570f515bcd9f6d28abad65fc81" version="1">Steal Immortality (d12)</content>
+  <content contentuid="hd6eb7475c151514382f9b8f9b83c711b" version="1">Fey Step: Vanish</content>
+  <content contentuid="h64e733c3059d57eb93a30e1f89f7c5ed" version="1">Steal Immortality (Fey): become Invisible until the start of your next turn.</content>
+  <content contentuid="h602d307b143954ab977da24df7ef8658" version="1">Invisible</content>
+  <content contentuid="h62c48cf57a2057caabb1aae4e3605adc" version="1">Invisible until the start of your next turn.</content>
+  <content contentuid="h8796f136221f5943b3c24c05ab90bc3e" version="1">Fey Step: Teleport</content>
+  <content contentuid="h12844243d4d65554a9ba81fe04110fb3" version="1">Steal Immortality (Fey): teleport up to 18 metres (60 feet) to an unoccupied space you can see.</content>
+  <content contentuid="hf92ab90051c355cca9013f0f485c76dd" version="1">Red Renewal</content>
+  <content contentuid="h69a74eee887557e7983e07870ddf10db" version="1">When you finish a Short Rest, you regain expended Hit Point Dice equal to half your Wizard level, and as many dice from Full-Blooded. Once you use this feature, you can't do so again until you finish a Long Rest. (It happens on your first Short Rest after a Long Rest and restores Wizard Hit Point Dice.)</content>
+  <content contentuid="h07c274048574597e94905993f0e08352" version="1">Red Renewal</content>
+  <content contentuid="h860353dc55a75ca7acb1a81e7628c35d" version="1">When you finish a Short Rest, you regain expended Hit Point Dice equal to half your Wizard level, and as many dice from Full-Blooded. Once you use this feature, you can't do so again until you finish a Long Rest. (It happens on your first Short Rest after a Long Rest and restores Wizard Hit Point Dice.)</content>
+  <content contentuid="h39d3f040fc965a33be36feee0ab1735b" version="1">Red Renewal</content>
+  <content contentuid="h6e543d849d275d49bfd4216d751d66d0" version="1">When you finish a Short Rest, you regain expended Hit Point Dice equal to half your Wizard level, and as many dice from Full-Blooded. Once you use this feature, you can't do so again until you finish a Long Rest. (It happens on your first Short Rest after a Long Rest and restores Wizard Hit Point Dice.)</content>
+  <content contentuid="h842b5a9317fe5bfcb00462f56169a922" version="1">Unarmored Movement 4</content>
+  <content contentuid="h89899236797e504ca29ef0bf0943a1f7" version="1">Your Speed increases by [1] while you aren't wearing armor or wielding a Shield (25 feet at Monk level 14).</content>
+  <content contentuid="hb322d5c9c52351d98717acb6d6da6cb0" version="1">Unarmored Movement 5</content>
+  <content contentuid="h94ffdb9989dd5cd4b90e4f0688dadd67" version="1">Your Speed increases by [1] while you aren't wearing armor or wielding a Shield (30 feet at Monk level 18).</content>
+  <content contentuid="hb210e4767b9c5141b144f1b6177b0fcc" version="1">Companion at level 13</content>
+  <content contentuid="h0b8263e31572547299d3c51bc9e672ad" version="1">Hit points +[1] over the level 11 form, and your Proficiency Bonus.</content>
+  <content contentuid="hc780788f513051979757ca96bf424b3d" version="1">Companion at level 15</content>
+  <content contentuid="h60ee87c7d4055893a58d3ca2da7923bd" version="1">Hit points +[1] over the level 11 form, and your Proficiency Bonus.</content>
+  <content contentuid="hc2e619efa60c55e7bd4d3b51e5aae3b9" version="1">Companion at level 17</content>
+  <content contentuid="hefd5833bb0d55506b1d849414cfe3e6e" version="1">Hit points +[1] over the level 11 form, and your Proficiency Bonus.</content>
+  <content contentuid="h2925d13f1376505289cc84db335e3bef" version="1">Companion at level 19</content>
+  <content contentuid="h1fbd8206a0f15dccace8832fee14a13a" version="1">Hit points +[1] over the level 11 form, and your Proficiency Bonus.</content>
+  <content contentuid="h27da72a395a950f38f0d21a5197e673a" version="1">Armor, +2</content>
+  <content contentuid="h7cca66670f075526bc78adbda85c3e45" version="1">You have a +2 bonus to Armor Class while wearing armor.</content>
+  <content contentuid="h0c7b1e107c205a08bd2a5c5f847158dd" version="1">Flame Tongue</content>
+  <content contentuid="h8baeaa56175c5d489e5c3d678b1be0ac" version="1">Your weapon attacks deal an extra 2d6 Fire damage while the item lasts.</content>
+  <content contentuid="h27a23a6b355c53eeb4a2a663fc0ea9ae" version="1">Flame Tongue</content>
+  <content contentuid="h463a6fa7be455267b2f4f5eaeddc40f1" version="1">Your weapon attacks deal an extra 2d6 Fire damage while the item lasts.</content>
+  <content contentuid="h455579acbf2a5443923d5a04e58ccdb6" version="1">Arrow-Catching Shield</content>
+  <content contentuid="h7f823124ae095c7c9e06bb2ba8c7ba28" version="1">You have a +2 bonus to Armor Class while you hold a shield.</content>
+  <content contentuid="hca3bebe992c55bc9b1d5123353e1b075" version="1">Arrow-Catching Shield</content>
+  <content contentuid="h433bb54d856256c7b627104024bb39ce" version="1">You have a +2 bonus to Armor Class while you hold a shield.</content>
+  <content contentuid="h9d539d1db0925d7fb8efac6bb49a54b3" version="1">Ring of the Ram charges</content>
+  <content contentuid="hdfca4126c2345ccca9ff97ddb4f1ea97" version="1">Charges of the Ring of the Ram you made with Replicate Magic Item.</content>
+  <content contentuid="h91bc7b4d40845403965d129f726bbb61" version="1">Ring of the Ram (1 charge)</content>
+  <content contentuid="hecefd830ebd3510db835194c35880946" version="1">Spend 1 charge of the Ring of the Ram: a spectral ram's head makes a ranged attack against a creature you can see; on a hit the target takes 2d10 Force damage and is pushed 5 feet.</content>
+  <content contentuid="ha4d61f7012ac58c581f2c14e246329f1" version="1">Ring of the Ram (2 charges)</content>
+  <content contentuid="hc894138354a4577ab2105b4f26c9f923" version="1">Spend 2 charges of the Ring of the Ram: a spectral ram's head makes a ranged attack against a creature you can see; on a hit the target takes 4d10 Force damage and is pushed 10 feet.</content>
+  <content contentuid="h6d0b4da69350533395dd2c6a9aa4b542" version="1">Ring of the Ram (3 charges)</content>
+  <content contentuid="hfe971b55dbb95a1ba5abfe71251027c7" version="1">Spend 3 charges of the Ring of the Ram: a spectral ram's head makes a ranged attack against a creature you can see; on a hit the target takes 6d10 Force damage and is pushed 15 feet.</content>
+  <content contentuid="h299d6946b86f545ab0101ba83c8f9dd3" version="1">Ring of the Ram</content>
+  <content contentuid="h5d1b12cba512529d96a0b049386a4b23" version="1">Spend 1 to 3 charges of the Ring of the Ram: a spectral ram's head makes a ranged attack; on a hit the target takes 2d10 Force damage and is pushed 5 feet for each charge spent.</content>
+  <content contentuid="h81b4f834c7f158168ce67a6d5d52bddf" version="1">Ring of the Ram</content>
+  <content contentuid="h9f0be9b67ef2511589a15f5434e984fa" version="1">A ring with three charges: spend them to ram a creature with spectral force (see the spell).</content>
+  <content contentuid="h05f8b754c23e54979e7c354d3b9b9abc" version="1">Ring of the Ram</content>
+  <content contentuid="hb0831497a30b5b6fb1f099f7f7c7f2e4" version="1">A ring with three charges that fires a spectral ram's head (2d10 Force and a push per charge).</content>
+  <content contentuid="hd512f2619187503fb7e3bb1822dc3d16" version="1">Elixir of Cloud Giant Strength</content>
+  <content contentuid="h887f60e9ed085e2bb6cdfc26bafd012b" version="1">You create an Elixir of Cloud Giant Strength.</content>
+  <content contentuid="h24e076523a7f5013829beb1fc5cdf6d2" version="1">Elixir of Battlemage's Power</content>
+  <content contentuid="h1716b7e4c5bb507cae3867dd086c386f" version="1">You create an Elixir of Battlemage's Power.</content>
+  <content contentuid="hacca320c3f0950d98fa817f6f8e6de25" version="1">Elixir of Viciousness</content>
+  <content contentuid="h8c8ab0b61a63566ba518a2118cab419b" version="1">You create an Elixir of Viciousness.</content>
+  <content contentuid="hb9d7d746288d5e6697ad32b56007e117" version="1">Elixir of Guileful Movement</content>
+  <content contentuid="h26f51b79aefd5904b0147248cdf0862e" version="1">You create an Elixir of Guileful Movement.</content>
+  <content contentuid="he1984f6d0494567cbc8843e13467a8c8" version="1">Elixir of Barkskin</content>
+  <content contentuid="h975233faef5d50cda1cc71625037abca" version="1">You create an Elixir of Barkskin.</content>
+  <content contentuid="h1604842df8fd542f9e0f5be42beed653" version="1">Gore (Elephant)</content>
+  <content contentuid="h3f50a3e4518856139f93481ddac6bf1a" version="1">Gore with your horns or tusks: a melee attack for 3d8 + your Strength modifier Piercing damage.</content>
+  <content contentuid="h5899594fc0be5ecc992de4839c2601c2" version="1">Stomp (Elephant)</content>
+  <content contentuid="h0a9e68dc1a2d5ed3978663de5b4e3c16" version="1">Stomp a Prone creature: a melee attack for 3d10 + your Strength modifier Bludgeoning damage.</content>
+  <content contentuid="hbe440228839a59d58fe359781eb2cc6c" version="1">Elephant (Wild Shape)</content>
+  <content contentuid="hdc2f97838af85b19a6b8bb892f27c875" version="1">Elephant Form</content>
+  <content contentuid="h189f384ed4a35d849e103561c95a0184" version="1">You have taken the form of a elephant.</content>
+  <content contentuid="h6bf2c20b09bb5a5baecd149f32ed6e97" version="1">Elephant</content>
+  <content contentuid="h697e371430475bc9b068dff1adbe0ba7" version="1">Assume the form of a elephant (Challenge Rating 4): 76 Hit Points, AC 12, Strength 22; Gore and Stomp attacks. Circle of the Moon, Druid level 12.</content>
+  <content contentuid="h51eef184a53955ab9a46b29679fccb16" version="1">Gore (Triceratops)</content>
+  <content contentuid="h5cec221e6a15563794cbc3904033365c" version="1">Gore with your horns or tusks: a melee attack for 4d8 + your Strength modifier Piercing damage.</content>
+  <content contentuid="h686a76c4e33a562fb1606620a582307b" version="1">Stomp (Triceratops)</content>
+  <content contentuid="hacba97c8c5ef5820b63f1f310971986d" version="1">Stomp a Prone creature: a melee attack for 3d10 + your Strength modifier Bludgeoning damage.</content>
+  <content contentuid="h3afb98faec185b0f96243f8cd84fd31b" version="1">Triceratops (Wild Shape)</content>
+  <content contentuid="h880b52eeaf1e5e04bb8256f3b999cac6" version="1">Triceratops Form</content>
+  <content contentuid="hb7d8e136cb895105864b33921d879b01" version="1">You have taken the form of a triceratops.</content>
+  <content contentuid="ha5f7a1dac0cc56d29f44824c161359fe" version="1">Triceratops</content>
+  <content contentuid="h7f849bd9e1ca5eecabfd4b414dd61c0a" version="1">Assume the form of a triceratops (Challenge Rating 5): 114 Hit Points, AC 13, Strength 22; Gore and Stomp attacks. Circle of the Moon, Druid level 15.</content>
+  <content contentuid="hda773257bdc55198b85eb401bf8242b1" version="1">Gore (Mammoth)</content>
+  <content contentuid="h487e45bc755d53308edb4b2892576d2f" version="1">Gore with your horns or tusks: a melee attack for 4d8 + your Strength modifier Piercing damage.</content>
+  <content contentuid="h6dae7c0ccd5258f18b3fd292453c2fd3" version="1">Stomp (Mammoth)</content>
+  <content contentuid="h26768f34bf8f5f85b9c6c1224f4bb8e7" version="1">Stomp a Prone creature: a melee attack for 4d10 + your Strength modifier Bludgeoning damage.</content>
+  <content contentuid="hd4c11334a3a35730993fdd08afa99f1b" version="1">Mammoth (Wild Shape)</content>
+  <content contentuid="h253b3da631625a5fbb9a2551b248e530" version="1">Mammoth Form</content>
+  <content contentuid="ha5d523d822085fa18fa4d092eb7cca20" version="1">You have taken the form of a mammoth.</content>
+  <content contentuid="hd4d06fd96f075f63a7a93102b8affb48" version="1">Mammoth</content>
+  <content contentuid="hc1edcda20d54528e858015e1b262742c" version="1">Assume the form of a mammoth (Challenge Rating 6): 126 Hit Points, AC 13, Strength 24; Gore and Stomp attacks. Circle of the Moon, Druid level 18.</content>
 </contentList>

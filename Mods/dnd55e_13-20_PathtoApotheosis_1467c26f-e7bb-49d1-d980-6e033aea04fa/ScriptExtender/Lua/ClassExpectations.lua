@@ -20,52 +20,85 @@ M.class_uuids["d8cadb42-0ff9-4049-afaf-e5d78d06a399"] = "Barbarian"
 M.class_uuids["e137179a-0c6f-4608-837a-322c13403943"] = "MonsterHunter"
 M.class_uuids["e8b1eab0-ef11-40a2-8a0b-cee8d062bf2a"] = "Rogue"
 M.class_uuids["ff4d9497-023c-434a-bd14-82fc367e991c"] = "Paladin"
-M.subclass_uuids["0845c298-29fa-424b-b2be-b941345a5e90"] = "NobleGenies"
+M.subclass_uuids["07234f31-c239-4a57-aeb4-868f3e1a318e"] = "GiantPath"
+M.subclass_uuids["0845c298-29fa-424b-b2be-b941345a5e90"] = "NobleGenie"
 M.subclass_uuids["0a01dc6b-ab1a-4c0e-8a5e-4787fe1f2caf"] = "Champion"
+M.subclass_uuids["0a7ae8c2-4fd5-48d8-9e5e-6a29189f3fb1"] = "AstralDomain"
 M.subclass_uuids["0aa1cff9-c45f-4d00-a95b-99a7aa96dd06"] = "Hunter"
 M.subclass_uuids["0da91e7c-7880-4cfa-819b-82eb6f41130f"] = "DanceCollege"
 M.subclass_uuids["0e37e9bc-3909-49f4-8035-6d9736ad6867"] = "ZealotPath"
 M.subclass_uuids["11576009-15e0-4cb2-b0ce-77dab572f106"] = "SanguineKnight"
-M.subclass_uuids["14374d37-a70e-41a8-9dc5-85a23f8b5dd2"] = "WildMagicPath"
+M.subclass_uuids["1434b384-f51c-4f78-ad7f-db0f13f5a3ee"] = "Fractured"
+M.subclass_uuids["14374d37-a70e-41a8-9dc5-85a23f8b5dd2"] = "WildMagic"
+M.subclass_uuids["16085a26-2e7b-4ee0-a3dd-2fdb678e238d"] = "Conquest"
+M.subclass_uuids["1afe7574-c6e2-4f11-83e0-146e81685efb"] = "Sangromancer"
+M.subclass_uuids["1be5aa5a-e221-4f0e-a1bf-be25f5d23224"] = "ArcaneArcher"
 M.subclass_uuids["1c761ad0-6f5f-409e-ac1d-ddf6f85c1fc4"] = "Devotion"
 M.subclass_uuids["1d23232f-cafb-4162-ac2a-a926fd6f734f"] = "PsiWarrior"
 M.subclass_uuids["1e077f6b-1034-43ab-b54c-5718d78e9437"] = "Celestial"
 M.subclass_uuids["22894c32-54cf-49ea-b366-44bfcf01bb2a"] = "FourElements"
+M.subclass_uuids["25ffd448-e661-4994-a354-1bb1d79bbb65"] = "CircleOfTheUnbroken"
+M.subclass_uuids["29dc22b5-5e22-46d8-99f9-02e348f0b0b2"] = "Swarmkeeper"
 M.subclass_uuids["2a5e3097-384c-4d29-8d6e-054fdfd26b80"] = "OpenHand"
 M.subclass_uuids["2b46330d-0ada-4eb5-a131-3d250a41ca6a"] = "ValorCollege"
+M.subclass_uuids["2db79008-fad4-4e31-bda3-8d5d34ccda3f"] = "CircleOfDragons"
 M.subclass_uuids["2e13292f-2fe2-4807-adae-d72bf04f020d"] = "OccultistGuild"
 M.subclass_uuids["2e585948-d775-451d-b58b-15b75321d11e"] = "TotemWarriorPath"
+M.subclass_uuids["2f1f3761-64fd-42b7-a5e1-f1c381f6be1a"] = "SpiritsCollege"
 M.subclass_uuids["32c7b8df-a6ec-4848-a9db-c0dce781beb9"] = "Thief"
 M.subclass_uuids["32eee7d8-1b2f-4de5-b9ee-78fbd286c6ef"] = "BerserkerPath"
 M.subclass_uuids["338cd823-6cec-434c-91ea-083ad535833f"] = "MoonCollege"
+M.subclass_uuids["3619c8a4-333d-4d22-a836-a9a8adea92f3"] = "CircleOfDreams"
 M.subclass_uuids["36286b0a-26f9-4b4e-9311-fd1404301d20"] = "DraconicBloodline"
 M.subclass_uuids["3cc3d397-c47d-4966-87ae-88827f73f645"] = "Vengeance"
 M.subclass_uuids["3d9e9113-46c7-4c81-bb20-93ad097588bc"] = "RuneKnight"
 M.subclass_uuids["3eab0689-e51b-4634-a690-0375d3cb2716"] = "CircleOfTheMoon"
 M.subclass_uuids["3f014425-480c-49d8-9b9d-2303543c0d11"] = "HighRoller"
 M.subclass_uuids["42622d71-74af-409a-b821-85f270245fe2"] = "SpellfireSorcery"
+M.subclass_uuids["42e7625d-114d-4bb3-9af1-663295711a01"] = "HollowWarden"
 M.subclass_uuids["436c9e1a-3a39-48dd-b753-7cee1bd19c00"] = "IllusionSchool"
 M.subclass_uuids["46d31950-6917-444e-ac87-706702825215"] = "EnchantmentSchool"
+M.subclass_uuids["47bb5544-fcd6-4187-81b8-6616ce07b028"] = "ForgeDomain"
 M.subclass_uuids["499d1db7-129f-4416-b762-43675c43d0c9"] = "Painkiller"
 M.subclass_uuids["4b5da2f5-b999-4623-8bff-a63df5560fb3"] = "LifeDomain"
+M.subclass_uuids["4b61af6c-4a44-436e-aa0a-0d11a2d6b8ee"] = "CircleOfTheSpores"
 M.subclass_uuids["4d73bb8e-5405-4586-9947-0cda0e2f424b"] = "CircleOfTheSea"
+M.subclass_uuids["4d7bc9f4-526f-4902-b9a2-b31577203d02"] = "ApocalypseDomain"
 M.subclass_uuids["5764faec-f81c-4708-a652-15b3459715e8"] = "Soulknife"
+M.subclass_uuids["58e63bc1-b176-412f-8b30-3cea9a647dbb"] = "Cavalier"
+M.subclass_uuids["6253e633-263b-48de-8b8c-b4334bcd6f4f"] = "Watchers"
+M.subclass_uuids["638b865a-87ba-485d-aa75-f8b219934c45"] = "ChoreographyCollege"
+M.subclass_uuids["6a75d401-8aba-40d3-83aa-ae3bb1855448"] = "TwilightDomain"
+M.subclass_uuids["6dec76d0-df22-411c-8a78-3d6fb843ae50"] = "NatureDomain"
+M.subclass_uuids["6fb3831e-45d8-4b30-9714-6fe73988921b"] = "Oathbreaker"
 M.subclass_uuids["6fd9547d-cc28-400e-bfa9-3a85baa70f24"] = "BeastMaster"
+M.subclass_uuids["71637280-b294-4c33-9328-b0b77c74d662"] = "Kensei"
+M.subclass_uuids["722826c2-5d11-4e17-9b21-b74e9dfca4d6"] = "HeroicSorcery"
 M.subclass_uuids["733ddf8c-9ec4-4c5a-85e3-c70fd3df3c24"] = "Archfey"
 M.subclass_uuids["7458da78-34b7-4150-a42f-37197ab04510"] = "CircleOfTheLand"
 M.subclass_uuids["7577b0e1-a517-4f82-8f72-05a227dc5e88"] = "DivinationSchool"
 M.subclass_uuids["7a3feb8d-dda7-46ec-9029-1f302f537432"] = "ConjurationSchool"
+M.subclass_uuids["7fb5b4be-5fb3-4a1e-af7a-458598e57940"] = "DragonDomain"
 M.subclass_uuids["8047cf29-2c79-4f12-a4bf-d965a023be63"] = "BladesingingSchool"
+M.subclass_uuids["8287c130-a3aa-4c88-bceb-be9d8fe1be84"] = "ShadowGnawer"
 M.subclass_uuids["8866db28-7dda-4fd6-93ed-20eca16314f0"] = "Fiend"
 M.subclass_uuids["886e988c-1d77-43ad-a0a9-f1e48c56d29b"] = "ClockworkSorcery"
+M.subclass_uuids["89bacf1b-8f15-4972-ada7-bf59c7c78441"] = "TempestDomain"
+M.subclass_uuids["8fb57960-eb92-48f5-b99d-ab36519e4d4f"] = "Hexblade"
+M.subclass_uuids["926bed98-903f-45db-8df1-b8a57742c622"] = "ShadowDomain"
+M.subclass_uuids["94def2b4-eabb-4da2-baae-6dc366e87d82"] = "BladeOfRadiance"
 M.subclass_uuids["9b1afbf5-2133-4042-b39e-dfbade27a60b"] = "Artillerist"
 M.subclass_uuids["9d4ed957-c140-4955-89a6-56b8cb5313ee"] = "Shadowmaster"
 M.subclass_uuids["a06241d2-c432-472c-8c7d-84228d530cfa"] = "GlamourCollege"
 M.subclass_uuids["a12f2924-30b4-4185-9db9-2c5b383ff449"] = "TransmutationSchool"
+M.subclass_uuids["a613dda3-a107-4222-8f00-5f2b54f60b0f"] = "DivineSoul"
+M.subclass_uuids["a8000751-dadf-4c82-8273-ff5b00e28cdc"] = "ArachnoidStalker"
 M.subclass_uuids["aa644f08-d368-40d3-802a-b3bce31cd4e8"] = "GraveDomain"
 M.subclass_uuids["ab2f7820-cb6b-49e4-804a-820d25291a16"] = "Alchemist"
 M.subclass_uuids["acb94255-2c1e-4472-a707-4b58d183428f"] = "Mercy"
 M.subclass_uuids["b36d247e-d39f-4ae9-9476-3ec315c55789"] = "Ancients"
+M.subclass_uuids["b400e0f2-7824-4c8c-aebb-6124500e6988"] = "Viking"
+M.subclass_uuids["b443a7fa-b36a-4cbc-9e4b-f3167de34d1b"] = "ShadowMagic"
 M.subclass_uuids["b53a8061-f31d-4985-adfe-d4d691a918d9"] = "Assassin"
 M.subclass_uuids["b722614a-303f-411a-bb19-a1882ad1f4cc"] = "EldritchKnight"
 M.subclass_uuids["b81df0a8-5ecb-43b5-abd9-39b9a244561c"] = "Glory"
@@ -74,19 +107,29 @@ M.subclass_uuids["b9ccf90e-b35b-4b73-b896-8ed2d32ae8c6"] = "WarDomain"
 M.subclass_uuids["ba0844e2-726c-4e39-b6f7-c46733df19c4"] = "ArchitectOfRuin"
 M.subclass_uuids["bebbfa54-1ad1-4459-b11b-8755e8633c5a"] = "DevourerGuild"
 M.subclass_uuids["bf46d73f-d406-4cb8-9a1d-e6e758ca02c7"] = "Shadow"
+M.subclass_uuids["bfad935f-cefd-4e18-bb9c-e052fcb0229e"] = "MindDomain"
 M.subclass_uuids["c059dca1-c17d-4dce-8260-83ede5070eac"] = "EvocationSchool"
 M.subclass_uuids["c2f64e7b-124f-4b2d-9dcb-bbeeef2d747e"] = "FeyWanderer"
 M.subclass_uuids["c4bd5252-d68a-4330-9431-5e8ab24c5f29"] = "SwordsCollege"
 M.subclass_uuids["c54d7591-b305-4f22-b2a7-1bf5c4a3470a"] = "LightDomain"
 M.subclass_uuids["d21368ac-c776-465c-9dcf-6123dd52734f"] = "LoreCollege"
 M.subclass_uuids["d215aa58-a49c-4e43-ad94-ccabe49dcdaa"] = "WhiteHat"
+M.subclass_uuids["d379fdae-b401-4731-8d50-277c73919ae3"] = "StormSorcery"
+M.subclass_uuids["d45d0e7a-e5f9-4b43-865d-fb51aec2d32b"] = "FrostSorcery"
+M.subclass_uuids["d5cd71d8-c615-43e3-8716-d33e8c992ec1"] = "SunSoul"
 M.subclass_uuids["d5f10e55-84e3-409b-aa64-2098c9550319"] = "GloomStalker"
+M.subclass_uuids["d6bf00fc-3518-4d63-ba8b-03532c1abc4d"] = "WildMagicPath"
 M.subclass_uuids["d6db66be-cc60-4ebd-bf63-2a856bbfedaf"] = "WorldTreePath"
 M.subclass_uuids["d84e3f76-0e56-4344-9454-ba167a286bdb"] = "CarverGuild"
+M.subclass_uuids["d8d9e1e3-cbd6-4240-ab1e-bd3626cb5532"] = "DrunkenMaster"
 M.subclass_uuids["d9c984db-15cb-4308-88be-fb88cf3e8c32"] = "Armorer"
+M.subclass_uuids["e0613554-075a-48ac-8c74-a051d57d4a39"] = "HighwayRider"
+M.subclass_uuids["e0e6a5e2-b147-4088-9a81-6364f3ebe25c"] = "UndeadPatron"
 M.subclass_uuids["e1e4a21f-9405-46ec-81a0-ccc8d58d9736"] = "GreatOldOne"
+M.subclass_uuids["e4ff8e22-91fb-45bc-98a6-30eff8ca794d"] = "MysticArts"
 M.subclass_uuids["e668c6f1-5149-4b10-ab7e-3637ed444066"] = "BattleMaster"
 M.subclass_uuids["e6a0eb75-7a01-4f40-8563-24ba2615e99b"] = "AbjurationSchool"
+M.subclass_uuids["eaad98ec-026b-429e-aa24-8274dfd1ecb7"] = "Crown"
 M.subclass_uuids["ebe18794-b5e1-41c4-befa-4b9d6922b0ec"] = "KnowledgeDomain"
 M.subclass_uuids["ede4778e-7602-440f-9075-b4bc8dc31cea"] = "ArcaneTrickster"
 M.subclass_uuids["ee5a89b5-21c6-419e-8b30-aecf929bd7d7"] = "AberrantSorcery"
@@ -96,6 +139,7 @@ M.subclass_uuids["f507f7bc-3d1a-4034-9590-ddef5a05d5b3"] = "PurpleDragonKnight"
 M.subclass_uuids["f574d2d6-cfc2-4cda-8771-1917f1eabaf1"] = "BattleSmith"
 M.subclass_uuids["f576dd16-d230-4233-bf3e-1d5ed0106b0c"] = "Hellspeaker"
 M.subclass_uuids["f617ec08-b29d-4ac0-a742-3fd6c25c4520"] = "Spellslinger"
+M.subclass_uuids["f87d7b0e-bc56-4f22-b347-9ef63bfa5220"] = "Swashbuckler"
 M.subclass_uuids["fbb8347b-20e3-4846-ba91-0552cd12fc5f"] = "NecromancySchool"
 M.subclass_uuids["fbf9d94c-9175-4145-9bd9-645dec6d4f1d"] = "WinterWalker"
 M.subclass_uuids["fe416267-36f0-4346-90fc-4aeb7f25ec07"] = "CircleOfStars"
@@ -109,6 +153,7 @@ M.classes["Artificer"] = {
         },
         [14] = {
             passives  = { "Artificer_14_AdvancedArtifice" },
+            selectors = "SelectSpells(d5f17616-b3cf-47ff-b898-3e37c3961034,1,0,,,,AlwaysPrepared)",
         },
         [15] = {
             passives  = {},
@@ -142,8 +187,7 @@ M.classes["Barbarian"] = {
             boosts    = "ActionResource(Rage,1,0)",
         },
         [13] = {
-            passives  = { "Barbarian_BrutalStrike_Improved" },
-            boosts    = "ActionResource(RageCharge,1,0)",
+            passives  = { "Barbarian_BrutalStrike_Improved", "Apo_HitPointDice_Barbarian" },
         },
         [14] = {
             passives  = {},
@@ -153,18 +197,16 @@ M.classes["Barbarian"] = {
         },
         [16] = {
             passives  = {},
-            boosts    = "ActionResource(RageCharge,1,0)",
         },
         [17] = {
             passives  = { "Barbarian_BrutalStrike_17" },
+            boosts    = "ActionResource(Rage,1,0)",
         },
         [18] = {
             passives  = { "Barbarian_IndomitableMight" },
-            boosts    = "ActionResource(RageCharge,1,0)",
         },
         [19] = {
             passives  = {},
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = { "Barbarian_PrimalChampion" },
@@ -175,40 +217,42 @@ M.classes["Barbarian"] = {
 M.classes["Bard"] = {
     levels = {
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7" },
+            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Bard" },
             boosts    = "ActionResource(SpellSlot,1,7)",
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets);SelectSpells(00170001-0001-0001-0001-000000000005,1,1,BardSpells)",
+            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
         [14] = {
             passives  = {},
+            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,0,1,BardMagicalSecrets)",
         },
         [15] = {
             passives  = { "UnlockedSpellSlotLevel8" },
             boosts    = "ActionResource(SpellSlot,1,8)",
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets);SelectSpells(00180001-0001-0001-0001-000000000005,1,1,BardSpells)",
+            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
         [16] = {
             passives  = {},
+            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,0,1,BardMagicalSecrets)",
         },
         [17] = {
             passives  = { "UnlockedSpellSlotLevel9" },
             boosts    = "ActionResource(SpellSlot,1,9)",
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets);SelectSpells(00190001-0001-0001-0001-000000000005,1,1,BardSpells)",
+            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
         [18] = {
             passives  = { "Bard_SuperiorInspiration" },
             boosts    = "ActionResource(SpellSlot,1,5);ActionResource(BardicInspiration,1,0)",
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets);SelectSpells(00190001-0001-0001-0001-000000000005,1,1,BardSpells)",
+            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
         [19] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,6)",
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets);SelectSpells(00190001-0001-0001-0001-000000000005,1,1,BardSpells);SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
+            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
         [20] = {
             passives  = { "Bard_WordsOfCreation" },
             boosts    = "ActionResource(SpellSlot,1,7)",
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets);SelectSpells(00190001-0001-0001-0001-000000000005,1,1,BardSpells)",
+            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
     },
 }
@@ -219,7 +263,7 @@ M.classes["Cleric"] = {
             passives  = {},
         },
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7" },
+            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Cleric" },
             boosts    = "ActionResource(SpellSlot,1,7)",
             selectors = "AddSpells(00170001-0001-0001-0001-000000000003)",
         },
@@ -246,7 +290,6 @@ M.classes["Cleric"] = {
         [19] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,6)",
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = { "Cleric_GreaterDivineIntervention" },
@@ -258,7 +301,7 @@ M.classes["Cleric"] = {
 M.classes["Druid"] = {
     levels = {
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7" },
+            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Druid" },
             boosts    = "ActionResource(SpellSlot,1,7)",
             selectors = "AddSpells(00170001-0001-0001-0001-000000000004)",
         },
@@ -275,7 +318,7 @@ M.classes["Druid"] = {
         },
         [17] = {
             passives  = { "UnlockedSpellSlotLevel9" },
-            boosts    = "ActionResource(SpellSlot,1,9)",
+            boosts    = "ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0)",
             selectors = "AddSpells(00190001-0001-0001-0001-000000000004)",
         },
         [18] = {
@@ -285,11 +328,10 @@ M.classes["Druid"] = {
         [19] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,6)",
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = { "Druid_Archdruid" },
-            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(WildShape,100,0)",
+            boosts    = "ActionResource(SpellSlot,1,7)",
         },
     },
 }
@@ -297,8 +339,8 @@ M.classes["Druid"] = {
 M.classes["Fighter"] = {
     levels = {
         [13] = {
-            passives  = { "Fighter_StudiedAttacks" },
-            boosts    = "ActionResource(Indomitable_Charge,1,0)",
+            passives  = { "Fighter_StudiedAttacks", "Apo_HitPointDice_Fighter" },
+            boosts    = "ActionResource(Interrupt_Indomitable,1,0)",
         },
         [14] = {
             passives  = {},
@@ -310,15 +352,14 @@ M.classes["Fighter"] = {
             passives  = {},
         },
         [17] = {
-            passives  = {},
-            boosts    = "ActionResource(ActionSurge,1,0);ActionResource(Indomitable_Charge,1,0)",
+            passives  = { "Fighter_17_ActionSurgeTwice" },
+            boosts    = "ActionResource(Interrupt_Indomitable,1,0)",
         },
         [18] = {
             passives  = {},
         },
         [19] = {
             passives  = {},
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = { "ExtraAttack_3" },
@@ -346,11 +387,6 @@ M.classes["Gunslinger"] = {
         },
         [18] = {
             passives  = { "Gunslinger_18_DeftManeuver" },
-        },
-        [19] = {
-            passives  = {},
-            boosts    = "ActionResource(HitPointDice08,1,0);",
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = { "Gunslinger_20_Headshot" },
@@ -394,7 +430,7 @@ M.classes["Illrigger"] = {
 M.classes["Monk"] = {
     levels = {
         [13] = {
-            passives  = { "Monk_DeflectEnergy" },
+            passives  = { "Monk_DeflectEnergy", "Apo_HitPointDice_Monk" },
             boosts    = "ActionResource(KiPoint,1,0)",
         },
         [14] = {
@@ -420,7 +456,6 @@ M.classes["Monk"] = {
         [19] = {
             passives  = {},
             boosts    = "ActionResource(KiPoint,1,0)",
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = { "Monk_BodyAndMind" },
@@ -461,7 +496,7 @@ M.classes["MonsterHunter"] = {
 M.classes["Paladin"] = {
     levels = {
         [13] = {
-            passives  = {},
+            passives  = { "Apo_HitPointDice_Paladin" },
             boosts    = "ActionResource(SpellSlot,1,4)",
             selectors = "AddSpells(b88aff43-b75a-5947-b283-3c6ca5bf2591)",
         },
@@ -486,7 +521,6 @@ M.classes["Paladin"] = {
         [19] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,5)",
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = {},
@@ -497,7 +531,7 @@ M.classes["Paladin"] = {
 M.classes["Ranger"] = {
     levels = {
         [13] = {
-            passives  = { "Ranger_RelentlessHunter" },
+            passives  = { "Ranger_RelentlessHunter", "Apo_HitPointDice_Ranger" },
             boosts    = "ActionResource(SpellSlot,1,4)",
             selectors = "AddSpells(6e77d7ac-4b79-5691-bde3-357017ad4cdc)",
         },
@@ -522,7 +556,6 @@ M.classes["Ranger"] = {
         [19] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,5)",
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = { "Ranger_FoeSlayer" },
@@ -533,10 +566,10 @@ M.classes["Ranger"] = {
 M.classes["Rogue"] = {
     levels = {
         [13] = {
-            passives  = {},
+            passives  = { "Apo_HitPointDice_Rogue" },
         },
         [14] = {
-            passives  = {},
+            passives  = { "Rogue_14_DeviousStrikes", "CunningStrike_Daze", "CunningStrike_KnockOut", "CunningStrike_Obscure" },
         },
         [15] = {
             passives  = { "Rogue_SlipperyMind" },
@@ -552,7 +585,6 @@ M.classes["Rogue"] = {
         },
         [19] = {
             passives  = {},
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
         },
         [20] = {
             passives  = { "Rogue_StrokeOfLuck" },
@@ -563,41 +595,44 @@ M.classes["Rogue"] = {
 M.classes["Sorcerer"] = {
     levels = {
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7" },
+            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Sorcerer" },
             boosts    = "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0)",
-            selectors = "SelectSpells(00170001-0001-0001-0001-000000000002,1,0,SorcererSpell)",
+            selectors = "SelectSpells(00170002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
         [14] = {
             passives  = {},
             boosts    = "ActionResource(SorceryPoint,1,0)",
-            selectors = "SelectSpells(00170001-0001-0001-0001-000000000002,1,0,SorcererSpell)",
+            selectors = "SelectSpells(00170002-0001-0001-0001-000000000002,0,1,SorcererSpell)",
         },
         [15] = {
             passives  = { "UnlockedSpellSlotLevel8" },
             boosts    = "ActionResource(SpellSlot,1,8);ActionResource(SorceryPoint,1,0)",
-            selectors = "SelectSpells(00180001-0001-0001-0001-000000000002,1,0,SorcererSpell)",
+            selectors = "SelectSpells(00180002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
         [16] = {
             passives  = {},
             boosts    = "ActionResource(SorceryPoint,1,0)",
+            selectors = "SelectSpells(00180002-0001-0001-0001-000000000002,0,1,SorcererSpell)",
         },
         [17] = {
             passives  = { "UnlockedSpellSlotLevel9" },
             boosts    = "ActionResource(SpellSlot,1,9);ActionResource(SorceryPoint,1,0)",
-            selectors = "SelectSpells(00190001-0001-0001-0001-000000000002,1,0,SorcererSpell);SelectPassives(c3506532-36eb-4d18-823e-497a537a9619,1,Metamagic)",
+            selectors = "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell);SelectPassives(c3506532-36eb-4d18-823e-497a537a9619,1,Metamagic)",
         },
         [18] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,5);ActionResource(SorceryPoint,1,0)",
+            selectors = "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
         [19] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,6);ActionResource(SorceryPoint,1,0)",
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
+            selectors = "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
         [20] = {
             passives  = { "Sorcerer_ArcaneApotheosis" },
             boosts    = "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0)",
+            selectors = "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
     },
 }
@@ -605,33 +640,37 @@ M.classes["Sorcerer"] = {
 M.classes["Warlock"] = {
     levels = {
         [13] = {
-            passives  = { "Warlock_MysticArcanum_7" },
-            selectors = "SelectSpells(00170001-0001-0001-0001-000000000007,1,0,MysticArcanum7)",
+            passives  = { "Warlock_MysticArcanum_7", "Apo_HitPointDice_Warlock" },
+            selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00170001-0001-0001-0001-000000000007,1,0,MysticArcanum7,,None,AlwaysPrepared,UntilRest)",
         },
         [14] = {
             passives  = {},
+            selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,0,1)",
         },
         [15] = {
             passives  = { "Warlock_MysticArcanum_8" },
-            selectors = "SelectSpells(00180001-0001-0001-0001-000000000007,1,0,MysticArcanum8);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)",
+            selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00180001-0001-0001-0001-000000000007,1,0,MysticArcanum8,,None,AlwaysPrepared,UntilRest);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)",
         },
         [16] = {
             passives  = {},
+            selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,0,1)",
         },
         [17] = {
             passives  = { "Warlock_MysticArcanum_9" },
-            selectors = "SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9)",
+            boosts    = "ActionResource(WarlockSpellSlot,1,5)",
+            selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)",
         },
         [18] = {
             passives  = {},
-            selectors = "SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)",
+            selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,0,1);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)",
         },
         [19] = {
             passives  = {},
-            selectors = "SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
+            selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,1,1)",
         },
         [20] = {
             passives  = { "Warlock_EldritchMaster" },
+            selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,0,1)",
         },
     },
 }
@@ -639,7 +678,7 @@ M.classes["Warlock"] = {
 M.classes["Wizard"] = {
     levels = {
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7" },
+            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Wizard" },
             boosts    = "ActionResource(SpellSlot,1,7)",
             selectors = "SelectSpells(aa384b4e-36b4-5b2d-93b3-c1063ba2ffb2,2,0,WizardSpellList)",
         },
@@ -669,7 +708,7 @@ M.classes["Wizard"] = {
         [19] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,6)",
-            selectors = "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList);SelectPassives(23b18ae7-dc54-5b4f-8939-a9af322e3cef,1,EpicBoon);SelectPassives(4ef62eb1-4735-5e99-8568-dc013af9df15,1,EpicBoonAbility)",
+            selectors = "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList)",
         },
         [20] = {
             passives  = { "Wizard_SignatureSpells" },
@@ -727,8 +766,16 @@ M.subclasses["AbjurationSchool"] = {
 M.subclasses["Alchemist"] = {
     parent = "Artificer",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(199a69c9-d47b-5f26-9928-3b591528e91b,,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "Alchemist_15_ChemicalMastery" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(a00accdb-f7e8-58ed-a087-bb0ee0fb6e62,,,,AlwaysPrepared)",
         },
     },
 }
@@ -736,11 +783,45 @@ M.subclasses["Alchemist"] = {
 M.subclasses["Ancients"] = {
     parent = "Paladin",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(9da7e6d4-b7c1-5d9f-8aa2-7946195f8b35,OathSpells,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "Ancients_15_UndyingSentinel" },
         },
         [20] = {
             passives  = { "Ancients_20_ElderChampion" },
+        },
+    },
+}
+
+M.subclasses["ApocalypseDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "Apocalypse_17_LifeBeyondDeath" },
+        },
+    },
+}
+
+M.subclasses["ArachnoidStalker"] = {
+    parent = "Rogue",
+    levels = {
+        [13] = {
+            passives  = { "ArachnoidStalker_13_WebWalker" },
+        },
+    },
+}
+
+M.subclasses["ArcaneArcher"] = {
+    parent = "Fighter",
+    levels = {
+        [15] = {
+            passives  = { "ArcaneArcher_15_EverReadyShot" },
+        },
+        [18] = {
+            passives  = { "ArcaneArcher_18_ImprovedShots" },
         },
     },
 }
@@ -753,9 +834,38 @@ M.subclasses["ArcaneTrickster"] = {
         },
         [13] = {
             passives  = { "ArcaneTrickster_VersatileTrickster" },
+            boosts    = "ActionResource(SpellSlot,2,3)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,ArcaneTricksterIlluEnch)",
+        },
+        [14] = {
+            passives  = {},
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,ArcaneTricksterIlluEnch)",
+        },
+        [15] = {
+            passives  = {},
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,0,1,ArcaneTricksterIlluEnch)",
+        },
+        [16] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,3)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,ArcaneTricksterIlluEnch)",
         },
         [17] = {
             passives  = { "ArcaneTrickster_11_SpellThief" },
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,0,1,ArcaneTricksterIlluEnch)",
+        },
+        [18] = {
+            passives  = {},
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,0,1,ArcaneTricksterIlluEnch)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,4)",
+            selectors = "SelectSpells(820b1220-0385-426d-ae15-458dc8a6f5c0,1,1,ArcaneTricksterIlluEnch)",
+        },
+        [20] = {
+            passives  = {},
+            selectors = "SelectSpells(820b1220-0385-426d-ae15-458dc8a6f5c0,1,1,ArcaneTricksterIlluEnch)",
         },
     },
 }
@@ -807,6 +917,10 @@ M.subclasses["ArchitectOfRuin"] = {
 M.subclasses["Armorer"] = {
     parent = "Artificer",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(82b8c79a-44a6-574c-978a-6f98789944ab,,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "Armorer_15_PerfectedArmor" },
         },
@@ -816,8 +930,16 @@ M.subclasses["Armorer"] = {
 M.subclasses["Artillerist"] = {
     parent = "Artificer",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(a414429c-8563-53bd-a220-b224bccbd0d4,,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "Artillerist_15_FortifiedPosition" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(ea7836ef-eab1-5810-88e5-fff913de111c,,,,AlwaysPrepared)",
         },
     },
 }
@@ -833,6 +955,15 @@ M.subclasses["Assassin"] = {
         },
         [17] = {
             passives  = { "Assassin_11_DeathStrike" },
+        },
+    },
+}
+
+M.subclasses["AstralDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "Astral_17_SupremeSwitching" },
         },
     },
 }
@@ -854,8 +985,16 @@ M.subclasses["BattleMaster"] = {
 M.subclasses["BattleSmith"] = {
     parent = "Artificer",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(a344863b-bdf0-5ce7-938f-3e3192dddf80,,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "BattleSmith_15_ImprovedDefender" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(b424c74c-bba6-598a-b16c-fcc63c3e18d2,,,,AlwaysPrepared)",
         },
     },
 }
@@ -874,6 +1013,19 @@ M.subclasses["BerserkerPath"] = {
     levels = {
         [14] = {
             passives  = { "Berserker_14_IntimidatingPresence" },
+        },
+    },
+}
+
+M.subclasses["BladeOfRadiance"] = {
+    parent = "Rogue",
+    levels = {
+        [13] = {
+            passives  = { "BladeOfRadiance_13_SaintlyRevelations" },
+            selectors = "SelectSpells(2f43a103-5bf1-4534-b14f-663decc0c525,2,0,SaintlyRevelationsCantrips)",
+        },
+        [17] = {
+            passives  = { "BladeOfRadiance_17_FinalJudgement" },
         },
     },
 }
@@ -923,6 +1075,18 @@ M.subclasses["CarverGuild"] = {
     },
 }
 
+M.subclasses["Cavalier"] = {
+    parent = "Fighter",
+    levels = {
+        [15] = {
+            passives  = { "Cavalier_15_FerociousCharger" },
+        },
+        [18] = {
+            passives  = { "Cavalier_18_VigilantDefender" },
+        },
+    },
+}
+
 M.subclasses["Celestial"] = {
     parent = "Warlock",
     levels = {
@@ -943,6 +1107,33 @@ M.subclasses["Champion"] = {
         },
         [18] = {
             passives  = { "Champion_Survivor" },
+        },
+    },
+}
+
+M.subclasses["ChoreographyCollege"] = {
+    parent = "Bard",
+    levels = {
+        [14] = {
+            passives  = { "Choreography_14_FastMovement", "Choreography_14_EntrancingMovement", "Choreography_14_EndlessDance" },
+        },
+    },
+}
+
+M.subclasses["CircleOfDragons"] = {
+    parent = "Druid",
+    levels = {
+        [14] = {
+            passives  = { "Dragons_14_HeartOfADragon" },
+        },
+    },
+}
+
+M.subclasses["CircleOfDreams"] = {
+    parent = "Druid",
+    levels = {
+        [14] = {
+            passives  = { "Dreams_14_WalkerInDreams" },
         },
     },
 }
@@ -979,6 +1170,24 @@ M.subclasses["CircleOfTheSea"] = {
     levels = {
         [14] = {
             passives  = { "CircleOfTheSea_14_OceanicGift" },
+        },
+    },
+}
+
+M.subclasses["CircleOfTheSpores"] = {
+    parent = "Druid",
+    levels = {
+        [14] = {
+            passives  = { "Spores_14_FungalBody" },
+        },
+    },
+}
+
+M.subclasses["CircleOfTheUnbroken"] = {
+    parent = "Druid",
+    levels = {
+        [14] = {
+            passives  = { "Unbroken_14_NatureArmor" },
         },
     },
 }
@@ -1031,6 +1240,46 @@ M.subclasses["ConjurationSchool"] = {
     },
 }
 
+M.subclasses["Conquest"] = {
+    parent = "Paladin",
+    levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(fc28acb9-5ef8-5b0f-aa2f-a83091feea86,OathSpells,,,AlwaysPrepared)",
+        },
+        [15] = {
+            passives  = { "Conquest_15_ScornfulRebuke" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(9c3dd579-5eb8-5c28-a48d-1448b276d7ff,OathSpells,,,AlwaysPrepared)",
+        },
+        [20] = {
+            passives  = { "Conquest_20_InvincibleConqueror" },
+        },
+    },
+}
+
+M.subclasses["Crown"] = {
+    parent = "Paladin",
+    levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(debad68e-062a-57ae-96cd-8c29fb701110,OathSpells,,,AlwaysPrepared)",
+        },
+        [15] = {
+            passives  = { "Crown_15_UnyieldingSpirit" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(dc71ea44-fdaa-5fea-9079-06aafd8757f6,OathSpells,,,AlwaysPrepared)",
+        },
+        [20] = {
+            passives  = { "Crown_20_ExaltedChampion" },
+        },
+    },
+}
+
 M.subclasses["DanceCollege"] = {
     parent = "Bard",
     levels = {
@@ -1055,8 +1304,16 @@ M.subclasses["DeathDomain"] = {
 M.subclasses["Devotion"] = {
     parent = "Paladin",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(981695e7-407e-5244-9361-a714ed28f20d,OathSpells,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "Devotion_15_SmiteOfProtection" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(fb27c72c-71e9-52e4-89b4-0a2d5c97d5b8,OathSpells,,,AlwaysPrepared)",
         },
         [20] = {
             passives  = { "Devotion_20_HolyNimbus" },
@@ -1108,6 +1365,18 @@ M.subclasses["DivinationSchool"] = {
     },
 }
 
+M.subclasses["DivineSoul"] = {
+    parent = "Sorcerer",
+    levels = {
+        [14] = {
+            passives  = { "DivineSoul_14_OtherworldlyWings" },
+        },
+        [18] = {
+            passives  = { "DivineSoul_18_UnearthlyRecovery" },
+        },
+    },
+}
+
 M.subclasses["DraconicBloodline"] = {
     parent = "Sorcerer",
     levels = {
@@ -1121,17 +1390,64 @@ M.subclasses["DraconicBloodline"] = {
     },
 }
 
+M.subclasses["DragonDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "DragonDomain_17_LegendaryAspect" },
+        },
+    },
+}
+
+M.subclasses["DrunkenMaster"] = {
+    parent = "Monk",
+    levels = {
+        [17] = {
+            passives  = { "DrunkenMaster_17_IntoxicatedFrenzy" },
+        },
+    },
+}
+
 M.subclasses["EldritchKnight"] = {
     parent = "Fighter",
     levels = {
         [12] = {
             passives  = {},
         },
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,2,3)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,EldritchKnightAbjEvo)",
+        },
+        [14] = {
+            passives  = {},
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,EldritchKnightAbjEvo)",
+        },
         [15] = {
             passives  = { "ArcaneCharge" },
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,0,1,EldritchKnightAbjEvo)",
+        },
+        [16] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,3)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,EldritchKnightAbjEvo)",
+        },
+        [17] = {
+            passives  = {},
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,0,1,EldritchKnightAbjEvo)",
         },
         [18] = {
             passives  = { "EldritchKnight_ImprovedWarMagic" },
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,0,1,EldritchKnightAbjEvo)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,4)",
+            selectors = "SelectSpells(820b1220-0385-426d-ae15-458dc8a6f5c0,1,1,EldritchKnightAbjEvo)",
+        },
+        [20] = {
+            passives  = {},
+            selectors = "SelectSpells(820b1220-0385-426d-ae15-458dc8a6f5c0,1,1,EldritchKnightAbjEvo)",
         },
     },
 }
@@ -1204,6 +1520,10 @@ M.subclasses["EvocationSchool"] = {
 M.subclasses["FeyWanderer"] = {
     parent = "Ranger",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(88be3019-168b-5e48-8904-3270771c1da1,,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "FeyWanderer_15_MistyWanderer" },
         },
@@ -1220,11 +1540,50 @@ M.subclasses["Fiend"] = {
     },
 }
 
+M.subclasses["ForgeDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "ForgeDomain_17_SaintOfForgeAndFire" },
+        },
+    },
+}
+
 M.subclasses["FourElements"] = {
     parent = "Monk",
     levels = {
         [17] = {
             passives  = { "FourElements_17_ElementalEpitome" },
+        },
+    },
+}
+
+M.subclasses["Fractured"] = {
+    parent = "Barbarian",
+    levels = {
+        [14] = {
+            passives  = { "Fractured_14_BetterHalf" },
+        },
+    },
+}
+
+M.subclasses["FrostSorcery"] = {
+    parent = "Sorcerer",
+    levels = {
+        [14] = {
+            passives  = { "FrostSorcery_14_FlashFreeze" },
+        },
+        [18] = {
+            passives  = { "FrostSorcery_18_FrozenSoul" },
+        },
+    },
+}
+
+M.subclasses["GiantPath"] = {
+    parent = "Barbarian",
+    levels = {
+        [14] = {
+            passives  = { "GiantPath_14_DemiurgicColossus" },
         },
     },
 }
@@ -1244,8 +1603,16 @@ M.subclasses["GlamourCollege"] = {
 M.subclasses["GloomStalker"] = {
     parent = "Ranger",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(feab13ec-7831-54cf-8c3f-c5a903cb8144,,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "GloomStalker_15_ShadowyDodge" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(17e3b525-d807-5fe2-b833-99e0ab538d0a,,,,AlwaysPrepared)",
         },
     },
 }
@@ -1253,6 +1620,10 @@ M.subclasses["GloomStalker"] = {
 M.subclasses["Glory"] = {
     parent = "Paladin",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(9b2a1ef2-dc02-51af-acdf-f1e6d1091426,OathSpells,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "Glory_15_GloriousDefense" },
         },
@@ -1298,11 +1669,57 @@ M.subclasses["Hellspeaker"] = {
     },
 }
 
+M.subclasses["HeroicSorcery"] = {
+    parent = "Sorcerer",
+    levels = {
+        [14] = {
+            passives  = { "HeroicSorcery_14_SorcerousKindling" },
+        },
+        [18] = {
+            passives  = { "HeroicSorcery_18_HeroicLegacy" },
+        },
+    },
+}
+
+M.subclasses["Hexblade"] = {
+    parent = "Warlock",
+    levels = {
+        [14] = {
+            passives  = { "Hexblade_14_MasterfulHex" },
+        },
+    },
+}
+
 M.subclasses["HighRoller"] = {
     parent = "Gunslinger",
     levels = {
         [14] = {
             passives  = { "HighRoller_14_DoubleOrNothing" },
+        },
+    },
+}
+
+M.subclasses["HighwayRider"] = {
+    parent = "Rogue",
+    levels = {
+        [13] = {
+            passives  = { "HighwayRider_13_TrueGrit" },
+        },
+        [17] = {
+            passives  = { "HighwayRider_17_Desperado" },
+        },
+    },
+}
+
+M.subclasses["HollowWarden"] = {
+    parent = "Ranger",
+    levels = {
+        [15] = {
+            passives  = { "HollowWarden_15_AncientEndurance" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(100d1158-cccf-5f64-ac27-93f32aec30c7,,,,AlwaysPrepared)",
         },
     },
 }
@@ -1344,6 +1761,15 @@ M.subclasses["IllusionSchool"] = {
         },
         [20] = {
             passives  = {},
+        },
+    },
+}
+
+M.subclasses["Kensei"] = {
+    parent = "Monk",
+    levels = {
+        [17] = {
+            passives  = { "Kensei_17_UnerringAccuracy" },
         },
     },
 }
@@ -1396,6 +1822,15 @@ M.subclasses["Mercy"] = {
     },
 }
 
+M.subclasses["MindDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "MindDomain_17_BendReality" },
+        },
+    },
+}
+
 M.subclasses["MoonCollege"] = {
     parent = "Bard",
     levels = {
@@ -1404,6 +1839,56 @@ M.subclasses["MoonCollege"] = {
         },
         [14] = {
             passives  = { "MoonCollege_12_EventidesSplendor" },
+        },
+    },
+}
+
+M.subclasses["MysticArts"] = {
+    parent = "Monk",
+    levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,2,3)",
+            selectors = "SelectSpells(dcbaf2ae-1f45-453e-ab83-cd154f8277a4,1,1)",
+        },
+        [14] = {
+            passives  = {},
+            selectors = "SelectSpells(dcbaf2ae-1f45-453e-ab83-cd154f8277a4,1,1)",
+        },
+        [15] = {
+            passives  = {},
+            selectors = "SelectSpells(dcbaf2ae-1f45-453e-ab83-cd154f8277a4,0,1)",
+        },
+        [16] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,3)",
+            selectors = "SelectSpells(dcbaf2ae-1f45-453e-ab83-cd154f8277a4,1,1)",
+        },
+        [17] = {
+            passives  = { "MysticArts_17_ImprovedMysticFightingStyle" },
+            selectors = "SelectSpells(dcbaf2ae-1f45-453e-ab83-cd154f8277a4,0,1)",
+        },
+        [18] = {
+            passives  = {},
+            selectors = "SelectSpells(dcbaf2ae-1f45-453e-ab83-cd154f8277a4,0,1)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,4)",
+            selectors = "SelectSpells(5fe40622-1d3e-4cc1-8d89-e66fe51d8c5c,1,1)",
+        },
+        [20] = {
+            passives  = {},
+            selectors = "SelectSpells(5fe40622-1d3e-4cc1-8d89-e66fe51d8c5c,1,1)",
+        },
+    },
+}
+
+M.subclasses["NatureDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "NatureDomain_17_MasterOfNature" },
         },
     },
 }
@@ -1441,6 +1926,20 @@ M.subclasses["NecromancySchool"] = {
     },
 }
 
+M.subclasses["NobleGenie"] = {
+    parent = "Paladin",
+    levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(4d0f1df4-2e68-5e80-9625-856465bddff2,OathSpells,,,AlwaysPrepared)",
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(59cdbc4f-1958-5c50-8593-1b07a0765560,OathSpells,,,AlwaysPrepared)",
+        },
+    },
+}
+
 M.subclasses["NobleGenies"] = {
     parent = "Paladin",
     levels = {
@@ -1453,21 +1952,41 @@ M.subclasses["NobleGenies"] = {
     },
 }
 
+M.subclasses["Oathbreaker"] = {
+    parent = "Paladin",
+    levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(9fecff02-6798-5bf1-8a05-b9f1b9d8b9f7,OathSpells,,,AlwaysPrepared)",
+        },
+        [15] = {
+            passives  = { "Oathbreaker_15_SupernaturalResistance" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(3d9b8c00-8bcf-51b9-b729-9b519a3dcd49,OathSpells,,,AlwaysPrepared)",
+        },
+        [20] = {
+            passives  = { "Oathbreaker_20_DreadLord" },
+        },
+    },
+}
+
 M.subclasses["OccultistGuild"] = {
     parent = "MonsterHunter",
     levels = {
         [13] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,3)",
-            selectors = "SelectSpells(80c6b070-c3a6-4864-84ca-e78626784eb4,1,1,EldritchKnightAbjEvo)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,EldritchKnightAbjEvo)",
         },
         [15] = {
             passives  = { "OccultistGuild_15_SpellbreakerFocus" },
-            selectors = "SelectSpells(80c6b070-c3a6-4864-84ca-e78626784eb4,1,1,EldritchKnightAbjEvo)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,EldritchKnightAbjEvo)",
         },
         [17] = {
             passives  = {},
-            selectors = "SelectSpells(80c6b070-c3a6-4864-84ca-e78626784eb4,1,1,EldritchKnightAbjEvo)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,EldritchKnightAbjEvo)",
         },
         [18] = {
             passives  = { "OccultistGuild_18_ArcaneNemesis" },
@@ -1475,11 +1994,11 @@ M.subclasses["OccultistGuild"] = {
         [19] = {
             passives  = {},
             boosts    = "ActionResource(SpellSlot,1,3)",
-            selectors = "SelectSpells(80c6b070-c3a6-4864-84ca-e78626784eb4,1,1,EldritchKnightAbjEvo)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,EldritchKnightAbjEvo)",
         },
         [20] = {
             passives  = {},
-            selectors = "SelectSpells(80c6b070-c3a6-4864-84ca-e78626784eb4,1,1,EldritchKnightAbjEvo)",
+            selectors = "SelectSpells(22755771-ca11-49f4-b772-13d8b8fecd93,1,1,EldritchKnightAbjEvo)",
         },
     },
 }
@@ -1561,6 +2080,47 @@ M.subclasses["RuneKnight"] = {
     },
 }
 
+M.subclasses["Sangromancer"] = {
+    parent = "Wizard",
+    levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
+            selectors = "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)",
+        },
+        [14] = {
+            passives  = { "Sangromancer_14_RedRenewal" },
+            boosts    = "ActionResource(HitPointDice12,1,0)",
+        },
+        [15] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
+            selectors = "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)",
+        },
+        [16] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
+            selectors = "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)",
+        },
+        [18] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
+        },
+        [20] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
+        },
+    },
+}
+
 M.subclasses["SanguineKnight"] = {
     parent = "Illrigger",
     levels = {
@@ -1582,9 +2142,6 @@ M.subclasses["SanguineKnight"] = {
 M.subclasses["ScionThree"] = {
     parent = "Rogue",
     levels = {
-        [11] = {
-            passives  = {},
-        },
         [13] = {
             passives  = { "DeadThree_13_AuraOfMalevolence" },
         },
@@ -1599,6 +2156,36 @@ M.subclasses["Shadow"] = {
     levels = {
         [17] = {
             passives  = { "Shadow_17_CloakOfShadows" },
+        },
+    },
+}
+
+M.subclasses["ShadowDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "ShadowDomain_17_ArmyOfShadow" },
+        },
+    },
+}
+
+M.subclasses["ShadowGnawer"] = {
+    parent = "Barbarian",
+    levels = {
+        [14] = {
+            passives  = { "ShadowGnawer_14_CorrosiveHaze" },
+        },
+    },
+}
+
+M.subclasses["ShadowMagic"] = {
+    parent = "Sorcerer",
+    levels = {
+        [14] = {
+            passives  = { "ShadowMagic_14_ShadowWalk" },
+        },
+        [18] = {
+            passives  = { "ShadowMagic_18_UmbralForm" },
         },
     },
 }
@@ -1683,6 +2270,65 @@ M.subclasses["Spellslinger"] = {
     },
 }
 
+M.subclasses["SpiritsCollege"] = {
+    parent = "Bard",
+    levels = {
+        [14] = {
+            passives  = { "Spirits_14_MysticalConnection" },
+        },
+    },
+}
+
+M.subclasses["StormSorcery"] = {
+    parent = "Sorcerer",
+    levels = {
+        [14] = {
+            passives  = { "StormSorcery_14_StormsFury" },
+        },
+        [18] = {
+            passives  = { "StormSorcery_18_WindSoul" },
+        },
+    },
+}
+
+M.subclasses["SunSoul"] = {
+    parent = "Monk",
+    levels = {
+        [17] = {
+            passives  = { "SunSoul_17_SunShield" },
+        },
+    },
+}
+
+M.subclasses["Swarmkeeper"] = {
+    parent = "Ranger",
+    levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(817973d3-f902-5f03-907b-c6039b3a0f87,,,,AlwaysPrepared)",
+        },
+        [15] = {
+            passives  = { "Swarmkeeper_15_SwarmingDispersal" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(736561ec-7034-528a-81e5-7c20c63fbed3,,,,AlwaysPrepared)",
+        },
+    },
+}
+
+M.subclasses["Swashbuckler"] = {
+    parent = "Rogue",
+    levels = {
+        [13] = {
+            passives  = { "Swashbuckler_13_ElegantManeuver" },
+        },
+        [17] = {
+            passives  = { "Swashbuckler_17_MasterDuelist" },
+        },
+    },
+}
+
 M.subclasses["SwordsCollege"] = {
     parent = "Bard",
     levels = {
@@ -1691,6 +2337,15 @@ M.subclasses["SwordsCollege"] = {
         },
         [14] = {
             passives  = { "SwordsCollege_12_MastersFlourish" },
+        },
+    },
+}
+
+M.subclasses["TempestDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "TempestDomain_17_Stormborn" },
         },
     },
 }
@@ -1762,6 +2417,24 @@ M.subclasses["TrickeryDomain"] = {
     },
 }
 
+M.subclasses["TwilightDomain"] = {
+    parent = "Cleric",
+    levels = {
+        [17] = {
+            passives  = { "TwilightDomain_17_TwilightShroud" },
+        },
+    },
+}
+
+M.subclasses["UndeadPatron"] = {
+    parent = "Warlock",
+    levels = {
+        [14] = {
+            passives  = { "UndeadPatron_14_SuperiorDread" },
+        },
+    },
+}
+
 M.subclasses["ValorCollege"] = {
     parent = "Bard",
     levels = {
@@ -1777,11 +2450,31 @@ M.subclasses["ValorCollege"] = {
 M.subclasses["Vengeance"] = {
     parent = "Paladin",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(6a312591-3892-5743-bc85-39514f55f3e1,OathSpells,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "Vengeance_15_SoulOfVengeance" },
         },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(00997cb1-183b-560f-a4a8-d7c3b97ccf58,OathSpells,,,AlwaysPrepared)",
+        },
         [20] = {
             passives  = { "Vengeance_20_AvengingAngel" },
+        },
+    },
+}
+
+M.subclasses["Viking"] = {
+    parent = "Fighter",
+    levels = {
+        [15] = {
+            passives  = { "Viking_15_MaraudersReprisal" },
+        },
+        [18] = {
+            passives  = { "Viking_18_UnstoppableAssault" },
         },
     },
 }
@@ -1791,6 +2484,26 @@ M.subclasses["WarDomain"] = {
     levels = {
         [17] = {
             passives  = { "WarDomain_17_AvatarOfBattle" },
+        },
+    },
+}
+
+M.subclasses["Watchers"] = {
+    parent = "Paladin",
+    levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(7cda3360-812b-554a-a4cb-4eeb2d88017b,OathSpells,,,AlwaysPrepared)",
+        },
+        [15] = {
+            passives  = { "Watchers_15_VigilantRebuke" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(10fd2a57-b115-58bd-bcc5-dbd4692a52bf,OathSpells,,,AlwaysPrepared)",
+        },
+        [20] = {
+            passives  = { "Watchers_20_MortalBulwark" },
         },
     },
 }
@@ -1820,7 +2533,7 @@ M.subclasses["WildMagic"] = {
 }
 
 M.subclasses["WildMagicPath"] = {
-    parent = "Sorcerer",
+    parent = "Barbarian",
     levels = {
         [14] = {
             passives  = { "WildMagic_14_ControlledSurge" },
@@ -1831,8 +2544,16 @@ M.subclasses["WildMagicPath"] = {
 M.subclasses["WinterWalker"] = {
     parent = "Ranger",
     levels = {
+        [13] = {
+            passives  = {},
+            selectors = "AddSpells(74407e89-4d07-57c3-bd11-24eb484441d7,,,,AlwaysPrepared)",
+        },
         [15] = {
             passives  = { "WinterWalker_15_FrozenHaunt" },
+        },
+        [17] = {
+            passives  = {},
+            selectors = "AddSpells(64bf07aa-05bb-5642-bcf2-1c37e9314dfe,,,,AlwaysPrepared)",
         },
     },
 }

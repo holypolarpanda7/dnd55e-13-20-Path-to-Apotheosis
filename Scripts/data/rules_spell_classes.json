@@ -89,6 +89,19 @@
     "Target_Apo_Befuddlement"
    ]
   },
+  "Burst Forth": {
+   "level": 7,
+   "school": "Conjuration",
+   "source": "Grim Hollow",
+   "classes": [
+    "Bard",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_BurstForth"
+   ]
+  },
   "Clone": {
    "level": 8,
    "school": "Necromancy",
@@ -122,6 +135,18 @@
    ],
    "entries": [
     "Shout_Apo_ControlWeather"
+   ]
+  },
+  "Creeping Death": {
+   "level": 8,
+   "school": "Necromancy",
+   "source": "Grim Hollow",
+   "classes": [
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_CreepingDeath"
    ]
   },
   "Delayed Blast Fireball": {
@@ -586,6 +611,18 @@
     "Target_ProjectImage"
    ]
   },
+  "Red Rain": {
+   "level": 8,
+   "school": "Conjuration",
+   "source": "Grim Hollow",
+   "classes": [
+    "Cleric",
+    "Warlock"
+   ],
+   "entries": [
+    "Shout_RedRain"
+   ]
+  },
   "Regenerate": {
    "level": 7,
    "school": "Transmutation",
@@ -638,6 +675,19 @@
     "Shout_Apo_ReweaveFate"
    ]
   },
+  "Sanguine Fusillade": {
+   "level": 7,
+   "school": "Evocation",
+   "source": "Grim Hollow",
+   "classes": [
+    "Sorcerer",
+    "Warlock",
+    "Wizard"
+   ],
+   "entries": [
+    "Target_SanguineFusillade"
+   ]
+  },
   "Sequester": {
    "level": 7,
    "school": "Transmutation",
@@ -670,6 +720,17 @@
    ],
    "entries": [
     "Target_Apo_Simulacrum"
+   ]
+  },
+  "Steal Immortality": {
+   "level": 9,
+   "school": "Transmutation",
+   "source": "Grim Hollow",
+   "classes": [
+    "Warlock"
+   ],
+   "entries": [
+    "Shout_StealImmortality"
    ]
   },
   "Storm of Vengeance": {

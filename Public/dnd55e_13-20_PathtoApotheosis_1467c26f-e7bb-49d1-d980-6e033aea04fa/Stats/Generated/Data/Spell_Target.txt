@@ -314,8 +314,9 @@ data "SpellAnimation" "554a18f7-952e-494a-b301-7702a85d4bc9,,;,,;af94aac1-d8eb-4
 data "VerbalIntent" "Control"
 data "SpellFlags" "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;HasHighGroundRangeExtension;IsHarmful"
 data "PrepareEffect" "2fa6b127-6f8a-4150-8be6-6f62b7a85911"
-data "CastEffect" "a7ffe334-15bc-4515-976c-932e6d45b9d9"
-data "TargetEffect" "fdf323a9-8912-4dcd-b55e-e268f7f45170"
+data "CastEffect" "40ef4174-3fcb-510e-9a8d-7a435a4e9e92"
+data "TargetEffect" "de7ee36f-e0bd-5ab8-88f2-b6f0807e0238"
+data "BeamEffect" "87846f86-5d45-5c98-a5c5-1831ab7958d7"
 
 // 9th level upcast
 new entry "Target_DominateMonster_9"

@@ -1,0 +1,94 @@
+# High-level resource audit (2026-10-13)
+
+The Hit Point Dice turned out to stop at level 12 because dnd55e hands out class resources one step per level up to its
+12-level cap. This is the sweep for everything else of that kind: class, subclass and species resources, level-scaled dice,
+spend variants and summon strength, checked against PHB 2024 / SRD 5.2.1 and the shared library (`D:\Library\DnD`).
+
+How it was done, and how to repeat it:
+
+- `Scripts/resource_audit.py`: per-class and per-subclass resource totals by level against what the rules say (EXPECT tables) and
+  every passive with Proficiency Bonus steps (`CharacterLevelGreaterThan(4)` / `(8)`) that stops at +4.
+- `bg3_lint_rules` now has a `RES` check: every resource column of the SRD class tables (Rage, Channel Divinity, Wild Shape,
+  Second Wind, Ki, Sorcery Points, Favored Enemy, Seals) against the data, and the Weapon Mastery picks each level adds.
+- `Scripts/levelmap_audit.py`: level maps that stop below 13 (34 left, each judged below).
+- A survey of every `ClassLevelHigherOrEqualThan(N)` / `CharacterLevelGreaterThan(N)` in dnd55e's stats for tiers that end near 12.
+
+## Fixed
+
+| Feature | Was | Now | Source |
+| --- | --- | --- | --- |
+| Hit Point Dice | stopped at 12 | one per level to 20 | PHB 2024 (earlier commits) |
+| Ranger Favored Enemy | 4 | 5 at 13, 6 at 17 | SRD table |
+| Wizard Arcane Recovery | 6 | 7, 8, 9, 10 at 13, 15, 17, 19 | PHB 2024 |
+| Celestial Healing Light | 13 dice | 1 + Warlock level (to 21) | Warlock.txt |
+| Circle of Dreams Balm | 12 dice | Druid level (to 20); spend variants of 7-10 dice at 14/16/18/20 | XGE |
+| Abjuration Arcane Ward | 2 x level to 12 | 2 x Wizard level to 20 | Wizard.txt |
+| Circle of the Land Natural Recovery | 6 | half the Druid level, rounded up | Druid.txt |
+| Zealot Warrior of the Gods | 6 dice | 7 at 17 (+ a 7-dice spend variant) | Barbarian.txt |
+| Alchemist Experimental Elixir | 4 | 5 at 15 | Artificer.txt |
+| Artificer Magic Items | 4 | 5 at 14, 6 at 18 | SRD table |
+| Rune Knight | runes 5, Runic Shield 4 | +1 rune at 15; Runic Shield = Proficiency Bonus | Tasha's |
+| Psi Warrior / Soulknife | 8 Psionic Energy Dice | 10 at 13, 12 at 17 | Fighter.txt / Rogue.txt |
+| Swarmkeeper Writhing Tide | PB 4 | PB 5 / 6 | Tasha's |
+| Dragonborn, Eladrin, Goliath, Shadar-kai | PB 4 uses | PB 5 at 13, 6 at 17 | PHB 2024 / MPMM |
+| 13 feats with Proficiency Bonus uses (Lucky, Healer, Poisoner, the Giant feats, Adrenaline Rush, Fey Trickster, Spellfire Spark, Purple Dragon Commandant) | PB 4 | PB 5 / 6 | PHB 2024 |
+| Monk Unarmored Movement | +20 ft at 10 | +25 ft at 14, +30 ft at 18 | PHB 2024 |
+| Fighter Weapon Mastery | 5 | 6 at 16 | SRD table |
+| Cleric Divine Spark dice | 2d8 at 5, 3d8 at 11, 4d8 at 17 (the cantrip tiers) | 1d8, 2d8 at 7, 3d8 at 13, 4d8 at 18 | Cleric.txt |
+| Berserker/World Tree Life-Giving Force | 3d6 | 4d6 at 16 (Rage Damage) | Barbarian.txt |
+| Venomous Strike (Poison Sneak Attack) | 7d8 at 11 and then flat | as many d8s as Sneak Attack dice: 6d8 at 11 ... 10d8 at 19 | follows Sneak Attack |
+| Beast Master companions, Steel Defender | the level 11 template for good (55 / 60 HP, Proficiency Bonus 4) | bands at 13/15/17/19: +10 HP each and the owner's Proficiency Bonus | PHB 2024 (HP 5 + 5 x level) |
+| Barbarian and Cleric 12 | missing a Hit Point Die (override dropped it) | restored (earlier commit; progression lint now flags it) | |
+
+All of these are per-level node boosts (or the dnd55e passive extended with itself, re-read at each regen), so they apply at the
+level-up and survive dnd55e updates. Generators: `gen_class_resources.py`, `gen_levelmaps.py`, `gen_hit_dice.py`.
+
+## Decided 2026-10-13 and done
+
+- **Way of the Four Elements disciplines** (user: extend): the `*_Monk` level maps get the two further steps the 2014 PHB gives
+  (3, 4, 5, 6 ki at Monk 5, 9, 13, 17): Burning Hands 5d6 / 6d6, Fist of Unbroken Air and Water Whip 5d10 / 6d10, Shatter 5d8 / 6d8,
+  Thunderwave 4d8 / 5d8, Ray of Frost and Shocking Grasp 3d10 / 4d10, Scorching Ray 5 / 6 rays, Hold Person 3 / 4 targets at 13 / 17.
+  Sun Soul's Searing Arc Strike gets spell levels 6-9 (8d6-11d6, 7-10 ki) at Monk 14, 16, 18, 20.
+- **Artificer plans** (user: model and implement): dnd55e has no plans-known choice (every plan is available at its level), so "plans
+  known 7 / 8" needs nothing. The level 14 list is added (`gen_artificer_plans.py`): Armor +2 (the +1 status becomes +2), Flame Tongue
+  (+2d6 Fire), Arrow-Catching Shield (a flat +2 AC: the engine has no AC bonus per attack type), Ring of the Ram (three charges,
+  2d10 Force and a push per charge, an attack against a creature in sight). The learn-repeatedly "Rare Wondrous Item" plan is not
+  modelled. New icons for Flame Tongue, Arrow-Catching Shield and Ring of the Ram (rule: every new spell gets its own).
+- **Experimental Elixir at 15** (user: provide other potion capability from in-game potions): five more elixir options for the level 15
+  Artificer, taken from the base game's potions (Rare, Barkskin Uncommon): Cloud Giant Strength, Battlemage's Power, Viciousness,
+  Guileful Movement, Barkskin (`Shout_EE_*`, same container and elixir cost as dnd55e's, potion item icons).
+- **Wild Shape** (user: scaling in scope, follow the rules' tiers, re-skins fine): three new Circle of the Moon forms at the CR / 3
+  tiers - Elephant (CR 4, Moon 12), Triceratops (CR 5, 15), Mammoth (CR 6, 18) - on re-skinned models, with the Monster Manual stat blocks
+  (`gen_wildshape_forms.py`, `docs/WILD_SHAPE_FORMS_ANALYSIS.md`). Wild Shape itself ends at Druid 8, as the rules say.
+- **Illusion summons** (Phantasmal Creatures): yes, new bands were needed. dnd55e's Illusion version summons at the highest slot level
+  (Wizard 5 / 7 / 9 / 11 = level 3 / 4 / 5 / 6 creatures), the slots go on to 7th, 8th and 9th at Wizard 13 / 15 / 17, and PTA already has
+  the level 7-9 creatures (`Wolf_7-9`, `GiantEagle_7-9`, `RedCap_7-9`): bands at 13 / 15 / 17 added for the Wolf, Giant Eagle and Fey forms.
+
+## Checked against the rules, no change
+
+- **Wild Shape (PHB 2024)**: the Beast Shapes table ends at Druid 8 (known forms 8, CR 1, Fly Speed); Temporary Hit Points = Druid
+  level (dnd55e applies `WILDSHAPE_TEMPHP_DRUIDLEVEL`). Nothing changes at 13-20. Circle of the Moon: Temporary Hit Points = 3 x
+  Druid level and AC 13 + Wisdom modifier (already per level); the maximum CR is Druid level / 3 (4 at 12, 5 at 15, 6 at 18).
+  **Open: the CR 4-6 Moon forms don't exist** (dnd55e's Moon list ends at its level 10 forms and the base game has no CR 4-6 beasts
+  as player forms); a content item (three to four new beast forms: templates, stats, models), not a cap.
+- **Experimental Elixir potency at 15** (the book's tier): dnd55e's elixirs are the base game's potions (Healing is Greater / Superior / Supreme at
+  Artificer 5 and 9; Speed, Flying, Invisibility ... are single-tier potions). Every one is already stronger than the book's top tier
+  (Supreme Healing is about 45 hit points against 4d8 + Intelligence), so a stronger tier would only weaken them; the 15 gain in the
+  rules is the fifth elixir (done), and the extra options above are the answer.
+
+## Still open
+
+- Moon form visuals (re-skins) and the in-game check of the new forms: `docs/WILD_SHAPE_FORMS_ANALYSIS.md`.
+- The learn-repeatedly "Rare Wondrous Item" Replicate Magic Item plan (a GitHub issue); the Arrow-Catching Shield's ranged-only AC bonus and Reaction.
+- **Lay on Hands** is a charge pool whose heal scales with the Paladin level (not 5 x level Hit Points): kept, as decided 2026-10-03.
+- **Star Map / Cosmic Omen** uses are Wisdom-modifier based in the 2024 text; dnd55e steps them by level. Not a cap problem; left.
+- **Bladesong** (`Bladesong` level map 2/3/4): the Bladesinger moved to dnd55e.
+- dnd55e's own gaps below 13 (not built here: dnd55e adds lower-level content itself): Gunslinger Weapon Mastery picks at 4 and 10;
+  Illrigger Seal damage 3d6 at 10 (the table says 11).
+
+## To check in game
+
+- Abjuration Arcane Ward: the base game's and dnd55e's nodes both sit in the table, the audit counts 31 at level 12 (2 x level + 7).
+- A feat's Proficiency Bonus uses at the level-up that raises the Proficiency Bonus (the conditional boosts may wait for the next
+  load, as the level-conditional passives did): take Lucky at 12, level to 13, read the Luck Points.
+- Companion HP and Proficiency Bonus at 13, 15, 17, 19; Balm 7-10 dice; Warrior of the Gods 7 dice; Unarmored Movement at 14/18; the cases in `tests/bg3/high_level_resources.toml` (Balm 7, Warrior of the Gods 7, Searing Arc Strike 6, Ring of the Ram, Armor +2).

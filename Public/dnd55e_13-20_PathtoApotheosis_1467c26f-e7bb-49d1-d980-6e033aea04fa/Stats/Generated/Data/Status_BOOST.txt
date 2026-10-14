@@ -165,7 +165,7 @@ data "RemoveConditions" "not HasStatus('SG_Rage')"
 data "RemoveEvents" "OnStatusRemoved"
 data "StatusPropertyFlags" "DisableOverhead"
 data "SoundLoop" "Spell_Status_Darkness_MO"
-data "StatusEffect" "d82e76f9-c891-4d0c-855c-5bff3bec8c1d"
+data "StatusEffect" "b65e9b5b-9a95-49c4-a29e-478c331671a0"
 
 // Frozen Vortex: Ice Storm aura that deals cold damage, 5 turns
 new entry "WILDMAGIC_FROZEN_VORTEX"
@@ -183,7 +183,7 @@ data "RemoveConditions" "not HasStatus('SG_Rage')"
 data "RemoveEvents" "OnStatusRemoved"
 data "StatusPropertyFlags" "DisableOverhead"
 data "SoundLoop" "Spell_Status_IceStorm"
-data "StatusEffect" "9fe58c7b-1cb5-4d3b-9cb9-19fc26a6b52f"
+data "StatusEffect" "333b2d90-6805-4d1b-b136-221aeaac1dee"
 
 // Frozen Vortex Debuff: Applied to enemies in the aura
 new entry "WILDMAGIC_FROZEN_VORTEX_DEBUFF"

@@ -19,9 +19,29 @@ EXPECT = {  # class: {resource: {level: total}} - 2024 values at 13-20 (and the 
     "Barbarian": {"Rage": {12: 5, 17: 6}},
     "Druid": {"WildShape": {12: 3, 17: 4}},
     "Cleric": {"ChannelDivinity": {12: 3, 18: 4}},
+    "Ranger": {"FavoredEnemy": {12: 4, 13: 5, 16: 5, 17: 6}},
+    "Wizard": {"ArcaneRecoveryPoint": {12: 6, 13: 7, 15: 8, 17: 9, 19: 10}},
+    # subclass / class / species pools (2026-10-13, gen_class_resources.py; node names, not class names)
+    "Celestial": {"HealingLight": {L: L + 1 for L in range(12, 21)}},                       # 1 + Warlock level d6s
+    "CircleOfDreams": {"Balm": {L: L for L in range(12, 21)}},                              # d6s = Druid level
+    "CircleOfTheLand": {"NaturalRecoveryPoint": {L: -(-L // 2) for L in range(12, 21)}},    # half the Druid level, rounded up
+    "ZealotPath": {"WarriorOfTheGods": {12: 6, 16: 6, 17: 7}},
+    "Alchemist": {"ExperimentalElixir": {12: 4, 14: 4, 15: 5}},
+    "Artificer": {"ReplicateMagicItem": {12: 4, 13: 4, 14: 5, 17: 5, 18: 6}},
+    "RuneKnight": {"Rune": {12: 5, 14: 5, 15: 6}, "RunicShield": {12: 4, 13: 5, 16: 5, 17: 6}},
+    "PsiWarrior": {"PsiWarrior": {12: 8, 13: 10, 16: 10, 17: 12}},                          # twice the Proficiency Bonus
+    "Soulknife": {"Soulknife": {12: 8, 13: 10, 16: 10, 17: 12}},
+    "Swarmkeeper": {"WrithingTidePoint": {12: 4, 13: 5, 16: 5, 17: 6}},
+    "Dragonborn": {"BreathWeapon": {12: 4, 13: 5, 16: 5, 17: 6}},                           # Proficiency Bonus uses
+    "Eladrin": {"Eladrin": {12: 4, 13: 5, 17: 6}}, "Goliath": {"Goliath": {12: 4, 13: 5, 17: 6}},
+    "ShadarKai": {"ShadarKai": {12: 4, 13: 5, 17: 6}},
     "Fighter": {"Interrupt_Indomitable": {12: 1, 13: 2, 17: 3}},
     # not counted here: Action Surge (a once-per-Short-Rest cooldown; the second use at 17 is its own spell) and
     # dnd55e's Lay on Hands (its own charge model, not the 5 x level pool)
+}
+
+EXPECT_STEP = {   # name: {resource: {level: increase over the level before}} - for tables where base game and dnd55e nodes stack
+    "AbjurationSchool": {"ArcaneWard": {L: 2 for L in range(13, 21)}},   # 2 x Wizard level (+ Int modifier)
 }
 
 
@@ -47,6 +67,11 @@ def totals(cls):
 
 
 bad = 0
+# passives whose uses follow the Proficiency Bonus (CharacterLevelGreaterThan(4) / (8) steps) must go on to (12) and (16)
+for name, boosts in sorted(pboost.items()):
+    if "CharacterLevelGreaterThan(8)" in boosts and "ActionResource" in boosts and "CharacterLevelGreaterThan(12)" not in boosts:
+        bad += 1
+        print(f"passive {name}: Proficiency Bonus steps stop at +4 (no CharacterLevelGreaterThan(12))")
 for cls, resources in EXPECT.items():
     t = totals(cls)
     for res, want in resources.items():
@@ -55,4 +80,12 @@ for cls, resources in EXPECT.items():
             if have != v:
                 bad += 1
                 print(f"{cls:10s} {res:18s} L{L:2d}: has {have}, want {v}")
+for cls, resources in EXPECT_STEP.items():
+    t = totals(cls)
+    for res, want in resources.items():
+        for L, v in want.items():
+            have = t[L].get(res, 0) - t[L - 1].get(res, 0)
+            if have != v:
+                bad += 1
+                print(f"{cls:10s} {res:18s} L{L:2d}: grows by {have}, want {v}")
 print(f"{bad} mismatches")
