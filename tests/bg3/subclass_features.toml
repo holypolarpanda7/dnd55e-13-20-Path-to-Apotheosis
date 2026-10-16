@@ -577,3 +577,79 @@ target = "ground"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
 setup = [{ target = "host", passive = "AberrantSorcery_18_WarpingImplosion" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ cast = true }, { target = "A", hp_change = [-30, -3] }, { target = "A", damage_count = { count = [1, 1] } }]
+
+# ---- Sanguine Thief (Grim Hollow Rogue, dnd55e 4.13.9.0; Scripts/gen_sanguine_thief.py), 2026-10-16
+
+[[case]]
+id = "sanguine-thief-13-slots"
+title = "Sanguine Thief 13: two 3rd-level spell slots (third caster, as the Arcane Trickster)"
+build = "rogue-sanguinethief"
+class = "Rogue"
+level = 13
+subclass = "SanguineThief"
+expect = [{ resource = "SpellSlot", level = 3, amount = 2 }]
+
+[[case]]
+id = "sanguine-thief-16-slots"
+title = "Sanguine Thief 16: a third 3rd-level slot"
+build = "rogue-sanguinethief"
+class = "Rogue"
+level = 16
+subclass = "SanguineThief"
+expect = [{ resource = "SpellSlot", level = 3, amount = 3 }]
+
+[[case]]
+id = "sanguine-thief-19-slots"
+title = "Sanguine Thief 19: a 4th-level slot"
+build = "rogue-sanguinethief"
+class = "Rogue"
+level = 19
+subclass = "SanguineThief"
+expect = [{ resource = "SpellSlot", level = 4, amount = 1 }]
+
+[[case]]
+id = "sanguine-thief-bloodstitch"
+title = "Bloodstitch: a failed Dexterity save takes 3d8 Necrotic, and the cast costs 3 Hit Point Dice"
+spell = "Shout_Apo_Bloodstitch"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 4 }]
+setup = [{ target = "host", passive = "SanguineThief_13_Bloodstitch" }, { target = "host", boost = "ActionResource(HitPointDice08,5,0)" },
+         { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-24, -3] }, { resource = "HitPointDice08", level = 0, change = -3 }]
+
+[[case]]
+id = "sanguine-thief-bloodstitch-kill"
+title = "Bloodstitch: a creature it reduces to 0 Hit Points gives you one Hit Point Die back (net cost 2)"
+spell = "Shout_Apo_Bloodstitch"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 1, distance = 4 }]
+setup = [{ target = "host", passive = "SanguineThief_13_Bloodstitch" }, { target = "host", boost = "ActionResource(HitPointDice08,5,0)" },
+         { target = "host", resource = "HitPointDice08", level = 0, amount = 10 },
+         { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", dead = true }, { target = "host", status_applied = ["APO_BLOODSTITCH_DIE"] }, { resource = "HitPointDice08", level = 0, amount_change = 1 }]
+
+[[case]]
+id = "sanguine-thief-bloody-exit"
+title = "Bloody Exit: a creature's hit is turned into a miss - the reaction costs 5 Hit Point Dice"
+mode = "ai"
+spell = "Target_Bite_Wolf"
+caster = "A"
+target = "host"
+reactions = ["Interrupt_Apo_BloodyExit"]
+ai_rounds = 1
+sanctuary = false
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", max_hp = 200 }, { target = "host", passive = "SanguineThief_17_BloodyExit" }, { target = "host", boost = "ActionResource(HitPointDice08,10,0)" },
+         { target = "A", boost = "RollBonus(Attack,30)" }]
+expect = [{ target = "host", damage_count = { by = "A", count = [0, 0] } }, { cast_count = { spell = "Target_Apo_BloodyExit_Strike", by = "host", count = [1, 1] } },
+          { target = "host", status_applied = ["APO_BLOODY_EXIT_STEP"] }, { resource = "HitPointDice08", level = 0, amount_change = -5 }, { resource = "ApoBloodyExit", level = 0, amount_change = -1 }]
+notes = "The wolf always hits (+30), so the only way to take no damage is the reaction; one round only, because the reaction is once per Short Rest (ApoBloodyExit) and later bites land."
+
+[[case]]
+id = "sanguine-thief-bloody-exit-teleport"
+title = "Bloody Exit's free teleport: a spell for your next turn - it costs nothing and moves you"
+spell = "Target_Apo_BloodyExit_Teleport"
+target = "host"
+setup = [{ target = "host", status = "APO_BLOODY_EXIT_STEP", turns = 2 }]
+expect = [{ cast = true }]
+notes = "Only checks the free spell casts (no cost); the position change isn't asserted by a key yet - check the host ends elsewhere."

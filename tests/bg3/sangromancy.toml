@@ -150,3 +150,34 @@ spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance 
 setup = [{ target = "host", hp = 150 }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
 expect = [{ cast = true }, { target = "host", hp_change = [7, 9] }]
 notes = "dnd55e's IsSangromancySpell() is a SpellId whitelist; PTA ships a second definition with ours added (Scripts/thoth/helpers/ApoSangromancy.khn). This proves the game uses it: without it the heal is 0."
+
+# ---- dnd55e 4.13.8.0's Dark Sacrament and Viscous Sheath at 7th-9th level (PTA Spell_Upcast79.txt, 2026-10-16)
+
+[[case]]
+id = "sangro-dark-sacrament-d8-9"
+title = "Dark Sacrament (d8, 9th-level slot): 4d8 + 9d8 Necrotic on a melee spell attack; costs 4 d8 Hit Point Dice"
+spell = "Target_DarkSacrament8_9"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice08,6,0)" }, { target = "host", boost = "ActionResource(SpellSlot,1,9)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-104, -13] }, { resource = "HitPointDice08", level = 0, change = -4 }, { resource = "SpellSlot", level = 9, change = -1 }]
+
+[[case]]
+id = "sangro-dark-sacrament-d12-7"
+title = "Dark Sacrament (d12, 7th-level slot): 4d12 + 7d8 Necrotic; costs 4 d12 Hit Point Dice (Full-Blooded)"
+spell = "Target_DarkSacrament12_7"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
+setup = [{ target = "host", boost = "ActionResource(HitPointDice12,5,0)" }, { target = "host", boost = "ActionResource(SpellSlot,1,7)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-104, -11] }, { resource = "HitPointDice12", level = 0, change = -4 }, { resource = "SpellSlot", level = 7, change = -1 }]
+
+[[case]]
+id = "sangro-viscous-sheath-d10-9"
+title = "Viscous Sheath (d10, 9th-level slot): the sheath goes up; costs 7 d10 Hit Point Dice"
+spell = "Shout_ViscousSheath10_9"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(HitPointDice10,8,0)" }, { target = "host", boost = "ActionResource(SpellSlot,1,9)" }]
+expect = [{ cast = true }, { resource = "HitPointDice10", level = 0, change = -7 }, { resource = "SpellSlot", level = 9, change = -1 }]
+notes = "Which VISCOUS_SHEATH_* status lands for the d10 upcast isn't asserted: check the host carries one and that its Necrotic damage to melee attackers scales (7d6 at 4th, +1 die per level)."

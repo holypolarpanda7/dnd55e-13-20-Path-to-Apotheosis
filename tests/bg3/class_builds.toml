@@ -553,6 +553,14 @@ subclass = "ArcaneTrickster"
 from = "rogue-base"
 levels = [2, 20]
 
+[[build]]
+id = "rogue-sanguinethief"
+class = "Rogue"
+title = "Rogue - Sanguine Thief, levels 2-20 (third caster: Wizard + Sangromancy spells, learned at level-up)"
+subclass = "SanguineThief"
+from = "rogue-base"
+levels = [2, 20]
+
 # every other subclass with level 13+ content (added 2026-10-06 so each one's level-ups are checked in game, not only its features)
 [[build]]
 id = "barbarian-giantpath"

@@ -83,6 +83,8 @@ MEMORY = {
 # Third-party subclasses read from References/Subclasses (the texts their 13+ features were built from): confidence "reference"
 REFERENCE = {
     ("Wizard", "Sangromancer"): ("excerpts/subclasses/grim-hollow_sangromancy.md (Grim Hollow Player's Guide, 2026-10-12)", {14: ["Red Renewal"]}),
+    ("Rogue", "Sanguine Thief"): ("excerpts/subclasses/grim-hollow_sanguine-thief.md (Grim Hollow Player's Guide, secondary summaries, 2026-10-16)",
+                                  {13: ["Bloodstitch"], 17: ["Bloody Exit"]}),
     ("Barbarian", "Path of the Fractured"): ("References/Subclasses/missing_subclass_ref.txt (Grim Hollow)", {14: ["Better Half"]}),
     ("Fighter", "Viking"): ("References/Subclasses/missing_subclass_ref.txt (Kobold Press Northlands)",
                             {15: ["Marauder's Reprisal"], 18: ["Unstoppable Assault"]}),
