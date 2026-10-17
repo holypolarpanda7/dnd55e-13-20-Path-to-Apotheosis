@@ -4612,4 +4612,28 @@
   <content contentuid="ha5d523d822085fa18fa4d092eb7cca20" version="1">You have taken the form of a mammoth.</content>
   <content contentuid="hd4d06fd96f075f63a7a93102b8affb48" version="1">Mammoth</content>
   <content contentuid="hc1edcda20d54528e858015e1b262742c" version="1">Assume the form of a mammoth (Challenge Rating 6): 126 Hit Points, AC 13, Strength 24; Gore and Stomp attacks. Circle of the Moon, Druid level 18.</content>
+  <content contentuid="h820559bbc72759f0a32ee0b8e943def9" version="1">Bloodstitch</content>
+  <content contentuid="h208f47d1a3f2508bacdf44937b7e4fac" version="1">Struck by a Bloodstitch; if it falls, the Sanguine Thief regains a Hit Point Die.</content>
+  <content contentuid="h563b72be869f586f97d3978f82c798bb" version="1">Bloodstitch</content>
+  <content contentuid="h1b81cf5e1fea5a9e970f4dd855b0bf4d" version="1">You regain a Hit Point Die.</content>
+  <content contentuid="h5162da6ed98e54f59ae6782c340f3a50" version="1">Bloodstitch</content>
+  <content contentuid="h474a17b2994a5f239b81b77b6af248f8" version="1">As a Magic action, spend 3 Hit Point Dice (Sangromancy Dice) to loose needle-like shards of blood in a 9 m (30 ft) emanation. Each enemy makes a Dexterity saving throw against your spell save DC, taking 3d8 Necrotic damage on a failed save or half as much on a success. Each creature reduced to 0 Hit Points gives you back one Hit Point Die. Once per Short or Long Rest.</content>
+  <content contentuid="hf51cce8109cc5fbf8fbc3e9136e27209" version="1">Bloodstitch</content>
+  <content contentuid="h758c5f68892c581b9cf1cc703f52ce7b" version="1">You regain a Hit Point Die for each creature your Bloodstitch reduces to 0 Hit Points.</content>
+  <content contentuid="hbe5d0dc293625784ab0dc7ae90da4c1f" version="1">Bloodstitch</content>
+  <content contentuid="h70ed056315bc50dea0f701e5e6fdcb96" version="1">As a Magic action, spend 3 Hit Point Dice (Sangromancy Dice) to loose needle-like shards of blood in a 9 m (30 ft) emanation. Each enemy makes a Dexterity saving throw against your spell save DC, taking 3d8 Necrotic damage on a failed save or half as much on a success. Each creature reduced to 0 Hit Points gives you back one Hit Point Die. Once per Short or Long Rest.</content>
+  <content contentuid="h16ad6ecf059951ed972da0c36715dcd1" version="1">Bloody Exit: Teleport</content>
+  <content contentuid="he9ef213c757957dbba9c992532535772" version="1">Teleport up to 9 m (30 ft) to an unoccupied space you can see.</content>
+  <content contentuid="h68ff484e383954fe93329083561e2253" version="1">Bloody Exit: Strike</content>
+  <content contentuid="h2de411c359eb582d9aa859f1af3f2268" version="1">Make one melee weapon attack; on a hit it deals an extra 5d8 Necrotic damage.</content>
+  <content contentuid="hc33f6960895551f994f68521d87bc53c" version="1">Bloody Exit</content>
+  <content contentuid="h901cdd2b3ce65857a4de81fc9db8b2ff" version="1">When an attack roll hits you, you can use your Reaction and spend 5 Hit Point Dice (Sangromancy Dice): the attack misses, you strike back with one melee weapon attack, which deals an extra 5d8 Necrotic damage on a hit, and until the end of your next turn you can teleport up to 9 m (30 ft) to an unoccupied space you can see without an action. Once per Short or Long Rest.</content>
+  <content contentuid="h825fcfee06b45289bbc308551e98ce94" version="1">Bloody Exit</content>
+  <content contentuid="h459dec5d58b1506da83ebb7c02752532" version="1">When an attack roll hits you, you can use your Reaction and spend 5 Hit Point Dice (Sangromancy Dice): the attack misses, you strike back with one melee weapon attack, which deals an extra 5d8 Necrotic damage on a hit, and until the end of your next turn you can teleport up to 9 m (30 ft) to an unoccupied space you can see without an action. Once per Short or Long Rest.</content>
+  <content contentuid="hbe13cad412b45a1eaa520983894dedba" version="1">Bloodstitch</content>
+  <content contentuid="he837ceefb5095274b121a740fa341682" version="1">Your Bloodstitch is fresh: a creature that falls to it gives you back a Hit Point Die.</content>
+  <content contentuid="hf97ee52e1c6d5e94a4d9c852c18bf72a" version="1">Bloody Exit</content>
+  <content contentuid="h070bcb3bc0265220a1fc7f7c4d533e06" version="1">You can teleport up to 9 m (30 ft) to an unoccupied space you can see, without an action.</content>
+  <content contentuid="ha53565681b9a523dad2d325d00bae0c1" version="1">Bloody Exit</content>
+  <content contentuid="h1fc9e85b3aec5a13af7f8e90baafdbba" version="1">Bloody Exit can be used once per Short or Long Rest.</content>
 </contentList>
