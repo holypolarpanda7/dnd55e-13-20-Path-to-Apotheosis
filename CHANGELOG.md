@@ -2,10 +2,6 @@
 
 ## v1.0.2.0 - 2026-10-17
 
-- Sanguine Thief 13-20, Dark Sacrament / Viscous Sheath tests, dnd55e 4.13.9.0 (#38) (2026-10-17)
-
-## Unreleased
-
 - Built against DnD 5.5e All-in-One BEYOND 4.13.9.0 (tested through the Bard 1-20 build; the Bard level 7-12 spell picks that DnD 5.5e moved to the class progression sit under the 13-20 picks as before).
 - Sanguine Thief (Grim Hollow rogue, new in DnD 5.5e 4.13.9.0): levels 13-20. Third-caster slots as the Arcane Trickster (3rd-level at 13 and 16, 4th-level at 19) with picks from new Sanguine Thief 3rd and 4th level spell lists (Wizard lists plus Sangromancy), Sangromancy Dice grow with the Sneak Attack dice (7 / 8 / 9 / 10), Bloodstitch at 13 (Magic action, 3 dice, 30 ft emanation, Dexterity save, 3d8 Necrotic; a creature it drops gives a die back) and Bloody Exit at 17 (Reaction, 5 dice: the attack misses, you strike back for +5d8 Necrotic if the attacker is within 3 m, and may teleport 30 ft without an action on your next turn).
 - Dark Sacrament and Viscous Sheath (new Sangromancy spells in DnD 5.5e 4.13.8.0) upcast to 7th-9th level with their Hit Point Dice costs, and work with Sanguine Vigor.
