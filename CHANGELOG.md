@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.2.0 - 2026-10-17
+
+- Sanguine Thief 13-20, Dark Sacrament / Viscous Sheath tests, dnd55e 4.13.9.0 (#38) (2026-10-17)
+
 ## Unreleased
 
 - Built against DnD 5.5e All-in-One BEYOND 4.13.9.0 (tested through the Bard 1-20 build; the Bard level 7-12 spell picks that DnD 5.5e moved to the class progression sit under the 13-20 picks as before).
