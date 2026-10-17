@@ -131,7 +131,7 @@ G.interrupt("Interrupt_Apo_BloodyExit", "Bloody Exit", BE_TEXT,
                            "IsFlatValueInterruptInteresting(99, context.Source) and not AnyEntityIsItem()",
              "Cost": "ReactionActionPoint:1;ApoBloodyExit:1;HitPointDice08:5",
              "Properties": "IF(HasInterruptedAttack()):AdjustRoll(-99);ApplyStatus(OBSERVER_OBSERVER,APO_BLOODY_EXIT_STEP,100,2);"
-                           "UseSpell(OBSERVER_SOURCE,Target_Apo_BloodyExit_Strike,true,true,true)",
+                           "IF(not DistanceToEntityGreaterThan(3,context.ObserverPosition,context.Source)):UseSpell(OBSERVER_SOURCE,Target_Apo_BloodyExit_Strike,true,true,true)",
              "InterruptDefaultValue": "Ask;Enabled"},
             icon="Apo_Spell_BloodyExit",
             comment="OnPostRoll + AdjustRoll as the Shield spell (Interrupt_MAG_Shield); the cost is a Reaction and five d8 Hit Point Dice.")
