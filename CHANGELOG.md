@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Fixed: multiclassed spellcasters never got 7th-, 8th- or 9th-level spell slots (e.g. Bard 16 / Fighter 1 stopped at 6th-level slots). The game's multiclass spell slot table stopped at caster level 12; it now continues to 20 like the full casters' (7th at 13, 8th at 15, 9th at 17, then a 5th, 6th and 7th at 18-20). Reported on Nexus, #37.
+- Fixed: Font of Magic stopped turning spell slots into Sorcery Points at 14 points, so from Sorcerer level 15 you could never convert back up to your maximum. The ceiling is now your Sorcerer level from 15 on (20 at level 20), as the rules say ("You can't have more Sorcery Points than the number shown in the table for your level"). Font of Magic can now also convert 6th- to 9th-level slots (6 to 9 points), which the rules allow. Reported on Nexus.
 
 ## v1.0.2.0 - 2026-10-17
 

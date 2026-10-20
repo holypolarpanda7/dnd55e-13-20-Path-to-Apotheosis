@@ -96,3 +96,79 @@ new entry "Target_SneakAttack_Poison"
 type "SpellData"
 using "Target_SneakAttack_Poison"
 data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(LevelMapValue(VenomousStrike), Poison,,,0,,true,true);ExecuteWeaponFunctors(MainHand);IF(HasPassive('CunningStrike_Poison',context.Source) and not SavingThrow(Ability.Constitution,CalculateSpellDC(Ability.Dexterity, context.Source))):ApplyStatus(CUNNINGSTRIKE_POISON,100,10);IF(HasPassive('CunningStrike_Trip',context.Source) and TargetSizeEqualOrSmaller(Size.Large) and not SavingThrow(Ability.Dexterity,CalculateSpellDC(Ability.Dexterity, context.Source))):ApplyStatus(PRONE,100,2);IF(HasPassive('CunningStrike_Withdraw',context.Source)):ApplyStatus(SELF,CUNNINGSTRIKE_WITHDRAW,100,1);IF(HasPassive('CunningStrike_Terrify',context.Source) and not SavingThrow(Ability.Wisdom,CalculateSpellDC(Ability.Dexterity, context.Source))):ApplyStatus(FRIGHTENED,100,10);IF(HasPassive('CunningStrike_Daze',context.Source) and not SavingThrow(Ability.Constitution,CalculateSpellDC(Ability.Dexterity, context.Source))):ApplyStatus(APO_CUNNINGSTRIKE_DAZED,100,1);IF(HasPassive('CunningStrike_KnockOut',context.Source) and not SavingThrow(Ability.Constitution,CalculateSpellDC(Ability.Dexterity, context.Source))):ApplyStatus(APO_CUNNINGSTRIKE_KNOCKED_OUT,100,10);IF(HasPassive('CunningStrike_Obscure',context.Source) and not SavingThrow(Ability.Dexterity,CalculateSpellDC(Ability.Dexterity, context.Source))):ApplyStatus(BLINDED,100,1)"
+
+// Font of Magic cap = Sorcerer level from 15 (gen_rules_fixes.py)
+new entry "Shout_CreateSorceryPoints_1"
+type "SpellData"
+using "Shout_CreateSorceryPoints_1"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',14,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',15,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',16,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',17,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',18,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',19,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',20,0,false,false,context.Source))"
+
+// Font of Magic cap = Sorcerer level from 15 (gen_rules_fixes.py)
+new entry "Shout_CreateSorceryPoints_2"
+type "SpellData"
+using "Shout_CreateSorceryPoints_2"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',13,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',14,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',15,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',16,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',17,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',18,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',19,0,false,false,context.Source))"
+
+// Font of Magic cap = Sorcerer level from 15 (gen_rules_fixes.py)
+new entry "Shout_CreateSorceryPoints_3"
+type "SpellData"
+using "Shout_CreateSorceryPoints_3"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',12,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',13,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',14,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',15,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',16,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',17,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',18,0,false,false,context.Source))"
+
+// Font of Magic cap = Sorcerer level from 15 (gen_rules_fixes.py)
+new entry "Shout_CreateSorceryPoints_4"
+type "SpellData"
+using "Shout_CreateSorceryPoints_4"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',11,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',12,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',13,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',14,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',15,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',16,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',17,0,false,false,context.Source))"
+
+// Font of Magic cap = Sorcerer level from 15 (gen_rules_fixes.py)
+new entry "Shout_CreateSorceryPoints_5"
+type "SpellData"
+using "Shout_CreateSorceryPoints_5"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',10,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',11,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',12,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',13,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',14,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',15,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',16,0,false,false,context.Source))"
+
+new entry "Shout_CreateSorceryPoints_6"
+type "SpellData"
+using "Shout_CreateSorceryPoints_5"
+data "DisplayName" "he220d6f82b6254b78a47cb7642a5d9a7"
+data "Description" "h094b70c9e1285ed0a70c5349f98f6c21"
+data "SpellProperties" "ApplyStatus(SORCERYPOINT_6,100,-1)"
+data "UseCosts" "SpellSlotsGroup:1:1:6;"
+data "PowerLevel" "6"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',9,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',10,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',11,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',12,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',13,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',14,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',15,0,false,false,context.Source))"
+
+new entry "Shout_CreateSorceryPoints_7"
+type "SpellData"
+using "Shout_CreateSorceryPoints_5"
+data "DisplayName" "h78cab53754c45c85b912bd34b1d62ac0"
+data "Description" "hd8cc382edc305b62b890849ddfddb17f"
+data "SpellProperties" "ApplyStatus(SORCERYPOINT_7,100,-1)"
+data "UseCosts" "SpellSlotsGroup:1:1:7;"
+data "PowerLevel" "7"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',8,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',9,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',10,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',11,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',12,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',13,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',14,0,false,false,context.Source))"
+
+new entry "Shout_CreateSorceryPoints_8"
+type "SpellData"
+using "Shout_CreateSorceryPoints_5"
+data "DisplayName" "h355bc35f22e35678a558eb2c41a9101e"
+data "Description" "h838e31f27f06556fa12f733412a1d852"
+data "SpellProperties" "ApplyStatus(SORCERYPOINT_8,100,-1)"
+data "UseCosts" "SpellSlotsGroup:1:1:8;"
+data "PowerLevel" "8"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',7,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',8,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',9,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',10,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',11,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',12,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',13,0,false,false,context.Source))"
+
+new entry "Shout_CreateSorceryPoints_9"
+type "SpellData"
+using "Shout_CreateSorceryPoints_5"
+data "DisplayName" "hdd99da50f3b755ca95bd943ee6c08486"
+data "Description" "hc8fc9ff83e4a5a5aa0f4874a90212287"
+data "SpellProperties" "ApplyStatus(SORCERYPOINT_9,100,-1)"
+data "UseCosts" "SpellSlotsGroup:1:1:9;"
+data "PowerLevel" "9"
+data "RequirementConditions" "(not HasActionResource('SorceryPoint',6,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(15,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',7,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(16,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',8,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(17,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',9,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(18,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',10,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(19,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',11,0,false,false,context.Source)) or (ClassLevelHigherOrEqualThan(20,'Sorcerer',context.Source) and not HasActionResource('SorceryPoint',12,0,false,false,context.Source))"
+
+// extended by gen_rules_fixes.py (re-read from dnd55e at each regen)
+new entry "Shout_CreateSorceryPoints"
+type "SpellData"
+using "Shout_CreateSorceryPoints"
+data "ContainerSpells" "Shout_CreateSorceryPoints_1;Shout_CreateSorceryPoints_2;Shout_CreateSorceryPoints_3;Shout_CreateSorceryPoints_4;Shout_CreateSorceryPoints_5;Shout_CreateSorceryPoints_6;Shout_CreateSorceryPoints_7;Shout_CreateSorceryPoints_8;Shout_CreateSorceryPoints_9"

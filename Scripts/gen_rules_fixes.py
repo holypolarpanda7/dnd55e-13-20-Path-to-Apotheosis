@@ -168,6 +168,48 @@ EXISTING[SCION_11] = None      # removed a passive dnd55e no longer grants at 11
 EXISTING[SCION_13] = {"PassivesAdded": "DeadThree_13_AuraOfMalevolence"}
 EXISTING[SCION_17] = {"PassivesAdded": "DeadThree_17_DreadIncarnate"}
 
+# ---------------------------------------------------------------- Sorcerer Font of Magic cap (SRD 5.2.1, 2026-10-19)
+# "You can't have more Sorcery Points than the number shown in the table for your level" (= Sorcerer level). dnd55e stops
+# slot -> point conversion at a flat 14 points (`not HasActionResource('SorceryPoint', 15-n, ...)` for an n-level slot), which
+# is above the table through 14 but below it from 15. We keep dnd55e's cap and raise it to the Sorcerer level from 15 on.
+# The rule converts a slot of any level; dnd55e offers 1st-5th, so 6th-9th are added (new SORCERYPOINT_6-9 statuses).
+SP_HAS = "HasActionResource('SorceryPoint',{},0,false,false,context.Source)"
+caps = set()
+for n in range(1, 6):
+    req = dnd(f"Shout_CreateSorceryPoints_{n}", "RequirementConditions")
+    m = re.fullmatch(r"\s*not HasActionResource\('SorceryPoint',\s*(\d+),\s*0,\s*false,\s*false,\s*context\.Source\)\s*;?\s*", req)
+    if not m:
+        raise SystemExit(f"Shout_CreateSorceryPoints_{n}.RequirementConditions changed in dnd55e ({req!r}) - update gen_rules_fixes.py")
+    caps.add(int(m.group(1)) + n - 1)
+if len(caps) != 1:
+    raise SystemExit(f"dnd55e's Font of Magic ceilings differ by slot level ({caps}) - update gen_rules_fixes.py")
+SP_CAP = caps.pop()                         # dnd55e's points ceiling (14)
+
+
+def sp_req(n):
+    """May convert an n-level slot: the points after it stay within dnd55e's ceiling, or within the Sorcerer level from 15."""
+    raised = " or ".join(f"(ClassLevelHigherOrEqualThan({lvl},'Sorcerer',context.Source) and not {SP_HAS.format(lvl - n + 1)})"
+                         for lvl in range(SP_CAP + 1, 21))
+    return f"(not {SP_HAS.format(SP_CAP - n + 1)}) or {raised}"
+
+
+for n in range(1, 6):
+    entry = f"Shout_CreateSorceryPoints_{n}"
+    G.SP.append(G.entry(entry, "SpellData", {"RequirementConditions": sp_req(n)},
+                        using=entry, comment="Font of Magic cap = Sorcerer level from 15 (gen_rules_fixes.py)"))
+ORD = {6: "6th", 7: "7th", 8: "8th", 9: "9th"}
+for n in range(6, 10):
+    G.S.append(G.entry(f"SORCERYPOINT_{n}", "StatusData", {"Boosts": f"ActionResource(SorceryPoint,{n},0)",
+                                                           "DescriptionParams": str(n)}, using="SORCERYPOINT_1"))
+    G.spell(f"Shout_CreateSorceryPoints_{n}", f"Create Sorcery Points: {n}",
+            f"Expend a {ORD[n]}-level spell slot to gain {n} Sorcery Points. (You can't have more Sorcery Points than your "
+            "Sorcerer level.)",
+            {"SpellProperties": f"ApplyStatus(SORCERYPOINT_{n},100,-1)", "UseCosts": f"SpellSlotsGroup:1:1:{n};",
+             "PowerLevel": str(n), "DescriptionParams": None, "RequirementConditions": sp_req(n)},
+            using="Shout_CreateSorceryPoints_5")
+extend("Shout_CreateSorceryPoints", "ContainerSpells", "SpellData",
+       ";".join(f"Shout_CreateSorceryPoints_{n}" for n in range(6, 10)))
+
 RETIRED_PASSIVES = ["Rogue_SubtleStrikes", "Paladin_CleansingTouch", "Assassin_InfiltrationExpertise", "Artificer_MagicItemSavant",
                     "Banneret_InspiringSurge_Improved", "DeadThree_UnholyInfiltration", "DeadThree_11_MurderousIntent"]
 RETIRED_SPELLS = ["Shout_Apotheosis_CleansingTouch", "Shout_Apotheosis_InspiringSurge"]
