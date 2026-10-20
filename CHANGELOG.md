@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v1.0.3.0 - 2026-10-20
 
 - Fixed: multiclassed spellcasters never got 7th-, 8th- or 9th-level spell slots (e.g. Bard 16 / Fighter 1 stopped at 6th-level slots). The game's multiclass spell slot table stopped at caster level 12; it now continues to 20 like the full casters' (7th at 13, 8th at 15, 9th at 17, then a 5th, 6th and 7th at 18-20). Reported on Nexus, #37.
 - Fixed: at Bard 13-16 the Replace Spell screen listed Magical Secrets spells above your highest spell slot (8th and 9th level at 13), and picking one silently did nothing. Bard 13-14 now learns and replaces from Magical Secrets up to 7th level, 15-16 up to 8th, 17-20 the full list. (Spells another mod adds to Magical Secrets show from 17.) #37.
