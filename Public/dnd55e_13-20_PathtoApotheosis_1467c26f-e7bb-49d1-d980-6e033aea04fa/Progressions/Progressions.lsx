@@ -694,7 +694,7 @@
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)"/>
                     <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel7"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00170002-0001-0001-0001-000000000003,1,1,BardMagicalSecrets)"/>
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Bard"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -702,7 +702,7 @@
                     <attribute id="UUID" type="guid" value="99999999-9999-9999-9999-999999999901"/>
                 </node>
                 <node id="Progression">
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,0,1,BardMagicalSecrets)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00170002-0001-0001-0001-000000000003,0,1,BardMagicalSecrets)"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice08,1,0)"/>
                     <attribute id="Level" type="uint8" value="14"/>
                     <attribute id="Name" type="LSString" value="Bard"/>
@@ -713,7 +713,7 @@
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,8);ActionResource(HitPointDice08,1,0)"/>
                     <attribute id="PassivesAdded" type="LSString" value="UnlockedSpellSlotLevel8"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00180002-0001-0001-0001-000000000003,1,1,BardMagicalSecrets)"/>
                     <attribute id="Level" type="uint8" value="15"/>
                     <attribute id="Name" type="LSString" value="Bard"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -722,7 +722,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="AllowImprovement" type="bool" value="true"/>
-                    <attribute id="Selectors" type="LSString" value="SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,0,1,BardMagicalSecrets)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(00180002-0001-0001-0001-000000000003,0,1,BardMagicalSecrets)"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(HitPointDice08,1,0)"/>
                     <attribute id="Level" type="uint8" value="16"/>
                     <attribute id="Name" type="LSString" value="Bard"/>
