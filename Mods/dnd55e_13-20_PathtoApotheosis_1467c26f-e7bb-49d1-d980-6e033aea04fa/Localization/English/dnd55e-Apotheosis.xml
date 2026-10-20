@@ -4636,4 +4636,12 @@
   <content contentuid="h070bcb3bc0265220a1fc7f7c4d533e06" version="1">You can teleport up to 9 m (30 ft) to an unoccupied space you can see, without an action.</content>
   <content contentuid="ha53565681b9a523dad2d325d00bae0c1" version="1">Bloody Exit</content>
   <content contentuid="h1fc9e85b3aec5a13af7f8e90baafdbba" version="1">Bloody Exit can be used once per Short or Long Rest.</content>
+  <content contentuid="he220d6f82b6254b78a47cb7642a5d9a7" version="1">Create Sorcery Points: 6</content>
+  <content contentuid="h094b70c9e1285ed0a70c5349f98f6c21" version="1">Expend a 6th-level spell slot to gain 6 Sorcery Points. (You can't have more Sorcery Points than your Sorcerer level.)</content>
+  <content contentuid="h78cab53754c45c85b912bd34b1d62ac0" version="1">Create Sorcery Points: 7</content>
+  <content contentuid="hd8cc382edc305b62b890849ddfddb17f" version="1">Expend a 7th-level spell slot to gain 7 Sorcery Points. (You can't have more Sorcery Points than your Sorcerer level.)</content>
+  <content contentuid="h355bc35f22e35678a558eb2c41a9101e" version="1">Create Sorcery Points: 8</content>
+  <content contentuid="h838e31f27f06556fa12f733412a1d852" version="1">Expend an 8th-level spell slot to gain 8 Sorcery Points. (You can't have more Sorcery Points than your Sorcerer level.)</content>
+  <content contentuid="hdd99da50f3b755ca95bd943ee6c08486" version="1">Create Sorcery Points: 9</content>
+  <content contentuid="hc8fc9ff83e4a5a5aa0f4874a90212287" version="1">Expend a 9th-level spell slot to gain 9 Sorcery Points. (You can't have more Sorcery Points than your Sorcerer level.)</content>
 </contentList>

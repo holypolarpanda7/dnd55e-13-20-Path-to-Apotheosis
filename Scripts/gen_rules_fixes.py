@@ -202,7 +202,7 @@ for n in range(6, 10):
     G.S.append(G.entry(f"SORCERYPOINT_{n}", "StatusData", {"Boosts": f"ActionResource(SorceryPoint,{n},0)",
                                                            "DescriptionParams": str(n)}, using="SORCERYPOINT_1"))
     G.spell(f"Shout_CreateSorceryPoints_{n}", f"Create Sorcery Points: {n}",
-            f"Expend a {ORD[n]}-level spell slot to gain {n} Sorcery Points. (You can't have more Sorcery Points than your "
+            f"Expend {'an' if n == 8 else 'a'} {ORD[n]}-level spell slot to gain {n} Sorcery Points. (You can't have more Sorcery Points than your "
             "Sorcerer level.)",
             {"SpellProperties": f"ApplyStatus(SORCERYPOINT_{n},100,-1)", "UseCosts": f"SpellSlotsGroup:1:1:{n};",
              "PowerLevel": str(n), "DescriptionParams": None, "RequirementConditions": sp_req(n)},
