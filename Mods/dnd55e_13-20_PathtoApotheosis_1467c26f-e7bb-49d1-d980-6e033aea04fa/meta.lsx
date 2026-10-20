@@ -133,7 +133,7 @@
                     <attribute id="Name" type="LSString" value="dnd55e_13-20_PathtoApotheosis"/>
                     <attribute id="NumPlayers" type="uint8" value="4"/>
                     <attribute id="PhotoBooth" type="FixedString" value=""/>
-                    <attribute id="PublishHandle" type="uint64" value="0"/>
+                    <attribute id="PublishHandle" type="uint64" value="6450324"/>
                     <attribute id="StartupLevelName" type="FixedString" value=""/>
                     <attribute id="UUID" type="FixedString" value="1467c26f-e7bb-49d1-d980-6e033aea04fa"/>
                     <attribute id="Version64" type="int64" value="36028801313931264"/>
