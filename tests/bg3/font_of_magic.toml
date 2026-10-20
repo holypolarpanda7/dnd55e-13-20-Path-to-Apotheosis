@@ -1,0 +1,79 @@
+# Font of Magic conversions (Shout_CreateSorceryPoints_1..9): dnd55e's 1st-5th and our 6th-9th (PTA #44), for bg3_lint_container_tests.
+# UseSpell never pays costs or checks RequirementConditions, so these prove the status/points path; the ceiling and the greyed-out
+# levels were checked through the hotbar's CanUse on 2026-10-20 (PR #44). Run: bg3_test_run("apotheosis", "<id>").
+
+[suite]
+name = "Font of Magic: slot to Sorcery Points"
+mode = "script"
+
+[[case]]
+id = "cont-fontofmagic-1"
+title = "Shout_CreateSorceryPoints_1: a level 1 slot gives 1 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_1"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 1 }]
+
+[[case]]
+id = "cont-fontofmagic-2"
+title = "Shout_CreateSorceryPoints_2: a level 2 slot gives 2 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_2"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 2 }]
+
+[[case]]
+id = "cont-fontofmagic-3"
+title = "Shout_CreateSorceryPoints_3: a level 3 slot gives 3 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_3"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 3 }]
+
+[[case]]
+id = "cont-fontofmagic-4"
+title = "Shout_CreateSorceryPoints_4: a level 4 slot gives 4 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_4"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 4 }]
+
+[[case]]
+id = "cont-fontofmagic-5"
+title = "Shout_CreateSorceryPoints_5: a level 5 slot gives 5 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_5"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 5 }]
+
+[[case]]
+id = "cont-fontofmagic-6"
+title = "Shout_CreateSorceryPoints_6: a level 6 slot gives 6 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_6"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 6 }]
+
+[[case]]
+id = "cont-fontofmagic-7"
+title = "Shout_CreateSorceryPoints_7: a level 7 slot gives 7 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_7"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 7 }]
+
+[[case]]
+id = "cont-fontofmagic-8"
+title = "Shout_CreateSorceryPoints_8: a level 8 slot gives 8 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_8"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 8 }]
+
+[[case]]
+id = "cont-fontofmagic-9"
+title = "Shout_CreateSorceryPoints_9: a level 9 slot gives 9 Sorcery Points"
+spell = "Shout_CreateSorceryPoints_9"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(SorceryPoint,20,0)" }, { target = "host", resource = "SorceryPoint", level = 0, amount = 0 }]
+expect = [{ resource = "SorceryPoint", level = 0, amount_change = 9 }]
