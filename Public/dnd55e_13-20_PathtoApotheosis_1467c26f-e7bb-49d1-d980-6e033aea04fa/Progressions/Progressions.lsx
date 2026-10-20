@@ -4592,6 +4592,70 @@
                     <attribute id="UUID" type="guid" value="4b0195e2-9e53-5ec0-9bc4-c552ab5457dd"/>
                 </node>
                 <!-- SANGUINE THIEF 13-20 END -->
+                <!-- MULTICLASS SPELL SLOTS 13-20 BEGIN (generated) -->
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7)"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="MulticlassSpellSlots"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="a6f80028-fee2-41e0-bd24-d2f0758d936f"/>
+                    <attribute id="UUID" type="guid" value="f4f1cb7b-4cdd-5760-9008-11a0ce7c5d5c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="MulticlassSpellSlots"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="a6f80028-fee2-41e0-bd24-d2f0758d936f"/>
+                    <attribute id="UUID" type="guid" value="b6702ef0-e46e-5ad6-8306-5eaddca6cbf2"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,8)"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="MulticlassSpellSlots"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="a6f80028-fee2-41e0-bd24-d2f0758d936f"/>
+                    <attribute id="UUID" type="guid" value="af6fdb0b-8c8e-55d8-99dd-59feb544265f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="MulticlassSpellSlots"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="a6f80028-fee2-41e0-bd24-d2f0758d936f"/>
+                    <attribute id="UUID" type="guid" value="e94951e9-5c92-5de5-b1e4-f65e94e6fefd"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,9)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="MulticlassSpellSlots"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="a6f80028-fee2-41e0-bd24-d2f0758d936f"/>
+                    <attribute id="UUID" type="guid" value="3a0170c6-51cf-5b5a-ba6f-2ef60a2f68a5"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,5)"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="MulticlassSpellSlots"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="a6f80028-fee2-41e0-bd24-d2f0758d936f"/>
+                    <attribute id="UUID" type="guid" value="9822bf79-f687-5409-aaed-1200784ed5a6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,6)"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="MulticlassSpellSlots"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="a6f80028-fee2-41e0-bd24-d2f0758d936f"/>
+                    <attribute id="UUID" type="guid" value="9cfcb9a7-f724-5bb3-8282-0f6253cb0166"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7)"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="MulticlassSpellSlots"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="a6f80028-fee2-41e0-bd24-d2f0758d936f"/>
+                    <attribute id="UUID" type="guid" value="944f76e8-824f-55db-909d-b114a7e98127"/>
+                </node>
+                <!-- MULTICLASS SPELL SLOTS 13-20 END -->
             </children>
         </node>
     </region>
