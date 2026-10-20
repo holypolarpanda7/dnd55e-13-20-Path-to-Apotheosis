@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fixed: multiclassed spellcasters never got 7th-, 8th- or 9th-level spell slots (e.g. Bard 16 / Fighter 1 stopped at 6th-level slots). The game's multiclass spell slot table stopped at caster level 12; it now continues to 20 like the full casters' (7th at 13, 8th at 15, 9th at 17, then a 5th, 6th and 7th at 18-20). Reported on Nexus, #37.
+
 ## v1.0.2.0 - 2026-10-17
 
 - Built against DnD 5.5e All-in-One BEYOND 4.13.9.0 (tested through the Bard 1-20 build; the Bard level 7-12 spell picks that DnD 5.5e moved to the class progression sit under the 13-20 picks as before).
