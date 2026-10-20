@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.3.0 - 2026-10-20
+
+- Font of Magic container test cases (1..9) (#46) (2026-10-20)
+- Bard 13-16 Magical Secrets capped at the bard's slot levels (#37) (#45) (2026-10-20)
+- Font of Magic: Sorcery Point ceiling = Sorcerer level from 15, convert 6th-9th slots (#44) (2026-10-20)
+- Multiclass spell slots for caster levels 13-20 (#37) (#43) (2026-10-19)
+- modio: description for v1.0.2 (dnd55e 4.13.9.0, Sanguine Thief) (#42) (2026-10-19)
+- meta.lsx: PublishHandle = 6450324 (the mod.io mod) so Toolkit publishes update it (#41) (2026-10-19)
+- nexus: page spec for v1.0.2.0 (4.13.9.0, Sanguine Thief) (#40) (2026-10-19)
+
 ## Unreleased
 
 - Fixed: multiclassed spellcasters never got 7th-, 8th- or 9th-level spell slots (e.g. Bard 16 / Fighter 1 stopped at 6th-level slots). The game's multiclass spell slot table stopped at caster level 12; it now continues to 20 like the full casters' (7th at 13, 8th at 15, 9th at 17, then a 5th, 6th and 7th at 18-20). Reported on Nexus, #37.
