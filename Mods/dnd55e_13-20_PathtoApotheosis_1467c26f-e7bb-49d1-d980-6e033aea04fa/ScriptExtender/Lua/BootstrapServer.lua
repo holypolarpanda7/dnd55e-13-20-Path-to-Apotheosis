@@ -1139,6 +1139,13 @@ if Ext and type(Ext.Require) == "function" then
         Log.Warn("SpellMastery bootstrap load failed: " .. tostring(smOrErr))
     end
 
+    local okOc, ocOrErr = pcall(Ext.Require, "Overchannel.lua")
+    if okOc and type(ocOrErr) == "table" then
+        Log.Info("Overchannel loaded at bootstrap")
+    else
+        Log.Warn("Overchannel bootstrap load failed: " .. tostring(ocOrErr))
+    end
+
     local okTs, tsOrErr = pcall(Ext.Require, "TimeStop.lua")
     if okTs and type(tsOrErr) == "table" then
         Log.Info("TimeStop loaded at bootstrap")
