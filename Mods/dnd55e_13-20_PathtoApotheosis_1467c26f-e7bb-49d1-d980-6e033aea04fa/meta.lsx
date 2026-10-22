@@ -113,11 +113,11 @@
                         </node>
                         <node id="ModuleShortDesc">
                             <attribute id="Folder" type="LSString" value="DnD2024_897914ef-5c96-053c-44af-0be823f895fe"/>
-                            <attribute id="MD5" type="LSString" value="efea63b3aab05a3e60db5da64944d754"/>
+                            <attribute id="MD5" type="LSString" value="318021117196814e8218ea7dd5d43041"/>
                             <attribute id="Name" type="LSString" value="DnD PHB 2024 All in One"/>
                             <attribute id="PublishHandle" type="uint64" value="4419649"/>
                             <attribute id="UUID" type="guid" value="897914ef-5c96-053c-44af-0be823f895fe"/>
-                            <attribute id="Version64" type="int64" value="145944794751827968"/>
+                            <attribute id="Version64" type="int64" value="145944796899311621"/>
                         </node>
                     </children>
                 </node>

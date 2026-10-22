@@ -76,6 +76,21 @@ using "Interrupt_Shield_Wizard_6"
 data "Cost" "ReactionActionPoint:1;SpellSlotsGroup:1:1:9"
 data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(MagicMissileSpellCheck()):SetRoll(0);IF(MagicMissileSpellCheck()):AdjustRoll(-99,All);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);UseSpell(OBSERVER_OBSERVER,Shout_Shield_ArcaneWard_9,true,true,true)"
 
+new entry "Interrupt_Smite_Divine_7"
+type "InterruptData"
+using "Interrupt_Smite_Divine_6"
+data "Cost" "BonusActionPoint:1;SpellSlotsGroup:1:1:7"
+
+new entry "Interrupt_Smite_Divine_8"
+type "InterruptData"
+using "Interrupt_Smite_Divine_6"
+data "Cost" "BonusActionPoint:1;SpellSlotsGroup:1:1:8"
+
+new entry "Interrupt_Smite_Divine_9"
+type "InterruptData"
+using "Interrupt_Smite_Divine_6"
+data "Cost" "BonusActionPoint:1;SpellSlotsGroup:1:1:9"
+
 new entry "Interrupt_Smite_Divine_Critical_7"
 type "InterruptData"
 using "Interrupt_Smite_Divine_Critical_6"

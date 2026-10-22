@@ -34,6 +34,9 @@ NUM = re.compile(r"(\d+(?:\.\d+)?)")
 IDENT = re.compile(r"[A-Za-z_][A-Za-z0-9_]*$")
 
 
+LEVELLESS_SLOT_FEATURES = {"Target_MoonlightStep"}  # roots with no Level whose slot-priced variants still get 7-9
+
+
 class Stats:
     """Resolved stats across every layer, ignoring this generator's own output (so reruns are stable)."""
 
@@ -70,11 +73,16 @@ class Stats:
             pl = f.get("PowerLevel")  # declared (a spell `using` an upcast inherits it)...
             root = pl and (self.get(name) or ("", {}))[1].get("RootSpellID")  # ...RootSpellID often inherited
             if root and pl and str(pl).isdigit():
-                roots.setdefault(root, {})[int(pl)] = name
+                lv = roots.setdefault(root, {})
+                if int(pl) in lv and lv[int(pl)] != name:  # 4.13.10: Theft of Vitae's D6/D8/D10/D12 variants share one RootSpellID
+                    root = root + ":" + re.sub(r"_\d+$", "", name)
+                    lv = roots.setdefault(root, {})
+                lv[int(pl)] = name
         out = {}
         for root, lv in roots.items():
-            r = self.get(root)
-            if max(lv) == 6 and r and str(r[1].get("Level", "0")).isdigit() and int(r[1].get("Level", "0")) > 0:
+            r = self.get(root.split(":")[0])
+            slotted = root in LEVELLESS_SLOT_FEATURES  # 4.13.10 Moonlight Step: a slot-priced feature with no Level
+            if max(lv) == 6 and r and str(r[1].get("Level", "0")).isdigit() and (int(r[1].get("Level", "0")) > 0 or slotted):
                 prev = lv.get(5) or (root if r[1].get("Level") == "5" else None)
                 out[root] = (prev, lv[6])
         return out
