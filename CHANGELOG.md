@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.4.0 - 2026-10-22
+
+- Fixed: Evoker Overchannel (level 14) added your Intelligence modifier to damage instead of what the rules say. It now maximizes the damage dice of your 1st- to 5th-level damaging spells. The first use after a Long Rest is free; each further use deals 2d12 Necrotic damage per spell level to you, +1d12 per level for every earlier use since that rest. Reported as #48.
+- Built against DnD 5.5e All-in-One BEYOND 4.13.10.5 (was 4.13.9.0). Theft of Vitae and Moonlight Step were restructured upstream; their 7th- to 9th-level versions are rebuilt on the new layout, and the Sneak Attack rules fixes and upcast copies follow the other 4.13.10 changes (#50, #51).
+
 ## v1.0.3.0 - 2026-10-20
 
 - Fixed: multiclassed spellcasters never got 7th-, 8th- or 9th-level spell slots (e.g. Bard 16 / Fighter 1 stopped at 6th-level slots). The game's multiclass spell slot table stopped at caster level 12; it now continues to 20 like the full casters' (7th at 13, 8th at 15, 9th at 17, then a 5th, 6th and 7th at 18-20). Reported on Nexus, #37.
