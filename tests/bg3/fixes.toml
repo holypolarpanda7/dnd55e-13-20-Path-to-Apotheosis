@@ -290,3 +290,49 @@ expect = [
   { cast_only = "A" },
   { target = "host", saves = { ability = "Strength", spell_only = true, n = [1, 99], failed = [1, 99], effect_status = "STRENGTH_DRAIN" } },
 ]
+
+[[case]]
+id = "fix55-reckless-base"
+title = "Reckless Attack (Base) gets Frenzy's Reckless Attack damage (3d6 at Barbarian 14) like dnd55e's own Reckless Attack (#55)"
+spell = "Target_RecklessAttack_Base"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", status = "RAGE_FRENZY_2" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "host", boost = "MinimumRollResult(Damage,20)" }]
+notes = "Dice maximised (MinimumRollResult), so 3d6 Frenzy = 18 on top of the weapon: at least 22; without Frenzy the hit stays under 20. Before the fix dnd55e's RecklessAttack() (an exact SpellId list) did not know our Target_RecklessAttack_* names."
+expect = [
+  { cast = true },
+  { target = "A", hp_change = [-90, -22] },
+]
+
+[[case]]
+id = "fix55-reckless-hamstring"
+title = "Hamstring Blow gets Frenzy's Reckless Attack damage (3d6 at Barbarian 14) like dnd55e's own Reckless Attack (#55)"
+spell = "Target_RecklessAttack_HamstringBlow"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 1.2 }]
+setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", status = "RAGE_FRENZY_2" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "host", boost = "MinimumRollResult(Damage,20)" }]
+notes = "Dice maximised (MinimumRollResult), so 3d6 Frenzy = 18 on top of the weapon: at least 22; without Frenzy the hit stays under 20. Before the fix dnd55e's RecklessAttack() (an exact SpellId list) did not know our Target_RecklessAttack_* names."
+expect = [
+  { cast = true },
+  { target = "A", hp_change = [-90, -22] },
+]
+
+[[case]]
+id = "fix48-overchannel-max"
+title = "Evoker Overchannel maximises a 3rd-level damage spell (Fireball 8d6 -> 48, half on a save) instead of adding Intelligence (#48)"
+spell = "Projectile_Fireball"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 16 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }]
+notes = "Un-maximised Fireball averages 28 (14 on a save); maximised is 48, or 24 on a save, so the floor of this range is above anything a normal roll reaches on a failed save."
+expect = [
+  { cast = true },
+  { target = "A", hp_change = [-48, -24] },
+]
