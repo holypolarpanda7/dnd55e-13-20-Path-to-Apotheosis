@@ -110,10 +110,13 @@ SNEAK = [("Interrupt_SneakAttack", "Properties", "InterruptData"), ("Interrupt_S
          ("Projectile_SneakAttack_Poison", "SpellSuccess", "SpellData"), ("Target_SneakAttack", "SpellSuccess", "SpellData"),
          ("Target_SneakAttack_Rakish", "SpellSuccess", "SpellData"), ("Target_SneakAttack_Poison", "SpellSuccess", "SpellData")]
 for entry, field, typ in SNEAK:
-    terrify = re.search(r"IF\(HasPassive\('CunningStrike_Terrify'[^;]*;?", dnd(entry, field))
+    terrify = re.search(r"IF\(\(?HasPassive\('CunningStrike_Terrify'[^;]*;?", dnd(entry, field))
     if not terrify:
         raise SystemExit(f"{entry}.{field}: dnd55e's Terrify clause moved - update gen_rules_fixes.py")
     clause = terrify.group(0).rstrip(";")
+    # 4.13.10: the Terrify clause also tests ImprovedCunningStrike_Terrify; the Devious options have no Improved twin
+    clause = re.sub(r"\(HasPassive\('CunningStrike_Terrify',context\.Source\) or HasPassive\('ImprovedCunningStrike_Terrify',context\.Source\)\)",
+                    "HasPassive('CunningStrike_Terrify',context.Source)", clause)
     adds = [clause.replace("CunningStrike_Terrify", f"CunningStrike_{key}").replace("Ability.Wisdom", f"Ability.{ab}")
             .replace("ApplyStatus(FRIGHTENED,100,10)", f"ApplyStatus({st},100,{turns})") for key, ab, st, turns, _ in DEVIOUS]
     extend(entry, field, typ, ";".join(adds))
