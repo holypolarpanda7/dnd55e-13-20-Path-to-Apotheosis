@@ -10,6 +10,7 @@
 - Fixed: Spell Mastery's free spells (Wizard 18) lost their spell properties: Hold Person, Web, Invisibility and others didn't need Concentration, harmful spells weren't marked as attacks, and Magic Missile, Burning Hands and Blindness were wrongly set up as spell menus. They now keep the real spell's properties. Reported as #60.
 - Changed: Evoker Overchannel (14) is a hotbar toggle (on by default). Toggle it off to cast normally and avoid the Necrotic damage. Requested in #59.
 - Removed eight unused feature entries that had no effect and were never granted (#57).
+- Fixed: Holy Aura, Divine Word, Storm of Vengeance, Control Weather, Antimagic Field and Conjure Celestial (and the Boon of Siberys copy of Control Weather) showed as an empty spell menu on the hotbar and couldn't be cast. Same cause as the Spell Mastery bug in #60.
 
 ## v1.0.4.0 - 2026-10-23
 

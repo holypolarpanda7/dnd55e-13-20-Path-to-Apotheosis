@@ -2686,7 +2686,7 @@ new entry "Shout_Apo_ControlWeather_EpicSiberys"
 type "SpellData"
 using "Shout_Apo_ControlWeather"
 data "UseCosts" "ActionPoint:1;EpicBoonSiberys:1"
-data "SpellFlags" "IsConcentration;IsSpell;IsHarmful;IsLinkedSpellContainer"
+data "SpellFlags" "IsConcentration;IsSpell;IsHarmful"
 data "DisplayName" "haae6fbb4157c55e582b8b59d583a557d"
 
 new entry "Shout_HeroesFeast_EpicSiberys"

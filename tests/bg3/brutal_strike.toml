@@ -1,7 +1,7 @@
 # Brutal Strike on dnd55e 4.14's model (2026-10-28): the effect is a toggle in the Barbarian_9_BrutalStrike ToggleGroup, the Reckless
 # Attack reaction (Interrupt_RecklessAttack, PTA override in Interrupt.txt) forgoes Advantage and marks the attack,
 # dnd55e's Barbarian_9_BrutalStrike deals 1d10 (+ Forceful / Hamstring), PTA's Barbarian_BrutalStrike_Improved adds Staggering /
-# Sundering (13), the two-effect toggles and the extra 1d10 (17). The reaction fires on a plain weapon attack (Target_MainHandAttack,
+# Sundering (13), the two-effect toggles (17); Barbarian_BrutalStrike_17 adds the extra 1d10 (17). The reaction fires on a plain weapon attack (Target_MainHandAttack,
 # known to every character). Run: bg3_test_run("apotheosis", "<id>").
 
 [suite]
@@ -72,8 +72,9 @@ setup = [{ target = "host", passive = "Barbarian_2_RecklessAttack" }, { target =
          { target = "host", passive = "Barbarian_BrutalStrike_17" },
          { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
          { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "host", boost = "MinimumRollResult(Damage,20)" }]
-notes = "Hamstring Blow (dnd55e's default-on toggle) is the effect. Three damage instances: the weapon, dnd55e's 1d10, PTA's 1d10 (10 each, maximised)."
-expect = [{ target = "A", status_applied = ["HAMSTRINGBLOW"] }, { target = "A", damage_count = { by = "host", count = [3, 3] } }]
+notes = "Hamstring Blow (dnd55e's default-on toggle) is the effect. The reaction marks the 17 die (BRUTAL_STRIKE_APO17) and Barbarian_BrutalStrike_17 consumes it on the hit; damage events merge per type and the host's own riders (e.g. a Cleric's Divine Strike) vary, so the die itself is read from the marker, not a damage count."
+expect = [{ target = "A", status_applied = ["HAMSTRINGBLOW"] }, { target = "host", status_applied = ["BRUTAL_STRIKE_APO17"] },
+          { target = "host", status_absent = ["BRUTAL_STRIKE_APO17", "BRUTAL_STRIKE_APO"] }]
 
 [[case]]
 id = "brutal-9-forceful-with-pta"
@@ -89,5 +90,4 @@ setup = [{ target = "host", passive = "Barbarian_2_RecklessAttack" }, { target =
          { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
          { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
 expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK", "FORCEFULBLOW"] }, { target = "A", status_applied = ["FORCEFULBLOW_TARGET"] },
-          { target = "A", status_absent = ["BRUTAL_STRIKE_STAGGERED", "BRUTAL_STRIKE_SUNDERED", "HAMSTRINGBLOW"] },
-          { target = "A", damage_count = { by = "host", count = [2, 2] } }]
+          { target = "A", status_absent = ["BRUTAL_STRIKE_STAGGERED", "BRUTAL_STRIKE_SUNDERED", "HAMSTRINGBLOW"] }]

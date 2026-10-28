@@ -61,11 +61,14 @@ data "Properties" "Highlighted"
 // dnd55e 4.14 Brutal Strike: a toggle in the Barbarian_9_BrutalStrike group picks the effect, the Reckless Attack reaction then forgoes
 // Advantage and applies BRUTAL_STRIKE, and Barbarian_9_BrutalStrike deals the 1d10 (+ Forceful/Hamstring) on the first Strength hit.
 // Interrupt_RecklessAttack (Interrupt.txt) also applies BRUTAL_STRIKE_APO, consumed here on the same attack: the
-// Staggering / Sundering effects, the level 17 two-effect toggles, and the level 17 extra 1d10 (2d10 in all). Own status, so the
-// order of the two OnAttack passives doesn't matter.
+// Staggering / Sundering effects and the level 17 two-effect toggles (the 17 extra 1d10 is Barbarian_BrutalStrike_17's). Own status, so the
+// order of the two OnAttack passives doesn't matter. Each PTA toggle keeps an APO_BST_* status while on (the base Metamagic
+// pattern) and conditions test those with one HasAnyStatus: long HasPassive(...) or ... chains here and in the interrupt hung
+// the save load at 94% (2026-10-28) - so did one 4.8K-character StatsFunctors
+// (effects + the 17 damage together); dnd55e's longest is ~3.7K. Kept as two passives.
 data "StatsFunctorContext" "OnAttack"
 data "Conditions" "IsAttack() and not IsReactionAttack() and HasStatus('BRUTAL_STRIKE_APO',context.Source);"
-data "StatsFunctors" "RemoveStatus(SELF,BRUTAL_STRIKE_APO);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsMeleeWeaponAttack()):DealDamage(1d10,MainMeleeWeaponDamageType,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsRangedWeaponAttack()):DealDamage(1d10,MainRangedWeaponDamageType,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsThrowAttackRoll()):DealDamage(1d10,ThrownWeaponDamageType,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsMeleeUnarmedAttack() and not HasPassive('ElementalAttunement_Acid',context.Source) and not HasPassive('ElementalAttunement_Cold',context.Source) and not HasPassive('ElementalAttunement_Fire',context.Source) and not HasPassive('ElementalAttunement_Lightning',context.Source) and not HasPassive('ElementalAttunement_Thunder',context.Source) and not HasPassive('KiEmpoweredStrikes',context.Source) and not HasPassive('Fractured_3_FaceOfRage_Toggle_Force',context.Source)):DealDamage(1d10,Bludgeoning,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Acid',context.Source)):DealDamage(1d10,Acid,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Cold',context.Source)):DealDamage(1d10,Cold,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Fire',context.Source)):DealDamage(1d10,Fire,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Lightning',context.Source)):DealDamage(1d10,Lightning,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Thunder',context.Source)):DealDamage(1d10,Thunder,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasPassive('Barbarian_BrutalStrike_17',context.Source) and IsMeleeUnarmedAttack() and (HasPassive('KiEmpoweredStrikes',context.Source) or HasPassive('Fractured_3_FaceOfRage_Toggle_Force',context.Source))):DealDamage(1d10,Force,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and (HasPassive('BrutalStrike_Forceful_Hamstring',context.Source) or HasPassive('BrutalStrike_Forceful_Staggering',context.Source) or HasPassive('BrutalStrike_Forceful_Sundering',context.Source))):Force(4.5);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and (HasPassive('BrutalStrike_Forceful_Hamstring',context.Source) or HasPassive('BrutalStrike_Forceful_Staggering',context.Source) or HasPassive('BrutalStrike_Forceful_Sundering',context.Source))):ApplyStatus(SELF,FORCEFULBLOW,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and (HasPassive('BrutalStrike_Forceful_Hamstring',context.Source) or HasPassive('BrutalStrike_Forceful_Staggering',context.Source) or HasPassive('BrutalStrike_Forceful_Sundering',context.Source))):ApplyStatus(FORCEFULBLOW_TARGET,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and (HasPassive('BrutalStrike_Forceful_Hamstring',context.Source) or HasPassive('BrutalStrike_Hamstring_Staggering',context.Source) or HasPassive('BrutalStrike_Hamstring_Sundering',context.Source))):ApplyStatus(HAMSTRINGBLOW,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and (HasPassive('BrutalStrike_StaggeringBlow',context.Source) or HasPassive('BrutalStrike_Forceful_Staggering',context.Source) or HasPassive('BrutalStrike_Hamstring_Staggering',context.Source) or HasPassive('BrutalStrike_Staggering_Sundering',context.Source))):ApplyStatus(BRUTAL_STRIKE_STAGGERED,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and (HasPassive('BrutalStrike_StaggeringBlow',context.Source) or HasPassive('BrutalStrike_Forceful_Staggering',context.Source) or HasPassive('BrutalStrike_Hamstring_Staggering',context.Source) or HasPassive('BrutalStrike_Staggering_Sundering',context.Source))):ApplyStatus(BRUTAL_STRIKE_STAGGERED_NO_OA,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and (HasPassive('BrutalStrike_SunderingBlow',context.Source) or HasPassive('BrutalStrike_Forceful_Sundering',context.Source) or HasPassive('BrutalStrike_Hamstring_Sundering',context.Source) or HasPassive('BrutalStrike_Staggering_Sundering',context.Source))):ApplyStatus(BRUTAL_STRIKE_SUNDERED,100,1)"
+data "StatsFunctors" "RemoveStatus(SELF,BRUTAL_STRIKE_APO);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasAnyStatus({'APO_BST_FORCEFUL_HAMSTRING','APO_BST_FORCEFUL_STAGGERING','APO_BST_FORCEFUL_SUNDERING'},{},{},context.Source)):Force(4.5);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasAnyStatus({'APO_BST_FORCEFUL_HAMSTRING','APO_BST_FORCEFUL_STAGGERING','APO_BST_FORCEFUL_SUNDERING'},{},{},context.Source)):ApplyStatus(SELF,FORCEFULBLOW,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasAnyStatus({'APO_BST_FORCEFUL_HAMSTRING','APO_BST_FORCEFUL_STAGGERING','APO_BST_FORCEFUL_SUNDERING'},{},{},context.Source)):ApplyStatus(FORCEFULBLOW_TARGET,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasAnyStatus({'APO_BST_FORCEFUL_HAMSTRING','APO_BST_HAMSTRING_STAGGERING','APO_BST_HAMSTRING_SUNDERING'},{},{},context.Source)):ApplyStatus(HAMSTRINGBLOW,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasAnyStatus({'APO_BST_STAGGERINGBLOW','APO_BST_FORCEFUL_STAGGERING','APO_BST_HAMSTRING_STAGGERING','APO_BST_STAGGERING_SUNDERING'},{},{},context.Source)):ApplyStatus(BRUTAL_STRIKE_STAGGERED,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasAnyStatus({'APO_BST_STAGGERINGBLOW','APO_BST_FORCEFUL_STAGGERING','APO_BST_HAMSTRING_STAGGERING','APO_BST_STAGGERING_SUNDERING'},{},{},context.Source)):ApplyStatus(BRUTAL_STRIKE_STAGGERED_NO_OA,100,1);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and HasAnyStatus({'APO_BST_SUNDERINGBLOW','APO_BST_FORCEFUL_SUNDERING','APO_BST_HAMSTRING_SUNDERING','APO_BST_STAGGERING_SUNDERING'},{},{},context.Source)):ApplyStatus(BRUTAL_STRIKE_SUNDERED,100,1)"
 
 // Level 13 Brutal Strike option (toggle, same group as dnd55e's Forceful / Hamstring Blow)
 new entry "BrutalStrike_StaggeringBlow"
@@ -75,6 +78,8 @@ data "Description" "haa11111111111111111111111111b015;2"
 data "Icon" "Spell_Enchantment_Tasha'sHideousLaughter"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleGroup" "Barbarian_9_BrutalStrike"
+data "ToggleOnFunctors" "ApplyStatus(SELF,APO_BST_STAGGERINGBLOW,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(SELF,APO_BST_STAGGERINGBLOW)"
 
 // Level 13 Brutal Strike option (toggle, same group as dnd55e's Forceful / Hamstring Blow)
 new entry "BrutalStrike_SunderingBlow"
@@ -84,6 +89,8 @@ data "Description" "haa11111111111111111111111111b019;2"
 data "Icon" "Action_SunderingSmash"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleGroup" "Barbarian_9_BrutalStrike"
+data "ToggleOnFunctors" "ApplyStatus(SELF,APO_BST_SUNDERINGBLOW,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(SELF,APO_BST_SUNDERINGBLOW)"
 
 // Level 17 Improved Brutal Strike: two effects at once (toggle)
 new entry "BrutalStrike_Forceful_Hamstring"
@@ -93,6 +100,8 @@ data "Description" "haa11111111111111111111111111b023;2"
 data "Icon" "Action_PushingAttack_Melee"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleGroup" "Barbarian_9_BrutalStrike"
+data "ToggleOnFunctors" "ApplyStatus(SELF,APO_BST_FORCEFUL_HAMSTRING,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(SELF,APO_BST_FORCEFUL_HAMSTRING)"
 
 // Level 17 Improved Brutal Strike: two effects at once (toggle)
 new entry "BrutalStrike_Forceful_Staggering"
@@ -102,6 +111,8 @@ data "Description" "haa11111111111111111111111111b025;2"
 data "Icon" "Action_PushingAttack_Melee"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleGroup" "Barbarian_9_BrutalStrike"
+data "ToggleOnFunctors" "ApplyStatus(SELF,APO_BST_FORCEFUL_STAGGERING,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(SELF,APO_BST_FORCEFUL_STAGGERING)"
 
 // Level 17 Improved Brutal Strike: two effects at once (toggle)
 new entry "BrutalStrike_Forceful_Sundering"
@@ -111,6 +122,8 @@ data "Description" "haa11111111111111111111111111b027;2"
 data "Icon" "Action_PushingAttack_Melee"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleGroup" "Barbarian_9_BrutalStrike"
+data "ToggleOnFunctors" "ApplyStatus(SELF,APO_BST_FORCEFUL_SUNDERING,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(SELF,APO_BST_FORCEFUL_SUNDERING)"
 
 // Level 17 Improved Brutal Strike: two effects at once (toggle)
 new entry "BrutalStrike_Hamstring_Staggering"
@@ -120,6 +133,8 @@ data "Description" "haa11111111111111111111111111b029;2"
 data "Icon" "Action_CripplingStrike"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleGroup" "Barbarian_9_BrutalStrike"
+data "ToggleOnFunctors" "ApplyStatus(SELF,APO_BST_HAMSTRING_STAGGERING,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(SELF,APO_BST_HAMSTRING_STAGGERING)"
 
 // Level 17 Improved Brutal Strike: two effects at once (toggle)
 new entry "BrutalStrike_Hamstring_Sundering"
@@ -129,6 +144,8 @@ data "Description" "haa11111111111111111111111111b031;2"
 data "Icon" "Action_CripplingStrike"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleGroup" "Barbarian_9_BrutalStrike"
+data "ToggleOnFunctors" "ApplyStatus(SELF,APO_BST_HAMSTRING_SUNDERING,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(SELF,APO_BST_HAMSTRING_SUNDERING)"
 
 // Level 17 Improved Brutal Strike: two effects at once (toggle)
 new entry "BrutalStrike_Staggering_Sundering"
@@ -138,6 +155,8 @@ data "Description" "haa11111111111111111111111111b033;2"
 data "Icon" "Spell_Enchantment_Tasha'sHideousLaughter"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "ToggleGroup" "Barbarian_9_BrutalStrike"
+data "ToggleOnFunctors" "ApplyStatus(SELF,APO_BST_STAGGERING_SUNDERING,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(SELF,APO_BST_STAGGERING_SUNDERING)"
 
 // Level 15: Persistent Rage (PHB 2024). Rage lasts its full 10 minutes without being extended:
 // dnd55e's RAGE* statuses end on your turn unless RAGE_STOP_REMOVE is present, so keep it on
@@ -160,6 +179,10 @@ data "DisplayName" "hf5b6c7d800000000000000000000011"
 data "Description" "hf5b6c7d900000000000000000000012"
 data "Icon" "Apo_Feat_BrutalStrike17"
 data "Properties" "Highlighted"
+// the extra 1d10 (2d10 Brutal Strike in all): Interrupt_RecklessAttack applies BRUTAL_STRIKE_APO17 with BRUTAL_STRIKE
+data "StatsFunctorContext" "OnAttack"
+data "Conditions" "IsAttack() and not IsReactionAttack() and HasStatus('BRUTAL_STRIKE_APO17',context.Source);"
+data "StatsFunctors" "RemoveStatus(SELF,BRUTAL_STRIKE_APO17);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsMeleeWeaponAttack()):DealDamage(1d10,MainMeleeWeaponDamageType,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsRangedWeaponAttack()):DealDamage(1d10,MainRangedWeaponDamageType,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsThrowAttackRoll()):DealDamage(1d10,ThrownWeaponDamageType,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsMeleeUnarmedAttack() and not HasPassive('ElementalAttunement_Acid',context.Source) and not HasPassive('ElementalAttunement_Cold',context.Source) and not HasPassive('ElementalAttunement_Fire',context.Source) and not HasPassive('ElementalAttunement_Lightning',context.Source) and not HasPassive('ElementalAttunement_Thunder',context.Source) and not HasPassive('KiEmpoweredStrikes',context.Source) and not HasPassive('Fractured_3_FaceOfRage_Toggle_Force',context.Source)):DealDamage(1d10,Bludgeoning,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Acid',context.Source)):DealDamage(1d10,Acid,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Cold',context.Source)):DealDamage(1d10,Cold,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Fire',context.Source)):DealDamage(1d10,Fire,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Lightning',context.Source)):DealDamage(1d10,Lightning,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsMeleeUnarmedAttack() and HasPassive('ElementalAttunement_Thunder',context.Source)):DealDamage(1d10,Thunder,,,0,,true,true);IF(HasDamageEffectFlag(DamageFlags.Hit) and AttackRollAbility(Ability.Strength) and IsMeleeUnarmedAttack() and (HasPassive('KiEmpoweredStrikes',context.Source) or HasPassive('Fractured_3_FaceOfRage_Toggle_Force',context.Source))):DealDamage(1d10,Force,,,0,,true,true)"
 
 // Level 18: Indomitable Might - Strength checks/saves can't be lower than Strength score
 // Note: Uses minimum of 20 as approximation since dynamic Strength score reference isn't supported
