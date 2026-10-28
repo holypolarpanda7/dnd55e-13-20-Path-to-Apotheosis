@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+
+- Built against DnD 5.5e All-in-One BEYOND 4.14.0.2 (was 4.13.10.5). DnD 5.5e reworked Reckless Attack, Brutal Strike, Frenzy and the Rune Knight's runes to follow the rules more closely; PTA's 13-20 features for them are rebuilt on the new versions:
+  - Barbarian: Reckless Attack is now the reaction on your first attack, and Brutal Strike effects are hotbar toggles. Improved Brutal Strike (13) adds Staggering Blow and Sundering Blow toggles; at 17 Brutal Strike deals 2d10 and adds a toggle for each pair of two effects. The old Reckless Attack spells are gone (DnD 5.5e removed them).
+  - Berserker Frenzy now uses your Rage Damage in d6s, so it reaches 4d6 at Barbarian 16 (#57).
+  - Rune Knight: your fifth rune is a rune pick at 15 (runes have their own uses now). Master of Runes (15) now does what the rules say (each rune you know can be invoked twice per rest) instead of a +2 AC / saving throw bonus. Runic Juggernaut (18) makes Giant's Might's extra damage 1d10 instead of adding another 1d10. Giant's Might uses keep growing with your Proficiency Bonus (5 at 13, 6 at 17); Runic Shield now uses your Constitution modifier (DnD 5.5e), so PTA no longer adds uses to it.
+- Fixed: Monk Body and Mind (20) raised Dexterity and Wisdom by 6 instead of 4 (a leftover +2 on the level 20 node), and its maximum is 25 as in the rules. Barbarian Primal Champion's maximum is 25 too (was 24). Reported as #58.
+- Fixed: Spell Mastery's free spells (Wizard 18) lost their spell properties: Hold Person, Web, Invisibility and others didn't need Concentration, harmful spells weren't marked as attacks, and Magic Missile, Burning Hands and Blindness were wrongly set up as spell menus. They now keep the real spell's properties. Reported as #60.
+- Changed: Evoker Overchannel (14) is a hotbar toggle (on by default). Toggle it off to cast normally and avoid the Necrotic damage. Requested in #59.
+- Removed eight unused feature entries that had no effect and were never granted (#57).
+
 ## v1.0.4.0 - 2026-10-23
 
 - Fixed: Evoker Overchannel (level 14) added your Intelligence modifier to damage instead of what the rules say. It now maximizes the damage dice of your 1st- to 5th-level damaging spells. The first use after a Long Rest is free; each further use deals 2d12 Necrotic damage per spell level to you, +1d12 per level for every earlier use since that rest. Reported as #48.

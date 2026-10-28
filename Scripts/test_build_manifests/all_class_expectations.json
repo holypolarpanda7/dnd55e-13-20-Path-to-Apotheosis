@@ -73,56 +73,63 @@
     "Barbarian": {
       "levels": {
         "12": {
-          "boosts": "ActionResource(Rage,1,0)",
+          "boosts": "ActionResource(Rage,1,0);ActionResource(HitPointDice12,1,0)",
           "passives": [],
           "selectors": ""
         },
         "13": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [
             "Barbarian_BrutalStrike_Improved",
-            "Apo_HitPointDice_Barbarian"
+            "BrutalStrike_StaggeringBlow",
+            "BrutalStrike_SunderingBlow"
           ],
           "selectors": ""
         },
         "14": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [],
           "selectors": ""
         },
         "15": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [
             "Barbarian_PersistentRage"
           ],
           "selectors": ""
         },
         "16": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [],
           "selectors": ""
         },
         "17": {
-          "boosts": "ActionResource(Rage,1,0)",
+          "boosts": "ActionResource(Rage,1,0);ActionResource(HitPointDice12,1,0)",
           "passives": [
-            "Barbarian_BrutalStrike_17"
+            "Barbarian_BrutalStrike_17",
+            "BrutalStrike_Forceful_Hamstring",
+            "BrutalStrike_Forceful_Staggering",
+            "BrutalStrike_Forceful_Sundering",
+            "BrutalStrike_Hamstring_Staggering",
+            "BrutalStrike_Hamstring_Sundering",
+            "BrutalStrike_Staggering_Sundering"
           ],
           "selectors": ""
         },
         "18": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [
             "Barbarian_IndomitableMight"
           ],
           "selectors": ""
         },
         "19": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [],
           "selectors": ""
         },
         "20": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [
             "Barbarian_PrimalChampion"
           ],
@@ -135,51 +142,50 @@
     "Bard": {
       "levels": {
         "13": {
-          "boosts": "ActionResource(SpellSlot,1,7)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
           "passives": [
-            "UnlockedSpellSlotLevel7",
-            "Apo_HitPointDice_Bard"
+            "UnlockedSpellSlotLevel7"
           ],
-          "selectors": "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)"
+          "selectors": "SelectSpells(00170002-0001-0001-0001-000000000003,1,1,BardMagicalSecrets)"
         },
         "14": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
-          "selectors": "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,0,1,BardMagicalSecrets)"
+          "selectors": "SelectSpells(00170002-0001-0001-0001-000000000003,0,1,BardMagicalSecrets)"
         },
         "15": {
-          "boosts": "ActionResource(SpellSlot,1,8)",
+          "boosts": "ActionResource(SpellSlot,1,8);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel8"
           ],
-          "selectors": "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)"
+          "selectors": "SelectSpells(00180002-0001-0001-0001-000000000003,1,1,BardMagicalSecrets)"
         },
         "16": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
-          "selectors": "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,0,1,BardMagicalSecrets)"
+          "selectors": "SelectSpells(00180002-0001-0001-0001-000000000003,0,1,BardMagicalSecrets)"
         },
         "17": {
-          "boosts": "ActionResource(SpellSlot,1,9)",
+          "boosts": "ActionResource(SpellSlot,1,9);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel9"
           ],
           "selectors": "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)"
         },
         "18": {
-          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(BardicInspiration,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(BardicInspiration,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Bard_SuperiorInspiration"
           ],
           "selectors": "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)"
         },
         "19": {
-          "boosts": "ActionResource(SpellSlot,1,6)",
+          "boosts": "ActionResource(SpellSlot,1,6);ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)"
         },
         "20": {
-          "boosts": "ActionResource(SpellSlot,1,7)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Bard_WordsOfCreation"
           ],
@@ -192,56 +198,55 @@
     "Cleric": {
       "levels": {
         "12": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "13": {
-          "boosts": "ActionResource(SpellSlot,1,7)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
           "passives": [
-            "UnlockedSpellSlotLevel7",
-            "Apo_HitPointDice_Cleric"
+            "UnlockedSpellSlotLevel7"
           ],
           "selectors": "AddSpells(00170001-0001-0001-0001-000000000003)"
         },
         "14": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [
             "ImprovedBlessedStrikes"
           ],
           "selectors": ""
         },
         "15": {
-          "boosts": "ActionResource(SpellSlot,1,8)",
+          "boosts": "ActionResource(SpellSlot,1,8);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel8"
           ],
           "selectors": "AddSpells(00180001-0001-0001-0001-000000000003)"
         },
         "16": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "17": {
-          "boosts": "ActionResource(SpellSlot,1,9)",
+          "boosts": "ActionResource(SpellSlot,1,9);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel9"
           ],
           "selectors": "AddSpells(00190001-0001-0001-0001-000000000003)"
         },
         "18": {
-          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(ChannelDivinity,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(ChannelDivinity,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "19": {
-          "boosts": "ActionResource(SpellSlot,1,6)",
+          "boosts": "ActionResource(SpellSlot,1,6);ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "20": {
-          "boosts": "ActionResource(SpellSlot,1,7)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Cleric_GreaterDivineIntervention"
           ],
@@ -251,23 +256,38 @@
       "parent": null,
       "table_uuid": "64474b62-b4f5-46b3-b94a-c676c6da3116"
     },
+    "Dragonborn": {
+      "levels": {
+        "13": {
+          "boosts": "ActionResource(BreathWeapon,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(BreathWeapon,1,0)",
+          "passives": [],
+          "selectors": ""
+        }
+      },
+      "parent": null,
+      "table_uuid": "e2472b4f-682a-4ac8-b11c-723f921fd7a1"
+    },
     "Druid": {
       "levels": {
         "13": {
-          "boosts": "ActionResource(SpellSlot,1,7)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
           "passives": [
-            "UnlockedSpellSlotLevel7",
-            "Apo_HitPointDice_Druid"
+            "UnlockedSpellSlotLevel7"
           ],
           "selectors": "AddSpells(00170001-0001-0001-0001-000000000004)"
         },
         "14": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "15": {
-          "boosts": "ActionResource(SpellSlot,1,8)",
+          "boosts": "ActionResource(SpellSlot,1,8);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Druid_ImprovedElementalFury",
             "UnlockedSpellSlotLevel8"
@@ -275,31 +295,31 @@
           "selectors": "AddSpells(00180001-0001-0001-0001-000000000004)"
         },
         "16": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "17": {
-          "boosts": "ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel9"
           ],
           "selectors": "AddSpells(00190001-0001-0001-0001-000000000004)"
         },
         "18": {
-          "boosts": "ActionResource(SpellSlot,1,5)",
+          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Druid_BeastSpells"
           ],
           "selectors": ""
         },
         "19": {
-          "boosts": "ActionResource(SpellSlot,1,6)",
+          "boosts": "ActionResource(SpellSlot,1,6);ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "20": {
-          "boosts": "ActionResource(SpellSlot,1,7)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Druid_Archdruid"
           ],
@@ -309,50 +329,65 @@
       "parent": null,
       "table_uuid": "6e7b7bad-e122-4679-8b3c-8f8987a9d466"
     },
-    "Fighter": {
+    "Eladrin": {
       "levels": {
         "13": {
-          "boosts": "ActionResource(Interrupt_Indomitable,1,0)",
-          "passives": [
-            "Fighter_StudiedAttacks",
-            "Apo_HitPointDice_Fighter"
-          ],
-          "selectors": ""
-        },
-        "14": {
-          "boosts": "",
-          "passives": [],
-          "selectors": ""
-        },
-        "15": {
-          "boosts": "",
-          "passives": [],
-          "selectors": ""
-        },
-        "16": {
-          "boosts": "",
+          "boosts": "ActionResource(Eladrin,1,0)",
           "passives": [],
           "selectors": ""
         },
         "17": {
-          "boosts": "ActionResource(Interrupt_Indomitable,1,0)",
+          "boosts": "ActionResource(Eladrin,1,0)",
+          "passives": [],
+          "selectors": ""
+        }
+      },
+      "parent": null,
+      "table_uuid": "ec2603e5-cf91-47da-b02b-0df881a55c23"
+    },
+    "Fighter": {
+      "levels": {
+        "13": {
+          "boosts": "ActionResource(Interrupt_Indomitable,1,0);ActionResource(HitPointDice10,1,0)",
+          "passives": [
+            "Fighter_StudiedAttacks"
+          ],
+          "selectors": ""
+        },
+        "14": {
+          "boosts": "ActionResource(HitPointDice10,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "15": {
+          "boosts": "ActionResource(HitPointDice10,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "16": {
+          "boosts": "ActionResource(HitPointDice10,1,0)",
+          "passives": [],
+          "selectors": "SelectPassives(b9543135-eceb-4ca9-b9fc-43befc11de3b,1,WeaponMasteryList)"
+        },
+        "17": {
+          "boosts": "ActionResource(Interrupt_Indomitable,1,0);ActionResource(HitPointDice10,1,0)",
           "passives": [
             "Fighter_17_ActionSurgeTwice"
           ],
           "selectors": ""
         },
         "18": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [],
           "selectors": ""
         },
         "19": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [],
           "selectors": ""
         },
         "20": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [
             "ExtraAttack_3"
           ],
@@ -361,6 +396,22 @@
       },
       "parent": null,
       "table_uuid": "ba4e707e-4bbd-4630-963b-ce2f2947f971"
+    },
+    "Goliath": {
+      "levels": {
+        "13": {
+          "boosts": "ActionResource(Goliath,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(Goliath,1,0)",
+          "passives": [],
+          "selectors": ""
+        }
+      },
+      "parent": null,
+      "table_uuid": "fba1e7f8-9ccf-46cb-9a00-566943a25242"
     },
     "Gunslinger": {
       "levels": {
@@ -469,51 +520,52 @@
     "Monk": {
       "levels": {
         "13": {
-          "boosts": "ActionResource(KiPoint,1,0)",
+          "boosts": "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [
-            "Monk_DeflectEnergy",
-            "Apo_HitPointDice_Monk"
+            "Monk_DeflectEnergy"
           ],
           "selectors": ""
         },
         "14": {
-          "boosts": "ActionResource(KiPoint,1,0)",
+          "boosts": "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [
-            "Monk_DisciplinedSurvivor"
+            "Monk_DisciplinedSurvivor",
+            "Apo_UnarmoredMovement_4"
           ],
           "selectors": ""
         },
         "15": {
-          "boosts": "ActionResource(KiPoint,1,0)",
+          "boosts": "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Monk_PerfectFocus"
           ],
           "selectors": ""
         },
         "16": {
-          "boosts": "ActionResource(KiPoint,1,0)",
+          "boosts": "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "17": {
-          "boosts": "ActionResource(KiPoint,1,0)",
+          "boosts": "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "18": {
-          "boosts": "ActionResource(KiPoint,1,0)",
+          "boosts": "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [
-            "Monk_SuperiorDefense"
+            "Monk_SuperiorDefense",
+            "Apo_UnarmoredMovement_5"
           ],
           "selectors": ""
         },
         "19": {
-          "boosts": "ActionResource(KiPoint,1,0)",
+          "boosts": "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "20": {
-          "boosts": "ActionResource(KiPoint,1,0);Ability(Dexterity,2,22);Ability(Wisdom,2,22)",
+          "boosts": "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Monk_BodyAndMind"
           ],
@@ -579,24 +631,20 @@
       "parent": null,
       "table_uuid": "0c093c1c-6b57-4a80-aab5-bb0b552260b8"
     },
-    "Paladin": {
+    "MulticlassSpellSlots": {
       "levels": {
         "13": {
-          "boosts": "ActionResource(SpellSlot,1,4)",
-          "passives": [
-            "Apo_HitPointDice_Paladin"
-          ],
-          "selectors": "AddSpells(b88aff43-b75a-5947-b283-3c6ca5bf2591)"
+          "boosts": "ActionResource(SpellSlot,1,7)",
+          "passives": [],
+          "selectors": ""
         },
         "14": {
           "boosts": "",
-          "passives": [
-            "Paladin_14_RestoringTouch"
-          ],
+          "passives": [],
           "selectors": ""
         },
         "15": {
-          "boosts": "ActionResource(SpellSlot,1,4)",
+          "boosts": "ActionResource(SpellSlot,1,8)",
           "passives": [],
           "selectors": ""
         },
@@ -606,24 +654,72 @@
           "selectors": ""
         },
         "17": {
-          "boosts": "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5)",
+          "boosts": "ActionResource(SpellSlot,1,9)",
+          "passives": [],
+          "selectors": ""
+        },
+        "18": {
+          "boosts": "ActionResource(SpellSlot,1,5)",
+          "passives": [],
+          "selectors": ""
+        },
+        "19": {
+          "boosts": "ActionResource(SpellSlot,1,6)",
+          "passives": [],
+          "selectors": ""
+        },
+        "20": {
+          "boosts": "ActionResource(SpellSlot,1,7)",
+          "passives": [],
+          "selectors": ""
+        }
+      },
+      "parent": null,
+      "table_uuid": "a6f80028-fee2-41e0-bd24-d2f0758d936f"
+    },
+    "Paladin": {
+      "levels": {
+        "13": {
+          "boosts": "ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0)",
+          "passives": [],
+          "selectors": "AddSpells(b88aff43-b75a-5947-b283-3c6ca5bf2591)"
+        },
+        "14": {
+          "boosts": "ActionResource(HitPointDice10,1,0)",
+          "passives": [
+            "Paladin_14_RestoringTouch"
+          ],
+          "selectors": ""
+        },
+        "15": {
+          "boosts": "ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "16": {
+          "boosts": "ActionResource(HitPointDice10,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0)",
           "passives": [],
           "selectors": "AddSpells(bce36493-022a-5a20-8b8d-fd97f89be9a7)"
         },
         "18": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [
             "Paladin_Aura30ft"
           ],
           "selectors": ""
         },
         "19": {
-          "boosts": "ActionResource(SpellSlot,1,5)",
+          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0)",
           "passives": [],
           "selectors": ""
         },
         "20": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [],
           "selectors": ""
         }
@@ -634,51 +730,50 @@
     "Ranger": {
       "levels": {
         "13": {
-          "boosts": "ActionResource(SpellSlot,1,4)",
+          "boosts": "ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0);ActionResource(FavoredEnemy,1,0)",
           "passives": [
-            "Ranger_RelentlessHunter",
-            "Apo_HitPointDice_Ranger"
+            "Ranger_RelentlessHunter"
           ],
           "selectors": "AddSpells(6e77d7ac-4b79-5691-bde3-357017ad4cdc)"
         },
         "14": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [
             "Ranger_14_NaturesVeil"
           ],
           "selectors": ""
         },
         "15": {
-          "boosts": "ActionResource(SpellSlot,1,4)",
+          "boosts": "ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0)",
           "passives": [],
           "selectors": ""
         },
         "16": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [],
           "selectors": ""
         },
         "17": {
-          "boosts": "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5)",
+          "boosts": "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0);ActionResource(FavoredEnemy,1,0)",
           "passives": [
             "Ranger_17_PreciseHunter"
           ],
           "selectors": "AddSpells(6b625ece-306d-576a-9fa2-896d884e4e05)"
         },
         "18": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [
             "Ranger_FeralSenses"
           ],
           "selectors": ""
         },
         "19": {
-          "boosts": "ActionResource(SpellSlot,1,5)",
+          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0)",
           "passives": [],
           "selectors": ""
         },
         "20": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice10,1,0)",
           "passives": [
             "Ranger_FoeSlayer"
           ],
@@ -691,14 +786,12 @@
     "Rogue": {
       "levels": {
         "13": {
-          "boosts": "",
-          "passives": [
-            "Apo_HitPointDice_Rogue"
-          ],
+          "boosts": "ActionResource(HitPointDice08,1,0)",
+          "passives": [],
           "selectors": ""
         },
         "14": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Rogue_14_DeviousStrikes",
             "CunningStrike_Daze",
@@ -708,36 +801,36 @@
           "selectors": ""
         },
         "15": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Rogue_SlipperyMind"
           ],
           "selectors": ""
         },
         "16": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "17": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "18": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Rogue_Elusive"
           ],
           "selectors": ""
         },
         "19": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": ""
         },
         "20": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Rogue_StrokeOfLuck"
           ],
@@ -747,52 +840,67 @@
       "parent": null,
       "table_uuid": "9a44e828-92db-4d6c-acbc-a4f8ef340415"
     },
+    "ShadarKai": {
+      "levels": {
+        "13": {
+          "boosts": "ActionResource(ShadarKai,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(ShadarKai,1,0)",
+          "passives": [],
+          "selectors": ""
+        }
+      },
+      "parent": null,
+      "table_uuid": "04dc5432-4d5a-45f1-acb4-a5bec09be5dc"
+    },
     "Sorcerer": {
       "levels": {
         "13": {
-          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
           "passives": [
-            "UnlockedSpellSlotLevel7",
-            "Apo_HitPointDice_Sorcerer"
+            "UnlockedSpellSlotLevel7"
           ],
           "selectors": "SelectSpells(00170002-0001-0001-0001-000000000002,1,1,SorcererSpell)"
         },
         "14": {
-          "boosts": "ActionResource(SorceryPoint,1,0)",
+          "boosts": "ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
           "passives": [],
           "selectors": "SelectSpells(00170002-0001-0001-0001-000000000002,0,1,SorcererSpell)"
         },
         "15": {
-          "boosts": "ActionResource(SpellSlot,1,8);ActionResource(SorceryPoint,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,8);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel8"
           ],
           "selectors": "SelectSpells(00180002-0001-0001-0001-000000000002,1,1,SorcererSpell)"
         },
         "16": {
-          "boosts": "ActionResource(SorceryPoint,1,0)",
+          "boosts": "ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
           "passives": [],
           "selectors": "SelectSpells(00180002-0001-0001-0001-000000000002,0,1,SorcererSpell)"
         },
         "17": {
-          "boosts": "ActionResource(SpellSlot,1,9);ActionResource(SorceryPoint,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,9);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel9"
           ],
           "selectors": "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell);SelectPassives(c3506532-36eb-4d18-823e-497a537a9619,1,Metamagic)"
         },
         "18": {
-          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(SorceryPoint,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
           "passives": [],
           "selectors": "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell)"
         },
         "19": {
-          "boosts": "ActionResource(SpellSlot,1,6);ActionResource(SorceryPoint,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,6);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
           "passives": [],
           "selectors": "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell)"
         },
         "20": {
-          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
           "passives": [
             "Sorcerer_ArcaneApotheosis"
           ],
@@ -805,49 +913,48 @@
     "Warlock": {
       "levels": {
         "13": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [
-            "Warlock_MysticArcanum_7",
-            "Apo_HitPointDice_Warlock"
+            "Warlock_MysticArcanum_7"
           ],
           "selectors": "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00170001-0001-0001-0001-000000000007,1,0,MysticArcanum7,,None,AlwaysPrepared,UntilRest)"
         },
         "14": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": "SelectSpells(00150002-0001-0001-0001-000000000007,0,1)"
         },
         "15": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Warlock_MysticArcanum_8"
           ],
           "selectors": "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00180001-0001-0001-0001-000000000007,1,0,MysticArcanum8,,None,AlwaysPrepared,UntilRest);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)"
         },
         "16": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": "SelectSpells(00150002-0001-0001-0001-000000000007,0,1)"
         },
         "17": {
-          "boosts": "ActionResource(WarlockSpellSlot,1,5)",
+          "boosts": "ActionResource(WarlockSpellSlot,1,5);ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Warlock_MysticArcanum_9"
           ],
           "selectors": "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)"
         },
         "18": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": "SelectSpells(00150002-0001-0001-0001-000000000007,0,1);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)"
         },
         "19": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [],
           "selectors": "SelectSpells(00150002-0001-0001-0001-000000000007,1,1)"
         },
         "20": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice08,1,0)",
           "passives": [
             "Warlock_EldritchMaster"
           ],
@@ -860,51 +967,50 @@
     "Wizard": {
       "levels": {
         "13": {
-          "boosts": "ActionResource(SpellSlot,1,7)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)",
           "passives": [
-            "UnlockedSpellSlotLevel7",
-            "Apo_HitPointDice_Wizard"
+            "UnlockedSpellSlotLevel7"
           ],
           "selectors": "SelectSpells(aa384b4e-36b4-5b2d-93b3-c1063ba2ffb2,2,0,WizardSpellList)"
         },
         "14": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice06,1,0)",
           "passives": [],
           "selectors": "SelectSpells(aa384b4e-36b4-5b2d-93b3-c1063ba2ffb2,2,0,WizardSpellList)"
         },
         "15": {
-          "boosts": "ActionResource(SpellSlot,1,8)",
+          "boosts": "ActionResource(SpellSlot,1,8);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel8"
           ],
           "selectors": "SelectSpells(f0f0369f-fef5-5399-92c1-0a02c56c93bd,2,0,WizardSpellList)"
         },
         "16": {
-          "boosts": "",
+          "boosts": "ActionResource(HitPointDice06,1,0)",
           "passives": [],
           "selectors": "SelectSpells(f0f0369f-fef5-5399-92c1-0a02c56c93bd,2,0,WizardSpellList)"
         },
         "17": {
-          "boosts": "ActionResource(SpellSlot,1,9)",
+          "boosts": "ActionResource(SpellSlot,1,9);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)",
           "passives": [
             "UnlockedSpellSlotLevel9"
           ],
           "selectors": "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList)"
         },
         "18": {
-          "boosts": "ActionResource(SpellSlot,1,5)",
+          "boosts": "ActionResource(SpellSlot,1,5);ActionResource(HitPointDice06,1,0)",
           "passives": [
             "SpellMastery"
           ],
           "selectors": "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList)"
         },
         "19": {
-          "boosts": "ActionResource(SpellSlot,1,6)",
+          "boosts": "ActionResource(SpellSlot,1,6);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)",
           "passives": [],
           "selectors": "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList)"
         },
         "20": {
-          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(SignatureSpellCharge,2,0)",
+          "boosts": "ActionResource(SpellSlot,1,7);ActionResource(SignatureSpellCharge,2,0);ActionResource(HitPointDice06,1,0)",
           "passives": [
             "Wizard_SignatureSpells"
           ],
@@ -1036,6 +1142,7 @@
     "f574d2d6-cfc2-4cda-8771-1917f1eabaf1": "BattleSmith",
     "f576dd16-d230-4233-bf3e-1d5ed0106b0c": "Hellspeaker",
     "f617ec08-b29d-4ac0-a742-3fd6c25c4520": "Spellslinger",
+    "f6a59c66-01a0-4ed1-9dae-f0e5e11681a0": "SanguineThief",
     "f87d7b0e-bc56-4f22-b347-9ef63bfa5220": "Swashbuckler",
     "fbb8347b-20e3-4846-ba91-0552cd12fc5f": "NecromancySchool",
     "fbf9d94c-9175-4145-9bd9-645dec6d4f1d": "WinterWalker",
@@ -1582,11 +1689,46 @@
     },
     "Celestial": {
       "levels": {
+        "13": {
+          "boosts": "ActionResource(HealingLight,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
         "14": {
           "boosts": "",
           "passives": [
             "Celestial_14_SearingVengeance"
           ],
+          "selectors": ""
+        },
+        "15": {
+          "boosts": "ActionResource(HealingLight,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "16": {
+          "boosts": "ActionResource(HealingLight,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(HealingLight,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "18": {
+          "boosts": "ActionResource(HealingLight,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "19": {
+          "boosts": "ActionResource(HealingLight,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "20": {
+          "boosts": "ActionResource(HealingLight,1,0)",
+          "passives": [],
           "selectors": ""
         }
       },
@@ -1648,11 +1790,46 @@
     },
     "CircleOfDreams": {
       "levels": {
+        "13": {
+          "boosts": "ActionResource(Balm,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
         "14": {
           "boosts": "",
           "passives": [
             "Dreams_14_WalkerInDreams"
           ],
+          "selectors": ""
+        },
+        "15": {
+          "boosts": "ActionResource(Balm,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "16": {
+          "boosts": "ActionResource(Balm,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(Balm,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "18": {
+          "boosts": "ActionResource(Balm,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "19": {
+          "boosts": "ActionResource(Balm,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "20": {
+          "boosts": "ActionResource(Balm,1,0)",
+          "passives": [],
           "selectors": ""
         }
       },
@@ -1674,11 +1851,31 @@
     },
     "CircleOfTheLand": {
       "levels": {
+        "13": {
+          "boosts": "ActionResource(NaturalRecoveryPoint,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
         "14": {
           "boosts": "",
           "passives": [
             "CircleOfTheLand_14_NaturesSanctuary"
           ],
+          "selectors": ""
+        },
+        "15": {
+          "boosts": "ActionResource(NaturalRecoveryPoint,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(NaturalRecoveryPoint,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
+        "19": {
+          "boosts": "ActionResource(NaturalRecoveryPoint,1,0)",
+          "passives": [],
           "selectors": ""
         }
       },
@@ -1687,11 +1884,26 @@
     },
     "CircleOfTheMoon": {
       "levels": {
+        "12": {
+          "boosts": "UnlockSpell(Shout_WildShape_Combat_Apo_Elephant)",
+          "passives": [],
+          "selectors": ""
+        },
         "14": {
           "boosts": "",
           "passives": [
             "CircleOfTheMoon_14_LunarForm"
           ],
+          "selectors": ""
+        },
+        "15": {
+          "boosts": "UnlockSpell(Shout_WildShape_Combat_Apo_Triceratops)",
+          "passives": [],
+          "selectors": ""
+        },
+        "18": {
+          "boosts": "UnlockSpell(Shout_WildShape_Combat_Apo_Mammoth)",
+          "passives": [],
           "selectors": ""
         }
       },
@@ -2974,11 +3186,21 @@
           "passives": [],
           "selectors": ""
         },
+        "13": {
+          "boosts": "ActionResource(PsiWarrior,2,0)",
+          "passives": [],
+          "selectors": ""
+        },
         "15": {
           "boosts": "",
           "passives": [
             "PsiWarrior_12_BulwarkOfForce"
           ],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(PsiWarrior,2,0)",
+          "passives": [],
           "selectors": ""
         },
         "18": {
@@ -3024,11 +3246,21 @@
           "passives": [],
           "selectors": ""
         },
+        "13": {
+          "boosts": "ActionResource(GiantsMight,1,0)",
+          "passives": [],
+          "selectors": ""
+        },
         "15": {
           "boosts": "",
           "passives": [
             "RuneKnight_12_MasterOfRunes"
           ],
+          "selectors": "SelectPassives(22922e4f-4e69-4287-a52e-1285d5c04434,1,RuneKnight_3_RuneCarver)"
+        },
+        "17": {
+          "boosts": "ActionResource(GiantsMight,1,0)",
+          "passives": [],
           "selectors": ""
         },
         "18": {
@@ -3047,7 +3279,7 @@
         "13": {
           "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [],
-          "selectors": "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"
+          "selectors": "SelectSpells(b13878fd-5eb7-5172-b6de-87529488852c,1,0,Wizard_3_Savant)"
         },
         "14": {
           "boosts": "ActionResource(HitPointDice12,1,0)",
@@ -3059,21 +3291,25 @@
         "15": {
           "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [],
-          "selectors": "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"
+          "selectors": "SelectSpells(86286cc3-a978-5270-bb89-43b22a2d6a8a,1,0,Wizard_3_Savant)"
         },
         "16": {
           "boosts": "ActionResource(HitPointDice12,1,0)",
-          "passives": [],
+          "passives": [
+            "Sangromancer_16_RedRenewal"
+          ],
           "selectors": ""
         },
         "17": {
           "boosts": "ActionResource(HitPointDice12,1,0)",
           "passives": [],
-          "selectors": "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)"
+          "selectors": "SelectSpells(832afb33-9ec1-5f27-a2e4-88b25ddd72e2,1,0,Wizard_3_Savant)"
         },
         "18": {
           "boosts": "ActionResource(HitPointDice12,1,0)",
-          "passives": [],
+          "passives": [
+            "Sangromancer_18_RedRenewal"
+          ],
           "selectors": ""
         },
         "19": {
@@ -3083,7 +3319,9 @@
         },
         "20": {
           "boosts": "ActionResource(HitPointDice12,1,0)",
-          "passives": [],
+          "passives": [
+            "Sangromancer_20_RedRenewal"
+          ],
           "selectors": ""
         }
       },
@@ -3121,6 +3359,57 @@
       },
       "parent": "Illrigger",
       "table_uuid": "283cff6c-8c2a-4f08-afe4-419dee51bc9b"
+    },
+    "SanguineThief": {
+      "levels": {
+        "13": {
+          "boosts": "ActionResource(HitPointDice08,1,0);ActionResource(SpellSlot,2,3)",
+          "passives": [
+            "UnlockedSpellSlotLevel3",
+            "SanguineThief_13_Bloodstitch"
+          ],
+          "selectors": "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,1,1,SanguineThiefSpells)"
+        },
+        "14": {
+          "boosts": "",
+          "passives": [],
+          "selectors": "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,1,1,SanguineThiefSpells)"
+        },
+        "15": {
+          "boosts": "ActionResource(HitPointDice08,1,0)",
+          "passives": [],
+          "selectors": "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,0,1,SanguineThiefSpells)"
+        },
+        "16": {
+          "boosts": "ActionResource(SpellSlot,1,3)",
+          "passives": [],
+          "selectors": "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,1,1,SanguineThiefSpells)"
+        },
+        "17": {
+          "boosts": "ActionResource(HitPointDice08,1,0)",
+          "passives": [
+            "SanguineThief_17_BloodyExit"
+          ],
+          "selectors": "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,0,1,SanguineThiefSpells)"
+        },
+        "18": {
+          "boosts": "",
+          "passives": [],
+          "selectors": "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,0,1,SanguineThiefSpells)"
+        },
+        "19": {
+          "boosts": "ActionResource(HitPointDice08,1,0);ActionResource(SpellSlot,1,4)",
+          "passives": [],
+          "selectors": "SelectSpells(a4ce1419-c9fa-54e9-8415-147c85e3e660,1,1,SanguineThiefSpells)"
+        },
+        "20": {
+          "boosts": "",
+          "passives": [],
+          "selectors": "SelectSpells(a4ce1419-c9fa-54e9-8415-147c85e3e660,1,1,SanguineThiefSpells)"
+        }
+      },
+      "parent": "Rogue",
+      "table_uuid": "0d7fc95e-bc63-4f54-b839-307f5266a5b9"
     },
     "ScionThree": {
       "levels": {
@@ -3770,6 +4059,11 @@
           "passives": [
             "Zealot_14_RageOfTheGods"
           ],
+          "selectors": ""
+        },
+        "17": {
+          "boosts": "ActionResource(WarriorOfTheGods,1,0)",
+          "passives": [],
           "selectors": ""
         }
       },

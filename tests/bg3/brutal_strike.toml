@@ -1,0 +1,93 @@
+# Brutal Strike on dnd55e 4.14's model (2026-10-28): the effect is a toggle in the Barbarian_9_BrutalStrike ToggleGroup, the Reckless
+# Attack reaction (Interrupt_RecklessAttack, PTA override in Interrupt.txt) forgoes Advantage and marks the attack,
+# dnd55e's Barbarian_9_BrutalStrike deals 1d10 (+ Forceful / Hamstring), PTA's Barbarian_BrutalStrike_Improved adds Staggering /
+# Sundering (13), the two-effect toggles and the extra 1d10 (17). The reaction fires on a plain weapon attack (Target_MainHandAttack,
+# known to every character). Run: bg3_test_run("apotheosis", "<id>").
+
+[suite]
+name = "Barbarian: Brutal Strike 9 / 13 / 17"
+mode = "script"
+
+[[case]]
+id = "brutal-13-staggering"
+title = "Improved Brutal Strike (13): the Staggering Blow toggle staggers the target through the Reckless Attack reaction"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+reactions = ["RecklessAttack"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "Barbarian_2_RecklessAttack" }, { target = "host", passive = "Barbarian_9_BrutalStrike" },
+         { target = "host", passive = "BrutalStrike_HamstringBlow" }, { target = "host", passive = "Barbarian_BrutalStrike_Improved" },
+         { target = "host", passive = "BrutalStrike_StaggeringBlow" }, { target = "host", toggle_on = "BrutalStrike_StaggeringBlow" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+notes = "Staggering is in dnd55e's ToggleGroup, so switching it on switches Hamstring Blow (default on) off: no HAMSTRINGBLOW."
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] },
+          { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED", "BRUTAL_STRIKE_STAGGERED_NO_OA"] },
+          { target = "A", status_absent = ["HAMSTRINGBLOW"] }, { target = "host", status_absent = ["BRUTAL_STRIKE_APO", "BRUTAL_STRIKE"] }]
+
+[[case]]
+id = "brutal-13-sundering"
+title = "Improved Brutal Strike (13): the Sundering Blow toggle sunders the target through the Reckless Attack reaction"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+reactions = ["RecklessAttack"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "Barbarian_2_RecklessAttack" }, { target = "host", passive = "Barbarian_9_BrutalStrike" },
+         { target = "host", passive = "BrutalStrike_HamstringBlow" }, { target = "host", passive = "Barbarian_BrutalStrike_Improved" },
+         { target = "host", passive = "BrutalStrike_SunderingBlow" }, { target = "host", toggle_on = "BrutalStrike_SunderingBlow" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] },
+          { target = "A", status_absent = ["HAMSTRINGBLOW"] }]
+
+[[case]]
+id = "brutal-17-two-effects"
+title = "Improved Brutal Strike (17): a two-effect toggle (Hamstring + Staggering) applies both effects"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+reactions = ["RecklessAttack"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "Barbarian_2_RecklessAttack" }, { target = "host", passive = "Barbarian_9_BrutalStrike" },
+         { target = "host", passive = "BrutalStrike_HamstringBlow" }, { target = "host", passive = "Barbarian_BrutalStrike_Improved" },
+         { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "host", passive = "BrutalStrike_Hamstring_Staggering" },
+         { target = "host", toggle_on = "BrutalStrike_Hamstring_Staggering" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] },
+          { target = "A", status_applied = ["HAMSTRINGBLOW", "BRUTAL_STRIKE_STAGGERED"] }]
+
+[[case]]
+id = "brutal-17-extra-die"
+title = "Improved Brutal Strike (17): Brutal Strike deals 2d10 (dnd55e's 1d10 + PTA's 1d10), dice maximised"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+reactions = ["RecklessAttack"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "Barbarian_2_RecklessAttack" }, { target = "host", passive = "Barbarian_9_BrutalStrike" },
+         { target = "host", passive = "BrutalStrike_HamstringBlow" }, { target = "host", passive = "Barbarian_BrutalStrike_Improved" },
+         { target = "host", passive = "Barbarian_BrutalStrike_17" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "host", boost = "MinimumRollResult(Damage,20)" }]
+notes = "Hamstring Blow (dnd55e's default-on toggle) is the effect. Three damage instances: the weapon, dnd55e's 1d10, PTA's 1d10 (10 each, maximised)."
+expect = [{ target = "A", status_applied = ["HAMSTRINGBLOW"] }, { target = "A", damage_count = { by = "host", count = [3, 3] } }]
+
+[[case]]
+id = "brutal-9-forceful-with-pta"
+title = "dnd55e's own Forceful Blow toggle still works with PTA's Reckless Attack reaction override (no PTA effect, no 17 die)"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+reactions = ["RecklessAttack"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "Barbarian_2_RecklessAttack" }, { target = "host", passive = "Barbarian_9_BrutalStrike" },
+         { target = "host", passive = "BrutalStrike_HamstringBlow" }, { target = "host", passive = "BrutalStrike_ForcefulBlow" },
+         { target = "host", passive = "Barbarian_BrutalStrike_Improved" }, { target = "host", toggle_on = "BrutalStrike_ForcefulBlow" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK", "FORCEFULBLOW"] }, { target = "A", status_applied = ["FORCEFULBLOW_TARGET"] },
+          { target = "A", status_absent = ["BRUTAL_STRIKE_STAGGERED", "BRUTAL_STRIKE_SUNDERED", "HAMSTRINGBLOW"] },
+          { target = "A", damage_count = { by = "host", count = [2, 2] } }]

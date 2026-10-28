@@ -28,7 +28,7 @@ EXPECT = {  # class: {resource: {level: total}} - 2024 values at 13-20 (and the 
     "ZealotPath": {"WarriorOfTheGods": {12: 6, 16: 6, 17: 7}},
     "Alchemist": {"ExperimentalElixir": {12: 4, 14: 4, 15: 5}},
     "Artificer": {"ReplicateMagicItem": {12: 4, 13: 4, 14: 5, 17: 5, 18: 6}},
-    "RuneKnight": {"Rune": {12: 5, 14: 5, 15: 6}, "RunicShield": {12: 4, 13: 5, 16: 5, 17: 6}},
+    "RuneKnight": {"GiantsMight": {12: 4, 13: 5, 16: 5, 17: 6}},
     "PsiWarrior": {"PsiWarrior": {12: 8, 13: 10, 16: 10, 17: 12}},                          # twice the Proficiency Bonus
     "Soulknife": {"Soulknife": {12: 8, 13: 10, 16: 10, 17: 12}},
     "Swarmkeeper": {"WrithingTidePoint": {12: 4, 13: 5, 16: 5, 17: 6}},

@@ -6,6 +6,13 @@
 // BARBARIAN - Improved Brutal Strike Status Effects (Level 13+)
 // ==============================================================================
 
+// Marker for Barbarian_BrutalStrike_Improved (PTA's 13/17 Brutal Strike parts), applied beside dnd55e's BRUTAL_STRIKE
+new entry "BRUTAL_STRIKE_APO"
+type "StatusData"
+data "StatusType" "BOOST"
+data "TickType" "StartTurn"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
 // Staggering Blow: Target has disadvantage on next save, can't make opportunity attacks
 new entry "BRUTAL_STRIKE_STAGGERED"
 type "StatusData"

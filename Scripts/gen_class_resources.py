@@ -14,7 +14,7 @@ Subclass and class pools (steps are the increment at that level):
   Zealot Barbarian    Warrior of the Gods 4/5/6/7 dice at 3/6/12/17                +1 at 17
   Alchemist           Experimental Elixir 3/4/5 elixirs at 5/9/15                  +1 at 15
   Artificer           Magic Items         the Magic Items column: 5 at 14, 6 at 18 +1 at 14, 18
-  Rune Knight         Runes known         +1 at 15; Runic Shield = Proficiency Bonus uses (+1 at 13, 17)
+  Rune Knight         Giant's Might = Proficiency Bonus uses (+1 at 13, 17); runes known +1 at 15 is a pick (Progressions.lsx)
   Psi Warrior, Soulknife  Psionic Energy Dice  twice the Proficiency Bonus: 10 at 13, 12 at 17 (+2 each)
   Swarmkeeper         Writhing Tide       Proficiency Bonus uses                   +1 at 13, 17
 Species whose uses equal the Proficiency Bonus (race nodes by character level): Dragonborn Breath Weapon, Eladrin Fey Step,
@@ -54,8 +54,9 @@ steps("c5fb3d32-6c46-4c9e-a2c9-8849f52e16e4", "ZealotPath", SUB, "WarriorOfTheGo
 steps("c36e28a1-2fd5-475b-9689-09b83c9fd63d", "Alchemist", SUB, "ExperimentalElixir", {15: 1})
 steps("1e84493e-aeff-4d0e-b3ae-6c2187245d23", "Artificer", CLASS, "ReplicateMagicItem", {14: 1, 18: 1})
 RUNE_KNIGHT = "b8a2b9b8-8c2e-47bd-aae9-35e191ec1162"
-steps(RUNE_KNIGHT, "RuneKnight", SUB, "Rune", {15: 1})
-steps(RUNE_KNIGHT, "RuneKnight", SUB, "RunicShield", {13: 1, 17: 1})
+# dnd55e 4.14 (2026-10-24): runes are SelectPassives picks with a resource each (5th rune at 15 = Progressions.lsx), Giant's Might
+# has Proficiency Bonus uses (2/3/4 at 3/5/9) and Runic Shield Constitution-modifier uses (no level steps)
+steps(RUNE_KNIGHT, "RuneKnight", SUB, "GiantsMight", {13: 1, 17: 1})
 steps("df42bb97-2d97-44f0-8cb2-379e83208408", "PsiWarrior", SUB, "PsiWarrior", {13: 2, 17: 2})
 steps("abc7b271-82a1-4139-9653-4c90a7984a38", "Soulknife", SUB, "Soulknife", {13: 2, 17: 2})
 steps("54ad9a98-9656-4aa5-858e-b302f83c4577", "Swarmkeeper", SUB, "WrithingTidePoint", {13: 1, 17: 1})

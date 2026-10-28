@@ -29,7 +29,7 @@
   <content contentuid="he0a1b2c30000000000000000000001b" version="1">Superior Defense</content>
   <content contentuid="he0a1b2c40000000000000000000001c" version="1">Spend 3 Ki Points to gain Resistance to all damage except Force for 10 turns.</content>
   <content contentuid="hf1b2c3d40000000000000000000001d" version="1">Body and Mind</content>
-  <content contentuid="hf1b2c3d50000000000000000000001e" version="1">Your Dexterity and Wisdom scores increase by 4, to a maximum of 26.</content>
+  <content contentuid="hf1b2c3d50000000000000000000001e" version="2">Your Dexterity and Wisdom scores increase by 4, to a maximum of 25.</content>
   <content contentuid="ha2c3d4e50000000000000000000001f" version="1">Subtle Strikes</content>
   <content contentuid="ha2c3d4e600000000000000000000020" version="1">Your strikes are subtle and precise, granting you a +2 bonus to weapon attack rolls.</content>
   <content contentuid="hb3d4e5f600000000000000000000021" version="1">Elusive</content>
@@ -88,12 +88,6 @@
   <content contentuid="hd9f0a1b3a0000000000000000000056" version="1">Your connection to the Hells deepens. You gain Resistance to Fire damage and 1 additional Seal.</content>
   <content contentuid="he0a1b2c3a0000000000000000000057" version="1">Prince of Hell</content>
   <content contentuid="he0a1b2c4a0000000000000000000058" version="1">You have become a true lord of the Nine Hells. You gain Resistance to Fire damage, your weapon attacks deal an additional 1d8 Necrotic damage, and your critical hit range is expanded by 1.</content>
-  <content contentuid="hf1b2c3d4a0000000000000000000059" version="1">Mind Over Matter</content>
-  <content contentuid="hf1b2c3d5a000000000000000000005a" version="1">Your mental fortitude protects your body. You gain resistance to psychic damage and advantage on saves against being charmed or frightened.</content>
-  <content contentuid="ha2c3d4e5a000000000000000000005b" version="1">Psychic Mastery</content>
-  <content contentuid="ha2c3d4e6a000000000000000000005c" version="1">Your psionic powers are greatly enhanced. Your psionic abilities deal additional damage and have improved effects.</content>
-  <content contentuid="hb3d4e5f6a000000000000000000005d" version="1">Supreme Consciousness</content>
-  <content contentuid="hb3d4e5f7a000000000000000000005e" version="1">You achieve the pinnacle of psychic power. Your mind transcends mortal limitations.</content>
   <content contentuid="hc4e5f6a7a000000000000000000005f" version="1">Survivor</content>
   <content contentuid="hc4e5f6a8a0000000000000000000060" version="1">At the start of each of your turns in combat, you regain 5 hit points.</content>
   <content contentuid="hd5f6a7b8a0000000000000000000061" version="1">Improved War Magic</content>
@@ -107,7 +101,7 @@
   <content contentuid="ha8c9d0e1a0000000000000000000067" version="1">Inspiring Surge (Improved)</content>
   <content contentuid="ha8c9d0e2a0000000000000000000068" version="1">Inspiring Surge: Once per Short Rest, as a Bonus Action, inspire allies within 9m. They gain Advantage on attack rolls and 10 temporary hit points for 2 turns.</content>
   <content contentuid="hb9d0e1f2a0000000000000000000069" version="1">Runic Juggernaut</content>
-  <content contentuid="hb9d0e1f3a000000000000000000006a" version="1">While Giant's Might is active, you grow even larger and deal an extra 1d10 damage with weapon attacks.</content>
+  <content contentuid="hb9d0e1f3a000000000000000000006a" version="2">Your Giant's Might extra damage increases to 1d10, and while it is active you can grow to Huge size.</content>
   <content contentuid="hc0e1f2a3a000000000000000000006b" version="1">Versatile Trickster</content>
   <content contentuid="hc0e1f2a4a000000000000000000006c" version="1">Direct your spectral hand to distract a creature within 18m as a Bonus Action. Attack rolls against the target have Advantage for 2 turns.</content>
   <content contentuid="hd1f2a3b4a000000000000000000006d" version="1">Infiltration Expertise</content>
@@ -153,7 +147,7 @@
   <content contentuid="ha2c3d4e5b0000000000000000000097" version="1">Alter Memories</content>
   <content contentuid="ha2c3d4e6b0000000000000000000098" version="1">You always have Modify Memory prepared, and your scrambling aura grips two enemies at once instead of one.</content>
   <content contentuid="hb3d4e5f6b0000000000000000000099" version="1">Overchannel</content>
-  <content contentuid="hb3d4e5f7b000000000000000000009a" version="1">When you cast a spell of 5th level or lower, you can deal maximum damage. If you use this again before a Long Rest, you take necrotic damage.</content>
+  <content contentuid="hb3d4e5f7b000000000000000000009a" version="2">While this is toggled on, spells of levels 1-5 that deal damage deal their maximum damage. The first use after a Long Rest is free; each later use before your next Long Rest deals 2d12 Necrotic damage per spell level to you, plus 1d12 per spell level for each use after that. Toggle it off to cast normally.</content>
   <content contentuid="hc4e5f6a7b000000000000000000009b" version="1">Illusory Reality</content>
   <content contentuid="hc4e5f6a8b000000000000000000009c" version="1">Your illusions bleed into reality: whenever you deal Psychic damage, you also deal 1d4 Slashing, 1d4 Bludgeoning, 1d4 Piercing, and 1d4 Force damage.</content>
   <content contentuid="ha2c3d4e7b00000000000000000000a1" version="1">Modify Memory</content>
@@ -238,8 +232,6 @@
   <content contentuid="hd1f2a3b5c00000000000000000000e6" version="1">You hold a fortified position behind your emplacements: you gain a +2 bonus to Armour Class and Resistance to Bludgeoning, Piercing, and Slashing damage.</content>
   <content contentuid="he2a3b4c5c00000000000000000000e7" version="1">Improved Defender</content>
   <content contentuid="he2a3b4c6c00000000000000000000e8" version="1">Your bond with your Steel Defender is perfected: you gain 2 additional Arcane Jolt charges per Long Rest, fuelling more frequent bursts of force damage and healing.</content>
-  <content contentuid="hf3b4c5d6c00000000000000000000e9" version="1">Focused Shot</content>
-  <content contentuid="hf3b4c5d7c00000000000000000000ea" version="1">When you take the Attack action, you can forgo one attack to gain advantage on your next attack this turn.</content>
   <content contentuid="ha4c5d6e7c00000000000000000000eb" version="1">Double or Nothing</content>
   <content contentuid="ha4c5d6e8c00000000000000000000ec" version="1">Lady Luck rides with you. You gain a +1 bonus to Attack Rolls and a +1 bonus to all Saving Throws.</content>
   <content contentuid="hb5d6e7f8c00000000000000000000ed" version="1">License to Kill</content>
@@ -270,14 +262,6 @@
   <content contentuid="hb7d8e9f1d0000000000000000000106" version="1">You strike from the darkness. You gain Advantage on Stealth checks, and your melee weapon attacks deal an additional 1d6 Necrotic damage.</content>
   <content contentuid="hc8e9f0a1d0000000000000000000107" version="1">Dark Malediction</content>
   <content contentuid="hc8e9f0a2d0000000000000000000108" version="1">Your curse clings to every blow. You gain a +1 bonus to Attack Rolls, and your weapon attacks deal an additional 1d8 Necrotic damage.</content>
-  <content contentuid="hd9f0a1b2d0000000000000000000109" version="1">Scramble Minds</content>
-  <content contentuid="hd9f0a1b3d000000000000000000010a" version="1">You can force multiple creatures to make Intelligence saves or be confused for 1 minute.</content>
-  <content contentuid="he0a1b2c3d000000000000000000010b" version="1">Heightened Telekinesis</content>
-  <content contentuid="he0a1b2c4d000000000000000000010c" version="1">Your telekinetic powers can affect Huge or larger creatures and deal additional force damage.</content>
-  <content contentuid="hf1b2c3d4d000000000000000000010d" version="1">Psi Warper Feature</content>
-  <content contentuid="hf1b2c3d5d000000000000000000010e" version="1">Your space-bending abilities allow you to teleport as a bonus action and bring allies with you.</content>
-  <content contentuid="ha2c3d4e5d000000000000000000010f" version="1">Life-Bending Weapons</content>
-  <content contentuid="ha2c3d4e6d0000000000000000000110" version="1">You can transform your limbs into deadly psionic weapons that deal 2d10 force damage.</content>
   <content contentuid="h0000000000000000000000000000d001" version="1">Disciplined Survivor</content>
   <content contentuid="h0000000000000000000000000000d002" version="1">Your mind and body are inseparable. You gain proficiency in all six Saving Throws.</content>
   <content contentuid="h0000000000000000000000000000d003" version="1">Slippery Mind</content>
@@ -304,32 +288,32 @@
   <content contentuid="haa11111111111111111111111111b013" version="1">Speed Reduction: [1]</content>
   
   <content contentuid="haa11111111111111111111111111b014" version="1">Staggering Blow</content>
-  <content contentuid="haa11111111111111111111111111b015" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;1d10&lt;/LSTag&gt; damage. The target has Disadvantage on the next saving throw it makes, and cannot make Opportunity Attacks until the start of your next turn.</content>
+  <content contentuid="haa11111111111111111111111111b015" version="2">Brutal Strike effect: The target has Disadvantage on the next saving throw it makes and can't make Opportunity Attacks until the start of your next turn.</content>
   <content contentuid="haa11111111111111111111111111b016" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;2d10&lt;/LSTag&gt; damage. The target has Disadvantage on the next saving throw it makes, and cannot make Opportunity Attacks until the start of your next turn.</content>
   <content contentuid="haa11111111111111111111111111b017" version="1">Inflicts: Disadvantage on next save, Cannot make Opportunity Attacks</content>
   
   <content contentuid="haa11111111111111111111111111b018" version="1">Sundering Blow</content>
-  <content contentuid="haa11111111111111111111111111b019" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;1d10&lt;/LSTag&gt; damage. Before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus.</content>
+  <content contentuid="haa11111111111111111111111111b019" version="2">Brutal Strike effect: Before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus.</content>
   <content contentuid="haa11111111111111111111111111b020" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;2d10&lt;/LSTag&gt; damage. Before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus.</content>
   <content contentuid="haa11111111111111111111111111b021" version="1">Next ally attack gains: +5 attack bonus</content>
   
   <content contentuid="haa11111111111111111111111111b022" version="1">Forceful Hamstring</content>
-  <content contentuid="haa11111111111111111111111111b023" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;2d10&lt;/LSTag&gt; damage, push the target 15 feet away, move toward them, AND reduce their Speed by 15 feet.</content>
+  <content contentuid="haa11111111111111111111111111b023" version="2">Two Brutal Strike effects: The target is pushed 15 feet straight away from you, and you can then move up to half your Speed toward it without provoking Opportunity Attacks; and the target's Speed is reduced by 15 feet until the start of your next turn.</content>
   
   <content contentuid="haa11111111111111111111111111b024" version="1">Forceful Stagger</content>
-  <content contentuid="haa11111111111111111111111111b025" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;2d10&lt;/LSTag&gt; damage, push the target 15 feet away, move toward them, AND inflict Disadvantage on their next save while preventing Opportunity Attacks.</content>
+  <content contentuid="haa11111111111111111111111111b025" version="2">Two Brutal Strike effects: The target is pushed 15 feet straight away from you, and you can then move up to half your Speed toward it without provoking Opportunity Attacks; and the target has Disadvantage on the next saving throw it makes and can't make Opportunity Attacks until the start of your next turn.</content>
   
   <content contentuid="haa11111111111111111111111111b026" version="1">Forceful Sunder</content>
-  <content contentuid="haa11111111111111111111111111b027" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;2d10&lt;/LSTag&gt; damage, push the target 15 feet away, move toward them, AND grant the next attack against them a +5 bonus.</content>
+  <content contentuid="haa11111111111111111111111111b027" version="2">Two Brutal Strike effects: The target is pushed 15 feet straight away from you, and you can then move up to half your Speed toward it without provoking Opportunity Attacks; and before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus.</content>
   
   <content contentuid="haa11111111111111111111111111b028" version="1">Crippling Stagger</content>
-  <content contentuid="haa11111111111111111111111111b029" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;2d10&lt;/LSTag&gt; damage, reduce the target's Speed by 15 feet, AND inflict Disadvantage on their next save while preventing Opportunity Attacks.</content>
+  <content contentuid="haa11111111111111111111111111b029" version="2">Two Brutal Strike effects: The target's Speed is reduced by 15 feet until the start of your next turn; and the target has Disadvantage on the next saving throw it makes and can't make Opportunity Attacks until the start of your next turn.</content>
   
   <content contentuid="haa11111111111111111111111111b030" version="1">Crippling Sunder</content>
-  <content contentuid="haa11111111111111111111111111b031" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;2d10&lt;/LSTag&gt; damage, reduce the target's Speed by 15 feet, AND grant the next attack against them a +5 bonus.</content>
+  <content contentuid="haa11111111111111111111111111b031" version="2">Two Brutal Strike effects: The target's Speed is reduced by 15 feet until the start of your next turn; and before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus.</content>
   
   <content contentuid="haa11111111111111111111111111b032" version="1">Staggering Sunder</content>
-  <content contentuid="haa11111111111111111111111111b033" version="1">Forgo Advantage to deal an extra &lt;LSTag Tooltip="DealDamage"&gt;2d10&lt;/LSTag&gt; damage, inflict Disadvantage on their next save, prevent Opportunity Attacks, AND grant the next attack against them a +5 bonus.</content>
+  <content contentuid="haa11111111111111111111111111b033" version="2">Two Brutal Strike effects: The target has Disadvantage on the next saving throw it makes and can't make Opportunity Attacks until the start of your next turn; and before the start of your next turn, the next attack roll made by another creature against the target gains a +5 bonus.</content>
 
   <content contentuid="hbb11111111111111111111111111c001" version="1">Intimidating Presence</content>
   <content contentuid="hbb11111111111111111111111111c002" version="1">As a Bonus Action, strike terror into others. Each creature of your choice in a 30-foot Emanation must make a Wisdom saving throw or be Frightened for 1 minute. Once used, regain by finishing a Long Rest or expending a Rage use.</content>
@@ -669,7 +653,7 @@
   <content contentuid="hap0000000000000000000000000073" version="1">Bulwark of Force</content>
   <content contentuid="hap0000000000000000000000000074" version="1">A telekinetic barrier shields you. You gain +2 Armour Class and Resistance to Force damage.</content>
   <content contentuid="hap0000000000000000000000000075" version="1">Master of Runes</content>
-  <content contentuid="hap0000000000000000000000000076" version="1">Your runes burn with greater power. While Giant's Might is active, you gain +2 Armour Class and a +2 bonus to Saving Throws.</content>
+  <content contentuid="hap0000000000000000000000000076" version="2">You can invoke each rune you know from your Rune Carver feature twice, rather than once, and you regain all expended uses when you finish a Short or Long Rest.</content>
   <content contentuid="hap0000000000000000000000000077" version="1">Rend Mind</content>
   <content contentuid="hap0000000000000000000000000078" version="1">Your psychic blades tear at the mind. Your weapon attacks deal an additional 1d6 Psychic damage, and you gain a +1 bonus to Attack Rolls.</content>
   <content contentuid="hap0000000000000000000000000079" version="1">Honed Spellfire</content>

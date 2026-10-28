@@ -139,6 +139,7 @@ M.subclass_uuids["f507f7bc-3d1a-4034-9590-ddef5a05d5b3"] = "PurpleDragonKnight"
 M.subclass_uuids["f574d2d6-cfc2-4cda-8771-1917f1eabaf1"] = "BattleSmith"
 M.subclass_uuids["f576dd16-d230-4233-bf3e-1d5ed0106b0c"] = "Hellspeaker"
 M.subclass_uuids["f617ec08-b29d-4ac0-a742-3fd6c25c4520"] = "Spellslinger"
+M.subclass_uuids["f6a59c66-01a0-4ed1-9dae-f0e5e11681a0"] = "SanguineThief"
 M.subclass_uuids["f87d7b0e-bc56-4f22-b347-9ef63bfa5220"] = "Swashbuckler"
 M.subclass_uuids["fbb8347b-20e3-4846-ba91-0552cd12fc5f"] = "NecromancySchool"
 M.subclass_uuids["fbf9d94c-9175-4145-9bd9-645dec6d4f1d"] = "WinterWalker"
@@ -184,32 +185,39 @@ M.classes["Barbarian"] = {
     levels = {
         [12] = {
             passives  = {},
-            boosts    = "ActionResource(Rage,1,0)",
+            boosts    = "ActionResource(Rage,1,0);ActionResource(HitPointDice12,1,0)",
         },
         [13] = {
-            passives  = { "Barbarian_BrutalStrike_Improved", "Apo_HitPointDice_Barbarian" },
+            passives  = { "Barbarian_BrutalStrike_Improved", "BrutalStrike_StaggeringBlow", "BrutalStrike_SunderingBlow" },
+            boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [14] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [15] = {
             passives  = { "Barbarian_PersistentRage" },
+            boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [16] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [17] = {
-            passives  = { "Barbarian_BrutalStrike_17" },
-            boosts    = "ActionResource(Rage,1,0)",
+            passives  = { "Barbarian_BrutalStrike_17", "BrutalStrike_Forceful_Hamstring", "BrutalStrike_Forceful_Staggering", "BrutalStrike_Forceful_Sundering", "BrutalStrike_Hamstring_Staggering", "BrutalStrike_Hamstring_Sundering", "BrutalStrike_Staggering_Sundering" },
+            boosts    = "ActionResource(Rage,1,0);ActionResource(HitPointDice12,1,0)",
         },
         [18] = {
             passives  = { "Barbarian_IndomitableMight" },
+            boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [19] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [20] = {
             passives  = { "Barbarian_PrimalChampion" },
+            boosts    = "ActionResource(HitPointDice12,1,0)",
         },
     },
 }
@@ -217,41 +225,43 @@ M.classes["Barbarian"] = {
 M.classes["Bard"] = {
     levels = {
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Bard" },
-            boosts    = "ActionResource(SpellSlot,1,7)",
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
+            passives  = { "UnlockedSpellSlotLevel7" },
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
+            selectors = "SelectSpells(00170002-0001-0001-0001-000000000003,1,1,BardMagicalSecrets)",
         },
         [14] = {
             passives  = {},
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,0,1,BardMagicalSecrets)",
+            boosts    = "ActionResource(HitPointDice08,1,0)",
+            selectors = "SelectSpells(00170002-0001-0001-0001-000000000003,0,1,BardMagicalSecrets)",
         },
         [15] = {
             passives  = { "UnlockedSpellSlotLevel8" },
-            boosts    = "ActionResource(SpellSlot,1,8)",
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
+            boosts    = "ActionResource(SpellSlot,1,8);ActionResource(HitPointDice08,1,0)",
+            selectors = "SelectSpells(00180002-0001-0001-0001-000000000003,1,1,BardMagicalSecrets)",
         },
         [16] = {
             passives  = {},
-            selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,0,1,BardMagicalSecrets)",
+            boosts    = "ActionResource(HitPointDice08,1,0)",
+            selectors = "SelectSpells(00180002-0001-0001-0001-000000000003,0,1,BardMagicalSecrets)",
         },
         [17] = {
             passives  = { "UnlockedSpellSlotLevel9" },
-            boosts    = "ActionResource(SpellSlot,1,9)",
+            boosts    = "ActionResource(SpellSlot,1,9);ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
         [18] = {
             passives  = { "Bard_SuperiorInspiration" },
-            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(BardicInspiration,1,0)",
+            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(BardicInspiration,1,0);ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
         [19] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,6)",
+            boosts    = "ActionResource(SpellSlot,1,6);ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
         [20] = {
             passives  = { "Bard_WordsOfCreation" },
-            boosts    = "ActionResource(SpellSlot,1,7)",
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(858d4322-9e9f-4aa4-aada-9c68835dc6fe,1,1,BardMagicalSecrets)",
         },
     },
@@ -261,39 +271,55 @@ M.classes["Cleric"] = {
     levels = {
         [12] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Cleric" },
-            boosts    = "ActionResource(SpellSlot,1,7)",
+            passives  = { "UnlockedSpellSlotLevel7" },
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
             selectors = "AddSpells(00170001-0001-0001-0001-000000000003)",
         },
         [14] = {
             passives  = { "ImprovedBlessedStrikes" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [15] = {
             passives  = { "UnlockedSpellSlotLevel8" },
-            boosts    = "ActionResource(SpellSlot,1,8)",
+            boosts    = "ActionResource(SpellSlot,1,8);ActionResource(HitPointDice08,1,0)",
             selectors = "AddSpells(00180001-0001-0001-0001-000000000003)",
         },
         [16] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [17] = {
             passives  = { "UnlockedSpellSlotLevel9" },
-            boosts    = "ActionResource(SpellSlot,1,9)",
+            boosts    = "ActionResource(SpellSlot,1,9);ActionResource(HitPointDice08,1,0)",
             selectors = "AddSpells(00190001-0001-0001-0001-000000000003)",
         },
         [18] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(ChannelDivinity,1,0)",
+            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(ChannelDivinity,1,0);ActionResource(HitPointDice08,1,0)",
         },
         [19] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,6)",
+            boosts    = "ActionResource(SpellSlot,1,6);ActionResource(HitPointDice08,1,0)",
         },
         [20] = {
             passives  = { "Cleric_GreaterDivineIntervention" },
-            boosts    = "ActionResource(SpellSlot,1,7)",
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
+        },
+    },
+}
+
+M.classes["Dragonborn"] = {
+    levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(BreathWeapon,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(BreathWeapon,1,0)",
         },
     },
 }
@@ -301,37 +327,52 @@ M.classes["Cleric"] = {
 M.classes["Druid"] = {
     levels = {
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Druid" },
-            boosts    = "ActionResource(SpellSlot,1,7)",
+            passives  = { "UnlockedSpellSlotLevel7" },
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
             selectors = "AddSpells(00170001-0001-0001-0001-000000000004)",
         },
         [14] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [15] = {
             passives  = { "Druid_ImprovedElementalFury", "UnlockedSpellSlotLevel8" },
-            boosts    = "ActionResource(SpellSlot,1,8)",
+            boosts    = "ActionResource(SpellSlot,1,8);ActionResource(HitPointDice08,1,0)",
             selectors = "AddSpells(00180001-0001-0001-0001-000000000004)",
         },
         [16] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [17] = {
             passives  = { "UnlockedSpellSlotLevel9" },
-            boosts    = "ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0)",
+            boosts    = "ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0);ActionResource(HitPointDice08,1,0)",
             selectors = "AddSpells(00190001-0001-0001-0001-000000000004)",
         },
         [18] = {
             passives  = { "Druid_BeastSpells" },
-            boosts    = "ActionResource(SpellSlot,1,5)",
+            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(HitPointDice08,1,0)",
         },
         [19] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,6)",
+            boosts    = "ActionResource(SpellSlot,1,6);ActionResource(HitPointDice08,1,0)",
         },
         [20] = {
             passives  = { "Druid_Archdruid" },
-            boosts    = "ActionResource(SpellSlot,1,7)",
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice08,1,0)",
+        },
+    },
+}
+
+M.classes["Eladrin"] = {
+    levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(Eladrin,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(Eladrin,1,0)",
         },
     },
 }
@@ -339,30 +380,50 @@ M.classes["Druid"] = {
 M.classes["Fighter"] = {
     levels = {
         [13] = {
-            passives  = { "Fighter_StudiedAttacks", "Apo_HitPointDice_Fighter" },
-            boosts    = "ActionResource(Interrupt_Indomitable,1,0)",
+            passives  = { "Fighter_StudiedAttacks" },
+            boosts    = "ActionResource(Interrupt_Indomitable,1,0);ActionResource(HitPointDice10,1,0)",
         },
         [14] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
         [15] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
         [16] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice10,1,0)",
+            selectors = "SelectPassives(b9543135-eceb-4ca9-b9fc-43befc11de3b,1,WeaponMasteryList)",
         },
         [17] = {
             passives  = { "Fighter_17_ActionSurgeTwice" },
-            boosts    = "ActionResource(Interrupt_Indomitable,1,0)",
+            boosts    = "ActionResource(Interrupt_Indomitable,1,0);ActionResource(HitPointDice10,1,0)",
         },
         [18] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
         [19] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
         [20] = {
             passives  = { "ExtraAttack_3" },
+            boosts    = "ActionResource(HitPointDice10,1,0)",
+        },
+    },
+}
+
+M.classes["Goliath"] = {
+    levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(Goliath,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(Goliath,1,0)",
         },
     },
 }
@@ -430,36 +491,36 @@ M.classes["Illrigger"] = {
 M.classes["Monk"] = {
     levels = {
         [13] = {
-            passives  = { "Monk_DeflectEnergy", "Apo_HitPointDice_Monk" },
-            boosts    = "ActionResource(KiPoint,1,0)",
+            passives  = { "Monk_DeflectEnergy" },
+            boosts    = "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
         },
         [14] = {
-            passives  = { "Monk_DisciplinedSurvivor" },
-            boosts    = "ActionResource(KiPoint,1,0)",
+            passives  = { "Monk_DisciplinedSurvivor", "Apo_UnarmoredMovement_4" },
+            boosts    = "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
         },
         [15] = {
             passives  = { "Monk_PerfectFocus" },
-            boosts    = "ActionResource(KiPoint,1,0)",
+            boosts    = "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
         },
         [16] = {
             passives  = {},
-            boosts    = "ActionResource(KiPoint,1,0)",
+            boosts    = "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
         },
         [17] = {
             passives  = {},
-            boosts    = "ActionResource(KiPoint,1,0)",
+            boosts    = "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
         },
         [18] = {
-            passives  = { "Monk_SuperiorDefense" },
-            boosts    = "ActionResource(KiPoint,1,0)",
+            passives  = { "Monk_SuperiorDefense", "Apo_UnarmoredMovement_5" },
+            boosts    = "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
         },
         [19] = {
             passives  = {},
-            boosts    = "ActionResource(KiPoint,1,0)",
+            boosts    = "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
         },
         [20] = {
             passives  = { "Monk_BodyAndMind" },
-            boosts    = "ActionResource(KiPoint,1,0);Ability(Dexterity,2,22);Ability(Wisdom,2,22)",
+            boosts    = "ActionResource(KiPoint,1,0);ActionResource(HitPointDice08,1,0)",
         },
     },
 }
@@ -493,37 +554,76 @@ M.classes["MonsterHunter"] = {
     },
 }
 
-M.classes["Paladin"] = {
+M.classes["MulticlassSpellSlots"] = {
     levels = {
         [13] = {
-            passives  = { "Apo_HitPointDice_Paladin" },
-            boosts    = "ActionResource(SpellSlot,1,4)",
-            selectors = "AddSpells(b88aff43-b75a-5947-b283-3c6ca5bf2591)",
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,7)",
         },
         [14] = {
-            passives  = { "Paladin_14_RestoringTouch" },
+            passives  = {},
         },
         [15] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,4)",
+            boosts    = "ActionResource(SpellSlot,1,8)",
         },
         [16] = {
             passives  = {},
         },
         [17] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5)",
+            boosts    = "ActionResource(SpellSlot,1,9)",
+        },
+        [18] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,5)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,6)",
+        },
+        [20] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,7)",
+        },
+    },
+}
+
+M.classes["Paladin"] = {
+    levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0)",
+            selectors = "AddSpells(b88aff43-b75a-5947-b283-3c6ca5bf2591)",
+        },
+        [14] = {
+            passives  = { "Paladin_14_RestoringTouch" },
+            boosts    = "ActionResource(HitPointDice10,1,0)",
+        },
+        [15] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0)",
+        },
+        [16] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice10,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0)",
             selectors = "AddSpells(bce36493-022a-5a20-8b8d-fd97f89be9a7)",
         },
         [18] = {
             passives  = { "Paladin_Aura30ft" },
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
         [19] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,5)",
+            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0)",
         },
         [20] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
     },
 }
@@ -531,34 +631,38 @@ M.classes["Paladin"] = {
 M.classes["Ranger"] = {
     levels = {
         [13] = {
-            passives  = { "Ranger_RelentlessHunter", "Apo_HitPointDice_Ranger" },
-            boosts    = "ActionResource(SpellSlot,1,4)",
+            passives  = { "Ranger_RelentlessHunter" },
+            boosts    = "ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0);ActionResource(FavoredEnemy,1,0)",
             selectors = "AddSpells(6e77d7ac-4b79-5691-bde3-357017ad4cdc)",
         },
         [14] = {
             passives  = { "Ranger_14_NaturesVeil" },
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
         [15] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,4)",
+            boosts    = "ActionResource(SpellSlot,1,4);ActionResource(HitPointDice10,1,0)",
         },
         [16] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
         [17] = {
             passives  = { "Ranger_17_PreciseHunter" },
-            boosts    = "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5)",
+            boosts    = "ActionResource(SpellSlot,1,4);ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0);ActionResource(FavoredEnemy,1,0)",
             selectors = "AddSpells(6b625ece-306d-576a-9fa2-896d884e4e05)",
         },
         [18] = {
             passives  = { "Ranger_FeralSenses" },
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
         [19] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,5)",
+            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(HitPointDice10,1,0)",
         },
         [20] = {
             passives  = { "Ranger_FoeSlayer" },
+            boosts    = "ActionResource(HitPointDice10,1,0)",
         },
     },
 }
@@ -566,28 +670,49 @@ M.classes["Ranger"] = {
 M.classes["Rogue"] = {
     levels = {
         [13] = {
-            passives  = { "Apo_HitPointDice_Rogue" },
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [14] = {
             passives  = { "Rogue_14_DeviousStrikes", "CunningStrike_Daze", "CunningStrike_KnockOut", "CunningStrike_Obscure" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [15] = {
             passives  = { "Rogue_SlipperyMind" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [16] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [17] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [18] = {
             passives  = { "Rogue_Elusive" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [19] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
         },
         [20] = {
             passives  = { "Rogue_StrokeOfLuck" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
+        },
+    },
+}
+
+M.classes["ShadarKai"] = {
+    levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(ShadarKai,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(ShadarKai,1,0)",
         },
     },
 }
@@ -595,43 +720,43 @@ M.classes["Rogue"] = {
 M.classes["Sorcerer"] = {
     levels = {
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Sorcerer" },
-            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0)",
+            passives  = { "UnlockedSpellSlotLevel7" },
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(00170002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
         [14] = {
             passives  = {},
-            boosts    = "ActionResource(SorceryPoint,1,0)",
+            boosts    = "ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(00170002-0001-0001-0001-000000000002,0,1,SorcererSpell)",
         },
         [15] = {
             passives  = { "UnlockedSpellSlotLevel8" },
-            boosts    = "ActionResource(SpellSlot,1,8);ActionResource(SorceryPoint,1,0)",
+            boosts    = "ActionResource(SpellSlot,1,8);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(00180002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
         [16] = {
             passives  = {},
-            boosts    = "ActionResource(SorceryPoint,1,0)",
+            boosts    = "ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(00180002-0001-0001-0001-000000000002,0,1,SorcererSpell)",
         },
         [17] = {
             passives  = { "UnlockedSpellSlotLevel9" },
-            boosts    = "ActionResource(SpellSlot,1,9);ActionResource(SorceryPoint,1,0)",
+            boosts    = "ActionResource(SpellSlot,1,9);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell);SelectPassives(c3506532-36eb-4d18-823e-497a537a9619,1,Metamagic)",
         },
         [18] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(SorceryPoint,1,0)",
+            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
         [19] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,6);ActionResource(SorceryPoint,1,0)",
+            boosts    = "ActionResource(SpellSlot,1,6);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
         [20] = {
             passives  = { "Sorcerer_ArcaneApotheosis" },
-            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0)",
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(SorceryPoint,1,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(00190002-0001-0001-0001-000000000002,1,1,SorcererSpell)",
         },
     },
@@ -640,36 +765,43 @@ M.classes["Sorcerer"] = {
 M.classes["Warlock"] = {
     levels = {
         [13] = {
-            passives  = { "Warlock_MysticArcanum_7", "Apo_HitPointDice_Warlock" },
+            passives  = { "Warlock_MysticArcanum_7" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00170001-0001-0001-0001-000000000007,1,0,MysticArcanum7,,None,AlwaysPrepared,UntilRest)",
         },
         [14] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,0,1)",
         },
         [15] = {
             passives  = { "Warlock_MysticArcanum_8" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00180001-0001-0001-0001-000000000007,1,0,MysticArcanum8,,None,AlwaysPrepared,UntilRest);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)",
         },
         [16] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,0,1)",
         },
         [17] = {
             passives  = { "Warlock_MysticArcanum_9" },
-            boosts    = "ActionResource(WarlockSpellSlot,1,5)",
+            boosts    = "ActionResource(WarlockSpellSlot,1,5);ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,1,1);SelectSpells(00190001-0001-0001-0001-000000000007,1,0,MysticArcanum9,,None,AlwaysPrepared,UntilRest)",
         },
         [18] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,0,1);SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)",
         },
         [19] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,1,1)",
         },
         [20] = {
             passives  = { "Warlock_EldritchMaster" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
             selectors = "SelectSpells(00150002-0001-0001-0001-000000000007,0,1)",
         },
     },
@@ -678,41 +810,43 @@ M.classes["Warlock"] = {
 M.classes["Wizard"] = {
     levels = {
         [13] = {
-            passives  = { "UnlockedSpellSlotLevel7", "Apo_HitPointDice_Wizard" },
-            boosts    = "ActionResource(SpellSlot,1,7)",
+            passives  = { "UnlockedSpellSlotLevel7" },
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)",
             selectors = "SelectSpells(aa384b4e-36b4-5b2d-93b3-c1063ba2ffb2,2,0,WizardSpellList)",
         },
         [14] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(aa384b4e-36b4-5b2d-93b3-c1063ba2ffb2,2,0,WizardSpellList)",
         },
         [15] = {
             passives  = { "UnlockedSpellSlotLevel8" },
-            boosts    = "ActionResource(SpellSlot,1,8)",
+            boosts    = "ActionResource(SpellSlot,1,8);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)",
             selectors = "SelectSpells(f0f0369f-fef5-5399-92c1-0a02c56c93bd,2,0,WizardSpellList)",
         },
         [16] = {
             passives  = {},
+            boosts    = "ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(f0f0369f-fef5-5399-92c1-0a02c56c93bd,2,0,WizardSpellList)",
         },
         [17] = {
             passives  = { "UnlockedSpellSlotLevel9" },
-            boosts    = "ActionResource(SpellSlot,1,9)",
+            boosts    = "ActionResource(SpellSlot,1,9);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)",
             selectors = "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList)",
         },
         [18] = {
             passives  = { "SpellMastery" },
-            boosts    = "ActionResource(SpellSlot,1,5)",
+            boosts    = "ActionResource(SpellSlot,1,5);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList)",
         },
         [19] = {
             passives  = {},
-            boosts    = "ActionResource(SpellSlot,1,6)",
+            boosts    = "ActionResource(SpellSlot,1,6);ActionResource(HitPointDice06,1,0);ActionResource(ArcaneRecoveryPoint,1,0)",
             selectors = "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList)",
         },
         [20] = {
             passives  = { "Wizard_SignatureSpells" },
-            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(SignatureSpellCharge,2,0)",
+            boosts    = "ActionResource(SpellSlot,1,7);ActionResource(SignatureSpellCharge,2,0);ActionResource(HitPointDice06,1,0)",
             selectors = "SelectSpells(ae03c25e-d0ac-55a5-899a-ae75a3b20c5a,2,0,WizardSpellList)",
         },
     },
@@ -1090,8 +1224,36 @@ M.subclasses["Cavalier"] = {
 M.subclasses["Celestial"] = {
     parent = "Warlock",
     levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(HealingLight,1,0)",
+        },
         [14] = {
             passives  = { "Celestial_14_SearingVengeance" },
+        },
+        [15] = {
+            passives  = {},
+            boosts    = "ActionResource(HealingLight,1,0)",
+        },
+        [16] = {
+            passives  = {},
+            boosts    = "ActionResource(HealingLight,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(HealingLight,1,0)",
+        },
+        [18] = {
+            passives  = {},
+            boosts    = "ActionResource(HealingLight,1,0)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(HealingLight,1,0)",
+        },
+        [20] = {
+            passives  = {},
+            boosts    = "ActionResource(HealingLight,1,0)",
         },
     },
 }
@@ -1132,8 +1294,36 @@ M.subclasses["CircleOfDragons"] = {
 M.subclasses["CircleOfDreams"] = {
     parent = "Druid",
     levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(Balm,1,0)",
+        },
         [14] = {
             passives  = { "Dreams_14_WalkerInDreams" },
+        },
+        [15] = {
+            passives  = {},
+            boosts    = "ActionResource(Balm,1,0)",
+        },
+        [16] = {
+            passives  = {},
+            boosts    = "ActionResource(Balm,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(Balm,1,0)",
+        },
+        [18] = {
+            passives  = {},
+            boosts    = "ActionResource(Balm,1,0)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(Balm,1,0)",
+        },
+        [20] = {
+            passives  = {},
+            boosts    = "ActionResource(Balm,1,0)",
         },
     },
 }
@@ -1150,8 +1340,24 @@ M.subclasses["CircleOfStars"] = {
 M.subclasses["CircleOfTheLand"] = {
     parent = "Druid",
     levels = {
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(NaturalRecoveryPoint,1,0)",
+        },
         [14] = {
             passives  = { "CircleOfTheLand_14_NaturesSanctuary" },
+        },
+        [15] = {
+            passives  = {},
+            boosts    = "ActionResource(NaturalRecoveryPoint,1,0)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(NaturalRecoveryPoint,1,0)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(NaturalRecoveryPoint,1,0)",
         },
     },
 }
@@ -1159,8 +1365,20 @@ M.subclasses["CircleOfTheLand"] = {
 M.subclasses["CircleOfTheMoon"] = {
     parent = "Druid",
     levels = {
+        [12] = {
+            passives  = {},
+            boosts    = "UnlockSpell(Shout_WildShape_Combat_Apo_Elephant)",
+        },
         [14] = {
             passives  = { "CircleOfTheMoon_14_LunarForm" },
+        },
+        [15] = {
+            passives  = {},
+            boosts    = "UnlockSpell(Shout_WildShape_Combat_Apo_Triceratops)",
+        },
+        [18] = {
+            passives  = {},
+            boosts    = "UnlockSpell(Shout_WildShape_Combat_Apo_Mammoth)",
         },
     },
 }
@@ -2041,8 +2259,16 @@ M.subclasses["PsiWarrior"] = {
         [12] = {
             passives  = {},
         },
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(PsiWarrior,2,0)",
+        },
         [15] = {
             passives  = { "PsiWarrior_12_BulwarkOfForce" },
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(PsiWarrior,2,0)",
         },
         [18] = {
             passives  = { "PsiWarrior_TelekineticMaster" },
@@ -2071,8 +2297,17 @@ M.subclasses["RuneKnight"] = {
         [12] = {
             passives  = {},
         },
+        [13] = {
+            passives  = {},
+            boosts    = "ActionResource(GiantsMight,1,0)",
+        },
         [15] = {
             passives  = { "RuneKnight_12_MasterOfRunes" },
+            selectors = "SelectPassives(22922e4f-4e69-4287-a52e-1285d5c04434,1,RuneKnight_3_RuneCarver)",
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(GiantsMight,1,0)",
         },
         [18] = {
             passives  = { "RuneKnight_RunicJuggernaut" },
@@ -2086,7 +2321,7 @@ M.subclasses["Sangromancer"] = {
         [13] = {
             passives  = {},
             boosts    = "ActionResource(HitPointDice12,1,0)",
-            selectors = "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)",
+            selectors = "SelectSpells(b13878fd-5eb7-5172-b6de-87529488852c,1,0,Wizard_3_Savant)",
         },
         [14] = {
             passives  = { "Sangromancer_14_RedRenewal" },
@@ -2095,19 +2330,19 @@ M.subclasses["Sangromancer"] = {
         [15] = {
             passives  = {},
             boosts    = "ActionResource(HitPointDice12,1,0)",
-            selectors = "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)",
+            selectors = "SelectSpells(86286cc3-a978-5270-bb89-43b22a2d6a8a,1,0,Wizard_3_Savant)",
         },
         [16] = {
-            passives  = {},
+            passives  = { "Sangromancer_16_RedRenewal" },
             boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [17] = {
             passives  = {},
             boosts    = "ActionResource(HitPointDice12,1,0)",
-            selectors = "SelectSpells(398d9fdb-0101-4226-b2eb-08a2dae9accb,1,0,Wizard_3_Savant)",
+            selectors = "SelectSpells(832afb33-9ec1-5f27-a2e4-88b25ddd72e2,1,0,Wizard_3_Savant)",
         },
         [18] = {
-            passives  = {},
+            passives  = { "Sangromancer_18_RedRenewal" },
             boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [19] = {
@@ -2115,7 +2350,7 @@ M.subclasses["Sangromancer"] = {
             boosts    = "ActionResource(HitPointDice12,1,0)",
         },
         [20] = {
-            passives  = {},
+            passives  = { "Sangromancer_20_RedRenewal" },
             boosts    = "ActionResource(HitPointDice12,1,0)",
         },
     },
@@ -2135,6 +2370,49 @@ M.subclasses["SanguineKnight"] = {
         },
         [18] = {
             passives  = { "SanguineKnight_7_BloodForBlood" },
+        },
+    },
+}
+
+M.subclasses["SanguineThief"] = {
+    parent = "Rogue",
+    levels = {
+        [13] = {
+            passives  = { "UnlockedSpellSlotLevel3", "SanguineThief_13_Bloodstitch" },
+            boosts    = "ActionResource(HitPointDice08,1,0);ActionResource(SpellSlot,2,3)",
+            selectors = "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,1,1,SanguineThiefSpells)",
+        },
+        [14] = {
+            passives  = {},
+            selectors = "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,1,1,SanguineThiefSpells)",
+        },
+        [15] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0)",
+            selectors = "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,0,1,SanguineThiefSpells)",
+        },
+        [16] = {
+            passives  = {},
+            boosts    = "ActionResource(SpellSlot,1,3)",
+            selectors = "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,1,1,SanguineThiefSpells)",
+        },
+        [17] = {
+            passives  = { "SanguineThief_17_BloodyExit" },
+            boosts    = "ActionResource(HitPointDice08,1,0)",
+            selectors = "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,0,1,SanguineThiefSpells)",
+        },
+        [18] = {
+            passives  = {},
+            selectors = "SelectSpells(dbe02992-254f-5536-86b4-d498ea836d1d,0,1,SanguineThiefSpells)",
+        },
+        [19] = {
+            passives  = {},
+            boosts    = "ActionResource(HitPointDice08,1,0);ActionResource(SpellSlot,1,4)",
+            selectors = "SelectSpells(a4ce1419-c9fa-54e9-8415-147c85e3e660,1,1,SanguineThiefSpells)",
+        },
+        [20] = {
+            passives  = {},
+            selectors = "SelectSpells(a4ce1419-c9fa-54e9-8415-147c85e3e660,1,1,SanguineThiefSpells)",
         },
     },
 }
@@ -2572,6 +2850,10 @@ M.subclasses["ZealotPath"] = {
     levels = {
         [14] = {
             passives  = { "Zealot_14_RageOfTheGods" },
+        },
+        [17] = {
+            passives  = {},
+            boosts    = "ActionResource(WarriorOfTheGods,1,0)",
         },
     },
 }

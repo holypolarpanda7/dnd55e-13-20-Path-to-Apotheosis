@@ -2,13 +2,13 @@
   "deps": {
     "897914ef-5c96-053c-44af-0be823f895fe": {
       "layer": "dnd55e",
-      "locked_at": "2026-10-22 15:29 CDT",
-      "md5": "318021117196814e8218ea7dd5d43041",
+      "locked_at": "2026-10-28 15:27 CDT",
+      "md5": "d1c726f7992abb15cbaf8afb9ca18989",
       "name": "DnD 5.5e All-in-One BEYOND",
-      "snapshot": "dnd55e-145944796899311621-3180211171",
-      "source": "/mnt/d/vortex/BG3/mods/DnD 5.5e All-in-One BEYOND 12727 4.13.10.5 2026-10-22T18-01Z vD0XPZd3V/DnD2024_897914ef-5c96-053c-44af-0be823f895fe.pak",
-      "version": "4.13.10.5",
-      "version64": "145944796899311621"
+      "snapshot": "dnd55e-146085512912830466-d1c726f799",
+      "source": "/mnt/d/vortex/BG3/mods/DnD 5.5e All-in-One BEYOND 12727 4.14.0.2 2026-10-28T08-54Z lcdnu3at8/DnD2024_897914ef-5c96-053c-44af-0be823f895fe.pak",
+      "version": "4.14.0.2",
+      "version64": "146085512912830466"
     }
   }
 }

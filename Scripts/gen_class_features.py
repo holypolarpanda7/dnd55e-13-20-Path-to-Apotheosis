@@ -129,8 +129,12 @@ NODES = {
     # resource audit fixes (2026-10-03): real resource names, 2024 levels
     "a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6": {"PassivesAdded": "Fighter_StudiedAttacks", "Boosts": "ActionResource(Interrupt_Indomitable,1,0)"},
     "e5f6a7b8-c9d0-41e2-f3a4-b5c6d7e8f9a0": {"PassivesAdded": "Fighter_17_ActionSurgeTwice", "Boosts": "ActionResource(Interrupt_Indomitable,1,0)"},
-    "11111111-1111-1111-1111-111111111101": {"PassivesAdded": "Barbarian_BrutalStrike_Improved"},
-    "11111111-1111-1111-1111-111111111105": {"PassivesAdded": "Barbarian_BrutalStrike_17", "Boosts": "ActionResource(Rage,1,0)"},
+    # Brutal Strike options are toggles since dnd55e 4.14 (2026-10-24): 13 adds Staggering / Sundering, 17 the two-effect combinations
+    "11111111-1111-1111-1111-111111111101": {"PassivesAdded": "Barbarian_BrutalStrike_Improved;BrutalStrike_StaggeringBlow;BrutalStrike_SunderingBlow"},
+    "11111111-1111-1111-1111-111111111105": {"PassivesAdded": "Barbarian_BrutalStrike_17;BrutalStrike_Forceful_Hamstring;BrutalStrike_Forceful_Staggering;"
+                                                              "BrutalStrike_Forceful_Sundering;BrutalStrike_Hamstring_Staggering;"
+                                                              "BrutalStrike_Hamstring_Sundering;BrutalStrike_Staggering_Sundering",
+                                             "Boosts": "ActionResource(Rage,1,0)"},
     "11111111-1111-1111-1111-111111111106": {"PassivesAdded": "Barbarian_IndomitableMight"},
     "88888888-8888-8888-8888-888888888805": {"PassivesAdded": "UnlockedSpellSlotLevel9", "Boosts": "ActionResource(SpellSlot,1,9);ActionResource(WildShape,1,0)",
                                              "Selectors": "AddSpells(00190001-0001-0001-0001-000000000004)"},  # Druid 9th-level list (9127692, 2026-10-04)
