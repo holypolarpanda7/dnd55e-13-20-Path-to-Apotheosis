@@ -319,3 +319,27 @@ expect = [
   { cast = true },
   { target = "A", hp_change = [-47, -8] },
 ]
+
+[[case]]
+id = "fix57-overchannel-drawback"
+title = "Overchannel's second use since a Long Rest costs 2d12 Necrotic per slot level (Magic Missile: 2d12, dice fixed at 12 = 24) (#57)"
+spell = "Projectile_MagicMissile"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 6 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "host", hp = "full" },
+         { lua = "Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.SetUses(BG3T.host(), 1); Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.TestDie = 12" }]
+notes = "SetUses(1) = the free use is spent; TestDie fixes the Lua d12s. A scripted cast spends no slot, so the spell's own level (1) is charged."
+expect = [{ cast = true }, { target = "host", hp_change = [-24, -24] }]
+
+[[case]]
+id = "fix57-overchannel-resisted"
+title = "Overchannel's Necrotic damage can't be reduced: a caster resistant to Necrotic still takes the full 24 (#57)"
+spell = "Projectile_MagicMissile"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 6 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "host", hp = "full" },
+         { target = "host", boost = "Resistance(Necrotic,Resistant)" }, { lua = "Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.SetUses(BG3T.host(), 1); Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.TestDie = 12" }]
+expect = [{ cast = true }, { target = "host", hp_change = [-24, -24] }]
+

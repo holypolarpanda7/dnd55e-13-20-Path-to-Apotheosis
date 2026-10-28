@@ -10,6 +10,8 @@
 - Fixed: Spell Mastery's free spells (Wizard 18) lost their spell properties: Hold Person, Web, Invisibility and others didn't need Concentration, harmful spells weren't marked as attacks, and Magic Missile, Burning Hands and Blindness were wrongly set up as spell menus. They now keep the real spell's properties. Reported as #60.
 - Changed: Evoker Overchannel (14) is a hotbar toggle (on by default). Toggle it off to cast normally and avoid the Necrotic damage. Requested in #59.
 - Removed eight unused feature entries that had no effect and were never granted (#57).
+- Fixed: Epic Boons at level 19 could stay locked ("Strength needs to be higher than 99") when the character being levelled wasn't the one the game treats as controlled. The level gate now checks the character shown on the open level-up screen or character sheet, and writes a line to the Script Extender log whenever it locks or unlocks (#54).
+- Fixed: Overchannel's Necrotic damage is now charged per level of the spell slot you cast with (it used the spell's base level), and it can't be reduced by Necrotic resistance, as the rules say (#57).
 - Fixed: Holy Aura, Divine Word, Storm of Vengeance, Control Weather, Antimagic Field and Conjure Celestial (and the Boon of Siberys copy of Control Weather) showed as an empty spell menu on the hotbar and couldn't be cast. Same cause as the Spell Mastery bug in #60.
 
 ## v1.0.4.0 - 2026-10-23
