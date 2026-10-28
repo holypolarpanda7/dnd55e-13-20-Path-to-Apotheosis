@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v1.0.5.0 - 2026-10-28
 
 - Built against DnD 5.5e All-in-One BEYOND 4.14.0.2 (was 4.13.10.5). DnD 5.5e reworked Reckless Attack, Brutal Strike, Frenzy and the Rune Knight's runes to follow the rules more closely; PTA's 13-20 features for them are rebuilt on the new versions:
   - Barbarian: Reckless Attack is now the reaction on your first attack, and Brutal Strike effects are hotbar toggles. Improved Brutal Strike (13) adds Staggering Blow and Sundering Blow toggles; at 17 Brutal Strike deals 2d10 and adds a toggle for each pair of two effects. The old Reckless Attack spells are gone (DnD 5.5e removed them).
