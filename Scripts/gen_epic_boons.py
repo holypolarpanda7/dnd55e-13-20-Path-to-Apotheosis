@@ -490,6 +490,10 @@ def free_copy(spell, suffix, extra_cost, strip_components, info=None, label=None
     costs = ";".join(c for c in info["costs"].split(";") if c and not c.startswith("SpellSlotsGroup") and not c.startswith("WarlockSpellSlot"))
     costs = ";".join(c for c in [costs, extra_cost] if c)
     flags = info["flags"]
+    # a free copy is never a spell menu: an IsLinkedSpellContainer copy without ContainerSpells shows an empty menu in the hotbar and
+    # can't be cast (Control Weather's, 2026-10-28) - except Shield, whose copies are reactions like the base game's
+    if "Shield" not in spell:
+        flags = ";".join(f for f in flags.split(";") if f and f != "IsLinkedSpellContainer")
     if strip_components:
         flags = ";".join(f for f in flags.split(";") if f and f not in ("HasVerbalComponent", "HasSomaticComponent"))
     SP_LATE.append(entry(f"{spell}_{suffix}", "SpellData", {"UseCosts": costs, "SpellFlags": flags,

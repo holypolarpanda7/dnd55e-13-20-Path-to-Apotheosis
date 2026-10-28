@@ -1,0 +1,27 @@
+# Rune Knight 13-20 on dnd55e 4.14's runes (2026-10-28): every rune is a passive pick with its own RuneKnight_<Rune> resource. Master of
+# Runes (15, TCoE) = each rune you know twice per rest; Runic Juggernaut (18) = Giant's Might damage 1d10 (GiantsMight level map) and Huge.
+# Run: bg3_test_run("apotheosis", "<id>").
+
+[suite]
+name = "Fighter: Rune Knight 15 / 18"
+mode = "script"
+
+[[case]]
+id = "runeknight-15-master-of-runes"
+title = "Master of Runes (15): each rune you know can be invoked twice (one more use of its own resource), runes you don't know get none"
+spell = "Shout_FrostRune"
+target = "host"
+setup = [{ target = "host", passive = "RuneKnight_3_FrostRune" }, { target = "host", passive = "RuneKnight_3_FireRune" },
+         { target = "host", passive = "RuneKnight_12_MasterOfRunes" }]
+notes = "The cast is only a carrier (UseSpell pays no cost); the check is the pools' maximum at the end. Stone is not known: no pool."
+expect = [{ resource = "RuneKnight_Frost", level = 0, max = 2 }, { resource = "RuneKnight_Fire", level = 0, max = 2 },
+          { resource = "RuneKnight_Stone", level = 0, max = 0 }]
+
+[[case]]
+id = "runeknight-18-runic-juggernaut-size"
+title = "Runic Juggernaut (18): Giant's Might makes you one size larger than dnd55e's Large"
+spell = "Shout_GiantsMight"
+target = "host"
+setup = [{ target = "host", passive = "RuneKnight_3_GiantsMight" }, { target = "host", passive = "RuneKnight_RunicJuggernaut" }]
+expect = [{ target = "host", status_applied = ["GIANTS_MIGHT"] }]
+notes = "The size itself (ObjectSize +1 on top of GIANTS_MIGHT's +1) is checked by eye; the 1d10 damage is the GiantsMight level map (lint)."

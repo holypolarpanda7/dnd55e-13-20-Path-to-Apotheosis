@@ -542,6 +542,14 @@
                     <attribute id="UUID" type="guid" value="35cc5d5c-f5a3-4e9a-a90b-33e98e671e9f"/>
                 </node>
                 <node id="LevelMapSeries">
+                    <attribute id="Level3" type="LSString" value="1d6"/>
+                    <attribute id="Level10" type="LSString" value="1d8"/>
+                    <attribute id="Level18" type="LSString" value="1d10"/>
+                    <attribute id="Name" type="FixedString" value="GiantsMight"/>
+                    <attribute id="PreferredClassUUID" type="guid" value="721dfac3-92d4-41f5-b773-b7072a86232f"/>
+                    <attribute id="UUID" type="guid" value="216edfed-ef82-4b22-87a8-0e6c56a3b9bd"/>
+                </node>
+                <node id="LevelMapSeries">
                     <attribute id="Level1" type="LSString" value="1d8"/>
                     <attribute id="Level3" type="LSString" value="2d8"/>
                     <attribute id="Level5" type="LSString" value="3d8"/>

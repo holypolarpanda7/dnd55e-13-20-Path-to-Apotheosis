@@ -616,126 +616,16 @@ covers = ["Target_LayOnHands_RestoreCharmed", "Target_LayOnHands_RestoreFrighten
 notes = "Stands for 4 alike option(s) of Target_LayOnHands."
 
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-base"
-title = "Target_RecklessAttack: Target_RecklessAttack_Base"
-spell = "Target_RecklessAttack_Base"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-forcefulblow"
-title = "Target_RecklessAttack: Target_RecklessAttack_ForcefulBlow"
-spell = "Target_RecklessAttack_ForcefulBlow"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "BrutalCritical" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "host", status_applied = ["FORCEFUL_BLOW"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-hamstringblow"
-title = "Target_RecklessAttack: Target_RecklessAttack_HamstringBlow"
-spell = "Target_RecklessAttack_HamstringBlow"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "BrutalCritical" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["HAMSTRING"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-staggeringblow"
-title = "Target_RecklessAttack: Target_RecklessAttack_StaggeringBlow"
-spell = "Target_RecklessAttack_StaggeringBlow"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_Improved" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED_NO_OA"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-sunderingblow"
-title = "Target_RecklessAttack: Target_RecklessAttack_SunderingBlow"
-spell = "Target_RecklessAttack_SunderingBlow"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_Improved" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-forceful-hamstring"
-title = "Target_RecklessAttack: Target_RecklessAttack_Forceful_Hamstring"
-spell = "Target_RecklessAttack_Forceful_Hamstring"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "host", status_applied = ["FORCEFUL_BLOW"] }, { target = "A", status_applied = ["HAMSTRING"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-forceful-staggering"
-title = "Target_RecklessAttack: Target_RecklessAttack_Forceful_Staggering"
-spell = "Target_RecklessAttack_Forceful_Staggering"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "host", status_applied = ["FORCEFUL_BLOW"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED_NO_OA"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-forceful-sundering"
-title = "Target_RecklessAttack: Target_RecklessAttack_Forceful_Sundering"
-spell = "Target_RecklessAttack_Forceful_Sundering"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "host", status_applied = ["FORCEFUL_BLOW"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-hamstring-staggering"
-title = "Target_RecklessAttack: Target_RecklessAttack_Hamstring_Staggering"
-spell = "Target_RecklessAttack_Hamstring_Staggering"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["HAMSTRING"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED_NO_OA"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-hamstring-sundering"
-title = "Target_RecklessAttack: Target_RecklessAttack_Hamstring_Sundering"
-spell = "Target_RecklessAttack_Hamstring_Sundering"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["HAMSTRING"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
-[[case]]
-id = "cont-target-recklessattack-target-recklessattack-staggering-sundering"
-title = "Target_RecklessAttack: Target_RecklessAttack_Staggering_Sundering"
-spell = "Target_RecklessAttack_Staggering_Sundering"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", passive = "Barbarian_BrutalStrike_17" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "host", status_applied = ["RECKLESS_ATTACK"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_STAGGERED_NO_OA"] }, { target = "A", status_applied = ["BRUTAL_STRIKE_SUNDERED"] }, { target = "A", hp_change = [-300, -1] }, { resource = "RecklessAttack", level = 0, change = -1 }]
-
 # draft confidence: high
 [[case]]
 id = "cont-target-truepolymorph-target-truepolymorph-shadowmastiff"

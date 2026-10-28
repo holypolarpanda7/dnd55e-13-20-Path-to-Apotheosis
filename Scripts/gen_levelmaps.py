@@ -39,7 +39,8 @@ ADD = {  # series name -> {level: value} (2024 rules)
     "Thunderwave_Monk": {13: "4d8", 17: "5d8"}, "WaterWhip": {13: "5d10", 17: "6d10"},
     "RayOfFrost_Monk": {13: "3d10", 17: "4d10"}, "ShockingGrasp_Monk": {13: "3d10", 17: "4d10"},
     "ScorchingRay_Monk": {13: "5", 17: "6"}, "HoldPerson_Monk": {13: "3", 17: "4"},
-    "RageDamageDice": {16: "4d6"},                             # World Tree Life-Giving Force: d6s equal to the Rage Damage (+4 at 16)
+    "RageDamageDice": {16: "4d6"},                             # also Berserker Frenzy since dnd55e 4.14 (4d6 at 16)
+    "GiantsMight": {18: "1d10"},                               # Rune Knight Runic Juggernaut (TCoE 18): Giant's Might damage 1d10                             # World Tree Life-Giving Force: d6s equal to the Rage Damage (+4 at 16)
     "VenomousStrike": {13: "7d8", 15: "8d8", 17: "9d8", 19: "10d8"},   # Sneak Attack as Poison d8s: as many dice as Sneak Attack
 }
 

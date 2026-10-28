@@ -6,6 +6,61 @@
 // BARBARIAN - Improved Brutal Strike Status Effects (Level 13+)
 // ==============================================================================
 
+// Marker for Barbarian_BrutalStrike_Improved (PTA's 13/17 Brutal Strike parts), applied beside dnd55e's BRUTAL_STRIKE
+new entry "BRUTAL_STRIKE_APO"
+type "StatusData"
+data "StatusType" "BOOST"
+data "TickType" "StartTurn"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+// Marker for Barbarian_BrutalStrike_17's extra 1d10
+new entry "BRUTAL_STRIKE_APO17"
+type "StatusData"
+data "StatusType" "BOOST"
+data "TickType" "StartTurn"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+// On while the matching PTA Brutal Strike toggle is on (its ToggleOn/OffFunctors)
+new entry "APO_BST_STAGGERINGBLOW"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "APO_BST_SUNDERINGBLOW"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "APO_BST_FORCEFUL_HAMSTRING"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "APO_BST_FORCEFUL_STAGGERING"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "APO_BST_FORCEFUL_SUNDERING"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "APO_BST_HAMSTRING_STAGGERING"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "APO_BST_HAMSTRING_SUNDERING"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "APO_BST_STAGGERING_SUNDERING"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
 // Staggering Blow: Target has disadvantage on next save, can't make opportunity attacks
 new entry "BRUTAL_STRIKE_STAGGERED"
 type "StatusData"

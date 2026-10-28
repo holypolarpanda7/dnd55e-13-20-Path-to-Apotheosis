@@ -34,3 +34,11 @@ ValorCollege = "College of Valor"
 WhiteHat = "White Hat"
 WildMagic = "Wild Magic Sorcery"
 WildMagicPath = "Path of Wild Magic"
+
+# Rules feature name -> the mod's passives that implement it, where one feature is several passives (EXTRA otherwise)
+[feature]
+# Brutal Strike effects are toggles since dnd55e 4.14 (one per effect; 17 adds a toggle per two-effect combination)
+"Improved Brutal Strike" = ["Barbarian_BrutalStrike_Improved", "BrutalStrike_StaggeringBlow", "BrutalStrike_SunderingBlow",
+                            "Barbarian_BrutalStrike_17", "BrutalStrike_Forceful_Hamstring", "BrutalStrike_Forceful_Staggering",
+                            "BrutalStrike_Forceful_Sundering", "BrutalStrike_Hamstring_Staggering", "BrutalStrike_Hamstring_Sundering",
+                            "BrutalStrike_Staggering_Sundering"]

@@ -292,38 +292,6 @@ expect = [
 ]
 
 [[case]]
-id = "fix55-reckless-base"
-title = "Reckless Attack (Base) gets Frenzy's Reckless Attack damage (3d6 at Barbarian 14) like dnd55e's own Reckless Attack (#55)"
-spell = "Target_RecklessAttack_Base"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", status = "RAGE_FRENZY_2" },
-         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
-         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "host", boost = "MinimumRollResult(Damage,20)" }]
-notes = "Dice maximised (MinimumRollResult), so 3d6 Frenzy = 18 on top of the weapon: at least 22; without Frenzy the hit stays under 20. Before the fix dnd55e's RecklessAttack() (an exact SpellId list) did not know our Target_RecklessAttack_* names."
-expect = [
-  { cast = true },
-  { target = "A", hp_change = [-90, -22] },
-]
-
-[[case]]
-id = "fix55-reckless-hamstring"
-title = "Hamstring Blow gets Frenzy's Reckless Attack damage (3d6 at Barbarian 14) like dnd55e's own Reckless Attack (#55)"
-spell = "Target_RecklessAttack_HamstringBlow"
-target = "A"
-real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 1.2 }]
-setup = [{ target = "host", passive = "RecklessAttack" }, { target = "host", status = "RAGE_FRENZY_2" },
-         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" },
-         { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "host", boost = "MinimumRollResult(Damage,20)" }]
-notes = "Dice maximised (MinimumRollResult), so 3d6 Frenzy = 18 on top of the weapon: at least 22; without Frenzy the hit stays under 20. Before the fix dnd55e's RecklessAttack() (an exact SpellId list) did not know our Target_RecklessAttack_* names."
-expect = [
-  { cast = true },
-  { target = "A", hp_change = [-90, -22] },
-]
-
-[[case]]
 id = "fix48-overchannel-max"
 title = "Evoker Overchannel maximises a 3rd-level damage spell (Fireball 8d6 -> 48, half on a save) instead of adding Intelligence (#48)"
 spell = "Projectile_Fireball"
@@ -336,3 +304,42 @@ expect = [
   { cast = true },
   { target = "A", hp_change = [-48, -24] },
 ]
+
+[[case]]
+id = "fix59-overchannel-toggle-off"
+title = "Overchannel toggled off: Fireball rolls normally (not 48 on a failed save) (#59)"
+spell = "Projectile_Fireball"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 16 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "host", toggle_off = "Evoker_14_Overchannel" },
+         { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+notes = "The save is forced to fail, so a maximised Fireball is exactly 48; a normal 8d6 reaches 48 only on eight sixes (1 in 1.7 million)."
+expect = [
+  { cast = true },
+  { target = "A", hp_change = [-47, -8] },
+]
+
+[[case]]
+id = "fix57-overchannel-drawback"
+title = "Overchannel's second use since a Long Rest costs 2d12 Necrotic per slot level (Magic Missile: 2d12, dice fixed at 12 = 24) (#57)"
+spell = "Projectile_MagicMissile"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 6 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "host", hp = "full" },
+         { lua = "Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.SetUses(BG3T.host(), 1); Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.TestDie = 12" }]
+notes = "SetUses(1) = the free use is spent; TestDie fixes the Lua d12s. A scripted cast spends no slot, so the spell's own level (1) is charged."
+expect = [{ cast = true }, { target = "host", hp_change = [-24, -24] }]
+
+[[case]]
+id = "fix57-overchannel-resisted"
+title = "Overchannel's Necrotic damage can't be reduced: a caster resistant to Necrotic still takes the full 24 (#57)"
+spell = "Projectile_MagicMissile"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 6 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "host", hp = "full" },
+         { target = "host", boost = "Resistance(Necrotic,Resistant)" }, { lua = "Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.SetUses(BG3T.host(), 1); Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.TestDie = 12" }]
+expect = [{ cast = true }, { target = "host", hp_change = [-24, -24] }]
+
