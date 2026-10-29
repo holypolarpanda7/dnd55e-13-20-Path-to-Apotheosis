@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v1.0.7.0 - 2026-10-29
 
 - Fixed: hotbar toggles that a mod update adds to a level your character already has never got a button, so you couldn't switch them. Barbarians who reached level 13 or 17 before 1.0.5.0 had no Improved Brutal Strike toggles (Staggering, Sundering and the two-effect blows), so Brutal Strike had no effect to choose. The same happened to DnD 5.5e's own Forceful Blow, Hamstring Blow and Improved Cunning Strike toggles after DnD 5.5e updates. When you load a save, any toggle your party has without a button is now put on the Passives tab of the hotbar (keyboard and controller), once. If you remove one on purpose, it stays removed.
 
