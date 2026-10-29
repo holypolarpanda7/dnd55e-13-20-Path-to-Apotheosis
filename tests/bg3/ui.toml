@@ -1,0 +1,57 @@
+# UI-path cases (mode = "ui", bg3-data-mcp uicast.py): the spell is cast from the hotbar with real clicks, so they also
+# prove the spell is reachable from the UI and that the engine charges its real cost. Built 2026-10-29.
+
+[[case]]
+id = "ui-chromatic-orb-fire"
+mode = "ui"
+title = "Container variant through the UI: Chromatic Orb -> Fire from the Select Variant row, clicked at the wolf"
+spell = "Projectile_ChromaticOrb_Fire"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 8 }]
+expect = [
+  { cast = true },
+  { target = "A", damage_type = "Fire" },
+  { resource = "SpellSlot", level = 1, change = -1 },
+]
+
+[[case]]
+id = "ui-magic-missile-upcast"
+mode = "ui"
+title = "Upcast through the UI: Magic Missile at a 2nd-level slot (4 darts), clicked at the wolf 4 times"
+spell = "Projectile_MagicMissile"
+slot_level = 2
+clicks = 4
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 8 }]
+expect = [
+  { cast = true },
+  { target = "A", damage_count = { count = [4, 4] } },
+  { resource = "SpellSlot", level = 2, change = -1 },
+  { resource = "SpellSlot", level = 1, change = 0 },
+]
+
+[[case]]
+id = "ui-grease-ground"
+mode = "ui"
+title = "Ground target through the UI: Grease clicked on the ground under the wolf"
+spell = "Target_Grease"
+target = "ground"
+at = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 8 }]
+expect = [
+  { cast = true },
+  { resource = "SpellSlot", level = 1, change = -1 },
+]
+
+[[case]]
+id = "ui-burning-hands-unprepared"
+mode = "ui"
+title = "Known but unprepared through the UI: Burning Hands is prepared in the spellbook (swapping one out when full), cast as a cone at the wolf, and the spellbook restored"
+spell = "Zone_BurningHands"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 3 }]
+expect = [
+  { cast = true },
+  { target = "A", damage_type = "Fire" },
+  { resource = "SpellSlot", level = 1, change = -1 },
+]
