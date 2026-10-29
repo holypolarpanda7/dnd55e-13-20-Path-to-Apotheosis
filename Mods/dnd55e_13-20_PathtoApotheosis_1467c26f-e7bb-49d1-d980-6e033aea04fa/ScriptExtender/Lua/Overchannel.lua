@@ -1,8 +1,11 @@
 -- Overchannel (Wizard Evoker 14, PHB 2024): when you cast a Wizard spell of levels 1-5 that deals damage you can deal
 -- its maximum damage. The first use after a Long Rest is free; each later use before the next Long Rest costs you
 -- 2d12 Necrotic per spell level, +1d12 per level for every further use. Stats side: Evoker_14_Overchannel
--- (MinimumRollResult maximizes the dice; a hotbar toggle since #59). This module does the self-damage and the per-rest use
--- count, only while the toggle is on.
+-- unlocks Interrupt_Apo_Overchannel, a Yes/No prompt on each qualifying cast (no reaction spent); Yes applies APO_OVERCHANNEL
+-- (MinimumRollResult maximizes the dice). This module does the self-damage and the per-rest use count for casts made under
+-- APO_OVERCHANNEL, then removes it so it covers that one spell: a moment after the cast (a hotbar Magic Missile's last dart can
+-- land after CastedSpell: 26 instead of 30 in game) and at the latest when the caster starts another spell (UsingSpell comes
+-- before that spell's prompt). Replaced the 1.0.5.0 hotbar toggle (#59), 2026-10-29.
 -- The damage is charged per level of the SPELL SLOT used (PHB 2024): CastedSpell names no slot, so the caster's spell slots are
 -- read on UsingSpell and compared on CastedSpell (no slot spent, e.g. a scripted cast: the spell's own level). It "can't be
 -- reduced": Osi.ApplyDamage goes through resistance, so a caster resistant to Necrotic is charged double (immunity still
@@ -10,6 +13,8 @@
 local Log = Apotheosis and Apotheosis.Log or { Info = print, Warn = print, Error = print }
 local OC = {}
 OC.PASSIVE = "Evoker_14_Overchannel"
+OC.STATUS = "APO_OVERCHANNEL"
+OC.LINGER_MS = 3000   -- how long APO_OVERCHANNEL outlives the cast, for projectiles still in flight
 
 OC.TestDie = nil   -- tests: every die of the next drawback rolls this value (set by a test case's setup `lua` step)
 
@@ -59,19 +64,18 @@ local function qualifies(spell)
     return level
 end
 
--- the passive is a hotbar toggle (#59): true only while it is switched on
-local function toggledOn(caster)
-    local on = false
-    pcall(function()
-        for _, p in ipairs(Ext.Entity.Get(caster).PassiveContainer.Passives) do
-            if p.Passive.PassiveId == OC.PASSIVE then on = p.Passive.ToggledOn == true end
-        end
-    end)
-    return on
+-- Yes on the Overchannel prompt for this cast
+local function chosen(caster)
+    return Osi.HasActiveStatus(caster, OC.STATUS) == 1
 end
 
+local generation = {}   -- caster -> spells started; a delayed removal only acts if no new spell started since
+
 function OC.OnUsing(caster)
-    if Osi.HasPassive(caster, OC.PASSIVE) == 1 then before[id(caster)] = slots(caster) end
+    if Osi.HasPassive(caster, OC.PASSIVE) ~= 1 then return end
+    generation[id(caster)] = (generation[id(caster)] or 0) + 1
+    if chosen(caster) then Osi.RemoveStatus(caster, OC.STATUS) end   -- left over from the previous spell
+    before[id(caster)] = slots(caster)
 end
 
 function OC.SetUses(caster, n)   -- tests: uses since the last Long Rest
@@ -81,7 +85,11 @@ end
 function OC.OnCast(caster, spell)
     local was = before[id(caster)]
     before[id(caster)] = nil
-    if Osi.HasPassive(caster, OC.PASSIVE) ~= 1 or not toggledOn(caster) then return end
+    if not chosen(caster) then return end
+    local gen = generation[id(caster)]
+    Ext.Timer.WaitFor(OC.LINGER_MS, function()   -- one spell only
+        if generation[id(caster)] == gen and chosen(caster) then Osi.RemoveStatus(caster, OC.STATUS) end
+    end)
     local level = qualifies(spell)
     if not level then return end
     if was then   -- the slot actually spent: the highest level whose count went down

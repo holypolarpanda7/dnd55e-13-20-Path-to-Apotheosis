@@ -1494,3 +1494,15 @@ data "DisplayName" "he4a5b6c7b0000000000000000000087"
 data "Icon" "Spell_Conjuration_MistyStep"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "OnApplyFunctors" "CreateExplosion(Projectile_Apotheosis_WarpingImplosion)"
+
+// Overchannel (Evoker 14): applied by Interrupt_Apo_Overchannel (Interrupt.txt) for one cast; Overchannel.lua removes it
+// after the cast. 2026-10-29.
+new entry "APO_OVERCHANNEL"
+type "StatusData"
+data "DisplayName" "hcd0f48976ded49388b2187c11a9e0b01"
+data "Description" "h80e127db1762488d91c1c230cdfc9e4a"
+data "Icon" "PassiveFeature_EmpoweredEvocation"
+data "StatusType" "BOOST"
+data "StackId" "APO_OVERCHANNEL"
+data "Boosts" "IF(IsSpell() and not IsCantrip() and SpellPowerLevelEqualOrLessThan(5)):MinimumRollResult(Damage,20)"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
