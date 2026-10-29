@@ -367,3 +367,40 @@ setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "hos
          { target = "host", boost = "Resistance(Necrotic,Resistant)" }, { lua = "Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.SetUses(BG3T.host(), 1); Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.TestDie = 12" }]
 expect = [{ cast = true }, { target = "host", hp_change = [-24, -24] }]
 
+
+[[case]]
+id = "fix59-overchannel-ui-yes"
+mode = "ui"
+title = "Overchannel through the real UI: Magic Missile from the hotbar, clicked at the wolf, Overchannel picked on the prompt -> 3 darts of 10 and a 1st-level slot spent (#59)"
+spell = "Projectile_MagicMissile"
+slot_level = 1
+clicks = 3
+target = "A"
+reactions = ["Overchannel"]   # ui mode: clicks Overchannel on the prompt; any other prompt gets Do Not React
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 8 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }]
+notes = "Catches what scripted cases can't: the spell must be on the hotbar, the prompt must appear (Ask), and the slot is really charged. Maximised: 1d4+1 -> 5, + 5 from Empowered Evocation = 10 per dart (30 seen 2026-10-29)."
+expect = [
+  { cast = true },
+  { target = "A", hp_change = [-30, -30] },
+  { target = "host", status_applied = ["APO_OVERCHANNEL"] },
+  { resource = "SpellSlot", level = 1, change = -1 },
+]
+
+[[case]]
+id = "fix59-overchannel-ui-no"
+mode = "ui"
+title = "Overchannel declined through the real UI: Do Not React on the prompt -> Magic Missile rolls normally (3 darts of 1d4+1), slot spent (#59)"
+spell = "Projectile_MagicMissile"
+slot_level = 1
+clicks = 3
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 8 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }]
+notes = "Empowered Evocation adds +5 to every dart: normal darts are 1d4+6 = 7-10 each (one roll for all darts; 27 seen 2026-10-29). A natural 4 also gives 30, so the check is that APO_OVERCHANNEL never landed."
+expect = [
+  { cast = true },
+  { target = "A", hp_change = [-30, -21] },
+  { target = "host", status_applied_count = { status = "APO_OVERCHANNEL", count = [0, 0] } },
+  { resource = "SpellSlot", level = 1, change = -1 },
+]
