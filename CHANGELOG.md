@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Fixed: hotbar toggles that a mod update adds to a level your character already has never got a button, so you couldn't switch them. Barbarians who reached level 13 or 17 before 1.0.5.0 had no Improved Brutal Strike toggles (Staggering, Sundering and the two-effect blows), so Brutal Strike had no effect to choose. The same happened to DnD 5.5e's own Forceful Blow, Hamstring Blow and Improved Cunning Strike toggles after DnD 5.5e updates. When you load a save, any toggle your party has without a button is now put on the Passives tab of the hotbar (keyboard and controller), once. If you remove one on purpose, it stays removed.
+
 ## v1.0.6.0 - 2026-10-29
 
 - Changed: Evoker Overchannel (14) now asks you each time you cast a damaging spell of levels 1-5: choose Overchannel in the reaction prompt to deal maximum damage, or Do Not React to cast normally. It doesn't use your reaction. You can set it to always or never in the Reactions panel, like other reactions. This replaces the 1.0.5.0 hotbar toggle, which characters who already had Overchannel before updating never got on their hotbar, so it stayed on and they took the Necrotic damage on every spell. Reported after #59.

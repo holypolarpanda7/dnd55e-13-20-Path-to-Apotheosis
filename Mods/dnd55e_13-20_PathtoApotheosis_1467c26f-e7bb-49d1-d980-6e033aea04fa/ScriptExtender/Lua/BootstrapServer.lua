@@ -1146,6 +1146,13 @@ if Ext and type(Ext.Require) == "function" then
         Log.Warn("Overchannel bootstrap load failed: " .. tostring(ocOrErr))
     end
 
+    local okHr, hrOrErr = pcall(Ext.Require, "HotbarRepair.lua")
+    if okHr and type(hrOrErr) == "table" then
+        Log.Info("HotbarRepair loaded at bootstrap")
+    else
+        Log.Warn("HotbarRepair bootstrap load failed: " .. tostring(hrOrErr))
+    end
+
     local okTs, tsOrErr = pcall(Ext.Require, "TimeStop.lua")
     if okTs and type(tsOrErr) == "table" then
         Log.Info("TimeStop loaded at bootstrap")
