@@ -30,3 +30,18 @@ new entry "Interrupt_RecklessAttack"
 type "InterruptData"
 using "Interrupt_RecklessAttack"
 data "Properties" "IF((HasPassive('BrutalStrike_ForcefulBlow',context.Source) or HasPassive('BrutalStrike_HamstringBlow',context.Source) or HasAnyStatus({'APO_BST_STAGGERINGBLOW','APO_BST_SUNDERINGBLOW','APO_BST_FORCEFUL_HAMSTRING','APO_BST_FORCEFUL_STAGGERING','APO_BST_FORCEFUL_SUNDERING','APO_BST_HAMSTRING_STAGGERING','APO_BST_HAMSTRING_SUNDERING','APO_BST_STAGGERING_SUNDERING'},{},{},context.Source)) and not InterruptHasDisadvantage()):ApplyStatus(OBSERVER_OBSERVER,BRUTAL_STRIKE,100,1);IF((HasPassive('BrutalStrike_ForcefulBlow',context.Source) or HasPassive('BrutalStrike_HamstringBlow',context.Source) or HasAnyStatus({'APO_BST_STAGGERINGBLOW','APO_BST_SUNDERINGBLOW','APO_BST_FORCEFUL_HAMSTRING','APO_BST_FORCEFUL_STAGGERING','APO_BST_FORCEFUL_SUNDERING','APO_BST_HAMSTRING_STAGGERING','APO_BST_HAMSTRING_SUNDERING','APO_BST_STAGGERING_SUNDERING'},{},{},context.Source)) and not InterruptHasDisadvantage() and HasPassive('Barbarian_BrutalStrike_Improved',context.Source)):ApplyStatus(OBSERVER_OBSERVER,BRUTAL_STRIKE_APO,100,1);IF((HasPassive('BrutalStrike_ForcefulBlow',context.Source) or HasPassive('BrutalStrike_HamstringBlow',context.Source) or HasAnyStatus({'APO_BST_STAGGERINGBLOW','APO_BST_SUNDERINGBLOW','APO_BST_FORCEFUL_HAMSTRING','APO_BST_FORCEFUL_STAGGERING','APO_BST_FORCEFUL_SUNDERING','APO_BST_HAMSTRING_STAGGERING','APO_BST_HAMSTRING_SUNDERING','APO_BST_STAGGERING_SUNDERING'},{},{},context.Source)) and not InterruptHasDisadvantage() and HasPassive('Barbarian_BrutalStrike_17',context.Source)):ApplyStatus(OBSERVER_OBSERVER,BRUTAL_STRIKE_APO17,100,1);IF(not (HasPassive('BrutalStrike_ForcefulBlow',context.Source) or HasPassive('BrutalStrike_HamstringBlow',context.Source) or HasAnyStatus({'APO_BST_STAGGERINGBLOW','APO_BST_SUNDERINGBLOW','APO_BST_FORCEFUL_HAMSTRING','APO_BST_FORCEFUL_STAGGERING','APO_BST_FORCEFUL_SUNDERING','APO_BST_HAMSTRING_STAGGERING','APO_BST_HAMSTRING_SUNDERING','APO_BST_STAGGERING_SUNDERING'},{},{},context.Source)) or InterruptHasDisadvantage()):SetAdvantage();ApplyStatus(OBSERVER_OBSERVER,RECKLESS_ATTACK,100,1);"
+
+// Evoker Overchannel (14, PHB 2024): asked on each of your own 1st- to 5th-level spell casts; costs no reaction. Yes =
+// APO_OVERCHANNEL (Status_BOOST.txt: the spell's damage dice roll their maximum); Overchannel.lua removes it after the cast
+// and charges the Necrotic drawback. Replaces the 1.0.5.0 hotbar toggle (#59). 2026-10-29.
+new entry "Interrupt_Apo_Overchannel"
+type "InterruptData"
+data "DisplayName" "hcd0f48976ded49388b2187c11a9e0b01"
+data "Description" "h93b4dde3176349438cedb707bf50ccb0"
+data "Icon" "PassiveFeature_EmpoweredEvocation"
+data "InterruptContext" "OnSpellCast"
+data "InterruptContextScope" "Self"
+data "Container" "YesNoDecision"
+data "Conditions" "Self(context.Source,context.Observer) and IsSpell() and not IsCantrip() and SpellPowerLevelEqualOrLessThan(5) and HasFunctor(StatsFunctorType.DealDamage) and not AnyEntityIsItem()"
+data "Properties" "ApplyStatus(OBSERVER_OBSERVER,APO_OVERCHANNEL,100,1)"
+data "InterruptDefaultValue" "Ask;Enabled"

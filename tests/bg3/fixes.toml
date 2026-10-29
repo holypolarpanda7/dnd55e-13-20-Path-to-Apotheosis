@@ -293,35 +293,58 @@ expect = [
 
 [[case]]
 id = "fix48-overchannel-max"
+reactions = ["Overchannel"]   # Yes on the prompt (the harness answers the interrupt itself)
 title = "Evoker Overchannel maximises a 3rd-level damage spell (Fireball 8d6 -> 48, half on a save) instead of adding Intelligence (#48)"
 spell = "Projectile_Fireball"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 16 }]
 setup = [{ target = "host", passive = "Evoker_14_Overchannel" }]
-notes = "Un-maximised Fireball averages 28 (14 on a save); maximised is 48, or 24 on a save, so the floor of this range is above anything a normal roll reaches on a failed save."
+notes = "Un-maximised Fireball averages 28 (14 on a save); maximised is 48, or 24 on a save, +5 from Empowered Evocation (Evoker 10) on the harness's evoker save (53 seen 2026-10-29)."
 expect = [
   { cast = true },
-  { target = "A", hp_change = [-48, -24] },
+  { target = "A", hp_change = [-53, -24] },
 ]
 
 [[case]]
-id = "fix59-overchannel-toggle-off"
-title = "Overchannel toggled off: Fireball rolls normally (not 48 on a failed save) (#59)"
+id = "fix59-overchannel-declined"
+title = "Overchannel declined (No on the prompt): Fireball rolls normally (not 48 on a failed save) and leaves no status (#59)"
 spell = "Projectile_Fireball"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 16 }]
-setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "host", toggle_off = "Evoker_14_Overchannel" },
-         { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
-notes = "The save is forced to fail, so a maximised Fireball is exactly 48; a normal 8d6 reaches 48 only on eight sixes (1 in 1.7 million)."
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+notes = "Reactions are off in auto mode = the prompt answered No. The save is forced to fail, so a maximised Fireball is exactly 48; a normal 8d6 reaches 48 only on eight sixes (1 in 1.7 million)."
 expect = [
   { cast = true },
   { target = "A", hp_change = [-47, -8] },
 ]
 
 [[case]]
+id = "fix59-overchannel-one-spell"
+settle = 4   # APO_OVERCHANNEL outlives the cast by OC.LINGER_MS (3 s) for projectiles in flight
+reactions = ["Overchannel"]   # Yes on the prompt (the harness answers the interrupt itself)
+title = "Overchannel covers one spell: APO_OVERCHANNEL is gone after the cast (the next spell asks again)"
+spell = "Projectile_MagicMissile"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 500, distance = 6 }]
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "host", hp = "full" }]
+expect = [{ cast = true }, { target = "host", status_absent = ["APO_OVERCHANNEL"] }]
+
+[[case]]
+id = "fix59-overchannel-not-on-utility"
+reactions = ["Overchannel"]   # Yes on the prompt if it came up
+title = "Overchannel isn't offered for a spell that deals no damage (Mage Armor): no APO_OVERCHANNEL, no use counted"
+spell = "Target_MageArmor"
+target = "host"
+setup = [{ target = "host", passive = "Evoker_14_Overchannel" }]
+notes = "The interrupt's HasFunctor(StatsFunctorType.DealDamage) keeps it to damaging spells; APO_OVERCHANNEL would still be on (it lingers 3 s) had it fired."
+expect = [{ cast = true }, { target = "host", status_absent = ["APO_OVERCHANNEL"] }]
+
+[[case]]
 id = "fix57-overchannel-drawback"
+reactions = ["Overchannel"]   # Yes on the prompt (the harness answers the interrupt itself)
 title = "Overchannel's second use since a Long Rest costs 2d12 Necrotic per slot level (Magic Missile: 2d12, dice fixed at 12 = 24) (#57)"
 spell = "Projectile_MagicMissile"
 target = "A"
@@ -334,6 +357,7 @@ expect = [{ cast = true }, { target = "host", hp_change = [-24, -24] }]
 
 [[case]]
 id = "fix57-overchannel-resisted"
+reactions = ["Overchannel"]   # Yes on the prompt (the harness answers the interrupt itself)
 title = "Overchannel's Necrotic damage can't be reduced: a caster resistant to Necrotic still takes the full 24 (#57)"
 spell = "Projectile_MagicMissile"
 target = "A"

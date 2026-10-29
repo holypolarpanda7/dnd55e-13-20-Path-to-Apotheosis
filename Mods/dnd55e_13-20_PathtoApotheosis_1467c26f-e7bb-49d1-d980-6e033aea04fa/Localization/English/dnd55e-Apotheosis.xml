@@ -147,7 +147,10 @@
   <content contentuid="ha2c3d4e5b0000000000000000000097" version="1">Alter Memories</content>
   <content contentuid="ha2c3d4e6b0000000000000000000098" version="1">You always have Modify Memory prepared, and your scrambling aura grips two enemies at once instead of one.</content>
   <content contentuid="hb3d4e5f6b0000000000000000000099" version="1">Overchannel</content>
-  <content contentuid="hb3d4e5f7b000000000000000000009a" version="2">While this is toggled on, spells of levels 1-5 that deal damage deal their maximum damage. The first use after a Long Rest is free; each later use before your next Long Rest deals 2d12 Necrotic damage per spell level to you, plus 1d12 per spell level for each use after that. Toggle it off to cast normally.</content>
+  <content contentuid="hb3d4e5f7b000000000000000000009a" version="3">When you cast a spell of levels 1-5 that deals damage, you're asked whether to Overchannel it (no reaction needed). If you do, the spell deals its maximum damage. The first use after a Long Rest is free; each later use before your next Long Rest deals 2d12 Necrotic damage per spell level to you, plus 1d12 per spell level for each use after that. This damage can't be reduced.</content>
+  <content contentuid="hcd0f48976ded49388b2187c11a9e0b01" version="1">Overchannel</content>
+  <content contentuid="h93b4dde3176349438cedb707bf50ccb0" version="1">Overchannel this spell: it deals its maximum damage. The first use after a Long Rest is free; each later use before your next Long Rest deals 2d12 Necrotic damage per spell level to you, plus 1d12 per spell level for each use after that. Doesn't use your reaction.</content>
+  <content contentuid="h80e127db1762488d91c1c230cdfc9e4a" version="1">This spell deals its maximum damage.</content>
   <content contentuid="hc4e5f6a7b000000000000000000009b" version="1">Illusory Reality</content>
   <content contentuid="hc4e5f6a8b000000000000000000009c" version="1">Your illusions bleed into reality: whenever you deal Psychic damage, you also deal 1d4 Slashing, 1d4 Bludgeoning, 1d4 Piercing, and 1d4 Force damage.</content>
   <content contentuid="ha2c3d4e7b00000000000000000000a1" version="1">Modify Memory</content>

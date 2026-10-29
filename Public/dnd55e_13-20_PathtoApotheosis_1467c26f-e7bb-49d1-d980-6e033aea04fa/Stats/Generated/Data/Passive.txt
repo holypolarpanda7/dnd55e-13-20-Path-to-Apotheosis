@@ -653,10 +653,11 @@ type "PassiveData"
 data "DisplayName" "hb3d4e5f6b0000000000000000000099"
 data "Description" "hb3d4e5f7b000000000000000000009a"
 data "Icon" "PassiveFeature_EmpoweredEvocation"
-// A hotbar toggle (#59, 2026-10-28): the rules make it optional ("you can deal maximum damage"); off = no maximising and no
-// self-damage (Overchannel.lua reads the toggle). On by default, as before.
-data "Properties" "Highlighted;IsToggled;ToggledDefaultOn;ToggledDefaultAddToHotbar"
-data "Boosts" "IF(IsSpell() and not IsCantrip() and (SpellPowerLevelEqualTo(1) or SpellPowerLevelEqualTo(2) or SpellPowerLevelEqualTo(3) or SpellPowerLevelEqualTo(4) or SpellPowerLevelEqualTo(5))):MinimumRollResult(Damage,20)"
+// The rules make it a choice per cast ("you can deal maximum damage"): a Yes/No prompt on each qualifying cast
+// (Interrupt_Apo_Overchannel, no reaction spent); Yes applies APO_OVERCHANNEL for that one spell. Was a hotbar toggle in
+// 1.0.5.0 (#59), which characters who had the passive before that update never got on their hotbar: stuck on. 2026-10-29.
+data "Properties" "Highlighted"
+data "Boosts" "UnlockInterrupt(Interrupt_Apo_Overchannel)"
 
 // Illusory Reality (custom BG3 feature): whenever you deal Psychic damage, your
 // illusions "become real" and also rake the target for 1d4 each of Slashing,

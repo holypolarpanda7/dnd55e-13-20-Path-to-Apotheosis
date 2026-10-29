@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.6.0 - 2026-10-29
+
+- Changed: Evoker Overchannel (14) now asks you each time you cast a damaging spell of levels 1-5: choose Overchannel in the reaction prompt to deal maximum damage, or Do Not React to cast normally. It doesn't use your reaction. You can set it to always or never in the Reactions panel, like other reactions. This replaces the 1.0.5.0 hotbar toggle, which characters who already had Overchannel before updating never got on their hotbar, so it stayed on and they took the Necrotic damage on every spell. Reported after #59.
+
 ## v1.0.5.0 - 2026-10-28
 
 - Built against DnD 5.5e All-in-One BEYOND 4.14.0.2 (was 4.13.10.5). DnD 5.5e reworked Reckless Attack, Brutal Strike, Frenzy and the Rune Knight's runes to follow the rules more closely; PTA's 13-20 features for them are rebuilt on the new versions:
