@@ -16,7 +16,7 @@ Models: every creature's look comes from MODELS below (a base-game template for 
 new model or effects - nothing else references it.
 
 Spell lists: dnd55e's class lists are overridden by UUID with their current contents plus these spells (re-run after
-syncing dnd55e), and the Apotheosis-owned lists (WizardUpToL7-9, Apotheosis Ranger SLevel 4) get them too.
+syncing dnd55e), and the Apotheosis-owned lists (Apotheosis Ranger SLevel 4) get them too; WizardUpToL7-9 are built from the Wizard lists by gen_learn_lists.py.
 
 Owns Stats/Generated/Data/{Character,Status,Spell,Passive,Interrupt}_Summons.txt and RootTemplates/Apotheosis_Summons.lsf.
 Run: python3 Scripts/gen_summons.py
@@ -368,8 +368,6 @@ APO_ADDS = {  # Apotheosis-owned lists, by name
     "Apotheosis Ranger SLevel 4 List": ["Target_SummonElemental"],  # dnd55e's spell
     "Apotheosis Artificer SLevel 4 List": ["Target_ApoFaithfulHound", "Target_ApoSummonConstruct"],
     "Apotheosis Artificer SLevel 5 List": ["Target_ApoAnimateObjects", "Target_ApoBigbysHand"],
-    **{f"WizardUpToL{n}": ["Target_SummonElemental", "Target_ApoSummonConstruct", "Target_ApoFaithfulHound",
-                           "Target_ApoAnimateObjects", "Target_ApoBigbysHand"] for n in (7, 8, 9)},
 }
 RETIRED = {"Target_ApoSummonElemental"}  # dropped from Apotheosis-owned lists (replaced by dnd55e's spells)
 NODE = re.compile(r'[ \t]*<node id="SpellList">\s*(?:(?!</node>).)*?</node>\n', re.S)
