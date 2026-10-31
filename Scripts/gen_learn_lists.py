@@ -76,6 +76,16 @@ def lists(path):
     return out
 
 
+def list_names():
+    """UUID -> Name of dnd55e's and our spell lists (ours override by UUID)."""
+    out = {}
+    for path in (os.path.join(DND, "Lists", "SpellLists.lsx"), OUR_LISTS):
+        for b in re.findall(r'<node id="SpellList">(.*?)</node>', open(path, encoding="utf-8").read(), re.S):
+            n = re.search(r'id="Name"[^>]*value="([^"]*)"', b)
+            out[re.search(r'id="UUID"[^>]*value="([^"]*)"', b).group(1)] = n.group(1) if n else ""
+    return out
+
+
 def merged_into(target):
     """UUIDs of the lists merged into `target` at load (MergedInto), dnd55e's and ours (ours override by UUID), in order."""
     found = {}
@@ -124,10 +134,13 @@ def main():
                 spells += [x for x in have[lu] if x not in spells]
         rows.append((u, name, spells))
         print(f"{name}: {len(spells)} spells from {len(sources) - len(drop)} lists")
+    names = list_names()
     sources = merged_into(WIZ_MAIN)
     assert W8 in sources and W9 in sources, "our Wizard 8th/9th lists no longer merge into the Wizard list"
+    # spell level order (1 -> 9) as the old lists had: the screen shows the list's order, and dnd55e's main list is 6th level
+    sources = sorted([WIZ_MAIN] + sources, key=lambda u: int(re.search(r"SLevel (\d)", names[u]).group(1)))
     for u, (name, drop) in WIZ_CAPPED.items():
-        spells = list(have.get(WIZ_MAIN, []))
+        spells = []
         for lu in sources:
             if lu not in drop:
                 spells += [x for x in have[lu] if x not in spells]
