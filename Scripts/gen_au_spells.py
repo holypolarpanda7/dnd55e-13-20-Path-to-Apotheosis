@@ -26,7 +26,15 @@ def slot(level, action="ActionPoint"):
     return f"{action}:1;SpellSlotsGroup:1:1:{level}"
 
 
+# own icons (Icons/src, SDXL + IP-Adapter, jobs Icons/jobs_au.json, 2026-10-31); spells that pass none get theirs here
+OWN_ICON = {"Target_Apo_FracturedAwareness": "Apo_Spell_FracturedAwareness", "Target_Apo_PowerWordPain": "Apo_Spell_PowerWordPain",
+            "Target_Apo_Transfix": "Apo_Spell_Transfix", "Target_Apo_EntrancingMirrors": "Apo_Spell_EntrancingMirrors",
+            "Target_Apo_IronBody": "Apo_Spell_IronBody", "Projectile_Apo_Detonate": "Apo_Spell_Detonate",
+            "Target_Apo_VisionOfElapsingEons": "Apo_Spell_VisionOfElapsingEons", "Target_Apo_WailOfTheBanshee": "Apo_Spell_WailOfTheBanshee"}
+
+
 def spell(name, title, text, using, level, school, fields, icon=None):
+    icon = icon or next((v for k, v in OWN_ICON.items() if name == k or name.startswith(k + "_")), None)  # incl. upcasts
     G.spell(name, title, text, {"Level": str(level), "SpellSchool": school, "UseCosts": slot(level), **fields}, using=using, icon=icon)
 
 
@@ -43,15 +51,15 @@ spell("Shout_Apo_AuraOfEvasion", "Aura of Evasion",
       "Shout_SpiritGuardians_Radiant", 7, "Abjuration",
       {"SpellContainerID": "", "AreaRadius": "9", "DamageType": "", "VerbalIntent": "Buff",
        "SpellFlags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-       "SpellProperties": "ApplyStatus(APO_AURA_OF_EVASION_AURA,100,10)"}, icon="Action_Paladin_AuraOfProtection")
+       "SpellProperties": "ApplyStatus(APO_AURA_OF_EVASION_AURA,100,10)"}, icon="Apo_Spell_AuraOfEvasion")
 G.status("APO_AURA_OF_EVASION_AURA", "Aura of Evasion", "You and allies within 9m have Advantage on Dexterity saves and Evasion.",
          {"StackId": "APO_AURA_OF_EVASION_AURA", "AuraRadius": "9",
           "AuraStatuses": "IF(Ally() and not Dead() and not Tagged('INANIMATE') and not HasStatus('SG_Incapacitated')):ApplyStatus(APO_AURA_OF_EVASION)",
-          "StatusGroups": "SG_RemoveOnRespec"}, icon="Action_Paladin_AuraOfProtection")
+          "StatusGroups": "SG_RemoveOnRespec"}, icon="Apo_Spell_AuraOfEvasion")
 G.status("APO_AURA_OF_EVASION", "Aura of Evasion", "Advantage on Dexterity saving throws; no damage on a successful save against "
          "an area effect, half on a failure.",
          {"StackId": "APO_AURA_OF_EVASION", "Boosts": "Advantage(SavingThrow,Dexterity);AreaDamageEvade()",
-          "RemoveConditions": "HasStatus('SG_Incapacitated')", "RemoveEvents": "OnStatusApplied"}, icon="Action_Paladin_AuraOfProtection")
+          "RemoveConditions": "HasStatus('SG_Incapacitated')", "RemoveEvents": "OnStatusApplied"}, icon="Apo_Spell_AuraOfEvasion")
 
 spell("Target_Apo_FracturedAwareness", "Fractured Awareness",
       "Conflicting visions of possible futures assail a creature (Intelligence save). On a failure it takes 12d10 Psychic damage "
@@ -65,7 +73,7 @@ spell("Target_Apo_FracturedAwareness", "Fractured Awareness",
 G.status("APO_FRACTURED_AWARENESS", "Fractured Awareness", "Disadvantage on D20 Tests. Repeats the Intelligence save at the end of "
          "each of its turns.",
          {"StackId": "APO_FRACTURED_AWARENESS", "Boosts": "Disadvantage(AttackRoll);Disadvantage(AllSavingThrows);Disadvantage(AllAbilities)",
-          **repeat_save("Intelligence"), "StatusGroups": "SG_RemoveOnRespec"}, icon="Spell_Illusion_PhantasmalKiller")
+          **repeat_save("Intelligence"), "StatusGroups": "SG_RemoveOnRespec"}, icon="Apo_Spell_FracturedAwareness")
 
 spell("Target_Apo_PowerWordPain", "Power Word Pain",
       "A word of power deals 6d8 Force damage. If the creature had 100 Hit Points or fewer, it is also Charmed for 1 minute: "
@@ -86,7 +94,7 @@ G.spell("Shout_Apo_ReweaveFate", "Reweave Fate",
         "and gains 3d10 Temporary Hit Points.",
         {"Level": "7", "SpellSchool": "Divination", "UseCosts": slot(7, "ReactionActionPoint"),
          "InterruptPrototype": "Interrupt_Apo_ReweaveFate", "SpellFlags": "HasSomaticComponent;IsSpell;IsLinkedSpellContainer"},
-        using="Shout_Shield_Wizard", icon="PassiveFeature_Lucky_RollAdditionalDie")
+        using="Shout_Shield_Wizard", icon="Apo_Spell_ReweaveFate")
 G.interrupt("Interrupt_Apo_ReweaveFate", "Reweave Fate", "An ally failed a roll: reroll it with Advantage; it gains 3d10 Temporary Hit Points.",
             {"InterruptContext": "OnPostRoll", "InterruptContextScope": "Nearby", "Container": "YesNoDecision",
              "Conditions": "IsAbleToReact(context.Observer) and not AnyEntityIsItem() and not HasVerbalComponentBlocked(context.Observer) and "
@@ -95,12 +103,12 @@ G.interrupt("Interrupt_Apo_ReweaveFate", "Reweave Fate", "An ally failed a roll:
              "Properties": "SetAdvantage();IF(HasInterruptedAttack()):ApplyStatus(OBSERVER_SOURCE,APO_REWOVEN_FATE,100,-1);"
                            "IF(HasInterruptedSavingThrow()):ApplyStatus(OBSERVER_TARGET,APO_REWOVEN_FATE,100,-1)",
              "Cost": slot(7, "ReactionActionPoint"), "InterruptDefaultValue": "Ask;Enabled"},
-            icon="PassiveFeature_Lucky_RollAdditionalDie",
+            icon="Apo_Spell_ReweaveFate",
             comment="SetAdvantage() rerolls with Advantage, as Interrupt_ApoMasterDuelist / dnd55e Seeking Spell")
 
 G.status("APO_REWOVEN_FATE", "Rewoven Fate", "3d10 Temporary Hit Points from a strengthened fate.",
          {"StackId": "APO_REWOVEN_FATE", "Boosts": "TemporaryHP(3d10)", "RemoveConditions": "not HasTemporaryHP()", "RemoveEvents": "OnDamage"},
-         icon="PassiveFeature_Lucky_RollAdditionalDie", comment="EPIC_FORTIFYING_LIGHT's temporary-HP form")
+         icon="Apo_Spell_ReweaveFate", comment="EPIC_FORTIFYING_LIGHT's temporary-HP form")
 
 TRANSFIX = "An alluring otherworldly aura: a creature within 18m makes a Charisma save or is Charmed and Incapacitated, moving toward you, and takes {d} Psychic damage whenever it ends its turn within 1.5m of you. While you concentrate you can use an action to target another creature (not one that saved)."
 for lv, d in ((7, "4d8"), (8, "5d8"), (9, "6d8")):
@@ -123,14 +131,14 @@ for lv, d in ((7, "4d8"), (8, "5d8"), (9, "6d8")):
              "SpellFlags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;Temporary"}, using="Target_Apo_Transfix")
     G.status(f"APO_TRANSFIX_CASTER{sfx}", "Transfix", "You can Transfix another creature with an action.",
              {"StackId": "APO_TRANSFIX_CASTER", "Boosts": f"UnlockSpell(Target_Apo_Transfix_Retarget{sfx})",
-              "StatusPropertyFlags": "DisableOverhead;DisableCombatlog"}, icon="Spell_Enchantment_CommandApproach")
+              "StatusPropertyFlags": "DisableOverhead;DisableCombatlog"}, icon="Apo_Spell_Transfix")
     G.status(f"APO_TRANSFIXED{sfx}", "Transfixed", f"Charmed and Incapacitated; moves toward the caster and takes {d} Psychic "
              "damage when it ends its turn within 1.5m of them.",
              {"StackId": "APO_TRANSFIXED", "TickType": "EndTurn",
               "TickFunctors": f"IF(DistanceToTargetLessThan(1.6)):DealDamage({d},Psychic,Magical)",
               "RemoveConditions": "not HasStatus('APO_TRANSFIX_CASTER',context.Source)", "RemoveEvents": "OnTurn",
               "StatusGroups": "SG_Approaching;SG_Charmed;SG_Incapacitated;SG_Condition"},
-             using="COMMAND_APPROACH", icon="Spell_Enchantment_CommandApproach")
+             using="COMMAND_APPROACH", icon="Apo_Spell_Transfix")
 G.status("APO_TRANSFIX_RESISTED", "Resisted Transfix", "Can't be targeted by this Transfix again.",
          {"StackId": "APO_TRANSFIX_RESISTED", "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"})
 
@@ -194,7 +202,7 @@ G.status("APO_IRON_BODY", "Iron Body", "Resistance to Bludgeoning, Fire, Piercin
          {"StackId": "APO_IRON_BODY",
           "Boosts": "".join(f"Resistance({t},Resistant);" for t in ("Bludgeoning", "Fire", "Piercing", "Slashing"))
                     + "Resistance(Poison,Immune);StatusImmunity(SG_Paralyzed);StatusImmunity(SG_Petrified);StatusImmunity(SG_Poisoned);StatusImmunity(SG_Exhausted)",
-          "StatusGroups": "SG_RemoveOnRespec"}, icon="Spell_Abjuration_Stoneskin")
+          "StatusGroups": "SG_RemoveOnRespec"}, icon="Apo_Spell_IronBody")
 
 spell("Shout_Apo_LightningRing", "Lightning Ring",
       "Bonus Action. For 10 minutes a 3m ring of electricity surrounds you: an enemy it reaches, or that ends its turn in it, makes "
@@ -202,12 +210,12 @@ spell("Shout_Apo_LightningRing", "Lightning Ring",
       "line: Dexterity save, 6d6 Lightning damage, half on a success.",
       "Shout_SpiritGuardians_Radiant", 8, "Evocation",
       {"SpellContainerID": "", "AreaRadius": "3", "DamageType": "Lightning", "UseCosts": slot(8, "BonusActionPoint"),
-       "SpellProperties": "ApplyStatus(APO_LIGHTNING_RING_AURA,100,100)"}, icon="Spell_Evocation_LightningBolt")
+       "SpellProperties": "ApplyStatus(APO_LIGHTNING_RING_AURA,100,100)"}, icon="Apo_Spell_LightningRing")
 G.status("APO_LIGHTNING_RING_AURA", "Lightning Ring", "A 3m ring of electricity surrounds you.",
          {"StackId": "APO_LIGHTNING_RING_AURA", "AuraRadius": "3",
           "AuraStatuses": "TARGET:IF(Enemy() and not Dead()):ApplyStatus(APO_LIGHTNING_RING,100,-1)", "AuraFlags": "ShouldCheckLOS",
           "Boosts": "UnlockSpell(Zone_Apo_LightningRing_Line)", "StatusPropertyFlags": "InitiateCombat;BringIntoCombat",
-          "StatusGroups": "SG_RemoveOnRespec"}, icon="Spell_Evocation_LightningBolt")
+          "StatusGroups": "SG_RemoveOnRespec"}, icon="Apo_Spell_LightningRing")
 RING_HIT = ("IF(not HasStatus('APO_LIGHTNING_RING_HIT') or StatusDurationLessThan(context.Source, 'APO_LIGHTNING_RING_HIT', 0.1)):DealDamage({l},Lightning,Magical);"
             "IF(not HasStatus('APO_LIGHTNING_RING_HIT') or StatusDurationLessThan(context.Source, 'APO_LIGHTNING_RING_HIT', 0.1)):DealDamage({l},Thunder,Magical);"
             "ApplyStatus(APO_LIGHTNING_RING_HIT,100,1)")
@@ -216,20 +224,20 @@ G.status("APO_LIGHTNING_RING", "Lightning Ring", "In the ring: a Constitution sa
           "OnApplySuccess": RING_HIT.format(l="3d6"), "OnApplyFail": RING_HIT.format(l="(3d6)/2"),
           "OnTickRoll": "not SavingThrow(Ability.Constitution, SourceSpellDC())",
           "OnTickSuccess": RING_HIT.format(l="3d6"), "OnTickFail": RING_HIT.format(l="(3d6)/2"),
-          "StatusGroups": "SG_RemoveOnRespec"}, icon="Spell_Evocation_LightningBolt",
+          "StatusGroups": "SG_RemoveOnRespec"}, icon="Apo_Spell_LightningRing",
          comment="SPIRIT_GUARDIANS_RADIANT's form, ticking on the creature's own turn end; the _HIT guard is once per turn")
 G.status("APO_LIGHTNING_RING_HIT", "Lightning Ring", None, {"StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"})
 G.spell("Zone_Apo_LightningRing_Line", "Lightning Ring: Line", "An 18m line of lightning: Dexterity save, 6d6 Lightning damage, half on a success.",
         {"Level": "8", "SpellSchool": "Evocation", "UseCosts": "ActionPoint:1", "Range": "18", "Base": "1.5",
          "SpellSuccess": "DealDamage(6d6,Lightning,Magical)", "SpellFail": "DealDamage((6d6)/2,Lightning,Magical)",
          "TooltipDamageList": "DealDamage(6d6,Lightning)",
-         "SpellFlags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade;Temporary"}, using="Zone_LightningBolt")
+         "SpellFlags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade;Temporary"}, using="Zone_LightningBolt", icon="Apo_Spell_LightningRing")
 
 G.spell("Shout_Apo_MomentOfPrescience", "Moment of Prescience",
         "Reaction, when you fail an attack roll or saving throw: the roll becomes a 20. Or when a creature hits you with an attack "
         "roll: its roll becomes a 1.",
         {"Level": "8", "SpellSchool": "Divination", "UseCosts": slot(8, "ReactionActionPoint"),
-         "InterruptPrototype": "Interrupt_Apo_MomentOfPrescience"}, using="Shout_Shield_Wizard", icon="PassiveFeature_Portent_20")
+         "InterruptPrototype": "Interrupt_Apo_MomentOfPrescience"}, using="Shout_Shield_Wizard", icon="Apo_Spell_MomentOfPrescience")
 SELF_ROLL = ("((HasInterruptedAttack() and Self(context.Observer,context.Source) and IsSetInterruptInteresting(20, context.Source)) or "
              "(HasInterruptedSavingThrow() and Self(context.Observer,context.Target) and IsSetInterruptInteresting(20)))")
 HIT_ME = "(HasInterruptedAttack() and Self(context.Target,context.Observer) and IsSetInterruptInteresting(1, context.Source))"
@@ -238,7 +246,7 @@ G.interrupt("Interrupt_Apo_MomentOfPrescience", "Moment of Prescience", "Turn yo
              "Conditions": f"IsAbleToReact(context.Observer) and not AnyEntityIsItem() and not HasSpellCastBlocked(context.Observer) and ({SELF_ROLL} or {HIT_ME})",
              "Properties": f"IF({HIT_ME}):SetRoll(1);IF(not {HIT_ME}):SetRoll(20)",
              "Cost": slot(8, "ReactionActionPoint"), "InterruptDefaultValue": "Ask;Enabled"},
-            icon="PassiveFeature_Portent_20", comment="SetRoll as Portent (20) and Illusory Self (an attack that hits you, 1)")
+            icon="Apo_Spell_MomentOfPrescience", comment="SetRoll as Portent (20) and Illusory Self (an attack that hits you, 1)")
 
 # ---------------------------------------------------------------- 9th level
 spell("Projectile_Apo_Detonate", "Detonate",
@@ -261,7 +269,7 @@ G.spell("Projectile_Apo_Detonate_Explosion", "Detonate (Explosion)", "Dexterity 
          "SpellProperties": "GROUND:SurfaceChange(Ignite);GROUND:SurfaceChange(Melt);"
                             f"AOE:IF({DET_AOE}):DealDamage((10d10)/2,Fire,Magical);"
                             f"AOE:IF({DET_AOE} and not SavingThrow(Ability.Dexterity, SourceSpellDC())):DealDamage((10d10)/2,Fire,Magical)",
-         "SpellFlags": "IsHarmful;CanAreaDamageEvade"}, using="Projectile_Fireball")
+         "SpellFlags": "IsHarmful;CanAreaDamageEvade"}, using="Projectile_Fireball", icon="Apo_Spell_Detonate")
 G.status("APO_DETONATE_SEED", "Detonated", None, {"StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"},
          comment="marks Detonate's target so its own explosion leaves it out")
 
@@ -269,10 +277,10 @@ spell("Shout_Apo_Invulnerability", "Invulnerability", "For up to 10 minutes (Con
       "Shout_SpiritGuardians_Radiant", 9, "Abjuration",
       {"SpellContainerID": "", "AreaRadius": "", "DamageType": "", "VerbalIntent": "Buff", "TargetConditions": "Self()",
        "SpellFlags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
-       "SpellProperties": "ApplyStatus(APO_INVULNERABILITY,100,100)"}, icon="Spell_Abjuration_GlobeOfInvulnerability")
+       "SpellProperties": "ApplyStatus(APO_INVULNERABILITY,100,100)"}, icon="Apo_Spell_Invulnerability")
 G.status("APO_INVULNERABILITY", "Invulnerability", "Immunity to all damage.",
          {"StackId": "APO_INVULNERABILITY", "Boosts": ";".join(f"Resistance({t},Immune)" for t in DAMAGE),
-          "StatusGroups": "SG_RemoveOnRespec"}, icon="Spell_Abjuration_GlobeOfInvulnerability")
+          "StatusGroups": "SG_RemoveOnRespec"}, icon="Apo_Spell_Invulnerability")
 
 spell("Target_Apo_VisionOfElapsingEons", "Vision of Elapsing Eons",
       "A creature within 36m sees eons pass in moments (Intelligence save): on a failure, 10d12 Psychic damage and Paralyzed for "

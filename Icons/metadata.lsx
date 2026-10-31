@@ -1727,6 +1727,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_AuraOfEvasion.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_Befuddlement.png" />
 							<children>
 								<node id="entries">
@@ -1827,6 +1837,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_Detonate.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_DivineWord.png" />
 							<children>
 								<node id="entries">
@@ -1848,6 +1868,16 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_Earthquake.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_EntrancingMirrors.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="144" />
@@ -1917,6 +1947,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_FracturedAwareness.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_Gate.png" />
 							<children>
 								<node id="entries">
@@ -1958,6 +1998,36 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_IncendiaryCloud.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_Invulnerability.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_IronBody.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_LightningRing.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="144" />
@@ -2027,6 +2097,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_MomentOfPrescience.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_MordenkainensSword.png" />
 							<children>
 								<node id="entries">
@@ -2058,6 +2138,16 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_PowerWordHeal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_PowerWordPain.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="144" />
@@ -2138,6 +2228,16 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_ReverseGravity.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_ReweaveFate.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="144" />
@@ -2267,6 +2367,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_Transfix.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_TruePolymorph.png" />
 							<children>
 								<node id="entries">
@@ -2288,6 +2398,26 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_Tsunami.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_VisionOfElapsingEons.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_WailOfTheBanshee.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="144" />
@@ -5607,6 +5737,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_AuraOfEvasion.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_Befuddlement.png" />
 							<children>
 								<node id="entries">
@@ -5707,6 +5847,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_Detonate.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_DivineWord.png" />
 							<children>
 								<node id="entries">
@@ -5728,6 +5878,16 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_Earthquake.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_EntrancingMirrors.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="380" />
@@ -5797,6 +5957,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_FracturedAwareness.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_Gate.png" />
 							<children>
 								<node id="entries">
@@ -5838,6 +6008,36 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_IncendiaryCloud.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_Invulnerability.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_IronBody.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_LightningRing.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="380" />
@@ -5907,6 +6107,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_MomentOfPrescience.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_MordenkainensSword.png" />
 							<children>
 								<node id="entries">
@@ -5938,6 +6148,16 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_PowerWordHeal.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_PowerWordPain.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="380" />
@@ -6018,6 +6238,16 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_ReverseGravity.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_ReweaveFate.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="380" />
@@ -6147,6 +6377,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_Transfix.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_TruePolymorph.png" />
 							<children>
 								<node id="entries">
@@ -6168,6 +6408,26 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_Tsunami.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_VisionOfElapsingEons.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_WailOfTheBanshee.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="380" />

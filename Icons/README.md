@@ -46,3 +46,11 @@ Flame Tongue, Arrow-Catching Shield, Ring of the Ram: same pipeline, jobs Icons/
 ## Moon Wild Shape forms (2026-10-13)
 Elephant, Triceratops, Mammoth forms and the Gore / Stomp attacks: same pipeline, jobs Icons/jobs_wsforms.json (seeds 4001-4005), picks
 #3/#3/#1/#3/#1 (assistant's picks), tints earth (forms) and force (attacks).
+
+## Arcana Unleashed 7-9 spells (2026-10-31)
+The 13 AU spells (Aura of Evasion, Fractured Awareness, Power Word Pain, Reweave Fate, Transfix, Entrancing Mirrors, Iron Body,
+Lightning Ring, Moment of Prescience, Detonate, Invulnerability, Vision of Elapsing Eons, Wail of the Banshee) borrowed base-game
+icons; same pipeline, jobs Icons/jobs_au.json (seeds 5001-5013; Detonate / Reweave Fate / Fractured Awareness redone 5101-5103),
+picks #4/#8/#1/#6/#4/#1/#1/#1/#4/#6/#4/#1/#1 (assistant's picks; swap any), tints radiant / psychic / force / arcane / psychic /
+psychic / earth / lightning / arcane / fire / force / psychic / necrotic. Set in Scripts/gen_au_spells.py (spells, their own
+statuses and interrupts; condition statuses keep the base condition icons). Illusory Dragon is held off the lists and keeps its icon.

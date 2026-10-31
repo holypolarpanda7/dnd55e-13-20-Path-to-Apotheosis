@@ -1,0 +1,93 @@
+[
+ {
+  "name": "Apo_Spell_AuraOfEvasion",
+  "subject": "a translucent protective aura around a dodging figure, swirling wisps deflecting a blast",
+  "seed": 5001,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_FracturedAwareness",
+  "subject": "a head silhouette cracking apart into floating jagged shards, shattered mind",
+  "seed": 5103,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_PowerWordPain",
+  "subject": "a single spoken word rune erupting into jagged spikes of pain lancing outward",
+  "seed": 5003,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_ReweaveFate",
+  "subject": "three glowing threads braided and woven together into a knot, threads of fate",
+  "seed": 5102,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_Transfix",
+  "subject": "a staring eye with rays pinning a frozen figure in place, hypnotic spiral",
+  "seed": 5005,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_EntrancingMirrors",
+  "subject": "a ring of floating ornate hand mirrors reflecting a mesmerizing light",
+  "seed": 5006,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_IronBody",
+  "subject": "a muscular body turning into solid iron plates with rivets, metal skin",
+  "seed": 5007,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_LightningRing",
+  "subject": "a ring of crackling lightning bolts circling around a caster",
+  "seed": 5008,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_MomentOfPrescience",
+  "subject": "an open third eye above an hourglass, a flash of foresight",
+  "seed": 5009,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_Detonate",
+  "subject": "a massive fiery explosion burst with a shockwave ring and debris flying outward",
+  "seed": 5101,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_Invulnerability",
+  "subject": "a figure inside an unbreakable shimmering shield dome, untouchable",
+  "seed": 5011,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_VisionOfElapsingEons",
+  "subject": "a skull under a swirling vortex of countless clock faces and ages passing",
+  "seed": 5012,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ },
+ {
+  "name": "Apo_Spell_WailOfTheBanshee",
+  "subject": "a screaming ghostly banshee woman with wailing sound waves",
+  "seed": 5013,
+  "batch": 4,
+  "strokes": "bold thick glowing painted brush strokes, thick soft glow"
+ }
+]

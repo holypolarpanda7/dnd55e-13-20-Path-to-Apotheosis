@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.8.0 - 2026-10-31
+
+- Fixed: Wizards levelling 13-20 were never offered the Arcana Unleashed 7th- to 9th-level spells (Detonate, Invulnerability, Vision of Elapsing Eons, Wail of the Banshee, Aura of Evasion, Fractured Awareness, Power Word Pain, Reweave Fate, Transfix, Entrancing Mirrors, Iron Body, Lightning Ring, Moment of Prescience), nor Project Image, Power Word Stun or the Wizard spells DnD 5.5e added after September (Mental Prison, Viscous Sheath, Alter Self, the Sangromancy spells and others). The Wizard's two free spellbook spells per level now come from the full Wizard spell list, up to the highest spell level you can cast. Sorcerers, Warlocks and Bards already had them. Thanks to the player who reported it.
+- Changed: the 13 Arcana Unleashed 7th- to 9th-level spells have their own icons. They used to borrow base-game icons (Detonate looked like Fireball, Wail of the Banshee like Power Word Kill), so they were easy to miss on the level-up screen.
+
 ## v1.0.7.0 - 2026-10-29
 
 - Fixed: hotbar toggles that a mod update adds to a level your character already has never got a button, so you couldn't switch them. Barbarians who reached level 13 or 17 before 1.0.5.0 had no Improved Brutal Strike toggles (Staggering, Sundering and the two-effect blows), so Brutal Strike had no effect to choose. The same happened to DnD 5.5e's own Forceful Blow, Hamstring Blow and Improved Cunning Strike toggles after DnD 5.5e updates. When you load a save, any toggle your party has without a button is now put on the Passives tab of the hotbar (keyboard and controller), once. If you remove one on purpose, it stays removed.

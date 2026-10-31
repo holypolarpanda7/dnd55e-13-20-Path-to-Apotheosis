@@ -52,6 +52,16 @@ PLAN.update({f"99999999-9999-9999-9999-9999999999{L - 12:02d}": (n, MS_LIST(L), 
 # SLevel 3" is 1-3 in game (MergedInto). Its picks stay as they were (13, 15, 17, 19, 20).
 WIZ3 = "22755771-ca11-49f4-b772-13d8b8fecd93"
 PLAN.update({f"a4682900-0000-0000-0000-0000000000{L}": (1, WIZ3, "EldritchKnightAbjEvo") for L in (13, 15, 17, 19, 20)})
+# Wizard 13-20: the two free spellbook spells a level learn from capped copies of the Wizard list as loaded - dnd55e's
+# "5.5 Wizard SLevel 6" with every list merged into it, minus our 8th/9th (resp. 9th) lists. They were hand-written
+# snapshots (2026-09-30) and missed every spell added since: all Arcana Unleashed 7-9 spells, Project Image, Power Word
+# Stun and dnd55e's newer Wizard spells (reported 2026-10-31: Detonate / Wail of the Banshee etc. not offered at 17).
+# Same UUIDs, so the Wizard progression nodes keep their selectors.
+WIZ_MAIN = "bc917f22-7f71-4a25-9a77-7d2f91a96a65"
+W8, W9 = "00180001-0001-0001-0001-000000000001", "00190001-0001-0001-0001-000000000001"
+WIZ_CAPPED = {"aa384b4e-36b4-5b2d-93b3-c1063ba2ffb2": ("WizardUpToL7", {W8, W9}),
+              "f0f0369f-fef5-5399-92c1-0a02c56c93bd": ("WizardUpToL8", {W9}),
+              "ae03c25e-d0ac-55a5-899a-ae75a3b20c5a": ("WizardUpToL9", set())}
 MARK = "LEARN LISTS 13-20"
 
 
@@ -63,6 +73,16 @@ def lists(path):
         s = re.search(r'id="Spells"[^>]*value="([^"]*)"', b)
         if u and s:
             out[u.group(1)] = [x for x in s.group(1).split(";") if x]
+    return out
+
+
+def list_names():
+    """UUID -> Name of dnd55e's and our spell lists (ours override by UUID)."""
+    out = {}
+    for path in (os.path.join(DND, "Lists", "SpellLists.lsx"), OUR_LISTS):
+        for b in re.findall(r'<node id="SpellList">(.*?)</node>', open(path, encoding="utf-8").read(), re.S):
+            n = re.search(r'id="Name"[^>]*value="([^"]*)"', b)
+            out[re.search(r'id="UUID"[^>]*value="([^"]*)"', b).group(1)] = n.group(1) if n else ""
     return out
 
 
@@ -109,6 +129,18 @@ def main():
     assert MS8 in sources and MS9 in sources, "our Magical Secrets 8th/9th lists no longer merge into Magical Secrets"
     for u, (name, drop) in MS_CAPPED.items():
         spells = list(have.get(MAGICAL_SECRETS, []))
+        for lu in sources:
+            if lu not in drop:
+                spells += [x for x in have[lu] if x not in spells]
+        rows.append((u, name, spells))
+        print(f"{name}: {len(spells)} spells from {len(sources) - len(drop)} lists")
+    names = list_names()
+    sources = merged_into(WIZ_MAIN)
+    assert W8 in sources and W9 in sources, "our Wizard 8th/9th lists no longer merge into the Wizard list"
+    # spell level order (1 -> 9) as the old lists had: the screen shows the list's order, and dnd55e's main list is 6th level
+    sources = sorted([WIZ_MAIN] + sources, key=lambda u: int(re.search(r"SLevel (\d)", names[u]).group(1)))
+    for u, (name, drop) in WIZ_CAPPED.items():
+        spells = []
         for lu in sources:
             if lu not in drop:
                 spells += [x for x in have[lu] if x not in spells]
