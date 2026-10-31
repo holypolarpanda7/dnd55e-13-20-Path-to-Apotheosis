@@ -2,9 +2,8 @@
 
 ## v1.0.8.0 - 2026-10-31
 
-- Wizard learn lists in spell level order (2026-10-31) (2026-10-31)
-- Own icons for the 13 Arcana Unleashed 7-9 spells (2026-10-31) (2026-10-31)
-- Wizard 13-20 learn lists generated from the loaded Wizard list (2026-10-31) (2026-10-31)
+- Fixed: Wizards levelling 13-20 were never offered the Arcana Unleashed 7th- to 9th-level spells (Detonate, Invulnerability, Vision of Elapsing Eons, Wail of the Banshee, Aura of Evasion, Fractured Awareness, Power Word Pain, Reweave Fate, Transfix, Entrancing Mirrors, Iron Body, Lightning Ring, Moment of Prescience), nor Project Image, Power Word Stun or the Wizard spells DnD 5.5e added after September (Mental Prison, Viscous Sheath, Alter Self, the Sangromancy spells and others). The Wizard's two free spellbook spells per level now come from the full Wizard spell list, up to the highest spell level you can cast. Sorcerers, Warlocks and Bards already had them. Thanks to the player who reported it.
+- Changed: the 13 Arcana Unleashed 7th- to 9th-level spells have their own icons. They used to borrow base-game icons (Detonate looked like Fireball, Wail of the Banshee like Power Word Kill), so they were easy to miss on the level-up screen.
 
 ## v1.0.7.0 - 2026-10-29
 
