@@ -135,11 +135,13 @@ S.append(entry("WHITEHAT_GOLD_STAR_AURA", "StatusData", {
     "Description": h("GoldAura:d", "Allies within 30 feet have Advantage on saving throws against being Frightened."),
     "Icon": "Spell_Enchantment_Heroism", "AuraRadius": "9",
     "AuraStatuses": "IF(Ally() and not Self() and not Tagged('INANIMATE') and not HasStatus('SG_Incapacitated',context.Source)):ApplyStatus(WHITEHAT_STEELY_EYED_ALLY)",
-    "StatusPropertyFlags": "IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator", "StatusGroups": "SG_RemoveOnRespec"}))
+    "StatusPropertyFlags": "IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator", "StatusGroups": "SG_RemoveOnRespec",
+    "StackId": "WHITEHAT_GOLD_STAR_AURA", "StackPriority": "10"}))
 S.append(entry("WHITEHAT_STEELY_EYED_ALLY", "StatusData", {
     "StatusType": "BOOST", "DisplayName": h("SteelyAlly:n", "Steely-Eyed"),
     "Description": h("SteelyAlly:d", "Advantage on saving throws against being Frightened."), "Icon": "Spell_Enchantment_Heroism",
-    "Boosts": "Tag(FRIGHTENED_ADV)", "StatusPropertyFlags": "DisableOverhead;DisableCombatlog"},
+    "Boosts": "Tag(FRIGHTENED_ADV)", "StatusPropertyFlags": "DisableOverhead;DisableCombatlog",
+    "StackId": "WHITEHAT_STEELY_EYED_ALLY", "StackPriority": "5"},  # #69: without a StackId every aura tick stacked another copy
     comment="Tag(FRIGHTENED_ADV) is Halfling Brave's mechanism."))
 S.append(entry("WHITEHAT_IRONCLAD_LAW", "StatusData", {
     "StatusType": "BOOST", "DisplayName": h("IronClad:n", "Iron-Clad Law"),

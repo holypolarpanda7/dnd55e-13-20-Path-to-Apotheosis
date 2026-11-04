@@ -1987,6 +1987,16 @@
 							</children>
 						</node>
 						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_ICastFist.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="144" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="144" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/ControllerUIIcons/skills_png/Apo_Spell_Imprisonment.png" />
 							<children>
 								<node id="entries">
@@ -5988,6 +5998,16 @@
 						</node>
 						<node id="Object">
 							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_HolyAura.png" />
+							<children>
+								<node id="entries">
+									<attribute id="h" type="int16" value="380" />
+									<attribute id="mipcount" type="int8" value="1" />
+									<attribute id="w" type="int16" value="380" />
+								</node>
+							</children>
+						</node>
+						<node id="Object">
+							<attribute id="MapKey" type="FixedString" value="Assets/Tooltips/Icons/Apo_Spell_ICastFist.png" />
 							<children>
 								<node id="entries">
 									<attribute id="h" type="int16" value="380" />

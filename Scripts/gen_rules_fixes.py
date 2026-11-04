@@ -117,9 +117,16 @@ for entry, field, typ in SNEAK:
     # 4.13.10: the Terrify clause also tests ImprovedCunningStrike_Terrify; the Devious options have no Improved twin
     clause = re.sub(r"\(HasPassive\('CunningStrike_Terrify',context\.Source\) or HasPassive\('ImprovedCunningStrike_Terrify',context\.Source\)\)",
                     "HasPassive('CunningStrike_Terrify',context.Source)", clause)
+    # match the status call by prefix: 4.14.3.5 appended the save to it (ApplyStatus(FRIGHTENED,100,10,,,,not SavingThrow(...)))
     adds = [clause.replace("CunningStrike_Terrify", f"CunningStrike_{key}").replace("Ability.Wisdom", f"Ability.{ab}")
-            .replace("ApplyStatus(FRIGHTENED,100,10)", f"ApplyStatus({st},100,{turns})") for key, ab, st, turns, _ in DEVIOUS]
+            .replace("ApplyStatus(FRIGHTENED,100,10", f"ApplyStatus({st},100,{turns}") for key, ab, st, turns, _ in DEVIOUS]
+    for add, (key, ab, st, _t, _x) in zip(adds, DEVIOUS):
+        if "FRIGHTENED" in add or f"ApplyStatus({st}," not in add or f"Ability.{ab}" not in add:
+            raise SystemExit(f"{entry}.{field}: Devious Strikes {key} clause not rewritten - dnd55e's Terrify clause changed shape")
     extend(entry, field, typ, ";".join(adds))
+# Fighter 20 (#72): dnd55e's Slow strips its own extra-attack statuses on apply; ours (EXTRA_ATTACK_3_Q) must go too,
+# or a Slowed Fighter 20 still steps down into EXTRA_ATTACK_3.
+extend("SLOW", "OnApplyFunctors", "StatusData", "RemoveStatus(EXTRA_ATTACK_3_Q)")
 EXISTING[ROGUE_13] = {}
 EXISTING[ROGUE_14] = {"PassivesAdded": "Rogue_14_DeviousStrikes;" + ";".join(f"CunningStrike_{k}" for k, *_ in DEVIOUS)}
 

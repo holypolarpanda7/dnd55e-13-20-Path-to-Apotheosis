@@ -653,3 +653,53 @@ target = "host"
 setup = [{ target = "host", status = "APO_BLOODY_EXIT_STEP", turns = 2 }]
 expect = [{ cast = true }]
 notes = "Only checks the free spell casts (no cost); the position change isn't asserted by a key yet - check the host ends elsewhere."
+
+[[case]]
+id = "muscle-wizard-i-cast-fist"
+title = "Muscle Wizard 14 I Cast Fist: a raging Unarmed Strike with Advantage - 6d6 + Strength, Prone, once per Rage"
+spell = "Target_ApoMuscleWizardFist"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "MuscleWizard_14_ICastFist" }, { target = "host", status = "RAGE", turns = -1 }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", status_applied = ["PRONE"] }, { target = "host", status_applied = ["APO_MUSCLEWIZARD_FIST_USED"] }]
+notes = "Valda's Spire of Secrets Player Pack. The used-marker ends with the Rage (RemoveConditions not HasStatus('SG_Rage'))."
+
+[[case]]
+id = "rogue-devious-daze"
+title = "Rogue 14 Devious Strikes (Daze): a Sneak Attack with the Daze toggle applies APO_CUNNINGSTRIKE_DAZED (not Frightened)"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+reactions = ["Interrupt_SneakAttack"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "SneakAttack_Unlock" }, { target = "host", toggle_on = "CunningStrike_Daze" }, { target = "host", boost = "Advantage(AttackRoll)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "RollBonus(SavingThrow,0-30,Constitution)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["APO_CUNNINGSTRIKE_DAZED"] }, { target = "A", status_absent = ["FRIGHTENED"] }]
+notes = "Run on the rogue-thief L20 save with a dagger equipped. The Cunning Strike options are toggles (HasPassive in the clause is the toggle state). Regression test for #71: the generator's status substitution had stopped matching dnd55e 4.14.3.5's Terrify clause, so every Devious Strike applied Frightened."
+
+[[case]]
+id = "rogue-devious-knockout"
+title = "Rogue 14 Devious Strikes (KnockOut): a Sneak Attack with the KnockOut toggle applies APO_CUNNINGSTRIKE_KNOCKED_OUT (not Frightened)"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+reactions = ["Interrupt_SneakAttack"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "SneakAttack_Unlock" }, { target = "host", toggle_on = "CunningStrike_KnockOut" }, { target = "host", boost = "Advantage(AttackRoll)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "RollBonus(SavingThrow,0-30,Constitution)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["APO_CUNNINGSTRIKE_KNOCKED_OUT"] }, { target = "A", status_absent = ["FRIGHTENED"] }]
+notes = "Run on the rogue-thief L20 save with a dagger equipped. The Cunning Strike options are toggles (HasPassive in the clause is the toggle state). Regression test for #71: the generator's status substitution had stopped matching dnd55e 4.14.3.5's Terrify clause, so every Devious Strike applied Frightened."
+
+[[case]]
+id = "rogue-devious-obscure"
+title = "Rogue 14 Devious Strikes (Obscure): a Sneak Attack with the Obscure toggle applies BLINDED (not Frightened)"
+spell = "Target_MainHandAttack"
+target = "A"
+real_rolls = true
+reactions = ["Interrupt_SneakAttack"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "SneakAttack_Unlock" }, { target = "host", toggle_on = "CunningStrike_Obscure" }, { target = "host", boost = "Advantage(AttackRoll)" }, { target = "host", boost = "RollBonus(Attack,30)" },
+         { target = "A", boost = "RollBonus(SavingThrow,0-30,Dexterity)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["BLINDED"] }, { target = "A", status_absent = ["FRIGHTENED"] }]
+notes = "Run on the rogue-thief L20 save with a dagger equipped. The Cunning Strike options are toggles (HasPassive in the clause is the toggle state). Regression test for #71: the generator's status substitution had stopped matching dnd55e 4.14.3.5's Terrify clause, so every Devious Strike applied Frightened."

@@ -122,6 +122,20 @@ class Gen:
         r = self.S.db.execute("SELECT name, parent, attrs FROM templates WHERE mapkey=? ORDER BY rank DESC", (mk,)).fetchone()
         return r and (r[0], r[1], json.loads(r[2]))
 
+    def skill_list(self, mk):
+        """The SkillList a template resolves to (its own, else the nearest parent's), as spell names."""
+        seen = set()
+        while mk and mk not in seen:
+            seen.add(mk)
+            t = self.template(mk)
+            if not t:
+                return []
+            sl = t[2].get("_SkillList") or t[2].get("SkillList")
+            if sl:
+                return [x for x in str(sl).split(";") if x]
+            mk = t[1]
+        return []
+
     def summon(self, t5, t6, k):
         """The creature a summon spell conjures k levels above its 6th level one: a template extending the 6th level
         template (same model), whose Character stats are stepped like any other entry. None if not that pattern."""
@@ -137,7 +151,9 @@ class Gen:
                 stats = sb[:-1] + str(n)
                 self.make(stats, sa, sb, k)
                 name = (b[0][:-1] if b[0].endswith("_6") else b[0] + "_") + str(n)
-                mk = self.T.template(f"upcast:{name}", name, t6, stats, None, spellset=None)
+                # the creature's own abilities (Fly, Slam, Breath Weapon...) are the template's SkillList; the engine reads it
+                # one parent up only, so a template two levels below the one that defines it lost them (#66): repeat it here
+                mk = self.T.template(f"upcast:{name}", name, t6, stats, None, skills=self.skill_list(t6), spellset=None)
         self.summons[(t6, k)] = mk
         return mk
 

@@ -22,6 +22,12 @@ data "TickType" "EndTurn"
 data "RemoveEvents" "OnDamage;OnTurn"
 data "RemoveConditions" "TotalDamageDoneGreaterThan(0) or SavingThrow(Ability.Constitution, ManeuverSaveDC())"
 
+// extended by gen_rules_fixes.py (re-read from dnd55e at each regen)
+new entry "SLOW"
+type "StatusData"
+using "SLOW"
+data "OnApplyFunctors" "RemoveStatus(EXTRA_ATTACK);RemoveStatus(EXTRA_ATTACK_2);RemoveStatus(EXTRA_ATTACK_WAR_MAGIC);RemoveStatus(EXTRA_ATTACK_WAR_PRIEST);RemoveStatus(MAG_MARTIAL_EXERTION);RemoveStatus(WILDSTRIKE_EXTRA_ATTACK);RemoveStatus(WILDSTRIKE_2_EXTRA_ATTACK);RemoveStatus(STALKERS_FLURRY);RemoveStatus(EXTRA_ATTACK_THIRSTING_BLADE);RemoveStatus(COMMANDERS_STRIKE_D8);RemoveStatus(COMMANDERS_STRIKE_D10);RemoveStatus(EXTRA_ATTACK_3);RemoveStatus(EXTRA_ATTACK_THIRSTING_BLADE_2);RemoveStatus(EXTRA_ATTACK_Q);RemoveStatus(EXTRA_ATTACK_2_Q);RemoveStatus(EXTRA_ATTACK_THIRSTING_BLADE_Q);RemoveStatus(WILDSTRIKE_EXTRA_ATTACK_Q);RemoveStatus(WILDSTRIKE_2_EXTRA_ATTACK_Q);RemoveStatus(EXTRA_ATTACK_3_Q)"
+
 // Envenom Weapons (gen_rules_fixes.py): damage on the failed save
 new entry "CUNNINGSTRIKE_POISON"
 type "StatusData"
