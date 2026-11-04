@@ -653,3 +653,14 @@ target = "host"
 setup = [{ target = "host", status = "APO_BLOODY_EXIT_STEP", turns = 2 }]
 expect = [{ cast = true }]
 notes = "Only checks the free spell casts (no cost); the position change isn't asserted by a key yet - check the host ends elsewhere."
+
+[[case]]
+id = "muscle-wizard-i-cast-fist"
+title = "Muscle Wizard 14 I Cast Fist: a raging Unarmed Strike with Advantage - 6d6 + Strength, Prone, once per Rage"
+spell = "Target_ApoMuscleWizardFist"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", passive = "MuscleWizard_14_ICastFist" }, { target = "host", status = "RAGE", turns = -1 }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ cast = true }, { target = "A", status_applied = ["PRONE"] }, { target = "host", status_applied = ["APO_MUSCLEWIZARD_FIST_USED"] }]
+notes = "Valda's Spire of Secrets Player Pack. The used-marker ends with the Rage (RemoveConditions not HasStatus('SG_Rage'))."

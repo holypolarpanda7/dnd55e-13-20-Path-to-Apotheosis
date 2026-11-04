@@ -466,6 +466,14 @@ levels = [2, 20]
 # 2026-10-04: builds for the subclasses whose 13+ features came from References/Subclasses (levels 2-20; check the level 13-20 nodes arrive)
 
 [[build]]
+id = "barbarian-musclewizard"
+class = "Barbarian"
+title = "Barbarian - MuscleWizard, levels 2-20"
+subclass = "MuscleWizard"
+from = "barbarian-base"
+levels = [2, 20]
+
+[[build]]
 id = "barbarian-fractured"
 class = "Barbarian"
 title = "Barbarian - Fractured, levels 2-20"

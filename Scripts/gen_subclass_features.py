@@ -553,15 +553,15 @@ G.status("APO_MUSCLEWIZARD_FIST_USED", "I Cast Fist (used)", "You've thrown your
     "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"}, icon=icon_of("Action_Barbarian_Rage"))
 G.spell("Target_ApoMuscleWizardFist", "\u201cI Cast Fist\u201d",
         "Replace one of your attacks with a really hard punch: make an Unarmed Strike with Advantage. On a hit, the target takes 6d6 plus your Strength modifier Bludgeoning damage and is knocked Prone if it is Huge or smaller. Once per active Rage.", {
-            "SpellType": "Target", "TargetRadius": "MeleeMainWeaponRange", "TargetConditions": "Character() and not Self() and not Dead()",
+            "SpellType": "Target", "TargetRadius": "1.5", "TargetConditions": "Character() and not Self() and not Dead()",
             "RequirementConditions": "HasStatus('SG_Rage') and not HasStatus('APO_MUSCLEWIZARD_FIST_USED')",
             "SpellRoll": "Attack(AttackType.MeleeUnarmedAttack)",
             "SpellSuccess": "DealDamage(6d6+StrengthModifier,Bludgeoning,Magical);IF(TargetSizeEqualOrSmaller(Size.Huge)):ApplyStatus(PRONE,100,1);ApplyStatus(SELF,APO_MUSCLEWIZARD_FIST_USED,100,-1)",
             "SpellFail": "ApplyStatus(SELF,APO_MUSCLEWIZARD_FIST_USED,100,-1)",
             "TooltipAttackSave": "MeleeUnarmedAttack", "TooltipDamageList": "DealDamage(6d6+StrengthModifier,Bludgeoning)",
             "TooltipStatusApply": "ApplyStatus(PRONE,100,1)", "DescriptionParams": "DealDamage(6d6+StrengthModifier,Bludgeoning)",
-            "UseCosts": "ActionPoint:1", "SpellFlags": "IsHarmful;IsMelee", "VerbalIntent": "Damage"},
-        using="Target_MainHandAttack", icon="Apo_Spell_ICastFist")
+            "UseCosts": "ActionPoint:1", "SpellFlags": "IsAttack;IsMelee;IsHarmful;DisableBlood", "VerbalIntent": "Damage"},
+        using="Target_UnarmedAttack", icon="Apo_Spell_ICastFist")  # an Unarmed Strike: not the main-hand weapon attack
 G.passive("MuscleWizard_14_ICastFist", "\u201cI Cast Fist\u201d",
           "When you take the Attack action while your Rage is active, you can replace one of your attacks with a really hard punch. Make an Unarmed Strike with Advantage. On a hit, the target takes 6d6 plus your Strength modifier Bludgeoning damage and has the Prone condition if it is Huge or smaller. Once per active Rage.", {
               "Boosts": "UnlockSpell(Target_ApoMuscleWizardFist);IF(SpellId('Target_ApoMuscleWizardFist')):Advantage(AttackRoll)"},
