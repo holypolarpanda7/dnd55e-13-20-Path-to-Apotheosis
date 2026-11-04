@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.9.0 - 2026-11-04
+
+- Built against DnD 5.5e All-in-One BEYOND 4.14.3.5 (was 4.14.0.2). DnD 5.5e reworked Sneak Attack (thrown weapons now qualify and use their own damage type, and Cunning Strike effects are applied through the save itself); PTA's Sneak Attack overrides, including Devious Strikes (Rogue 14), are rebuilt on the new version.
+- Added: Path of the Muscle Wizard now has its level 14 feature, "I Cast Fist" (Valda's Spire of Secrets: Player Pack, the book DnD 5.5e's Muscle Wizard comes from). While you Rage, replace one of your attacks with an Unarmed Strike made with Advantage: on a hit it deals 6d6 plus your Strength modifier Bludgeoning damage and knocks a Huge or smaller target Prone. Once per Rage. It has its own icon (#63).
+- Fixed: creatures summoned with a 7th-level or higher spell slot (Summon Dragon, Conjure Elemental, Summon Fey and the other Summon spells) had lost their abilities: a dragon had no breath weapon or Slam, only a bare unarmed attack. They now have the same abilities as the lower-level version (#66). Thanks to the player who reported it.
+- Fixed: the White Hat Gunslinger's Gold Star Hero aura (14) applied a new Steely-Eyed buff to allies on every aura tick, piling up dozens of them and slowing the game down. It now applies once (#69). Thanks to the player who reported it.
+- Fixed: with the optional XP multiplier (Mod Configuration Menu) set above or below 1, a companion who joined the party was given the multiplied catch-up XP, so the party ended up at different levels. Catch-up XP is no longer scaled (#70). Thanks to the player who reported it.
+- Fixed: a Slowed level 20 Fighter could still get its fourth attack back from Extra Attack (3). Slow now removes it (#72).
+
 ## v1.0.8.0 - 2026-10-31
 
 - Fixed: Wizards levelling 13-20 were never offered the Arcana Unleashed 7th- to 9th-level spells (Detonate, Invulnerability, Vision of Elapsing Eons, Wail of the Banshee, Aura of Evasion, Fractured Awareness, Power Word Pain, Reweave Fate, Transfix, Entrancing Mirrors, Iron Body, Lightning Ring, Moment of Prescience), nor Project Image, Power Word Stun or the Wizard spells DnD 5.5e added after September (Mental Prison, Viscous Sheath, Alter Self, the Sangromancy spells and others). The Wizard's two free spellbook spells per level now come from the full Wizard spell list, up to the highest spell level you can cast. Sorcerers, Warlocks and Bards already had them. Thanks to the player who reported it.

@@ -94,7 +94,8 @@ id = "gs-gold-star-aura"
 title = "Gold Star Hero: allies within 30 feet gain Advantage against being Frightened"
 grant_passive = "WhiteHat_14_GoldStarHero"
 spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 5 }]
-expect = [{ target = "host", status_present = ["WHITEHAT_GOLD_STAR_AURA"] }, { target = "B", status_present = ["WHITEHAT_STEELY_EYED_ALLY"] }]
+expect = [{ target = "host", status_present = ["WHITEHAT_GOLD_STAR_AURA"] }, { target = "B", status_present = ["WHITEHAT_STEELY_EYED_ALLY"] },
+          { target = "B", status_applied_count = { status = "WHITEHAT_STEELY_EYED_ALLY", count = [1, 3] } }]
 
 [[case]]
 id = "gs-stunned-surrender"

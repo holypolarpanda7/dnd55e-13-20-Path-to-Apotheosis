@@ -367,3 +367,19 @@ setup = [{ target = "host", passive = "Evoker_14_Overchannel" }, { target = "hos
          { target = "host", boost = "Resistance(Necrotic,Resistant)" }, { lua = "Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.SetUses(BG3T.host(), 1); Mods.dnd55e_Apotheosis.Apotheosis.Overchannel.TestDie = 12" }]
 expect = [{ cast = true }, { target = "host", hp_change = [-24, -24] }]
 
+[[case]]
+id = "fix72-slow-blocks-extra-attack-3"
+title = "Fighter 20 Extra Attack (3): a Slowed fighter's EXTRA_ATTACK_3_Q must not step into EXTRA_ATTACK_3 (#72)"
+spell = "Shout_Dodge"
+target = "host"
+setup = [{ target = "host", status = "SLOW", turns = 3 }, { target = "host", status = "EXTRA_ATTACK_3_Q", turns = 1 }]
+expect = [{ target = "host", status_absent = ["EXTRA_ATTACK_3"] }]
+notes = "SLOW tags EXTRA_ATTACK_BLOCKED; dnd55e's own queue statuses honour it since 4.14.3.5, PTA's EXTRA_ATTACK_3_Q now does too."
+
+[[case]]
+id = "fix72-extra-attack-3-queue-control"
+title = "Control for fix72: without Slow the same queue status becomes EXTRA_ATTACK_3"
+spell = "Shout_Dodge"
+target = "host"
+setup = [{ target = "host", status = "EXTRA_ATTACK_3_Q", turns = 1 }]
+expect = [{ target = "host", status_applied = ["EXTRA_ATTACK_3"] }]
