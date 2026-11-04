@@ -3746,6 +3746,14 @@
                     <attribute id="UUID" type="guid" value="24176895-a963-5364-9eb3-44f6bba7698c"/>
                 </node>
                 <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="MuscleWizard"/>
+                    <attribute id="PassivesAdded" type="LSString" value="MuscleWizard_14_ICastFist"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="eaf4acf0-4799-4c8d-8a30-8c5a2aa990e7"/>
+                    <attribute id="UUID" type="guid" value="a8033dc1-e5b0-5410-aa77-8cb64b804535"/>
+                </node>
+                <node id="Progression">
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="ShadowDomain"/>
                     <attribute id="PassivesAdded" type="LSString" value="ShadowDomain_17_ArmyOfShadow"/>

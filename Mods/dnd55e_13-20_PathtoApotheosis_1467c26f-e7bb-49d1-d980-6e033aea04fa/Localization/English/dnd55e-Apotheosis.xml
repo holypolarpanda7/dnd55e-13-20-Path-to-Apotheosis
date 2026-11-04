@@ -4631,4 +4631,10 @@
   <content contentuid="h838e31f27f06556fa12f733412a1d852" version="1">Expend an 8th-level spell slot to gain 8 Sorcery Points. (You can't have more Sorcery Points than your Sorcerer level.)</content>
   <content contentuid="hdd99da50f3b755ca95bd943ee6c08486" version="1">Create Sorcery Points: 9</content>
   <content contentuid="hc8fc9ff83e4a5a5aa0f4874a90212287" version="1">Expend a 9th-level spell slot to gain 9 Sorcery Points. (You can't have more Sorcery Points than your Sorcerer level.)</content>
+  <content contentuid="ha02abc0e622d53b2a07a2bd3aa4a388f" version="1">I Cast Fist (used)</content>
+  <content contentuid="h6e427d9666e15d898166c11017ef77ee" version="1">You've thrown your Fist this Rage.</content>
+  <content contentuid="hf29285a35c09557f9aa546cb9bed6c84" version="1">“I Cast Fist”</content>
+  <content contentuid="h6e9cdded97b65dfca078867125bd9ccd" version="1">Replace one of your attacks with a really hard punch: make an Unarmed Strike with Advantage. On a hit, the target takes 6d6 plus your Strength modifier Bludgeoning damage and is knocked Prone if it is Huge or smaller. Once per active Rage.</content>
+  <content contentuid="h07fa69358fb453d2ab5b6491d9d8d107" version="1">“I Cast Fist”</content>
+  <content contentuid="h7fd1d41840805b69997e3ceec967be91" version="1">When you take the Attack action while your Rage is active, you can replace one of your attacks with a really hard punch. Make an Unarmed Strike with Advantage. On a hit, the target takes 6d6 plus your Strength modifier Bludgeoning damage and has the Prone condition if it is Huge or smaller. Once per active Rage.</content>
 </contentList>

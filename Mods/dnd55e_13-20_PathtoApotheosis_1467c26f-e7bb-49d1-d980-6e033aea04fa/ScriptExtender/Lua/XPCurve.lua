@@ -66,6 +66,18 @@ local function afterTicks(n, fn)
     end)
 end
 
+-- A companion who joins is given the party's XP in one jump (a "catch-up"). That is not earned XP: scaling it put a
+-- joining companion at 1.2x - 2x the party's XP, so the party ended up at different levels (#70). A gain from far
+-- below the other members' XP to roughly their level is a catch-up, so it passes through unscaled.
+local function isCatchUp(uuid, base, total)
+    local top = 0
+    for _, e in ipairs(Ext.Entity.GetAllEntitiesWithComponent("PartyMember")) do
+        local u = uuidOf(e)
+        if u and u ~= uuid and e.Experience and e.Experience.TotalExperience > top then top = e.Experience.TotalExperience end
+    end
+    return top > 0 and base < top * 0.5 and total >= top * 0.9
+end
+
 local function onExperience(entity)
     local uuid = uuidOf(entity)
     if not uuid or not entity.PartyMember then return end
@@ -74,6 +86,11 @@ local function onExperience(entity)
     if base == nil or total == base then baseline[uuid] = total return end
     local gain = total - base
     if gain <= 0 then baseline[uuid] = total return end
+    if isCatchUp(uuid, base, total) then
+        Log.Info(("XPCurve: %s caught up to the party (%d -> %d), not scaled"):format(uuid, base, total))
+        baseline[uuid] = total
+        return
+    end
     local startLevel = levelForTotal(base)
     if (scope == "early" and startLevel > 12) or (scope == "late" and startLevel < 13) then
         baseline[uuid] = total

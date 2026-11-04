@@ -545,6 +545,29 @@ G.passive("ShadowGnawer_14_CorrosiveHaze", "Corrosive Haze",
           icon=icon_of("Spell_Conjuration_FogCloud"))
 node(SHADOW_GNAWER, "ShadowGnawer", 14, "ShadowGnawer_14_CorrosiveHaze")
 
+# ---------------------------------------------------------------- Barbarian: Path of the Muscle Wizard 14 I Cast Fist (#63)
+# Valda's Spire of Secrets: Player Pack (the source dnd55e's Muscle Wizard uses; library excerpts/subclasses/MuscleWizard_ValdasSpire.txt).
+MUSCLE_WIZARD = "eaf4acf0-4799-4c8d-8a30-8c5a2aa990e7"
+G.status("APO_MUSCLEWIZARD_FIST_USED", "I Cast Fist (used)", "You've thrown your Fist this Rage.", {
+    "RemoveConditions": "not HasStatus('SG_Rage')", "RemoveEvents": "OnTurn;OnStatusRemoved", "StackId": "APO_MUSCLEWIZARD_FIST_USED",
+    "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"}, icon=icon_of("Action_Barbarian_Rage"))
+G.spell("Target_ApoMuscleWizardFist", "\u201cI Cast Fist\u201d",
+        "Replace one of your attacks with a really hard punch: make an Unarmed Strike with Advantage. On a hit, the target takes 6d6 plus your Strength modifier Bludgeoning damage and is knocked Prone if it is Huge or smaller. Once per active Rage.", {
+            "SpellType": "Target", "TargetRadius": "MeleeMainWeaponRange", "TargetConditions": "Character() and not Self() and not Dead()",
+            "RequirementConditions": "HasStatus('SG_Rage') and not HasStatus('APO_MUSCLEWIZARD_FIST_USED')",
+            "SpellRoll": "Attack(AttackType.MeleeUnarmedAttack)",
+            "SpellSuccess": "DealDamage(6d6+StrengthModifier,Bludgeoning,Magical);IF(TargetSizeEqualOrSmaller(Size.Huge)):ApplyStatus(PRONE,100,1);ApplyStatus(SELF,APO_MUSCLEWIZARD_FIST_USED,100,-1)",
+            "SpellFail": "ApplyStatus(SELF,APO_MUSCLEWIZARD_FIST_USED,100,-1)",
+            "TooltipAttackSave": "MeleeUnarmedAttack", "TooltipDamageList": "DealDamage(6d6+StrengthModifier,Bludgeoning)",
+            "TooltipStatusApply": "ApplyStatus(PRONE,100,1)", "DescriptionParams": "DealDamage(6d6+StrengthModifier,Bludgeoning)",
+            "UseCosts": "ActionPoint:1", "SpellFlags": "IsHarmful;IsMelee", "VerbalIntent": "Damage"},
+        using="Target_MainHandAttack", icon="Apo_Spell_ICastFist")
+G.passive("MuscleWizard_14_ICastFist", "\u201cI Cast Fist\u201d",
+          "When you take the Attack action while your Rage is active, you can replace one of your attacks with a really hard punch. Make an Unarmed Strike with Advantage. On a hit, the target takes 6d6 plus your Strength modifier Bludgeoning damage and has the Prone condition if it is Huge or smaller. Once per active Rage.", {
+              "Boosts": "UnlockSpell(Target_ApoMuscleWizardFist);IF(SpellId('Target_ApoMuscleWizardFist')):Advantage(AttackRoll)"},
+          icon="Apo_Spell_ICastFist")
+node(MUSCLE_WIZARD, "MuscleWizard", 14, "MuscleWizard_14_ICastFist")
+
 # ---------------------------------------------------------------- Cleric: Shadow Domain 17 Army of Shadow (Book of Ebon Tides, Open Design)
 SHADOW_DOMAIN = "976b6b96-3c5a-4d06-86ee-c2a809bdb3e8"
 G.spell("Target_ApoShadowGrasp_Army", "Shadow Grasp: Army of Shadow",

@@ -45,6 +45,8 @@ data "AuraRadius" "9"
 data "AuraStatuses" "IF(Ally() and not Self() and not Tagged('INANIMATE') and not HasStatus('SG_Incapacitated',context.Source)):ApplyStatus(WHITEHAT_STEELY_EYED_ALLY)"
 data "StatusPropertyFlags" "IgnoreResting;DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
 data "StatusGroups" "SG_RemoveOnRespec"
+data "StackId" "WHITEHAT_GOLD_STAR_AURA"
+data "StackPriority" "10"
 
 // Tag(FRIGHTENED_ADV) is Halfling Brave's mechanism.
 new entry "WHITEHAT_STEELY_EYED_ALLY"
@@ -55,6 +57,8 @@ data "Description" "h2f95b46872d8552db918e626bd64111c"
 data "Icon" "Spell_Enchantment_Heroism"
 data "Boosts" "Tag(FRIGHTENED_ADV)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
+data "StackId" "WHITEHAT_STEELY_EYED_ALLY"
+data "StackPriority" "5"
 
 // Applied by Gunslinger.lua with Lay Down the Law, until the start of the White Hat's next turn.
 new entry "WHITEHAT_IRONCLAD_LAW"

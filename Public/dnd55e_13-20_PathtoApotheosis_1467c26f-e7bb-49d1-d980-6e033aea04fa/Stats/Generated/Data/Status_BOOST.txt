@@ -1483,7 +1483,7 @@ data "StatusType" "BOOST"
 using "EXTRA_ATTACK_2_Q"
 data "StackPriority" "35"
 data "RemoveConditions" "not RemoveCause(StatusRemoveCause.TimeOut) and not HasHigherPriorityExtraAttackQueued('EXTRA_ATTACK_3_Q') and not HasAnyExtraAttack()"
-data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition)):ApplyStatus(EXTRA_ATTACK_3, 100, 1)"
+data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Target)):ApplyStatus(EXTRA_ATTACK_3, 100, 1)"
 
 // Warping Implosion (Aberrant Sorcery 18): the explosion at the space you leave - applied to you before the teleport, so the
 // status's CreateExplosion goes off where you stood (a spell's own GROUND:CreateExplosion lands at the destination).
