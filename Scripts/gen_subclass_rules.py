@@ -86,6 +86,9 @@ REFERENCE = {
     ("Rogue", "Sanguine Thief"): ("excerpts/subclasses/grim-hollow_sanguine-thief.md (Grim Hollow Player's Guide, secondary summaries, 2026-10-16)",
                                   {13: ["Bloodstitch"], 17: ["Bloody Exit"]}),
     ("Barbarian", "Path of the Fractured"): ("References/Subclasses/missing_subclass_ref.txt (Grim Hollow)", {14: ["Better Half"]}),
+    ("Barbarian", "Path of the Muscle Wizard"): ("excerpts/subclasses/MuscleWizard_ValdasSpire.txt (Valda's Spire of Secrets: Player Pack; "
+                                                 "source confirmed by the dnd55e author, discussion #1726, text pasted by the user 2026-11-04)",
+                                                 {14: ["I Cast Fist"]}),
     ("Fighter", "Viking"): ("References/Subclasses/missing_subclass_ref.txt (Kobold Press Northlands)",
                             {15: ["Marauder's Reprisal"], 18: ["Unstoppable Assault"]}),
     ("Cleric", "Astral Domain"): ("References/Subclasses/missing_subclass_ref.txt (Griffon's Saddlebag)", {17: ["Supreme Switching"]}),
