@@ -82,6 +82,15 @@ data "Description" "h5ceccad1366a519c8dfbe3097e088af4"
 data "Icon" "Apo_Spirits_Priest"
 data "StackId" "SPIRITS_FROM_BEYOND_11"
 
+// marker: SubclassFeatures.lua ends one random listed condition, then removes this
+new entry "APO_SPIRIT_PRIEST_CURE"
+type "StatusData"
+data "DisplayName" "hde8c378f1aed5e4a8f98b029f7020625"
+data "Icon" "Apo_Spirits_Priest"
+data "StatusType" "BOOST"
+data "StackId" "APO_SPIRIT_PRIEST_CURE"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
 new entry "APO_MYSTICAL_CONNECTION_0"
 type "StatusData"
 data "DisplayName" "h9c9c6dbcb1b95aa39f68ef629c953cc8"

@@ -119,7 +119,7 @@ data "TooltipOnSave" "961753f4-c345-4bc4-b408-1d5b87a5ab0c"
 data "TooltipStatusApply" "ApplyStatus(PRONE,100,1)"
 data "VerbalIntent" "Damage"
 
-// Spirits from Beyond row 12 (UA 2025). The rules end ONE condition of your choice; a container option can't open a second picker, so (like BG3's Lesser Restoration) it ends all of them.
+// Spirits from Beyond row 12 (UA 2025). The rules end ONE condition of your choice; a container option can't open a second picker, so SubclassFeatures.lua ends one of the listed conditions the target has, at random (user 2026-11-11).
 new entry "Target_UnleashingASpirit_Priest"
 type "SpellData"
 using "Target_UnleashingASpirit_Beloved"
@@ -127,7 +127,7 @@ data "DisplayName" "h1dce9b2ce8f65ce3912d4c35c4845acf"
 data "Description" "h6281a588ddfc52d0b755abffc1b86642"
 data "Icon" "Apo_Spirits_Priest"
 data "RequirementConditions" "HasStatus('SPIRITS_FROM_BEYOND_11')"
-data "SpellProperties" "RegainHitPoints(LevelMapValue(BardicInspiration)+LevelMapValue(BardicInspiration));RemoveStatus(SG_Blinded);RemoveStatus(SG_Charmed);RemoveStatus(SG_Paralyzed);RemoveStatus(SG_Poisoned);RemoveStatus(SG_Stunned);RemoveStatus(SELF,SPIRITS_FROM_BEYOND_11);"
+data "SpellProperties" "RegainHitPoints(LevelMapValue(BardicInspiration)+LevelMapValue(BardicInspiration));ApplyStatus(APO_SPIRIT_PRIEST_CURE,100,1);RemoveStatus(SELF,SPIRITS_FROM_BEYOND_11);"
 data "TooltipDamageList" "RegainHitPoints(LevelMapValue(BardicInspiration)+LevelMapValue(BardicInspiration))"
 data "DescriptionParams" "RegainHitPoints(LevelMapValue(BardicInspiration)+LevelMapValue(BardicInspiration))"
 

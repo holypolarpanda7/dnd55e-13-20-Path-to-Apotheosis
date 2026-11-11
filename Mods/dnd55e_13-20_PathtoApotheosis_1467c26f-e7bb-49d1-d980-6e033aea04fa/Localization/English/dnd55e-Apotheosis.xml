@@ -4642,13 +4642,13 @@
   <content contentuid="h5fb4b00a67da5e2a9745a76643a7d902" version="1">Controlled Channeling: Brute</content>
   <content contentuid="he6f48aa82c7e56e9a1b41633c4c1f3cc" version="1">Channel the Brute spirit instead of rolling for one.</content>
   <content contentuid="h77837658e46c5d73ace8937a67a0f488" version="1">Spirits From Beyond: Priest</content>
-  <content contentuid="h5ceccad1366a519c8dfbe3097e088af4" version="1">You have channeled the Priest spirit. Use Unleashing a Spirit to bestow its effect. The target regains Hit Points equal to two rolls of your Bardic Inspiration die and is cured of being Blinded, Charmed, Paralyzed, Poisoned and Stunned.</content>
+  <content contentuid="h5ceccad1366a519c8dfbe3097e088af4" version="1">You have channeled the Priest spirit. Use Unleashing a Spirit to bestow its effect. The target regains Hit Points equal to two rolls of your Bardic Inspiration die, and one of these conditions on it ends (picked at random): Blinded, Charmed, Paralyzed, Poisoned or Stunned.</content>
   <content contentuid="h91e8c002287658c6a52dc16e92afa122" version="1">Controlled Channeling: Priest</content>
   <content contentuid="hfa444ed954865ec9a77a0176adbc39ab" version="1">Channel the Priest spirit instead of rolling for one.</content>
   <content contentuid="h6042edb9bc635f688403d89536622668" version="1">Unleashing a Spirit: Brute</content>
   <content contentuid="hf499826f9e6856db9f5bb834410b6808" version="1">Each creature of your choice within 9m of the target makes a Strength saving throw. On a failed save it takes Thunder damage equal to three rolls of your Bardic Inspiration die and falls Prone; on a success it takes half as much damage and doesn't fall Prone.</content>
   <content contentuid="h1dce9b2ce8f65ce3912d4c35c4845acf" version="1">Unleashing a Spirit: Priest</content>
-  <content contentuid="h6281a588ddfc52d0b755abffc1b86642" version="1">The target regains Hit Points equal to two rolls of your Bardic Inspiration die and is cured of being Blinded, Charmed, Paralyzed, Poisoned and Stunned.</content>
+  <content contentuid="h6281a588ddfc52d0b755abffc1b86642" version="1">The target regains Hit Points equal to two rolls of your Bardic Inspiration die, and one of these conditions on it ends (picked at random): Blinded, Charmed, Paralyzed, Poisoned or Stunned.</content>
   <content contentuid="hd55310b03fb65776a80e9eeb7d4dce71" version="1">Mystical Connection: Brute</content>
   <content contentuid="h85feeeadad9a522b8fa7332032a26792" version="1">Your second roll on the Spirits from Beyond table: Brute. You can switch to it (no action).</content>
   <content contentuid="h58b0ffa317fd563cab0380a6b50ab04c" version="1">Mystical Connection: take the Brute</content>
@@ -4657,4 +4657,5 @@
   <content contentuid="hd4bf6366c1385a0ba3318181cdaec66a" version="1">Your second roll on the Spirits from Beyond table: Priest. You can switch to it (no action).</content>
   <content contentuid="hcb04bc28c530538c88a05fdf8d1ebe9b" version="1">Mystical Connection: take the Priest</content>
   <content contentuid="h809fb4d8f43e5af4904137d231398330" version="1">Take the Priest instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
+  <content contentuid="hde8c378f1aed5e4a8f98b029f7020625" version="1">Priest's Blessing</content>
 </contentList>

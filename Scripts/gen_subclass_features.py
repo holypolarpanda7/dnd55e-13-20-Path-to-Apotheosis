@@ -161,8 +161,8 @@ for k, nm, text in [
         (10, "Brute", "Each creature of your choice within 9m of the target makes a Strength saving throw. On a failed save it takes "
                       "Thunder damage equal to three rolls of your Bardic Inspiration die and falls Prone; on a success it takes half "
                       "as much damage and doesn't fall Prone."),
-        (11, "Priest", "The target regains Hit Points equal to two rolls of your Bardic Inspiration die and is cured of being "
-                       "Blinded, Charmed, Paralyzed, Poisoned and Stunned.")]:
+        (11, "Priest", "The target regains Hit Points equal to two rolls of your Bardic Inspiration die, and one of these "
+                       "conditions on it ends (picked at random): Blinded, Charmed, Paralyzed, Poisoned or Stunned.")]:
     G.status(f"SPIRITS_FROM_BEYOND_{k}", f"Spirits From Beyond: {nm}",
              f"You have channeled the {nm} spirit. Use Unleashing a Spirit to bestow its effect. {text}",
              {"StackId": f"SPIRITS_FROM_BEYOND_{k}"}, using="SPIRITS_FROM_BEYOND_9", icon=f"Apo_Spirits_{nm}",
@@ -191,15 +191,17 @@ G.spell("Target_UnleashingASpirit_Brute", "Unleashing a Spirit: Brute",
             "VerbalIntent": "Damage"},
         using="Target_UnleashingASpirit_Coward", icon="Apo_Spirits_Brute", comment="Spirits from Beyond row 11 (UA 2025)")
 G.spell("Target_UnleashingASpirit_Priest", "Unleashing a Spirit: Priest",
-        "The target regains Hit Points equal to two rolls of your Bardic Inspiration die and is cured of being Blinded, Charmed, "
-        "Paralyzed, Poisoned and Stunned.", {
+        "The target regains Hit Points equal to two rolls of your Bardic Inspiration die, and one of these conditions on it ends "
+        "(picked at random): Blinded, Charmed, Paralyzed, Poisoned or Stunned.", {
             "RequirementConditions": "HasStatus('SPIRITS_FROM_BEYOND_11')",
-            "SpellProperties": f"RegainHitPoints({BI}+{BI});RemoveStatus(SG_Blinded);RemoveStatus(SG_Charmed);RemoveStatus(SG_Paralyzed);"
-                               "RemoveStatus(SG_Poisoned);RemoveStatus(SG_Stunned);RemoveStatus(SELF,SPIRITS_FROM_BEYOND_11);",
+            "SpellProperties": f"RegainHitPoints({BI}+{BI});ApplyStatus(APO_SPIRIT_PRIEST_CURE,100,1);RemoveStatus(SELF,SPIRITS_FROM_BEYOND_11);",
             "TooltipDamageList": f"RegainHitPoints({BI}+{BI})", "DescriptionParams": f"RegainHitPoints({BI}+{BI})"},
         using="Target_UnleashingASpirit_Beloved", icon="Apo_Spirits_Priest",
         comment="Spirits from Beyond row 12 (UA 2025). The rules end ONE condition of your choice; a container option can't open "
-                "a second picker, so (like BG3's Lesser Restoration) it ends all of them.")
+                "a second picker, so SubclassFeatures.lua ends one of the listed conditions the target has, at random (user 2026-11-11).")
+G.status("APO_SPIRIT_PRIEST_CURE", "Priest's Blessing", "", {
+    "StatusPropertyFlags": "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"}, icon="Apo_Spirits_Priest",
+    comment="marker: SubclassFeatures.lua ends one random listed condition, then removes this")
 
 G.passive("Spirits_14_MysticalConnection", "Mystical Connection",
           "Whenever you roll on the Spirits from Beyond table, you roll twice and choose: the second spirit is offered as a free switch.",

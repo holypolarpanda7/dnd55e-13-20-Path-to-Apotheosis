@@ -149,12 +149,15 @@ expect = [{ target = "A", hp_change = [-60, -3] }, { target = "A", damage_type =
 
 [[case]]
 id = "spirits-unleash-priest"
-title = "Unleashing a Spirit: Priest - heals two Bardic Inspiration dice and ends Poisoned (#77)"
+title = "Unleashing a Spirit: Priest - heals two Bardic Inspiration dice and ends ONE listed condition at random (#77)"
 spell = "Target_UnleashingASpirit_Priest"
 target = "host"
-setup = [{ target = "host", max_hp = 100 }, { target = "host", hp = 20 }, { target = "host", status = "POISONED", turns = 10 },
+safety = false
+setup = [{ target = "host", hp = 20 }, { target = "host", status = "POISONED", turns = 10 }, { target = "host", status = "BLINDED", turns = 10 },
          { target = "host", status = "SPIRITS_FROM_BEYOND_11", turns = -1 }]
-expect = [{ target = "host", hp_change = [2, 40] }, { target = "host", status_absent = ["POISONED", "SPIRITS_FROM_BEYOND_11"] }]
+expect = [{ target = "host", hp_change = [2, 40] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND_11", "APO_SPIRIT_PRIEST_CURE"] },
+          { log = "/Priest: ended (POISONED|BLINDED) on .* \\(one of 2\\)/" }]
+notes = "Poisoned and Blinded: exactly one ends (the log names it); the rules let the bard choose, BG3 can't offer a second picker (user 2026-11-11: random)."
 
 [[case]]
 id = "spirits-controlled-channeling-brute"

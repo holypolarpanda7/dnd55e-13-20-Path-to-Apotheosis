@@ -297,6 +297,32 @@ function SF.SpiritApplied(bard, idx)
     offerSecond(bard, idx)
 end
 
+-- Unleashing a Spirit: Priest (row 12). The rules end one condition of the bard's choice; a container option can't open a second
+-- picker, so one of the listed conditions the target has ends at random (user 2026-11-11).
+local PRIEST_GROUPS = { SG_Blinded = true, SG_Charmed = true, SG_Paralyzed = true, SG_Poisoned = true, SG_Stunned = true }
+
+function SF.PriestCure(target)
+    Osi.RemoveStatus(target, "APO_SPIRIT_PRIEST_CURE")
+    local found, seen = {}, {}
+    local ok, err = pcall(function()
+        for _, st in pairs(Ext.Entity.Get(target).StatusContainer.Statuses) do
+            local name = tostring(st)
+            local data = not seen[name] and Ext.Stats.Get(name)
+            seen[name] = true
+            if data then
+                for _, g in ipairs(data.StatusGroups or {}) do
+                    if PRIEST_GROUPS[tostring(g)] then found[#found + 1] = name break end
+                end
+            end
+        end
+    end)
+    if not ok then Log.Warn("Priest: status scan failed: " .. tostring(err)) return end
+    if #found == 0 then return end
+    local pick = found[math.random(1, #found)]
+    Osi.RemoveStatus(target, pick)
+    Log.Info(string.format("Priest: ended %s on %s (one of %d)", pick, target, #found))
+end
+
 function SF.SpiritSwitched(bard, spell)
     local r = rolled[bard]
     rolled[bard] = nil
@@ -489,6 +515,8 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", 
         SF.BetterHalf(target)
     elseif status == "APO_INFECTIOUS_HEX" and causee then
         SF.InfectiousHex(target, short(causee))
+    elseif status == "APO_SPIRIT_PRIEST_CURE" then
+        SF.PriestCure(target)
     elseif status:match("^SPIRITS_FROM_BEYOND_%d+$") then
         SF.SpiritApplied(target, tonumber(status:match("(%d+)$")))
     end
