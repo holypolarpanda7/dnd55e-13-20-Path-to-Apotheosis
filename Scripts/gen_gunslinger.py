@@ -151,10 +151,10 @@ S.append(entry("WHITEHAT_IRONCLAD_LAW", "StatusData", {
 S.append(entry("WHITEHAT_STUNNED_SURRENDER", "StatusData", {
     "DisplayName": h("Surrender:n", "Surrendered"),
     "Description": h("Surrender:d", "Stunned. Ends if the creature takes damage, and it repeats the Wisdom saving throw at the end of each of its turns."),
-    "StackId": "WHITEHAT_STUNNED_SURRENDER", "TickType": "EndTurn", "RemoveEvents": "OnTurn",
-    "RemoveConditions": "SavingThrow(Ability.Wisdom,ManeuverSaveDC())"}, using="STUNNED",
-    comment="Nexus bug 2026-11-07: OnTickRoll never runs on an INCAPACITATED status (it stayed 10 turns); the repeat save is "
-            "Hold Person's RemoveEvents OnTurn + RemoveConditions. Ending on damage: Gunslinger.lua (AttackedBy)."))
+    "StackId": "WHITEHAT_STUNNED_SURRENDER"}, using="STUNNED",
+    comment="Nexus bug 2026-11-07: OnTickRoll never ran on this INCAPACITATED status (it stayed 10 turns), and RemoveEvents OnTurn + "
+            "a save in RemoveConditions rolled the save the moment it landed (2026-11-11). Gunslinger.lua ends it: the Wisdom save "
+            "at the end of each of the creature's turns, and damage."))
 
 # ---------------------------------------------------------------- Spellslinger 14: Magic Bullet
 passive("Spellslinger_14_MagicBullet", "Magic Bullet",

@@ -95,18 +95,56 @@ end
 Ext.Osiris.RegisterListener("LeveledUp", 1, "after", guard("LeveledUp", function(c) GS.OnLeveledUp(c) end))
 Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", function(t, s, c) GS.OnStatusApplied(t, s, c) end))
 Ext.Osiris.RegisterListener("TurnStarted", 1, "after", guard("TurnStarted", function(c) GS.OnTurnStarted(c) end))
--- White Hat 14 Stunned Surrender: the stun ends early if the creature takes any damage (the status's own RemoveEvents carry the
--- end-of-turn Wisdom save, and a status has only one RemoveConditions).
--- The Critical Hit that causes the stun lands its damage after the status (seen in game 2026-11-11): damage within a second
--- of the stun is that hit, not a new one.
-local surrenderAt = {}
-Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", function(t, s)
-    if s == "WHITEHAT_STUNNED_SURRENDER" then surrenderAt[string.sub(t, -36)] = Ext.Utils.MonotonicTime() end
+-- White Hat 14 Stunned Surrender (Nexus bug 2026-11-07: it lasted 10 turns whatever the saves). The status only stuns; this
+-- script ends it: a Wisdom save against the White Hat's maneuver DC at the end of each of the creature's turns (a status's own
+-- RemoveEvents OnTurn + RemoveConditions save ran the save the moment it landed, seen in game 2026-11-11), or any damage
+-- after the Critical Hit that caused it (that hit's damage lands just after the status).
+local NULL = "NULL_00000000-0000-0000-0000-000000000000"
+local surrender = {}  -- creature -> { at = ms, dc = maneuver DC }
+
+local function maneuverDC(wh)  -- 8 + Proficiency Bonus + Dexterity modifier (the Gunslinger's maneuver DC)
+    local ok, dc = pcall(function()
+        local st = Ext.Entity.Get(wh).Stats
+        return 8 + st.ProficiencyBonus + math.floor((st.Abilities[3] - 10) / 2)
+    end)
+    return ok and dc or 15
+end
+
+local function dcGuid(value)  -- a DifficultyClass with this DC (the game ships Legacy_<n> ones)
+    local best
+    for _, g in ipairs(Ext.StaticData.GetAll("DifficultyClass")) do
+        local d = Ext.StaticData.Get(g, "DifficultyClass")
+        if d and d.Difficulties and d.Difficulties[1] == value then
+            if tostring(d.Name):find("Legacy_", 1, true) == 1 then return g end
+            best = best or g
+        end
+    end
+    return best
+end
+
+Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", function(t, s, c)
+    if s ~= "WHITEHAT_STUNNED_SURRENDER" then return end
+    surrender[string.sub(t, -36)] = { at = Ext.Utils.MonotonicTime(), dc = c and maneuverDC(string.sub(c, -36)) or 15 }
+end))
+Ext.Osiris.RegisterListener("StatusRemoved", 4, "after", guard("StatusRemoved", function(t, s)
+    if s == "WHITEHAT_STUNNED_SURRENDER" then surrender[string.sub(t, -36)] = nil end
+end))
+Ext.Osiris.RegisterListener("TurnEnded", 1, "after", guard("TurnEnded", function(c)
+    c = string.sub(c, -36)
+    local st = surrender[c]
+    if not st or Osi.HasActiveStatus(c, "WHITEHAT_STUNNED_SURRENDER") ~= 1 then return end
+    local g = dcGuid(math.max(1, math.min(30, st.dc)))
+    if g then Osi.RequestPassiveRoll(c, NULL, "SavingThrow", "Wisdom", g, 0, "APO_SURRENDER_" .. c) end
+end))
+Ext.Osiris.RegisterListener("RollResult", 6, "after", guard("RollResult", function(ev, _, _, result)
+    if type(ev) == "string" and ev:sub(1, 14) == "APO_SURRENDER_" and result == 1 then
+        Osi.RemoveStatus(ev:sub(15), "WHITEHAT_STUNNED_SURRENDER")
+    end
 end))
 Ext.Osiris.RegisterListener("AttackedBy", 7, "after", guard("AttackedBy", function(defender, _, _, _, amount)
     if (amount or 0) <= 0 or Osi.HasActiveStatus(defender, "WHITEHAT_STUNNED_SURRENDER") ~= 1 then return end
-    local at = surrenderAt[string.sub(defender, -36)]
-    if at and Ext.Utils.MonotonicTime() - at < 1000 then return end
+    local st = surrender[string.sub(defender, -36)]
+    if st and Ext.Utils.MonotonicTime() - st.at < 1000 then return end
     Osi.RemoveStatus(defender, "WHITEHAT_STUNNED_SURRENDER")
 end))
 Ext.Events.BeforeDealDamage:Subscribe(guard("BeforeDealDamage", GS.BeforeDealDamage))
