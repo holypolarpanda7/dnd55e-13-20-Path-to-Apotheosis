@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.0.10.0 - 2026-11-11
+
+- Priest test: heal range for non-Bard hosts (2026-11-11) (2026-11-11)
+- Priest ends one listed condition at random instead of all (user 2026-11-11) (2026-11-11)
+- Stunned Surrender: the causing hit's damage event can arrive before StatusApplied - don't treat it as new damage (found in game 2026-11-11) (2026-11-11)
+- Stunned Surrender: end-of-turn Wisdom save and damage end handled in Gunslinger.lua (a RemoveConditions save rolled the moment the status landed, seen 2026-11-11) (2026-11-11)
+- Controlled Channeling rows 11-12 don't also roll a spirit; Stunned Surrender ignores its own crit's damage; test fixes from the 2026-11-11 in-game run (2026-11-11)
+- Fixes for #77 and the Nexus reports of 2026-11-07/10 (2026-11-11) (2026-11-11)
+- dnd55e 4.14.4.4 sync; Magic Weapon 7-9 capped at +3 (2026-11-11) (2026-11-11)
+- Epic Boon lock: no full UI-tree walk (game crash #76) (2026-11-11)
+
 ## v1.0.9.0 - 2026-11-04
 
 - Built against DnD 5.5e All-in-One BEYOND 4.14.3.5 (was 4.14.0.2). DnD 5.5e reworked Sneak Attack (thrown weapons now qualify and use their own damage type, and Cunning Strike effects are applied through the save itself); PTA's Sneak Attack overrides, including Devious Strikes (Rogue 14), are rebuilt on the new version.
