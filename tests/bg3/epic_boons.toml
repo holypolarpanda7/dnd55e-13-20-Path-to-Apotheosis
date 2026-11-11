@@ -290,8 +290,8 @@ target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", passive = "EpicBoon_ExquisiteRadiance" }, { target = "host", status = "EPIC_POWERFUL_RADIANCE", turns = -1 },
          { target = "host", status = "EPIC_POWERFUL_RADIANCE", turns = -1 }]
-expect = [{ target = "A", hp_change = [-24, -24] }, { target = "host", status_absent = ["EPIC_POWERFUL_RADIANCE"] }]
-notes = "Applied twice (as a load + Long Rest would): one roll must still use it up - it stacked before (Nexus 2026-11-07)."
+expect = [{ target = "A", hp_change = [-30, -24] }, { target = "host", status_absent = ["EPIC_POWERFUL_RADIANCE"] }]
+notes = "-30: a Spirits Bard's Empowered Channeling 1d6 is maximized too. Applied twice (as a load + Long Rest would): one roll must still use it up - it stacked before (Nexus 2026-11-07)."
 
 [[case]]
 id = "boon2-fluid-forms"

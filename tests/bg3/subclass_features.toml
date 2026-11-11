@@ -119,12 +119,12 @@ expect = [{ log = "/Persistent Hunt: .* spends a level 4 slot and stays up with 
 [[case]]
 id = "spirits-mystical-switch-keeps-held"
 title = "Mystical Connection: taking the second spirit replaces only the one just rolled - spirits channeled earlier stay (#77)"
-spell = "Shout_ApoMysticalConnection_5"
 target = "host"
-setup = [{ target = "host", passive = "Spirits_14_MysticalConnection" }, { target = "host", status = "SPIRITS_FROM_BEYOND_3", turns = -1 },
-         { lua = "local h = BG3T.host(); Mods.dnd55e_Apotheosis.Apotheosis.SubclassFeatures.SpiritRollStarted(h); Osi.ApplyStatus(h, 'SPIRITS_FROM_BEYOND_1', -1, 1, h)" }]
+setup = [{ target = "host", passive = "Spirits_14_MysticalConnection" },
+         { lua = "local S, h = Mods.dnd55e_Apotheosis.Apotheosis.SubclassFeatures, BG3T.host(); Osi.ApplyStatus(h, 'SPIRITS_FROM_BEYOND_3', -1, 1, h); Ext.Timer.WaitFor(700, function() S.SpiritRollStarted(h); Osi.ApplyStatus(h, 'SPIRITS_FROM_BEYOND_1', -1, 1, h) end); Ext.Timer.WaitFor(1600, function() Osi.UseSpell(h, 'Shout_ApoMysticalConnection_5', h) end)" }]
+wait = 5
 expect = [{ target = "host", status_present = ["SPIRITS_FROM_BEYOND_3", "SPIRITS_FROM_BEYOND_5"] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND_1"] }]
-notes = "Rolled spirit 1 (the setup stands in for dnd55e's roll), switched to 5: the held 3 must survive."
+notes = "Held 3 first, then rolled 1 (the setup stands in for dnd55e's roll), then the real switch spell to 5: 3 must survive. The held spirit is applied before the roll starts (a status from the setup list lands after the Lua step)."
 
 [[case]]
 id = "spirits-d12-brute-row"
@@ -162,7 +162,8 @@ title = "Controlled Channeling: Brute channels SPIRITS_FROM_BEYOND_10 (#77)"
 spell = "Shout_ControlledChanneling_Brute"
 target = "host"
 setup = [{ target = "host", passive = "Spirits_3_SpiritsFromBeyond" }]
-expect = [{ target = "host", status_applied = ["SPIRITS_FROM_BEYOND_10"] }]
+expect = [{ target = "host", status_applied = ["SPIRITS_FROM_BEYOND_10"] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND"] }]
+notes = "status_absent: choosing a spirit must not also roll one (dnd55e's ControlledChanneling() didn't know rows 11-12)."
 
 [[case]]
 id = "spirits-controlled-channeling-priest"
@@ -170,7 +171,8 @@ title = "Controlled Channeling: Priest channels SPIRITS_FROM_BEYOND_11 (#77)"
 spell = "Shout_ControlledChanneling_Priest"
 target = "host"
 setup = [{ target = "host", passive = "Spirits_3_SpiritsFromBeyond" }]
-expect = [{ target = "host", status_applied = ["SPIRITS_FROM_BEYOND_11"] }]
+expect = [{ target = "host", status_applied = ["SPIRITS_FROM_BEYOND_11"] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND"] }]
+notes = "status_absent: choosing a spirit must not also roll one (dnd55e's ControlledChanneling() didn't know rows 11-12)."
 
 [[case]]
 id = "conquest-scornful-rebuke-not-healing"
@@ -179,7 +181,8 @@ spell = "Target_CureWounds"
 caster = "B"
 target = "host"
 spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 2 }]
-setup = [{ target = "host", passive = "Conquest_15_ScornfulRebuke" }, { target = "host", max_hp = 100 }, { target = "host", hp = 50 }]
+safety = false
+setup = [{ target = "host", passive = "Conquest_15_ScornfulRebuke" }, { target = "host", hp = 50 }]
 expect = [{ target = "B", hp_change = [0, 0] }, { target = "host", hp_change = [1, 50] }]
 
 # ---------------------------------------------------------------- group 2
@@ -192,8 +195,8 @@ target = "host"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
 setup = [{ target = "host", passive = "Conquest_15_ScornfulRebuke" }, { target = "A", boost = "RollBonus(Attack,30)" }]
-expect = [{ target = "A", hp_change = [-1, -1] }]
-notes = "Test host Charisma 12: +1."
+expect = [{ target = "A", hp_change = [-6, -1] }, { target = "A", damage_type = "Psychic" }]
+notes = "Charisma modifier, minimum 1 (a Charisma 12 host: -1; the L18 Spirits Bard: -5)."
 
 [[case]]
 id = "conquest-invincible-conqueror"

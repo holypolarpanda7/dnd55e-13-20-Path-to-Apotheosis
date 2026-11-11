@@ -97,10 +97,17 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", 
 Ext.Osiris.RegisterListener("TurnStarted", 1, "after", guard("TurnStarted", function(c) GS.OnTurnStarted(c) end))
 -- White Hat 14 Stunned Surrender: the stun ends early if the creature takes any damage (the status's own RemoveEvents carry the
 -- end-of-turn Wisdom save, and a status has only one RemoveConditions).
+-- The Critical Hit that causes the stun lands its damage after the status (seen in game 2026-11-11): damage within a second
+-- of the stun is that hit, not a new one.
+local surrenderAt = {}
+Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", function(t, s)
+    if s == "WHITEHAT_STUNNED_SURRENDER" then surrenderAt[string.sub(t, -36)] = Ext.Utils.MonotonicTime() end
+end))
 Ext.Osiris.RegisterListener("AttackedBy", 7, "after", guard("AttackedBy", function(defender, _, _, _, amount)
-    if (amount or 0) > 0 and Osi.HasActiveStatus(defender, "WHITEHAT_STUNNED_SURRENDER") == 1 then
-        Osi.RemoveStatus(defender, "WHITEHAT_STUNNED_SURRENDER")
-    end
+    if (amount or 0) <= 0 or Osi.HasActiveStatus(defender, "WHITEHAT_STUNNED_SURRENDER") ~= 1 then return end
+    local at = surrenderAt[string.sub(defender, -36)]
+    if at and Ext.Utils.MonotonicTime() - at < 1000 then return end
+    Osi.RemoveStatus(defender, "WHITEHAT_STUNNED_SURRENDER")
 end))
 Ext.Events.BeforeDealDamage:Subscribe(guard("BeforeDealDamage", GS.BeforeDealDamage))
 

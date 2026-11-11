@@ -1091,6 +1091,13 @@ def write():
                     "Spirits from Beyond rows 11-12 (Bard 15)")
     append_children("Shout_ControlledChanneling", ["Shout_ControlledChanneling_Brute", "Shout_ControlledChanneling_Priest"],
                     "Spirits from Beyond rows 11-12 (Bard 15)")
+    # dnd55e's ControlledChanneling() (Bard.khn) lists its own ten choices only: without this, choosing Brute/Priest also
+    # rolled a random spirit (seen in game 2026-11-11). Extended here rather than in a .khn (an override there can crash).
+    cond = dnd_field("Spirits_3_SpiritsFromBeyond", "Conditions", "Passive*.txt").rstrip("; ")
+    extra = " and not SpellId('Shout_ControlledChanneling_Brute') and not SpellId('Shout_ControlledChanneling_Priest')"
+    G.P.append(G.entry("Spirits_3_SpiritsFromBeyond", "PassiveData", {"Conditions": cond + ("" if extra in cond else extra)},
+                       using="Spirits_3_SpiritsFromBeyond",
+                       comment="choosing a row 11-12 spirit with Controlled Channeling doesn't roll one (re-read from dnd55e at each regen)"))
     new_nodes = []
     for table, name, level, passives, boosts, selectors, removed in NODES:
         attrs = {"PassivesAdded": ";".join(passives)} if passives else {}

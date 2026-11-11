@@ -575,3 +575,9 @@ data "Boosts" "ActionResource(ApoRedRenewal,1,0)"
 data "StatsFunctorContext" "OnShortRest"
 data "Conditions" "HasActionResource('ApoRedRenewal',1,0,false,false,context.Source)"
 data "StatsFunctors" "RestoreResource(SELF,HitPointDice06,10,0);RestoreResource(SELF,HitPointDice12,10,0);UseActionResource(SELF,ApoRedRenewal,1,0)"
+
+// choosing a row 11-12 spirit with Controlled Channeling doesn't roll one (re-read from dnd55e at each regen)
+new entry "Spirits_3_SpiritsFromBeyond"
+type "PassiveData"
+using "Spirits_3_SpiritsFromBeyond"
+data "Conditions" "HasUseCosts('BardicInspiration') and not ControlledChanneling() and not SpellId('Shout_ControlledChanneling_Brute') and not SpellId('Shout_ControlledChanneling_Priest')"
