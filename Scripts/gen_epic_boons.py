@@ -107,7 +107,8 @@ FEAT_REQ = "CharacterLevelGreaterThan(18)"
 FEAT_REQ_NOTE = "enforced by EpicBoonFeatLock.lua"
 PREREQ = "Prerequisite: Level 19+.<br><br>"
 # "abilities": SelectAbilities over all six (the game's ability picker); "passives": a pick of EpicBoonAbility_<Ab> passives
-# (Ability() boosts aren't capped at 20, verified in game 2026-09-30). Epic Boons allow a score of up to 30.
+# Epic Boons allow a score of up to 30: Ability(X,1,30) - the third argument is the cap (base Durable: Ability(Constitution,1,20);
+# Thourq on Nexus 2026-11-10 saw a boon +1 stop at 20). Re-verify in game before trusting either way.
 ABILITY_SELECT = "passives"
 ALL_ABILITIES_LIST = "b9149c8e-52c8-46e5-9cb6-fc39301c05fe"  # base AbilityList with all six ("Human List")
 
@@ -124,7 +125,7 @@ def boon(name, title, text, fields, variants=None):
     names = []
     for ab in variants:
         vn = f"{name}_{SHORT[ab]}"
-        boosts = ";".join(x for x in [f"Ability({ab},1)", fields.get("Boosts")] if x)
+        boosts = ";".join(x for x in [f"Ability({ab},1,30)", fields.get("Boosts")] if x)
         P.append(entry(vn, "PassiveData", {**base, **fields, "Boosts": boosts,
                                              "DisplayName": h(vn + ":n", f"{title} (+1 {ab})")}))
         BOONS.append(vn)
@@ -302,8 +303,14 @@ boon("EpicBoon_Truesight", "Boon of Truesight", "Truesight: you have Truesight w
 # References/Feats/EpicBoons.txt. Script Extender halves in EpicBoons.lua (search "phase 2").
 
 def st(name, fields, using=None, comment=None):
-    S.append(entry(name, "StatusData", {"StatusType": "BOOST", "Icon": "PassiveFeature_Generic_Magical",
-                                        "StatusPropertyFlags": QUIET, **fields}, using=using, comment=comment))
+    # StackId defaults to the name: a status reapplied without one (on load/Long Rest, every turn) stacked copies - Powerful
+    # Radiance and Fortifying Light did (Nexus bug 2026-11-07). SG_RemoveOnRespec: a boon's effect ends when a respec
+    # removes the boon (Daylight Presence stayed on, with no Dismiss spell left).
+    base = {"StatusType": "BOOST", "Icon": "PassiveFeature_Generic_Magical", "StatusPropertyFlags": QUIET}
+    if not using:
+        base["StackId"] = name
+        base["StatusGroups"] = "SG_RemoveOnRespec"
+    S.append(entry(name, "StatusData", {**base, **fields}, using=using, comment=comment))
 
 
 boon("EpicBoon_Bloodshed", "Boon of Bloodshed",
@@ -597,7 +604,7 @@ for ab in ABILITIES:
     n = f"EpicBoonAbility_{SHORT[ab]}"
     P.append(entry(n, "PassiveData", {"DisplayName": h(n + ":n", f"Epic Boon: +1 {ab}"),
                                       "Description": h(n + ":d", f"Increase your {ab} score by 1 (to a maximum of 30)."),
-                                      "Icon": "PassiveFeature_Generic_Magical", "Properties": "Highlighted", "Boosts": f"Ability({ab},1)"}))
+                                      "Icon": "PassiveFeature_Generic_Magical", "Properties": "Highlighted", "Boosts": f"Ability({ab},1,30)"}))
     ABILITY_PASSIVES.append(n)
 ABILITY_LIST = gid("list:ability")
 

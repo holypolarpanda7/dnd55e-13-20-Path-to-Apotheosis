@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.0.10.0 - 2026-11-11
+
+- Built against DnD 5.5e All-in-One BEYOND 4.14.4.4 (was 4.14.3.5). DnD 5.5e rebuilt Magic Weapon (one effect scaled by the spell slot) and lets a College of Spirits Bard hold several channeled spirits at once; PTA's 7th- to 9th-level upcasts are regenerated on the new versions.
+- Fixed: the game could crash during a fight when a party member had a level-up waiting (the Epic Boon level check searched the whole interface several times a second). It now looks only at the open screens, only when it matters, and never in combat (#76). Thanks to the players who reported it.
+- Fixed: College of Spirits Mystical Connection (14): taking the second spirit removed every spirit you had channeled. It now replaces only the spirit you just rolled (#77).
+- Added: College of Spirits rows 11 and 12 of the Spirits from Beyond table, now that the Bardic Inspiration die is a d12 at Bard 15: the Brute (each creature of your choice within 9 m of the target makes a Strength save or takes Thunder damage equal to three Bardic Inspiration dice and falls Prone; half damage and no Prone on a success) and the Priest (the target regains Hit Points equal to two Bardic Inspiration dice, and one of Blinded, Charmed, Paralyzed, Poisoned or Stunned on it ends, picked at random). Both can be chosen with Controlled Channeling, and Mystical Connection can offer them. They have their own icons (#77). Thanks to the player who reported it.
+- Fixed: choosing a spirit with Controlled Channeling no longer offers a Mystical Connection switch.
+- Fixed: Conquest Paladin Scornful Rebuke (15) hurt allies who healed the Paladin and the Paladin's own auras. It now only answers a creature that hits you with an attack roll.
+- Fixed: White Hat Gunslinger Stunned Surrender (14) kept a creature Stunned for 10 turns whatever its saves. It now repeats the Wisdom save at the end of each of its turns and ends when it takes damage.
+- Fixed: Boon of Exquisite Radiance and Boon of the Bright Sun stacked their effects (Powerful Radiance after loads and rests, Fortifying Light's Temporary Hit Points every turn), and Daylight Presence stayed on after a respec. Epic Boon effects no longer stack and end when a respec removes the boon.
+- Fixed: Prismatic Spray's violet ray left a banished creature in the fight forever, so combat could never end. An enemy sent to another plane is now defeated; a party member is back when the fight ends or after a Long Rest.
+- Fixed: Magic Weapon cast with a 7th- to 9th-level slot gave +4 to +6. The bonus stops at +3 (6th-level slot or higher), as in the rules.
+- Changed: Epic Boon ability increases state their maximum of 30 explicitly.
+
 ## v1.0.9.0 - 2026-11-04
 
 - Built against DnD 5.5e All-in-One BEYOND 4.14.3.5 (was 4.14.0.2). DnD 5.5e reworked Sneak Attack (thrown weapons now qualify and use their own damage type, and Cunning Strike effects are applied through the save itself); PTA's Sneak Attack overrides, including Devious Strikes (Rogue 14), are rebuilt on the new version.

@@ -1212,6 +1212,7 @@ if Ext and type(Ext.Require) == "function" then
 
     local okSf, sfOrErr = pcall(Ext.Require, "SubclassFeatures.lua")
     if okSf and type(sfOrErr) == "table" then
+        Apotheosis.SubclassFeatures = sfOrErr  -- test hooks (SF.TestSpiritDie / TestSpiritRow)
         Log.Info("SubclassFeatures loaded at bootstrap")
     else
         Log.Warn("SubclassFeatures bootstrap load failed: " .. tostring(sfOrErr))
@@ -1219,6 +1220,7 @@ if Ext and type(Ext.Require) == "function" then
 
     local okPs, psOrErr = pcall(Ext.Require, "PrismaticSpray.lua")
     if okPs and type(psOrErr) == "table" then
+        Apotheosis.PrismaticSpray = psOrErr  -- test hooks (VioletResult / ReturnBanished)
         Log.Info("PrismaticSpray loaded at bootstrap")
     else
         Log.Warn("PrismaticSpray bootstrap load failed: " .. tostring(psOrErr))

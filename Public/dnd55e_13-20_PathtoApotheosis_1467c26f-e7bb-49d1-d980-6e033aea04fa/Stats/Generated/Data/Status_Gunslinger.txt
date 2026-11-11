@@ -70,17 +70,13 @@ data "Icon" "Action_MagicItem_ProtectionFromMissiles"
 data "Boosts" "Resistance(Bludgeoning,Resistant);Resistance(Piercing,Resistant);Resistance(Slashing,Resistant)"
 data "StackId" "WHITEHAT_IRONCLAD_LAW"
 
+// Nexus bug 2026-11-07: OnTickRoll never ran on this INCAPACITATED status (it stayed 10 turns), and RemoveEvents OnTurn + a save in RemoveConditions rolled the save the moment it landed (2026-11-11). Gunslinger.lua ends it: the Wisdom save at the end of each of the creature's turns, and damage.
 new entry "WHITEHAT_STUNNED_SURRENDER"
 type "StatusData"
 using "STUNNED"
 data "DisplayName" "h404d5dab2efb5cd4a6d2a88be1f7e306"
 data "Description" "h8df47199b4fd5b389b88beb9ac5bd057"
 data "StackId" "WHITEHAT_STUNNED_SURRENDER"
-data "RemoveEvents" "OnDamage"
-data "RemoveConditions" "true"
-data "TickType" "EndTurn"
-data "OnTickRoll" "SavingThrow(Ability.Wisdom,ManeuverSaveDC())"
-data "OnTickSuccess" "RemoveStatus(SELF,WHITEHAT_STUNNED_SURRENDER)"
 
 new entry "SPELLSLINGER_MAGIC_BULLET"
 type "StatusData"

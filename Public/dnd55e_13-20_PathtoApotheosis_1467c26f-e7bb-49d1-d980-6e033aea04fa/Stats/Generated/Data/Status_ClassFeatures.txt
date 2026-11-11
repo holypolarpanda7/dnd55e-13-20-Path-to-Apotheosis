@@ -14,9 +14,9 @@ data "DisplayName" "h872ceaf908075ce582bc1ffe5a49079b"
 data "Description" "h6382824331ec5739932b3ce2711c2988"
 data "Icon" "Spell_Enchantment_CrownOfMadness"
 data "StatusType" "BOOST"
+data "StackId" "GLAMOUR_UNBREAKABLE_MAJESTY"
 data "RemoveConditions" "HasStatus('SG_Incapacitated')"
 data "RemoveEvents" "OnStatusApplied"
-data "StackId" "GLAMOUR_UNBREAKABLE_MAJESTY"
 
 // Lasts until ended (the source: days equal to your Monk level). ClassFeatures.lua keeps it on one creature.
 new entry "QUIVERING_PALM"

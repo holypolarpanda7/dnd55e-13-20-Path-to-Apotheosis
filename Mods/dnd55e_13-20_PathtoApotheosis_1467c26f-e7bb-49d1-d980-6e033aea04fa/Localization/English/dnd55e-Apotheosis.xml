@@ -541,7 +541,7 @@
   <content contentuid="hps0008a0000000000000000000000001" version="1">Prismatic Spray: Violet</content>
   <content contentuid="hps0008a0000000000000000000000002" version="1">Blinded. At the start of the caster's next turn it makes a Wisdom saving throw: on a success this ends; on a failure it is sent to another plane.</content>
   <content contentuid="hps0009a0000000000000000000000001" version="1">Lost to Another Plane</content>
-  <content contentuid="hps0009a0000000000000000000000002" version="1">A violet ray of Prismatic Spray sent this creature to another plane of existence.</content>
+  <content contentuid="hps0009a0000000000000000000000002" version="1">A violet ray of Prismatic Spray sent this creature to another plane of existence. It returns when the fight ends or after a Long Rest.</content>
 
   <content contentuid="hrg0001a0000000000000000000000001" version="1">Regenerate</content>
   <content contentuid="hrg0001a0000000000000000000000002" version="1">Touch a creature to restore [1] Hit Points. For 1 hour, the target regains [2] at the start of each of its turns.</content>
@@ -3154,49 +3154,49 @@
   <content contentuid="h9c9c6dbcb1b95aa39f68ef629c953cc8" version="1">Mystical Connection: Beloved</content>
   <content contentuid="h90975269caa6534cb7ee3921956d0e10" version="1">Your second roll on the Spirits from Beyond table: Beloved. You can switch to it (no action).</content>
   <content contentuid="h746e74da657d5360873e76851bd0fe45" version="1">Mystical Connection: take the Beloved</content>
-  <content contentuid="h081955b7541a588bad4a72a03ecf2b15" version="1">Take the Beloved instead of the spirit you rolled first.</content>
+  <content contentuid="h081955b7541a588bad4a72a03ecf2b15" version="1">Take the Beloved instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="h841cd927e3da5c33b25a31279e1d074c" version="1">Mystical Connection: Sharpshooter</content>
   <content contentuid="h845c07f6e6e95198b211930b018d532e" version="1">Your second roll on the Spirits from Beyond table: Sharpshooter. You can switch to it (no action).</content>
   <content contentuid="h3c9f57b840a95ab09c84bfaea88970e3" version="1">Mystical Connection: take the Sharpshooter</content>
-  <content contentuid="hc9d0d7d62869584a81d73b53edef12ff" version="1">Take the Sharpshooter instead of the spirit you rolled first.</content>
+  <content contentuid="hc9d0d7d62869584a81d73b53edef12ff" version="1">Take the Sharpshooter instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="h341cd6ce1c005b87a2d1de17d096d32e" version="1">Mystical Connection: Avenger</content>
   <content contentuid="h8fc3cc983ac0550695d55a886aef20c2" version="1">Your second roll on the Spirits from Beyond table: Avenger. You can switch to it (no action).</content>
   <content contentuid="h94ddbb00d7a559378cb18fd30041419c" version="1">Mystical Connection: take the Avenger</content>
-  <content contentuid="h0ceb085aaeeb59c4873114e8845ba050" version="1">Take the Avenger instead of the spirit you rolled first.</content>
+  <content contentuid="h0ceb085aaeeb59c4873114e8845ba050" version="1">Take the Avenger instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="hdc5977d522bb5665a8a95eecae092f81" version="1">Mystical Connection: Renegade</content>
   <content contentuid="h1b8f6a96807b5405973302967b58c74d" version="1">Your second roll on the Spirits from Beyond table: Renegade. You can switch to it (no action).</content>
   <content contentuid="h0afaa194378d50d1826d005e7fcf8dfd" version="1">Mystical Connection: take the Renegade</content>
-  <content contentuid="h897091cf39ef5b67a855b22461719fac" version="1">Take the Renegade instead of the spirit you rolled first.</content>
+  <content contentuid="h897091cf39ef5b67a855b22461719fac" version="1">Take the Renegade instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="h69f4b94fe92f5b2499c3dd99bbec7e1c" version="1">Mystical Connection: Fortune Teller</content>
   <content contentuid="hd277f1d2d5c15a7da423328e8139e4a0" version="1">Your second roll on the Spirits from Beyond table: Fortune Teller. You can switch to it (no action).</content>
   <content contentuid="hb158a41ad56359bdbd51bdb960a60bb1" version="1">Mystical Connection: take the Fortune Teller</content>
-  <content contentuid="h785c043456bb51a2a7dac96947a1960b" version="1">Take the Fortune Teller instead of the spirit you rolled first.</content>
+  <content contentuid="h785c043456bb51a2a7dac96947a1960b" version="1">Take the Fortune Teller instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="ha06a53bf9e4e5147a6633f32e3e4067c" version="1">Mystical Connection: Wayfarer</content>
   <content contentuid="h9faea5e420905f67aff3420b70c4401b" version="1">Your second roll on the Spirits from Beyond table: Wayfarer. You can switch to it (no action).</content>
   <content contentuid="hbfdedf823dbc56ed8c3b5f4b14b2aee1" version="1">Mystical Connection: take the Wayfarer</content>
-  <content contentuid="he8e369797bd154c681dfc2a5f167b29e" version="1">Take the Wayfarer instead of the spirit you rolled first.</content>
+  <content contentuid="he8e369797bd154c681dfc2a5f167b29e" version="1">Take the Wayfarer instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="h758f44ad07f25fc99b007df51f982085" version="1">Mystical Connection: Trickster</content>
   <content contentuid="h858e1ab4425d596e8a2e323a8b9eb6f2" version="1">Your second roll on the Spirits from Beyond table: Trickster. You can switch to it (no action).</content>
   <content contentuid="hcbb122d107a851e5b8912b4573bb2b61" version="1">Mystical Connection: take the Trickster</content>
-  <content contentuid="h4695cf54b4b65765b381897c1f86f0f8" version="1">Take the Trickster instead of the spirit you rolled first.</content>
+  <content contentuid="h4695cf54b4b65765b381897c1f86f0f8" version="1">Take the Trickster instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="hdbaab214550a512fa41c1f0615f133a9" version="1">Mystical Connection: Shade</content>
   <content contentuid="he0f6e213cce05720be4644215e1ce087" version="1">Your second roll on the Spirits from Beyond table: Shade. You can switch to it (no action).</content>
   <content contentuid="h7b760772531953d8a68facdf25dce14b" version="1">Mystical Connection: take the Shade</content>
-  <content contentuid="h061768ed08c95b7bb110ee41525478b4" version="1">Take the Shade instead of the spirit you rolled first.</content>
+  <content contentuid="h061768ed08c95b7bb110ee41525478b4" version="1">Take the Shade instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="h4e0d24b0c1db566190783b01c26fb0ec" version="1">Mystical Connection: Arsonist</content>
   <content contentuid="hbaa91f4a6a6a5631a05749c69a24664e" version="1">Your second roll on the Spirits from Beyond table: Arsonist. You can switch to it (no action).</content>
   <content contentuid="hf235947252fc567db2f7dd98cf358997" version="1">Mystical Connection: take the Arsonist</content>
-  <content contentuid="hcc91954c246850978506ac70880b3530" version="1">Take the Arsonist instead of the spirit you rolled first.</content>
+  <content contentuid="hcc91954c246850978506ac70880b3530" version="1">Take the Arsonist instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="h77b3d35201a553858826b344227b3f65" version="1">Mystical Connection: Coward</content>
   <content contentuid="ha6afe187ede75ad3b5df0a9b9b3dd1cb" version="1">Your second roll on the Spirits from Beyond table: Coward. You can switch to it (no action).</content>
   <content contentuid="h299c66930c31566da720deb1d2fc1b03" version="1">Mystical Connection: take the Coward</content>
-  <content contentuid="h876b81407f4951b7b0e9cef1ccf6217a" version="1">Take the Coward instead of the spirit you rolled first.</content>
+  <content contentuid="h876b81407f4951b7b0e9cef1ccf6217a" version="1">Take the Coward instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="h03fb93dee10d5530b8dd7edd1678afbf" version="1">Ancient Endurance</content>
   <content contentuid="h864549f1c2ef5faba269acb8da68b719" version="1">Timeless: you have Immunity to Exhaustion. Persistent Hunt: if you drop to 0 Hit Points while transformed by Wrath of the Wild and don't die outright, you can expend a level 4+ spell slot; your Hit Points instead become five times the slot's level.</content>
   <content contentuid="h378cf9848d275b52ac3e433fea398663" version="1">Persistent Hunt</content>
   <content contentuid="h721636c0ca27541cace2914e0e6bed87" version="1">Persistent Hunt</content>
   <content contentuid="h96a66ed495f454eb8a777f47eeb59997" version="1">Scornful Rebuke</content>
-  <content contentuid="hb70d779bbddd51d0a3a00ba6a608f17b" version="1">Whenever a creature hits you with an attack, it takes Psychic damage equal to your Charisma modifier (minimum 1).</content>
+  <content contentuid="hb70d779bbddd51d0a3a00ba6a608f17b" version="1">Whenever a creature hits you with an attack roll, it takes Psychic damage equal to your Charisma modifier (minimum 1).</content>
   <content contentuid="h0f6e115786265011be28e9262ef2649b" version="1">Invincible Conqueror</content>
   <content contentuid="hc0058989c8575d558e46f285a77f146e" version="1">Resistance to all damage, one additional attack when you take the Attack action, and your melee weapon attacks score a Critical Hit on a 19 or 20.</content>
   <content contentuid="hcb17a324773f5792b1d6deed08426a47" version="1">Invincible Conqueror</content>
@@ -4637,4 +4637,25 @@
   <content contentuid="h6e9cdded97b65dfca078867125bd9ccd" version="1">Replace one of your attacks with a really hard punch: make an Unarmed Strike with Advantage. On a hit, the target takes 6d6 plus your Strength modifier Bludgeoning damage and is knocked Prone if it is Huge or smaller. Once per active Rage.</content>
   <content contentuid="h07fa69358fb453d2ab5b6491d9d8d107" version="1">“I Cast Fist”</content>
   <content contentuid="h7fd1d41840805b69997e3ceec967be91" version="1">When you take the Attack action while your Rage is active, you can replace one of your attacks with a really hard punch. Make an Unarmed Strike with Advantage. On a hit, the target takes 6d6 plus your Strength modifier Bludgeoning damage and has the Prone condition if it is Huge or smaller. Once per active Rage.</content>
+  <content contentuid="h13540469a9fb5a738b3bd58e0b1e4e35" version="1">Spirits From Beyond: Brute</content>
+  <content contentuid="h59e8a58e3eae5283b55e275dfaca6d15" version="1">You have channeled the Brute spirit. Use Unleashing a Spirit to bestow its effect. Each creature of your choice within 9m of the target makes a Strength saving throw. On a failed save it takes Thunder damage equal to three rolls of your Bardic Inspiration die and falls Prone; on a success it takes half as much damage and doesn't fall Prone.</content>
+  <content contentuid="h5fb4b00a67da5e2a9745a76643a7d902" version="1">Controlled Channeling: Brute</content>
+  <content contentuid="he6f48aa82c7e56e9a1b41633c4c1f3cc" version="1">Channel the Brute spirit instead of rolling for one.</content>
+  <content contentuid="h77837658e46c5d73ace8937a67a0f488" version="1">Spirits From Beyond: Priest</content>
+  <content contentuid="h5ceccad1366a519c8dfbe3097e088af4" version="1">You have channeled the Priest spirit. Use Unleashing a Spirit to bestow its effect. The target regains Hit Points equal to two rolls of your Bardic Inspiration die, and one of these conditions on it ends (picked at random): Blinded, Charmed, Paralyzed, Poisoned or Stunned.</content>
+  <content contentuid="h91e8c002287658c6a52dc16e92afa122" version="1">Controlled Channeling: Priest</content>
+  <content contentuid="hfa444ed954865ec9a77a0176adbc39ab" version="1">Channel the Priest spirit instead of rolling for one.</content>
+  <content contentuid="h6042edb9bc635f688403d89536622668" version="1">Unleashing a Spirit: Brute</content>
+  <content contentuid="hf499826f9e6856db9f5bb834410b6808" version="1">Each creature of your choice within 9m of the target makes a Strength saving throw. On a failed save it takes Thunder damage equal to three rolls of your Bardic Inspiration die and falls Prone; on a success it takes half as much damage and doesn't fall Prone.</content>
+  <content contentuid="h1dce9b2ce8f65ce3912d4c35c4845acf" version="1">Unleashing a Spirit: Priest</content>
+  <content contentuid="h6281a588ddfc52d0b755abffc1b86642" version="1">The target regains Hit Points equal to two rolls of your Bardic Inspiration die, and one of these conditions on it ends (picked at random): Blinded, Charmed, Paralyzed, Poisoned or Stunned.</content>
+  <content contentuid="hd55310b03fb65776a80e9eeb7d4dce71" version="1">Mystical Connection: Brute</content>
+  <content contentuid="h85feeeadad9a522b8fa7332032a26792" version="1">Your second roll on the Spirits from Beyond table: Brute. You can switch to it (no action).</content>
+  <content contentuid="h58b0ffa317fd563cab0380a6b50ab04c" version="1">Mystical Connection: take the Brute</content>
+  <content contentuid="h9136e00e803c58a5bb9f3f4254a27cee" version="1">Take the Brute instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
+  <content contentuid="ha5a70279e899519781415d3c68656475" version="1">Mystical Connection: Priest</content>
+  <content contentuid="hd4bf6366c1385a0ba3318181cdaec66a" version="1">Your second roll on the Spirits from Beyond table: Priest. You can switch to it (no action).</content>
+  <content contentuid="hcb04bc28c530538c88a05fdf8d1ebe9b" version="1">Mystical Connection: take the Priest</content>
+  <content contentuid="h809fb4d8f43e5af4904137d231398330" version="1">Take the Priest instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
+  <content contentuid="hde8c378f1aed5e4a8f98b029f7020625" version="1">Priest's Blessing</content>
 </contentList>

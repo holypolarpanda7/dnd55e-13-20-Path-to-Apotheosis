@@ -106,3 +106,31 @@ real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "CriticalHit(AttackRoll,Success,ForcedAlways)" }, { target = "host", passive = "WhiteHat_14_GoldStarHero_Surrender" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
 expect = [{ target = "A", status_applied = ["WHITEHAT_STUNNED_SURRENDER"] }, { target = "A", status_present = ["WHITEHAT_STUNNED_SURRENDER"] }]
+
+[[case]]
+id = "gs-stunned-surrender-saved"
+title = "Stunned Surrender: a creature that makes its Wisdom save isn't stunned (Nexus 2026-11-07)"
+spell = "Projectile_MainHandAttack"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "CriticalHit(AttackRoll,Success,ForcedAlways)" }, { target = "host", passive = "WhiteHat_14_GoldStarHero_Surrender" }, { target = "A", boost = "RollBonus(SavingThrow,40)" }]
+expect = [{ target = "A", status_absent = ["WHITEHAT_STUNNED_SURRENDER"] }]
+
+[[case]]
+id = "gs-stunned-surrender-ends-on-damage"
+title = "Stunned Surrender: the stun ends when the creature takes damage (Nexus 2026-11-07)"
+spell = "Projectile_MainHandAttack"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", status = "WHITEHAT_STUNNED_SURRENDER", turns = 10 }, { target = "host", boost = "RollBonus(Attack,40)" }]
+expect = [{ target = "A", hp_change = [-300, -1] }, { target = "A", status_removed = ["WHITEHAT_STUNNED_SURRENDER"] }]
+
+[[case]]
+id = "gs-stunned-surrender-repeat-save"
+title = "Stunned Surrender: a successful Wisdom save at the end of the creature's turn ends the stun - it no longer lasts 10 turns (Nexus 2026-11-07)"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 12 }]
+setup = [{ target = "A", status = "WHITEHAT_STUNNED_SURRENDER", turns = 10 }, { target = "A", boost = "RollBonus(SavingThrow,40)" }]
+end_turns = 1
+expect = [{ target = "A", status_absent = ["WHITEHAT_STUNNED_SURRENDER"] }]

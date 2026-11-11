@@ -32,21 +32,54 @@ end
 -- first ClientControl entity is only a guess when several characters are controlled). In order: the character shown by an open
 -- level-up screen or character sheet (their view model's SelectedCharacter, matched to a party member by its name handle), then a
 -- controlled character with a level-up waiting (AvailableLevel above its level), then the first controlled character.
-local function uiRoot(name)
-    local function find(n, d)
-        if d > 30 or not n then return nil end
-        local ok, nm = pcall(function() return n.Name end)
-        if ok and nm == name then return n end
-        local okc, cnt = pcall(function() return n.VisualChildrenCount end)
-        if okc and cnt then for i = 1, cnt do local r = find(n:VisualChild(i), d + 1); if r then return r end end end
+--
+-- #76 (2026-11-11): the old lookup walked the WHOLE Noesis visual tree (depth 30) every 250 ms while a level-up was waiting,
+-- and crashed the game natively (NoesisPush, below pcall) in a multiplayer fight. Now screens are looked up only among the
+-- direct children of ContentRoot (where every screen lives; ContentRoot itself is found once with a shallow search and
+-- re-checked on each use), and the UI is read only when it can change the answer (see gatedLevel) and never in combat.
+local contentRoot = nil
+
+local function findContentRoot()
+    local okn, nm = pcall(function() return contentRoot and contentRoot.Name end)
+    if okn and nm == "ContentRoot" then return contentRoot end
+    contentRoot = nil
+    local function deep(x, k)
+        if not x or k > 9 then return nil end
+        local ok, v = pcall(function() return x.Name end)
+        if ok and v == "ContentRoot" then return x end
+        local okc, cnt = pcall(function() return x.VisualChildrenCount end)
+        if okc and cnt then
+            for i = 1, cnt do
+                local okv, ch = pcall(function() return x:VisualChild(i) end)
+                local r = okv and deep(ch, k + 1)
+                if r then return r end
+            end
+        end
     end
     local ok, root = pcall(Ext.UI.GetRoot)
-    return ok and find(root, 0) or nil
+    contentRoot = ok and deep(root, 0) or nil
+    return contentRoot
+end
+
+-- The open screens (direct children of ContentRoot) by name, read in one pass.
+local function openScreens()
+    local out = {}
+    local c = findContentRoot()
+    if not c then return out end
+    local okc, cnt = pcall(function() return c.VisualChildrenCount end)
+    if not (okc and cnt) then return out end
+    for i = 1, cnt do
+        local ok, ch = pcall(function() return c:VisualChild(i) end)
+        local okn, nm = pcall(function() return ch.Name end)
+        if ok and okn and nm then out[nm] = ch end
+    end
+    return out
 end
 
 local function shownCharacterName()
+    local screens = openScreens()
     for _, w in ipairs({ "CharacterLevelUp", "CharacterPanel" }) do
-        local el = uiRoot(w)
+        local el = screens[w]
         local ok, nm = pcall(function() return tostring(el.DataContext.CurrentPlayer.SelectedCharacter.Name) end)
         if el and ok and nm and nm ~= "" and nm ~= "nil" then return nm, w end
     end
@@ -59,14 +92,36 @@ local function pending(e)
     return ok and p
 end
 
+-- Levelling up is not possible in combat, so the UI is never read then (#76 crashed in a fight).
+local function inCombat(e)
+    local ok, v = pcall(function() return e.IsInCombat ~= nil or (e.TurnBased and e.TurnBased.IsInCombat_M) end)
+    return ok and v and true or false
+end
+
 local function gatedLevel()
     local okc, controlled = pcall(Ext.Entity.GetAllEntitiesWithComponent, "ClientControl")
     controlled = okc and controlled or {}
     local okp, party = pcall(Ext.Entity.GetAllEntitiesWithComponent, "PartyMember")
     party = okp and party or {}
-    local waiting = false
-    for _, e in ipairs(party) do if pending(e) then waiting = true break end end
-    if waiting then                      -- only then is a level-up screen possible: walk the UI (not free) for its character
+    local waiting, fighting = false, false
+    for _, e in ipairs(party) do
+        if pending(e) then waiting = true end
+        if inCombat(e) then fighting = true end
+    end
+    -- The UI only matters when the candidates disagree: a waiting party member and the first controlled character on
+    -- different sides of MIN_LEVEL. Otherwise every answer gives the same lock state.
+    local mixed = false
+    if waiting and not fighting then
+        local below, above = false, false
+        local function mark(e)
+            local l = levelOf(e)
+            if l then if l < MIN_LEVEL then below = true else above = true end end
+        end
+        for _, e in ipairs(party) do if pending(e) then mark(e) end end
+        mark(controlled[1])
+        mixed = below and above
+    end
+    if mixed then                        -- only then can a level-up screen change the answer: read it for its character
         local nm, from = shownCharacterName()
         for _, e in ipairs(nm and party or {}) do
             local okh, h = pcall(function() return e.DisplayName.Name.Handle.Handle end)

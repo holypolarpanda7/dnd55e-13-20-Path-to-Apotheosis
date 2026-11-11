@@ -99,7 +99,7 @@ id = "spirits-mystical-connection"
 title = "College of Spirits 14 Mystical Connection: a second spirit is offered"
 target = "host"
 setup = [{ target = "host", passive = "Spirits_14_MysticalConnection" }, { target = "host", status = "SPIRITS_FROM_BEYOND", turns = 1 }]
-expect = [{ target = "host", status_applied_any = ["APO_MYSTICAL_CONNECTION_0", "APO_MYSTICAL_CONNECTION_1", "APO_MYSTICAL_CONNECTION_2", "APO_MYSTICAL_CONNECTION_3", "APO_MYSTICAL_CONNECTION_4", "APO_MYSTICAL_CONNECTION_5", "APO_MYSTICAL_CONNECTION_6", "APO_MYSTICAL_CONNECTION_7", "APO_MYSTICAL_CONNECTION_8", "APO_MYSTICAL_CONNECTION_9"] }]
+expect = [{ target = "host", status_applied_any = ["APO_MYSTICAL_CONNECTION_0", "APO_MYSTICAL_CONNECTION_1", "APO_MYSTICAL_CONNECTION_2", "APO_MYSTICAL_CONNECTION_3", "APO_MYSTICAL_CONNECTION_4", "APO_MYSTICAL_CONNECTION_5", "APO_MYSTICAL_CONNECTION_6", "APO_MYSTICAL_CONNECTION_7", "APO_MYSTICAL_CONNECTION_8", "APO_MYSTICAL_CONNECTION_9", "APO_MYSTICAL_CONNECTION_10", "APO_MYSTICAL_CONNECTION_11"] }]
 notes = "When the second roll matches the first nothing is offered (re-run)."
 
 [[case]]
@@ -115,6 +115,79 @@ setup = [{ target = "host", passive = "HollowWarden_15_AncientEndurance" }, { ta
          { target = "host", boost = "ActionResource(SpellSlot,1,4)" }, { target = "host", hp = 1 }, { target = "A", boost = "RollBonus(Attack,30)" }]
 expect = [{ log = "/Persistent Hunt: .* spends a level 4 slot and stays up with 20 HP/" }, { target = "host", dead = false }]
 
+# ---------------------------------------------------------------- #77 (2026-11-11): Spirits from Beyond with several spirits held, d12 rows 11-12
+[[case]]
+id = "spirits-mystical-switch-keeps-held"
+title = "Mystical Connection: taking the second spirit replaces only the one just rolled - spirits channeled earlier stay (#77)"
+target = "host"
+setup = [{ target = "host", passive = "Spirits_14_MysticalConnection" },
+         { lua = "local S, h = Mods.dnd55e_Apotheosis.Apotheosis.SubclassFeatures, BG3T.host(); Osi.ApplyStatus(h, 'SPIRITS_FROM_BEYOND_3', -1, 1, h); Ext.Timer.WaitFor(700, function() S.SpiritRollStarted(h); Osi.ApplyStatus(h, 'SPIRITS_FROM_BEYOND_1', -1, 1, h) end); Ext.Timer.WaitFor(1600, function() Osi.UseSpell(h, 'Shout_ApoMysticalConnection_5', h) end)" }]
+wait = 5
+expect = [{ target = "host", status_present = ["SPIRITS_FROM_BEYOND_3", "SPIRITS_FROM_BEYOND_5"] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND_1"] }]
+notes = "Held 3 first, then rolled 1 (the setup stands in for dnd55e's roll), then the real switch spell to 5: 3 must survive. The held spirit is applied before the roll starts (a status from the setup list lands after the Lua step)."
+
+[[case]]
+id = "spirits-d12-brute-row"
+title = "Spirits from Beyond at Bard 15: a d12 result of 11 channels the Brute (SPIRITS_FROM_BEYOND_10) instead of dnd55e's d10 result (#77)"
+target = "host"
+setup = [{ lua = "Mods.dnd55e_Apotheosis.Apotheosis.SubclassFeatures.TestSpiritDie = 12; Mods.dnd55e_Apotheosis.Apotheosis.SubclassFeatures.TestSpiritRow = 11; Ext.Timer.WaitFor(4000, function() Mods.dnd55e_Apotheosis.Apotheosis.SubclassFeatures.TestSpiritDie = nil; Mods.dnd55e_Apotheosis.Apotheosis.SubclassFeatures.TestSpiritRow = nil end)" },
+         { target = "host", status = "SPIRITS_FROM_BEYOND", turns = 1 }]
+expect = [{ target = "host", status_applied = ["SPIRITS_FROM_BEYOND_10"] }, { target = "host", status_present = ["SPIRITS_FROM_BEYOND_10"] },
+          { target = "host", status_absent = ["SPIRITS_FROM_BEYOND_0", "SPIRITS_FROM_BEYOND_1", "SPIRITS_FROM_BEYOND_2", "SPIRITS_FROM_BEYOND_3", "SPIRITS_FROM_BEYOND_4", "SPIRITS_FROM_BEYOND_5"] }]
+notes = "The hooks force the die (d12) and the d12 roll (11); dnd55e's Osiris goal still rolls its own spirit first, which is replaced."
+
+[[case]]
+id = "spirits-unleash-brute"
+title = "Unleashing a Spirit: Brute - enemies within 9m of the target take Thunder damage (3 Bardic Inspiration dice) and fall Prone on a failed Strength save (#77)"
+spell = "Target_UnleashingASpirit_Brute"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", status = "SPIRITS_FROM_BEYOND_10", turns = -1 }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
+expect = [{ target = "A", hp_change = [-60, -3] }, { target = "A", damage_type = "Thunder" }, { target = "A", status_applied = ["PRONE"] },
+          { target = "host", status_absent = ["SPIRITS_FROM_BEYOND_10"] }]
+
+[[case]]
+id = "spirits-unleash-priest"
+title = "Unleashing a Spirit: Priest - heals two Bardic Inspiration dice and ends ONE listed condition at random (#77)"
+spell = "Target_UnleashingASpirit_Priest"
+target = "host"
+safety = false
+setup = [{ target = "host", hp = 20 }, { target = "host", status = "POISONED", turns = 10 }, { target = "host", status = "BLINDED", turns = 10 },
+         { target = "host", status = "SPIRITS_FROM_BEYOND_11", turns = -1 }]
+expect = [{ target = "host", hp_change = [0, 40] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND_11", "APO_SPIRIT_PRIEST_CURE"] },
+          { log = "/Priest: ended (POISONED|BLINDED) on .* \\(one of 2\\)/" }]
+notes = "Poisoned and Blinded: exactly one ends (the log names it); the rules let the bard choose, BG3 can't offer a second picker (user 2026-11-11: random). The heal is Bardic Inspiration dice: +19 on the Spirits Bard, 0 on a non-Bard host."
+
+[[case]]
+id = "spirits-controlled-channeling-brute"
+title = "Controlled Channeling: Brute channels SPIRITS_FROM_BEYOND_10 (#77)"
+spell = "Shout_ControlledChanneling_Brute"
+target = "host"
+setup = [{ target = "host", passive = "Spirits_3_SpiritsFromBeyond" }]
+expect = [{ target = "host", status_applied = ["SPIRITS_FROM_BEYOND_10"] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND"] }]
+notes = "status_absent: choosing a spirit must not also roll one (dnd55e's ControlledChanneling() didn't know rows 11-12)."
+
+[[case]]
+id = "spirits-controlled-channeling-priest"
+title = "Controlled Channeling: Priest channels SPIRITS_FROM_BEYOND_11 (#77)"
+spell = "Shout_ControlledChanneling_Priest"
+target = "host"
+setup = [{ target = "host", passive = "Spirits_3_SpiritsFromBeyond" }]
+expect = [{ target = "host", status_applied = ["SPIRITS_FROM_BEYOND_11"] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND"] }]
+notes = "status_absent: choosing a spirit must not also roll one (dnd55e's ControlledChanneling() didn't know rows 11-12)."
+
+[[case]]
+id = "conquest-scornful-rebuke-not-healing"
+title = "Scornful Rebuke ignores healing: an ally's Cure Wounds on you doesn't hurt the healer (Nexus 2026-11-07)"
+spell = "Target_CureWounds"
+caster = "B"
+target = "host"
+spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 2 }]
+safety = false
+setup = [{ target = "host", passive = "Conquest_15_ScornfulRebuke" }, { target = "host", hp = 50 }]
+expect = [{ target = "B", hp_change = [0, 0] }, { target = "host", hp_change = [1, 50] }]
+
 # ---------------------------------------------------------------- group 2
 [[case]]
 id = "conquest-scornful-rebuke"
@@ -125,8 +198,8 @@ target = "host"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 2 }]
 setup = [{ target = "host", passive = "Conquest_15_ScornfulRebuke" }, { target = "A", boost = "RollBonus(Attack,30)" }]
-expect = [{ target = "A", hp_change = [-1, -1] }]
-notes = "Test host Charisma 12: +1."
+expect = [{ target = "A", hp_change = [-6, -1] }, { target = "A", damage_type = "Psychic" }]
+notes = "Charisma modifier, minimum 1 (a Charisma 12 host: -1; the L18 Spirits Bard: -5)."
 
 [[case]]
 id = "conquest-invincible-conqueror"

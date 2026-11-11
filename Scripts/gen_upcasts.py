@@ -35,6 +35,10 @@ IDENT = re.compile(r"[A-Za-z_][A-Za-z0-9_]*$")
 
 
 LEVELLESS_SLOT_FEATURES = {"Target_MoonlightStep"}  # roots with no Level whose slot-priced variants still get 7-9
+# Spells whose upcast stops growing at 6th level (not linear): their 7-9 variants copy the 6th level one unchanged.
+CAPPED_AT_6 = {
+    "Target_MagicWeapon": "PHB 2024: +3 with a level 6+ slot (dnd55e 4.14.4.1 encodes the bonus as the status duration)",
+}
 
 
 class Stats:
@@ -168,6 +172,9 @@ class Gen:
         _, b = self.S.get(cur)
         self.made[name] = None  # reserve against recursion
         over = {}
+        if re.sub(r"_\d+$", "", name) in CAPPED_AT_6:
+            self.made[name] = (typ, cur, over)
+            return True
         for f in sorted(set(a) | set(b)):
             if (f in SKIP and not (typ == "Character" and f == "Level")) or f == "using" or a.get(f) == b.get(f):
                 continue
