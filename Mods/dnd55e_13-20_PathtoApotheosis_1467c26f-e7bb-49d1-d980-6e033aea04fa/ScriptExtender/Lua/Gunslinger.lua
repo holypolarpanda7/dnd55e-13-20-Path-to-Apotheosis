@@ -124,7 +124,9 @@ end
 
 Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", function(t, s, c)
     if s ~= "WHITEHAT_STUNNED_SURRENDER" then return end
-    surrender[string.sub(t, -36)] = { at = Ext.Utils.MonotonicTime(), dc = c and maneuverDC(string.sub(c, -36)) or 15 }
+    local key = string.sub(t, -36)
+    local prev = surrender[key]  -- the causing hit's damage event can come first (it records `at`)
+    surrender[key] = { at = prev and prev.at or Ext.Utils.MonotonicTime(), dc = c and maneuverDC(string.sub(c, -36)) or 15 }
 end))
 Ext.Osiris.RegisterListener("StatusRemoved", 4, "after", guard("StatusRemoved", function(t, s)
     if s == "WHITEHAT_STUNNED_SURRENDER" then surrender[string.sub(t, -36)] = nil end
@@ -143,8 +145,13 @@ Ext.Osiris.RegisterListener("RollResult", 6, "after", guard("RollResult", functi
 end))
 Ext.Osiris.RegisterListener("AttackedBy", 7, "after", guard("AttackedBy", function(defender, _, _, _, amount)
     if (amount or 0) <= 0 or Osi.HasActiveStatus(defender, "WHITEHAT_STUNNED_SURRENDER") ~= 1 then return end
-    local st = surrender[string.sub(defender, -36)]
-    if st and Ext.Utils.MonotonicTime() - st.at < 1000 then return end
+    local key = string.sub(defender, -36)
+    local st = surrender[key]
+    if not st then  -- the status is active but its StatusApplied hasn't run yet: this is the causing Critical Hit (2026-11-11)
+        surrender[key] = { at = Ext.Utils.MonotonicTime(), dc = 15 }
+        return
+    end
+    if Ext.Utils.MonotonicTime() - st.at < 1000 then return end
     Osi.RemoveStatus(defender, "WHITEHAT_STUNNED_SURRENDER")
 end))
 Ext.Events.BeforeDealDamage:Subscribe(guard("BeforeDealDamage", GS.BeforeDealDamage))
