@@ -142,6 +142,26 @@ using "BloodbaneRune_D8_6"
 data "DescriptionParams" "DealDamage(9d8,Radiant)"
 data "StatsFunctors" "DealDamage(9d8,Radiant,Magical,,0,,true,true)"
 
+new entry "ConjureMinorElementalAcid"
+type "PassiveData"
+using "ConjureMinorElementalAcid"
+data "StatsFunctors" "IF(HasStatus('CONJURE_MINOR_ELEMENTALS',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(2d8,Acid,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_5',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(3d8,Acid,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_6',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(4d8,Acid,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_7',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(5d8,Acid,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_8',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(6d8,Acid,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_9',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(7d8,Acid,,,0,,true,true);"
+
+new entry "ConjureMinorElementalCold"
+type "PassiveData"
+using "ConjureMinorElementalCold"
+data "StatsFunctors" "IF(HasStatus('CONJURE_MINOR_ELEMENTALS',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(2d8,Cold,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_5',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(3d8,Cold,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_6',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(4d8,Cold,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_7',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(5d8,Cold,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_8',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(6d8,Cold,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_9',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(7d8,Cold,,,0,,true,true);"
+
+new entry "ConjureMinorElementalFire"
+type "PassiveData"
+using "ConjureMinorElementalFire"
+data "StatsFunctors" "IF(HasStatus('CONJURE_MINOR_ELEMENTALS',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(2d8,Fire,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_5',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(3d8,Fire,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_6',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(4d8,Fire,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_7',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(5d8,Fire,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_8',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(6d8,Fire,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_9',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(7d8,Fire,,,0,,true,true);"
+
+new entry "ConjureMinorElementalLightning"
+type "PassiveData"
+using "ConjureMinorElementalLightning"
+data "StatsFunctors" "IF(HasStatus('CONJURE_MINOR_ELEMENTALS',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(2d8,Lightning,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_5',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(3d8,Lightning,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_6',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(4d8,Lightning,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_7',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(5d8,Lightning,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_8',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(6d8,Lightning,,,0,,true,true);IF(HasStatus('CONJURE_MINOR_ELEMENTALS_9',context.Source) and HasStatus('CONJURE_MINOR_ELEMENTALS_TARGET',context.Target,context.Source)):DealDamage(7d8,Lightning,,,0,,true,true);"
+
 new entry "FlamingSphere_State_7"
 type "PassiveData"
 using "FlamingSphere_State_6"

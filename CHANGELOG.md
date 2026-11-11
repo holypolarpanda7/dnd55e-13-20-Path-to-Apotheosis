@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.11.0 - 2026-11-11
+
+- Fixed: Conjure Minor Elementals cast with a 7th- to 9th-level slot added no elemental damage to your hits. It now adds 5d8, 6d8 or 7d8 (one more d8 per slot level, as in the rules). Thanks to the player who reported it.
+- Fixed: Sanguine Poppet's Detonate did nothing for a poppet made with a 7th- to 9th-level slot. It now explodes with the damage of that level.
+- Fixed: Moonbeam cast with a 7th- to 9th-level slot could be cast again while the first was still up.
+- Changed: PTA's 7th- to 9th-level upcasts now also update DnD 5.5e effects that check a spell's 6th-level version by name, so the same gap can't come back for other spells.
+
 ## v1.0.10.0 - 2026-11-11
 
 - Built against DnD 5.5e All-in-One BEYOND 4.14.4.4 (was 4.14.3.5). DnD 5.5e rebuilt Magic Weapon (one effect scaled by the spell slot) and lets a College of Spirits Bard hold several channeled spirits at once; PTA's 7th- to 9th-level upcasts are regenerated on the new versions.
