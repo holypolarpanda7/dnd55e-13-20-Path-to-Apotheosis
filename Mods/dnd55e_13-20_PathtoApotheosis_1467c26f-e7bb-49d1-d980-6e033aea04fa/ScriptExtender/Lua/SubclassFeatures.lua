@@ -240,16 +240,70 @@ function SF.OnTurnStarted(c)
 end
 
 -- ---------------------------------------------------------------- Mystical Connection
-local switching = {}
+-- Spirits from Beyond (#77, 2026-11-11). dnd55e's Osiris goal answers SPIRITS_FROM_BEYOND (a Bardic Inspiration use) with a
+-- d6/d8/d10 roll -> SPIRITS_FROM_BEYOND_0.._9; since dnd55e 4.14.4.3 each spirit has its own StackId, so several can be held.
+--  * Bard 15+ (Bardic Inspiration d12): rows 11-12 (Brute, Priest = _10/_11). With chance 2/12 the d10 result is replaced by
+--    one of them, which makes the whole roll a uniform d12.
+--  * Mystical Connection (14): a second roll is offered as a switch (APO_MYSTICAL_CONNECTION_n). Taking it removes only the
+--    spirit just rolled - and not even that one if it was already held before the roll (same StackId = the old one).
+-- Only rolled spirits count: a SPIRITS_FROM_BEYOND_n that doesn't follow a roll (Controlled Channeling, the switch itself)
+-- is left alone.
+local SPIRITS = 12
+local rolling = {}   -- bard -> {held = {[n] = true}, t = ms}: a roll is on its way
+local rolled = {}    -- bard -> {idx = n, wasHeld = bool}: the latest rolled spirit (what a switch replaces)
 
-function SF.SpiritRolled(bard, idx)
-    if not has(bard, "Spirits_14_MysticalConnection") or switching[bard] then return end
-    local die = 10  -- dnd55e's die: d6 / d8 (Font of Inspiration) / d10 (Magical Secrets) - always d10 by level 14
-    if Osi.HasPassive(bard, "Bard_10_MagicalSecrets") ~= 1 then die = Osi.HasPassive(bard, "FontOfInspiration") == 1 and 8 or 6 end
-    local second = math.random(0, die - 1)
+-- test hooks (tests/bg3/subclass_features.toml): SF.TestSpiritDie forces the die, SF.TestSpiritRow forces the d12 result
+local function spiritDie(bard)
+    if SF.TestSpiritDie then return SF.TestSpiritDie end
+    if classLevel(bard, "Bard") >= 15 then return 12 end
+    if Osi.HasPassive(bard, "Bard_10_MagicalSecrets") == 1 then return 10 end
+    return Osi.HasPassive(bard, "FontOfInspiration") == 1 and 8 or 6
+end
+
+local function heldSpirits(bard)
+    local held = {}
+    for n = 0, SPIRITS - 1 do
+        if Osi.HasActiveStatus(bard, "SPIRITS_FROM_BEYOND_" .. n) == 1 then held[n] = true end
+    end
+    return held
+end
+
+function SF.SpiritRollStarted(bard)
+    rolling[bard] = { held = heldSpirits(bard), t = Ext.Utils.MonotonicTime() }
+end
+
+local function offerSecond(bard, idx)
+    if not has(bard, "Spirits_14_MysticalConnection") then return end
+    local second = math.random(0, spiritDie(bard) - 1)
     if second == idx then return end  -- the same spirit: nothing to choose
     Osi.ApplyStatus(bard, "APO_MYSTICAL_CONNECTION_" .. second, -1, 1, bard)
     Log.Info(string.format("Mystical Connection: rolled spirit %d, second roll %d offered", idx, second))
+end
+
+function SF.SpiritApplied(bard, idx)
+    local r = rolling[bard]
+    if not r or Ext.Utils.MonotonicTime() - r.t > 2000 then return end  -- not from a roll
+    rolling[bard] = nil
+    local wasHeld = r.held[idx] == true
+    local d12 = SF.TestSpiritRow or math.random(1, 12)
+    if idx < 10 and spiritDie(bard) == 12 and d12 > 10 then
+        local row = d12 - 1
+        if not wasHeld then Osi.RemoveStatus(bard, "SPIRITS_FROM_BEYOND_" .. idx) end
+        Log.Info(string.format("Spirits from Beyond: d12 roll %d (was %d)", row + 1, idx + 1))
+        idx, wasHeld = row, r.held[row] == true
+        Osi.ApplyStatus(bard, "SPIRITS_FROM_BEYOND_" .. idx, -1, 1, bard)
+    end
+    rolled[bard] = { idx = idx, wasHeld = wasHeld }
+    offerSecond(bard, idx)
+end
+
+function SF.SpiritSwitched(bard, spell)
+    local r = rolled[bard]
+    rolled[bard] = nil
+    for n = 0, SPIRITS - 1 do Osi.RemoveStatus(bard, "APO_MYSTICAL_CONNECTION_" .. n) end
+    local take = tonumber(spell:match("_(%d+)$"))
+    if r and not r.wasHeld and r.idx ~= take then Osi.RemoveStatus(bard, "SPIRITS_FROM_BEYOND_" .. r.idx) end
+    Log.Info(string.format("Mystical Connection: took spirit %s instead of %s", tostring(take), r and tostring(r.idx) or "?"))
 end
 
 -- ---------------------------------------------------------------- group 2: resources and save reactions
@@ -414,6 +468,11 @@ Ext.Osiris.RegisterListener("AttackedBy", 7, "after", guard("AttackedBy", functi
     SF.OnAttacked(defender, amount)
 end))
 
+-- before: dnd55e's Osiris goal applies the rolled spirit in answer to this status; snapshot what was held first
+Ext.Osiris.RegisterListener("StatusApplied", 4, "before", guard("StatusApplied", function(target, status)
+    if status == "SPIRITS_FROM_BEYOND" then SF.SpiritRollStarted(short(target)) end
+end))
+
 Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", function(target, status, causee)
     target = short(target)
     if status == "APO_UMBRAL_GRAVE_DOWNED" then
@@ -430,17 +489,14 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", 
         SF.BetterHalf(target)
     elseif status == "APO_INFECTIOUS_HEX" and causee then
         SF.InfectiousHex(target, short(causee))
-    elseif status:match("^SPIRITS_FROM_BEYOND_%d$") then
-        SF.SpiritRolled(target, tonumber(status:match("(%d)$")))
+    elseif status:match("^SPIRITS_FROM_BEYOND_%d+$") then
+        SF.SpiritApplied(target, tonumber(status:match("(%d+)$")))
     end
 end))
 
 Ext.Osiris.RegisterListener("UsingSpell", 5, "before", guard("UsingSpell", function(c, spell)
     c = short(c)
-    if spell:match("^Shout_ApoMysticalConnection_") then  -- the switch applies a spirit: don't offer another
-        switching[c] = true
-        Ext.Timer.WaitFor(1500, function() switching[c] = nil end)
-    end
+    if spell:match("^Shout_ApoMysticalConnection_") then SF.SpiritSwitched(c, spell) end
 end))
 
 Ext.Osiris.RegisterListener("RollResult", 6, "after", guard("RollResult", function(ev, roller, _, result)

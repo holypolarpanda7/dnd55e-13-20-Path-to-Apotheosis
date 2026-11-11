@@ -92,12 +92,13 @@ class = "Sorcerer"
 subclass = "WildMagic"
 level = 13
 spell = "Zone_PrismaticSpray"
-title = "Prismatic Spray: violet Blinds; a failed Wisdom save at the start of the caster's next turn sends it to another plane"
+title = "Prismatic Spray: violet Blinds; a failed Wisdom save at the start of the caster's next turn sends it to another plane - an enemy is gone for good (dies)"
 target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "A", status = "APO_PRISM_FORCE_7", turns = 10 }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity);AbilityFailedSavingThrow(Wisdom)" }]
 end_turns = 2
-expect = [{ target = "A", status_applied = ["APO_PRISMATIC_VIOLET", "APO_PRISMATIC_BANISHED"] }, { target = "A", status_absent = ["APO_PRISMATIC_VIOLET"] }]
+expect = [{ target = "A", status_applied = ["APO_PRISMATIC_VIOLET"] }, { target = "A", dead = true }]
+notes = "2026-11-11 (Nexus bug): the banished enemy used to stay in the fight for good; outside the party it now counts as defeated. Hand-kept (not from SpellTests.lua)."
 
 [[case]]
 id = "spell-Fiend-Target_Apo_Forcecage"

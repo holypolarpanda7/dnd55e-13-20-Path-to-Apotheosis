@@ -5,7 +5,9 @@
 --  * Indigo (APO_PRISMATIC_INDIGO): a Constitution save at the end of each of its turns until three successes (ends)
 --    or three failures (Petrified until Greater Restoration). The count lives on the creature (survives save/load).
 --  * Violet (APO_PRISMATIC_VIOLET): Blinded until the caster's next turn starts, then a Wisdom save; a failure sends
---    it to another plane (APO_PRISMATIC_BANISHED, for good).
+--    it to another plane. 2026-11-11 (Nexus bug: the banished creature stayed in the fight for good): a creature outside the
+--    party counts as defeated (dies, credited to the caster - BG3 can't hold it on another plane, and a fight or quest only
+--    ends when it's gone); a party member is banished (APO_PRISMATIC_BANISHED) until the fight ends or a Long Rest.
 -- Follow-up saves use the DC of the creature's Dexterity save against this cast (so DC items and boosts count).
 local Log = Apotheosis and Apotheosis.Log or { Info = print, Warn = print, Error = print, Debug = print }
 local PS = {}
@@ -18,6 +20,7 @@ Ext.Vars.RegisterUserVariable("ApoPrismIndigo", { Server = true, Persistent = tr
 Ext.Vars.RegisterUserVariable("ApoPrismViolet", { Server = true, Persistent = true })  -- on the caster: {target = dc}
 
 local function short(g) return g and string.sub(g, -36) or nil end
+local violetCaster = {}  -- target -> caster of its pending violet save
 
 local function dcGuid(value)  -- a DifficultyClass with this DC (the game ships Legacy_<n> ones)
     local best
@@ -155,6 +158,7 @@ function PS.CasterTurnStarted(caster)  -- APO_PRISMATIC_VIOLET_PENDING ran out: 
     e.Vars.ApoPrismViolet = nil
     for target, dc in pairs(pending) do
         if Osi.HasActiveStatus(target, VIOLET) == 1 and Osi.IsDead(target) ~= 1 then
+            violetCaster[target] = caster
             save(target, "Wisdom", dc, "APO_PRISM_VIOLET_" .. target)
         end
     end
@@ -162,8 +166,25 @@ end
 
 function PS.VioletResult(target, success)
     Osi.RemoveStatus(target, VIOLET)
+    local caster = violetCaster[target]
+    violetCaster[target] = nil
     Log.Info(string.format("Prismatic Spray violet: %s Wisdom save %s", target, success and "succeeded" or "failed - sent to another plane"))
-    if not success then Osi.ApplyStatus(target, "APO_PRISMATIC_BANISHED", -1, 1, NULL) end
+    if success then return end
+    if Osi.IsPartyMember(target, 1) == 1 then
+        Osi.ApplyStatus(target, "APO_PRISMATIC_BANISHED", -1, 1, NULL)
+    else
+        Osi.Die(target, 0, caster or NULL, 0, 1)
+    end
+end
+
+function PS.ReturnBanished()  -- a party member comes back when the fight ends (or after a Long Rest)
+    for _, row in ipairs(Osi.DB_Players:Get(nil) or {}) do
+        local c = row[1]
+        if c and Osi.HasActiveStatus(c, "APO_PRISMATIC_BANISHED") == 1 then
+            Osi.RemoveStatus(c, "APO_PRISMATIC_BANISHED")
+            Log.Info("Prismatic Spray violet: " .. tostring(c) .. " returns from the other plane")
+        end
+    end
 end
 
 -- ---------------------------------------------------------------- listeners
@@ -183,6 +204,9 @@ Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", 
         PS.VioletApplied(short(target), short(causee))
     end
 end))
+
+Ext.Osiris.RegisterListener("CombatEnded", 1, "after", guard("CombatEnded", function() PS.ReturnBanished() end))
+Ext.Osiris.RegisterListener("LongRestFinished", 0, "after", guard("LongRestFinished", function() PS.ReturnBanished() end))
 
 Ext.Osiris.RegisterListener("StatusRemoved", 4, "after", guard("StatusRemoved", function(target, status)
     if status == INDIGO_TICK then

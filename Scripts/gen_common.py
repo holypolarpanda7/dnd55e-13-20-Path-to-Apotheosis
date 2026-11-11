@@ -77,6 +77,7 @@ class Gen:
             base["Icon"] = icon
         if not using:
             base["StatusType"] = "BOOST"
+            base["StackId"] = name  # a status reapplied without a StackId stacks copies (#69, Nexus 2026-11-07)
         self.S.append(self.entry(name, "StatusData", {**base, **(fields or {})}, using=using, comment=comment))
 
     def spell(self, name, title, text, fields, using=None, icon=None, comment=None):

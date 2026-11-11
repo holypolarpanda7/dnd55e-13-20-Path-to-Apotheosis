@@ -12,7 +12,11 @@ Owns Stats/Generated/Data/{Passive,Status,Spell,Interrupt}_SubclassFeatures.txt,
 between SUBCLASS FEATURES 13-20 markers, and their loca.
 Run: python3 Scripts/gen_subclass_features.py
 """
-from gen_common import Gen, patch_progressions, SHOUT_ANIM, icon_of
+import glob
+import os
+import re
+
+from gen_common import DND, Gen, patch_progressions, SHOUT_ANIM, icon_of
 
 G = Gen("subclassfeat", "SUBCLASS FEATURES 13-20")
 NODES = []  # (table, name, level, passives)
@@ -148,20 +152,69 @@ node(UNDEAD, "UndeadPatron", 14, "UndeadPatron_14_SuperiorDread")
 # ================================================================ Bard: College of Spirits (UA 2025 Horror)
 SPIRITS = "3669d6ce-d951-4491-8c23-fe2fa922357c"
 SPIRIT_NAMES = ["Beloved", "Sharpshooter", "Avenger", "Renegade", "Fortune Teller", "Wayfarer", "Trickster", "Shade",
-                "Arsonist", "Coward"]
+                "Arsonist", "Coward", "Brute", "Priest"]
+# Spirits from Beyond rows 11-12 (UA 2025 Horror Subclasses; #77, 2026-11-11): reachable once the Bardic Inspiration die is a
+# d12 (Bard 15, gen_levelmaps.py). dnd55e's Osiris goal rolls d6/d8/d10 (statuses _0.._9); SubclassFeatures.lua turns that
+# into a d12 at Bard 15 (results 11-12 -> SPIRITS_FROM_BEYOND_10/_11 below).
+BI = "LevelMapValue(BardicInspiration)"
+for k, nm, text in [
+        (10, "Brute", "Each creature of your choice within 9m of the target makes a Strength saving throw. On a failed save it takes "
+                      "Thunder damage equal to three rolls of your Bardic Inspiration die and falls Prone; on a success it takes half "
+                      "as much damage and doesn't fall Prone."),
+        (11, "Priest", "The target regains Hit Points equal to two rolls of your Bardic Inspiration die and is cured of being "
+                       "Blinded, Charmed, Paralyzed, Poisoned and Stunned.")]:
+    G.status(f"SPIRITS_FROM_BEYOND_{k}", f"Spirits From Beyond: {nm}",
+             f"You have channeled the {nm} spirit. Use Unleashing a Spirit to bestow its effect. {text}",
+             {"StackId": f"SPIRITS_FROM_BEYOND_{k}"}, using="SPIRITS_FROM_BEYOND_9", icon=f"Apo_Spirits_{nm}",
+             comment=f"Spirits from Beyond row {k + 1} (Bard 15, d12)")
+    G.spell(f"Shout_ControlledChanneling_{nm}", f"Controlled Channeling: {nm}",
+            f"Channel the {nm} spirit instead of rolling for one.", {
+                "SpellProperties": f"ApplyStatus(SPIRITS_FROM_BEYOND_{k},100,-1);",
+                "TooltipStatusApply": f"ApplyStatus(SPIRITS_FROM_BEYOND_{k},100,-1);",
+                "RequirementConditions": "ClassLevelHigherOrEqualThan(15,'Bard',context.Source);"},
+            using="Shout_ControlledChanneling_Coward", icon=f"Apo_Spirits_{nm}",
+            comment="dnd55e gates each Controlled Channeling choice on the Bard level that can roll it")
+G.spell("Target_UnleashingASpirit_Brute", "Unleashing a Spirit: Brute",
+        "Each creature of your choice within 9m of the target makes a Strength saving throw. On a failed save it takes Thunder "
+        "damage equal to three rolls of your Bardic Inspiration die and falls Prone; on a success it takes half as much "
+        "damage and doesn't fall Prone.", {
+            "RequirementConditions": "HasStatus('SPIRITS_FROM_BEYOND_10')",
+            "TargetConditions": "Character() and not Dead();", "CycleConditions": "Character() and not Dead()",
+            "AoEConditions": "Enemy() and not Dead()", "AreaRadius": "9",
+            "SpellRoll": "not SavingThrow(Ability.Strength, SourceSpellDC())",
+            "SpellSuccess": f"DealDamage(foreach(3,{BI}),Thunder);ApplyStatus(PRONE,100,1);",
+            "SpellFail": f"DealDamage(foreach(3,{BI})/2,Thunder);",
+            "SpellProperties": "RemoveStatus(SELF,SPIRITS_FROM_BEYOND_10);",
+            "DamageType": "Thunder", "TooltipAttackSave": "Strength",
+            "TooltipDamageList": f"DealDamage({BI}+{BI}+{BI},Thunder)", "DescriptionParams": f"DealDamage({BI}+{BI}+{BI},Thunder)",
+            "TooltipOnSave": "961753f4-c345-4bc4-b408-1d5b87a5ab0c", "TooltipStatusApply": "ApplyStatus(PRONE,100,1)",
+            "VerbalIntent": "Damage"},
+        using="Target_UnleashingASpirit_Coward", icon="Apo_Spirits_Brute", comment="Spirits from Beyond row 11 (UA 2025)")
+G.spell("Target_UnleashingASpirit_Priest", "Unleashing a Spirit: Priest",
+        "The target regains Hit Points equal to two rolls of your Bardic Inspiration die and is cured of being Blinded, Charmed, "
+        "Paralyzed, Poisoned and Stunned.", {
+            "RequirementConditions": "HasStatus('SPIRITS_FROM_BEYOND_11')",
+            "SpellProperties": f"RegainHitPoints({BI}+{BI});RemoveStatus(SG_Blinded);RemoveStatus(SG_Charmed);RemoveStatus(SG_Paralyzed);"
+                               "RemoveStatus(SG_Poisoned);RemoveStatus(SG_Stunned);RemoveStatus(SELF,SPIRITS_FROM_BEYOND_11);",
+            "TooltipDamageList": f"RegainHitPoints({BI}+{BI})", "DescriptionParams": f"RegainHitPoints({BI}+{BI})"},
+        using="Target_UnleashingASpirit_Beloved", icon="Apo_Spirits_Priest",
+        comment="Spirits from Beyond row 12 (UA 2025). The rules end ONE condition of your choice; a container option can't open "
+                "a second picker, so (like BG3's Lesser Restoration) it ends all of them.")
+
 G.passive("Spirits_14_MysticalConnection", "Mystical Connection",
           "Whenever you roll on the Spirits from Beyond table, you roll twice and choose: the second spirit is offered as a free switch.",
-          {}, icon="Spirits_3_SpiritsFromBeyond", comment="SubclassFeatures.lua rolls the second spirit (the die dnd55e uses).")
+          {}, icon="Spirits_3_SpiritsFromBeyond",
+          comment="SubclassFeatures.lua rolls the second spirit (the die dnd55e uses, d12 from Bard 15) and, on a switch, "
+                  "removes only the spirit just rolled (#77).")
 for i, nm in enumerate(SPIRIT_NAMES):
-    clear = ";".join(f"RemoveStatus(SELF,SPIRITS_FROM_BEYOND_{k})" for k in range(10))
     G.status(f"APO_MYSTICAL_CONNECTION_{i}", f"Mystical Connection: {nm}",
              f"Your second roll on the Spirits from Beyond table: {nm}. You can switch to it (no action).", {
                  "Boosts": f"UnlockSpell(Shout_ApoMysticalConnection_{i})", "StackId": "APO_MYSTICAL_CONNECTION"},
              icon="Spirits_3_SpiritsFromBeyond")
     G.spell(f"Shout_ApoMysticalConnection_{i}", f"Mystical Connection: take the {nm}",
-            f"Take the {nm} instead of the spirit you rolled first.", {
+            f"Take the {nm} instead of the spirit you just rolled. Spirits you channeled earlier stay.", {
                 "SpellType": "Shout", "TargetConditions": "Self()",
-                "SpellProperties": f"{clear};RemoveStatus(SELF,APO_MYSTICAL_CONNECTION_{i});ApplyStatus(SELF,SPIRITS_FROM_BEYOND_{i},100,-1)",
+                "SpellProperties": f"RemoveStatus(SELF,APO_MYSTICAL_CONNECTION_{i});ApplyStatus(SELF,SPIRITS_FROM_BEYOND_{i},100,-1)",
                 "UseCosts": "", "VerbalIntent": "Buff"},
             icon="Spirits_3_SpiritsFromBeyond")
 node(SPIRITS, "SpiritsCollege", 14, "Spirits_14_MysticalConnection")
@@ -199,9 +252,11 @@ def once(spell_id, status, title, text, turns, cost_action, res, replenish="Rest
 # ---------------------------------------------------------------- Paladin: Oath of Conquest (XGE)
 CONQUEST = "06cd782b-69b2-4200-93ea-77a611f87363"
 G.passive("Conquest_15_ScornfulRebuke", "Scornful Rebuke",
-          "Whenever a creature hits you with an attack, it takes Psychic damage equal to your Charisma modifier (minimum 1).", {
-              "StatsFunctorContext": "OnAttacked", "Conditions": "HasDamageEffectFlag(DamageFlags.Hit) and not SpellTypeIs(SpellType.Throw)",
-              "StatsFunctors": "DealDamage(SWAP,max(1,CharismaModifier),Psychic,Magical)"}, icon="Action_Paladin_DreadfulAspect")
+          "Whenever a creature hits you with an attack roll, it takes Psychic damage equal to your Charisma modifier (minimum 1).", {
+              "StatsFunctorContext": "OnAttacked",
+              "Conditions": "IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and not Self() and not SpellTypeIs(SpellType.Throw)",
+              "StatsFunctors": "DealDamage(SWAP,max(1,CharismaModifier),Psychic,Magical)"}, icon="Action_Paladin_DreadfulAspect",
+          comment="attack rolls only, never yourself: healing spells and the Paladin's own auras triggered it (Nexus bug 2026-11-07)")
 G.status("APO_INVINCIBLE_CONQUEROR", "Invincible Conqueror",
          "Resistance to all damage, one additional attack when you take the Attack action, and your melee weapon attacks score a Critical Hit on a 19 or 20.", {
              "Boosts": ";".join(f"Resistance({t},Resistant)" for t in ALL_TYPES) + ";IF(IsMeleeWeaponAttack()):ReduceCriticalAttackThreshold(1)",
@@ -1014,7 +1069,28 @@ for lvl in range(13, 21):
          removed=f"Sangromancer_{lvl - 2}_RedRenewal" if lvl in RR and lvl > 14 else None)
 
 
+def dnd_field(entry, field, files="Spell*.txt"):
+    """A field of a dnd55e stats entry, as released (the extracted dependency pak)."""
+    for f in glob.glob(os.path.join(DND, "Stats", "Generated", "Data", files)):
+        s = open(f, encoding="utf-8", errors="replace").read()
+        m = re.search(rf'new entry "{re.escape(entry)}"\r?\n(.*?)(?=\r?\nnew entry |\Z)', s, re.S)
+        if m and (v := re.search(rf'data "{field}" "([^"]*)"', m.group(1))):
+            return v.group(1)
+    raise SystemExit(f"{entry}.{field} not found in the dnd55e release (gen_subclass_features.py)")
+
+
+def append_children(container, children, comment):
+    cur = dnd_field(container, "ContainerSpells").rstrip(";")
+    have = cur.split(";")
+    G.SP.append(G.entry(container, "SpellData", {"ContainerSpells": ";".join(have + [c for c in children if c not in have]) + ";"},
+                        using=container, comment=comment + " (re-read from dnd55e at each regen)"))
+
+
 def write():
+    append_children("Target_UnleashingASpirit", ["Target_UnleashingASpirit_Brute", "Target_UnleashingASpirit_Priest"],
+                    "Spirits from Beyond rows 11-12 (Bard 15)")
+    append_children("Shout_ControlledChanneling", ["Shout_ControlledChanneling_Brute", "Shout_ControlledChanneling_Priest"],
+                    "Spirits from Beyond rows 11-12 (Bard 15)")
     new_nodes = []
     for table, name, level, passives, boosts, selectors, removed in NODES:
         attrs = {"PassivesAdded": ";".join(passives)} if passives else {}

@@ -72,7 +72,7 @@ data "StatsFunctorContext" "OnDamage"
 data "Conditions" "HasStatus('FORM_OF_DREAD',context.Source) and HasDamageDoneForType(DamageType.Necrotic)"
 data "StatsFunctors" "ApplyStatus(SELF,APO_VITALITY_SIPHON,100,0)"
 
-// SubclassFeatures.lua rolls the second spirit (the die dnd55e uses).
+// SubclassFeatures.lua rolls the second spirit (the die dnd55e uses, d12 from Bard 15) and, on a switch, removes only the spirit just rolled (#77).
 new entry "Spirits_14_MysticalConnection"
 type "PassiveData"
 data "DisplayName" "h91ccc7e300725ee6b9f70c5371010ebb"
@@ -90,6 +90,7 @@ data "Properties" "Highlighted"
 data "Boosts" "StatusImmunity(EXHAUSTED);IF(HasStatus('WRATH_OF_THE_WILD',context.Source) and not HasStatus('APO_PERSISTENT_HUNT_SPENT',context.Source)):DownedStatus(APO_PERSISTENT_HUNT_DOWNED,7)"
 data "BoostContext" "OnStatusApplied;OnStatusRemoved"
 
+// attack rolls only, never yourself: healing spells and the Paladin's own auras triggered it (Nexus bug 2026-11-07)
 new entry "Conquest_15_ScornfulRebuke"
 type "PassiveData"
 data "DisplayName" "h96a66ed495f454eb8a777f47eeb59997"
@@ -97,7 +98,7 @@ data "Description" "hb70d779bbddd51d0a3a00ba6a608f17b"
 data "Icon" "Apo_Feat_15ScornfulRebuke"
 data "Properties" "Highlighted"
 data "StatsFunctorContext" "OnAttacked"
-data "Conditions" "HasDamageEffectFlag(DamageFlags.Hit) and not SpellTypeIs(SpellType.Throw)"
+data "Conditions" "IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and not Self() and not SpellTypeIs(SpellType.Throw)"
 data "StatsFunctors" "DealDamage(SWAP,max(1,CharismaModifier),Psychic,Magical)"
 
 new entry "Conquest_20_InvincibleConqueror"

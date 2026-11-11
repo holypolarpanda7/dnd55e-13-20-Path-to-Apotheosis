@@ -95,6 +95,13 @@ end
 Ext.Osiris.RegisterListener("LeveledUp", 1, "after", guard("LeveledUp", function(c) GS.OnLeveledUp(c) end))
 Ext.Osiris.RegisterListener("StatusApplied", 4, "after", guard("StatusApplied", function(t, s, c) GS.OnStatusApplied(t, s, c) end))
 Ext.Osiris.RegisterListener("TurnStarted", 1, "after", guard("TurnStarted", function(c) GS.OnTurnStarted(c) end))
+-- White Hat 14 Stunned Surrender: the stun ends early if the creature takes any damage (the status's own RemoveEvents carry the
+-- end-of-turn Wisdom save, and a status has only one RemoveConditions).
+Ext.Osiris.RegisterListener("AttackedBy", 7, "after", guard("AttackedBy", function(defender, _, _, _, amount)
+    if (amount or 0) > 0 and Osi.HasActiveStatus(defender, "WHITEHAT_STUNNED_SURRENDER") == 1 then
+        Osi.RemoveStatus(defender, "WHITEHAT_STUNNED_SURRENDER")
+    end
+end))
 Ext.Events.BeforeDealDamage:Subscribe(guard("BeforeDealDamage", GS.BeforeDealDamage))
 
 _G.ApotheosisGunslinger = GS

@@ -383,3 +383,11 @@ spell = "Shout_Dodge"
 target = "host"
 setup = [{ target = "host", status = "EXTRA_ATTACK_3_Q", turns = 1 }]
 expect = [{ target = "host", status_applied = ["EXTRA_ATTACK_3"] }]
+
+[[case]]
+id = "prismatic-violet-party-member-returns"
+title = "Prismatic Spray violet on a party member: banished until the fight ends (or a Long Rest), then back (Nexus 2026-11-07)"
+target = "host"
+setup = [{ lua = "local PS = Mods.dnd55e_Apotheosis.Apotheosis.PrismaticSpray; local h = BG3T.host(); PS.VioletResult(h, false); Ext.Timer.WaitFor(1500, function() PS.ReturnBanished() end)" }]
+wait = 3
+expect = [{ target = "host", status_applied = ["APO_PRISMATIC_BANISHED"] }, { target = "host", status_absent = ["APO_PRISMATIC_BANISHED"] }]

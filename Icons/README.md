@@ -54,3 +54,7 @@ icons; same pipeline, jobs Icons/jobs_au.json (seeds 5001-5013; Detonate / Rewea
 picks #4/#8/#1/#6/#4/#1/#1/#1/#4/#6/#4/#1/#1 (assistant's picks; swap any), tints radiant / psychic / force / arcane / psychic /
 psychic / earth / lightning / arcane / fire / force / psychic / necrotic. Set in Scripts/gen_au_spells.py (spells, their own
 statuses and interrupts; condition statuses keep the base condition icons). Illusory Dragon is held off the lists and keeps its icon.
+
+## College of Spirits rows 11-12 (2026-11-11, #77)
+Brute and Priest (Unleashing a Spirit / Controlled Channeling / the channeled-spirit statuses): same pipeline, jobs
+Icons/jobs_spirits15.json (seeds 7001-7002), picks #1/#2 (assistant's picks; swap any), tints thunder / healing.
