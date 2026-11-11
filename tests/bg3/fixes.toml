@@ -396,9 +396,11 @@ expect = [{ target = "host", status_applied = ["APO_PRISMATIC_BANISHED"] }, { ta
 id = "conjure-minor-elementals-7th-level-damage"
 title = "Conjure Minor Elementals from a 7th-level slot adds its elemental damage (5d8) to hits - it added nothing above 6th (Nexus bug 2026-11-05)"
 spell = "Target_MainHandAttack"
+real_rolls = true
 target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
 setup = [{ target = "host", status = "CONJURE_MINOR_ELEMENTALS_7", turns = 10 }, { target = "host", boost = "RollBonus(Attack,40)" },
-         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", toggle_on = "ConjureMinorElementalAcid" }]
 expect = [{ target = "A", damage_type = "Acid" }, { target = "A", hp_change = [-300, -6] }]
-notes = "Acid is the toggle that defaults on. dnd55e's ConjureMinorElemental* passives check the cast level's status by name; gen_upcasts extend_name_checks adds the 7-9 clauses."
+notes = "real_rolls: a scripted attack skips the roll, so the hit-only passive never fires. Acid is the toggle that defaults on. dnd55e's ConjureMinorElemental* passives check the cast level's status by name; gen_upcasts extend_name_checks adds the 7-9 clauses."
+
