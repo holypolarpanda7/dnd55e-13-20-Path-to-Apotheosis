@@ -155,9 +155,9 @@ target = "host"
 safety = false
 setup = [{ target = "host", hp = 20 }, { target = "host", status = "POISONED", turns = 10 }, { target = "host", status = "BLINDED", turns = 10 },
          { target = "host", status = "SPIRITS_FROM_BEYOND_11", turns = -1 }]
-expect = [{ target = "host", hp_change = [2, 40] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND_11", "APO_SPIRIT_PRIEST_CURE"] },
+expect = [{ target = "host", hp_change = [0, 40] }, { target = "host", status_absent = ["SPIRITS_FROM_BEYOND_11", "APO_SPIRIT_PRIEST_CURE"] },
           { log = "/Priest: ended (POISONED|BLINDED) on .* \\(one of 2\\)/" }]
-notes = "Poisoned and Blinded: exactly one ends (the log names it); the rules let the bard choose, BG3 can't offer a second picker (user 2026-11-11: random)."
+notes = "Poisoned and Blinded: exactly one ends (the log names it); the rules let the bard choose, BG3 can't offer a second picker (user 2026-11-11: random). The heal is Bardic Inspiration dice: +19 on the Spirits Bard, 0 on a non-Bard host."
 
 [[case]]
 id = "spirits-controlled-channeling-brute"
