@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.11.0 - 2026-11-11
+
+- Test: Conjure Minor Elementals 7th-level damage (real rolls) - PASS in game 2026-11-11 (2026-11-11)
+- Upcasts: extend dependency entries that check a 6th-level status by name (Conjure Minor Elementals, Sanguine Poppet, Moonbeam) (2026-11-11) (2026-11-11)
+- nexus: page spec version 1.0.10.0 (the live page is already 1.0.10.0) (#79) (2026-11-11)
+
 ## v1.0.10.0 - 2026-11-11
 
 - Built against DnD 5.5e All-in-One BEYOND 4.14.4.4 (was 4.14.3.5). DnD 5.5e rebuilt Magic Weapon (one effect scaled by the spell slot) and lets a College of Spirits Bard hold several channeled spirits at once; PTA's 7th- to 9th-level upcasts are regenerated on the new versions.
