@@ -2,9 +2,10 @@
 
 ## v1.0.11.0 - 2026-11-11
 
-- Test: Conjure Minor Elementals 7th-level damage (real rolls) - PASS in game 2026-11-11 (2026-11-11)
-- Upcasts: extend dependency entries that check a 6th-level status by name (Conjure Minor Elementals, Sanguine Poppet, Moonbeam) (2026-11-11) (2026-11-11)
-- nexus: page spec version 1.0.10.0 (the live page is already 1.0.10.0) (#79) (2026-11-11)
+- Fixed: Conjure Minor Elementals cast with a 7th- to 9th-level slot added no elemental damage to your hits. It now adds 5d8, 6d8 or 7d8 (one more d8 per slot level, as in the rules). Thanks to the player who reported it.
+- Fixed: Sanguine Poppet's Detonate did nothing for a poppet made with a 7th- to 9th-level slot. It now explodes with the damage of that level.
+- Fixed: Moonbeam cast with a 7th- to 9th-level slot could be cast again while the first was still up.
+- Changed: PTA's 7th- to 9th-level upcasts now also update DnD 5.5e effects that check a spell's 6th-level version by name, so the same gap can't come back for other spells.
 
 ## v1.0.10.0 - 2026-11-11
 
