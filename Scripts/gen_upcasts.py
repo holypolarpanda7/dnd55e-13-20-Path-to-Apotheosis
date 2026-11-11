@@ -248,6 +248,59 @@ def write(g):
         print(f"{OUT[typ]}: {len(entries)} entries")
 
 
+def extend_name_checks(g):
+    """Entries outside this generator that check a 6th level status BY NAME know nothing of our _7.._9 (Nexus bug 2026-11-05:
+    dnd55e's ConjureMinorElemental* passives deal their damage only IF(HasStatus('CONJURE_MINOR_ELEMENTALS_6')), so a 7th+
+    level cast did nothing; Sanguine Poppet's Detonate and Moonbeam's recast guard had the same gap). Each such entry gets an
+    override: a status-name list {..'X_6'..} gains 'X_7','X_8','X_9'; a clause naming X_6 gets 7th-9th level copies stepped
+    from its 5th level twin (dice, and names such as a per-level explosion projectile, which are made when missing)."""
+    fams = {n[:-2] for n, (t, _, _) in g.made.items() if t == "StatusData" and n.endswith("_7")}
+    names = [n for (n,) in g.S.db.execute("SELECT DISTINCT name FROM stats WHERE data LIKE ?", ("%_6'%",))]
+    for name in sorted(set(names)):
+        if name in g.made or not g.S.get(name) or re.sub(r"_\d$", "", name) in fams:
+            continue  # our own output, or a family member (WALLOFFIRE_AURA_6 - its _7.._9 are stepped already)
+        typ, d = g.S.get(name)
+        over = {}
+        for f, v in d.items():
+            v = str(v)
+            hit = sorted(fm for fm in fams if f"'{fm}_6'" in v)
+            if not hit:
+                continue
+            nv = v
+            for fam in hit:  # name lists: HasAnyStatus({'X','X_3',...,'X_6'})
+                tok = f"'{fam}_6'"
+                if f"'{fam}_7'" not in nv and re.search(r"\{[^}]*" + re.escape(tok), nv):
+                    nv = nv.replace(tok, tok + "," + ",".join(f"'{fam}_{n}'" for n in (7, 8, 9)), 1)
+            clauses = nv.split(";")
+            out = []
+            for c in clauses:
+                out.append(c)
+                fam = next((fm for fm in hit if f"'{fm}_6'" in c), None)
+                if not fam or "{" in c:
+                    continue
+                twin = next((x for x in clauses if f"'{fam}_5'" in x and step(x, c, 1)), None)
+                if not twin:
+                    g.warn.append(f"{name}: {f} checks {fam}_6 with no 5th level twin to step; not extended")
+                    continue
+                for k in (1, 2, 3):
+                    val, refs = step(twin, c, k)
+                    for pre, num, tail, dd in refs:
+                        ref = pre + num + tail
+                        if g.exists(ref):
+                            continue
+                        n_ = float(num)
+                        rcur, rprev = pre + _fmt(n_ - dd * k, num) + tail, pre + _fmt(n_ - dd * (k + 1), num) + tail
+                        if not (g.S.get(rcur) and g.S.get(rprev) and g.make(ref, rprev, rcur, k)):
+                            g.warn.append(f"{name}: {f} needs {ref}, which can't be derived")
+                    out.append(val)
+            nv = ";".join(out)
+            if nv != v:
+                over[f] = nv
+        if over:
+            g.made[name] = (typ, name, over)
+            print(f"name checks extended: {name} ({', '.join(over)})")
+
+
 # Families whose 6th level variant can't be cast at all upstream: extending them ships spells that never resolve.
 # Danse Macabre inherits an emptied dnd55e entry (no SpellAnimation) - bg3dnd #1539; drop this once that's fixed.
 BROKEN_UPSTREAM = {"Target_DanseMacabre": "bg3dnd #1539"}
@@ -290,6 +343,7 @@ if __name__ == "__main__":
             spell = f"Target_GlyphOfWarding_{el}_{n}"
             g.made[spell][2]["SpellProperties"] = props6.replace(t6, mk)
             g.warn = [w for w in g.warn if not (w.startswith(f"{spell}:") and "SpellProperties" in w)]
+    extend_name_checks(g)
     write(g)
     g.T.write_templates("Upcast79")
     print(f"{len(g.T.T)} summon templates, {len(g.T.TI)} trap items")
