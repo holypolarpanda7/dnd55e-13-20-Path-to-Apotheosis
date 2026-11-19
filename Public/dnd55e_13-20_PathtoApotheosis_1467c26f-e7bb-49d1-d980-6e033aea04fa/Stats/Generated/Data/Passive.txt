@@ -1433,3 +1433,12 @@ data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnAttacked"
 data "Conditions" "IsSavingThrow()"
 data "StatsFunctors" "RemoveStatus(SELF,BRUTAL_STRIKE_STAGGERED)"
+
+// #83 (2026-11-19): the base Psychic Missiles amulet (Society of Brilliance; +1 Magic Missile dart) checks MagicMissileSpellCheck(),
+// which matches Projectile_MagicMissile and its variants only - PTA's free copies (Spell Mastery, Magic School Mastery Rote/Signature,
+// Boon of Siberys) have their own ids and got no extra dart. Same boost, those ids added.
+new entry "UND_SocietyOfBrilliance_MagicMissileNecklace_Passive"
+type "PassiveData"
+data "DisplayName" "h0ef1e4c6g12c9g4a7eg9700g0aca0bf77c6e;2"
+data "Description" "h0b4372b2gedb7g4352g881dg478c600767f4;4"
+data "Boosts" "UnlockSpellVariant((MagicMissileSpellCheck() or SpellId('Projectile_MagicMissile_SM') or SpellId('Projectile_MagicMissile_EpicRote') or SpellId('Projectile_MagicMissile_EpicSignature') or SpellId('Projectile_MagicMissile_EpicSiberys')),ModifyNumberOfTargets(AdditiveBase,1,true), ModifyTooltipDescription())"
