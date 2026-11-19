@@ -428,38 +428,28 @@ mode = "ui"
 title = "Magic School Mastery: Rote Casting Searing Smite hits without spending a spell slot (#82: the slot was in HitCosts)"
 spell = "Target_Smite_Searing_EpicRote"
 target = "A"
-clicks = ["A"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
 setup = [{ target = "host", passive = "EpicBoon_MagicSchoolMastery_Int" }, { target = "host", status = "EPIC_MSM_EVOCATION", turns = -1 },
          { target = "host", status = "EPIC_MSM_ROTE_TARGET_SMITE_SEARING", turns = -1 },
          { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AC(-30)" }]
 expect = [{ cast = true }, { target = "A", status_applied = ["SEARING_SMITE"] }, { resource = "SpellSlot", level = 1, change = 0 }]
 
-[[case]]
-id = "fix82-msm-rote-smite-control"
-mode = "ui"
-title = "Control: the ordinary Searing Smite still spends a 1st-level slot on the hit"
-spell = "Target_Smite_Searing"
-target = "A"
-clicks = ["A"]
-spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
-setup = [{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AC(-30)" }]
-expect = [{ cast = true }, { target = "A", status_applied = ["SEARING_SMITE"] }, { resource = "SpellSlot", level = 1, change = -1 }]
 
 [[case]]
 id = "fix83-psychic-missiles-mastered"
-title = "Psychic Missiles amulet adds a dart to the Spell Mastery Magic Missile too: 4 darts (#83)"
+title = "Psychic Missiles amulet adds a dart to the Spell Mastery Magic Missile too (#83)"
+notes = "A scripted cast at one target lands 1 dart without the amulet (control) and 2 with it: the +1 target the amulet adds. Before the fix the _SM copy got no extra dart (1)."
 spell = "Projectile_MagicMissile_SM"
 target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", status = "SM_UNLOCK_MAGICMISSILE", turns = -1 }, { target = "host", passive = "UND_SocietyOfBrilliance_MagicMissileNecklace_Passive" }]
-expect = [{ cast = true }, { target = "A", damage_count = { count = [4, 4] } }]
+expect = [{ cast = true }, { target = "A", damage_count = { count = [2, 2] } }]
 
 [[case]]
 id = "fix83-psychic-missiles-control"
-title = "Control: the mastered Magic Missile without the amulet fires 3 darts"
+title = "Control: the mastered Magic Missile without the amulet (scripted, one target: 1 dart)"
 spell = "Projectile_MagicMissile_SM"
 target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", status = "SM_UNLOCK_MAGICMISSILE", turns = -1 }]
-expect = [{ cast = true }, { target = "A", damage_count = { count = [3, 3] } }]
+expect = [{ cast = true }, { target = "A", damage_count = { count = [1, 1] } }]

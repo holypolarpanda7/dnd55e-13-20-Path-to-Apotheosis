@@ -485,7 +485,6 @@ mode = "ui"
 title = "Boon of Magic School Mastery: Rote Casting Chromatic Orb opens its menu of free variants; Fire hits with no slot (#82)"
 spell = "Projectile_ChromaticOrb_Fire_EpicRote"
 target = "A"
-clicks = ["A"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", passive = "EpicBoon_MagicSchoolMastery_Int" }, { target = "host", status = "EPIC_MSM_EVOCATION", turns = -1 },
          { target = "host", status = "EPIC_MSM_ROTE_PROJECTILE_CHROMATICORB", turns = -1 }, { target = "A", boost = "AC(-30)" }]
