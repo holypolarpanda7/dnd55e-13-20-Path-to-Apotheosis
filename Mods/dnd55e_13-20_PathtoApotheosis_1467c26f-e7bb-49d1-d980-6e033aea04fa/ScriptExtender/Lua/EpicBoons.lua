@@ -331,13 +331,28 @@ function EB.OnCastPhase2(caster, spell)
 end
 
 -- Augmented Health: +5 whenever you gain Temporary Hit Points (watched every few frames for boon holders)
-local lastTemp, tickN = {}, 0
+-- Cheap per poll (#84: querying DB_Players + 7 HasPassive per player every 10th frame took ~6 ms and flooded the SE console):
+-- the party list is re-read only on session load and party join/leave, one player's boon is re-checked per poll (round robin), and
+-- the poll runs on real time.
+local POLL_MS = 250
+local lastTemp, lastPoll, players, holders, rr = {}, -1e9, nil, {}, 0
+function EB.PartyChanged() players = nil end
 function EB.TickAugmentedHealth()
-    tickN = tickN + 1
-    if tickN % 10 ~= 0 or not Osi.DB_Players then return end  -- the tick starts before the story's databases exist
-    for _, row in pairs(Osi.DB_Players:Get(nil) or {}) do
-        local c = row[1]
-        if hasAny(c, "EpicBoon_BountifulHealth") then
+    local now = Ext.Timer.MonotonicTime()
+    if now - lastPoll < POLL_MS then return end
+    lastPoll = now
+    if not players then
+        if not Osi.DB_Players then return end  -- the tick starts before the story's databases exist
+        players, holders, rr = {}, {}, 0
+        for _, row in pairs(Osi.DB_Players:Get(nil) or {}) do players[#players + 1] = row[1] end
+    end
+    if #players > 0 then
+        rr = rr % #players + 1
+        local p = players[rr]
+        holders[p] = hasAny(p, "EpicBoon_BountifulHealth") or nil
+    end
+    for c in pairs(holders) do
+        do
             local e = Ext.Entity.Get(c)
             local cur = e and e.Health and e.Health.TemporaryHp or 0
             local was = lastTemp[c] or 0
@@ -373,6 +388,11 @@ Ext.Osiris.RegisterListener("Died", 1, "after", guard("Died", function(c) EB.OnE
 Ext.Osiris.RegisterListener("UsingSpell", 5, "after", guard("UsingSpell", function(caster, spell) EB.OnUsingSpell(caster, spell) end))
 Ext.Osiris.RegisterListener("TurnStarted", 1, "after", guard("TurnStarted", function(c) EB.OnTurnStarted(c) end))
 Ext.Events.Tick:Subscribe(function() local ok, err = pcall(EB.TickAugmentedHealth) if not ok then Log.Error("EpicBoons Tick: " .. tostring(err)) end end)
+Ext.Events.SessionLoaded:Subscribe(function() EB.PartyChanged() end)
+for _, ev in ipairs({ "CharacterJoinedParty", "CharacterLeftParty" }) do
+    local ok, err = pcall(Ext.Osiris.RegisterListener, ev, 1, "after", function() EB.PartyChanged() end)
+    if not ok then Log.Warn("EpicBoons: no " .. ev .. " listener: " .. tostring(err)) end
+end
 Ext.Osiris.RegisterListener("EnteredCombat", 2, "after", guard("EnteredCombat", function(object) EB.OnEnteredCombat(object) end))
 Ext.Osiris.RegisterListener("LeveledUp", 1, "after", guard("LeveledUp", function(c) EB.Validate(c) end))
 

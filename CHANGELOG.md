@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.12.0 - 2026-11-19
+
+- Fixed: a Fighter 20 could get an extra free attack. After an opportunity attack, your next turn started with Extra Attack (2) already up, and Extra Attack (2) also ran its own chain beside Extra Attack (3). One Attack action now gives exactly four attacks, and an opportunity attack leaves nothing behind for your turn (#81). Thanks to the player who reported it.
+- Fixed: Boon of Magic School Mastery's Rote Casting and Signature Arcanum copies of Searing, Thunderous, Blinding and Wrathful Smite still spent a spell slot when they hit (#82).
+- Added: Boon of Magic School Mastery now offers spells that open a menu of options, such as Chromatic Orb, Glyph of Warding, Daylight, Spirit Guardians, Bestow Curse and Dragon's Breath. The free copy opens a menu of free options. Enlarge/Reduce is still left out, because each of its options is a menu of its own (#82). Thanks to the player who reported it.
+- Fixed: the Psychic Missiles amulet's extra dart didn't apply to Magic Missile cast through Spell Mastery, Magic School Mastery or Boon of Siberys (#83). Thanks to the player who reported it.
+- Fixed: the Boon of Bountiful Health watcher (Augmented Health) did slow work several times a second for every party member, which filled the Script Extender console with "Dispatching event Tick ... took" warnings on some PCs. It now does a fraction of that work (#84). Thanks to the player who reported it.
+- Added: translation support. Every GitHub release now has PTA's English text file and a list of the strings added or changed since the previous version; docs/TRANSLATING.md explains how to make a translation mod, or how to send a translation to include in PTA (#85). Thanks to the player who asked.
+
 ## v1.0.11.0 - 2026-11-11
 
 - Fixed: Conjure Minor Elementals cast with a 7th- to 9th-level slot added no elemental damage to your hits. It now adds 5d8, 6d8 or 7d8 (one more d8 per slot level, as in the rules). Thanks to the player who reported it.

@@ -479,7 +479,7 @@ MSM = json.load(open(os.path.join(REPO, "Scripts", "data", "magic_school_spells.
 # LoadModule, 43 (2030 chars) loaded - bisected 2026-10-02. The largest shipped container is 42 spells / ~1000 chars.
 SIG_BANDS = (("13", "1-3", range(1, 4)), ("47", "4-7", range(4, 8)))
 boon("EpicBoon_MagicSchoolMastery", "Boon of Magic School Mastery",
-     "Mastered School: choose a school of magic. Rote Casting: a level 1 spell of that school is always prepared and you can cast it without a spell slot or components. Signature Arcanum: a level 7 or lower spell of that school is always prepared; cast it once per Long Rest without a spell slot. (Requires the Spellcasting or Pact Magic feature; spells with variant menus aren't offered.)",
+     "Mastered School: choose a school of magic. Rote Casting: a level 1 spell of that school is always prepared and you can cast it without a spell slot or components. Signature Arcanum: a level 7 or lower spell of that school is always prepared; cast it once per Long Rest without a spell slot. (Requires the Spellcasting or Pact Magic feature.)",
      {"Boosts": "UnlockSpell(Shout_EpicBoon_MSM_School);ActionResource(EpicBoonMSMSchool,1,0);ActionResource(EpicBoonRoteChoice,1,0);"
                 "ActionResource(EpicBoonSignatureChoice,1,0);ActionResource(EpicBoonSignature,1,0)"}, variants=MENTAL)
 
@@ -494,16 +494,33 @@ def picker(name, title, desc, children, cost):
 def free_copy(spell, suffix, extra_cost, strip_components, info=None, label=None):
     info = info or MSM["spells"][spell]
     label = label or ("Rote" if suffix == "EpicRote" else "Signature")
-    costs = ";".join(c for c in info["costs"].split(";") if c and not c.startswith("SpellSlotsGroup") and not c.startswith("WarlockSpellSlot"))
-    costs = ";".join(c for c in [costs, extra_cost] if c)
+    def no_slot(cs):
+        return ";".join(c for c in cs.split(";") if c and not c.startswith("SpellSlotsGroup") and not c.startswith("WarlockSpellSlot"))
+    costs = ";".join(c for c in [no_slot(info["costs"]), extra_cost] if c)
+    # smites pay their slot in HitCosts, on the hit (#82, 2026-11-19); the pools carry them (export_spell_hit_costs.py)
+    hit = {"HitCosts": no_slot(info["hit_costs"])} if info.get("hit_costs") else {}
     flags = info["flags"]
-    # a free copy is never a spell menu: an IsLinkedSpellContainer copy without ContainerSpells shows an empty menu in the hotbar and
-    # can't be cast (Control Weather's, 2026-10-28) - except Shield, whose copies are reactions like the base game's
-    if "Shield" not in spell:
+    kids = info.get("children") or []
+
+    def strip(fl):
+        return ";".join(f for f in fl.split(";") if f and f not in ("HasVerbalComponent", "HasSomaticComponent")) if strip_components else fl
+    # a free copy without its own variants is never a spell menu: an IsLinkedSpellContainer copy without ContainerSpells shows an
+    # empty menu in the hotbar and can't be cast (Control Weather's, 2026-10-28) - except Shield, whose copies are reactions like
+    # the base game's
+    if "Shield" not in spell and not kids:
         flags = ";".join(f for f in flags.split(";") if f and f != "IsLinkedSpellContainer")
-    if strip_components:
-        flags = ";".join(f for f in flags.split(";") if f and f not in ("HasVerbalComponent", "HasSomaticComponent"))
-    SP_LATE.append(entry(f"{spell}_{suffix}", "SpellData", {"UseCosts": costs, "SpellFlags": flags,
+    flags = strip(flags)
+    menu = {}
+    if kids:
+        # a spell with variants (Chromatic Orb, Glyph of Warding... #82, 2026-11-19): the free copy opens a menu of free copies of
+        # the variants, as gen_spell_mastery_containers.py does for Spell Mastery; every base variant costs a slot
+        menu = {"ContainerSpells": ";".join(f"{k['id']}_{suffix}" for k in kids)}
+        for k in kids:
+            kc = ";".join(c for c in [no_slot(k["costs"]), extra_cost] if c)
+            khit = {"HitCosts": no_slot(k["hit_costs"])} if k.get("hit_costs") else {}
+            SP_LATE.append(entry(f"{k['id']}_{suffix}", "SpellData", {"UseCosts": kc, **khit, "SpellFlags": strip(k["flags"]),
+                                                                    "SpellContainerID": f"{spell}_{suffix}"}, using=k["id"]))
+    SP_LATE.append(entry(f"{spell}_{suffix}", "SpellData", {"UseCosts": costs, **hit, "SpellFlags": flags, **menu,
                                                        "DisplayName": h(f"{spell}_{suffix}:n", f"{info['name']} ({label})")},
                     using=spell))
 

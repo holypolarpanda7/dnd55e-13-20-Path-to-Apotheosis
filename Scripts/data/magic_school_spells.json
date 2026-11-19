@@ -15,6 +15,7 @@
         "Target_ThornArmor"
       ],
       "2": [
+        "Shout_ArcaneVigor",
         "Shout_PassWithoutTrace",
         "Shout_PrayerOfHealing",
         "Target_Aid",
@@ -27,6 +28,8 @@
         "Shout_BeaconOfHope",
         "Shout_HealingWord_Mass",
         "Target_Counterspell",
+        "Target_GlyphOfWarding",
+        "Target_ProtectionFromEnergy",
         "Target_RemoveCurse"
       ],
       "4": [
@@ -50,6 +53,7 @@
     },
     "Conjuration": {
       "1": [
+        "Projectile_EnsnaringStrike_Container",
         "Projectile_HailOfThorns",
         "Projectile_IceKnife",
         "Shout_TideOfDarkness",
@@ -61,9 +65,11 @@
         "Target_CloudOfDaggers",
         "Target_FlamingSphere",
         "Target_MistyStep",
+        "Target_SummonBeast",
         "Target_Web"
       ],
       "3": [
+        "Shout_SpiritGuardians",
         "Target_CallLightning",
         "Target_SleetStorm",
         "Target_StinkingCloud",
@@ -81,15 +87,18 @@
       ],
       "5": [
         "Target_Cloudkill",
+        "Target_ConjureElemental_Container",
         "Target_InsectPlague",
         "Target_SummonCelestial"
       ],
       "6": [
         "Shout_HeroesFeast",
+        "Target_PlanarAlly_Container",
         "Teleportation_ArcaneGate",
         "Wall_WallOfThorns"
       ],
       "7": [
+        "Shout_Apo_ConjureCelestial",
         "Shout_Apo_MagnificentMansion",
         "Target_Apo_PlaneShift",
         "Target_Apo_Teleport"
@@ -112,6 +121,7 @@
         "Target_Bane",
         "Target_Bless",
         "Target_CharmPerson",
+        "Target_Command_Container",
         "Target_CompelledDuel",
         "Target_DissonantWhispers",
         "Target_Heroism",
@@ -144,6 +154,8 @@
     },
     "Evocation": {
       "1": [
+        "Projectile_BallisticSmite",
+        "Projectile_ChromaticOrb",
         "Projectile_GuidingBolt",
         "Projectile_MagicMissile",
         "Projectile_SpellfireFlare",
@@ -166,6 +178,8 @@
         "Target_Darkness",
         "Target_Moonbeam",
         "Target_Shatter",
+        "Target_Smite_Branding_Container",
+        "Target_SpiritualWeapon",
         "Zone_AganazzarsScorcher",
         "Zone_GustOfWind",
         "Zone_RimesBindingIce"
@@ -174,12 +188,16 @@
         "Projectile_Fireball",
         "Shout_CacophonicShield",
         "Shout_CrusadersMantle",
+        "Target_Daylight_Container",
         "Target_Smite_Blinding",
+        "Zone_AstralFlood",
+        "Zone_ElementalExhalation",
         "Zone_LaeralsSilverLance",
         "Zone_LightningBolt"
       ],
       "4": [
         "Projectile_VitriolicSphere",
+        "Shout_FireShield",
         "Shout_FountOfMoonlight",
         "Target_IceStorm",
         "Target_SpellfireStorm",
@@ -194,19 +212,23 @@
       ],
       "6": [
         "Projectile_ChainLightning",
+        "Target_FreezingSphere",
         "Target_Heal",
         "Wall_BladeBarrier",
         "Zone_Sunbeam"
       ],
       "7": [
         "Projectile_Apo_DelayedBlastFireball",
+        "Shout_Apo_DivineWord",
         "Target_Apo_FireStorm",
         "Target_Apo_Forcecage",
+        "Target_Apo_MordenkainensSword",
         "Zone_PrismaticSpray"
       ]
     },
     "Illusion": {
       "1": [
+        "Shout_DisguiseSelf",
         "Zone_ColorSpray"
       ],
       "2": [
@@ -248,6 +270,8 @@
         "Target_DeathArmor"
       ],
       "3": [
+        "Target_AnimateDead",
+        "Target_BestowCurse",
         "Target_FeignDeath",
         "Target_MurmursOfDoom",
         "Target_SpeakWithDead",
@@ -258,11 +282,13 @@
         "Target_Blight"
       ],
       "5": [
+        "Target_Contagion",
         "Target_Enervation"
       ],
       "6": [
         "Target_CircleOfDeath",
         "Target_CreateUndead",
+        "Target_Eyebite",
         "Target_Harm"
       ],
       "7": [
@@ -277,6 +303,7 @@
         "Shout_ExpeditiousRetreat",
         "Shout_FeatherFall",
         "Target_BodyWarpingOfGorgoroth",
+        "Target_CreateDestroyWater",
         "Target_Goodberry",
         "Target_Jump",
         "Target_Longstrider"
@@ -286,6 +313,8 @@
         "Target_Barkskin",
         "Target_Blindness",
         "Target_Darkvision",
+        "Target_DragonsBreath",
+        "Target_EnhanceAbility",
         "Target_HeatMetal",
         "Target_Knock",
         "Target_MagicWeapon",
@@ -295,6 +324,7 @@
         "Projectile_LightningArrow",
         "Shout_AshardalonsStride",
         "Shout_Blink",
+        "Target_ElementalWeapon",
         "Target_Fly",
         "Target_GaseousForm",
         "Target_Haste",
@@ -324,37 +354,7 @@
     }
   },
   "skipped_containers": [
-    "Projectile_BallisticSmite",
-    "Projectile_ChromaticOrb",
-    "Projectile_EnsnaringStrike_Container",
-    "Shout_Apo_ConjureCelestial",
-    "Shout_Apo_DivineWord",
-    "Shout_ArcaneVigor",
-    "Shout_DisguiseSelf",
-    "Shout_FireShield",
-    "Shout_SpiritGuardians",
-    "Target_AnimateDead",
-    "Target_Apo_MordenkainensSword",
-    "Target_BestowCurse",
-    "Target_Command_Container",
-    "Target_ConjureElemental_Container",
-    "Target_Contagion",
-    "Target_CreateDestroyWater",
-    "Target_Daylight_Container",
-    "Target_DragonsBreath",
-    "Target_ElementalWeapon",
-    "Target_EnhanceAbility",
-    "Target_EnlargeReduce",
-    "Target_Eyebite",
-    "Target_FreezingSphere",
-    "Target_GlyphOfWarding",
-    "Target_PlanarAlly_Container",
-    "Target_ProtectionFromEnergy",
-    "Target_Smite_Branding_Container",
-    "Target_SpiritualWeapon",
-    "Target_SummonBeast",
-    "Zone_AstralFlood",
-    "Zone_ElementalExhalation"
+    "Target_EnlargeReduce"
   ],
   "spells": {
     "Projectile_Apo_DelayedBlastFireball": {
@@ -362,6 +362,58 @@
       "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;CanAreaDamageEvade",
       "level": 7,
       "name": "Delayed Blast Fireball",
+      "school": "Evocation"
+    },
+    "Projectile_BallisticSmite": {
+      "children": [
+        {
+          "id": "Projectile_BallisticSmite_Acid",
+          "type": "Projectile",
+          "costs": "ActionPoint:1",
+          "flags": "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;AddFallDamageOnLand;IsSpell",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;"
+        },
+        {
+          "id": "Projectile_BallisticSmite_Cold",
+          "type": "Projectile",
+          "costs": "ActionPoint:1",
+          "flags": "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;AddFallDamageOnLand;IsSpell",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;"
+        },
+        {
+          "id": "Projectile_BallisticSmite_Fire",
+          "type": "Projectile",
+          "costs": "ActionPoint:1",
+          "flags": "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;AddFallDamageOnLand;IsSpell",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;"
+        },
+        {
+          "id": "Projectile_BallisticSmite_Lightning",
+          "type": "Projectile",
+          "costs": "ActionPoint:1",
+          "flags": "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;AddFallDamageOnLand;IsSpell",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;"
+        },
+        {
+          "id": "Projectile_BallisticSmite_Poison",
+          "type": "Projectile",
+          "costs": "ActionPoint:1",
+          "flags": "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;AddFallDamageOnLand;IsSpell",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;"
+        },
+        {
+          "id": "Projectile_BallisticSmite_Thunder",
+          "type": "Projectile",
+          "costs": "ActionPoint:1",
+          "flags": "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;AddFallDamageOnLand;IsSpell",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;"
+        }
+      ],
+      "costs": "ActionPoint:1",
+      "flags": "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;AddFallDamageOnLand;IsLinkedSpellContainer;IsSpell",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1;",
+      "level": 1,
+      "name": "Ballistic Smite",
       "school": "Evocation"
     },
     "Projectile_Catapult": {
@@ -376,6 +428,51 @@
       "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsSpell",
       "level": 6,
       "name": "Chain Lightning",
+      "school": "Evocation"
+    },
+    "Projectile_ChromaticOrb": {
+      "children": [
+        {
+          "id": "Projectile_ChromaticOrb_Acid",
+          "type": "Projectile",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful"
+        },
+        {
+          "id": "Projectile_ChromaticOrb_Cold",
+          "type": "Projectile",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful"
+        },
+        {
+          "id": "Projectile_ChromaticOrb_Fire",
+          "type": "Projectile",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful"
+        },
+        {
+          "id": "Projectile_ChromaticOrb_Lightning",
+          "type": "Projectile",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful"
+        },
+        {
+          "id": "Projectile_ChromaticOrb_Poison",
+          "type": "Projectile",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful"
+        },
+        {
+          "id": "Projectile_ChromaticOrb_Thunder",
+          "type": "Projectile",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful;IsLinkedSpellContainer",
+      "level": 1,
+      "name": "Chromatic Orb",
       "school": "Evocation"
     },
     "Projectile_Darkbolt": {
@@ -398,6 +495,30 @@
       "level": 6,
       "name": "Disintegrate",
       "school": "Transmutation"
+    },
+    "Projectile_EnsnaringStrike_Container": {
+      "children": [
+        {
+          "id": "Projectile_EnsnaringStrike",
+          "type": "Projectile",
+          "costs": "ActionPoint:1",
+          "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold;IsHarmful",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
+        },
+        {
+          "id": "Target_EnsnaringStrike",
+          "type": "Target",
+          "costs": "ActionPoint:1",
+          "flags": "HasVerbalComponent;IsSpell;IsMelee;IsConcentration;IsHarmful",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
+        }
+      ],
+      "costs": "ActionPoint:1",
+      "flags": "HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsConcentration;RangeIgnoreVerticalThreshold;IsHarmful;IsLinkedSpellContainer",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+      "level": 1,
+      "name": "Ensnaring Strike",
+      "school": "Conjuration"
     },
     "Projectile_Fireball": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
@@ -511,12 +632,83 @@
       "name": "Alter Self",
       "school": "Transmutation"
     },
+    "Shout_Apo_ConjureCelestial": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful",
+      "level": 7,
+      "name": "Conjure Celestial",
+      "school": "Conjuration"
+    },
+    "Shout_Apo_DivineWord": {
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "IsSpell;HasVerbalComponent;IsHarmful",
+      "level": 7,
+      "name": "Divine Word",
+      "school": "Evocation"
+    },
     "Shout_Apo_MagnificentMansion": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
       "flags": "HasVerbalComponent;IsSpell",
       "level": 7,
       "name": "Mordenkainen's Magnificent Mansion",
       "school": "Conjuration"
+    },
+    "Shout_ArcaneVigor": {
+      "children": [
+        {
+          "id": "Shout_ArcaneVigor6",
+          "type": "Shout",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;HitPointDice06:2;",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent"
+        },
+        {
+          "id": "Shout_ArcaneVigor8",
+          "type": "Shout",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;HitPointDice08:2;",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent"
+        },
+        {
+          "id": "Shout_ArcaneVigor10",
+          "type": "Shout",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;HitPointDice10:2;",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent"
+        },
+        {
+          "id": "Shout_ArcaneVigor12",
+          "type": "Shout",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;HitPointDice12:2;",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent"
+        },
+        {
+          "id": "Shout_ArcaneVigorMinor6",
+          "type": "Shout",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;HitPointDice06:1;",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent"
+        },
+        {
+          "id": "Shout_ArcaneVigorMinor8",
+          "type": "Shout",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;HitPointDice08:1;",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent"
+        },
+        {
+          "id": "Shout_ArcaneVigorMinor10",
+          "type": "Shout",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;HitPointDice10:1;",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent"
+        },
+        {
+          "id": "Shout_ArcaneVigorMinor12",
+          "type": "Shout",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;HitPointDice12:1;",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent"
+        }
+      ],
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2;",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer",
+      "level": 2,
+      "name": "Arcane Vigor",
+      "school": "Abjuration"
     },
     "Shout_AshardalonsStride": {
       "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:3;",
@@ -581,6 +773,207 @@
       "name": "Detect Thoughts",
       "school": "Divination"
     },
+    "Shout_DisguiseSelf": {
+      "children": [
+        {
+          "id": "Shout_DisguiseSelf_Tiefling_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Tiefling_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Drow_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Drow_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Human_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Human_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Githyanki_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Githyanki_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Dwarf_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Dwarf_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Elf_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Elf_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_HalfElf_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_HalfElf_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Halfling_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Halfling_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Dragonborn_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Dragonborn_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_HalfOrc_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_HalfOrc_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Gnome_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Gnome_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Human_Strong_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Human_Strong_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Drow_Strong_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Drow_Strong_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Elf_Strong_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Elf_Strong_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_HalfElf_Strong_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_HalfElf_Strong_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Tiefling_Strong_Male",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Shout_DisguiseSelf_Tiefling_Strong_Female",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;IsLinkedSpellContainer",
+      "level": 1,
+      "name": "Disguise Self",
+      "school": "Illusion"
+    },
     "Shout_DispelEvilAndGood": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
       "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
@@ -622,6 +1015,27 @@
       "level": 4,
       "name": "Fire Dance",
       "school": "Illusion"
+    },
+    "Shout_FireShield": {
+      "children": [
+        {
+          "id": "Shout_FireShield_Chill",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell"
+        },
+        {
+          "id": "Shout_FireShield_Warm",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer;Wildshape",
+      "level": 4,
+      "name": "Fire Shield",
+      "school": "Evocation"
     },
     "Shout_FlameBlade": {
       "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
@@ -707,6 +1121,27 @@
       "name": "Speak with Animals",
       "school": "Divination"
     },
+    "Shout_SpiritGuardians": {
+      "children": [
+        {
+          "id": "Shout_SpiritGuardians_Necrotic",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful"
+        },
+        {
+          "id": "Shout_SpiritGuardians_Radiant",
+          "type": "Shout",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsHarmful;IsLinkedSpellContainer",
+      "level": 3,
+      "name": "Spirit Guardians",
+      "school": "Conjuration"
+    },
     "Shout_TideOfDarkness": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1;",
       "flags": "IsSpell;HasVerbalComponent;IsHarmful;HasSomaticComponent",
@@ -734,6 +1169,27 @@
       "level": 1,
       "name": "Animal Friendship",
       "school": "Enchantment"
+    },
+    "Target_AnimateDead": {
+      "children": [
+        {
+          "id": "Target_AnimateDead_YMS_Skeleton",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_AnimateDead_YMS_Zombie",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IgnorePreviouslyPickedEntities"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer",
+      "level": 3,
+      "name": "Animate Dead",
+      "school": "Necromancy"
     },
     "Target_Apo_Etherealness": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
@@ -769,6 +1225,13 @@
       "level": 7,
       "name": "Mirage Arcane",
       "school": "Illusion"
+    },
+    "Target_Apo_MordenkainensSword": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;CannotTargetItems;CannotTargetCharacter;IsConcentration",
+      "level": 7,
+      "name": "Mordenkainen's Sword",
+      "school": "Evocation"
     },
     "Target_Apo_PlaneShift": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
@@ -847,6 +1310,69 @@
       "name": "Barkskin",
       "school": "Transmutation"
     },
+    "Target_BestowCurse": {
+      "children": [
+        {
+          "id": "Target_BestowCurse_Ability_Strength",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Target_BestowCurse_Ability_Dexterity",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Target_BestowCurse_Ability_Constitution",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Target_BestowCurse_Ability_Intelligence",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Target_BestowCurse_Ability_Wisdom",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Target_BestowCurse_Ability_Charisma",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Target_BestowCurse_Attack",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Target_BestowCurse_ExtraDamage",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Target_BestowCurse_SkipTurn",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee;IsLinkedSpellContainer",
+      "level": 3,
+      "name": "Bestow Curse",
+      "school": "Necromancy"
+    },
     "Target_Bless": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
       "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IgnorePreviouslyPickedEntities",
@@ -924,6 +1450,45 @@
       "name": "Cloudkill",
       "school": "Conjuration"
     },
+    "Target_Command_Container": {
+      "children": [
+        {
+          "id": "Target_Command_Halt",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_Command_Approach",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_Command_Drop",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_Command_Flee",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_Command_Grovel",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities",
+      "level": 1,
+      "name": "Command",
+      "school": "Enchantment"
+    },
     "Target_CompelledDuel": {
       "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
       "flags": "HasVerbalComponent;IsConcentration;IsSpell;IsHarmful",
@@ -937,6 +1502,39 @@
       "level": 4,
       "name": "Confusion",
       "school": "Enchantment"
+    },
+    "Target_ConjureElemental_Container": {
+      "children": [
+        {
+          "id": "Target_ConjureElemental_Elemental_Air",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5 ",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration"
+        },
+        {
+          "id": "Target_ConjureElemental_Elemental_Earth",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5 ",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration"
+        },
+        {
+          "id": "Target_ConjureElemental_Elemental_Fire",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5 ",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration"
+        },
+        {
+          "id": "Target_ConjureElemental_Elemental_Water",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5 ",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5 ",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer;IsConcentration",
+      "level": 5,
+      "name": "Conjure Elemental",
+      "school": "Conjuration"
     },
     "Target_ConjureElementals_Minor_Container": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:4",
@@ -952,12 +1550,78 @@
       "name": "Conjure Woodland Being",
       "school": "Conjuration"
     },
+    "Target_Contagion": {
+      "children": [
+        {
+          "id": "Target_Contagion_BlindingSickness",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee"
+        },
+        {
+          "id": "Target_Contagion_FilthFever",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee"
+        },
+        {
+          "id": "Target_Contagion_FleshRot",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee"
+        },
+        {
+          "id": "Target_Contagion_Mindfire",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee"
+        },
+        {
+          "id": "Target_Contagion_Seizure",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee"
+        },
+        {
+          "id": "Target_Contagion_SlimyDoom",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsMelee"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsLinkedSpellContainer;IsMelee",
+      "level": 5,
+      "name": "Contagion",
+      "school": "Necromancy"
+    },
     "Target_Counterspell": {
       "costs": "ReactionActionPoint:1;SpellSlotsGroup:1:1:3",
       "flags": "IsSpell",
       "level": 3,
       "name": "Counterspell",
       "school": "Abjuration"
+    },
+    "Target_CreateDestroyWater": {
+      "children": [
+        {
+          "id": "Target_CreateWater",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;RangeIgnoreVerticalThreshold"
+        },
+        {
+          "id": "Target_DestroyWater",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer",
+      "level": 1,
+      "name": "Create or Destroy Water",
+      "school": "Transmutation"
     },
     "Target_CreateUndead": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
@@ -1008,6 +1672,27 @@
       "name": "Dawn",
       "school": "Evocation"
     },
+    "Target_Daylight_Container": {
+      "children": [
+        {
+          "id": "Target_Daylight",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter"
+        },
+        {
+          "id": "Target_Daylight_Enchantment",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;IsLinkedSpellContainer",
+      "level": 3,
+      "name": "Daylight",
+      "school": "Evocation"
+    },
     "Target_DeathArmor": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
       "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent",
@@ -1043,6 +1728,45 @@
       "name": "Dominate Person",
       "school": "Enchantment"
     },
+    "Target_DragonsBreath": {
+      "children": [
+        {
+          "id": "Target_DragonsBreath_Acid",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        },
+        {
+          "id": "Target_DragonsBreath_Cold",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        },
+        {
+          "id": "Target_DragonsBreath_Fire",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        },
+        {
+          "id": "Target_DragonsBreath_Lightning",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        },
+        {
+          "id": "Target_DragonsBreath_Poison",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        }
+      ],
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee;IsLinkedSpellContainer",
+      "level": 2,
+      "name": "Dragon's Breath",
+      "school": "Transmutation"
+    },
     "Target_Dream": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
       "flags": "IsSpell;HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsHarmful;RangeIgnoreVerticalThreshold",
@@ -1050,12 +1774,96 @@
       "name": "Dream",
       "school": "Illusion"
     },
+    "Target_ElementalWeapon": {
+      "children": [
+        {
+          "id": "Target_ElementalWeapon_Acid",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        },
+        {
+          "id": "Target_ElementalWeapon_Cold",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        },
+        {
+          "id": "Target_ElementalWeapon_Fire",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        },
+        {
+          "id": "Target_ElementalWeapon_Lightning",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        },
+        {
+          "id": "Target_ElementalWeapon_Thunder",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell;IsMelee;IsLinkedSpellContainer",
+      "level": 3,
+      "name": "Elemental Weapon",
+      "school": "Transmutation"
+    },
     "Target_Enervation": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
       "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsHarmful",
       "level": 5,
       "name": "Enervation",
       "school": "Necromancy"
+    },
+    "Target_EnhanceAbility": {
+      "children": [
+        {
+          "id": "Target_EnhanceAbility_BearsEndurance",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_EnhanceAbility_BullsStrength",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_EnhanceAbility_CatsGrace",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_EnhanceAbility_EaglesSplendor",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_EnhanceAbility_FoxsCunning",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        },
+        {
+          "id": "Target_EnhanceAbility_OwlsWisdom",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;IsLinkedSpellContainer;IgnorePreviouslyPickedEntities",
+      "level": 2,
+      "name": "Enhance Ability",
+      "school": "Transmutation"
     },
     "Target_Entangle": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
@@ -1070,6 +1878,33 @@
       "level": 2,
       "name": "Enthrall",
       "school": "Enchantment"
+    },
+    "Target_Eyebite": {
+      "children": [
+        {
+          "id": "Target_Eyebite_Asleep",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+          "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsConcentration;CannotTargetItems;CannotTargetTerrain;IsHarmful"
+        },
+        {
+          "id": "Target_Eyebite_Panicked",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+          "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsConcentration;CannotTargetItems;CannotTargetTerrain;IsHarmful"
+        },
+        {
+          "id": "Target_Eyebite_Sickened",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+          "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsConcentration;CannotTargetItems;CannotTargetTerrain;IsHarmful"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsLinkedSpellContainer;IsConcentration;IsHarmful",
+      "level": 6,
+      "name": "Eyebite",
+      "school": "Necromancy"
     },
     "Target_FaerieFire": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
@@ -1127,6 +1962,27 @@
       "name": "Freedom of Movement",
       "school": "Abjuration"
     },
+    "Target_FreezingSphere": {
+      "children": [
+        {
+          "id": "Target_FreezingSphere_Throw",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell"
+        },
+        {
+          "id": "Projectile_FreezingSphere_Hurl",
+          "type": "Projectile",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+          "flags": "IsSpell;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;Temporary"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "IsSpell;IsLinkedSpellContainer",
+      "level": 6,
+      "name": "Otiluke's Freezing Sphere",
+      "school": "Evocation"
+    },
     "Target_GaseousForm": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
       "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee;UnavailableInDialogs",
@@ -1139,6 +1995,57 @@
       "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration",
       "level": 6,
       "name": "Globe of Invulnerability",
+      "school": "Abjuration"
+    },
+    "Target_GlyphOfWarding": {
+      "children": [
+        {
+          "id": "Target_GlyphOfWarding_Acid",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems"
+        },
+        {
+          "id": "Target_GlyphOfWarding_Cold",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems"
+        },
+        {
+          "id": "Target_GlyphOfWarding_Fire",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems"
+        },
+        {
+          "id": "Target_GlyphOfWarding_Lightning",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems"
+        },
+        {
+          "id": "Target_GlyphOfWarding_Thunder",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems"
+        },
+        {
+          "id": "Target_GlyphOfWarding_Detonation",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems"
+        },
+        {
+          "id": "Target_GlyphOfWarding_Sleep",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer;CannotTargetItems",
+      "level": 3,
+      "name": "Glyph of Warding",
       "school": "Abjuration"
     },
     "Target_Goodberry": {
@@ -1393,6 +2300,33 @@
       "name": "Phantasmal Killer",
       "school": "Illusion"
     },
+    "Target_PlanarAlly_Container": {
+      "children": [
+        {
+          "id": "Target_PlanarAlly_Djinni",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        },
+        {
+          "id": "Target_PlanarAlly_Deva",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        },
+        {
+          "id": "Target_PlanarAlly_Cambion",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:6",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsLinkedSpellContainer;CannotTargetItems;CannotTargetCharacter;IsConcentration",
+      "level": 6,
+      "name": "Planar Ally",
+      "school": "Conjuration"
+    },
     "Target_PlanarBinding": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
       "flags": "HasVerbalComponent;HasSomaticComponent;HasHighGroundRangeExtension;IsConcentration;IsSpell;IsHarmful",
@@ -1420,6 +2354,45 @@
       "level": 7,
       "name": "Project Image",
       "school": "Illusion"
+    },
+    "Target_ProtectionFromEnergy": {
+      "children": [
+        {
+          "id": "Target_ProtectionFromEnergy_Acid",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee"
+        },
+        {
+          "id": "Target_ProtectionFromEnergy_Cold",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee"
+        },
+        {
+          "id": "Target_ProtectionFromEnergy_Fire",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee"
+        },
+        {
+          "id": "Target_ProtectionFromEnergy_Lightning",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee"
+        },
+        {
+          "id": "Target_ProtectionFromEnergy_Thunder",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsMelee"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsConcentration;IsLinkedSpellContainer;IsMelee",
+      "level": 3,
+      "name": "Protection from Energy",
+      "school": "Abjuration"
     },
     "Target_ProtectionFromEvilAndGood": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
@@ -1517,6 +2490,31 @@
       "flags": "IsMelee;IsHarmful;IsSpell;HasVerbalComponent",
       "level": 3,
       "name": "Blinding Smite",
+      "school": "Evocation",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:3"
+    },
+    "Target_Smite_Branding_Container": {
+      "children": [
+        {
+          "id": "Projectile_Smite_Branding",
+          "type": "Projectile",
+          "costs": "ActionPoint:1",
+          "flags": "IsSpell;HasVerbalComponent;IsConcentration;HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2"
+        },
+        {
+          "id": "Target_Smite_Branding",
+          "type": "Target",
+          "costs": "ActionPoint:1",
+          "flags": "IsSpell;HasVerbalComponent;IsMelee;IsConcentration;IsHarmful",
+          "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2"
+        }
+      ],
+      "costs": "ActionPoint:1",
+      "flags": "IsSpell;HasVerbalComponent;IsMelee;IsConcentration;IsHarmful;IsLinkedSpellContainer",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+      "level": 2,
+      "name": "Branding Smite",
       "school": "Evocation"
     },
     "Target_Smite_Searing": {
@@ -1524,21 +2522,24 @@
       "flags": "IsHarmful;HasVerbalComponent;IsSpell;IsMelee",
       "level": 1,
       "name": "Searing Smite",
-      "school": "Evocation"
+      "school": "Evocation",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
     },
     "Target_Smite_Thunderous": {
       "costs": "ActionPoint:1",
       "flags": "IsSpell;IsMelee;HasVerbalComponent;IsHarmful;AddFallDamageOnLand",
       "level": 1,
       "name": "Thunderous Smite",
-      "school": "Evocation"
+      "school": "Evocation",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
     },
     "Target_Smite_Wrathful": {
       "costs": "ActionPoint:1",
       "flags": "IsSpell;HasVerbalComponent;IsMelee;IsHarmful",
       "level": 1,
       "name": "Wrathful Smite",
-      "school": "Necromancy"
+      "school": "Necromancy",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
     },
     "Target_SpeakWithDead": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
@@ -1568,6 +2569,51 @@
       "name": "Spike Growth",
       "school": "Transmutation"
     },
+    "Target_SpiritualWeapon": {
+      "children": [
+        {
+          "id": "Target_SpiritualWeapon_Greataxe",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        },
+        {
+          "id": "Target_SpiritualWeapon_Greatsword",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        },
+        {
+          "id": "Target_SpiritualWeapon_Halberd",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        },
+        {
+          "id": "Target_SpiritualWeapon_Maul",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        },
+        {
+          "id": "Target_SpiritualWeapon_Spear",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        },
+        {
+          "id": "Target_SpiritualWeapon_Trident",
+          "type": "Target",
+          "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;CannotTargetItems;CannotTargetCharacter;IsConcentration"
+        }
+      ],
+      "costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;IsLinkedSpellContainer;CannotTargetItems;CannotTargetCharacter;IsConcentration",
+      "level": 2,
+      "name": "Spiritual Weapon",
+      "school": "Evocation"
+    },
     "Target_StinkingCloud": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
       "flags": "HasVerbalComponent;HasSomaticComponent;IsConcentration;IsSpell",
@@ -1581,6 +2627,27 @@
       "level": 4,
       "name": "Stoneskin",
       "school": "Transmutation"
+    },
+    "Target_SummonBeast": {
+      "children": [
+        {
+          "id": "Target_SummonBeast_GiantEagle",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;HasHighGroundRangeExtension;CannotTargetCharacter;CannotTargetItems;IsConcentration"
+        },
+        {
+          "id": "Target_SummonBeast_Wolf",
+          "type": "Target",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+          "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;HasHighGroundRangeExtension;CannotTargetCharacter;CannotTargetItems;IsConcentration"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2",
+      "flags": "IsSpell;HasSomaticComponent;HasVerbalComponent;HasHighGroundRangeExtension;CannotTargetCharacter;CannotTargetItems;IsConcentration;IsLinkedSpellContainer",
+      "level": 2,
+      "name": "Summon Beast",
+      "school": "Conjuration"
     },
     "Target_SummonCelestial": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:5",
@@ -1708,6 +2775,27 @@
       "name": "Aganazzar's Scorcher",
       "school": "Evocation"
     },
+    "Zone_AstralFlood": {
+      "children": [
+        {
+          "id": "Zone_AstralFlood_Cold",
+          "type": "Zone",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
+        },
+        {
+          "id": "Zone_AstralFlood_Radiant",
+          "type": "Zone",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;IsLinkedSpellContainer",
+      "level": 3,
+      "name": "Astral Flood",
+      "school": "Evocation"
+    },
     "Zone_BurningHands": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:1",
       "flags": "HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;CanAreaDamageEvade",
@@ -1735,6 +2823,45 @@
       "level": 3,
       "name": "Conjure Barrage",
       "school": "Conjuration"
+    },
+    "Zone_ElementalExhalation": {
+      "children": [
+        {
+          "id": "Zone_ElementalExhalation_Air",
+          "type": "Zone",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Zone_ElementalExhalation_Coldfire",
+          "type": "Zone",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Zone_ElementalExhalation_Earth",
+          "type": "Zone",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Zone_ElementalExhalation_Fire",
+          "type": "Zone",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer"
+        },
+        {
+          "id": "Zone_ElementalExhalation_Water",
+          "type": "Zone",
+          "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+          "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer"
+        }
+      ],
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3;",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsSpell;IsHarmful;CanAreaDamageEvade;IsLinkedSpellContainer",
+      "level": 3,
+      "name": "Elemental Exhalation",
+      "school": "Evocation"
     },
     "Zone_Fear": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
@@ -1771,6 +2898,13 @@
       "name": "Murder of Crows ",
       "school": "Conjuration"
     },
+    "Zone_PrismaticSpray": {
+      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
+      "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell;CanAreaDamageEvade",
+      "level": 7,
+      "name": "Prismatic Spray",
+      "school": "Evocation"
+    },
     "Zone_RimesBindingIce": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:2;",
       "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell",
@@ -1798,13 +2932,6 @@
       "level": 3,
       "name": "Tidal Wave",
       "school": "Conjuration"
-    },
-    "Zone_PrismaticSpray": {
-      "costs": "ActionPoint:1;SpellSlotsGroup:1:1:7",
-      "flags": "HasVerbalComponent;HasSomaticComponent;IsHarmful;IsSpell;CanAreaDamageEvade",
-      "level": 7,
-      "name": "Prismatic Spray",
-      "school": "Evocation"
     }
   }
 }

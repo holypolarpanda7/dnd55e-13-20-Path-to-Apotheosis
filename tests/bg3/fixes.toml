@@ -404,3 +404,68 @@ setup = [{ target = "host", status = "CONJURE_MINOR_ELEMENTALS_7", turns = 10 },
 expect = [{ target = "A", damage_type = "Acid" }, { target = "A", hp_change = [-300, -6] }]
 notes = "real_rolls: a scripted attack skips the roll, so the hit-only passive never fires. Acid is the toggle that defaults on. dnd55e's ConjureMinorElemental* passives check the cast level's status by name; gen_upcasts extend_name_checks adds the 7-9 clauses."
 
+
+[[case]]
+id = "fix81-extra-attack-3-only-one-chain"
+title = "Fighter 20 with Extra Attack (2) still known: one Attack action = four attacks, no fifth (#81)"
+spell = "Target_MainHandAttack"
+target = "A"
+repeat = 4
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", passive = "ExtraAttack_2" }, { target = "host", passive = "ExtraAttack_3" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+notes = "Before the fix ExtraAttack_2 ran its own chain beside ExtraAttack_3 (the base khn priority helpers don't know the _3 statuses)."
+expect = [
+  { cast = true },
+  { target = "host", status_applied_count = { status = "EXTRA_ATTACK_3", count = [1, 1] } },
+  { target = "host", status_applied_count = { status = "EXTRA_ATTACK_2", count = [1, 1] } },
+  { target = "host", status_absent = ["EXTRA_ATTACK", "EXTRA_ATTACK_2", "EXTRA_ATTACK_3"] },
+]
+
+[[case]]
+id = "fix82-msm-rote-smite-no-slot"
+mode = "ui"
+title = "Magic School Mastery: Rote Casting Searing Smite hits without spending a spell slot (#82: the slot was in HitCosts)"
+spell = "Target_Smite_Searing_EpicRote"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", passive = "EpicBoon_MagicSchoolMastery_Int" }, { target = "host", status = "EPIC_MSM_EVOCATION", turns = -1 },
+         { target = "host", status = "EPIC_MSM_ROTE_TARGET_SMITE_SEARING", turns = -1 },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AC(-30)" }]
+expect = [{ cast = true }, { target = "A", status_applied = ["SEARING_SMITE"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+
+[[case]]
+id = "fix83-psychic-missiles-mastered"
+title = "Psychic Missiles amulet adds a dart to the Spell Mastery Magic Missile too (#83)"
+notes = "A scripted cast at one target lands 1 dart without the amulet (control) and 2 with it: the +1 target the amulet adds. Before the fix the _SM copy got no extra dart (1)."
+spell = "Projectile_MagicMissile_SM"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", status = "SM_UNLOCK_MAGICMISSILE", turns = -1 }, { target = "host", passive = "UND_SocietyOfBrilliance_MagicMissileNecklace_Passive" }]
+expect = [{ cast = true }, { target = "A", damage_count = { count = [2, 2] } }]
+
+[[case]]
+id = "fix83-psychic-missiles-control"
+title = "Control: the mastered Magic Missile without the amulet (scripted, one target: 1 dart)"
+spell = "Projectile_MagicMissile_SM"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", status = "SM_UNLOCK_MAGICMISSILE", turns = -1 }]
+expect = [{ cast = true }, { target = "A", damage_count = { count = [1, 1] } }]
+
+[[case]]
+id = "fix81-opportunity-attack-no-leftover"
+mode = "player"
+title = "Fighter 20: after an opportunity attack on the enemy's turn, your own turn starts with no free attack left over (#81)"
+spell = "Target_MainHandAttack"
+target = "A"
+reactions = ["AttackOfOpportunity"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", passive = "ExtraAttack_2" }, { target = "host", passive = "ExtraAttack_3" }]
+instructions = "Apply FEARED to the wolf (Osi.ApplyStatus(wolf, \"FEARED\", 12.0, 1, host); a scripted move does NOT provoke an opportunity attack), end your turn (HUD End Turn); the wolf's own AI Dashes away and your opportunity attack fires. Verify at the start of your next turn, before acting."
+notes = "Report #81: Opportunity Attack -> your turn -> Extra Attack (2) was already up before the main attack. Driven by a script on the enemy's turn (2026-11-19)."
+expect = [
+  { interrupt_used = { name = "Interrupt_AttackOfOpportunity", count = [1, 9] } },
+  { target = "host", status_absent = ["EXTRA_ATTACK", "EXTRA_ATTACK_2", "EXTRA_ATTACK_3", "EXTRA_ATTACK_Q", "EXTRA_ATTACK_2_Q", "EXTRA_ATTACK_3_Q"] },
+]
