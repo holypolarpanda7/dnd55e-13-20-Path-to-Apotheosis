@@ -11,6 +11,9 @@ PHB 2024 rules and building on dnd55e. Every change is checked against [VISION.m
 [Script Extender](https://github.com/Norbyte/bg3se) (for a handful of scripted
 features and the test tooling).
 
+**Translations:** see [docs/TRANSLATING.md](docs/TRANSLATING.md). Each GitHub release has the English text file
+and the list of strings changed since the previous release.
+
 ## Coverage
 
 - **16 base classes** complete for levels 13–20 (including dnd55e's Artificer,
