@@ -47,6 +47,21 @@ data "StatsFunctorContext" "OnCast;OnStatusRemoved;OnStatusApplied"
 data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and ExtraAttackSpellCheck() and HasUseCosts('ActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased()) or (context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and StatusId('EXTRA_ATTACK_3_Q'))"
 data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(SELF,EXTRA_ATTACK_3_Q,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusRemoved)):ApplyStatus(EXTRA_ATTACK_3_Q,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and not HasHigherPriorityExtraAttackQueued('EXTRA_ATTACK_3_Q') and not HasAnyExtraAttack()):ApplyStatus(EXTRA_ATTACK_3, 100, 1)"
 
+// #81 (2026-11-19): base ExtraAttack_2 stands aside for ExtraAttack_3. The base khn helpers HasHigherPriorityExtraAttackQueued /
+// HasAnyExtraAttack list only base statuses, so they never see EXTRA_ATTACK_3_Q / EXTRA_ATTACK_3 and a Fighter 20 ran both chains
+// (an extra attack, e.g. after an opportunity attack). Fighter 20 keeps ExtraAttack_2 from level 11, so the guard is on the passive
+// (covers characters already at 20) rather than a PassivesRemoved. Otherwise identical to base/SharedDev ExtraAttack_2.
+new entry "ExtraAttack_2"
+type "PassiveData"
+using "ExtraAttack"
+data "DisplayName" "h3e6c622egb059g47e7gb925g7e82eae1bfda;2"
+data "Description" "h36aba2dbg6f37g4343ga32egcab0fd7edcb3;1"
+data "Icon" "PassiveFeature_ExtraAttack"
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnCast;OnStatusRemoved;OnStatusApplied"
+data "Conditions" "not HasPassive('ExtraAttack_3',context.Source) and ((context.HasContextFlag(StatsFunctorContext.OnCast) and ExtraAttackSpellCheck() and HasUseCosts('ActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased()) or (context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and StatusId('EXTRA_ATTACK_2_Q')))"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(SELF,EXTRA_ATTACK_2_Q,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusRemoved)):ApplyStatus(EXTRA_ATTACK_2_Q,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and not HasHigherPriorityExtraAttackQueued('EXTRA_ATTACK_2_Q') and not HasAnyExtraAttack()):ApplyStatus(EXTRA_ATTACK_2, 100, 1)"
+
 // ==============================================================================
 // BARBARIAN - Base Class Passives (Levels 13-20)
 // ==============================================================================
