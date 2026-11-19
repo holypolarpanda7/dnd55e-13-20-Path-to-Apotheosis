@@ -1129,7 +1129,7 @@
   <content contentuid="ha45e2df0f683508cab15bd52876828da" version="1">Boon of the Iron Mind</content>
   <content contentuid="h822d436534fd55bfab9863d78586f4fd" version="1">Unshakable Focus: taking damage never breaks your Concentration. (BG3 conditions that end Concentration on their own, such as being stunned, still do.)</content>
   <content contentuid="h86f4ba2818c957508e9ae832b390449d" version="1">Boon of Magic School Mastery</content>
-  <content contentuid="h017844e171d356d38d1482e9af4e62cf" version="1">Mastered School: choose a school of magic. Rote Casting: a level 1 spell of that school is always prepared and you can cast it without a spell slot or components. Signature Arcanum: a level 7 or lower spell of that school is always prepared; cast it once per Long Rest without a spell slot. (Requires the Spellcasting or Pact Magic feature; spells with variant menus aren't offered.)</content>
+  <content contentuid="h017844e171d356d38d1482e9af4e62cf" version="1">Mastered School: choose a school of magic. Rote Casting: a level 1 spell of that school is always prepared and you can cast it without a spell slot or components. Signature Arcanum: a level 7 or lower spell of that school is always prepared; cast it once per Long Rest without a spell slot. (Requires the Spellcasting or Pact Magic feature.)</content>
   <content contentuid="he4d56d9cd4c8513da7266f2cf81f2dda" version="1">Boon of Magic School Mastery (+1 Intelligence)</content>
   <content contentuid="h5f88aaa6cc45511eb787cfb5ff981c1b" version="1">Boon of Magic School Mastery (+1 Wisdom)</content>
   <content contentuid="he06e4e8cd94e5fa0a0854f6a767533f6" version="1">Boon of Magic School Mastery (+1 Charisma)</content>
@@ -4349,7 +4349,7 @@
   <content contentuid="h41749f700539553e9c88b7f6c349cb2e" version="1">Prerequisite: Level 19+.&lt;br&gt;&lt;br&gt;Grave Resistance: Resistance to Cold and Necrotic damage. Siphon Life: when an enemy within 120 feet is reduced to 0 Hit Points, you can use your Reaction to regain 50 Hit Points; once per Short or Long Rest.</content>
   <content contentuid="hdac897d65e9256b09c6de2fab91b1440" version="1">Prerequisite: Level 19+.&lt;br&gt;&lt;br&gt;Spell Overload: as a free action, ready an overload; the next damaging spell you cast with a spell slot treats any 1 or 2 on a damage die as a 3, and creatures it damages are knocked Prone. Returns when you roll Initiative or finish a Short or Long Rest. (Requires the Spellcasting or Pact Magic feature.)</content>
   <content contentuid="hf8eb0646941653739a2775446985d7bd" version="1">Prerequisite: Level 19+.&lt;br&gt;&lt;br&gt;Unshakable Focus: taking damage never breaks your Concentration. (BG3 conditions that end Concentration on their own, such as being stunned, still do.)</content>
-  <content contentuid="h26bd3ab2dfca514e83f6e54d5effb2e9" version="1">Prerequisite: Level 19+.&lt;br&gt;&lt;br&gt;Mastered School: choose a school of magic. Rote Casting: a level 1 spell of that school is always prepared and you can cast it without a spell slot or components. Signature Arcanum: a level 7 or lower spell of that school is always prepared; cast it once per Long Rest without a spell slot. (Requires the Spellcasting or Pact Magic feature; spells with variant menus aren't offered.)</content>
+  <content contentuid="h26bd3ab2dfca514e83f6e54d5effb2e9" version="1">Prerequisite: Level 19+.&lt;br&gt;&lt;br&gt;Mastered School: choose a school of magic. Rote Casting: a level 1 spell of that school is always prepared and you can cast it without a spell slot or components. Signature Arcanum: a level 7 or lower spell of that school is always prepared; cast it once per Long Rest without a spell slot. (Requires the Spellcasting or Pact Magic feature.)</content>
   <content contentuid="hd73e08aaf3ef5cb8b39e9ca4035d494d" version="1">Portal Step</content>
   <content contentuid="hf849c46061755ec787e9b863b596e452" version="1">Teleport up to 15 feet by spending 15 feet of movement. Uses equal to your Proficiency Bonus; returns on a Long Rest.</content>
   <content contentuid="hd55e1a2547675dcabc2c82735e09644b" version="1">Portal Step</content>
@@ -4658,4 +4658,148 @@
   <content contentuid="hcb04bc28c530538c88a05fdf8d1ebe9b" version="1">Mystical Connection: take the Priest</content>
   <content contentuid="h809fb4d8f43e5af4904137d231398330" version="1">Take the Priest instead of the spirit you just rolled. Spirits you channeled earlier stay.</content>
   <content contentuid="hde8c378f1aed5e4a8f98b029f7020625" version="1">Priest's Blessing</content>
+  <content contentuid="hc0718acb0ce450e4b08bfc945e8eb90f" version="1">Signature Arcanum: Arcane Vigor (level 2)</content>
+  <content contentuid="h687e0c344b5a55cea3d83d6323fee105" version="1">Choose Arcane Vigor as your Signature Arcanum spell.</content>
+  <content contentuid="h5b90ea7619cc5102bec1eac0c2cf934d" version="1">Signature Arcanum: Arcane Vigor</content>
+  <content contentuid="h167d3b20ed2d544fa365557ee8e8cfae" version="1">Arcane Vigor (Signature)</content>
+  <content contentuid="ha346de174a6a596ea3bdf6d90bea94c6" version="1">Signature Arcanum: Glyph of Warding (level 3)</content>
+  <content contentuid="h0c40e4ba787b584d98e308192e328644" version="1">Choose Glyph of Warding as your Signature Arcanum spell.</content>
+  <content contentuid="h4d23b0ee3f405e48b876733d58c19955" version="1">Signature Arcanum: Glyph of Warding</content>
+  <content contentuid="h313ef7f1c28059e0bda395b4d18edd60" version="1">Glyph of Warding (Signature)</content>
+  <content contentuid="h1130b9197eb0531d8a471107ab70de07" version="1">Signature Arcanum: Protection from Energy (level 3)</content>
+  <content contentuid="hfb6d5793daee5469843114279274517f" version="1">Choose Protection from Energy as your Signature Arcanum spell.</content>
+  <content contentuid="h83556fcf56fa5c9e912bc4ca39080d5d" version="1">Signature Arcanum: Protection from Energy</content>
+  <content contentuid="hed6cabf371d251fa992ff9faa72631a8" version="1">Protection from Energy (Signature)</content>
+  <content contentuid="hd5fe0f241f0d5dc695d34c482db60a96" version="1">Rote Casting: Ensnaring Strike (level 1)</content>
+  <content contentuid="hc27d248ab191556fa4c66debe4a56aaf" version="1">Choose Ensnaring Strike as your Rote Casting spell.</content>
+  <content contentuid="ha7750dbbefca5b3e9f09637ffdeee712" version="1">Rote Casting: Ensnaring Strike</content>
+  <content contentuid="hce0549a925695020911037f6e849f315" version="1">Ensnaring Strike (Rote)</content>
+  <content contentuid="h0dae03945a415c0abd69dc264cb4f9e3" version="1">Signature Arcanum: Ensnaring Strike (level 1)</content>
+  <content contentuid="h38951a5d2b76502d84c431a55b704c71" version="1">Choose Ensnaring Strike as your Signature Arcanum spell.</content>
+  <content contentuid="hfa74172c0d7153bfa5fef18524115b21" version="1">Signature Arcanum: Ensnaring Strike</content>
+  <content contentuid="h1556973e67cb5f6bb10019540d826c7a" version="1">Ensnaring Strike (Signature)</content>
+  <content contentuid="hba6d03145c89560691223630f162a1ef" version="1">Signature Arcanum: Conjure Celestial (level 7)</content>
+  <content contentuid="h013b54bdd96b5ad89d8d8c956738dfc0" version="1">Choose Conjure Celestial as your Signature Arcanum spell.</content>
+  <content contentuid="h9813076b77ec5c6cadad4658c3e260f9" version="1">Signature Arcanum: Conjure Celestial</content>
+  <content contentuid="hf229fdd69c9c52a2b8a751b7240ed6fa" version="1">Conjure Celestial (Signature)</content>
+  <content contentuid="h3299c1e4ad07504c8e075c2d1cef0df6" version="1">Signature Arcanum: Spirit Guardians (level 3)</content>
+  <content contentuid="h5e11b05f37b350798a440f7464acd084" version="1">Choose Spirit Guardians as your Signature Arcanum spell.</content>
+  <content contentuid="h29bb554eeef654fa82cc9565ce58c69a" version="1">Signature Arcanum: Spirit Guardians</content>
+  <content contentuid="hcf67a072dd4c527b8ff1764eb73cb711" version="1">Spirit Guardians (Signature)</content>
+  <content contentuid="hed201d96f03f59a2a95d228dc94d15fc" version="1">Signature Arcanum: Conjure Elemental (level 5)</content>
+  <content contentuid="h9db447bc436f5ff0bd117b8d772ad238" version="1">Choose Conjure Elemental as your Signature Arcanum spell.</content>
+  <content contentuid="h37a7aa46ce375137b5e7b002b3e12948" version="1">Signature Arcanum: Conjure Elemental</content>
+  <content contentuid="hd92d8b398fbd5429828439f811f735cf" version="1">Conjure Elemental (Signature)</content>
+  <content contentuid="hdc1720802cb053939b9d72d18009fd07" version="1">Signature Arcanum: Planar Ally (level 6)</content>
+  <content contentuid="hb7d08fb29f5d5732a3aec82906882614" version="1">Choose Planar Ally as your Signature Arcanum spell.</content>
+  <content contentuid="hcdad3c83d01356ddabfde22bb93e0ad9" version="1">Signature Arcanum: Planar Ally</content>
+  <content contentuid="h67032da19662550db5cb69743e597f22" version="1">Planar Ally (Signature)</content>
+  <content contentuid="h59033ec98f5e5154a63f13017000935d" version="1">Signature Arcanum: Summon Beast (level 2)</content>
+  <content contentuid="h0ecc4383a0e25b8b934d004b3660be4d" version="1">Choose Summon Beast as your Signature Arcanum spell.</content>
+  <content contentuid="h1d84bacb98fd5651b453efa3da6f4f8f" version="1">Signature Arcanum: Summon Beast</content>
+  <content contentuid="hb66f12449e5b51178423db05042e0b74" version="1">Summon Beast (Signature)</content>
+  <content contentuid="h84a05e0fdf1857e9b0408cf8c71f61a3" version="1">Rote Casting: Command (level 1)</content>
+  <content contentuid="h23a2d66cdf3957e6b2c7e3ab9261a7fa" version="1">Choose Command as your Rote Casting spell.</content>
+  <content contentuid="h60270a0bde54529ab4429fc681269f54" version="1">Rote Casting: Command</content>
+  <content contentuid="hea968fdfbd4c54dc9177000888bc05b5" version="1">Command (Rote)</content>
+  <content contentuid="h11743038d00c5494af79e768e93f60bb" version="1">Signature Arcanum: Command (level 1)</content>
+  <content contentuid="h570e926d626450de81ce5da9f1d29a21" version="1">Choose Command as your Signature Arcanum spell.</content>
+  <content contentuid="hd7d24f74d9375640b21a8a381bbe52a2" version="1">Signature Arcanum: Command</content>
+  <content contentuid="h8134c7d86e94548cb377c7a4e6b95f53" version="1">Command (Signature)</content>
+  <content contentuid="h8720a23672365b1cb3c707c2991abaa1" version="1">Rote Casting: Ballistic Smite (level 1)</content>
+  <content contentuid="h3678482f3c965451aa19f7de813b93d5" version="1">Choose Ballistic Smite as your Rote Casting spell.</content>
+  <content contentuid="hac59505fc52d5041b9bd6dfe1cc5a37b" version="1">Rote Casting: Ballistic Smite</content>
+  <content contentuid="ha918557a8d4851b1a80bf2d8576324a2" version="1">Ballistic Smite (Rote)</content>
+  <content contentuid="h28b86637a9565cbfb9306f0f74ecb9ac" version="1">Rote Casting: Chromatic Orb (level 1)</content>
+  <content contentuid="h60bf959557e859da8d6d8670e61606db" version="1">Choose Chromatic Orb as your Rote Casting spell.</content>
+  <content contentuid="hba75a0b07b275c39bdc3932824b8560d" version="1">Rote Casting: Chromatic Orb</content>
+  <content contentuid="hdcb17a7edb6b59b1b49d2dd4f6f3d081" version="1">Chromatic Orb (Rote)</content>
+  <content contentuid="h9a37abce06525087b405c21b3bbe32c3" version="1">Signature Arcanum: Ballistic Smite (level 1)</content>
+  <content contentuid="h225b456f641255f0b6adb069283f6300" version="1">Choose Ballistic Smite as your Signature Arcanum spell.</content>
+  <content contentuid="h7ec33550542d57cdae0ef18c7a99273d" version="1">Signature Arcanum: Ballistic Smite</content>
+  <content contentuid="hacff94769ce3534c9c7c9b2141d8b47a" version="1">Ballistic Smite (Signature)</content>
+  <content contentuid="h272d4d80bb5d5229a012cb9891808144" version="1">Signature Arcanum: Chromatic Orb (level 1)</content>
+  <content contentuid="h6d4db49a60835d57ba12d3014fc7b37a" version="1">Choose Chromatic Orb as your Signature Arcanum spell.</content>
+  <content contentuid="hcbd22cb30f6253838c3a6daa21c45221" version="1">Signature Arcanum: Chromatic Orb</content>
+  <content contentuid="he3bc2ae6b35a5949a21f478ec530ec90" version="1">Chromatic Orb (Signature)</content>
+  <content contentuid="hcd8b040dcf515c3fb2832eb24cd232e3" version="1">Signature Arcanum: Divine Word (level 7)</content>
+  <content contentuid="h3bbd92ea82b25839b14c898e786a0112" version="1">Choose Divine Word as your Signature Arcanum spell.</content>
+  <content contentuid="h81ed206ed0145669b1fcc88ee8051445" version="1">Signature Arcanum: Divine Word</content>
+  <content contentuid="h0d9c12b79ceb57579319059cfccbd33d" version="1">Divine Word (Signature)</content>
+  <content contentuid="h850b223b9098559ca42440f024d6a610" version="1">Signature Arcanum: Fire Shield (level 4)</content>
+  <content contentuid="hdd977a324bfc5464a883b47a194efb16" version="1">Choose Fire Shield as your Signature Arcanum spell.</content>
+  <content contentuid="h0c93e89db27454ce8fde677758a3be77" version="1">Signature Arcanum: Fire Shield</content>
+  <content contentuid="h23cc887a5e2250059dbabf08e88f882f" version="1">Fire Shield (Signature)</content>
+  <content contentuid="hf752dd2f2fa8544bad18a704b6f53e31" version="1">Signature Arcanum: Mordenkainen's Sword (level 7)</content>
+  <content contentuid="hf5c8669d2262528d8bbbd9918a1c2e39" version="1">Choose Mordenkainen's Sword as your Signature Arcanum spell.</content>
+  <content contentuid="h017a0e64ad9c5c3ba08236fba4398ca4" version="1">Signature Arcanum: Mordenkainen's Sword</content>
+  <content contentuid="h6ce8324a5e915e95833544b70b02579e" version="1">Mordenkainen's Sword (Signature)</content>
+  <content contentuid="h211d96a6b6c8529abf26e166e82b9fb7" version="1">Signature Arcanum: Daylight (level 3)</content>
+  <content contentuid="h6fbaa538e3bc56ea993410d9e8d0775b" version="1">Choose Daylight as your Signature Arcanum spell.</content>
+  <content contentuid="hf7db04d8718b5cda80df496984f1c645" version="1">Signature Arcanum: Daylight</content>
+  <content contentuid="h4b99ec87ba655526b40aec48e829aca9" version="1">Daylight (Signature)</content>
+  <content contentuid="hbedc9bf73c33529d9e32d95cd975036e" version="1">Signature Arcanum: Otiluke's Freezing Sphere (level 6)</content>
+  <content contentuid="hd6e931e5f10b57a18d994cbafd77d7b1" version="1">Choose Otiluke's Freezing Sphere as your Signature Arcanum spell.</content>
+  <content contentuid="hccb84c731f07580b8dfb623b3c3ae7a7" version="1">Signature Arcanum: Otiluke's Freezing Sphere</content>
+  <content contentuid="h669c486a8465536a89a295729fd85003" version="1">Otiluke's Freezing Sphere (Signature)</content>
+  <content contentuid="h87f2f925d1b35040bdf1bea7fa711925" version="1">Signature Arcanum: Branding Smite (level 2)</content>
+  <content contentuid="h1a274d0c3cb55fdd81da0042e8d367f5" version="1">Choose Branding Smite as your Signature Arcanum spell.</content>
+  <content contentuid="hd7e72a4055ea511998c9c88fb1df2679" version="1">Signature Arcanum: Branding Smite</content>
+  <content contentuid="h031f8119570654ff8a86823375a5ac93" version="1">Branding Smite (Signature)</content>
+  <content contentuid="hdd9c2c30f5315ebb93aae3963d5cff51" version="1">Signature Arcanum: Spiritual Weapon (level 2)</content>
+  <content contentuid="h98c30a0307dd5ef9a92a238330915579" version="1">Choose Spiritual Weapon as your Signature Arcanum spell.</content>
+  <content contentuid="hb9ada429e0f75e06bc6e203e131ea652" version="1">Signature Arcanum: Spiritual Weapon</content>
+  <content contentuid="h7c9a6d0ecb4351a1a5276d46c75c9df3" version="1">Spiritual Weapon (Signature)</content>
+  <content contentuid="he1864a08a5e9529f9ecddfcea381f165" version="1">Signature Arcanum: Astral Flood (level 3)</content>
+  <content contentuid="h736408c9fc8a5e91be5be9ac5e000c46" version="1">Choose Astral Flood as your Signature Arcanum spell.</content>
+  <content contentuid="h1c1968009cfe571f93d8a457752e705d" version="1">Signature Arcanum: Astral Flood</content>
+  <content contentuid="hda8ea10e6ee8509086874a55f3cd166e" version="1">Astral Flood (Signature)</content>
+  <content contentuid="hc573151e17445a4eb2404130cd1cb7db" version="1">Signature Arcanum: Elemental Exhalation (level 3)</content>
+  <content contentuid="h02c14a56816b55df8ee22fb288db868d" version="1">Choose Elemental Exhalation as your Signature Arcanum spell.</content>
+  <content contentuid="h9a005db9904d5fd4941697a7c31fac21" version="1">Signature Arcanum: Elemental Exhalation</content>
+  <content contentuid="h20683b02e86655b89fc8e4f21eaa6711" version="1">Elemental Exhalation (Signature)</content>
+  <content contentuid="h6067685e63595741b3f76b46120ac53e" version="1">Rote Casting: Disguise Self (level 1)</content>
+  <content contentuid="h9b25bfdce5dd558cb535d5d272ca7736" version="1">Choose Disguise Self as your Rote Casting spell.</content>
+  <content contentuid="h1446f82e06ac5f97bdf35f2c66a1e53b" version="1">Rote Casting: Disguise Self</content>
+  <content contentuid="h25a65eae14a25c92b63c8fde8aec58f9" version="1">Disguise Self (Rote)</content>
+  <content contentuid="hdcb72e134b825bebaa8c4a9617f4e366" version="1">Signature Arcanum: Disguise Self (level 1)</content>
+  <content contentuid="h4b75a78a94b458719d7e72aa318f48a2" version="1">Choose Disguise Self as your Signature Arcanum spell.</content>
+  <content contentuid="haa49bf02d2315f488fe535ed48e2b5ac" version="1">Signature Arcanum: Disguise Self</content>
+  <content contentuid="hd420c6fbfc4e5b2aaadb7cc25232faf3" version="1">Disguise Self (Signature)</content>
+  <content contentuid="h6f4e61ac807f524b813301bfef6ec759" version="1">Signature Arcanum: Animate Dead (level 3)</content>
+  <content contentuid="hb35103544b5856e1b636a58ca19093ee" version="1">Choose Animate Dead as your Signature Arcanum spell.</content>
+  <content contentuid="hf8ea4242d95159178a1cc978b575bfd5" version="1">Signature Arcanum: Animate Dead</content>
+  <content contentuid="h8f755c223afe518e82e01eb7de1b6482" version="1">Animate Dead (Signature)</content>
+  <content contentuid="h45bb8f7d148b5e5da7eaf6a5b7096415" version="1">Signature Arcanum: Bestow Curse (level 3)</content>
+  <content contentuid="hd1425d442a525b9c87750a669b5fd44c" version="1">Choose Bestow Curse as your Signature Arcanum spell.</content>
+  <content contentuid="he9397e5b10485ad3b55bb98b0b94d17c" version="1">Signature Arcanum: Bestow Curse</content>
+  <content contentuid="hea03168f140f5ba6821830f9b8a3a979" version="1">Bestow Curse (Signature)</content>
+  <content contentuid="ha2cd383f2c7356e1b81bbb1dda365136" version="1">Signature Arcanum: Contagion (level 5)</content>
+  <content contentuid="hf51af4f869b35070839f60852919294f" version="1">Choose Contagion as your Signature Arcanum spell.</content>
+  <content contentuid="h4195343dbb385ceba16c0f82a07676c9" version="1">Signature Arcanum: Contagion</content>
+  <content contentuid="hd368c616e3385ee2a9ec76d7722398c0" version="1">Contagion (Signature)</content>
+  <content contentuid="h3bff5d3b64b3591a8e50931faf94adb6" version="1">Signature Arcanum: Eyebite (level 6)</content>
+  <content contentuid="h8a9e0c120f375367bca6b36b524b2331" version="1">Choose Eyebite as your Signature Arcanum spell.</content>
+  <content contentuid="h7551561b14565b62bfc2dbb48a989f03" version="1">Signature Arcanum: Eyebite</content>
+  <content contentuid="h7bb49c68bdfb5e33b687f26efaa41b3f" version="1">Eyebite (Signature)</content>
+  <content contentuid="h866e4a14d9195d3bac9dd5f944774bc7" version="1">Rote Casting: Create or Destroy Water (level 1)</content>
+  <content contentuid="hb9b8116b2b0e5dcf9fea1de9edf8efd1" version="1">Choose Create or Destroy Water as your Rote Casting spell.</content>
+  <content contentuid="h8c6c25b3358c501a96a5993c2303b043" version="1">Rote Casting: Create or Destroy Water</content>
+  <content contentuid="h1086b7c49d85551d8a75e0b1bda8f1cb" version="1">Create or Destroy Water (Rote)</content>
+  <content contentuid="h2eaa5e88296b5f4e860fb83f61fb0560" version="1">Signature Arcanum: Create or Destroy Water (level 1)</content>
+  <content contentuid="h4899a0bf4b265f1f97bfd8d0e05096ee" version="1">Choose Create or Destroy Water as your Signature Arcanum spell.</content>
+  <content contentuid="ha638a2249e9e51a2a45c3a9ac4c2f595" version="1">Signature Arcanum: Create or Destroy Water</content>
+  <content contentuid="h19e929c0b8be562e99644072d5542256" version="1">Create or Destroy Water (Signature)</content>
+  <content contentuid="h2e5b21ea09c35ca296b52d4895b507d0" version="1">Signature Arcanum: Dragon's Breath (level 2)</content>
+  <content contentuid="hf1bccd267e895b638276c65128ced8dd" version="1">Choose Dragon's Breath as your Signature Arcanum spell.</content>
+  <content contentuid="hc8851182e63352cd8aafcd3cb4c7244a" version="1">Signature Arcanum: Dragon's Breath</content>
+  <content contentuid="h0279725ce6835d22b2fcdc1d3e304611" version="1">Dragon's Breath (Signature)</content>
+  <content contentuid="h0890790acbcf5461bce6f400ba709e3b" version="1">Signature Arcanum: Elemental Weapon (level 3)</content>
+  <content contentuid="h86b7b20ba474545dac79b199716724a3" version="1">Choose Elemental Weapon as your Signature Arcanum spell.</content>
+  <content contentuid="h85212e292f995fdaaae7df927999168d" version="1">Signature Arcanum: Elemental Weapon</content>
+  <content contentuid="hb540a82cad5d58e99e4fb1edf3f7c452" version="1">Elemental Weapon (Signature)</content>
+  <content contentuid="hfe9402e0b3ec5cabb4a70f28bbb99efc" version="1">Signature Arcanum: Enhance Ability (level 2)</content>
+  <content contentuid="h5bff4396504d51e8abd446af93783558" version="1">Choose Enhance Ability as your Signature Arcanum spell.</content>
+  <content contentuid="h762efd98ca9c596b8ca6f8dcbb7eff93" version="1">Signature Arcanum: Enhance Ability</content>
+  <content contentuid="h189b476a303a52d2934ba2b3264d69ce" version="1">Enhance Ability (Signature)</content>
 </contentList>
