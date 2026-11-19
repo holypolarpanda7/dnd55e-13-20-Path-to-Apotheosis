@@ -494,8 +494,11 @@ def picker(name, title, desc, children, cost):
 def free_copy(spell, suffix, extra_cost, strip_components, info=None, label=None):
     info = info or MSM["spells"][spell]
     label = label or ("Rote" if suffix == "EpicRote" else "Signature")
-    costs = ";".join(c for c in info["costs"].split(";") if c and not c.startswith("SpellSlotsGroup") and not c.startswith("WarlockSpellSlot"))
-    costs = ";".join(c for c in [costs, extra_cost] if c)
+    def no_slot(cs):
+        return ";".join(c for c in cs.split(";") if c and not c.startswith("SpellSlotsGroup") and not c.startswith("WarlockSpellSlot"))
+    costs = ";".join(c for c in [no_slot(info["costs"]), extra_cost] if c)
+    # smites pay their slot in HitCosts, on the hit (#82, 2026-11-19); the pools carry them (export_spell_hit_costs.py)
+    hit = {"HitCosts": no_slot(info["hit_costs"])} if info.get("hit_costs") else {}
     flags = info["flags"]
     # a free copy is never a spell menu: an IsLinkedSpellContainer copy without ContainerSpells shows an empty menu in the hotbar and
     # can't be cast (Control Weather's, 2026-10-28) - except Shield, whose copies are reactions like the base game's
@@ -503,7 +506,7 @@ def free_copy(spell, suffix, extra_cost, strip_components, info=None, label=None
         flags = ";".join(f for f in flags.split(";") if f and f != "IsLinkedSpellContainer")
     if strip_components:
         flags = ";".join(f for f in flags.split(";") if f and f not in ("HasVerbalComponent", "HasSomaticComponent"))
-    SP_LATE.append(entry(f"{spell}_{suffix}", "SpellData", {"UseCosts": costs, "SpellFlags": flags,
+    SP_LATE.append(entry(f"{spell}_{suffix}", "SpellData", {"UseCosts": costs, **hit, "SpellFlags": flags,
                                                        "DisplayName": h(f"{spell}_{suffix}:n", f"{info['name']} ({label})")},
                     using=spell))
 

@@ -1517,28 +1517,32 @@
       "flags": "IsMelee;IsHarmful;IsSpell;HasVerbalComponent",
       "level": 3,
       "name": "Blinding Smite",
-      "school": "Evocation"
+      "school": "Evocation",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:3"
     },
     "Target_Smite_Searing": {
       "costs": "ActionPoint:1",
       "flags": "IsHarmful;HasVerbalComponent;IsSpell;IsMelee",
       "level": 1,
       "name": "Searing Smite",
-      "school": "Evocation"
+      "school": "Evocation",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
     },
     "Target_Smite_Thunderous": {
       "costs": "ActionPoint:1",
       "flags": "IsSpell;IsMelee;HasVerbalComponent;IsHarmful;AddFallDamageOnLand",
       "level": 1,
       "name": "Thunderous Smite",
-      "school": "Evocation"
+      "school": "Evocation",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
     },
     "Target_Smite_Wrathful": {
       "costs": "ActionPoint:1",
       "flags": "IsSpell;HasVerbalComponent;IsMelee;IsHarmful",
       "level": 1,
       "name": "Wrathful Smite",
-      "school": "Necromancy"
+      "school": "Necromancy",
+      "hit_costs": "BonusActionPoint:1;SpellSlotsGroup:1:1:1"
     },
     "Target_SpeakWithDead": {
       "costs": "ActionPoint:1;SpellSlotsGroup:1:1:3",
