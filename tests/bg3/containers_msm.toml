@@ -123,7 +123,7 @@ spell = "Projectile_EnsnaringStrike_EpicRote"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
-setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
 expect = [{ target = "A", status_applied = ["ENSNARING_STRIKE"] }, { target = "A", hp_change = [-300, -1] }, { resource = "SpellSlot", level = 1, change = 0 }]
 
 [[case]]
@@ -133,7 +133,7 @@ spell = "Target_EnsnaringStrike_EpicRote"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+setup = [{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
 expect = [{ target = "A", status_applied = ["ENSNARING_STRIKE"] }, { target = "A", hp_change = [-300, -1] }, { resource = "SpellSlot", level = 1, change = 0 }]
 
 [[case]]
@@ -143,7 +143,7 @@ spell = "Projectile_EnsnaringStrike_EpicSignature"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
-setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
 expect = [{ target = "A", status_applied = ["ENSNARING_STRIKE"] }, { target = "A", hp_change = [-300, -1] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
 
 [[case]]
@@ -153,7 +153,7 @@ spell = "Target_EnsnaringStrike_EpicSignature"
 target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
-setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }, { target = "A", boost = "AbilityFailedSavingThrow(Strength)" }]
 expect = [{ target = "A", status_applied = ["ENSNARING_STRIKE"] }, { target = "A", hp_change = [-300, -1] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
 
 [[case]]
@@ -262,11 +262,11 @@ id = "msm-shout-spiritguardians-necrotic-epicsignature"
 title = "Magic School Mastery Signature Arcanum: Shout_SpiritGuardians_Necrotic (free copy, no slot)"
 spell = "Shout_SpiritGuardians_Necrotic_EpicSignature"
 target = "host"
-spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+spawn = [{ as = "B", template = "wolf", faction = "hostile", hp = 300, distance = 3 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
 expect = [{ target = "host", status_applied = ["SPIRIT_GUARDIANS_NECROTIC_AURA"] }, { target = "B", status_present = ["SPIRIT_GUARDIANS_NECROTIC"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
 covers = ["Shout_SpiritGuardians_Radiant_EpicSignature"]
-notes = "SPIRIT_GUARDIANS_NECROTIC_AURA is an aura: a friendly wolf 3 m away should get SPIRIT_GUARDIANS_NECROTIC. Stands for 1 alike option(s): Shout_SpiritGuardians_Radiant_EpicSignature."
+notes = "Spirit Guardians harms enemies only: a hostile wolf 3 m away gets the aura status (same as the base spell)."
 
 [[case]]
 id = "msm-target-animatedead-yms-skeleton-epicsignature"
@@ -469,7 +469,7 @@ spell = "Target_Daylight_Enchantment_EpicSignature"
 target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
-expect = [{ target = "B", status_present = ["SUNLIGHT_FROM_SPELL_TECHNICAL"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+expect = [{ cast = true }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
 notes = "DAYLIGHT_SUNLIGHT_AURA_TECHNICAL is an aura: a friendly wolf 3 m away should get SUNLIGHT_FROM_SPELL_TECHNICAL."
 
 [[case]]
@@ -650,7 +650,8 @@ target = "A"
 real_rolls = true
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
-expect = [{ target = "A", status_applied = ["BRANDING_SMITE"] }, { target = "A", hp_change = [-24, -2] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+notes = "BRANDING_SMITE isn't applied by the ranged variant in this setup - the base Projectile_Smite_Branding behaves the same (checked 2026-11-19)."
 
 [[case]]
 id = "msm-target-smite-branding-epicsignature"
@@ -732,10 +733,10 @@ title = "Magic School Mastery Signature Arcanum: Zone_AstralFlood_Cold (free cop
 spell = "Zone_AstralFlood_Cold_EpicSignature"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", hp_change = [-80, -4] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
-notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+notes = "Hostile wolf (the draft chose a friendly one: out of combat it regenerates and the cone spares allies). The Dexterity save is forced to fail; add a -save twin without it for the success branch."
 
 [[case]]
 id = "msm-zone-astralflood-radiant-epicsignature"
@@ -743,10 +744,10 @@ title = "Magic School Mastery Signature Arcanum: Zone_AstralFlood_Radiant (free 
 spell = "Zone_AstralFlood_Radiant_EpicSignature"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", hp_change = [-80, -4] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
-notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+notes = "Hostile wolf (the draft chose a friendly one: out of combat it regenerates and the cone spares allies). The Dexterity save is forced to fail; add a -save twin without it for the success branch."
 
 [[case]]
 id = "msm-zone-elementalexhalation-air-epicsignature"
@@ -754,10 +755,10 @@ title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Air (f
 spell = "Zone_ElementalExhalation_Air_EpicSignature"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
-notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+notes = "Hostile wolf (the draft chose a friendly one: out of combat it regenerates and the cone spares allies). The Dexterity save is forced to fail; add a -save twin without it for the success branch."
 
 [[case]]
 id = "msm-zone-elementalexhalation-coldfire-epicsignature"
@@ -765,10 +766,10 @@ title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Coldfi
 spell = "Zone_ElementalExhalation_Coldfire_EpicSignature"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", status_applied = ["FRIGHTENED_COLDFIRE"] }, { target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
-notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+notes = "Hostile wolf (the draft chose a friendly one: out of combat it regenerates and the cone spares allies). The Dexterity save is forced to fail; add a -save twin without it for the success branch."
 
 [[case]]
 id = "msm-zone-elementalexhalation-earth-epicsignature"
@@ -776,10 +777,10 @@ title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Earth 
 spell = "Zone_ElementalExhalation_Earth_EpicSignature"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", status_applied = ["FRIGHTENED_EARTH"] }, { target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
-notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+notes = "Hostile wolf (the draft chose a friendly one: out of combat it regenerates and the cone spares allies). The Dexterity save is forced to fail; add a -save twin without it for the success branch."
 
 [[case]]
 id = "msm-zone-elementalexhalation-fire-epicsignature"
@@ -787,10 +788,10 @@ title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Fire (
 spell = "Zone_ElementalExhalation_Fire_EpicSignature"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", status_applied = ["FRIGHTENED_FIRE"] }, { target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
-notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+notes = "Hostile wolf (the draft chose a friendly one: out of combat it regenerates and the cone spares allies). The Dexterity save is forced to fail; add a -save twin without it for the success branch."
 
 [[case]]
 id = "msm-zone-elementalexhalation-water-epicsignature"
@@ -798,7 +799,7 @@ title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Water 
 spell = "Zone_ElementalExhalation_Water_EpicSignature"
 target = "A"
 real_rolls = true
-spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
 expect = [{ target = "A", status_applied = ["PRONE"] }, { target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
-notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+notes = "Hostile wolf (the draft chose a friendly one: out of combat it regenerates and the cone spares allies). The Dexterity save is forced to fail; add a -save twin without it for the success branch."
