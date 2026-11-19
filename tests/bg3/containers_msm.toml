@@ -1,0 +1,804 @@
+# Boon of Magic School Mastery: Rote/Signature free copies of spells with variant menus (2026-11-19, #82).
+# One case per behaviour group of every copy's menu (bg3_lint_container_tests). Drafted by bg3_test_draft, then
+# post-processed: statuses that only land under a condition the draft can't stage (AI helper, Item(), Heightened) are
+# dropped, and each case also checks that the copy's loaded costs spend no spell slot.
+# Run: bg3_test_run("apotheosis", "<id>").
+
+[suite]
+name = "Magic School Mastery containers"
+mode = "script"
+
+[[case]]
+id = "msm-projectile-ballisticsmite-acid-epicrote"
+title = "Magic School Mastery Rote Casting: Projectile_BallisticSmite_Acid (free copy, no slot)"
+spell = "Projectile_BallisticSmite_Acid_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "SpellSlot", level = 1, change = 0 }]
+covers = ["Projectile_BallisticSmite_Poison_EpicRote", "Projectile_BallisticSmite_Thunder_EpicRote"]
+notes = "Stands for 2 alike option(s): Projectile_BallisticSmite_Poison_EpicRote, Projectile_BallisticSmite_Thunder_EpicRote."
+
+[[case]]
+id = "msm-projectile-ballisticsmite-cold-epicrote"
+title = "Magic School Mastery Rote Casting: Projectile_BallisticSmite_Cold (free copy, no slot)"
+spell = "Projectile_BallisticSmite_Cold_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-projectile-ballisticsmite-fire-epicrote"
+title = "Magic School Mastery Rote Casting: Projectile_BallisticSmite_Fire (free copy, no slot)"
+spell = "Projectile_BallisticSmite_Fire_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-projectile-ballisticsmite-lightning-epicrote"
+title = "Magic School Mastery Rote Casting: Projectile_BallisticSmite_Lightning (free copy, no slot)"
+spell = "Projectile_BallisticSmite_Lightning_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-projectile-ballisticsmite-acid-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Projectile_BallisticSmite_Acid (free copy, no slot)"
+spell = "Projectile_BallisticSmite_Acid_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+covers = ["Projectile_BallisticSmite_Poison_EpicSignature", "Projectile_BallisticSmite_Thunder_EpicSignature"]
+notes = "Stands for 2 alike option(s): Projectile_BallisticSmite_Poison_EpicSignature, Projectile_BallisticSmite_Thunder_EpicSignature."
+
+[[case]]
+id = "msm-projectile-ballisticsmite-cold-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Projectile_BallisticSmite_Cold (free copy, no slot)"
+spell = "Projectile_BallisticSmite_Cold_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-projectile-ballisticsmite-fire-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Projectile_BallisticSmite_Fire (free copy, no slot)"
+spell = "Projectile_BallisticSmite_Fire_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-projectile-ballisticsmite-lightning-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Projectile_BallisticSmite_Lightning (free copy, no slot)"
+spell = "Projectile_BallisticSmite_Lightning_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-24, -2] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-projectile-chromaticorb-acid-epicrote"
+title = "Magic School Mastery Rote Casting: Projectile_ChromaticOrb_Acid (free copy, no slot)"
+spell = "Projectile_ChromaticOrb_Acid_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "RollBonus(RangedSpellAttack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-48, -3] }, { resource = "SpellSlot", level = 1, change = 0 }]
+covers = ["Projectile_ChromaticOrb_Cold_EpicRote", "Projectile_ChromaticOrb_Fire_EpicRote", "Projectile_ChromaticOrb_Lightning_EpicRote", "Projectile_ChromaticOrb_Poison_EpicRote", "Projectile_ChromaticOrb_Thunder_EpicRote"]
+notes = "Stands for 5 alike option(s): Projectile_ChromaticOrb_Cold_EpicRote, Projectile_ChromaticOrb_Fire_EpicRote, Projectile_ChromaticOrb_Lightning_EpicRote...."
+
+[[case]]
+id = "msm-projectile-chromaticorb-acid-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Projectile_ChromaticOrb_Acid (free copy, no slot)"
+spell = "Projectile_ChromaticOrb_Acid_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(RangedSpellAttack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", hp_change = [-48, -3] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+covers = ["Projectile_ChromaticOrb_Cold_EpicSignature", "Projectile_ChromaticOrb_Fire_EpicSignature", "Projectile_ChromaticOrb_Lightning_EpicSignature", "Projectile_ChromaticOrb_Poison_EpicSignature", "Projectile_ChromaticOrb_Thunder_EpicSignature"]
+notes = "Stands for 5 alike option(s): Projectile_ChromaticOrb_Cold_EpicSignature, Projectile_ChromaticOrb_Fire_EpicSignature, Projectile_ChromaticOrb_Lightning_EpicSignature...."
+
+[[case]]
+id = "msm-projectile-ensnaringstrike-epicrote"
+title = "Magic School Mastery Rote Casting: Projectile_EnsnaringStrike (free copy, no slot)"
+spell = "Projectile_EnsnaringStrike_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", status_applied = ["ENSNARING_STRIKE"] }, { target = "A", hp_change = [-300, -1] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-target-ensnaringstrike-epicrote"
+title = "Magic School Mastery Rote Casting: Target_EnsnaringStrike (free copy, no slot)"
+spell = "Target_EnsnaringStrike_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", status_applied = ["ENSNARING_STRIKE"] }, { target = "A", hp_change = [-300, -1] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-projectile-ensnaringstrike-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Projectile_EnsnaringStrike (free copy, no slot)"
+spell = "Projectile_EnsnaringStrike_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", status_applied = ["ENSNARING_STRIKE"] }, { target = "A", hp_change = [-300, -1] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-target-ensnaringstrike-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_EnsnaringStrike (free copy, no slot)"
+spell = "Target_EnsnaringStrike_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", status_applied = ["ENSNARING_STRIKE"] }, { target = "A", hp_change = [-300, -1] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-shout-arcanevigor6-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_ArcaneVigor6 (free copy, no slot)"
+spell = "Shout_ArcaneVigor6_EpicSignature"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "ActionResource(HitPointDice06,8,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "HitPointDice06", level = 0, change = -2 }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-shout-arcanevigor8-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_ArcaneVigor8 (free copy, no slot)"
+spell = "Shout_ArcaneVigor8_EpicSignature"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "ActionResource(HitPointDice08,8,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "HitPointDice08", level = 0, change = -2 }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-shout-arcanevigor10-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_ArcaneVigor10 (free copy, no slot)"
+spell = "Shout_ArcaneVigor10_EpicSignature"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "ActionResource(HitPointDice10,8,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "HitPointDice10", level = 0, change = -2 }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-shout-arcanevigor12-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_ArcaneVigor12 (free copy, no slot)"
+spell = "Shout_ArcaneVigor12_EpicSignature"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "ActionResource(HitPointDice12,8,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "HitPointDice12", level = 0, change = -2 }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-shout-arcanevigorminor6-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_ArcaneVigorMinor6 (free copy, no slot)"
+spell = "Shout_ArcaneVigorMinor6_EpicSignature"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "ActionResource(HitPointDice06,7,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "HitPointDice06", level = 0, change = -1 }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-shout-arcanevigorminor8-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_ArcaneVigorMinor8 (free copy, no slot)"
+spell = "Shout_ArcaneVigorMinor8_EpicSignature"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "ActionResource(HitPointDice08,7,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "HitPointDice08", level = 0, change = -1 }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-shout-arcanevigorminor10-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_ArcaneVigorMinor10 (free copy, no slot)"
+spell = "Shout_ArcaneVigorMinor10_EpicSignature"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "ActionResource(HitPointDice10,7,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "HitPointDice10", level = 0, change = -1 }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-shout-arcanevigorminor12-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_ArcaneVigorMinor12 (free copy, no slot)"
+spell = "Shout_ArcaneVigorMinor12_EpicSignature"
+target = "host"
+safety = false
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "ActionResource(HitPointDice12,7,0)" }, { target = "host", hp = 1 }]
+expect = [{ target = "host", hp_change = [1, 999] }, { resource = "HitPointDice12", level = 0, change = -1 }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-shout-disguiseself-tiefling-male-epicrote"
+title = "Magic School Mastery Rote Casting: Shout_DisguiseSelf_Tiefling_Male (free copy, no slot)"
+spell = "Shout_DisguiseSelf_Tiefling_Male_EpicRote"
+target = "host"
+expect = [{ target = "host", status_applied = ["DISGUISE_SELF_TIEFLING_MALE"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+covers = ["Shout_DisguiseSelf_Tiefling_Female_EpicRote", "Shout_DisguiseSelf_Drow_Male_EpicRote", "Shout_DisguiseSelf_Drow_Female_EpicRote", "Shout_DisguiseSelf_Human_Male_EpicRote", "Shout_DisguiseSelf_Human_Female_EpicRote", "Shout_DisguiseSelf_Githyanki_Male_EpicRote", "Shout_DisguiseSelf_Githyanki_Female_EpicRote", "Shout_DisguiseSelf_Dwarf_Male_EpicRote", "Shout_DisguiseSelf_Dwarf_Female_EpicRote", "Shout_DisguiseSelf_Elf_Male_EpicRote", "Shout_DisguiseSelf_Elf_Female_EpicRote", "Shout_DisguiseSelf_HalfElf_Male_EpicRote", "Shout_DisguiseSelf_HalfElf_Female_EpicRote", "Shout_DisguiseSelf_Halfling_Male_EpicRote", "Shout_DisguiseSelf_Halfling_Female_EpicRote", "Shout_DisguiseSelf_Dragonborn_Male_EpicRote", "Shout_DisguiseSelf_Dragonborn_Female_EpicRote", "Shout_DisguiseSelf_HalfOrc_Male_EpicRote", "Shout_DisguiseSelf_HalfOrc_Female_EpicRote", "Shout_DisguiseSelf_Gnome_Male_EpicRote", "Shout_DisguiseSelf_Gnome_Female_EpicRote", "Shout_DisguiseSelf_Human_Strong_Male_EpicRote", "Shout_DisguiseSelf_Human_Strong_Female_EpicRote", "Shout_DisguiseSelf_Drow_Strong_Male_EpicRote", "Shout_DisguiseSelf_Drow_Strong_Female_EpicRote", "Shout_DisguiseSelf_Elf_Strong_Male_EpicRote", "Shout_DisguiseSelf_Elf_Strong_Female_EpicRote", "Shout_DisguiseSelf_HalfElf_Strong_Male_EpicRote", "Shout_DisguiseSelf_HalfElf_Strong_Female_EpicRote", "Shout_DisguiseSelf_Tiefling_Strong_Male_EpicRote", "Shout_DisguiseSelf_Tiefling_Strong_Female_EpicRote"]
+notes = "Stands for 31 alike option(s): Shout_DisguiseSelf_Tiefling_Female_EpicRote, Shout_DisguiseSelf_Drow_Male_EpicRote, Shout_DisguiseSelf_Drow_Female_EpicRote...."
+
+[[case]]
+id = "msm-shout-disguiseself-tiefling-male-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_DisguiseSelf_Tiefling_Male (free copy, no slot)"
+spell = "Shout_DisguiseSelf_Tiefling_Male_EpicSignature"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ target = "host", status_applied = ["DISGUISE_SELF_TIEFLING_MALE"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+covers = ["Shout_DisguiseSelf_Tiefling_Female_EpicSignature", "Shout_DisguiseSelf_Drow_Male_EpicSignature", "Shout_DisguiseSelf_Drow_Female_EpicSignature", "Shout_DisguiseSelf_Human_Male_EpicSignature", "Shout_DisguiseSelf_Human_Female_EpicSignature", "Shout_DisguiseSelf_Githyanki_Male_EpicSignature", "Shout_DisguiseSelf_Githyanki_Female_EpicSignature", "Shout_DisguiseSelf_Dwarf_Male_EpicSignature", "Shout_DisguiseSelf_Dwarf_Female_EpicSignature", "Shout_DisguiseSelf_Elf_Male_EpicSignature", "Shout_DisguiseSelf_Elf_Female_EpicSignature", "Shout_DisguiseSelf_HalfElf_Male_EpicSignature", "Shout_DisguiseSelf_HalfElf_Female_EpicSignature", "Shout_DisguiseSelf_Halfling_Male_EpicSignature", "Shout_DisguiseSelf_Halfling_Female_EpicSignature", "Shout_DisguiseSelf_Dragonborn_Male_EpicSignature", "Shout_DisguiseSelf_Dragonborn_Female_EpicSignature", "Shout_DisguiseSelf_HalfOrc_Male_EpicSignature", "Shout_DisguiseSelf_HalfOrc_Female_EpicSignature", "Shout_DisguiseSelf_Gnome_Male_EpicSignature", "Shout_DisguiseSelf_Gnome_Female_EpicSignature", "Shout_DisguiseSelf_Human_Strong_Male_EpicSignature", "Shout_DisguiseSelf_Human_Strong_Female_EpicSignature", "Shout_DisguiseSelf_Drow_Strong_Male_EpicSignature", "Shout_DisguiseSelf_Drow_Strong_Female_EpicSignature", "Shout_DisguiseSelf_Elf_Strong_Male_EpicSignature", "Shout_DisguiseSelf_Elf_Strong_Female_EpicSignature", "Shout_DisguiseSelf_HalfElf_Strong_Male_EpicSignature", "Shout_DisguiseSelf_HalfElf_Strong_Female_EpicSignature", "Shout_DisguiseSelf_Tiefling_Strong_Male_EpicSignature", "Shout_DisguiseSelf_Tiefling_Strong_Female_EpicSignature"]
+notes = "Stands for 31 alike option(s): Shout_DisguiseSelf_Tiefling_Female_EpicSignature, Shout_DisguiseSelf_Drow_Male_EpicSignature, Shout_DisguiseSelf_Drow_Female_EpicSignature...."
+
+[[case]]
+id = "msm-shout-fireshield-chill-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_FireShield_Chill (free copy, no slot)"
+spell = "Shout_FireShield_Chill_EpicSignature"
+target = "host"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ target = "host", status_applied = ["FIRE_SHIELD_CHILL"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 4, change = 0 }]
+covers = ["Shout_FireShield_Warm_EpicSignature"]
+notes = "Stands for 1 alike option(s): Shout_FireShield_Warm_EpicSignature."
+
+[[case]]
+id = "msm-shout-spiritguardians-necrotic-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Shout_SpiritGuardians_Necrotic (free copy, no slot)"
+spell = "Shout_SpiritGuardians_Necrotic_EpicSignature"
+target = "host"
+spawn = [{ as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ target = "host", status_applied = ["SPIRIT_GUARDIANS_NECROTIC_AURA"] }, { target = "B", status_present = ["SPIRIT_GUARDIANS_NECROTIC"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+covers = ["Shout_SpiritGuardians_Radiant_EpicSignature"]
+notes = "SPIRIT_GUARDIANS_NECROTIC_AURA is an aura: a friendly wolf 3 m away should get SPIRIT_GUARDIANS_NECROTIC. Stands for 1 alike option(s): Shout_SpiritGuardians_Radiant_EpicSignature."
+
+[[case]]
+id = "msm-target-animatedead-yms-skeleton-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_AnimateDead_YMS_Skeleton (free copy, no slot)"
+spell = "Target_AnimateDead_YMS_Skeleton_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "47e99d02-3c35-44a4-95d5-8d164d2069dd" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-animatedead-yms-zombie-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_AnimateDead_YMS_Zombie (free copy, no slot)"
+spell = "Target_AnimateDead_YMS_Zombie_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "8a20737a-4606-4016-adc5-5df00bcd6945" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-bestowcurse-ability-strength-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_BestowCurse_Ability_Strength (free copy, no slot)"
+spell = "Target_BestowCurse_Ability_Strength_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["CURSE_ABILITY_STRENGTH"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+covers = ["Target_BestowCurse_Ability_Dexterity_EpicSignature", "Target_BestowCurse_Ability_Constitution_EpicSignature", "Target_BestowCurse_Ability_Intelligence_EpicSignature", "Target_BestowCurse_Ability_Wisdom_EpicSignature", "Target_BestowCurse_Ability_Charisma_EpicSignature", "Target_BestowCurse_Attack_EpicSignature"]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch. Stands for 6 alike option(s): Target_BestowCurse_Ability_Dexterity_EpicSignature, Target_BestowCurse_Ability_Constitution_EpicSignature, Target_BestowCurse_Ability_Intelligence_EpicSignature...."
+
+[[case]]
+id = "msm-target-bestowcurse-extradamage-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_BestowCurse_ExtraDamage (free copy, no slot)"
+spell = "Target_BestowCurse_ExtraDamage_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["CURSE_EXTRA_DAMAGE"] }, { target = "host", status_applied = ["CURSE_EXTRA_DAMAGE_OWNER"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-target-bestowcurse-skipturn-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_BestowCurse_SkipTurn (free copy, no slot)"
+spell = "Target_BestowCurse_SkipTurn_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["CURSE_SKIP_TURN"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-target-command-halt-epicrote"
+title = "Magic School Mastery Rote Casting: Target_Command_Halt (free copy, no slot)"
+spell = "Target_Command_Halt_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["COMMAND_HALT"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+covers = ["Target_Command_Approach_EpicRote", "Target_Command_Flee_EpicRote", "Target_Command_Grovel_EpicRote"]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch. Stands for 3 alike option(s): Target_Command_Approach_EpicRote, Target_Command_Flee_EpicRote, Target_Command_Grovel_EpicRote."
+
+[[case]]
+id = "msm-target-command-drop-epicrote"
+title = "Magic School Mastery Rote Casting: Target_Command_Drop (free copy, no slot)"
+spell = "Target_Command_Drop_EpicRote"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["DISARM"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-target-command-halt-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Command_Halt (free copy, no slot)"
+spell = "Target_Command_Halt_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["COMMAND_HALT"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+covers = ["Target_Command_Approach_EpicSignature", "Target_Command_Flee_EpicSignature", "Target_Command_Grovel_EpicSignature"]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch. Stands for 3 alike option(s): Target_Command_Approach_EpicSignature, Target_Command_Flee_EpicSignature, Target_Command_Grovel_EpicSignature."
+
+[[case]]
+id = "msm-target-command-drop-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Command_Drop (free copy, no slot)"
+spell = "Target_Command_Drop_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "A", status_applied = ["DISARM"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-target-conjureelemental-elemental-air-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_ConjureElemental_Elemental_Air (free copy, no slot)"
+spell = "Target_ConjureElemental_Elemental_Air_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "191ef10e-5098-45c5-823d-db0be64d250d" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 5, change = 0 }]
+
+[[case]]
+id = "msm-target-conjureelemental-elemental-earth-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_ConjureElemental_Elemental_Earth (free copy, no slot)"
+spell = "Target_ConjureElemental_Elemental_Earth_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "766da946-40a8-4a07-9990-e7a084ca79e6" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 5, change = 0 }]
+
+[[case]]
+id = "msm-target-conjureelemental-elemental-fire-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_ConjureElemental_Elemental_Fire (free copy, no slot)"
+spell = "Target_ConjureElemental_Elemental_Fire_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "cb3f4c14-198a-4311-8baa-73ec571131ef" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 5, change = 0 }]
+
+[[case]]
+id = "msm-target-conjureelemental-elemental-water-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_ConjureElemental_Elemental_Water (free copy, no slot)"
+spell = "Target_ConjureElemental_Elemental_Water_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "5443f872-fc94-40c6-abdf-2c4ce9841c53" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 5, change = 0 }]
+
+[[case]]
+id = "msm-target-contagion-blindingsickness-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Contagion_BlindingSickness (free copy, no slot)"
+spell = "Target_Contagion_BlindingSickness_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", status_applied = ["CONTAGION_BLINDING_SICKNESS_1"] }, { target = "A", hp_change = [-176, -11] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 5, change = 0 }]
+covers = ["Target_Contagion_FilthFever_EpicSignature", "Target_Contagion_FleshRot_EpicSignature", "Target_Contagion_SlimyDoom_EpicSignature"]
+notes = "The Constitution save is forced to fail; add a -save twin without it for the success branch. Stands for 3 alike option(s): Target_Contagion_FilthFever_EpicSignature, Target_Contagion_FleshRot_EpicSignature, Target_Contagion_SlimyDoom_EpicSignature."
+
+[[case]]
+id = "msm-target-contagion-mindfire-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Contagion_Mindfire (free copy, no slot)"
+spell = "Target_Contagion_Mindfire_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", status_applied = ["CONTAGION_MINDFIRE_1"] }, { target = "A", hp_change = [-176, -11] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 5, change = 0 }]
+covers = ["Target_Contagion_Seizure_EpicSignature"]
+notes = "The Constitution save is forced to fail; add a -save twin without it for the success branch. Stands for 1 alike option(s): Target_Contagion_Seizure_EpicSignature."
+
+[[case]]
+id = "msm-target-createwater-epicrote"
+title = "Magic School Mastery Rote Casting: Target_CreateWater (free copy, no slot)"
+spell = "Target_CreateWater_EpicRote"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+expect = [{ target = "A", status_applied = ["WET"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-target-destroywater-epicrote"
+title = "Magic School Mastery Rote Casting: Target_DestroyWater (free copy, no slot)"
+spell = "Target_DestroyWater_EpicRote"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+expect = [{ cast = true }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-target-createwater-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_CreateWater (free copy, no slot)"
+spell = "Target_CreateWater_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ target = "A", status_applied = ["WET"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-target-destroywater-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_DestroyWater (free copy, no slot)"
+spell = "Target_DestroyWater_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "msm-target-daylight-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Daylight (free copy, no slot)"
+spell = "Target_Daylight_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "f662449b-057a-477c-a80e-9083aff62b00" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-daylight-enchantment-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Daylight_Enchantment (free copy, no slot)"
+spell = "Target_Daylight_Enchantment_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }, { as = "B", template = "wolf", faction = "friendly", hp = 300, distance = 3 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ target = "B", status_present = ["SUNLIGHT_FROM_SPELL_TECHNICAL"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "DAYLIGHT_SUNLIGHT_AURA_TECHNICAL is an aura: a friendly wolf 3 m away should get SUNLIGHT_FROM_SPELL_TECHNICAL."
+
+[[case]]
+id = "msm-target-dragonsbreath-acid-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_DragonsBreath_Acid (free copy, no slot)"
+spell = "Target_DragonsBreath_Acid_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["DRAGONS_BREATH_ACID"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+covers = ["Target_DragonsBreath_Cold_EpicSignature", "Target_DragonsBreath_Fire_EpicSignature", "Target_DragonsBreath_Lightning_EpicSignature", "Target_DragonsBreath_Poison_EpicSignature"]
+notes = "Stands for 4 alike option(s): Target_DragonsBreath_Cold_EpicSignature, Target_DragonsBreath_Fire_EpicSignature, Target_DragonsBreath_Lightning_EpicSignature...."
+
+[[case]]
+id = "msm-target-elementalweapon-acid-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_ElementalWeapon_Acid (free copy, no slot)"
+spell = "Target_ElementalWeapon_Acid_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+covers = ["Target_ElementalWeapon_Cold_EpicSignature", "Target_ElementalWeapon_Fire_EpicSignature", "Target_ElementalWeapon_Lightning_EpicSignature", "Target_ElementalWeapon_Thunder_EpicSignature"]
+notes = "Stands for 4 alike option(s): Target_ElementalWeapon_Cold_EpicSignature, Target_ElementalWeapon_Fire_EpicSignature, Target_ElementalWeapon_Lightning_EpicSignature...."
+
+[[case]]
+id = "msm-target-enhanceability-bearsendurance-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_EnhanceAbility_BearsEndurance (free copy, no slot)"
+spell = "Target_EnhanceAbility_BearsEndurance_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ target = "A", status_applied = ["BEARS_ENDURANCE"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+covers = ["Target_EnhanceAbility_BullsStrength_EpicSignature", "Target_EnhanceAbility_CatsGrace_EpicSignature", "Target_EnhanceAbility_EaglesSplendor_EpicSignature", "Target_EnhanceAbility_FoxsCunning_EpicSignature", "Target_EnhanceAbility_OwlsWisdom_EpicSignature"]
+notes = "Stands for 5 alike option(s): Target_EnhanceAbility_BullsStrength_EpicSignature, Target_EnhanceAbility_CatsGrace_EpicSignature, Target_EnhanceAbility_EaglesSplendor_EpicSignature...."
+
+[[case]]
+id = "msm-target-eyebite-asleep-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Eyebite_Asleep (free copy, no slot)"
+spell = "Target_Eyebite_Asleep_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "host", status_applied = ["EYEBITE_SELF"] }, { target = "A", status_applied = ["SLEEPING_EYEBITE"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 6, change = 0 }]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-target-eyebite-panicked-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Eyebite_Panicked (free copy, no slot)"
+spell = "Target_Eyebite_Panicked_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Wisdom)" }]
+expect = [{ target = "host", status_applied = ["EYEBITE_SELF"] }, { target = "A", status_applied = ["EYEBITE_PANICKED"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 6, change = 0 }]
+covers = ["Target_Eyebite_Sickened_EpicSignature"]
+notes = "The Wisdom save is forced to fail; add a -save twin without it for the success branch. Stands for 1 alike option(s): Target_Eyebite_Sickened_EpicSignature."
+
+[[case]]
+id = "msm-target-freezingsphere-throw-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_FreezingSphere_Throw (free copy, no slot)"
+spell = "Target_FreezingSphere_Throw_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 6, change = 0 }]
+
+[[case]]
+id = "msm-projectile-freezingsphere-hurl-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Projectile_FreezingSphere_Hurl (free copy, no slot)"
+spell = "Projectile_FreezingSphere_Hurl_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Constitution)" }]
+expect = [{ target = "A", hp_change = [-120, -10] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 6, change = 0 }]
+notes = "The Constitution save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-target-glyphofwarding-acid-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_GlyphOfWarding_Acid (free copy, no slot)"
+spell = "Target_GlyphOfWarding_Acid_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "8cba7397-8623-4793-81ce-0ca7987dc813" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-glyphofwarding-cold-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_GlyphOfWarding_Cold (free copy, no slot)"
+spell = "Target_GlyphOfWarding_Cold_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "850f19a5-5548-4d19-a04f-faf618152407" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-glyphofwarding-fire-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_GlyphOfWarding_Fire (free copy, no slot)"
+spell = "Target_GlyphOfWarding_Fire_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "08f18dbc-f862-48c2-afcc-036f2e82b2a6" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-glyphofwarding-lightning-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_GlyphOfWarding_Lightning (free copy, no slot)"
+spell = "Target_GlyphOfWarding_Lightning_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "0ab48ea9-84ed-43e8-8dde-b90797dba3a5" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-glyphofwarding-thunder-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_GlyphOfWarding_Thunder (free copy, no slot)"
+spell = "Target_GlyphOfWarding_Thunder_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "2a452d78-853d-4aee-ab9e-0d36d7003f7c" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-glyphofwarding-detonation-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_GlyphOfWarding_Detonation (free copy, no slot)"
+spell = "Target_GlyphOfWarding_Detonation_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "747689bc-762c-4ebc-98cf-7305431a114f" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-glyphofwarding-sleep-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_GlyphOfWarding_Sleep (free copy, no slot)"
+spell = "Target_GlyphOfWarding_Sleep_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "181cdccc-80ea-43c7-8ca7-3ba0214f26f3" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+
+[[case]]
+id = "msm-target-planarally-djinni-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_PlanarAlly_Djinni (free copy, no slot)"
+spell = "Target_PlanarAlly_Djinni_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 6, change = 0 }]
+
+[[case]]
+id = "msm-target-planarally-deva-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_PlanarAlly_Deva (free copy, no slot)"
+spell = "Target_PlanarAlly_Deva_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 6, change = 0 }]
+
+[[case]]
+id = "msm-target-planarally-cambion-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_PlanarAlly_Cambion (free copy, no slot)"
+spell = "Target_PlanarAlly_Cambion_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 6, change = 0 }]
+
+[[case]]
+id = "msm-target-protectionfromenergy-acid-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_ProtectionFromEnergy_Acid (free copy, no slot)"
+spell = "Target_ProtectionFromEnergy_Acid_EpicSignature"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+expect = [{ target = "A", status_applied = ["PROTECTION_FROM_ENERGY_ACID"] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+covers = ["Target_ProtectionFromEnergy_Cold_EpicSignature", "Target_ProtectionFromEnergy_Fire_EpicSignature", "Target_ProtectionFromEnergy_Lightning_EpicSignature", "Target_ProtectionFromEnergy_Thunder_EpicSignature"]
+notes = "Stands for 4 alike option(s): Target_ProtectionFromEnergy_Cold_EpicSignature, Target_ProtectionFromEnergy_Fire_EpicSignature, Target_ProtectionFromEnergy_Lightning_EpicSignature...."
+
+[[case]]
+id = "msm-projectile-smite-branding-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Projectile_Smite_Branding (free copy, no slot)"
+spell = "Projectile_Smite_Branding_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", status_applied = ["BRANDING_SMITE"] }, { target = "A", hp_change = [-24, -2] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-smite-branding-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_Smite_Branding (free copy, no slot)"
+spell = "Target_Smite_Branding_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.2 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "host", boost = "RollBonus(Attack,30)" }, { target = "A", boost = "CriticalHit(AttackTarget,Success,Never)" }]
+expect = [{ target = "A", status_applied = ["BRANDING_SMITE"] }, { target = "A", hp_change = [-24, -2] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-spiritualweapon-greataxe-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_SpiritualWeapon_Greataxe (free copy, no slot)"
+spell = "Target_SpiritualWeapon_Greataxe_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "63854225-bfb0-4585-a427-ee47fcaabced" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-spiritualweapon-greatsword-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_SpiritualWeapon_Greatsword (free copy, no slot)"
+spell = "Target_SpiritualWeapon_Greatsword_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "dcb87672-84d5-4d18-9f1d-30ee66a69cc3" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-spiritualweapon-halberd-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_SpiritualWeapon_Halberd (free copy, no slot)"
+spell = "Target_SpiritualWeapon_Halberd_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "b3b9353a-4b03-4599-bcc2-a0b86807f430" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-spiritualweapon-maul-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_SpiritualWeapon_Maul (free copy, no slot)"
+spell = "Target_SpiritualWeapon_Maul_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "d5718e22-445e-4a59-bc5b-cfc239443b01" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-spiritualweapon-spear-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_SpiritualWeapon_Spear (free copy, no slot)"
+spell = "Target_SpiritualWeapon_Spear_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "637e4035-0368-44c9-8bce-53a639594fb7" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-spiritualweapon-trident-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_SpiritualWeapon_Trident (free copy, no slot)"
+spell = "Target_SpiritualWeapon_Trident_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "6beb5e0e-2557-4be3-854e-e8af7fb7723d" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-summonbeast-gianteagle-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_SummonBeast_GiantEagle (free copy, no slot)"
+spell = "Target_SummonBeast_GiantEagle_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "df3b594e-8e86-4a8b-94e2-9ca81683166e" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-target-summonbeast-wolf-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Target_SummonBeast_Wolf (free copy, no slot)"
+spell = "Target_SummonBeast_Wolf_EpicSignature"
+target = "ground"
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }]
+expect = [{ summon = { template = "1d0ea294-cec9-47ce-9a25-4db2c316427e" } }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 2, change = 0 }]
+
+[[case]]
+id = "msm-zone-astralflood-cold-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Zone_AstralFlood_Cold (free copy, no slot)"
+spell = "Zone_AstralFlood_Cold_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", hp_change = [-80, -4] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-zone-astralflood-radiant-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Zone_AstralFlood_Radiant (free copy, no slot)"
+spell = "Zone_AstralFlood_Radiant_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", hp_change = [-80, -4] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-zone-elementalexhalation-air-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Air (free copy, no slot)"
+spell = "Zone_ElementalExhalation_Air_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-zone-elementalexhalation-coldfire-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Coldfire (free copy, no slot)"
+spell = "Zone_ElementalExhalation_Coldfire_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["FRIGHTENED_COLDFIRE"] }, { target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-zone-elementalexhalation-earth-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Earth (free copy, no slot)"
+spell = "Zone_ElementalExhalation_Earth_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["FRIGHTENED_EARTH"] }, { target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-zone-elementalexhalation-fire-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Fire (free copy, no slot)"
+spell = "Zone_ElementalExhalation_Fire_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["FRIGHTENED_FIRE"] }, { target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."
+
+[[case]]
+id = "msm-zone-elementalexhalation-water-epicsignature"
+title = "Magic School Mastery Signature Arcanum: Zone_ElementalExhalation_Water (free copy, no slot)"
+spell = "Zone_ElementalExhalation_Water_EpicSignature"
+target = "A"
+real_rolls = true
+spawn = [{ as = "A", template = "wolf", faction = "friendly", hp = 300, distance = 6 }]
+setup = [{ target = "host", boost = "ActionResource(EpicBoonSignature,7,0)" }, { target = "A", boost = "AbilityFailedSavingThrow(Dexterity)" }]
+expect = [{ target = "A", status_applied = ["PRONE"] }, { target = "A", hp_change = [-60, -5] }, { resource = "EpicBoonSignature", level = 0, change = -1 }, { resource = "SpellSlot", level = 3, change = 0 }]
+notes = "The Dexterity save is forced to fail; add a -save twin without it for the success branch."

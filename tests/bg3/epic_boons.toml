@@ -467,3 +467,34 @@ setup = [{ target = "host", max_hp = 300 }, { target = "host", passive = "EpicBo
 casts = [{ spell = "Shout_EpicBoon_Sib_Pick_Projectile_Fireball", target = "host", wait = 3 }]
 expect = [{ target = "host", status_present = ["EPIC_SIB_PROJECTILE_FIREBALL"] }, { cast = true }, { resource = "SpellSlot", level = 3, change = 0 }, { resource = "EpicBoonSiberys", level = 0, change = -1 }]
 
+
+[[case]]
+id = "boon2-msm-signature-glyph"
+title = "Boon of Magic School Mastery: Abjuration Signature Arcanum Glyph of Warding (a spell with variants) - Fire glyph, no slot (#82)"
+spell = "Target_GlyphOfWarding_Fire_EpicSignature"
+target = "ground"
+distance = 4
+setup = [{ target = "host", passive = "EpicBoon_MagicSchoolMastery_Int" }]
+casts = [{ spell = "Shout_EpicBoon_MSM_School_Abjuration", target = "host" }, { spell = "Shout_EpicBoon_MSM_SigPick_Target_GlyphOfWarding", target = "host", wait = 3 }]
+expect = [{ target = "host", status_present = ["EPIC_MSM_ABJURATION", "EPIC_MSM_SIG_TARGET_GLYPHOFWARDING"] }, { cast = true },
+          { resource = "SpellSlot", level = 3, change = 0 }, { resource = "EpicBoonSignature", level = 0, change = -1 }]
+
+[[case]]
+id = "boon2-msm-rote-chromatic-orb-ui"
+mode = "ui"
+title = "Boon of Magic School Mastery: Rote Casting Chromatic Orb opens its menu of free variants; Fire hits with no slot (#82)"
+spell = "Projectile_ChromaticOrb_Fire_EpicRote"
+target = "A"
+clicks = ["A"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", passive = "EpicBoon_MagicSchoolMastery_Int" }, { target = "host", status = "EPIC_MSM_EVOCATION", turns = -1 },
+         { target = "host", status = "EPIC_MSM_ROTE_PROJECTILE_CHROMATICORB", turns = -1 }, { target = "A", boost = "AC(-30)" }]
+expect = [{ cast = true }, { target = "A", hp_change = [-30, -3], damage_type = "Fire" }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "boon2-bountiful-health-tick-quiet"
+title = "Augmented Health's watcher no longer floods the SE console with slow-Tick warnings (#84)"
+spell = "Shout_FalseLife"
+target = "host"
+setup = [{ target = "host", passive = "EpicBoon_BountifulHealth" }]
+expect = [{ target = "host", temp_hp = [11, 30] }, { log = "Augmented Health" }]

@@ -404,3 +404,62 @@ setup = [{ target = "host", status = "CONJURE_MINOR_ELEMENTALS_7", turns = 10 },
 expect = [{ target = "A", damage_type = "Acid" }, { target = "A", hp_change = [-300, -6] }]
 notes = "real_rolls: a scripted attack skips the roll, so the hit-only passive never fires. Acid is the toggle that defaults on. dnd55e's ConjureMinorElemental* passives check the cast level's status by name; gen_upcasts extend_name_checks adds the 7-9 clauses."
 
+
+[[case]]
+id = "fix81-extra-attack-3-only-one-chain"
+title = "Fighter 20 with Extra Attack (2) still known: one Attack action = four attacks, no fifth (#81)"
+spell = "Target_MainHandAttack"
+target = "A"
+repeat = 4
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", passive = "ExtraAttack_2" }, { target = "host", passive = "ExtraAttack_3" },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }]
+notes = "Before the fix ExtraAttack_2 ran its own chain beside ExtraAttack_3 (the base khn priority helpers don't know the _3 statuses)."
+expect = [
+  { cast = true },
+  { target = "host", status_applied_count = { status = "EXTRA_ATTACK_3", count = [1, 1] } },
+  { target = "host", status_applied_count = { status = "EXTRA_ATTACK_2", count = [1, 1] } },
+  { target = "host", status_absent = ["EXTRA_ATTACK", "EXTRA_ATTACK_2", "EXTRA_ATTACK_3"] },
+]
+
+[[case]]
+id = "fix82-msm-rote-smite-no-slot"
+mode = "ui"
+title = "Magic School Mastery: Rote Casting Searing Smite hits without spending a spell slot (#82: the slot was in HitCosts)"
+spell = "Target_Smite_Searing_EpicRote"
+target = "A"
+clicks = ["A"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", passive = "EpicBoon_MagicSchoolMastery_Int" }, { target = "host", status = "EPIC_MSM_EVOCATION", turns = -1 },
+         { target = "host", status = "EPIC_MSM_ROTE_TARGET_SMITE_SEARING", turns = -1 },
+         { target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AC(-30)" }]
+expect = [{ cast = true }, { target = "A", status_applied = ["SEARING_SMITE"] }, { resource = "SpellSlot", level = 1, change = 0 }]
+
+[[case]]
+id = "fix82-msm-rote-smite-control"
+mode = "ui"
+title = "Control: the ordinary Searing Smite still spends a 1st-level slot on the hit"
+spell = "Target_Smite_Searing"
+target = "A"
+clicks = ["A"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "A", boost = "ActionResourceBlock(ReactionActionPoint)" }, { target = "A", boost = "AC(-30)" }]
+expect = [{ cast = true }, { target = "A", status_applied = ["SEARING_SMITE"] }, { resource = "SpellSlot", level = 1, change = -1 }]
+
+[[case]]
+id = "fix83-psychic-missiles-mastered"
+title = "Psychic Missiles amulet adds a dart to the Spell Mastery Magic Missile too: 4 darts (#83)"
+spell = "Projectile_MagicMissile_SM"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", status = "SM_UNLOCK_MAGICMISSILE", turns = -1 }, { target = "host", passive = "UND_SocietyOfBrilliance_MagicMissileNecklace_Passive" }]
+expect = [{ cast = true }, { target = "A", damage_count = { count = [4, 4] } }]
+
+[[case]]
+id = "fix83-psychic-missiles-control"
+title = "Control: the mastered Magic Missile without the amulet fires 3 darts"
+spell = "Projectile_MagicMissile_SM"
+target = "A"
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
+setup = [{ target = "host", status = "SM_UNLOCK_MAGICMISSILE", turns = -1 }]
+expect = [{ cast = true }, { target = "A", damage_count = { count = [3, 3] } }]
