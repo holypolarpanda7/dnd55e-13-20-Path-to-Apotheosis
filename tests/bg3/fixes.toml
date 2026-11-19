@@ -463,7 +463,7 @@ target = "A"
 reactions = ["AttackOfOpportunity"]
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
 setup = [{ target = "host", passive = "ExtraAttack_2" }, { target = "host", passive = "ExtraAttack_3" }]
-instructions = "End your turn; on the wolf's turn it is walked 12 m away by script (provoking your opportunity attack); verify at the start of your next turn, before acting."
+instructions = "Apply FEARED to the wolf (Osi.ApplyStatus(wolf, \"FEARED\", 12.0, 1, host); a scripted move does NOT provoke an opportunity attack), end your turn (HUD End Turn); the wolf's own AI Dashes away and your opportunity attack fires. Verify at the start of your next turn, before acting."
 notes = "Report #81: Opportunity Attack -> your turn -> Extra Attack (2) was already up before the main attack. Driven by a script on the enemy's turn (2026-11-19)."
 expect = [
   { interrupt_used = { name = "Interrupt_AttackOfOpportunity", count = [1, 9] } },
