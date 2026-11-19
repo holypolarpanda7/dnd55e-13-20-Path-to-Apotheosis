@@ -453,3 +453,19 @@ target = "A"
 spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 6 }]
 setup = [{ target = "host", status = "SM_UNLOCK_MAGICMISSILE", turns = -1 }]
 expect = [{ cast = true }, { target = "A", damage_count = { count = [1, 1] } }]
+
+[[case]]
+id = "fix81-opportunity-attack-no-leftover"
+mode = "player"
+title = "Fighter 20: after an opportunity attack on the enemy's turn, your own turn starts with no free attack left over (#81)"
+spell = "Target_MainHandAttack"
+target = "A"
+reactions = ["AttackOfOpportunity"]
+spawn = [{ as = "A", template = "wolf", faction = "hostile", hp = 300, distance = 1.5 }]
+setup = [{ target = "host", passive = "ExtraAttack_2" }, { target = "host", passive = "ExtraAttack_3" }]
+instructions = "End your turn; on the wolf's turn it is walked 12 m away by script (provoking your opportunity attack); verify at the start of your next turn, before acting."
+notes = "Report #81: Opportunity Attack -> your turn -> Extra Attack (2) was already up before the main attack. Driven by a script on the enemy's turn (2026-11-19)."
+expect = [
+  { interrupt_used = { name = "Interrupt_AttackOfOpportunity", count = [1, 9] } },
+  { target = "host", status_absent = ["EXTRA_ATTACK", "EXTRA_ATTACK_2", "EXTRA_ATTACK_3", "EXTRA_ATTACK_Q", "EXTRA_ATTACK_2_Q", "EXTRA_ATTACK_3_Q"] },
+]

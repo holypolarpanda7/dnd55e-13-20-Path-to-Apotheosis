@@ -1485,6 +1485,17 @@ data "StackPriority" "35"
 data "RemoveConditions" "not RemoveCause(StatusRemoveCause.TimeOut) and not HasHigherPriorityExtraAttackQueued('EXTRA_ATTACK_3_Q') and not HasAnyExtraAttack()"
 data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Target)):ApplyStatus(EXTRA_ATTACK_3, 100, 1)"
 
+// #81 (2026-11-19): dnd55e's EXTRA_ATTACK_3 stepped down to EXTRA_ATTACK_2 on ANY removal, including the start-of-turn expiry.
+// An opportunity attack queues the Extra Attack chain on the enemy's turn (as in the base game, where the status just
+// expires); with Extra Attack (3) the expiry then left a free Extra Attack (2) at the start of your turn. Steps down only
+// when an attack used it, as base EXTRA_ATTACK_2 does. Reproduced and verified in game (Feared wolf fleeing, real OA).
+new entry "EXTRA_ATTACK_3"
+type "StatusData"
+data "StatusType" "BOOST"
+using "EXTRA_ATTACK_2"
+data "StackPriority" "60"
+data "OnRemoveFunctors" "IF(RemoveCause(StatusRemoveCause.Condition) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Target)):ApplyStatus(EXTRA_ATTACK_2, 100, 1)"
+
 // Warping Implosion (Aberrant Sorcery 18): the explosion at the space you leave - applied to you before the teleport, so the
 // status's CreateExplosion goes off where you stood (a spell's own GROUND:CreateExplosion lands at the destination).
 new entry "APO_WARPING_IMPLOSION_ORIGIN"
